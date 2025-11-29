@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: './',  // GitHub Pages用に相対パスを使用
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     assetsDir: 'assets',
     sourcemap: false,
     rollupOptions: {
