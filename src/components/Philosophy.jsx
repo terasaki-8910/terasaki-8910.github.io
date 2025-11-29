@@ -59,7 +59,7 @@ export default function Philosophy() {
     >
       <div className="max-w-5xl">
         <h2 className="text-massive font-bold mb-16 text-gradient">
-          Philosophy
+          浮足立つPhilosophy
         </h2>
         <div ref={textRef} className="space-y-8">
           <p className="text-2xl md:text-4xl leading-relaxed font-light">
