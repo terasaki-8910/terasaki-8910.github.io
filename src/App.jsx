@@ -10,6 +10,7 @@ import ProjectShowcase from './components/ProjectShowcase'
 import Profile from './components/Profile'
 import Footer from './components/Footer'
 import BackgroundScene from './components/BackgroundScene'
+import ErrorBoundary from './components/ErrorBoundary'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -51,42 +52,44 @@ function App() {
   }, [])
 
   return (
-    <div className="relative">
-      {/* WebGL Background */}
-      <div className="fixed inset-0 z-0">
-        {!webglError ? (
-          <Canvas 
-            camera={{ position: [0, 0, 5], fov: 75 }}
-            gl={{ 
-              antialias: true,
-              alpha: true,
-              powerPreference: 'high-performance',
-              failIfMajorPerformanceCaveat: false
-            }}
-            onCreated={(state) => {
-              console.log('WebGL Context Created:', state.gl.getContext())
-            }}
-            onError={(error) => {
-              console.error('WebGL Error:', error)
-              setWebglError(true)
-            }}
-          >
-            <BackgroundScene />
-          </Canvas>
-        ) : (
-          <div className="w-full h-full bg-gradient-to-b from-[#0A0E27] to-[#151B36]" />
-        )}
-      </div>
+    <ErrorBoundary>
+      <div className="relative">
+        {/* WebGL Background */}
+        <div className="fixed inset-0 z-0">
+          {!webglError ? (
+            <Canvas 
+              camera={{ position: [0, 0, 5], fov: 75 }}
+              gl={{ 
+                antialias: true,
+                alpha: true,
+                powerPreference: 'high-performance',
+                failIfMajorPerformanceCaveat: false
+              }}
+              onCreated={(state) => {
+                console.log('WebGL Context Created:', state.gl.getContext())
+              }}
+              onError={(error) => {
+                console.error('WebGL Error:', error)
+                setWebglError(true)
+              }}
+            >
+              <BackgroundScene />
+            </Canvas>
+          ) : (
+            <div className="w-full h-full bg-gradient-to-b from-[#0A0E27] to-[#151B36]" />
+          )}
+        </div>
 
-      {/* Main Content */}
-      <div className="relative z-10">
-        <Hero />
-        <Philosophy />
-        <ProjectShowcase />
-        <Profile />
-        <Footer />
+        {/* Main Content */}
+        <div className="relative z-10">
+          <Hero />
+          <Philosophy />
+          <ProjectShowcase />
+          <Profile />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </ErrorBoundary>
   )
 }
 
