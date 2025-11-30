@@ -3,19 +3,18 @@ import { gsap } from 'gsap'
 
 const timeline = [
   {
+    year: 'Now',
+    title: '筑波大学　情報学群　情報メディア創生学類　4年次在学中',
+    description: 'To be continued...'
+  },{
     year: '2024',
-    title: 'クソサイト製造工場 設立',
+    title: '筑波大学　情報学群　情報メディア創生学類　３年次編入',
     description: '実験的なWebプロジェクトの集積地として活動開始'
   },
   {
-    year: '2023',
-    title: 'Web開発の探求',
-    description: 'モダンなフロントエンド技術とインタラクティブデザインに没頭'
-  },
-  {
-    year: '2022',
-    title: '創造の旅の始まり',
-    description: 'プログラミングとデザインの世界へ'
+    year: '2019',
+    title: '舞鶴工業高等専門学校　電気情報工学科　入学',
+    description: '電気電子の情報を学びつつプログラミングの基礎も学ぶ'
   }
 ]
 
