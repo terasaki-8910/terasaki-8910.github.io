@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -15,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   const lenisRef = useRef()
+  const [webglError, setWebglError] = useState(false)
 
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
@@ -53,9 +54,28 @@ function App() {
     <div className="relative">
       {/* WebGL Background */}
       <div className="fixed inset-0 z-0">
-        <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-          <BackgroundScene />
-        </Canvas>
+        {!webglError ? (
+          <Canvas 
+            camera={{ position: [0, 0, 5], fov: 75 }}
+            gl={{ 
+              antialias: true,
+              alpha: true,
+              powerPreference: 'high-performance',
+              failIfMajorPerformanceCaveat: false
+            }}
+            onCreated={(state) => {
+              console.log('WebGL Context Created:', state.gl.getContext())
+            }}
+            onError={(error) => {
+              console.error('WebGL Error:', error)
+              setWebglError(true)
+            }}
+          >
+            <BackgroundScene />
+          </Canvas>
+        ) : (
+          <div className="w-full h-full bg-gradient-to-b from-[#0A0E27] to-[#151B36]" />
+        )}
       </div>
 
       {/* Main Content */}

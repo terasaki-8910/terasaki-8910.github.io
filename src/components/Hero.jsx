@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="text-center z-10 px-4">
         <h1 
           ref={titleRef}
-          className="font-display font-bold text-hero text-white mb-8"
+          className="font-display font-bold text-9xl text-white mb-8"
         >
         </h1>
         <p 

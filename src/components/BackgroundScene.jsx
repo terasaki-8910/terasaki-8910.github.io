@@ -92,7 +92,7 @@ export default function BackgroundScene() {
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} color="#00D9FF" />
       <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8B5CF6" />
-      <Particles count={3000} />
+      <Particles count={1500} />
       <FloatingGeometry />
     </>
   )

@@ -4,12 +4,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-2">クソサイト製造工場</h3>
-            <p className="text-gray-500 text-sm">
-              Experimental Web Projects Collection
+            <h3 className="text-2xl font-bold mb-2 whitespace-nowrap">クソサイト製造工場</h3>
+            <p className="text-gray-500 text-lg">
+              💩 Site Projects Collection
             </p>
           </div>
-
           <div className="flex gap-6">
             <a 
               href="https://github.com/terasaki-8910" 
