@@ -27,10 +27,11 @@ const __dirname = dirname(__filename);
 
 const SVG_PATH = join(__dirname, 'icon.svg');
 const PUBLIC_DIR = join(__dirname, '../public');
+const ICONS_DIR = join(PUBLIC_DIR, 'icons');
 
-// publicディレクトリが存在しない場合は作成
+// iconsディレクトリが存在しない場合は作成
 try {
-  mkdirSync(PUBLIC_DIR, { recursive: true });
+  mkdirSync(ICONS_DIR, { recursive: true });
 } catch (err) {
   // ディレクトリが既に存在する場合は無視
 }
@@ -126,13 +127,13 @@ function generateManifest(outputPath) {
     theme_color: "#0A0E27",
     icons: [
       {
-        src: "/icon-192.png",
+        src: "/icons/icon-192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "any maskable"
       },
       {
-        src: "/icon-512.png",
+        src: "/icons/icon-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "any maskable"
@@ -172,31 +173,31 @@ async function main() {
   console.log('\n🎨 アイコンファイルの生成を開始します...\n');
   
   // 各種サイズのPNG画像を生成
-  await generatePNG(16, join(PUBLIC_DIR, 'favicon-16.png'));
-  await generatePNG(32, join(PUBLIC_DIR, 'favicon-32.png'));
-  await generatePNG(48, join(PUBLIC_DIR, 'favicon-48.png'));
-  await generatePNG(180, join(PUBLIC_DIR, 'apple-touch-icon.png'));
-  await generatePNG(192, join(PUBLIC_DIR, 'icon-192.png'));
-  await generatePNG(512, join(PUBLIC_DIR, 'icon-512.png'));
+  await generatePNG(16, join(ICONS_DIR, 'favicon-16.png'));
+  await generatePNG(32, join(ICONS_DIR, 'favicon-32.png'));
+  await generatePNG(48, join(ICONS_DIR, 'favicon-48.png'));
+  await generatePNG(180, join(ICONS_DIR, 'apple-touch-icon.png'));
+  await generatePNG(192, join(ICONS_DIR, 'icon-192.png'));
+  await generatePNG(512, join(ICONS_DIR, 'icon-512.png'));
   
   // OG画像を生成
-  await generateOGImage(join(PUBLIC_DIR, 'og-image.png'));
+  await generateOGImage(join(ICONS_DIR, 'og-image.png'));
   
   // SVGをコピー
-  copySVG(join(PUBLIC_DIR, 'favicon.svg'));
+  copySVG(join(ICONS_DIR, 'favicon.svg'));
   
   // マニフェストを生成
-  generateManifest(join(PUBLIC_DIR, 'manifest.json'));
+  generateManifest(join(ICONS_DIR, 'manifest.json'));
   
   console.log('\n✨ すべてのアイコンファイルの生成が完了しました！\n');
   console.log('📝 次のステップ:');
   console.log('  1. index.html に以下のコードを追加してください:\n');
-  console.log('  <link rel="icon" type="image/svg+xml" href="/favicon.svg">');
-  console.log('  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">');
-  console.log('  <link rel="apple-touch-icon" href="/apple-touch-icon.png">');
-  console.log('  <link rel="manifest" href="/manifest.json">');
+  console.log('  <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">');
+  console.log('  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">');
+  console.log('  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">');
+  console.log('  <link rel="manifest" href="/icons/manifest.json">');
   console.log('  <meta name="theme-color" content="#0A0E27">');
-  console.log('  <meta property="og:image" content="/og-image.png">\n');
+  console.log('  <meta property="og:image" content="https://terasaki-8910.github.io/icons/og-image.png">\n');
 }
 
 main().catch(console.error);
