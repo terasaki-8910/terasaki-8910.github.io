@@ -9,7 +9,7 @@ const timeline = [
   },{
     year: '2024',
     title: '筑波大学　情報学群　情報メディア創生学類　３年次編入',
-    description: '実験的なWebプロジェクトの集積地として活動開始'
+    description: '情報系の知識を学ぶ'
   },
   {
     year: '2019',

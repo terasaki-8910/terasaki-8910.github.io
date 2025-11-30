@@ -1,0 +1,12 @@
+{
+  "name": "icon-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SVGアイコンから各種ファビコンファイルを生成",
+  "scripts": {
+    "generate": "node generate-icons.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}

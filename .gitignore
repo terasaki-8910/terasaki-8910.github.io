@@ -26,3 +26,7 @@ dist-ssr
 
 # markdwon
 *.md
+
+# SVG icon generator
+svg/node_modules/
+svg/package-lock.json
