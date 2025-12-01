@@ -1,3 +1,5 @@
+import { FaGithub } from "react-icons/fa"
+
 export default function Footer() {
   return (
     <footer className="px-8 py-20 border-t border-white/10">
@@ -16,7 +18,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-cyan transition-all hover:scale-110"
             >
-              <span className="text-xl">💻</span>
+              <FaGithub className="text-2xl" />
             </a>
             <a 
               href="#" 
@@ -28,7 +30,15 @@ export default function Footer() {
               href="#" 
               className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-cyan transition-all hover:scale-110"
             >
-              <span className="text-xl">🎮</span>
+              <FaDiscord className="text-2xl" />
+            </a>
+            <a
+              href="https://x.com/fuyuiroo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-violet transition-all hover:scale-110"
+            >
+              <span className="text-xl">𝕏</span>
             </a>
           </div>
         </div>
