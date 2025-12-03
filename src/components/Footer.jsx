@@ -1,4 +1,5 @@
-import { FaGithub } from "react-icons/fa"
+import { FaGithub, FaDiscord } from "react-icons/fa"
+import { SlSocialSpotify } from "react-icons/sl";
 
 export default function Footer() {
   return (
@@ -21,13 +22,13 @@ export default function Footer() {
               <FaGithub className="text-2xl" />
             </a>
             <a 
-              href="#" 
+              href="https://open.spotify.com/user/4yzziiwdk53rx9ih2l6o04oa5?si=94d46b7aa75c4b70" 
               className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-violet transition-all hover:scale-110"
             >
-              <span className="text-xl">🎵</span>
+              <SlSocialSpotify className="text-2xl" />
             </a>
             <a 
-              href="#" 
+              href="https://discord.gg/pc3z8CbX" 
               className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-cyan transition-all hover:scale-110"
             >
               <FaDiscord className="text-2xl" />
