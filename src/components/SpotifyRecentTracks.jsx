@@ -232,12 +232,12 @@ export default function SpotifyRecentTracks({ limit = 3 }) {
               }}
             />
 
-            {/* hover overlay */}
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center z-20">
+            {/* アルバム画像の上にのみ表示する再生ボタン */}
+            <div className="absolute inset-0 flex items-center justify-center z-20">
               {currentPlaying === track.id ? (
                 // 停止ボタン
                 <svg
-                  className="w-4 h-4 text-white opacity-100 transition-opacity duration-300"
+                  className="w-4 h-4 text-white opacity-90 transition-opacity duration-300 drop-shadow-lg"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -246,7 +246,7 @@ export default function SpotifyRecentTracks({ limit = 3 }) {
               ) : (
                 // 再生ボタン
                 <svg
-                  className="w-4 h-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="w-4 h-4 text-white opacity-0 group-hover:opacity-90 transition-opacity duration-300 drop-shadow-lg"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
