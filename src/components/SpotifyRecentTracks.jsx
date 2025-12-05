@@ -26,7 +26,7 @@ export default function SpotifyRecentTracks({ limit = 3 }) {
     fetchSpotifyData()
   }, [limit])
 
-  const handlePlayPreview = async (track) => {
+  const handlePlayPreview = (track) => {
     if (currentPlaying === track.id) {
       // 同じ曲なら停止
       if (audioRef.current) {
@@ -45,99 +45,142 @@ export default function SpotifyRecentTracks({ limit = 3 }) {
 
     // プレビューURLの検証
     if (!track.previewUrl || track.previewUrl.trim() === '') {
-      showPreviewUnavailable(track)
+      openInSpotify(track)
       return
     }
 
     try {
-      // Audioオブジェクトの作成と設定
-      const audio = new Audio()
-      audio.crossOrigin = 'anonymous'
-      audio.preload = 'none'
-      audio.volume = 0.8
+      // シンプルなAudioオブジェクト作成
+      const audio = new Audio(track.previewUrl)
+      audio.volume = 0.7
 
-      // イベントリスナー設定
-      audio.addEventListener('canplaythrough', () => {
-        audio.play().then(() => {
+      // 再生試行
+      const playPromise = audio.play()
+
+      if (playPromise !== undefined) {
+        // 現代ブラウザの場合
+        playPromise.then(() => {
           audioRef.current = audio
           setCurrentPlaying(track.id)
           console.log('✅ プレビュー再生開始:', track.name)
-        }).catch(playError => {
-          console.warn('⚠️ 再生開始エラー:', playError)
-          showPreviewUnavailable(track)
+
+          // 再生終了時の処理
+          audio.addEventListener('ended', () => {
+            setCurrentPlaying(null)
+            audioRef.current = null
+            console.log('✅ プレビュー再生完了:', track.name)
+          })
+        }).catch(() => {
+          console.log('ℹ️ 自動再生ブロック、手動再生を試みます:', track.name)
+          // ユーザーインタラクションを待機して再生
+          attemptManualPlayback(track, audio)
         })
-      })
+      } else {
+        // レガシーブラウザの場合
+        audio.addEventListener('ended', () => {
+          setCurrentPlaying(null)
+          audioRef.current = null
+          console.log('✅ プレビュー再生完了:', track.name)
+        })
 
-      audio.addEventListener('error', (e) => {
-        console.warn('⚠️ 音声読み込みエラー:', e)
-        showPreviewUnavailable(track)
-      })
-
-      audio.addEventListener('ended', () => {
-        setCurrentPlaying(null)
-        audioRef.current = null
-        console.log('✅ プレビュー再生完了:', track.name)
-      })
-
-      audio.src = track.previewUrl
-      audio.load()
+        audioRef.current = audio
+        setCurrentPlaying(track.id)
+        console.log('✅ プレビュー再生開始:', track.name)
+      }
 
     } catch (error) {
-      console.error('⚠️ Audioオブジェクト作成エラー:', error)
-      showPreviewUnavailable(track)
+      console.warn('⚠️ プレビュー再生エラー、Spotifyで開きます:', error)
+      openInSpotify(track)
     }
   }
 
-  const showPreviewUnavailable = (track) => {
-    // 現在の再生状態をクリア
+  const attemptManualPlayback = (track, audio) => {
+    // ユーザーインタラクション用のUI表示
+    const playPrompt = document.createElement('div')
+    playPrompt.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(6, 182, 212, 0.95);
+      color: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      text-align: center;
+      z-index: 1000;
+      font-size: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    `
+    playPrompt.innerHTML = `
+      <div style="margin-bottom: 15px;">
+        🎵 「${track.name}」のプレビュー再生
+      </div>
+      <button id="manual-play-btn-${track.id}" style="
+        background: white;
+        color: #06b6d4;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 10px;
+      ">再生する</button>
+      <button id="skip-spotify-btn-${track.id}" style="
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 1px solid white;
+        padding: 8px 20px;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+      ">キャンセル</button>
+    `
+
+    document.body.appendChild(playPrompt)
+
+    // イベントリスナー
+    document.getElementById(`manual-play-btn-${track.id}`).addEventListener('click', () => {
+      try {
+        audio.play().then(() => {
+          audioRef.current = audio
+          setCurrentPlaying(track.id)
+          playPrompt.remove()
+          console.log('✅ 手動でプレビュー再生開始:', track.name)
+
+          audio.addEventListener('ended', () => {
+            setCurrentPlaying(null)
+            audioRef.current = null
+            console.log('✅ プレビュー再生完了:', track.name)
+          })
+        }).catch(error => {
+          console.warn('⚠️ 手動再生も失敗、Spotifyで開きます:', error)
+          playPrompt.remove()
+          openInSpotify(track)
+        })
+      } catch (error) {
+        console.warn('⚠️ 手動再生エラー、Spotifyで開きます:', error)
+        playPrompt.remove()
+        openInSpotify(track)
+      }
+    })
+
+    document.getElementById(`skip-spotify-btn-${track.id}`).addEventListener('click', () => {
+      playPrompt.remove()
+      openInSpotify(track)
+    })
+
+    // 10秒後に自動でキャンセル
+    setTimeout(() => {
+      if (playPrompt.parentNode) {
+        playPrompt.remove()
+      }
+    }, 10000)
+  }
+
+  const openInSpotify = (track) => {
     setCurrentPlaying(null)
     audioRef.current = null
-
-    // 通知表示
-    const notification = document.createElement('div')
-    notification.style.cssText = `
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: rgba(239, 68, 68, 0.9);
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 14px;
-      z-index: 1000;
-      animation: slideIn 0.3s ease;
-      max-width: 300px;
-    `
-    notification.textContent = `プレビューが利用できません: ${track.name}`
-
-    // アニメーションスタイル
-    if (!document.querySelector('#notification-styles')) {
-      const style = document.createElement('style')
-      style.id = 'notification-styles'
-      style.textContent = `
-        @keyframes slideIn {
-          from { transform: translateX(100%); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
-        }
-      `
-      document.head.appendChild(style)
-    }
-
-    document.body.appendChild(notification)
-
-    // 3秒後に削除
-    setTimeout(() => {
-      if (notification.parentNode) {
-        notification.remove()
-      }
-    }, 3000)
-
-    // Spotifyで開くオプション
-    setTimeout(() => {
-      if (confirm(`「${track.name}」のプレビューは利用できません。\nSpotifyで開きますか？`)) {
-        window.open(track.spotifyUrl, '_blank')
-      }
-    }, 500)
+    window.open(track.spotifyUrl, '_blank')
   }
 
   if (loading) {
