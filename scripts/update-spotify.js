@@ -1,5 +1,11 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// dotenvを設定
+import dotenv from 'dotenv';
+dotenv.config({ path: './.env' });
 
 // 環境変数から認証情報を取得
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
@@ -28,6 +34,8 @@ async function getAccessToken() {
   });
 
   if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    console.error('🔍 APIエラー詳細:', errorData);
     throw new Error(`アクセストークン取得失敗: ${response.status} ${response.statusText}`);
   }
 
