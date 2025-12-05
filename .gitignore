@@ -30,3 +30,7 @@ dist-ssr
 # SVG icon generator
 svg/node_modules/
 svg/package-lock.json
+
+# spotify-data.json
+public/spotify-data.json
+docs/spotify-data.json
