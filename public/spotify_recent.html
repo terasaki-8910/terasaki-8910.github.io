@@ -472,6 +472,7 @@
             renderer.render(scene, camera);
         }
 
+  
         // Spotify iFrame用の変数
         let spotifyController = null;
         let currentPlayingTrack = null;
@@ -554,10 +555,31 @@
 
                 // トラックをロードして再生
                 spotifyController.loadUri(trackUri, () => {
-                    spotifyController.play();
-                    currentPlayingTrack = track.id;
-                    updatePlayButton(trackElement, true);
-                    console.log('✅ iFrame再生開始:', track.name);
+                    // 少し遅延させて再生を試みる
+                    setTimeout(() => {
+                        spotifyController.play();
+                        currentPlayingTrack = track.id;
+                        updatePlayButton(trackElement, true);
+                        console.log('✅ iFrame再生開始:', track.name);
+
+                        // 再生が開始されない場合のフォールバック
+                        setTimeout(() => {
+                            // iFrame内の再生ボタンを探してクリック
+                            const iframe = document.querySelector('#embed-iframe iframe');
+                            if (iframe) {
+                                try {
+                                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                                    const playButton = iframeDoc.querySelector('[data-testid="play-button"], .play-button, button[aria-label*="play"]');
+                                    if (playButton) {
+                                        playButton.click();
+                                        console.log('🎯 iFrame内再生ボタンをクリック');
+                                    }
+                                } catch (error) {
+                                    console.log('ℹ️ iFrame内操作制限のため手動再生が必要です');
+                                }
+                            }
+                        }, 1000);
+                    }, 500);
                 });
 
             } catch (error) {
@@ -594,8 +616,10 @@
             }
         }
 
-        function openInSpotify(track) {
-            updatePlayButton(trackElement, false);
+        function openInSpotify(track, trackElement = null) {
+            if (trackElement) {
+                updatePlayButton(trackElement, false);
+            }
             currentPlayingTrack = null;
             hideSpotifyIframe();
             window.open(track.spotifyUrl, '_blank');
