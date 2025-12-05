@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import SpotifyRecentTracks from './SpotifyRecentTracks'
 const playlistId = '4bmnZcheENvgDxpg1JFyEa';
 
 const projects = [
@@ -17,7 +18,7 @@ const projects = [
     title: 'Spotify Dashboard',
     description: '最近聴いた曲',
     tags: ['Web Audio API', 'React', 'Spotify Integration'],
-    link: '#',
+    link: '/spotify_recent.html',
     color: 'from-violet-500 to-purple-600',
     spotify: true
   },
@@ -122,10 +123,7 @@ export default function ProjectShowcase() {
                     {/* Special Badges */}
                     <div className="flex gap-4 mt-6">
                       {project.spotify && (
-                        <div className="glass rounded-xl px-4 py-2 text-sm text-accent-cyan border border-accent-cyan/30">
-                          <span className="mr-2">🎵</span>
-                          Spotify Integration
-                        </div>
+                        <SpotifyRecentTracks limit={3} />
                       )}
                       {project.gaming && (
                         <div className="glass rounded-xl px-4 py-2 text-sm text-accent-violet border border-accent-violet/30">
