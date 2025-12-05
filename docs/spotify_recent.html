@@ -438,7 +438,7 @@
             }
         }
 
-        function playPreview(trackElement, track) {
+        async function playPreview(trackElement, track) {
             // 同じ曲をクリックした場合は停止
             if (currentPlayingTrack === track.id) {
                 if (currentAudio) {
@@ -461,39 +461,122 @@
                 updatePlayButton(card, false);
             });
 
-            // プレビューURLがある場合は再生、ない場合はSpotifyで開く
-            if (track.previewUrl) {
+            // プレビューURLの検証と再生
+            if (track.previewUrl && track.previewUrl.trim() !== '') {
                 try {
-                    const audio = new Audio(track.previewUrl);
-                    audio.play();
-                    currentAudio = audio;
-                    currentPlayingTrack = track.id;
-                    updatePlayButton(trackElement, true);
+                    // CORS対応とクロスドメイン再生のための設定
+                    const audio = new Audio();
 
-                    // 再生終了時の処理
+                    // 音声設定
+                    audio.crossOrigin = 'anonymous';
+                    audio.preload = 'none';
+                    audio.volume = 0.8;
+
+                    // イベントリスナー設定（src設定前に設定）
+                    audio.addEventListener('canplaythrough', () => {
+                        try {
+                            audio.play().then(() => {
+                                currentAudio = audio;
+                                currentPlayingTrack = track.id;
+                                updatePlayButton(trackElement, true);
+                                console.log('✅ プレビュー再生開始:', track.name);
+                            }).catch(playError => {
+                                console.warn('⚠️ 再生開始エラー:', playError);
+                                handlePlaybackError(trackElement, track);
+                            });
+                        } catch (error) {
+                            console.error('再生エラー:', error);
+                            handlePlaybackError(trackElement, track);
+                        }
+                    });
+
+                    audio.addEventListener('error', (e) => {
+                        console.warn('⚠️ 音声読み込みエラー:', e);
+                        handlePlaybackError(trackElement, track);
+                    });
+
                     audio.addEventListener('ended', () => {
                         currentAudio = null;
                         currentPlayingTrack = null;
                         updatePlayButton(trackElement, false);
+                        console.log('✅ プレビュー再生完了:', track.name);
                     });
 
-                    // エラー時の処理
-                    audio.addEventListener('error', () => {
-                        currentAudio = null;
-                        currentPlayingTrack = null;
-                        updatePlayButton(trackElement, false);
-                        // Spotifyで開く
-                        window.open(track.spotifyUrl, '_blank');
+                    audio.addEventListener('stalled', () => {
+                        console.warn('⚠️ 再生が停滞しました');
                     });
+
+                    // ソースを設定して読み込み開始
+                    audio.src = track.previewUrl;
+                    audio.load();
+
                 } catch (error) {
-                    console.error('プレビュー再生エラー:', error);
-                    // Spotifyで開く
-                    window.open(track.spotifyUrl, '_blank');
+                    console.error('⚠️ Audioオブジェクト作成エラー:', error);
+                    handlePlaybackError(trackElement, track);
                 }
             } else {
-                // プレビューがない場合はSpotifyで開く
-                window.open(track.spotifyUrl, '_blank');
+                // プレビューURLがない場合
+                console.log('ℹ️ プレビューURLがありません:', track.name);
+                handlePlaybackError(trackElement, track);
             }
+        }
+
+        function handlePlaybackError(trackElement, track) {
+            // ボタンを元に戻す
+            updatePlayButton(trackElement, false);
+            currentAudio = null;
+            currentPlayingTrack = null;
+
+            // ユーザーに通知
+            showPlaybackNotification(track);
+
+            // 少し待ってからSpotifyで開くオプションを提供
+            setTimeout(() => {
+                if (confirm(`「${track.name}」のプレビューは利用できません。\nSpotifyで開きますか？`)) {
+                    window.open(track.spotifyUrl, '_blank');
+                }
+            }, 500);
+        }
+
+        function showPlaybackNotification(track) {
+            // 通知メッセージを表示（非侵入的）
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: rgba(239, 68, 68, 0.9);
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 14px;
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+                max-width: 300px;
+            `;
+            notification.textContent = `プレビューが利用できません: ${track.name}`;
+
+            // アニメーション用のスタイル
+            if (!document.querySelector('#notification-styles')) {
+                const style = document.createElement('style');
+                style.id = 'notification-styles';
+                style.textContent = `
+                    @keyframes slideIn {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(notification);
+
+            // 3秒後に自動で削除
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 3000);
         }
 
         function updatePlayButton(trackElement, isPlaying) {
