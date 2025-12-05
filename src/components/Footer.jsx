@@ -1,4 +1,5 @@
-import { FaGithub, FaDiscord } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
+import { FaDiscord } from "react-icons/fa6"
 import { SlSocialSpotify } from "react-icons/sl";
 
 export default function Footer() {
