@@ -59,22 +59,19 @@ export default function Philosophy() {
     >
       <div className="max-w-5xl">
         <h2 className="text-massive font-bold mb-16 text-gradient">
-          浮足立つPhilosophy
+          Fuyuiro's Portfolio
         </h2>
         <div ref={textRef} className="space-y-8">
           <p className="text-2xl md:text-4xl leading-relaxed font-light">
-            <span className="word">なぜ、</span>
-            <span className="word">我々は</span>
-            <span className="word">ガラクタを</span>
-            <span className="word">作るのか？</span>
+            <span className="word">クソサイト</span>
+            <span className="word">製造工場へ</span>
+            <span className="word">ようこそ！</span>
           </p>
-          <p className="text-lg md:text-2xl leading-relaxed text-gray-400 font-light">
-            <span className="word">それは、</span>
-            <span className="word">完璧を</span>
-            <span className="word">追求する</span>
-            <span className="word">ことの</span>
-            <span className="word">無意味さを</span>
-            <span className="word">知っているからだ。</span>
+          <p className="text-lg md:text-3xl leading-relaxed text-gray-400 font-light">
+            <span className="word">クソサイト</span>
+            <span className="word">製造構造長の</span>
+            <span className="word">冬色と</span>
+            <span className="word">申します！</span>
           </p>
           <p className="text-base md:text-xl leading-relaxed text-gray-500 font-light">
             <span className="word">実験的な</span>
@@ -86,7 +83,7 @@ export default function Philosophy() {
             <span className="word">痕跡。</span>
             <span className="word">ここは</span>
             <span className="word">創造の</span>
-            <span className="word">実験場である。</span>
+            <span className="word">実験場。</span>
           </p>
         </div>
       </div>

@@ -21,6 +21,7 @@ const timeline = [
 export default function Profile() {
   const sectionRef = useRef()
   const itemsRef = useRef([])
+  const introBoxesRef = useRef([])
 
   useEffect(() => {
     itemsRef.current.forEach((item, index) => {
@@ -38,6 +39,23 @@ export default function Profile() {
         }
       )
     })
+
+    introBoxesRef.current.forEach((box, index) => {
+      gsap.fromTo(box,
+        { opacity: 0, y: 50 },
+        {
+          scrollTrigger: {
+            trigger: box,
+            start: 'top 85%',
+            end: 'top 50%',
+            scrub: 1,
+          },
+          opacity: 1,
+          y: 0,
+          delay: index * 0.1
+        }
+      )
+    })
   }, [])
 
   return (
@@ -47,31 +65,66 @@ export default function Profile() {
           Journey
         </h2>
 
-        <div className="space-y-16">
-          {timeline.map((item, index) => (
-            <div
-              key={index}
-              ref={el => itemsRef.current[index] = el}
-              className="relative pl-12 border-l-2 border-white/10"
-            >
-              {/* Timeline dot */}
-              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gradient-to-r from-accent-cyan to-accent-violet"></div>
-              
-              <div className="space-y-2">
-                <div className="text-accent-cyan text-sm font-mono tracking-wider">
-                  {item.year}
-                </div>
-                <h3 className="text-3xl font-bold">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 text-lg leading-relaxed">
-                  {item.description}
-                </p>
+        {/* 自己紹介セクション */}
+        <div className="grid md:grid-cols-2 gap-12 mb-32">
+          <div>
+            <h3 className="text-4xl font-bold mb-8 text-gradient">自己紹介</h3>
+            <div className="space-y-6">
+              <div
+                ref={el => introBoxesRef.current[0] = el}
+                className="glass rounded-2xl p-6 hover:scale-105 transition-transform"
+              >
+                <h4 className="text-xl font-semibold mb-3 text-accent-cyan">HN</h4>
+                <p className="text-lg text-gray-300">冬色</p>
+              </div>
+
+              <div
+                ref={el => introBoxesRef.current[1] = el}
+                className="glass rounded-2xl p-6 hover:scale-105 transition-transform"
+              >
+                <h4 className="text-xl font-semibold mb-3 text-accent-violet">趣味</h4>
+                <p className="text-lg text-gray-300">映画鑑賞、麻雀</p>
+              </div>
+
+              <div
+                ref={el => introBoxesRef.current[2] = el}
+                className="glass rounded-2xl p-6 hover:scale-105 transition-transform"
+              >
+                <h4 className="text-xl font-semibold mb-3 text-accent-cyan">好きなアーティスト</h4>
+                <p className="text-lg text-gray-300">サカナクション、CentralCee</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
+          <div>
+            <h3 className="text-4xl font-bold mb-8 text-gradient">学歴・経歴</h3>
+            <div className="space-y-8">
+              {timeline.map((item, index) => (
+                <div
+                  key={index}
+                  ref={el => itemsRef.current[index] = el}
+                  className="relative pl-8 border-l-2 border-white/10"
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gradient-to-r from-accent-cyan to-accent-violet"></div>
+
+                  <div className="space-y-2">
+                    <div className="text-accent-cyan text-sm font-mono tracking-wider">
+                      {item.year}
+                    </div>
+                    <h4 className="text-xl font-bold">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-400 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+  
         {/* Skills section */}
         <div className="mt-32">
           <h3 className="text-4xl font-bold mb-12">Tech Stack</h3>
