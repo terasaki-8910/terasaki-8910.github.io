@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 
 // ミニ版パーティクルコンポーネント
 function MiniParticles({ count = 100 }) {
