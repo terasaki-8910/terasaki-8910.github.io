@@ -1,63 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-
-// ミニ版パーティクルコンポーネント
-function MiniParticles({ count = 100 }) {
-  const mesh = useRef()
-
-  const particles = useRef(() => {
-    const temp = []
-    for (let i = 0; i < count; i++) {
-      const t = Math.random() * 100
-      const factor = 5 + Math.random() * 10
-      const speed = 0.01 + Math.random() / 200
-      const xFactor = -10 + Math.random() * 20
-      const yFactor = -10 + Math.random() * 20
-      const zFactor = -10 + Math.random() * 20
-      temp.push({ t, factor, speed, xFactor, yFactor, zFactor })
-    }
-    return temp
-  }, [count])
-
-  useFrame((state) => {
-    particles.current.forEach((particle, i) => {
-      let { t, factor, speed, xFactor, yFactor, zFactor } = particle
-      t = particle.t += speed / 2
-      const a = Math.cos(t) + Math.sin(t * 1) / 10
-      const b = Math.sin(t) + Math.cos(t * 2) / 10
-      const s = Math.cos(t) * 0.5
-
-      mesh.current.position.set(
-        a + xFactor + Math.cos((t / 10) * factor) + (Math.sin(t * 1) * factor) / 10,
-        b + yFactor + Math.sin((t / 10) * factor) + (Math.cos(t * 2) * factor) / 10,
-        b + zFactor + Math.cos((t / 10) * factor) + (Math.sin(t * 3) * factor) / 10
-      )
-      mesh.current.scale.set(s, s, s)
-      mesh.current.rotation.set(s * 5, s * 5, s * 5)
-      mesh.current.updateMatrix()
-      mesh.current.setMatrixAt(i, mesh.current.matrix)
-    })
-    mesh.current.instanceMatrix.needsUpdate = true
-  })
-
-  return (
-    <instancedMesh ref={mesh} args={[null, null, count]}>
-      <dodecahedronGeometry args={[0.05, 0]} />
-      <meshPhongMaterial color="#8B5CF6" transparent opacity={0.6} />
-    </instancedMesh>
-  )
-}
-
-// ミニ版3Dシーン
-function MiniBackgroundScene() {
-  return (
-    <>
-      <ambientLight intensity={0.5} />
-      <pointLight position={[5, 5, 5]} intensity={0.5} color="#00D9FF" />
-      <MiniParticles count={50} />
-    </>
-  )
-}
 
 export default function SpotifyRecentTracks({ limit = 3 }) {
   const [tracks, setTracks] = useState([])
@@ -156,17 +97,6 @@ export default function SpotifyRecentTracks({ limit = 3 }) {
           onClick={() => handlePlayPreview(track)}
         >
           <div className="relative overflow-hidden rounded-lg">
-            {/* 3D背景 */}
-            <div className="absolute inset-0 w-12 h-12 -z-10">
-              <Canvas
-                camera={{ position: [0, 0, 10], fov: 75 }}
-                style={{ width: '48px', height: '48px' }}
-                className="rounded-lg"
-              >
-                <MiniBackgroundScene />
-              </Canvas>
-            </div>
-
             {/* アルバムアート */}
             <img
               src={track.albumArt}
