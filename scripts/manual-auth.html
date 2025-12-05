@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Manual Auth</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        input { width: 100%; padding: 10px; margin: 10px 0; }
+        button { padding: 10px 20px; background: #1DB954; color: white; border: none; cursor: pointer; }
+        .result { background: #f0f0f0; padding: 10px; margin: 10px 0; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <h1>Spotify 認証ヘルパー</h1>
+
+    <h2>ステップ1: 認証URLを生成</h2>
+    <p>Client ID: <input type="text" id="clientId" placeholder="Spotify Client ID" /></p>
+    <p>Redirect URI: <input type="text" id="redirectUri" value="http://localhost/callback" /></p>
+    <button onclick="generateAuthUrl()">認証URL生成</button>
+
+    <div id="authUrl" class="result"></div>
+
+    <h2>ステップ2: コード抽出</h2>
+    <p>リダイレクト先URL: <input type="text" id="fullUrl" placeholder="貼り付け..." /></p>
+    <button onclick="extractCode()">認証コード抽出</button>
+
+    <div id="authCode" class="result"></div>
+
+    <script>
+        function generateAuthUrl() {
+            const clientId = document.getElementById('clientId').value;
+            const redirectUri = document.getElementById('redirectUri').value;
+            const scopes = 'user-read-recently-played';
+            const state = Math.random().toString(36).substring(7);
+
+            const authUrl = `https://accounts.spotify.com/authorize?` +
+                `response_type=code&` +
+                `client_id=${clientId}&` +
+                `scope=${encodeURIComponent(scopes)}&` +
+                `redirect_uri=${encodeURIComponent(redirectUri)}&` +
+                `state=${state}`;
+
+            document.getElementById('authUrl').innerHTML =
+                `<a href="${authUrl}" target="_blank">${authUrl}</a>`;
+        }
+
+        function extractCode() {
+            const url = document.getElementById('fullUrl').value;
+            const match = url.match(/[?&]code=([^&]+)/);
+
+            if (match) {
+                document.getElementById('authCode').textContent =
+                    `認証コード: ${match[1]}`;
+            } else {
+                document.getElementById('authCode').textContent =
+                    '認証コードが見つかりませんでした';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+const playlistId = '4bmnZcheENvgDxpg1JFyEa';
 
 const projects = [
   {
@@ -13,8 +14,8 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Sound Garden',
-    description: '音楽とコードの融合プロジェクト',
+    title: 'Spotify Dashboard',
+    description: '最近聴いた曲',
     tags: ['Web Audio API', 'React', 'Spotify Integration'],
     link: '#',
     color: 'from-violet-500 to-purple-600',
