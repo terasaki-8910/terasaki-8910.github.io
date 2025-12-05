@@ -105,7 +105,10 @@ function generateJSON(tracks) {
 
   const outputPath = path.join(process.cwd(), 'public', 'spotify-data.json');
   fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+  const docsPath = path.join(process.cwd(), 'docs', 'spotify-data.json');
+  fs.writeFileSync(docsPath, JSON.stringify(data, null, 2));
   console.log(`📁 JSONファイルを生成: ${outputPath}`);
+  console.log(`📁 JSONファイルを生成: ${docsPath}`);
 
   return data;
 }
