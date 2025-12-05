@@ -192,7 +192,6 @@
             justify-content: center;
             opacity: 0;
             transition: all 0.3s ease;
-            pointer-events: none;
         }
 
         .track-card:hover .play-button {
@@ -413,6 +412,10 @@
             renderer.render(scene, camera);
         }
 
+        // プレビュー再生用の変数
+        let currentPlayingTrack = null;
+        let currentAudio = null;
+
         // 背景初期化とSpotifyデータ読み込み
         window.addEventListener('load', () => {
             initBackground();
@@ -432,6 +435,77 @@
             } catch (error) {
                 console.error('Error:', error);
                 showError();
+            }
+        }
+
+        function playPreview(trackElement, track) {
+            // 同じ曲をクリックした場合は停止
+            if (currentPlayingTrack === track.id) {
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio = null;
+                }
+                currentPlayingTrack = null;
+                updatePlayButton(trackElement, false);
+                return;
+            }
+
+            // 現在再生中の曲があれば停止
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+            }
+
+            // すべての再生ボタンをリセット
+            document.querySelectorAll('.track-card').forEach(card => {
+                updatePlayButton(card, false);
+            });
+
+            // プレビューURLがある場合は再生、ない場合はSpotifyで開く
+            if (track.previewUrl) {
+                try {
+                    const audio = new Audio(track.previewUrl);
+                    audio.play();
+                    currentAudio = audio;
+                    currentPlayingTrack = track.id;
+                    updatePlayButton(trackElement, true);
+
+                    // 再生終了時の処理
+                    audio.addEventListener('ended', () => {
+                        currentAudio = null;
+                        currentPlayingTrack = null;
+                        updatePlayButton(trackElement, false);
+                    });
+
+                    // エラー時の処理
+                    audio.addEventListener('error', () => {
+                        currentAudio = null;
+                        currentPlayingTrack = null;
+                        updatePlayButton(trackElement, false);
+                        // Spotifyで開く
+                        window.open(track.spotifyUrl, '_blank');
+                    });
+                } catch (error) {
+                    console.error('プレビュー再生エラー:', error);
+                    // Spotifyで開く
+                    window.open(track.spotifyUrl, '_blank');
+                }
+            } else {
+                // プレビューがない場合はSpotifyで開く
+                window.open(track.spotifyUrl, '_blank');
+            }
+        }
+
+        function updatePlayButton(trackElement, isPlaying) {
+            const playButton = trackElement.querySelector('.play-button');
+            const playIcon = playButton.querySelector('.play-icon');
+
+            if (isPlaying) {
+                playButton.style.background = 'rgba(239, 68, 68, 0.9)'; // 赤色に変更
+                playIcon.innerHTML = '<path d="M6 4v16a1 1 0 001 1h2a1 1 0 001-1V4a1 1 0 00-1-1H6a1 1 0 00-1 1zm6 0v16a1 1 0 001 1h2a1 1 0 001-1V4a1 1 0 00-1-1h-2a1 1 0 00-1 1z"/>'; // 停止アイコン
+            } else {
+                playButton.style.background = 'rgba(6, 182, 212, 0.9)'; // シアン色に戻す
+                playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>'; // 再生アイコン
             }
         }
 
@@ -473,7 +547,7 @@
             }
 
             wrapper.innerHTML = data.tracks.map(track => `
-                <a href="${track.spotifyUrl}" target="_blank" rel="noopener noreferrer" class="track-card">
+                <div class="track-card" data-track='${JSON.stringify(track)}'>
                     <div class="track-header">
                         <img src="${track.albumArt}" alt="${track.name}" class="album-art"
                              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22%3E%3Crect width=%2280%22 height=%2280%22 fill=%22%23333%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2212%22%3E🎵%3C/text%3E%3C/svg%3E'">
@@ -483,7 +557,7 @@
                             <div class="track-album">${track.album}</div>
                         </div>
                     </div>
-                    <div class="play-button">
+                    <div class="play-button" style="pointer-events: auto; cursor: pointer;">
                         <svg class="play-icon" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
@@ -492,8 +566,17 @@
                         <span class="play-time">${formatTime(track.duration)}</span>
                         <span class="played-at">${formatPlayedAt(track.playedAt)}</span>
                     </div>
-                </a>
+                </div>
             `).join('');
+
+            // 再生ボタンのイベントリスナーを追加
+            document.querySelectorAll('.track-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const trackData = JSON.parse(this.dataset.track);
+                    playPreview(this, trackData);
+                });
+            });
 
             if (data.lastUpdated) {
                 const updatedDate = new Date(data.lastUpdated);
