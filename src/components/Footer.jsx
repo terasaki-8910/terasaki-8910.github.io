@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
-          <p>© 2024 terasaki-8910.github.io | Built with React, Three.js & GSAP</p>
+          <p>© 2025 terasaki-8910.github.io | Built with React, Three.js & GSAP</p>
         </div>
       </div>
     </footer>
