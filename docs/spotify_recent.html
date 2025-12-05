@@ -212,6 +212,50 @@
             fill: white;
         }
 
+        /* Spotify iFrame Container */
+        #spotify-iframe-container {
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+
+        #spotify-iframe-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        #embed-iframe {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* 閉じるボタン */
+        #spotify-iframe-container::before {
+            content: '✕';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        #spotify-iframe-container:hover::before {
+            background: rgba(239, 68, 68, 0.8);
+        }
+
         .loading {
             text-align: center;
             padding: 4rem 2rem;
@@ -297,8 +341,16 @@
         </div>
     </div>
 
+    <!-- Spotify iFrame Container -->
+    <div id="spotify-iframe-container" style="position: fixed; bottom: 20px; right: 20px; width: 300px; height: 380px; z-index: 1000; display: none;">
+        <div id="embed-iframe" style="width: 100%; height: 100%;"></div>
+    </div>
+
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Spotify iFrame API -->
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
     <script>
         // Three.js背景
         let scene, camera, renderer, particles = [], floatingObjects = [];
@@ -420,9 +472,32 @@
             renderer.render(scene, camera);
         }
 
-        // プレビュー再生用の変数
+  
+        // Spotify iFrame用の変数
+        let spotifyController = null;
         let currentPlayingTrack = null;
-        let currentAudio = null;
+        let iframeApiReady = false;
+
+        // Spotify iFrame API準備完了時のコールバック
+        window.onSpotifyIframeApiReady = (IFrameAPI) => {
+            console.log('✅ Spotify iFrame API準備完了');
+            iframeApiReady = true;
+
+            const element = document.getElementById('embed-iframe');
+            const options = {
+                uri: 'spotify:track:4iV5W9uYEdYUVa79Axb7Rh', // デフォルトトラック
+                width: '100%',
+                height: '100%',
+                theme: 'black'
+            };
+
+            const callback = (EmbedController) => {
+                spotifyController = EmbedController;
+                console.log('✅ Spotifyコントローラー作成完了');
+            };
+
+            IFrameAPI.createController(element, options, callback);
+        };
 
         // 背景初期化とSpotifyデータ読み込み
         window.addEventListener('load', () => {
@@ -449,19 +524,13 @@
         function playPreview(trackElement, track) {
             // 同じ曲をクリックした場合は停止
             if (currentPlayingTrack === track.id) {
-                if (currentAudio) {
-                    currentAudio.pause();
-                    currentAudio = null;
+                if (spotifyController) {
+                    spotifyController.pause();
+                    hideSpotifyIframe();
                 }
                 currentPlayingTrack = null;
                 updatePlayButton(trackElement, false);
                 return;
-            }
-
-            // 現在再生中の曲があれば停止
-            if (currentAudio) {
-                currentAudio.pause();
-                currentAudio = null;
             }
 
             // すべての再生ボタンをリセット
@@ -469,151 +538,90 @@
                 updatePlayButton(card, false);
             });
 
-            // プレビューURLがある場合は直接再生を試みる
-            if (track.previewUrl && track.previewUrl.trim() !== '') {
-                try {
-                    // シンプルなAudioオブジェクト作成
-                    const audio = new Audio(track.previewUrl);
-                    audio.volume = 0.7;
+            // Spotify iFrame APIが準備できているか確認
+            if (!iframeApiReady || !spotifyController) {
+                console.log('ℹ️ Spotify iFrame API準備中、Spotifyで開きます:', track.name);
+                openInSpotify(track);
+                return;
+            }
 
-                    // 再生試行
-                    const playPromise = audio.play();
+            // iFrameでトラックを再生
+            try {
+                const trackUri = `spotify:track:${track.id}`;
+                console.log('✅ iFrameで再生開始:', track.name, trackUri);
 
-                    if (playPromise !== undefined) {
-                        // 現代ブラウザの場合
-                        playPromise.then(() => {
-                            currentAudio = audio;
-                            currentPlayingTrack = track.id;
-                            updatePlayButton(trackElement, true);
-                            console.log('✅ プレビュー再生開始:', track.name);
+                // iFrameコンテナを表示
+                showSpotifyIframe();
 
-                            // 再生終了時の処理
-                            audio.addEventListener('ended', () => {
-                                currentAudio = null;
-                                currentPlayingTrack = null;
-                                updatePlayButton(trackElement, false);
-                                console.log('✅ プレビュー再生完了:', track.name);
-                            });
-                        }).catch(error => {
-                            console.log('ℹ️ 自動再生ブロック、手動再生を試みます:', track.name);
-                            // ユーザーインタラクションを待機して再生
-                            attemptManualPlayback(trackElement, track, audio);
-                        });
-                    } else {
-                        // レガシーブラウザの場合
-                        audio.addEventListener('ended', () => {
-                            currentAudio = null;
-                            currentPlayingTrack = null;
-                            updatePlayButton(trackElement, false);
-                            console.log('✅ プレビュー再生完了:', track.name);
-                        });
-
-                        currentAudio = audio;
+                // トラックをロードして再生
+                spotifyController.loadUri(trackUri, () => {
+                    // 少し遅延させて再生を試みる
+                    setTimeout(() => {
+                        spotifyController.play();
                         currentPlayingTrack = track.id;
                         updatePlayButton(trackElement, true);
-                        console.log('✅ プレビュー再生開始:', track.name);
-                    }
+                        console.log('✅ iFrame再生開始:', track.name);
 
-                } catch (error) {
-                    console.warn('⚠️ プレビュー再生エラー、Spotifyで開きます:', error);
-                    openInSpotify(track);
-                }
-            } else {
-                // プレビューURLがない場合はSpotifyで開く
-                console.log('ℹ️ プレビューURLがありません、Spotifyで開きます:', track.name);
+                        // 再生が開始されない場合のフォールバック
+                        setTimeout(() => {
+                            // iFrame内の再生ボタンを探してクリック
+                            const iframe = document.querySelector('#embed-iframe iframe');
+                            if (iframe) {
+                                try {
+                                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                                    const playButton = iframeDoc.querySelector('[data-testid="play-button"], .play-button, button[aria-label*="play"]');
+                                    if (playButton) {
+                                        playButton.click();
+                                        console.log('🎯 iFrame内再生ボタンをクリック');
+                                    }
+                                } catch (error) {
+                                    console.log('ℹ️ iFrame内操作制限のため手動再生が必要です');
+                                }
+                            }
+                        }, 1000);
+                    }, 500);
+                });
+
+            } catch (error) {
+                console.warn('⚠️ iFrame再生エラー、Spotifyで開きます:', error);
                 openInSpotify(track);
             }
         }
 
-        function attemptManualPlayback(trackElement, track, audio) {
-            // ユーザーアラクション用のUI表示
-            const playPrompt = document.createElement('div');
-            playPrompt.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(6, 182, 212, 0.95);
-                color: white;
-                padding: 20px 30px;
-                border-radius: 12px;
-                text-align: center;
-                z-index: 1000;
-                font-size: 16px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            `;
-            playPrompt.innerHTML = `
-                <div style="margin-bottom: 15px;">
-                    🎵 「${track.name}」のプレビュー再生
-                </div>
-                <button id="manual-play-btn" style="
-                    background: white;
-                    color: #06b6d4;
-                    border: none;
-                    padding: 8px 20px;
-                    border-radius: 6px;
-                    font-size: 14px;
-                    cursor: pointer;
-                    margin-right: 10px;
-                ">再生する</button>
-                <button id="skip-spotify-btn" style="
-                    background: rgba(255, 255, 255, 0.2);
-                    color: white;
-                    border: 1px solid white;
-                    padding: 8px 20px;
-                    border-radius: 6px;
-                    font-size: 14px;
-                    cursor: pointer;
-                ">キャンセル</button>
-            `;
-
-            document.body.appendChild(playPrompt);
-
-            // イベントリスナー
-            document.getElementById('manual-play-btn').addEventListener('click', () => {
-                try {
-                    audio.play().then(() => {
-                        currentAudio = audio;
-                        currentPlayingTrack = track.id;
-                        updatePlayButton(trackElement, true);
-                        playPrompt.remove();
-                        console.log('✅ 手動でプレビュー再生開始:', track.name);
-
-                        audio.addEventListener('ended', () => {
-                            currentAudio = null;
-                            currentPlayingTrack = null;
-                            updatePlayButton(trackElement, false);
-                            console.log('✅ プレビュー再生完了:', track.name);
+        function showSpotifyIframe() {
+            const container = document.getElementById('spotify-iframe-container');
+            if (container) {
+                container.style.display = 'block';
+                // 閉じるボタンのイベントリスナーを追加
+                container.addEventListener('click', (e) => {
+                    if (e.target === container || e.target.textContent === '✕') {
+                        hideSpotifyIframe();
+                        if (spotifyController) {
+                            spotifyController.pause();
+                        }
+                        currentPlayingTrack = null;
+                        // すべての再生ボタンをリセット
+                        document.querySelectorAll('.track-card').forEach(card => {
+                            updatePlayButton(card, false);
                         });
-                    }).catch(error => {
-                        console.warn('⚠️ 手動再生も失敗、Spotifyで開きます:', error);
-                        playPrompt.remove();
-                        openInSpotify(track);
-                    });
-                } catch (error) {
-                    console.warn('⚠️ 手動再生エラー、Spotifyで開きます:', error);
-                    playPrompt.remove();
-                    openInSpotify(track);
-                }
-            });
-
-            document.getElementById('skip-spotify-btn').addEventListener('click', () => {
-                playPrompt.remove();
-                openInSpotify(track);
-            });
-
-            // 10秒後に自動でキャンセル
-            setTimeout(() => {
-                if (playPrompt.parentNode) {
-                    playPrompt.remove();
-                }
-            }, 10000);
+                    }
+                });
+            }
         }
 
-        function openInSpotify(track) {
-            updatePlayButton(trackElement, false);
-            currentAudio = null;
+        function hideSpotifyIframe() {
+            const container = document.getElementById('spotify-iframe-container');
+            if (container) {
+                container.style.display = 'none';
+            }
+        }
+
+        function openInSpotify(track, trackElement = null) {
+            if (trackElement) {
+                updatePlayButton(trackElement, false);
+            }
             currentPlayingTrack = null;
+            hideSpotifyIframe();
             window.open(track.spotifyUrl, '_blank');
         }
 
