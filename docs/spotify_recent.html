@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify 最近再生した曲</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: #9ca3af;
+            font-size: 1.2rem;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        .tracks-container {
+            position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 2rem 0;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+        }
+
+        .tracks-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .tracks-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .tracks-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        .tracks-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .tracks-wrapper {
+            display: flex;
+            gap: 1.5rem;
+            padding: 0 1rem;
+            min-width: max-content;
+        }
+
+        .track-card {
+            flex-shrink: 0;
+            width: 320px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .track-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .track-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .album-art {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .track-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .track-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .track-artist {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .track-album {
+            color: #6b7280;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
+        .track-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .play-time {
+            color: #6b7280;
+            font-size: 0.8rem;
+        }
+
+        .played-at {
+            color: #06b6d4;
+            font-size: 0.8rem;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(6, 182, 212, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .track-card:hover .play-button {
+            opacity: 1;
+        }
+
+        .play-icon {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #9ca3af;
+        }
+
+        .error {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #ef4444;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 2rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #06b6d4;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #0891b2;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .track-card {
+                width: 280px;
+            }
+
+            .album-art {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">
+            ← ホームに戻る
+        </a>
+
+        <div class="header">
+            <h1 class="title">🎵 最近再生した曲</h1>
+            <p class="subtitle">Spotifyで最近聴いた曲たち</p>
+        </div>
+
+        <div id="loading" class="loading">
+            <p>読み込み中...</p>
+        </div>
+
+        <div id="error" class="error" style="display: none;">
+            <p>データの読み込みに失敗しました</p>
+        </div>
+
+        <div id="content" style="display: none;">
+            <div class="tracks-container">
+                <div id="tracks-wrapper" class="tracks-wrapper">
+                    <!-- トラックがここに挿入されます -->
+                </div>
+            </div>
+            <div id="last-updated" class="last-updated"></div>
+        </div>
+    </div>
+
+    <script>
+        async function loadSpotifyData() {
+            try {
+                const response = await fetch('/spotify-data.json');
+                if (!response.ok) {
+                    throw new Error('データの取得に失敗しました');
+                }
+
+                const data = await response.json();
+                displayTracks(data);
+
+            } catch (error) {
+                console.error('Error:', error);
+                showError();
+            }
+        }
+
+        function formatTime(ms) {
+            const minutes = Math.floor(ms / 60000);
+            const seconds = Math.floor((ms % 60000) / 1000);
+            return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function formatPlayedAt(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+
+            if (diffHours < 1) {
+                return 'たった今';
+            } else if (diffHours < 24) {
+                return `${diffHours}時間前`;
+            } else {
+                const diffDays = Math.floor(diffHours / 24);
+                return `${diffDays}日前`;
+            }
+        }
+
+        function displayTracks(data) {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const content = document.getElementById('content');
+            const wrapper = document.getElementById('tracks-wrapper');
+            const lastUpdated = document.getElementById('last-updated');
+
+            loading.style.display = 'none';
+            content.style.display = 'block';
+
+            if (!data.tracks || data.tracks.length === 0) {
+                wrapper.innerHTML = '<p class="error">再生履歴がありません</p>';
+                return;
+            }
+
+            wrapper.innerHTML = data.tracks.map(track => `
+                <a href="${track.spotifyUrl}" target="_blank" rel="noopener noreferrer" class="track-card">
+                    <div class="track-header">
+                        <img src="${track.albumArt}" alt="${track.name}" class="album-art"
+                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22%3E%3Crect width=%2280%22 height=%2280%22 fill=%22%23333%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2212%22%3E🎵%3C/text%3E%3C/svg%3E'">
+                        <div class="track-info">
+                            <div class="track-name">${track.name}</div>
+                            <div class="track-artist">${track.artist}</div>
+                            <div class="track-album">${track.album}</div>
+                        </div>
+                    </div>
+                    <div class="play-button">
+                        <svg class="play-icon" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                    <div class="track-details">
+                        <span class="play-time">${formatTime(track.duration)}</span>
+                        <span class="played-at">${formatPlayedAt(track.playedAt)}</span>
+                    </div>
+                </a>
+            `).join('');
+
+            if (data.lastUpdated) {
+                const updatedDate = new Date(data.lastUpdated);
+                lastUpdated.textContent = `最終更新: ${updatedDate.toLocaleString('ja-JP')}`;
+            }
+        }
+
+        function showError() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('error').style.display = 'block';
+        }
+
+        // ページ読み込み時にデータを読み込む
+        document.addEventListener('DOMContentLoaded', loadSpotifyData);
+
+        // 5分ごとに自動更新
+        setInterval(loadSpotifyData, 5 * 60 * 1000);
+    </script>
+</body>
+</html>
