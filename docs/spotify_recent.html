@@ -67,41 +67,25 @@
 
         .tracks-container {
             position: relative;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 2rem 0;
-            scrollbar-width: thin;
-            scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-        }
-
-        .tracks-container::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .tracks-container::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-        }
-
-        .tracks-container::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-        }
-
-        .tracks-container::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.5);
+            padding: 2rem 1rem;
         }
 
         .tracks-wrapper {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 1.5rem;
-            padding: 0 1rem;
-            min-width: max-content;
+
+            /* レスポンシブ対応 */
+            @media (min-width: 640px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (min-width: 1024px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .track-card {
-            flex-shrink: 0;
-            width: 320px;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -111,6 +95,9 @@
             cursor: pointer;
             text-decoration: none;
             color: inherit;
+            width: 100%;
+            max-width: 400px;
+            justify-self: center;
         }
 
         .track-card:hover {
@@ -364,6 +351,12 @@
     </a>
     </div>
     </header>
+
+
+
+
+
+
 
 
 
@@ -773,6 +766,9 @@
                 });
             });
 
+            // GSAP ScrollTriggerアニメーションを設定
+            setTimeout(setupScrollAnimations, 100);
+
             if (data.lastUpdated) {
                 const updatedDate = new Date(data.lastUpdated);
                 lastUpdated.textContent = `最終更新: ${updatedDate.toLocaleString('ja-JP')}`;
@@ -784,10 +780,38 @@
             document.getElementById('error').style.display = 'block';
         }
 
-        // DOMContentLoadedイベントは削除（window loadで実行するため）
+    // GSAP ScrollTriggerアニメーション設定
+    function setupScrollAnimations() {
+        const trackCards = document.querySelectorAll('.track-card');
 
-        // 5分ごとに自動更新
-        setInterval(loadSpotifyData, 5 * 60 * 1000);
+        trackCards.forEach((card, index) => {
+            // 初期状態：薄く、少し下にある
+            gsap.set(card, {
+                opacity: 0.3,
+                y: 50
+            });
+
+            // ScrollTrigger設定
+            gsap.to(card, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play",
+                    once: true
+                }
+            });
+        });
+    }
+
+    // DOMContentLoadedイベントは削除（window loadで実行するため）
+
+    // 5分ごとに自動更新
+    setInterval(loadSpotifyData, 5 * 60 * 1000);
     </script>
 </body>
 </html>
