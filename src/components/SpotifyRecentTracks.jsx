@@ -6,7 +6,10 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
 }
 
-export default function SpotifyRecentTracks({ limit = 6 }) {
+
+export default function SpotifyRecentTracks({ limit = 30 
+  /** 最大表示件数**/
+}) {
   const [tracks, setTracks] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)

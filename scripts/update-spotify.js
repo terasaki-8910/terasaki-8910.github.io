@@ -75,7 +75,7 @@ function formatTracks(items) {
     const track = item.track;
     const uniqueKey = `${track.id}-${track.name}-${track.artists[0].name}`;
 
-    if (!seen.has(uniqueKey) && tracks.length < 10) { // 最大10件
+    if (!seen.has(uniqueKey) && tracks.length < 30) { // 最大30件
       seen.add(uniqueKey);
 
       tracks.push({
