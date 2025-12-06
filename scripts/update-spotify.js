@@ -73,7 +73,9 @@ function formatTracks(items) {
 
   items.forEach(item => {
     const track = item.track;
-    const uniqueKey = `${track.id}-${track.name}-${track.artists[0].name}`;
+
+    // 曲IDのみで重複排除（同じ曲の複数回再生を防ぐため）
+    const uniqueKey = track.id;
 
     if (!seen.has(uniqueKey) && tracks.length < 30) { // 最大30件
       seen.add(uniqueKey);
