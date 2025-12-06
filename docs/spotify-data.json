@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-06T12:20:23.352Z",
+  "lastUpdated": "2025-12-06T15:48:10.951Z",
   "tracks": [
+    {
+      "id": "4BZVr0IQGfGwRT83GOOMWr",
+      "name": "Caramelldansen - SE Version",
+      "artist": "Caramella Girls",
+      "album": "Caramelldansen",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7c7b376088610d1cd639a4c14",
+      "playedAt": "2025-12-06T13:31:37.864Z",
+      "spotifyUrl": "https://open.spotify.com/track/4BZVr0IQGfGwRT83GOOMWr",
+      "duration": 174765,
+      "previewUrl": ""
+    },
     {
       "id": "0RZfz4zLlFb1lNtoEr7yDR",
       "name": "Alpha",
@@ -98,17 +109,6 @@
       "playedAt": "2025-12-05T20:40:31.127Z",
       "spotifyUrl": "https://open.spotify.com/track/5skCbGGAnc7Ns18Figz54h",
       "duration": 217492,
-      "previewUrl": ""
-    },
-    {
-      "id": "43CMcyGeImlZjy1oN0NVNG",
-      "name": "モエチャッカファイア",
-      "artist": "issey",
-      "album": "モエチャッカファイア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732c3840e66768368e20042fe6",
-      "playedAt": "2025-12-05T20:36:53.169Z",
-      "spotifyUrl": "https://open.spotify.com/track/43CMcyGeImlZjy1oN0NVNG",
-      "duration": 155981,
       "previewUrl": ""
     }
   ],
