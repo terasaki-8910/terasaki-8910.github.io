@@ -86,25 +86,88 @@
         }
 
         .track-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(0,240,255,0.03));
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0,240,255,0.2);
             border-radius: 20px;
             padding: 1.5rem;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
             width: 100%;
             max-width: 400px;
             justify-self: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,240,255,0.1), inset 0 1px 0 rgba(255,255,255,0.1);
+            will-change: transform, opacity, filter;
+            transform-style: preserve-3d;
+            transform-origin: center center;
         }
 
         .track-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px) scale(1.05);
+            background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0,240,255,0.05)) !important;
+            border-color: rgba(0, 240, 255, 0.5) !important;
+            box-shadow: 0 12px 48px rgba(0,0,0,0.4), 0 0 0 2px rgba(0,240,255,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+
+        /* 宇宙的アニメーション */
+        @keyframes cosmicPulse {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(0.95);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes colorShift {
+            0%, 100% {
+                border-color: rgba(0, 240, 255, 0.3);
+                box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.1), 0 0 40px rgba(0, 240, 255, 0.2);
+            }
+            25% {
+                border-color: rgba(112, 0, 255, 0.4);
+                box-shadow: inset 0 0 20px rgba(112, 0, 255, 0.15), 0 0 40px rgba(112, 0, 255, 0.25);
+            }
+            50% {
+                border-color: rgba(147, 51, 234, 0.4);
+                box-shadow: inset 0 0 20px rgba(147, 51, 234, 0.15), 0 0 40px rgba(147, 51, 234, 0.25);
+            }
+            75% {
+                border-color: rgba(59, 130, 246, 0.4);
+                box-shadow: inset 0 0 20px rgba(59, 130, 246, 0.15), 0 0 40px rgba(59, 130, 246, 0.25);
+            }
+        }
+
+        @keyframes stardustShimmer {
+            0%, 100% { opacity: 0; transform: translateX(-100%) rotate(45deg); }
+            10% { opacity: 0.3; }
+            20% { opacity: 0; transform: translateX(100%) rotate(45deg); }
+        }
+
+        .track-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, transparent, rgba(0, 240, 255, 0.1), transparent);
+            border-radius: 18px;
+            opacity: 0;
+            animation: stardustShimmer 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .track-card:hover::before {
+            animation-duration: 3s;
+            opacity: 0.6;
         }
 
         .track-header {
@@ -733,6 +796,25 @@
 
             wrapper.innerHTML = data.tracks.map(track => `
                 <div class="track-card" data-track='${JSON.stringify(track)}'>
+                    <!-- 宇宙的な発光エフェクト -->
+                    <div class="cosmic-glow-effect" style="
+                        position: absolute;
+                        inset: 0;
+                        pointer-events: none;
+                        background: radial-gradient(circle at 50% 0%, rgba(0,240,255,0.1) 0%, transparent 70%);
+                        animation: cosmicPulse 3s ease-in-out infinite;
+                    "></div>
+
+                    <!-- 呼吸する境界線 -->
+                    <div class="cosmic-border-effect" style="
+                        position: absolute;
+                        inset: 0;
+                        pointer-events: none;
+                        border-radius: 20px;
+                        border: 1px solid rgba(112,0,255,0.3);
+                        animation: colorShift 4s ease-in-out infinite;
+                        box-shadow: inset 0 0 20px rgba(0,240,255,0.1);
+                    "></div>
                     <div class="play-button">
                         <svg class="play-icon" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
@@ -780,32 +862,79 @@
             document.getElementById('error').style.display = 'block';
         }
 
-    // GSAP ScrollTriggerアニメーション設定
+    // リアルタイムスクロール連動アニメーション設定
     function setupScrollAnimations() {
         const trackCards = document.querySelectorAll('.track-card');
+        const animationFrameRef = { current: null };
 
-        trackCards.forEach((card, index) => {
-            // 初期状態：薄く、少し下にある
-            gsap.set(card, {
-                opacity: 0.3,
-                y: 50
+        // スクロール位置に基づいてカードスタイルを計算
+        const updateCardStyles = () => {
+            const viewportHeight = window.innerHeight;
+            const viewportCenter = viewportHeight / 2;
+
+            trackCards.forEach((card) => {
+                const rect = card.getBoundingClientRect();
+                const cardCenter = rect.top + rect.height / 2;
+                const distanceFromCenter = Math.abs(cardCenter - viewportCenter);
+                const maxDistance = viewportHeight / 2;
+
+                // 中心からの相対距離 (0 = 中心, 1 = 端)
+                const normalizedDistance = Math.min(distanceFromCenter / maxDistance, 1);
+
+                // イージング適用 (ease-out cubic)
+                const easedDistance = 1 - Math.pow(1 - normalizedDistance, 3);
+
+                // 各プロパティを計算
+                const opacity = 1.0 - (easedDistance * 0.6); // 中央:1.0 -> 端:0.4
+                const scale = 1.0 - (easedDistance * 0.15);  // 中央:1.0 -> 端:0.85
+                const rotationX = easedDistance * 6;         // 中央:0deg -> 端:6deg
+                const translateY = (cardCenter < viewportCenter ? 1 : -1) * easedDistance * 15;
+
+                // スタイルを適用
+                card.style.opacity = opacity;
+                card.style.transform = `
+                    scale(${scale})
+                    translateY(${translateY}px)
+                    rotateX(${rotationX}deg)
+                    perspective(1000px)
+                `;
             });
 
-            // ScrollTrigger設定
-            gsap.to(card, {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    toggleActions: "play",
-                    once: true
-                }
-            });
-        });
+            // 次のフレームを要求
+            animationFrameRef.current = requestAnimationFrame(updateCardStyles);
+        };
+
+        // スクロールイベントリスナーを設定
+        const handleScroll = () => {
+            if (animationFrameRef.current) {
+                cancelAnimationFrame(animationFrameRef.current);
+            }
+            animationFrameRef.current = requestAnimationFrame(updateCardStyles);
+        };
+
+        // リサイズイベントリスナーを設定
+        const handleResize = () => {
+            if (animationFrameRef.current) {
+                cancelAnimationFrame(animationFrameRef.current);
+            }
+            updateCardStyles();
+        };
+
+        // 初期スタイルを設定
+        updateCardStyles();
+
+        // イベントリスナーを登録
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleResize, { passive: true });
+
+        // クリーンアップ関数を返す
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+            if (animationFrameRef.current) {
+                cancelAnimationFrame(animationFrameRef.current);
+            }
+        };
     }
 
     // DOMContentLoadedイベントは削除（window loadで実行するため）

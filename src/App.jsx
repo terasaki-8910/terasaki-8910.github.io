@@ -11,7 +11,6 @@ import Profile from './components/Profile'
 import Footer from './components/Footer'
 import BackgroundScene from './components/BackgroundScene'
 import ErrorBoundary from './components/ErrorBoundary'
-import Header from './components/Header'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,7 +82,6 @@ function App() {
 
         {/* Main Content */}
         <div className="relative z-10">
-          {<Header currentPage="home" />}
           <Hero />
           <Philosophy />
           <ProjectShowcase />

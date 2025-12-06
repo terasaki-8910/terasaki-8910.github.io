@@ -1,9 +1,216 @@
 import { useState, useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// GSAPプラグインを登録
-gsap.registerPlugin(ScrollTrigger)
+// 宇宙的アニメーションのためのスタイルタグ注入
+if (typeof window !== 'undefined') {
+  const style = document.createElement('style')
+  style.textContent = `
+    @keyframes cosmicBreathing {
+      0%, 100% {
+        opacity: 0.2;
+        transform: scale(0.98);
+      }
+      50% {
+        opacity: 0.6;
+        transform: scale(1.02);
+      }
+    }
+
+    @keyframes stellarGlow {
+      0%, 100% {
+        background: radial-gradient(circle at 30% 30%,
+          rgba(0, 240, 255, 0.15) 0%,
+          rgba(112, 0, 255, 0.08) 30%,
+          transparent 70%);
+      }
+      33% {
+        background: radial-gradient(circle at 70% 30%,
+          rgba(147, 51, 234, 0.12) 0%,
+          rgba(59, 130, 246, 0.08) 30%,
+          transparent 70%);
+      }
+      66% {
+        background: radial-gradient(circle at 50% 70%,
+          rgba(0, 255, 157, 0.1) 0%,
+          rgba(112, 0, 255, 0.06) 30%,
+          transparent 70%);
+      }
+    }
+
+    @keyframes colorShiftCycle {
+      0% {
+        border-color: rgba(0, 240, 255, 0.2);
+        box-shadow:
+          inset 0 0 30px rgba(0, 240, 255, 0.08),
+          0 0 40px rgba(0, 240, 255, 0.15),
+          0 0 80px rgba(0, 240, 255, 0.05);
+      }
+      25% {
+        border-color: rgba(112, 0, 255, 0.3);
+        box-shadow:
+          inset 0 0 30px rgba(112, 0, 255, 0.1),
+          0 0 40px rgba(112, 0, 255, 0.2),
+          0 0 80px rgba(112, 0, 255, 0.08);
+      }
+      50% {
+        border-color: rgba(147, 51, 234, 0.3);
+        box-shadow:
+          inset 0 0 30px rgba(147, 51, 234, 0.1),
+          0 0 40px rgba(147, 51, 234, 0.2),
+          0 0 80px rgba(147, 51, 234, 0.08);
+      }
+      75% {
+        border-color: rgba(59, 130, 246, 0.3);
+        box-shadow:
+          inset 0 0 30px rgba(59, 130, 246, 0.1),
+          0 0 40px rgba(59, 130, 246, 0.2),
+          0 0 80px rgba(59, 130, 246, 0.08);
+      }
+    }
+
+    @keyframes stardustFlow {
+      0% {
+        background-position: -200% -200%;
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.4;
+      }
+      50% {
+        background-position: 200% 200%;
+        opacity: 0.6;
+      }
+      80% {
+        opacity: 0.4;
+      }
+      100% {
+        background-position: 600% 600%;
+        opacity: 0;
+      }
+    }
+
+    @keyframes nebulaCloud {
+      0%, 100% {
+        background: radial-gradient(ellipse at center,
+          rgba(0, 240, 255, 0.03) 0%,
+          rgba(112, 0, 255, 0.02) 40%,
+          transparent 70%);
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        background: radial-gradient(ellipse at center,
+          rgba(147, 51, 234, 0.05) 0%,
+          rgba(59, 130, 246, 0.03) 40%,
+          transparent 70%);
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+
+    .spotify-track-card {
+      will-change: transform, opacity;
+      transform-style: preserve-3d;
+      transform-origin: center center;
+      transition: all 0.15s cubic-bezier(0.25, 0.1, 0.25, 1);
+      backface-visibility: hidden;
+    }
+
+    .spotify-track-card:hover {
+      background: linear-gradient(135deg,
+        rgba(255,255,255,0.12),
+        rgba(0,240,255,0.08),
+        rgba(112,0,255,0.05)) !important;
+      border-color: rgba(0, 240, 255, 0.6) !important;
+      box-shadow:
+        0 16px 64px rgba(0,0,0,0.5),
+        0 0 0 3px rgba(0,240,255,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        inset 0 -1px 0 rgba(0,240,255,0.2) !important;
+      transform: translateZ(20px) scale(1.02) !important;
+    }
+
+    /* 宇宙背景エフェクト */
+    .spotify-track-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center,
+        rgba(0, 240, 255, 0.08) 0%,
+        rgba(112, 0, 255, 0.04) 30%,
+        transparent 70%);
+      animation: stellarGlow 8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: -2;
+      border-radius: 20px;
+    }
+
+    /* 星屑の流れ */
+    .spotify-track-card::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(45deg,
+        transparent 30%,
+        rgba(0, 240, 255, 0.2) 45%,
+        rgba(112, 0, 255, 0.15) 55%,
+        transparent 70%);
+      background-size: 300% 300%;
+      border-radius: 14px;
+      animation: stardustFlow 6s linear infinite;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .spotify-track-card:hover::before {
+      opacity: 0.8;
+      animation-duration: 2s;
+    }
+
+    /* 惑星環効果 */
+    .cosmic-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 120%;
+      border: 1px solid rgba(0, 240, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) rotateX(60deg);
+      animation: cosmicBreathing 4s ease-in-out infinite;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .spotify-track-card:hover .cosmic-ring {
+      border-color: rgba(0, 240, 255, 0.3);
+      animation-duration: 2s;
+    }
+
+    /* パフォーマンス最適化 */
+    .spotify-track-card img {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    /* スマホ向け最適化 */
+    @media (max-width: 768px) {
+      .spotify-track-card {
+        will-change: opacity, transform;
+      }
+
+      .spotify-track-card::before,
+      .spotify-track-card::after {
+        display: none;
+      }
+    }
+  `
+  document.head.appendChild(style)
+}
 
 
 export default function SpotifyRecentTracks({ limit = 30 
@@ -35,36 +242,80 @@ export default function SpotifyRecentTracks({ limit = 30
     fetchSpotifyData()
   }, [limit])
 
-  // GSAP ScrollTriggerアニメーション設定
+  // リアルタイムスクロール連動アニメーション
   useEffect(() => {
     if (!loading && tracks.length > 0 && gridRef.current) {
-      // すべてのトラックカードを取得
       const cards = gridRef.current.querySelectorAll('.spotify-track-card')
+      const animationFrameRef = { current: null }
 
-      cards.forEach((card, index) => {
-        // 初期状態設定
-        gsap.set(card, {
-          opacity: 0.3,
-          y: 50
+      // スクロール位置に基づいてカードスタイルを計算
+      const updateCardStyles = () => {
+        const viewportHeight = window.innerHeight
+        const viewportCenter = viewportHeight / 2
+
+        cards.forEach((card) => {
+          const rect = card.getBoundingClientRect()
+          const cardCenter = rect.top + rect.height / 2
+          const distanceFromCenter = Math.abs(cardCenter - viewportCenter)
+          const maxDistance = viewportHeight / 2
+
+          // 中心からの相対距離 (0 = 中心, 1 = 端)
+          const normalizedDistance = Math.min(distanceFromCenter / maxDistance, 1)
+
+          // イージング適用 (ease-out cubic)
+          const easedDistance = 1 - Math.pow(1 - normalizedDistance, 3)
+
+          // 各プロパティを計算
+          const opacity = 1.0 - (easedDistance * 0.6) // 中央:1.0 -> 端:0.4
+          const scale = 1.0 - (easedDistance * 0.15)  // 中央:1.0 -> 端:0.85
+          const rotationX = easedDistance * 6         // 中央:0deg -> 端:6deg
+          const translateY = (cardCenter < viewportCenter ? 1 : -1) * easedDistance * 15
+
+          // スタイルを適用
+          card.style.opacity = opacity
+          card.style.transform = `
+            scale(${scale})
+            translateY(${translateY}px)
+            rotateX(${rotationX}deg)
+            perspective(1000px)
+          `
         })
 
-        // ScrollTrigger設定
-        gsap.to(card, {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play"
-          }
-        })
-      })
+        // 次のフレームを要求
+        animationFrameRef.current = requestAnimationFrame(updateCardStyles)
+      }
 
-      // 一番下のカードが表示されたらRefreshTriggerを更新
-      ScrollTrigger.refresh()
+      // スクロールイベントリスナーを設定
+      const handleScroll = () => {
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current)
+        }
+        animationFrameRef.current = requestAnimationFrame(updateCardStyles)
+      }
+
+      // リサイズイベントリスナーを設定
+      const handleResize = () => {
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current)
+        }
+        updateCardStyles()
+      }
+
+      // 初期スタイルを設定
+      updateCardStyles()
+
+      // イベントリスナーを登録
+      window.addEventListener('scroll', handleScroll, { passive: true })
+      window.addEventListener('resize', handleResize, { passive: true })
+
+      // クリーンアップ関数
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+        window.removeEventListener('resize', handleResize)
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current)
+        }
+      }
     }
   }, [loading, tracks.length])
 
@@ -258,10 +509,40 @@ export default function SpotifyRecentTracks({ limit = 30
         {tracks.map((track, index) => (
           <div
             key={track.id}
-            className="spotify-track-card glass p-4 rounded-xl cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="spotify-track-card glass p-4 rounded-xl cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-xl relative overflow-hidden group"
             title={`${track.name} - ${track.artist} ${track.previewUrl ? '(30秒プレビュー)' : '(Spotifyで開く)'}`}
             onClick={() => handlePlayPreview(track)}
+            style={{
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.05), rgba(0,240,255,0.03))',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(0,240,255,0.2)',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,240,255,0.1), inset 0 1px 0 rgba(255,255,255,0.1)',
+              position: 'relative',
+              animation: 'colorShiftCycle 6s ease-in-out infinite'
+            }}
           >
+            {/* 惑星環エフェクト */}
+            <div className="cosmic-ring" />
+
+            {/* 宇宙的な発光エフェクト */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: 'radial-gradient(circle at 50% 0%, rgba(0,240,255,0.1) 0%, transparent 70%)',
+                animation: 'stellarGlow 8s ease-in-out infinite'
+              }}
+            />
+
+            {/* 呼吸する境界線 */}
+            <div
+              className="absolute inset-0 pointer-events-none rounded-xl"
+              style={{
+                border: '1px solid rgba(112,0,255,0.3)',
+                animation: 'colorShiftCycle 6s ease-in-out infinite',
+                boxShadow: 'inset 0 0 20px rgba(0,240,255,0.1)'
+              }}
+            />
+
             <div className="relative">
               {/* アルバムアート */}
               <div className="relative w-full h-40 rounded-lg overflow-hidden mb-3">

@@ -1,13 +1,22 @@
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
+import Header from './Header'
 
 export default function Hero() {
   const titleRef = useRef()
   const subtitleRef = useRef()
+  const headerRef = useRef()
 
   useEffect(() => {
     const title = titleRef.current
     const subtitle = subtitleRef.current
+    const header = headerRef.current
+
+    // Headerを初期状態で非表示に設定
+    gsap.set(header, {
+      opacity: 0,
+      y: -50,
+    })
 
     // Split text into characters for animation
     const titleText = 'クソサイト製造工場'
@@ -35,6 +44,12 @@ export default function Hero() {
       duration: 1,
       ease: 'power3.out',
     }, '-=0.5')
+    .to(header, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: 'power2.out',
+    }, '-=0.3')
 
     // Parallax effect on scroll
     gsap.to(title, {
@@ -53,6 +68,11 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Header Component */}
+      <div ref={headerRef} className="fixed top-0 left-0 right-0 z-50">
+        <Header currentPage="home" />
+      </div>
+
       <div className="text-center z-10 px-4">
         <h1 
           ref={titleRef}
@@ -66,7 +86,7 @@ export default function Hero() {
           Kuso Site Manufacturing Plant
         </p>
         <p className="text-sm md:text-lg text-gray-500 mt-4 opacity-0 animate-fade-in">
-          無駄に洗練されたハイテク工場へようこそ
+          冬色のポートフォリオ
         </p>
       </div>
 
