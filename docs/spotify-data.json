@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2025-12-06T15:59:02.740Z",
+  "lastUpdated": "2025-12-06T18:15:16.808Z",
   "tracks": [
+    {
+      "id": "6oT13AZPh97zsU5JJlqhpj",
+      "name": "ジョジョ〜その血の運命",
+      "artist": "Hiroaki Tommy Tominaga",
+      "album": "ジョジョ〜その血の運命",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f1584607ea71131e96fd909b",
+      "playedAt": "2025-12-06T16:17:38.145Z",
+      "spotifyUrl": "https://open.spotify.com/track/6oT13AZPh97zsU5JJlqhpj",
+      "duration": 262566,
+      "previewUrl": ""
+    },
+    {
+      "id": "5AsXKFu98mWCtNfdNrniPo",
+      "name": "君色シグナル",
+      "artist": "Luna Haruna",
+      "album": "君色シグナル",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7285c63a11a4eb1cd611b9d51",
+      "playedAt": "2025-12-06T16:13:01.247Z",
+      "spotifyUrl": "https://open.spotify.com/track/5AsXKFu98mWCtNfdNrniPo",
+      "duration": 292991,
+      "previewUrl": ""
+    },
+    {
+      "id": "5NxmDq0yXBYGfCbMqvIXuv",
+      "name": "UNDEAD",
+      "artist": "YOASOBI",
+      "album": "UNDEAD",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a4581aef9b70d42d5346c215",
+      "playedAt": "2025-12-06T16:10:19.307Z",
+      "spotifyUrl": "https://open.spotify.com/track/5NxmDq0yXBYGfCbMqvIXuv",
+      "duration": 182702,
+      "previewUrl": ""
+    },
+    {
+      "id": "6nvDyXnSzhvFkHgnkPLM3i",
+      "name": "Ψ発見伝！",
+      "artist": "Dempagumi.Inc",
+      "album": "ワレワレハデンパグミインクダ",
+      "albumArt": "https://i.scdn.co/image/f00a7f74db66523068d0596c274f38fff2716856",
+      "playedAt": "2025-12-06T16:08:25.175Z",
+      "spotifyUrl": "https://open.spotify.com/track/6nvDyXnSzhvFkHgnkPLM3i",
+      "duration": 238636,
+      "previewUrl": ""
+    },
     {
       "id": "4BZVr0IQGfGwRT83GOOMWr",
       "name": "Caramelldansen - SE Version",
@@ -285,50 +329,6 @@
       "playedAt": "2025-12-05T09:45:20.631Z",
       "spotifyUrl": "https://open.spotify.com/track/0Tk8x1l6o6bOT9I8sIh0BF",
       "duration": 185197,
-      "previewUrl": ""
-    },
-    {
-      "id": "1HWp3T9mxQxd4UAPjkAjRE",
-      "name": "Fruitful Blossom",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2025-12-05T09:42:14.826Z",
-      "spotifyUrl": "https://open.spotify.com/track/1HWp3T9mxQxd4UAPjkAjRE",
-      "duration": 88211,
-      "previewUrl": ""
-    },
-    {
-      "id": "7niANAGUFUYRZGGHqpCoHO",
-      "name": "SAKURA PUNCH",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2025-12-05T09:40:46.214Z",
-      "spotifyUrl": "https://open.spotify.com/track/7niANAGUFUYRZGGHqpCoHO",
-      "duration": 123036,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tqHJ0fHwS0ZDtumFtGRKg",
-      "name": "Alkaline Tears",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2025-12-05T09:38:42.137Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tqHJ0fHwS0ZDtumFtGRKg",
-      "duration": 145516,
-      "previewUrl": ""
-    },
-    {
-      "id": "1BQEp8EiQNCASv5odu5ZMc",
-      "name": "Let me think about it",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2025-12-05T09:36:16.213Z",
-      "spotifyUrl": "https://open.spotify.com/track/1BQEp8EiQNCASv5odu5ZMc",
-      "duration": 130423,
       "previewUrl": ""
     }
   ],
