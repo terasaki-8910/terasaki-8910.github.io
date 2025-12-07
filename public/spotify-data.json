@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2025-12-07T01:01:01.252Z",
+  "lastUpdated": "2025-12-07T04:01:29.454Z",
   "tracks": [
+    {
+      "id": "2Ex0f4XmDdW1Qeo87ntrjg",
+      "name": "Game Over",
+      "artist": "3000m",
+      "album": "Super Mario World (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
+      "playedAt": "2025-12-07T03:59:03.695Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Ex0f4XmDdW1Qeo87ntrjg",
+      "duration": 31149,
+      "previewUrl": ""
+    },
+    {
+      "id": "0ERtpwFGboWE41NqCMMuKA",
+      "name": "Underground",
+      "artist": "3000m",
+      "album": "Super Mario World (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
+      "playedAt": "2025-12-07T03:58:32.117Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ERtpwFGboWE41NqCMMuKA",
+      "duration": 45512,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Q1ewZa8DYQM3smKFMX2PE",
+      "name": "Ghost House",
+      "artist": "3000m",
+      "album": "Super Mario World (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
+      "playedAt": "2025-12-07T03:57:46.118Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Q1ewZa8DYQM3smKFMX2PE",
+      "duration": 88273,
+      "previewUrl": ""
+    },
+    {
+      "id": "2j9iLAWs1I9THuA9cXPyPu",
+      "name": "Star Road",
+      "artist": "3000m",
+      "album": "Super Mario World (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
+      "playedAt": "2025-12-07T03:56:17.531Z",
+      "spotifyUrl": "https://open.spotify.com/track/2j9iLAWs1I9THuA9cXPyPu",
+      "duration": 47447,
+      "previewUrl": ""
+    },
+    {
+      "id": "7MUPfeqBdA1wCA2yTre7Q4",
+      "name": "Cast List",
+      "artist": "3000m",
+      "album": "Super Mario World (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
+      "playedAt": "2025-12-07T03:55:31.129Z",
+      "spotifyUrl": "https://open.spotify.com/track/7MUPfeqBdA1wCA2yTre7Q4",
+      "duration": 142153,
+      "previewUrl": ""
+    },
+    {
+      "id": "5CyHyrAW1RPip3ruorIWyo",
+      "name": "ワガママMIRROR HEART",
+      "artist": "大橋彩香",
+      "album": "PROGRESS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733ab23da8ed9ed56ccd964fe4",
+      "playedAt": "2025-12-07T03:49:29.770Z",
+      "spotifyUrl": "https://open.spotify.com/track/5CyHyrAW1RPip3ruorIWyo",
+      "duration": 276200,
+      "previewUrl": ""
+    },
+    {
+      "id": "434YBNY61Y9sqBSp7OINBa",
+      "name": "君の知らない物語",
+      "artist": "supercell",
+      "album": "Today Is A Beautiful Day",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737de4dbffeda7b3ab5a2e5c77",
+      "playedAt": "2025-12-07T03:44:52.892Z",
+      "spotifyUrl": "https://open.spotify.com/track/434YBNY61Y9sqBSp7OINBa",
+      "duration": 339573,
+      "previewUrl": ""
+    },
+    {
+      "id": "1489XasC9uGNxGr3rXkLnX",
+      "name": "courage",
+      "artist": "Haruka Tomatsu",
+      "album": "courage",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321a782fcb80bca6f74c9bf24",
+      "playedAt": "2025-12-07T03:39:12.973Z",
+      "spotifyUrl": "https://open.spotify.com/track/1489XasC9uGNxGr3rXkLnX",
+      "duration": 253120,
+      "previewUrl": ""
+    },
     {
       "id": "6oT13AZPh97zsU5JJlqhpj",
       "name": "ジョジョ〜その血の運命",
@@ -241,94 +329,6 @@
       "playedAt": "2025-12-05T12:56:11.136Z",
       "spotifyUrl": "https://open.spotify.com/track/6VzafntJXV7RKfdhSQdWOk",
       "duration": 173264,
-      "previewUrl": ""
-    },
-    {
-      "id": "4K8QY8eufhwEg9EEix0Qqn",
-      "name": "Plug and Play",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2025-12-05T10:08:07.668Z",
-      "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
-      "duration": 127519,
-      "previewUrl": ""
-    },
-    {
-      "id": "6G8ghzF62TP7CkD1YBsIUT",
-      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "artist": "Qumu",
-      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
-      "playedAt": "2025-12-05T10:05:25.808Z",
-      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
-      "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FQcELLVZwSvarn27omhgd",
-      "name": "ukigumo",
-      "artist": "Hige Driver",
-      "album": "ヒゲドライバー 10th Anniversary Best",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
-      "playedAt": "2025-12-05T10:03:30.392Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
-      "duration": 215053,
-      "previewUrl": ""
-    },
-    {
-      "id": "7IUpgtokm66oFFIvcFsAq6",
-      "name": "透明人間",
-      "artist": "Tokyo Incidents",
-      "album": "総合",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273905db1b06f8176fd376fd55e",
-      "playedAt": "2025-12-05T09:59:46.964Z",
-      "spotifyUrl": "https://open.spotify.com/track/7IUpgtokm66oFFIvcFsAq6",
-      "duration": 272000,
-      "previewUrl": ""
-    },
-    {
-      "id": "3FxXMtBZ6VMI4Kbs4l8MWr",
-      "name": "Shoujo Sorrow",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
-      "playedAt": "2025-12-05T09:54:43.747Z",
-      "spotifyUrl": "https://open.spotify.com/track/3FxXMtBZ6VMI4Kbs4l8MWr",
-      "duration": 142892,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Vf5mopw2fxxZLylqQRNci",
-      "name": "Starting Pistol",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2025-12-05T09:52:20.370Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Vf5mopw2fxxZLylqQRNci",
-      "duration": 113608,
-      "previewUrl": ""
-    },
-    {
-      "id": "4H9ju2EvBSFUd6GAduYGtM",
-      "name": "Up to 21°C",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2025-12-05T09:50:26.190Z",
-      "spotifyUrl": "https://open.spotify.com/track/4H9ju2EvBSFUd6GAduYGtM",
-      "duration": 131434,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Tk8x1l6o6bOT9I8sIh0BF",
-      "name": "Constant Moderato Piano Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2025-12-05T09:45:20.631Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Tk8x1l6o6bOT9I8sIh0BF",
-      "duration": 185197,
       "previewUrl": ""
     }
   ],
