@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2025-12-08T06:20:41.452Z",
+  "lastUpdated": "2025-12-08T12:23:12.259Z",
   "tracks": [
+    {
+      "id": "0UBUg8NU4XJtQqzTPs8Pkr",
+      "name": "三原色",
+      "artist": "YOASOBI",
+      "album": "THE BOOK 2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c3625a413a9a79facea38c2",
+      "playedAt": "2025-12-08T10:12:21.898Z",
+      "spotifyUrl": "https://open.spotify.com/track/0UBUg8NU4XJtQqzTPs8Pkr",
+      "duration": 220253,
+      "previewUrl": ""
+    },
+    {
+      "id": "5hVAQTNarrb3lmWqg9Ens4",
+      "name": "Answer",
+      "artist": "Lilas",
+      "album": "Answer",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348c5cfdc37632311b3093be5",
+      "playedAt": "2025-12-08T10:08:40.884Z",
+      "spotifyUrl": "https://open.spotify.com/track/5hVAQTNarrb3lmWqg9Ens4",
+      "duration": 246000,
+      "previewUrl": ""
+    },
+    {
+      "id": "1c7alUM5wJn6O0rG3Gio7I",
+      "name": "メリッサ",
+      "artist": "PornoGraffitti",
+      "album": "PORNO GRAFFITTI BEST BLUE'S",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342d99967c387a76d54bed01f",
+      "playedAt": "2025-12-08T07:01:24.018Z",
+      "spotifyUrl": "https://open.spotify.com/track/1c7alUM5wJn6O0rG3Gio7I",
+      "duration": 274773,
+      "previewUrl": ""
+    },
     {
       "id": "4XObDlhGp6sREJoZj2lFv2",
       "name": "走れSAKAMOTO",
@@ -76,17 +109,6 @@
       "playedAt": "2025-12-07T10:13:20.297Z",
       "spotifyUrl": "https://open.spotify.com/track/7kEva2rxsNMn07fyfZMRRn",
       "duration": 201640,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hVAQTNarrb3lmWqg9Ens4",
-      "name": "Answer",
-      "artist": "Lilas",
-      "album": "Answer",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348c5cfdc37632311b3093be5",
-      "playedAt": "2025-12-07T10:06:42.978Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hVAQTNarrb3lmWqg9Ens4",
-      "duration": 246000,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2025-12-05T20:59:53.161Z",
       "spotifyUrl": "https://open.spotify.com/track/2EmkTBTh964LQen4Vz0svg",
       "duration": 199333,
-      "previewUrl": ""
-    },
-    {
-      "id": "3zbKiko8V3u2yn1RcT8xBZ",
-      "name": "青のすみか",
-      "artist": "Tatsuya Kitani",
-      "album": "ROUNDABOUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d49212018875a81c83b67e",
-      "playedAt": "2025-12-05T20:56:32.737Z",
-      "spotifyUrl": "https://open.spotify.com/track/3zbKiko8V3u2yn1RcT8xBZ",
-      "duration": 196640,
-      "previewUrl": ""
-    },
-    {
-      "id": "5pN2AyWwjzwRoI7gukEVNd",
-      "name": "さよーならまたいつか！- Sayonara",
-      "artist": "Kenshi Yonezu",
-      "album": "LOST CORNER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303d3216d6c463f993c96c9c7",
-      "playedAt": "2025-12-05T20:53:15.970Z",
-      "spotifyUrl": "https://open.spotify.com/track/5pN2AyWwjzwRoI7gukEVNd",
-      "duration": 201280,
       "previewUrl": ""
     }
   ],
