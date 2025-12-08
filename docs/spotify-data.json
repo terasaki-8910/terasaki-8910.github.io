@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2025-12-08T00:56:04.029Z",
+  "lastUpdated": "2025-12-08T06:20:41.452Z",
   "tracks": [
+    {
+      "id": "4XObDlhGp6sREJoZj2lFv2",
+      "name": "走れSAKAMOTO",
+      "artist": "Vaundy",
+      "album": "走れSAKAMOTO",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
+      "playedAt": "2025-12-08T06:05:20.057Z",
+      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
+      "duration": 205984,
+      "previewUrl": ""
+    },
+    {
+      "id": "1di1C0QI6Y92yZPYn6XYAZ",
+      "name": "シルエット",
+      "artist": "KANA-BOON",
+      "album": "TIME",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27364be01336a8f917538a60b74",
+      "playedAt": "2025-12-08T01:26:50.585Z",
+      "spotifyUrl": "https://open.spotify.com/track/1di1C0QI6Y92yZPYn6XYAZ",
+      "duration": 240133,
+      "previewUrl": ""
+    },
     {
       "id": "4a48lWUd64bZgHUDx0GZlj",
       "name": "新宝島",
@@ -307,28 +329,6 @@
       "playedAt": "2025-12-05T20:53:15.970Z",
       "spotifyUrl": "https://open.spotify.com/track/5pN2AyWwjzwRoI7gukEVNd",
       "duration": 201280,
-      "previewUrl": ""
-    },
-    {
-      "id": "5bUWFHUTbXQcmqI6vWL62j",
-      "name": "グランドエスケープ",
-      "artist": "RADWIMPS, Toko Miura",
-      "album": "天気の子 (complete version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f995bf0052673398dceb506",
-      "playedAt": "2025-12-05T20:49:54.778Z",
-      "spotifyUrl": "https://open.spotify.com/track/5bUWFHUTbXQcmqI6vWL62j",
-      "duration": 339160,
-      "previewUrl": ""
-    },
-    {
-      "id": "153lRbNmhQZVi69kbhmjY8",
-      "name": "ヒッチコック",
-      "artist": "ヨルシカ",
-      "album": "負け犬にアンコールはいらない",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328b535c92629e3c8d20ec242",
-      "playedAt": "2025-12-05T20:44:14.499Z",
-      "spotifyUrl": "https://open.spotify.com/track/153lRbNmhQZVi69kbhmjY8",
-      "duration": 222813,
       "previewUrl": ""
     }
   ],
