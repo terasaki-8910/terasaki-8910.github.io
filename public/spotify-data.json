@@ -1,6 +1,127 @@
 {
-  "lastUpdated": "2025-12-09T06:19:09.527Z",
+  "lastUpdated": "2025-12-09T12:23:48.110Z",
   "tracks": [
+    {
+      "id": "303BaO3iFHZCDmaMwnDAHw",
+      "name": "サマータイムラブ",
+      "artist": "Shiggy Jr.",
+      "album": "サマータイムラブ",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7d6801e75705cb88ff408baa0",
+      "playedAt": "2025-12-09T12:04:44.470Z",
+      "spotifyUrl": "https://open.spotify.com/track/303BaO3iFHZCDmaMwnDAHw",
+      "duration": 258091,
+      "previewUrl": ""
+    },
+    {
+      "id": "5sMZm3jJiLgkbDOGSztRSY",
+      "name": "メランコリーキッチン",
+      "artist": "Kenshi Yonezu",
+      "album": "YANKEE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
+      "playedAt": "2025-12-09T11:58:55.091Z",
+      "spotifyUrl": "https://open.spotify.com/track/5sMZm3jJiLgkbDOGSztRSY",
+      "duration": 218653,
+      "previewUrl": ""
+    },
+    {
+      "id": "6FhWelfRDMFZRtFUU6SIdC",
+      "name": "怪獣",
+      "artist": "sakanaction",
+      "album": "怪獣",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d7f2ac644f635e94a193736",
+      "playedAt": "2025-12-09T11:55:15.768Z",
+      "spotifyUrl": "https://open.spotify.com/track/6FhWelfRDMFZRtFUU6SIdC",
+      "duration": 252722,
+      "previewUrl": ""
+    },
+    {
+      "id": "2dkIbR4mudsHg45av3YwxQ",
+      "name": "天天天国地獄国",
+      "artist": "Aiobahn +81, Nanahira, P丸様｡",
+      "album": "天天天国地獄国",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27320d38995a3a124df80733df2",
+      "playedAt": "2025-12-09T11:50:57.260Z",
+      "spotifyUrl": "https://open.spotify.com/track/2dkIbR4mudsHg45av3YwxQ",
+      "duration": 228428,
+      "previewUrl": ""
+    },
+    {
+      "id": "69vckdXULKdHOmXKFwh4A8",
+      "name": "Underdog",
+      "artist": "Eve",
+      "album": "Underdog",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273710d00ddbf4a242d7d56e6d0",
+      "playedAt": "2025-12-09T11:47:08.148Z",
+      "spotifyUrl": "https://open.spotify.com/track/69vckdXULKdHOmXKFwh4A8",
+      "duration": 193749,
+      "previewUrl": ""
+    },
+    {
+      "id": "1oFqKeepmT5S8BCGqJl7Ar",
+      "name": "革命道中 - On The Way",
+      "artist": "AiNA THE END",
+      "album": "革命道中 - On The Way",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739df9218f742e792bcbd711d3",
+      "playedAt": "2025-12-09T11:43:53.823Z",
+      "spotifyUrl": "https://open.spotify.com/track/1oFqKeepmT5S8BCGqJl7Ar",
+      "duration": 197668,
+      "previewUrl": ""
+    },
+    {
+      "id": "4oE7MyJhqSD3BaHRpNs8Nl",
+      "name": "JANE DOE",
+      "artist": "Kenshi Yonezu, Hikaru Utada",
+      "album": "JANE DOE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738131aa99fb87ff0e9c511851",
+      "playedAt": "2025-12-09T11:40:57.227Z",
+      "spotifyUrl": "https://open.spotify.com/track/4oE7MyJhqSD3BaHRpNs8Nl",
+      "duration": 235946,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2025-12-09T11:36:39.503Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "4CQjt0Ejf8clK3s7h6Za0P",
+      "name": "転生林檎",
+      "artist": "PinocchioP",
+      "album": "転生林檎",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273287a32b6a7991e4a949be3d0",
+      "playedAt": "2025-12-09T10:00:56.338Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CQjt0Ejf8clK3s7h6Za0P",
+      "duration": 219082,
+      "previewUrl": ""
+    },
+    {
+      "id": "1rN9QoVxw5U7TJkyaUR8C1",
+      "name": "unravel",
+      "artist": "TK from Ling tosite sigure",
+      "album": "Fantastic Magic",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b11c3ab5cb818192b7a61fdd",
+      "playedAt": "2025-12-09T09:56:49.215Z",
+      "spotifyUrl": "https://open.spotify.com/track/1rN9QoVxw5U7TJkyaUR8C1",
+      "duration": 238360,
+      "previewUrl": ""
+    },
+    {
+      "id": "4MorYttxU39XKVoRlCopyz",
+      "name": "QUESTION",
+      "artist": "3年E組うた担(渚&茅野&業&磯貝&前原)",
+      "album": "QUESTION",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0f01a5f8f3e0d9a0f857870",
+      "playedAt": "2025-12-09T09:52:49.962Z",
+      "spotifyUrl": "https://open.spotify.com/track/4MorYttxU39XKVoRlCopyz",
+      "duration": 266226,
+      "previewUrl": ""
+    },
     {
       "id": "0UBUg8NU4XJtQqzTPs8Pkr",
       "name": "三原色",
@@ -76,17 +197,6 @@
       "playedAt": "2025-12-07T10:21:05.885Z",
       "spotifyUrl": "https://open.spotify.com/track/2tpWsVSb9UEmDRxAl1zhX1",
       "duration": 257265,
-      "previewUrl": ""
-    },
-    {
-      "id": "59hVbgr8rfYkDbHfr8RcGI",
-      "name": "IRIS OUT",
-      "artist": "Kenshi Yonezu",
-      "album": "IRIS OUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
-      "playedAt": "2025-12-07T10:16:47.777Z",
-      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
-      "duration": 151573,
       "previewUrl": ""
     },
     {
@@ -219,116 +329,6 @@
       "playedAt": "2025-12-07T03:49:29.770Z",
       "spotifyUrl": "https://open.spotify.com/track/5CyHyrAW1RPip3ruorIWyo",
       "duration": 276200,
-      "previewUrl": ""
-    },
-    {
-      "id": "434YBNY61Y9sqBSp7OINBa",
-      "name": "君の知らない物語",
-      "artist": "supercell",
-      "album": "Today Is A Beautiful Day",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737de4dbffeda7b3ab5a2e5c77",
-      "playedAt": "2025-12-07T03:44:52.892Z",
-      "spotifyUrl": "https://open.spotify.com/track/434YBNY61Y9sqBSp7OINBa",
-      "duration": 339573,
-      "previewUrl": ""
-    },
-    {
-      "id": "1489XasC9uGNxGr3rXkLnX",
-      "name": "courage",
-      "artist": "Haruka Tomatsu",
-      "album": "courage",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321a782fcb80bca6f74c9bf24",
-      "playedAt": "2025-12-07T03:39:12.973Z",
-      "spotifyUrl": "https://open.spotify.com/track/1489XasC9uGNxGr3rXkLnX",
-      "duration": 253120,
-      "previewUrl": ""
-    },
-    {
-      "id": "6oT13AZPh97zsU5JJlqhpj",
-      "name": "ジョジョ〜その血の運命",
-      "artist": "Hiroaki Tommy Tominaga",
-      "album": "ジョジョ〜その血の運命",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f1584607ea71131e96fd909b",
-      "playedAt": "2025-12-06T16:17:38.145Z",
-      "spotifyUrl": "https://open.spotify.com/track/6oT13AZPh97zsU5JJlqhpj",
-      "duration": 262566,
-      "previewUrl": ""
-    },
-    {
-      "id": "5AsXKFu98mWCtNfdNrniPo",
-      "name": "君色シグナル",
-      "artist": "Luna Haruna",
-      "album": "君色シグナル",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7285c63a11a4eb1cd611b9d51",
-      "playedAt": "2025-12-06T16:13:01.247Z",
-      "spotifyUrl": "https://open.spotify.com/track/5AsXKFu98mWCtNfdNrniPo",
-      "duration": 292991,
-      "previewUrl": ""
-    },
-    {
-      "id": "5NxmDq0yXBYGfCbMqvIXuv",
-      "name": "UNDEAD",
-      "artist": "YOASOBI",
-      "album": "UNDEAD",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a4581aef9b70d42d5346c215",
-      "playedAt": "2025-12-06T16:10:19.307Z",
-      "spotifyUrl": "https://open.spotify.com/track/5NxmDq0yXBYGfCbMqvIXuv",
-      "duration": 182702,
-      "previewUrl": ""
-    },
-    {
-      "id": "6nvDyXnSzhvFkHgnkPLM3i",
-      "name": "Ψ発見伝！",
-      "artist": "Dempagumi.Inc",
-      "album": "ワレワレハデンパグミインクダ",
-      "albumArt": "https://i.scdn.co/image/f00a7f74db66523068d0596c274f38fff2716856",
-      "playedAt": "2025-12-06T16:08:25.175Z",
-      "spotifyUrl": "https://open.spotify.com/track/6nvDyXnSzhvFkHgnkPLM3i",
-      "duration": 238636,
-      "previewUrl": ""
-    },
-    {
-      "id": "4BZVr0IQGfGwRT83GOOMWr",
-      "name": "Caramelldansen - SE Version",
-      "artist": "Caramella Girls",
-      "album": "Caramelldansen",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7c7b376088610d1cd639a4c14",
-      "playedAt": "2025-12-06T13:31:37.864Z",
-      "spotifyUrl": "https://open.spotify.com/track/4BZVr0IQGfGwRT83GOOMWr",
-      "duration": 174765,
-      "previewUrl": ""
-    },
-    {
-      "id": "0RZfz4zLlFb1lNtoEr7yDR",
-      "name": "Alpha",
-      "artist": "C418",
-      "album": "Minecraft - Volume Beta",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734cf0b29eb06a92aa96acae64",
-      "playedAt": "2025-12-06T05:41:24.579Z",
-      "spotifyUrl": "https://open.spotify.com/track/0RZfz4zLlFb1lNtoEr7yDR",
-      "duration": 603000,
-      "previewUrl": ""
-    },
-    {
-      "id": "1bNapzbrWh3wI8gqd06ejG",
-      "name": "I Ain't Worried",
-      "artist": "OneRepublic",
-      "album": "I Ain’t Worried",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b73fc8dcf33a471c4dae59abf4",
-      "playedAt": "2025-12-05T22:06:15.093Z",
-      "spotifyUrl": "https://open.spotify.com/track/1bNapzbrWh3wI8gqd06ejG",
-      "duration": 154287,
-      "previewUrl": ""
-    },
-    {
-      "id": "2EmkTBTh964LQen4Vz0svg",
-      "name": "花になって - Be a flower",
-      "artist": "Ryokuoushoku Shakai",
-      "album": "花になって - Be a flower",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27389e9b12f91f811198b14e15d",
-      "playedAt": "2025-12-05T20:59:53.161Z",
-      "spotifyUrl": "https://open.spotify.com/track/2EmkTBTh964LQen4Vz0svg",
-      "duration": 199333,
       "previewUrl": ""
     }
   ],
