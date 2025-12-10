@@ -1,6 +1,138 @@
 {
-  "lastUpdated": "2025-12-10T00:57:08.433Z",
+  "lastUpdated": "2025-12-10T06:19:32.812Z",
   "tracks": [
+    {
+      "id": "0HqZX76SFLDz2aW8aiqi7G",
+      "name": "Bones",
+      "artist": "Imagine Dragons",
+      "album": "Bones",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273813713582dcc508e7d5073c4",
+      "playedAt": "2025-12-10T04:24:43.279Z",
+      "spotifyUrl": "https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G",
+      "duration": 165264,
+      "previewUrl": ""
+    },
+    {
+      "id": "2tAeWToIlB5IRby3kZhMzQ",
+      "name": "Song of Storms",
+      "artist": "Super Piano 64, GameChops, Unplugged",
+      "album": "Zelda & Sleep",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1999fc2a0e2bcc1ee1cca75",
+      "playedAt": "2025-12-10T03:41:56.039Z",
+      "spotifyUrl": "https://open.spotify.com/track/2tAeWToIlB5IRby3kZhMzQ",
+      "duration": 164050,
+      "previewUrl": ""
+    },
+    {
+      "id": "2tpWsVSb9UEmDRxAl1zhX1",
+      "name": "Counting Stars",
+      "artist": "OneRepublic",
+      "album": "Native",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e2f95ae77cf436017ada9cb",
+      "playedAt": "2025-12-10T03:29:43.290Z",
+      "spotifyUrl": "https://open.spotify.com/track/2tpWsVSb9UEmDRxAl1zhX1",
+      "duration": 257265,
+      "previewUrl": ""
+    },
+    {
+      "id": "752WJrwNFCg0IRwKvr5RT5",
+      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "artist": "Tudd, GameChops",
+      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
+      "playedAt": "2025-12-10T03:25:25.448Z",
+      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
+      "duration": 237611,
+      "previewUrl": ""
+    },
+    {
+      "id": "1HdqMIGjLm8wkL4vWDcFPm",
+      "name": "スパークル",
+      "artist": "RADWIMPS",
+      "album": "人間開花",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731b70a19a834b7f15d33fe523",
+      "playedAt": "2025-12-10T03:21:27.376Z",
+      "spotifyUrl": "https://open.spotify.com/track/1HdqMIGjLm8wkL4vWDcFPm",
+      "duration": 410213,
+      "previewUrl": ""
+    },
+    {
+      "id": "1poGez6IaTb1gtJxkXdlb8",
+      "name": "ヒステリックナイトガール",
+      "artist": "PSYQUI, Such",
+      "album": "STYLEY!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731a8bba168d85553d9b2d47a9",
+      "playedAt": "2025-12-10T03:14:40.039Z",
+      "spotifyUrl": "https://open.spotify.com/track/1poGez6IaTb1gtJxkXdlb8",
+      "duration": 306000,
+      "previewUrl": ""
+    },
+    {
+      "id": "7IUpgtokm66oFFIvcFsAq6",
+      "name": "透明人間",
+      "artist": "Tokyo Incidents",
+      "album": "総合",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273905db1b06f8176fd376fd55e",
+      "playedAt": "2025-12-10T03:09:30.115Z",
+      "spotifyUrl": "https://open.spotify.com/track/7IUpgtokm66oFFIvcFsAq6",
+      "duration": 272000,
+      "previewUrl": ""
+    },
+    {
+      "id": "386RUes7n1uM1yfzgeUuwp",
+      "name": "The Lazy Song",
+      "artist": "Bruno Mars",
+      "album": "Doo-Wops & Hooligans",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f60070dce96a2c1b70cf6ff0",
+      "playedAt": "2025-12-10T03:04:57.654Z",
+      "spotifyUrl": "https://open.spotify.com/track/386RUes7n1uM1yfzgeUuwp",
+      "duration": 189109,
+      "previewUrl": ""
+    },
+    {
+      "id": "43CMcyGeImlZjy1oN0NVNG",
+      "name": "モエチャッカファイア",
+      "artist": "issey",
+      "album": "モエチャッカファイア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732c3840e66768368e20042fe6",
+      "playedAt": "2025-12-10T03:01:47.916Z",
+      "spotifyUrl": "https://open.spotify.com/track/43CMcyGeImlZjy1oN0NVNG",
+      "duration": 155981,
+      "previewUrl": ""
+    },
+    {
+      "id": "4PO8fERDL1d1FQA7uHg8il",
+      "name": "Among Us",
+      "artist": "Sembari +",
+      "album": "Among Us",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
+      "playedAt": "2025-12-10T02:59:11.544Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
+      "duration": 90508,
+      "previewUrl": ""
+    },
+    {
+      "id": "6odEFDH8XrbWrsygQf1VEl",
+      "name": "The Girl from Ipanema",
+      "artist": "DJ Jorexas",
+      "album": "The Girl from Ipanema",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730826d6f1f82fb3f547a7ae90",
+      "playedAt": "2025-12-10T02:54:13.750Z",
+      "spotifyUrl": "https://open.spotify.com/track/6odEFDH8XrbWrsygQf1VEl",
+      "duration": 98808,
+      "previewUrl": ""
+    },
+    {
+      "id": "7MUPfeqBdA1wCA2yTre7Q4",
+      "name": "Cast List",
+      "artist": "3000m",
+      "album": "Super Mario World (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
+      "playedAt": "2025-12-10T02:51:53.935Z",
+      "spotifyUrl": "https://open.spotify.com/track/7MUPfeqBdA1wCA2yTre7Q4",
+      "duration": 142153,
+      "previewUrl": ""
+    },
     {
       "id": "0JbGlD1FjnczH63mC2t7An",
       "name": "Escape from the City (From \"Sonic Adventure 2\")",
@@ -65,17 +197,6 @@
       "playedAt": "2025-12-09T16:04:00.091Z",
       "spotifyUrl": "https://open.spotify.com/track/0RZfz4zLlFb1lNtoEr7yDR",
       "duration": 603000,
-      "previewUrl": ""
-    },
-    {
-      "id": "752WJrwNFCg0IRwKvr5RT5",
-      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "artist": "Tudd, GameChops",
-      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
-      "playedAt": "2025-12-09T15:53:52.774Z",
-      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
-      "duration": 237611,
       "previewUrl": ""
     },
     {
@@ -208,127 +329,6 @@
       "playedAt": "2025-12-09T09:52:49.962Z",
       "spotifyUrl": "https://open.spotify.com/track/4MorYttxU39XKVoRlCopyz",
       "duration": 266226,
-      "previewUrl": ""
-    },
-    {
-      "id": "0UBUg8NU4XJtQqzTPs8Pkr",
-      "name": "三原色",
-      "artist": "YOASOBI",
-      "album": "THE BOOK 2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c3625a413a9a79facea38c2",
-      "playedAt": "2025-12-08T10:12:21.898Z",
-      "spotifyUrl": "https://open.spotify.com/track/0UBUg8NU4XJtQqzTPs8Pkr",
-      "duration": 220253,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hVAQTNarrb3lmWqg9Ens4",
-      "name": "Answer",
-      "artist": "Lilas",
-      "album": "Answer",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348c5cfdc37632311b3093be5",
-      "playedAt": "2025-12-08T10:08:40.884Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hVAQTNarrb3lmWqg9Ens4",
-      "duration": 246000,
-      "previewUrl": ""
-    },
-    {
-      "id": "1c7alUM5wJn6O0rG3Gio7I",
-      "name": "メリッサ",
-      "artist": "PornoGraffitti",
-      "album": "PORNO GRAFFITTI BEST BLUE'S",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342d99967c387a76d54bed01f",
-      "playedAt": "2025-12-08T07:01:24.018Z",
-      "spotifyUrl": "https://open.spotify.com/track/1c7alUM5wJn6O0rG3Gio7I",
-      "duration": 274773,
-      "previewUrl": ""
-    },
-    {
-      "id": "4XObDlhGp6sREJoZj2lFv2",
-      "name": "走れSAKAMOTO",
-      "artist": "Vaundy",
-      "album": "走れSAKAMOTO",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
-      "playedAt": "2025-12-08T06:05:20.057Z",
-      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
-      "duration": 205984,
-      "previewUrl": ""
-    },
-    {
-      "id": "1di1C0QI6Y92yZPYn6XYAZ",
-      "name": "シルエット",
-      "artist": "KANA-BOON",
-      "album": "TIME",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27364be01336a8f917538a60b74",
-      "playedAt": "2025-12-08T01:26:50.585Z",
-      "spotifyUrl": "https://open.spotify.com/track/1di1C0QI6Y92yZPYn6XYAZ",
-      "duration": 240133,
-      "previewUrl": ""
-    },
-    {
-      "id": "4a48lWUd64bZgHUDx0GZlj",
-      "name": "新宝島",
-      "artist": "sakanaction",
-      "album": "834.194",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
-      "playedAt": "2025-12-07T10:26:18.111Z",
-      "spotifyUrl": "https://open.spotify.com/track/4a48lWUd64bZgHUDx0GZlj",
-      "duration": 305000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2tpWsVSb9UEmDRxAl1zhX1",
-      "name": "Counting Stars",
-      "artist": "OneRepublic",
-      "album": "Native",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e2f95ae77cf436017ada9cb",
-      "playedAt": "2025-12-07T10:21:05.885Z",
-      "spotifyUrl": "https://open.spotify.com/track/2tpWsVSb9UEmDRxAl1zhX1",
-      "duration": 257265,
-      "previewUrl": ""
-    },
-    {
-      "id": "1HdqMIGjLm8wkL4vWDcFPm",
-      "name": "スパークル",
-      "artist": "RADWIMPS",
-      "album": "人間開花",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731b70a19a834b7f15d33fe523",
-      "playedAt": "2025-12-07T10:13:58.674Z",
-      "spotifyUrl": "https://open.spotify.com/track/1HdqMIGjLm8wkL4vWDcFPm",
-      "duration": 410213,
-      "previewUrl": ""
-    },
-    {
-      "id": "7kEva2rxsNMn07fyfZMRRn",
-      "name": "Cure For Me",
-      "artist": "AURORA",
-      "album": "Cure For Me",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ba4cc0508ba66eb8f099c9e",
-      "playedAt": "2025-12-07T10:13:20.297Z",
-      "spotifyUrl": "https://open.spotify.com/track/7kEva2rxsNMn07fyfZMRRn",
-      "duration": 201640,
-      "previewUrl": ""
-    },
-    {
-      "id": "5YqEzk3C5c3UZ1D5fJUlXA",
-      "name": "Sunroof",
-      "artist": "Nicky Youre, hey daisy",
-      "album": "Good Times Go",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ecd970d1d2623b6c7fc6080c",
-      "playedAt": "2025-12-07T04:12:36.742Z",
-      "spotifyUrl": "https://open.spotify.com/track/5YqEzk3C5c3UZ1D5fJUlXA",
-      "duration": 163025,
-      "previewUrl": ""
-    },
-    {
-      "id": "7qiZfU4dY1lWllzX7mPBI3",
-      "name": "Shape of You",
-      "artist": "Ed Sheeran",
-      "album": "÷ (Deluxe)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96",
-      "playedAt": "2025-12-07T04:09:51.571Z",
-      "spotifyUrl": "https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3",
-      "duration": 233712,
       "previewUrl": ""
     }
   ],
