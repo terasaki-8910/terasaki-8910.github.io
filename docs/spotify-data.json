@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-13T00:53:34.007Z",
+  "lastUpdated": "2025-12-13T06:17:31.081Z",
   "tracks": [
+    {
+      "id": "4C3AXZKVJM8RB0Q3rOpKJt",
+      "name": "Robogrex",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Extra Soundtrack",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273726597ff49f85e9e5252967a",
+      "playedAt": "2025-12-13T04:59:45.542Z",
+      "spotifyUrl": "https://open.spotify.com/track/4C3AXZKVJM8RB0Q3rOpKJt",
+      "duration": 131612,
+      "previewUrl": ""
+    },
     {
       "id": "6wK78BaKK20QxyMhkZWXdh",
       "name": "Dolce Biblioteca",
@@ -318,17 +329,6 @@
       "playedAt": "2025-12-12T14:41:10.496Z",
       "spotifyUrl": "https://open.spotify.com/track/6E8MwreOYsimH77OTdpGRJ",
       "duration": 118414,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zzcrYiYLMoAQF0rm6Sxol",
-      "name": "Aira",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2025-12-12T14:39:39.954Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zzcrYiYLMoAQF0rm6Sxol",
-      "duration": 136092,
       "previewUrl": ""
     }
   ],
