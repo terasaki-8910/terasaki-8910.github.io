@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-14T01:01:26.577Z",
+  "lastUpdated": "2025-12-14T06:17:21.824Z",
   "tracks": [
+    {
+      "id": "096KHkONhQm4MQNH35mU22",
+      "name": "鬼ノ宴",
+      "artist": "TOMONARI SORA\t",
+      "album": "鬼ノ宴",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b31680ab85031d2be2a3df6b",
+      "playedAt": "2025-12-14T06:11:24.896Z",
+      "spotifyUrl": "https://open.spotify.com/track/096KHkONhQm4MQNH35mU22",
+      "duration": 175998,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
@@ -318,17 +329,6 @@
       "playedAt": "2025-12-13T08:02:34.808Z",
       "spotifyUrl": "https://open.spotify.com/track/0Tk8x1l6o6bOT9I8sIh0BF",
       "duration": 185197,
-      "previewUrl": ""
-    },
-    {
-      "id": "2DTkdJipk64ces3k4hjzGK",
-      "name": "KARAKURhythm",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2025-12-13T07:59:29.086Z",
-      "spotifyUrl": "https://open.spotify.com/track/2DTkdJipk64ces3k4hjzGK",
-      "duration": 121068,
       "previewUrl": ""
     }
   ],
