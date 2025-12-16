@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2025-12-16T12:24:51.907Z",
+  "lastUpdated": "2025-12-16T18:18:44.876Z",
   "tracks": [
+    {
+      "id": "4H9ju2EvBSFUd6GAduYGtM",
+      "name": "Up to 21°C",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2025-12-16T14:20:30.221Z",
+      "spotifyUrl": "https://open.spotify.com/track/4H9ju2EvBSFUd6GAduYGtM",
+      "duration": 131434,
+      "previewUrl": ""
+    },
+    {
+      "id": "5biXaJWQ5NXnM8fW4lHNXj",
+      "name": "Love Is in the Air (From \"Yoshi's Story\")",
+      "artist": "Qumu",
+      "album": "Year 5",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ef4527a3aab9f434ae2cfe61",
+      "playedAt": "2025-12-16T14:04:00.676Z",
+      "spotifyUrl": "https://open.spotify.com/track/5biXaJWQ5NXnM8fW4lHNXj",
+      "duration": 140641,
+      "previewUrl": ""
+    },
     {
       "id": "0jTd0aswWbxRDCIQwlQeIj",
       "name": "New Donk City (From \"Super Mario Odyssey\")",
@@ -307,28 +329,6 @@
       "playedAt": "2025-12-15T11:17:23.724Z",
       "spotifyUrl": "https://open.spotify.com/track/4Hr0O0AcPiQGLG5wZeqBwZ",
       "duration": 122048,
-      "previewUrl": ""
-    },
-    {
-      "id": "3s1vLoxcml3hyCUZFqj2Xg",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "the tale of goat and squareman's magical balls",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a3f238c6bfb8d54dda300b79",
-      "playedAt": "2025-12-15T09:50:42.329Z",
-      "spotifyUrl": "https://open.spotify.com/track/3s1vLoxcml3hyCUZFqj2Xg",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "4L330cbJvY8AEYIzJfUayE",
-      "name": "KIRISAME",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2025-12-15T09:41:47.623Z",
-      "spotifyUrl": "https://open.spotify.com/track/4L330cbJvY8AEYIzJfUayE",
-      "duration": 113204,
       "previewUrl": ""
     }
   ],
