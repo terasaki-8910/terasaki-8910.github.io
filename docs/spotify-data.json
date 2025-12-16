@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-15T18:18:56.398Z",
+  "lastUpdated": "2025-12-16T00:57:43.078Z",
   "tracks": [
+    {
+      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
+      "name": "doodle",
+      "artist": "Zachz Winner",
+      "album": "doodle",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
+      "playedAt": "2025-12-15T19:23:30.238Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
+      "duration": 73918,
+      "previewUrl": ""
+    },
     {
       "id": "1BCt8MeNVgwqwal0VIRptJ",
       "name": "Ricco Harbor (From \"Super Mario Sunshine\")",
@@ -273,17 +284,6 @@
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273a3f238c6bfb8d54dda300b79",
       "playedAt": "2025-12-15T09:50:42.329Z",
       "spotifyUrl": "https://open.spotify.com/track/3s1vLoxcml3hyCUZFqj2Xg",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2025-12-15T09:49:37.837Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
       "duration": 73918,
       "previewUrl": ""
     },
