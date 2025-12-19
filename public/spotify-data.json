@@ -1,13 +1,24 @@
 {
-  "lastUpdated": "2025-12-19T12:22:34.801Z",
+  "lastUpdated": "2025-12-19T18:17:33.325Z",
   "tracks": [
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2025-12-19T16:14:28.089Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
     {
       "id": "4Xfp9BcKrKYmxJPxn68Yb8",
       "name": "doodle",
       "artist": "Zachz Winner",
       "album": "doodle",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2025-12-19T04:38:07.392Z",
+      "playedAt": "2025-12-19T15:10:44.359Z",
       "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
       "duration": 73918,
       "previewUrl": ""
@@ -318,17 +329,6 @@
       "playedAt": "2025-12-17T06:05:51.934Z",
       "spotifyUrl": "https://open.spotify.com/track/1489XasC9uGNxGr3rXkLnX",
       "duration": 253120,
-      "previewUrl": ""
-    },
-    {
-      "id": "31mB5BIU8VjhMoxaVratrR",
-      "name": "Zelda's Lullaby - Instrumental",
-      "artist": "Super Piano 64",
-      "album": "Zelda and Sleep: Instrumentals from Ocarina of Time",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730cdb008c879ff7af47748f0f",
-      "playedAt": "2025-12-17T05:57:29.939Z",
-      "spotifyUrl": "https://open.spotify.com/track/31mB5BIU8VjhMoxaVratrR",
-      "duration": 190799,
       "previewUrl": ""
     }
   ],
