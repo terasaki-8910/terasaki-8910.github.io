@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-21T06:17:40.302Z",
+  "lastUpdated": "2025-12-21T12:20:56.811Z",
   "tracks": [
+    {
+      "id": "08DzdMtaEC8ySbunP3ncw8",
+      "name": "Miracle",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
+      "playedAt": "2025-12-21T10:01:50.235Z",
+      "spotifyUrl": "https://open.spotify.com/track/08DzdMtaEC8ySbunP3ncw8",
+      "duration": 63430,
+      "previewUrl": ""
+    },
     {
       "id": "1ckhUtD8nBH2ShPlU8w2nU",
       "name": "ALL MY FELLAS",
@@ -318,17 +329,6 @@
       "playedAt": "2025-12-17T10:15:52.079Z",
       "spotifyUrl": "https://open.spotify.com/track/3nALNzcgJ9PWOSC7AvSrKY",
       "duration": 276923,
-      "previewUrl": ""
-    },
-    {
-      "id": "4oqUgyBXtbbJkeppHt8t2D",
-      "name": "嫌々",
-      "artist": "HALVES",
-      "album": "嫌々",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fab93f3bb8cfc0cd375b1415",
-      "playedAt": "2025-12-17T10:08:15.330Z",
-      "spotifyUrl": "https://open.spotify.com/track/4oqUgyBXtbbJkeppHt8t2D",
-      "duration": 184145,
       "previewUrl": ""
     }
   ],
