@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-23T00:57:14.890Z",
+  "lastUpdated": "2025-12-23T06:19:59.844Z",
   "tracks": [
+    {
+      "id": "5OQIvZoUPvfQq02tITKjQZ",
+      "name": "水流のロック",
+      "artist": "Natsuko Nisshoku",
+      "album": "瞼瞼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
+      "playedAt": "2025-12-23T01:27:23.516Z",
+      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
+      "duration": 179173,
+      "previewUrl": ""
+    },
     {
       "id": "52TdLwiXsS9EcJ0r9cdkFn",
       "name": "エピゴウネ",
@@ -21,17 +32,6 @@
       "playedAt": "2025-12-22T15:34:09.089Z",
       "spotifyUrl": "https://open.spotify.com/track/6UuZzF2cFwmALWa9Y3vwO8",
       "duration": 296413,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2025-12-22T15:29:12.151Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
       "previewUrl": ""
     },
     {
