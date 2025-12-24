@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-24T06:19:55.046Z",
+  "lastUpdated": "2025-12-24T12:22:59.001Z",
   "tracks": [
+    {
+      "id": "5cjjWH34eymyinmFKaAEEC",
+      "name": "うぉ",
+      "artist": "Yuuri",
+      "album": "うぉ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c65f49e17fc27c93761ada12",
+      "playedAt": "2025-12-24T08:22:36.288Z",
+      "spotifyUrl": "https://open.spotify.com/track/5cjjWH34eymyinmFKaAEEC",
+      "duration": 168026,
+      "previewUrl": ""
+    },
     {
       "id": "1r9xUipOqoNwggBpENDsvJ",
       "name": "Enemy (with JID) - from the series Arcane League of Legends",
@@ -318,17 +329,6 @@
       "playedAt": "2025-12-23T14:26:50.345Z",
       "spotifyUrl": "https://open.spotify.com/track/2ddvvAWIGyqJjeM0u2o853",
       "duration": 255706,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CTkQljbP19RftsQVJ8oxv",
-      "name": "いらないもの",
-      "artist": "Tatsuya Kitani, natori",
-      "album": "いらないもの",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b401f871eba227d2a24a7505",
-      "playedAt": "2025-12-23T14:22:33.822Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CTkQljbP19RftsQVJ8oxv",
-      "duration": 185566,
       "previewUrl": ""
     }
   ],
