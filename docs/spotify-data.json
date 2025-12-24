@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2025-12-24T12:22:59.001Z",
+  "lastUpdated": "2025-12-24T18:17:48.562Z",
   "tracks": [
+    {
+      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
+      "name": "doodle",
+      "artist": "Zachz Winner",
+      "album": "doodle",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
+      "playedAt": "2025-12-24T14:52:29.828Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
+      "duration": 73918,
+      "previewUrl": ""
+    },
+    {
+      "id": "0io3QSofXgstwX88M1VhuG",
+      "name": "エピゴウネ - Solo ver.",
+      "artist": "Natsuko Nisshoku",
+      "album": "エピゴウネ",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7b0267001c5d8880516f7d1f0",
+      "playedAt": "2025-12-24T14:49:39.622Z",
+      "spotifyUrl": "https://open.spotify.com/track/0io3QSofXgstwX88M1VhuG",
+      "duration": 208884,
+      "previewUrl": ""
+    },
+    {
+      "id": "6EzZn96uOc9JsVGNRpx06n",
+      "name": "うっせぇわ",
+      "artist": "Ado",
+      "album": "うっせぇわ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27389e3b38cb86ef8cfb0cd8def",
+      "playedAt": "2025-12-24T14:48:20.491Z",
+      "spotifyUrl": "https://open.spotify.com/track/6EzZn96uOc9JsVGNRpx06n",
+      "duration": 204920,
+      "previewUrl": ""
+    },
+    {
+      "id": "4CTkQljbP19RftsQVJ8oxv",
+      "name": "いらないもの",
+      "artist": "Tatsuya Kitani, natori",
+      "album": "いらないもの",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b401f871eba227d2a24a7505",
+      "playedAt": "2025-12-24T14:30:25.229Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CTkQljbP19RftsQVJ8oxv",
+      "duration": 185566,
+      "previewUrl": ""
+    },
+    {
+      "id": "5IqKUsttgHgGQWhKQWDOQo",
+      "name": "potatoになっていく (feat. 天馬司&鳳えむ&草薙寧々&神代類&初音ミク)",
+      "artist": "ワンダーランズ×ショウタイム",
+      "album": "セカイはまだ始まってすらいない/potatoになっていく",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738701934eca8f1856bdbe4af0",
+      "playedAt": "2025-12-24T14:27:19.273Z",
+      "spotifyUrl": "https://open.spotify.com/track/5IqKUsttgHgGQWhKQWDOQo",
+      "duration": 187500,
+      "previewUrl": ""
+    },
+    {
+      "id": "5OQIvZoUPvfQq02tITKjQZ",
+      "name": "水流のロック",
+      "artist": "Natsuko Nisshoku",
+      "album": "瞼瞼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
+      "playedAt": "2025-12-24T14:24:18.809Z",
+      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
+      "duration": 179173,
+      "previewUrl": ""
+    },
+    {
+      "id": "6bUKd5y4eThkXvfJFSAUJ1",
+      "name": "California Gurls",
+      "artist": "Katy Perry, Snoop Dogg",
+      "album": "Teenage Dream",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27327271ebe78e28a2ff83eaa47",
+      "playedAt": "2025-12-24T14:11:46.295Z",
+      "spotifyUrl": "https://open.spotify.com/track/6bUKd5y4eThkXvfJFSAUJ1",
+      "duration": 234653,
+      "previewUrl": ""
+    },
+    {
+      "id": "5YADi8VnCwx5ahhwNdgQaZ",
+      "name": "How Many Boogie",
+      "artist": "SKRYU, WAZGOGG, Fuma no KTR",
+      "album": "わすれもの",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27301729ef621de4f62bcdd05b9",
+      "playedAt": "2025-12-24T14:06:29.853Z",
+      "spotifyUrl": "https://open.spotify.com/track/5YADi8VnCwx5ahhwNdgQaZ",
+      "duration": 159047,
+      "previewUrl": ""
+    },
     {
       "id": "5cjjWH34eymyinmFKaAEEC",
       "name": "うぉ",
@@ -32,17 +120,6 @@
       "playedAt": "2025-12-23T17:43:39.230Z",
       "spotifyUrl": "https://open.spotify.com/track/6kPJZM97LwdG9QIsT7khp6",
       "duration": 222653,
-      "previewUrl": ""
-    },
-    {
-      "id": "5YADi8VnCwx5ahhwNdgQaZ",
-      "name": "How Many Boogie",
-      "artist": "SKRYU, WAZGOGG, Fuma no KTR",
-      "album": "わすれもの",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27301729ef621de4f62bcdd05b9",
-      "playedAt": "2025-12-23T17:39:55.968Z",
-      "spotifyUrl": "https://open.spotify.com/track/5YADi8VnCwx5ahhwNdgQaZ",
-      "duration": 159047,
       "previewUrl": ""
     },
     {
@@ -142,28 +219,6 @@
       "playedAt": "2025-12-23T17:08:33.646Z",
       "spotifyUrl": "https://open.spotify.com/track/1HdqMIGjLm8wkL4vWDcFPm",
       "duration": 410213,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2025-12-23T17:01:43.827Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "6EzZn96uOc9JsVGNRpx06n",
-      "name": "うっせぇわ",
-      "artist": "Ado",
-      "album": "うっせぇわ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27389e3b38cb86ef8cfb0cd8def",
-      "playedAt": "2025-12-23T15:38:19.382Z",
-      "spotifyUrl": "https://open.spotify.com/track/6EzZn96uOc9JsVGNRpx06n",
-      "duration": 204920,
       "previewUrl": ""
     },
     {
@@ -274,61 +329,6 @@
       "playedAt": "2025-12-23T14:49:12.372Z",
       "spotifyUrl": "https://open.spotify.com/track/6ftHLS43EDPb3HvNfNuxHY",
       "duration": 221120,
-      "previewUrl": ""
-    },
-    {
-      "id": "3M214U0mwSm041GsQR3nrO",
-      "name": "Toxic",
-      "artist": "BoyWithUke",
-      "album": "Serotonin Dreams",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee07023115f822012390d2a0",
-      "playedAt": "2025-12-23T14:45:04.797Z",
-      "spotifyUrl": "https://open.spotify.com/track/3M214U0mwSm041GsQR3nrO",
-      "duration": 168066,
-      "previewUrl": ""
-    },
-    {
-      "id": "4c8p9B9seo0laoNCGqinkP",
-      "name": "Goldenrod City",
-      "artist": "Braxton Burks",
-      "album": "Johto Legends (Music from \"Pokémon Gold and Silver\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9028efab6870bd8ca92c253",
-      "playedAt": "2025-12-23T14:36:51.858Z",
-      "spotifyUrl": "https://open.spotify.com/track/4c8p9B9seo0laoNCGqinkP",
-      "duration": 158634,
-      "previewUrl": ""
-    },
-    {
-      "id": "7b4x3IrBFSEnC2XFsKiouR",
-      "name": "Great Days",
-      "artist": "Karen Aoki, ハセガワダイスケ",
-      "album": "Great Days",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d19ba9fad14b2dae27ba6921",
-      "playedAt": "2025-12-23T14:34:12.644Z",
-      "spotifyUrl": "https://open.spotify.com/track/7b4x3IrBFSEnC2XFsKiouR",
-      "duration": 243376,
-      "previewUrl": ""
-    },
-    {
-      "id": "389rEslJY9vh7TZemIA4y7",
-      "name": "絶対零度",
-      "artist": "natori",
-      "album": "絶対零度",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e29a80447e75fc171dd4462",
-      "playedAt": "2025-12-23T14:30:08.928Z",
-      "spotifyUrl": "https://open.spotify.com/track/389rEslJY9vh7TZemIA4y7",
-      "duration": 198483,
-      "previewUrl": ""
-    },
-    {
-      "id": "2ddvvAWIGyqJjeM0u2o853",
-      "name": "Fantastic future",
-      "artist": "Yukari Tamura",
-      "album": "螺旋の果実",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d03a07279e98d0b8a1928712",
-      "playedAt": "2025-12-23T14:26:50.345Z",
-      "spotifyUrl": "https://open.spotify.com/track/2ddvvAWIGyqJjeM0u2o853",
-      "duration": 255706,
       "previewUrl": ""
     }
   ],
