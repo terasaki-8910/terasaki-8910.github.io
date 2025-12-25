@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-25T06:19:20.588Z",
+  "lastUpdated": "2025-12-25T12:22:50.786Z",
   "tracks": [
+    {
+      "id": "5mjkeVu24NbkHeX8zt7muo",
+      "name": "革命",
+      "artist": "MOROHA",
+      "album": "MOROHA BEST～十年再録～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27329ad94df44a774c409b63495",
+      "playedAt": "2025-12-25T08:06:52.145Z",
+      "spotifyUrl": "https://open.spotify.com/track/5mjkeVu24NbkHeX8zt7muo",
+      "duration": 291466,
+      "previewUrl": ""
+    },
     {
       "id": "4Xfp9BcKrKYmxJPxn68Yb8",
       "name": "doodle",
@@ -318,17 +329,6 @@
       "playedAt": "2025-12-23T14:50:22.544Z",
       "spotifyUrl": "https://open.spotify.com/track/2pUpNOgJBIBCcjyQZQ00qU",
       "duration": 252733,
-      "previewUrl": ""
-    },
-    {
-      "id": "6ftHLS43EDPb3HvNfNuxHY",
-      "name": "色は匂へど散りぬるを(full ver.)",
-      "artist": "幽閉サテライト",
-      "album": "幻想万華鏡～巨大妖怪伝説の章～オリジナルサウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a80c9c7195cb915f5b8b0fb9",
-      "playedAt": "2025-12-23T14:49:12.372Z",
-      "spotifyUrl": "https://open.spotify.com/track/6ftHLS43EDPb3HvNfNuxHY",
-      "duration": 221120,
       "previewUrl": ""
     }
   ],
