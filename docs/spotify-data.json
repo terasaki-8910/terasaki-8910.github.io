@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2025-12-25T12:22:50.786Z",
+  "lastUpdated": "2025-12-25T18:17:13.333Z",
   "tracks": [
+    {
+      "id": "4KxLGJuukrM9ClQJzFNygB",
+      "name": "七色シンフォニー",
+      "artist": "COALAMODE.",
+      "album": "七色シンフォニー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bb99910610d041590e365302",
+      "playedAt": "2025-12-25T12:34:51.407Z",
+      "spotifyUrl": "https://open.spotify.com/track/4KxLGJuukrM9ClQJzFNygB",
+      "duration": 271720,
+      "previewUrl": ""
+    },
     {
       "id": "5mjkeVu24NbkHeX8zt7muo",
       "name": "革命",
@@ -318,17 +329,6 @@
       "playedAt": "2025-12-23T14:53:35.126Z",
       "spotifyUrl": "https://open.spotify.com/track/5FRJEAMIv1bKEC6QFocGG0",
       "duration": 204026,
-      "previewUrl": ""
-    },
-    {
-      "id": "2pUpNOgJBIBCcjyQZQ00qU",
-      "name": "Let Her Go",
-      "artist": "Passenger",
-      "album": "All the Little Lights (Deluxe)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eb0b18cce8b7f5c9fc1579e7",
-      "playedAt": "2025-12-23T14:50:22.544Z",
-      "spotifyUrl": "https://open.spotify.com/track/2pUpNOgJBIBCcjyQZQ00qU",
-      "duration": 252733,
       "previewUrl": ""
     }
   ],
