@@ -1,6 +1,182 @@
 {
-  "lastUpdated": "2025-12-30T06:19:44.145Z",
+  "lastUpdated": "2025-12-30T12:24:23.611Z",
   "tracks": [
+    {
+      "id": "0WjwAv3XSjztqqyD6Gw1CX",
+      "name": "風のとおり道（インストゥルメンタンル）",
+      "artist": "Joe Hisaishi",
+      "album": "となりのトトロ サウンドトラック集",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ab4ac35f41f2c8b1e428b0f",
+      "playedAt": "2025-12-30T10:27:44.048Z",
+      "spotifyUrl": "https://open.spotify.com/track/0WjwAv3XSjztqqyD6Gw1CX",
+      "duration": 196760,
+      "previewUrl": ""
+    },
+    {
+      "id": "15X1ksqhe8cY1NlEZMl7X8",
+      "name": "海の見える街",
+      "artist": "Joe Hisaishi",
+      "album": "魔女の宅急便 サントラ音楽集",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273559ab67b95bf2a8c19fd151e",
+      "playedAt": "2025-12-30T10:24:25.496Z",
+      "spotifyUrl": "https://open.spotify.com/track/15X1ksqhe8cY1NlEZMl7X8",
+      "duration": 180333,
+      "previewUrl": ""
+    },
+    {
+      "id": "2UUwBDALzJuThY88Ro2lD2",
+      "name": "フォニイ",
+      "artist": "可不, ツミキ",
+      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
+      "playedAt": "2025-12-30T10:21:14.010Z",
+      "spotifyUrl": "https://open.spotify.com/track/2UUwBDALzJuThY88Ro2lD2",
+      "duration": 189884,
+      "previewUrl": ""
+    },
+    {
+      "id": "2rLQSO39YRy7KQAR4XKqBM",
+      "name": "アンヘル",
+      "artist": "Kairikibear, 鳴花ミコト",
+      "album": "鳴花ヒメ・ミコト Demo Sampler",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736aaad651e0403e2d1366e1b9",
+      "playedAt": "2025-12-30T10:12:32.494Z",
+      "spotifyUrl": "https://open.spotify.com/track/2rLQSO39YRy7KQAR4XKqBM",
+      "duration": 217885,
+      "previewUrl": ""
+    },
+    {
+      "id": "3T7rdXRAk3b2WUlevahSw1",
+      "name": "キュートなカノジョ",
+      "artist": "syudou",
+      "album": "キュートなカノジョ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730797da4903bce865f54640ca",
+      "playedAt": "2025-12-30T10:07:23.231Z",
+      "spotifyUrl": "https://open.spotify.com/track/3T7rdXRAk3b2WUlevahSw1",
+      "duration": 131062,
+      "previewUrl": ""
+    },
+    {
+      "id": "6gav7LxBxdjcPb5sbLi9cQ",
+      "name": "ルカルカ★ナイトフィーバー",
+      "artist": "MOSAIC.TUNE feat.初音ミク, Hatsune Miku",
+      "album": "みんなみくみくにしてあげる♪～Heartsnative2～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735fbfd4dffd5a03add11186ff",
+      "playedAt": "2025-12-30T10:05:22.661Z",
+      "spotifyUrl": "https://open.spotify.com/track/6gav7LxBxdjcPb5sbLi9cQ",
+      "duration": 246933,
+      "previewUrl": ""
+    },
+    {
+      "id": "2EjDBwyMAALFfKaaSUCRkz",
+      "name": "キャットラビング",
+      "artist": "香椎モイミ",
+      "album": "キャットラビング",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c68ba6b949b41c5a4863009",
+      "playedAt": "2025-12-30T10:01:02.321Z",
+      "spotifyUrl": "https://open.spotify.com/track/2EjDBwyMAALFfKaaSUCRkz",
+      "duration": 117055,
+      "previewUrl": ""
+    },
+    {
+      "id": "3UDe37nc2yvttJXlNk6Itr",
+      "name": "テレキャスタービーボーイ (long ver.)",
+      "artist": "THREEE",
+      "album": "パンデミック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ea035a934d5ec3aa051e6029",
+      "playedAt": "2025-12-30T09:59:05.099Z",
+      "spotifyUrl": "https://open.spotify.com/track/3UDe37nc2yvttJXlNk6Itr",
+      "duration": 164500,
+      "previewUrl": ""
+    },
+    {
+      "id": "4qVHEZ8pbcI7EyliSL7AHJ",
+      "name": "CH4NGE - feat. 可不",
+      "artist": "Giga, 可不",
+      "album": "CH4NGE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae5fe1233f48f3d4969df4e9",
+      "playedAt": "2025-12-30T09:55:01.527Z",
+      "spotifyUrl": "https://open.spotify.com/track/4qVHEZ8pbcI7EyliSL7AHJ",
+      "duration": 132032,
+      "previewUrl": ""
+    },
+    {
+      "id": "3UVNKqlbi4HuTxtr4ONvh5",
+      "name": "エゴロック",
+      "artist": "THREEE",
+      "album": "HEAUTOSCOPY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739fea26f3d4a2be2d6e90b16f",
+      "playedAt": "2025-12-30T09:52:50.085Z",
+      "spotifyUrl": "https://open.spotify.com/track/3UVNKqlbi4HuTxtr4ONvh5",
+      "duration": 169986,
+      "previewUrl": ""
+    },
+    {
+      "id": "6HznFPNdvbxgzm5jJyNlwp",
+      "name": "オーバーライド",
+      "artist": "Yoshida Yasei",
+      "album": "オーバーライド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
+      "playedAt": "2025-12-30T09:49:23.596Z",
+      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "02vOyaNCKGX8uhjggOIH83",
+      "name": "エンヴィーベイビー",
+      "artist": "Kanaria",
+      "album": "エンヴィーベイビー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fa53d481a829f303078565eb",
+      "playedAt": "2025-12-30T09:47:07.010Z",
+      "spotifyUrl": "https://open.spotify.com/track/02vOyaNCKGX8uhjggOIH83",
+      "duration": 135789,
+      "previewUrl": ""
+    },
+    {
+      "id": "5tE3p4vIwoqUZLkKF2PNeB",
+      "name": "Interstellar Main Theme (From \"Interstellar\")",
+      "artist": "Geek Music",
+      "album": "Interstellar Main Theme (From \"Interstellar\")",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f72550703b6302addfc9959",
+      "playedAt": "2025-12-30T09:44:34.584Z",
+      "spotifyUrl": "https://open.spotify.com/track/5tE3p4vIwoqUZLkKF2PNeB",
+      "duration": 243209,
+      "previewUrl": ""
+    },
+    {
+      "id": "19XVDw9shopE7w6odXNVSl",
+      "name": "アユミ☆マジカルショータイム - Remastered",
+      "artist": "kinoshita",
+      "album": "アユミ☆マジカルショータイム (Remastered)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273335adeda2437becf59e0d73f",
+      "playedAt": "2025-12-30T09:34:51.564Z",
+      "spotifyUrl": "https://open.spotify.com/track/19XVDw9shopE7w6odXNVSl",
+      "duration": 234000,
+      "previewUrl": ""
+    },
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2025-12-30T09:30:15.298Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
+      "previewUrl": ""
+    },
+    {
+      "id": "54CAG8n70kKVbFV6l1zF4G",
+      "name": "Adiemus",
+      "artist": "Karl Jenkins, Mike Ratledge, Jody K. Jenkins, Adiemus, London Philharmonic Orchestra, Mary Carewe",
+      "album": "Adiemus - Songs Of Sanctuary",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eedd9c14bcbfcc0810a5f2cf",
+      "playedAt": "2025-12-30T09:25:58.023Z",
+      "spotifyUrl": "https://open.spotify.com/track/54CAG8n70kKVbFV6l1zF4G",
+      "duration": 237413,
+      "previewUrl": ""
+    },
     {
       "id": "6ps6OnKkT3EYVHoG8CXGEU",
       "name": "Till the End",
@@ -10,28 +186,6 @@
       "playedAt": "2025-12-28T07:30:04.383Z",
       "spotifyUrl": "https://open.spotify.com/track/6ps6OnKkT3EYVHoG8CXGEU",
       "duration": 361333,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tE3p4vIwoqUZLkKF2PNeB",
-      "name": "Interstellar Main Theme (From \"Interstellar\")",
-      "artist": "Geek Music",
-      "album": "Interstellar Main Theme (From \"Interstellar\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f72550703b6302addfc9959",
-      "playedAt": "2025-12-27T12:05:47.311Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tE3p4vIwoqUZLkKF2PNeB",
-      "duration": 243209,
-      "previewUrl": ""
-    },
-    {
-      "id": "15X1ksqhe8cY1NlEZMl7X8",
-      "name": "海の見える街",
-      "artist": "Joe Hisaishi",
-      "album": "魔女の宅急便 サントラ音楽集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273559ab67b95bf2a8c19fd151e",
-      "playedAt": "2025-12-27T11:33:35.552Z",
-      "spotifyUrl": "https://open.spotify.com/track/15X1ksqhe8cY1NlEZMl7X8",
-      "duration": 180333,
       "previewUrl": ""
     },
     {
@@ -76,28 +230,6 @@
       "playedAt": "2025-12-27T09:33:25.212Z",
       "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
       "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "54CAG8n70kKVbFV6l1zF4G",
-      "name": "Adiemus",
-      "artist": "Karl Jenkins, Mike Ratledge, Jody K. Jenkins, Adiemus, London Philharmonic Orchestra, Mary Carewe",
-      "album": "Adiemus - Songs Of Sanctuary",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eedd9c14bcbfcc0810a5f2cf",
-      "playedAt": "2025-12-27T09:31:39.430Z",
-      "spotifyUrl": "https://open.spotify.com/track/54CAG8n70kKVbFV6l1zF4G",
-      "duration": 237413,
-      "previewUrl": ""
-    },
-    {
-      "id": "0WjwAv3XSjztqqyD6Gw1CX",
-      "name": "風のとおり道（インストゥルメンタンル）",
-      "artist": "Joe Hisaishi",
-      "album": "となりのトトロ サウンドトラック集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ab4ac35f41f2c8b1e428b0f",
-      "playedAt": "2025-12-27T09:21:07.039Z",
-      "spotifyUrl": "https://open.spotify.com/track/0WjwAv3XSjztqqyD6Gw1CX",
-      "duration": 196760,
       "previewUrl": ""
     },
     {
@@ -176,128 +308,7 @@
       "spotifyUrl": "https://open.spotify.com/track/0io3QSofXgstwX88M1VhuG",
       "duration": 208884,
       "previewUrl": ""
-    },
-    {
-      "id": "6EzZn96uOc9JsVGNRpx06n",
-      "name": "うっせぇわ",
-      "artist": "Ado",
-      "album": "うっせぇわ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27389e3b38cb86ef8cfb0cd8def",
-      "playedAt": "2025-12-24T14:48:20.491Z",
-      "spotifyUrl": "https://open.spotify.com/track/6EzZn96uOc9JsVGNRpx06n",
-      "duration": 204920,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CTkQljbP19RftsQVJ8oxv",
-      "name": "いらないもの",
-      "artist": "Tatsuya Kitani, natori",
-      "album": "いらないもの",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b401f871eba227d2a24a7505",
-      "playedAt": "2025-12-24T14:30:25.229Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CTkQljbP19RftsQVJ8oxv",
-      "duration": 185566,
-      "previewUrl": ""
-    },
-    {
-      "id": "5IqKUsttgHgGQWhKQWDOQo",
-      "name": "potatoになっていく (feat. 天馬司&鳳えむ&草薙寧々&神代類&初音ミク)",
-      "artist": "ワンダーランズ×ショウタイム",
-      "album": "セカイはまだ始まってすらいない/potatoになっていく",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738701934eca8f1856bdbe4af0",
-      "playedAt": "2025-12-24T14:27:19.273Z",
-      "spotifyUrl": "https://open.spotify.com/track/5IqKUsttgHgGQWhKQWDOQo",
-      "duration": 187500,
-      "previewUrl": ""
-    },
-    {
-      "id": "6bUKd5y4eThkXvfJFSAUJ1",
-      "name": "California Gurls",
-      "artist": "Katy Perry, Snoop Dogg",
-      "album": "Teenage Dream",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27327271ebe78e28a2ff83eaa47",
-      "playedAt": "2025-12-24T14:11:46.295Z",
-      "spotifyUrl": "https://open.spotify.com/track/6bUKd5y4eThkXvfJFSAUJ1",
-      "duration": 234653,
-      "previewUrl": ""
-    },
-    {
-      "id": "5YADi8VnCwx5ahhwNdgQaZ",
-      "name": "How Many Boogie",
-      "artist": "SKRYU, WAZGOGG, Fuma no KTR",
-      "album": "わすれもの",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27301729ef621de4f62bcdd05b9",
-      "playedAt": "2025-12-24T14:06:29.853Z",
-      "spotifyUrl": "https://open.spotify.com/track/5YADi8VnCwx5ahhwNdgQaZ",
-      "duration": 159047,
-      "previewUrl": ""
-    },
-    {
-      "id": "5cjjWH34eymyinmFKaAEEC",
-      "name": "うぉ",
-      "artist": "Yuuri",
-      "album": "うぉ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c65f49e17fc27c93761ada12",
-      "playedAt": "2025-12-24T08:22:36.288Z",
-      "spotifyUrl": "https://open.spotify.com/track/5cjjWH34eymyinmFKaAEEC",
-      "duration": 168026,
-      "previewUrl": ""
-    },
-    {
-      "id": "1r9xUipOqoNwggBpENDsvJ",
-      "name": "Enemy (with JID) - from the series Arcane League of Legends",
-      "artist": "Imagine Dragons, JID, Arcane, League of Legends",
-      "album": "Enemy (with JID) [from the series Arcane League of Legends]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aa597e50829169e6994eb403",
-      "playedAt": "2025-12-23T17:46:32.875Z",
-      "spotifyUrl": "https://open.spotify.com/track/1r9xUipOqoNwggBpENDsvJ",
-      "duration": 173381,
-      "previewUrl": ""
-    },
-    {
-      "id": "6kPJZM97LwdG9QIsT7khp6",
-      "name": "Solo (feat. Demi Lovato)",
-      "artist": "Clean Bandit, Demi Lovato",
-      "album": "Solo (feat. Demi Lovato)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367eda217860e86c43481a5cb",
-      "playedAt": "2025-12-23T17:43:39.230Z",
-      "spotifyUrl": "https://open.spotify.com/track/6kPJZM97LwdG9QIsT7khp6",
-      "duration": 222653,
-      "previewUrl": ""
-    },
-    {
-      "id": "6dGqGkYDoRrKh5UiIcTT22",
-      "name": "Understand",
-      "artist": "BoyWithUke",
-      "album": "Serotonin Dreams",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee07023115f822012390d2a0",
-      "playedAt": "2025-12-23T17:33:34.886Z",
-      "spotifyUrl": "https://open.spotify.com/track/6dGqGkYDoRrKh5UiIcTT22",
-      "duration": 171946,
-      "previewUrl": ""
-    },
-    {
-      "id": "0g6Lm1d1FcfzV7ZkCzy8aP",
-      "name": "Préludes, Book 1: VIII. La Fille Aux Cheveux de Lin",
-      "artist": "Claude Debussy, Anna Tsybuleva",
-      "album": "The Complete Debussy: Préludes pour solo piano",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331d6cacc9fbba30cd9bf6a8e",
-      "playedAt": "2025-12-23T17:30:26.857Z",
-      "spotifyUrl": "https://open.spotify.com/track/0g6Lm1d1FcfzV7ZkCzy8aP",
-      "duration": 165920,
-      "previewUrl": ""
-    },
-    {
-      "id": "10Eyo4juZQFthKqlJgGMdp",
-      "name": "怪盗",
-      "artist": "back number",
-      "album": "怪盗",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae51734d04ef431b65a09a9a",
-      "playedAt": "2025-12-23T17:27:39.678Z",
-      "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
-      "duration": 196226,
-      "previewUrl": ""
     }
   ],
-  "total": 27
+  "total": 28
 }
