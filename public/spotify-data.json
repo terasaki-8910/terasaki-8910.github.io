@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-01T06:19:50.503Z",
+  "lastUpdated": "2026-01-01T12:23:37.087Z",
   "tracks": [
+    {
+      "id": "2e1gUS6Wv8GS8ZT6FMeE1J",
+      "name": "ただ声一つ",
+      "artist": "Rokudenashi",
+      "album": "ただ声一つ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de2d1cf763ed06e6874e1e91",
+      "playedAt": "2026-01-01T10:02:44.658Z",
+      "spotifyUrl": "https://open.spotify.com/track/2e1gUS6Wv8GS8ZT6FMeE1J",
+      "duration": 161561,
+      "previewUrl": ""
+    },
     {
       "id": "0WjwAv3XSjztqqyD6Gw1CX",
       "name": "風のとおり道（インストゥルメンタンル）",
@@ -310,5 +321,5 @@
       "previewUrl": ""
     }
   ],
-  "total": 28
+  "total": 29
 }
