@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-02T12:22:33.564Z",
+  "lastUpdated": "2026-01-02T18:17:57.648Z",
   "tracks": [
+    {
+      "id": "06XQvnJb53SUYmlWIhUXUi",
+      "name": "怪物",
+      "artist": "YOASOBI",
+      "album": "怪物",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2efc5e5f5922ca1f1b88928",
+      "playedAt": "2026-01-02T15:37:04.919Z",
+      "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
+      "duration": 206000,
+      "previewUrl": ""
+    },
     {
       "id": "1mUBfxiEdsrVhkQCohevey",
       "name": "ヨセアツメ",
@@ -310,5 +321,5 @@
       "previewUrl": ""
     }
   ],
-  "total": 28
+  "total": 29
 }
