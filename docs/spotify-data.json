@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-05T01:03:53.390Z",
+  "lastUpdated": "2026-01-05T06:25:00.317Z",
   "tracks": [
+    {
+      "id": "5SrGsxi3hl3yoON4bM9zi7",
+      "name": "Skyarrow Bridge",
+      "artist": "Kunning Fox",
+      "album": "Back To Unova, Vol. II (Music From \"Pokémon Black & White\")",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2c48c0c51a5102dabaff2d8",
+      "playedAt": "2026-01-05T03:13:40.359Z",
+      "spotifyUrl": "https://open.spotify.com/track/5SrGsxi3hl3yoON4bM9zi7",
+      "duration": 88000,
+      "previewUrl": ""
+    },
     {
       "id": "06XQvnJb53SUYmlWIhUXUi",
       "name": "怪物",
@@ -307,17 +318,6 @@
       "playedAt": "2025-12-26T08:26:10.860Z",
       "spotifyUrl": "https://open.spotify.com/track/4KxLGJuukrM9ClQJzFNygB",
       "duration": 271720,
-      "previewUrl": ""
-    },
-    {
-      "id": "23eTkfMmq1LvqiDzeNHdVe",
-      "name": "前前前世 - movie ver.",
-      "artist": "RADWIMPS",
-      "album": "君の名は。",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a0abdc8306966fee2e9076b2",
-      "playedAt": "2025-12-26T08:21:41.729Z",
-      "spotifyUrl": "https://open.spotify.com/track/23eTkfMmq1LvqiDzeNHdVe",
-      "duration": 285880,
       "previewUrl": ""
     }
   ],
