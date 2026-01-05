@@ -1,13 +1,101 @@
 {
-  "lastUpdated": "2026-01-05T12:25:20.805Z",
+  "lastUpdated": "2026-01-05T18:19:31.317Z",
   "tracks": [
+    {
+      "id": "752WJrwNFCg0IRwKvr5RT5",
+      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "artist": "Tudd, GameChops",
+      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
+      "playedAt": "2026-01-05T13:57:49.247Z",
+      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
+      "duration": 237611,
+      "previewUrl": ""
+    },
+    {
+      "id": "54CAG8n70kKVbFV6l1zF4G",
+      "name": "Adiemus",
+      "artist": "Karl Jenkins, Mike Ratledge, Jody K. Jenkins, Adiemus, London Philharmonic Orchestra, Mary Carewe",
+      "album": "Adiemus - Songs Of Sanctuary",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eedd9c14bcbfcc0810a5f2cf",
+      "playedAt": "2026-01-05T13:53:50.964Z",
+      "spotifyUrl": "https://open.spotify.com/track/54CAG8n70kKVbFV6l1zF4G",
+      "duration": 237413,
+      "previewUrl": ""
+    },
+    {
+      "id": "0WjwAv3XSjztqqyD6Gw1CX",
+      "name": "風のとおり道（インストゥルメンタンル）",
+      "artist": "Joe Hisaishi",
+      "album": "となりのトトロ サウンドトラック集",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ab4ac35f41f2c8b1e428b0f",
+      "playedAt": "2026-01-05T13:50:07.003Z",
+      "spotifyUrl": "https://open.spotify.com/track/0WjwAv3XSjztqqyD6Gw1CX",
+      "duration": 196760,
+      "previewUrl": ""
+    },
+    {
+      "id": "7xWXWraHp5tqoksl0awFFG",
+      "name": "Dive into Summer",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-05T13:46:24.479Z",
+      "spotifyUrl": "https://open.spotify.com/track/7xWXWraHp5tqoksl0awFFG",
+      "duration": 118269,
+      "previewUrl": ""
+    },
+    {
+      "id": "4C3AXZKVJM8RB0Q3rOpKJt",
+      "name": "Robogrex",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Extra Soundtrack",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273726597ff49f85e9e5252967a",
+      "playedAt": "2026-01-05T13:44:25.814Z",
+      "spotifyUrl": "https://open.spotify.com/track/4C3AXZKVJM8RB0Q3rOpKJt",
+      "duration": 131612,
+      "previewUrl": ""
+    },
+    {
+      "id": "1EbU0AL3mE4Zf2S1nuTcEi",
+      "name": "HIGH-VELOCITY",
+      "artist": "Aiobahn +81",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-01-05T13:42:13.800Z",
+      "spotifyUrl": "https://open.spotify.com/track/1EbU0AL3mE4Zf2S1nuTcEi",
+      "duration": 133770,
+      "previewUrl": ""
+    },
+    {
+      "id": "5zWYk0B6rjwVI7FD9ac4Av",
+      "name": "Nobis",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Extra Soundtrack",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273726597ff49f85e9e5252967a",
+      "playedAt": "2026-01-05T13:39:59.294Z",
+      "spotifyUrl": "https://open.spotify.com/track/5zWYk0B6rjwVI7FD9ac4Av",
+      "duration": 78000,
+      "previewUrl": ""
+    },
+    {
+      "id": "4H9ju2EvBSFUd6GAduYGtM",
+      "name": "Up to 21°C",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-01-05T13:38:40.676Z",
+      "spotifyUrl": "https://open.spotify.com/track/4H9ju2EvBSFUd6GAduYGtM",
+      "duration": 131434,
+      "previewUrl": ""
+    },
     {
       "id": "5SrGsxi3hl3yoON4bM9zi7",
       "name": "Skyarrow Bridge",
       "artist": "Kunning Fox",
       "album": "Back To Unova, Vol. II (Music From \"Pokémon Black & White\")",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2c48c0c51a5102dabaff2d8",
-      "playedAt": "2026-01-05T03:13:40.359Z",
+      "playedAt": "2026-01-05T13:36:13.609Z",
       "spotifyUrl": "https://open.spotify.com/track/5SrGsxi3hl3yoON4bM9zi7",
       "duration": 88000,
       "previewUrl": ""
@@ -65,17 +153,6 @@
       "playedAt": "2026-01-01T10:02:44.658Z",
       "spotifyUrl": "https://open.spotify.com/track/2e1gUS6Wv8GS8ZT6FMeE1J",
       "duration": 161561,
-      "previewUrl": ""
-    },
-    {
-      "id": "0WjwAv3XSjztqqyD6Gw1CX",
-      "name": "風のとおり道（インストゥルメンタンル）",
-      "artist": "Joe Hisaishi",
-      "album": "となりのトトロ サウンドトラック集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ab4ac35f41f2c8b1e428b0f",
-      "playedAt": "2025-12-30T10:27:44.048Z",
-      "spotifyUrl": "https://open.spotify.com/track/0WjwAv3XSjztqqyD6Gw1CX",
-      "duration": 196760,
       "previewUrl": ""
     },
     {
@@ -222,17 +299,6 @@
       "previewUrl": ""
     },
     {
-      "id": "54CAG8n70kKVbFV6l1zF4G",
-      "name": "Adiemus",
-      "artist": "Karl Jenkins, Mike Ratledge, Jody K. Jenkins, Adiemus, London Philharmonic Orchestra, Mary Carewe",
-      "album": "Adiemus - Songs Of Sanctuary",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eedd9c14bcbfcc0810a5f2cf",
-      "playedAt": "2025-12-30T09:25:58.023Z",
-      "spotifyUrl": "https://open.spotify.com/track/54CAG8n70kKVbFV6l1zF4G",
-      "duration": 237413,
-      "previewUrl": ""
-    },
-    {
       "id": "6ps6OnKkT3EYVHoG8CXGEU",
       "name": "Till the End",
       "artist": "ReoNa",
@@ -264,62 +330,7 @@
       "spotifyUrl": "https://open.spotify.com/track/20I8RduZC2PWMWTDCZuuAN",
       "duration": 237026,
       "previewUrl": ""
-    },
-    {
-      "id": "7rpECh1TwouaZ4eNZHSeY8",
-      "name": "Pacman Theme",
-      "artist": "Video Game Players",
-      "album": "40 Classic Video Game Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ac4261093ee5f2e3a0530fcf",
-      "playedAt": "2025-12-27T11:08:42.025Z",
-      "spotifyUrl": "https://open.spotify.com/track/7rpECh1TwouaZ4eNZHSeY8",
-      "duration": 37358,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2025-12-27T09:33:25.212Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "7MUPfeqBdA1wCA2yTre7Q4",
-      "name": "Cast List",
-      "artist": "3000m",
-      "album": "Super Mario World (Original Game Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
-      "playedAt": "2025-12-26T08:57:40.731Z",
-      "spotifyUrl": "https://open.spotify.com/track/7MUPfeqBdA1wCA2yTre7Q4",
-      "duration": 142153,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      "playedAt": "2025-12-26T08:46:23.682Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "4KxLGJuukrM9ClQJzFNygB",
-      "name": "七色シンフォニー",
-      "artist": "COALAMODE.",
-      "album": "七色シンフォニー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bb99910610d041590e365302",
-      "playedAt": "2025-12-26T08:26:10.860Z",
-      "spotifyUrl": "https://open.spotify.com/track/4KxLGJuukrM9ClQJzFNygB",
-      "duration": 271720,
-      "previewUrl": ""
     }
   ],
-  "total": 29
+  "total": 30
 }
