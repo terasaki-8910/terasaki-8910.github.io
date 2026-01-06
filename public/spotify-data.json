@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-06T12:25:14.260Z",
+  "lastUpdated": "2026-01-06T18:18:22.628Z",
   "tracks": [
+    {
+      "id": "752WJrwNFCg0IRwKvr5RT5",
+      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "artist": "Tudd, GameChops",
+      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
+      "playedAt": "2026-01-06T13:42:33.395Z",
+      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
+      "duration": 237611,
+      "previewUrl": ""
+    },
     {
       "id": "4Xfp9BcKrKYmxJPxn68Yb8",
       "name": "doodle",
@@ -131,17 +142,6 @@
       "playedAt": "2026-01-05T23:53:35.498Z",
       "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
       "duration": 195375,
-      "previewUrl": ""
-    },
-    {
-      "id": "752WJrwNFCg0IRwKvr5RT5",
-      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "artist": "Tudd, GameChops",
-      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
-      "playedAt": "2026-01-05T13:57:49.247Z",
-      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
-      "duration": 237611,
       "previewUrl": ""
     },
     {
