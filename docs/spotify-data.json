@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-01-07T00:59:11.732Z",
+  "lastUpdated": "2026-01-07T06:20:30.887Z",
   "tracks": [
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-01-07T03:01:56.426Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
+    {
+      "id": "5OQIvZoUPvfQq02tITKjQZ",
+      "name": "水流のロック",
+      "artist": "Natsuko Nisshoku",
+      "album": "瞼瞼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
+      "playedAt": "2026-01-07T02:58:06.157Z",
+      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
+      "duration": 179173,
+      "previewUrl": ""
+    },
     {
       "id": "752WJrwNFCg0IRwKvr5RT5",
       "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
@@ -76,28 +98,6 @@
       "playedAt": "2026-01-06T05:18:05.200Z",
       "spotifyUrl": "https://open.spotify.com/track/1mUBfxiEdsrVhkQCohevey",
       "duration": 197483,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-01-06T01:58:04.153Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-01-06T01:51:25.050Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
       "previewUrl": ""
     },
     {
