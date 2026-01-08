@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-08T06:20:15.534Z",
+  "lastUpdated": "2026-01-08T12:25:43.567Z",
   "tracks": [
+    {
+      "id": "7Hj7PMdrx3bKse1hhL7qv4",
+      "name": "寄り酔い",
+      "artist": "和ぬか",
+      "album": "青二才",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fb5000b5b30aa11e721afed",
+      "playedAt": "2026-01-08T07:10:23.977Z",
+      "spotifyUrl": "https://open.spotify.com/track/7Hj7PMdrx3bKse1hhL7qv4",
+      "duration": 219173,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
@@ -318,17 +329,6 @@
       "playedAt": "2025-12-30T09:55:01.527Z",
       "spotifyUrl": "https://open.spotify.com/track/4qVHEZ8pbcI7EyliSL7AHJ",
       "duration": 132032,
-      "previewUrl": ""
-    },
-    {
-      "id": "3UVNKqlbi4HuTxtr4ONvh5",
-      "name": "エゴロック",
-      "artist": "THREEE",
-      "album": "HEAUTOSCOPY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739fea26f3d4a2be2d6e90b16f",
-      "playedAt": "2025-12-30T09:52:50.085Z",
-      "spotifyUrl": "https://open.spotify.com/track/3UVNKqlbi4HuTxtr4ONvh5",
-      "duration": 169986,
       "previewUrl": ""
     }
   ],
