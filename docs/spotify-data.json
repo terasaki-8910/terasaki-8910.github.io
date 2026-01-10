@@ -1,13 +1,46 @@
 {
-  "lastUpdated": "2026-01-10T00:57:07.206Z",
+  "lastUpdated": "2026-01-10T06:17:47.267Z",
   "tracks": [
+    {
+      "id": "752WJrwNFCg0IRwKvr5RT5",
+      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "artist": "Tudd, GameChops",
+      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
+      "playedAt": "2026-01-10T04:15:01.548Z",
+      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
+      "duration": 237611,
+      "previewUrl": ""
+    },
+    {
+      "id": "0RZfz4zLlFb1lNtoEr7yDR",
+      "name": "Alpha",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734cf0b29eb06a92aa96acae64",
+      "playedAt": "2026-01-10T04:10:13.135Z",
+      "spotifyUrl": "https://open.spotify.com/track/0RZfz4zLlFb1lNtoEr7yDR",
+      "duration": 603000,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-01-10T03:57:45.041Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
     {
       "id": "7Hj7PMdrx3bKse1hhL7qv4",
       "name": "寄り酔い",
       "artist": "和ぬか",
       "album": "青二才",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fb5000b5b30aa11e721afed",
-      "playedAt": "2026-01-08T07:10:23.977Z",
+      "playedAt": "2026-01-10T03:52:19.184Z",
       "spotifyUrl": "https://open.spotify.com/track/7Hj7PMdrx3bKse1hhL7qv4",
       "duration": 219173,
       "previewUrl": ""
@@ -32,17 +65,6 @@
       "playedAt": "2026-01-07T02:58:06.157Z",
       "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
       "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "752WJrwNFCg0IRwKvr5RT5",
-      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "artist": "Tudd, GameChops",
-      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
-      "playedAt": "2026-01-06T13:42:33.395Z",
-      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
-      "duration": 237611,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2025-12-30T10:01:02.321Z",
       "spotifyUrl": "https://open.spotify.com/track/2EjDBwyMAALFfKaaSUCRkz",
       "duration": 117055,
-      "previewUrl": ""
-    },
-    {
-      "id": "3UDe37nc2yvttJXlNk6Itr",
-      "name": "テレキャスタービーボーイ (long ver.)",
-      "artist": "THREEE",
-      "album": "パンデミック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ea035a934d5ec3aa051e6029",
-      "playedAt": "2025-12-30T09:59:05.099Z",
-      "spotifyUrl": "https://open.spotify.com/track/3UDe37nc2yvttJXlNk6Itr",
-      "duration": 164500,
-      "previewUrl": ""
-    },
-    {
-      "id": "4qVHEZ8pbcI7EyliSL7AHJ",
-      "name": "CH4NGE - feat. 可不",
-      "artist": "Giga, 可不",
-      "album": "CH4NGE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae5fe1233f48f3d4969df4e9",
-      "playedAt": "2025-12-30T09:55:01.527Z",
-      "spotifyUrl": "https://open.spotify.com/track/4qVHEZ8pbcI7EyliSL7AHJ",
-      "duration": 132032,
       "previewUrl": ""
     }
   ],
