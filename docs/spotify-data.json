@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-01-13T18:20:40.810Z",
+  "lastUpdated": "2026-01-14T01:00:52.855Z",
   "tracks": [
+    {
+      "id": "4XObDlhGp6sREJoZj2lFv2",
+      "name": "走れSAKAMOTO",
+      "artist": "Vaundy",
+      "album": "走れSAKAMOTO",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
+      "playedAt": "2026-01-14T00:51:14.294Z",
+      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
+      "duration": 205984,
+      "previewUrl": ""
+    },
+    {
+      "id": "6z1TvLTR0oOsWSJfDrERmj",
+      "name": "言って。",
+      "artist": "ヨルシカ",
+      "album": "夏草が邪魔をする",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27318b1145d9883e5b140151fa9",
+      "playedAt": "2026-01-14T00:47:31.784Z",
+      "spotifyUrl": "https://open.spotify.com/track/6z1TvLTR0oOsWSJfDrERmj",
+      "duration": 242182,
+      "previewUrl": ""
+    },
+    {
+      "id": "5OQIvZoUPvfQq02tITKjQZ",
+      "name": "水流のロック",
+      "artist": "Natsuko Nisshoku",
+      "album": "瞼瞼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
+      "playedAt": "2026-01-14T00:43:18.659Z",
+      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
+      "duration": 179173,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-01-14T00:37:06.661Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
     {
       "id": "0RZfz4zLlFb1lNtoEr7yDR",
       "name": "Alpha",
@@ -21,28 +65,6 @@
       "playedAt": "2026-01-13T08:12:32.545Z",
       "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
       "duration": 151573,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-01-13T08:04:28.690Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-01-13T08:01:29.253Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
       "previewUrl": ""
     },
     {
@@ -286,51 +308,7 @@
       "spotifyUrl": "https://open.spotify.com/track/2e1gUS6Wv8GS8ZT6FMeE1J",
       "duration": 161561,
       "previewUrl": ""
-    },
-    {
-      "id": "15X1ksqhe8cY1NlEZMl7X8",
-      "name": "海の見える街",
-      "artist": "Joe Hisaishi",
-      "album": "魔女の宅急便 サントラ音楽集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273559ab67b95bf2a8c19fd151e",
-      "playedAt": "2025-12-30T10:24:25.496Z",
-      "spotifyUrl": "https://open.spotify.com/track/15X1ksqhe8cY1NlEZMl7X8",
-      "duration": 180333,
-      "previewUrl": ""
-    },
-    {
-      "id": "2UUwBDALzJuThY88Ro2lD2",
-      "name": "フォニイ",
-      "artist": "可不, ツミキ",
-      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
-      "playedAt": "2025-12-30T10:21:14.010Z",
-      "spotifyUrl": "https://open.spotify.com/track/2UUwBDALzJuThY88Ro2lD2",
-      "duration": 189884,
-      "previewUrl": ""
-    },
-    {
-      "id": "2rLQSO39YRy7KQAR4XKqBM",
-      "name": "アンヘル",
-      "artist": "Kairikibear, 鳴花ミコト",
-      "album": "鳴花ヒメ・ミコト Demo Sampler",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736aaad651e0403e2d1366e1b9",
-      "playedAt": "2025-12-30T10:12:32.494Z",
-      "spotifyUrl": "https://open.spotify.com/track/2rLQSO39YRy7KQAR4XKqBM",
-      "duration": 217885,
-      "previewUrl": ""
-    },
-    {
-      "id": "3T7rdXRAk3b2WUlevahSw1",
-      "name": "キュートなカノジョ",
-      "artist": "syudou",
-      "album": "キュートなカノジョ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730797da4903bce865f54640ca",
-      "playedAt": "2025-12-30T10:07:23.231Z",
-      "spotifyUrl": "https://open.spotify.com/track/3T7rdXRAk3b2WUlevahSw1",
-      "duration": 131062,
-      "previewUrl": ""
     }
   ],
-  "total": 30
+  "total": 28
 }
