@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-01-16T18:19:02.081Z",
+  "lastUpdated": "2026-01-17T00:56:42.066Z",
   "tracks": [
+    {
+      "id": "7loLSr7JUn78pLHitHr89Z",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "踊り子",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cf0c2728f46fc0a1d69fb038",
+      "playedAt": "2026-01-16T22:29:13.729Z",
+      "spotifyUrl": "https://open.spotify.com/track/7loLSr7JUn78pLHitHr89Z",
+      "duration": 230109,
+      "previewUrl": ""
+    },
+    {
+      "id": "6LIpqsMbsfc8I7F0dsFXsv",
+      "name": "テトリス",
+      "artist": "柊マグネタイト",
+      "album": "テトリス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734349a5931dff5a37c5bff39f",
+      "playedAt": "2026-01-16T22:22:52.328Z",
+      "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
+      "duration": 142588,
+      "previewUrl": ""
+    },
+    {
+      "id": "38XY1ShCSiYwDaV51sFPT9",
+      "name": "マーシャル・マキシマイザー",
+      "artist": "柊マグネタイト, 可不",
+      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
+      "playedAt": "2026-01-16T22:20:06.661Z",
+      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
+      "duration": 163686,
+      "previewUrl": ""
+    },
+    {
+      "id": "40Z5C1LzwZYLWZp2lcvCEf",
+      "name": "うい麦畑でつかまえて",
+      "artist": "しぐれうい",
+      "album": "fiction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731817a0860c4368f38c7a1144",
+      "playedAt": "2026-01-16T22:15:07.943Z",
+      "spotifyUrl": "https://open.spotify.com/track/40Z5C1LzwZYLWZp2lcvCEf",
+      "duration": 223320,
+      "previewUrl": ""
+    },
+    {
+      "id": "2qCYSa4J2wbREJ2MMITDws",
+      "name": "POP IN 2 - 有馬かな Solo Ver.-",
+      "artist": "B小町, 有馬かな(CV:潘めぐみ)",
+      "album": "TVアニメ「【推しの子】」キャラクターソングCD (Vol.4.5)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e47dc34284d434e34a517dbb",
+      "playedAt": "2026-01-16T22:11:23.938Z",
+      "spotifyUrl": "https://open.spotify.com/track/2qCYSa4J2wbREJ2MMITDws",
+      "duration": 267016,
+      "previewUrl": ""
+    },
     {
       "id": "59hVbgr8rfYkDbHfr8RcGI",
       "name": "IRIS OUT",
@@ -10,17 +65,6 @@
       "playedAt": "2026-01-16T03:18:51.062Z",
       "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
       "duration": 151573,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LIpqsMbsfc8I7F0dsFXsv",
-      "name": "テトリス",
-      "artist": "柊マグネタイト",
-      "album": "テトリス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734349a5931dff5a37c5bff39f",
-      "playedAt": "2026-01-16T03:14:37.278Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
-      "duration": 142588,
       "previewUrl": ""
     },
     {
@@ -131,17 +175,6 @@
       "playedAt": "2026-01-15T01:08:58.607Z",
       "spotifyUrl": "https://open.spotify.com/track/7oYCBKvdjrqp5vDbhDBuac",
       "duration": 194293,
-      "previewUrl": ""
-    },
-    {
-      "id": "38XY1ShCSiYwDaV51sFPT9",
-      "name": "マーシャル・マキシマイザー",
-      "artist": "柊マグネタイト, 可不",
-      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
-      "playedAt": "2026-01-14T03:37:49.541Z",
-      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
-      "duration": 163686,
       "previewUrl": ""
     },
     {
@@ -264,51 +297,7 @@
       "spotifyUrl": "https://open.spotify.com/track/7Hj7PMdrx3bKse1hhL7qv4",
       "duration": 219173,
       "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2026-01-06T11:32:25.289Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "2E0a7T6RTDSHaPuz55qMCj",
-      "name": "Corneria",
-      "artist": "Qumu",
-      "album": "Year 2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732c1a0c8501012a0e9bf59a51",
-      "playedAt": "2026-01-06T11:22:32.765Z",
-      "spotifyUrl": "https://open.spotify.com/track/2E0a7T6RTDSHaPuz55qMCj",
-      "duration": 151058,
-      "previewUrl": ""
-    },
-    {
-      "id": "6G8ghzF62TP7CkD1YBsIUT",
-      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "artist": "Qumu",
-      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
-      "playedAt": "2026-01-06T05:23:46.164Z",
-      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
-      "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "4VRrUIo7jrT9UyG6bqb7K6",
-      "name": "Our New Story",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-01-06T05:18:31.479Z",
-      "spotifyUrl": "https://open.spotify.com/track/4VRrUIo7jrT9UyG6bqb7K6",
-      "duration": 30358,
-      "previewUrl": ""
     }
   ],
-  "total": 28
+  "total": 27
 }
