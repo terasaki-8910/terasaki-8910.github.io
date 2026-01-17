@@ -1,6 +1,204 @@
 {
-  "lastUpdated": "2026-01-17T00:56:42.066Z",
+  "lastUpdated": "2026-01-17T06:17:56.132Z",
   "tracks": [
+    {
+      "id": "4CTkQljbP19RftsQVJ8oxv",
+      "name": "いらないもの",
+      "artist": "Tatsuya Kitani, natori",
+      "album": "いらないもの",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b401f871eba227d2a24a7505",
+      "playedAt": "2026-01-17T02:44:25.133Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CTkQljbP19RftsQVJ8oxv",
+      "duration": 185566,
+      "previewUrl": ""
+    },
+    {
+      "id": "5IqKUsttgHgGQWhKQWDOQo",
+      "name": "potatoになっていく (feat. 天馬司&鳳えむ&草薙寧々&神代類&初音ミク)",
+      "artist": "ワンダーランズ×ショウタイム",
+      "album": "セカイはまだ始まってすらいない/potatoになっていく",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738701934eca8f1856bdbe4af0",
+      "playedAt": "2026-01-17T02:41:20.137Z",
+      "spotifyUrl": "https://open.spotify.com/track/5IqKUsttgHgGQWhKQWDOQo",
+      "duration": 187500,
+      "previewUrl": ""
+    },
+    {
+      "id": "4deK4ZvtN70312pN4ny2lK",
+      "name": "HITO Mania",
+      "artist": "Sasuke Haraguchi",
+      "album": "HITO Mania",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27335aa12d25c8a068b3050ad43",
+      "playedAt": "2026-01-17T02:37:44.646Z",
+      "spotifyUrl": "https://open.spotify.com/track/4deK4ZvtN70312pN4ny2lK",
+      "duration": 127200,
+      "previewUrl": ""
+    },
+    {
+      "id": "3jmQnsr4YxDIrCJ7GbE7vM",
+      "name": "トンデモワンダーズ",
+      "artist": "sasakure.UK",
+      "album": "トンデモワンダーズ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f2605232a9b7d779004e5ce4",
+      "playedAt": "2026-01-17T02:35:00.920Z",
+      "spotifyUrl": "https://open.spotify.com/track/3jmQnsr4YxDIrCJ7GbE7vM",
+      "duration": 195822,
+      "previewUrl": ""
+    },
+    {
+      "id": "2ddvvAWIGyqJjeM0u2o853",
+      "name": "Fantastic future",
+      "artist": "Yukari Tamura",
+      "album": "螺旋の果実",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d03a07279e98d0b8a1928712",
+      "playedAt": "2026-01-17T02:26:47.618Z",
+      "spotifyUrl": "https://open.spotify.com/track/2ddvvAWIGyqJjeM0u2o853",
+      "duration": 255706,
+      "previewUrl": ""
+    },
+    {
+      "id": "5hCjdTRz0why3FREkJDxkh",
+      "name": "Pixel Time",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-01-17T02:22:33.648Z",
+      "spotifyUrl": "https://open.spotify.com/track/5hCjdTRz0why3FREkJDxkh",
+      "duration": 129826,
+      "previewUrl": ""
+    },
+    {
+      "id": "4YxR5rzn3iDVPDYZSBMA0q",
+      "name": "Connected Sky",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-01-17T02:20:16.987Z",
+      "spotifyUrl": "https://open.spotify.com/track/4YxR5rzn3iDVPDYZSBMA0q",
+      "duration": 120529,
+      "previewUrl": ""
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-01-17T02:17:51.180Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-01-17T02:11:59.859Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "0NMdTDx7LCJdm3ioJ1cDcg",
+      "name": "Koi is Love",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-01-17T02:09:30.452Z",
+      "spotifyUrl": "https://open.spotify.com/track/0NMdTDx7LCJdm3ioJ1cDcg",
+      "duration": 108719,
+      "previewUrl": ""
+    },
+    {
+      "id": "5Vf5mopw2fxxZLylqQRNci",
+      "name": "Starting Pistol",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-01-17T02:07:37.498Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Vf5mopw2fxxZLylqQRNci",
+      "duration": 113608,
+      "previewUrl": ""
+    },
+    {
+      "id": "5nkMGXU1zq7RhhGZlrOyJZ",
+      "name": "SAKURA PUNCH - Hard Arrange",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-01-17T02:05:42.950Z",
+      "spotifyUrl": "https://open.spotify.com/track/5nkMGXU1zq7RhhGZlrOyJZ",
+      "duration": 122086,
+      "previewUrl": ""
+    },
+    {
+      "id": "4wnNNv11a0YHSlXJos9boy",
+      "name": "Luxury Cool",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-17T02:03:40.675Z",
+      "spotifyUrl": "https://open.spotify.com/track/4wnNNv11a0YHSlXJos9boy",
+      "duration": 125002,
+      "previewUrl": ""
+    },
+    {
+      "id": "4K8QY8eufhwEg9EEix0Qqn",
+      "name": "Plug and Play",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-01-17T02:01:34.935Z",
+      "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
+      "duration": 127519,
+      "previewUrl": ""
+    },
+    {
+      "id": "0QxUDD87uCY6G9hcWGVMMu",
+      "name": "エリート",
+      "artist": "Chinozo",
+      "album": "エリート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734d4a6142bbca45e92436ae29",
+      "playedAt": "2026-01-17T01:59:26.896Z",
+      "spotifyUrl": "https://open.spotify.com/track/0QxUDD87uCY6G9hcWGVMMu",
+      "duration": 169999,
+      "previewUrl": ""
+    },
+    {
+      "id": "7MUPfeqBdA1wCA2yTre7Q4",
+      "name": "Cast List",
+      "artist": "3000m",
+      "album": "Super Mario World (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
+      "playedAt": "2026-01-17T01:56:37.026Z",
+      "spotifyUrl": "https://open.spotify.com/track/7MUPfeqBdA1wCA2yTre7Q4",
+      "duration": 142153,
+      "previewUrl": ""
+    },
+    {
+      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
+      "name": "doodle",
+      "artist": "Zachz Winner",
+      "album": "doodle",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
+      "playedAt": "2026-01-17T01:54:13.495Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
+      "duration": 73918,
+      "previewUrl": ""
+    },
+    {
+      "id": "5OQIvZoUPvfQq02tITKjQZ",
+      "name": "水流のロック",
+      "artist": "Natsuko Nisshoku",
+      "album": "瞼瞼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
+      "playedAt": "2026-01-17T01:52:57.182Z",
+      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
+      "duration": 179173,
+      "previewUrl": ""
+    },
     {
       "id": "7loLSr7JUn78pLHitHr89Z",
       "name": "踊り子",
@@ -57,17 +255,6 @@
       "previewUrl": ""
     },
     {
-      "id": "59hVbgr8rfYkDbHfr8RcGI",
-      "name": "IRIS OUT",
-      "artist": "Kenshi Yonezu",
-      "album": "IRIS OUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
-      "playedAt": "2026-01-16T03:18:51.062Z",
-      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
-      "duration": 151573,
-      "previewUrl": ""
-    },
-    {
       "id": "2oRt9HVnW6bC7wIWQdTxDt",
       "name": "ダダダダ天使",
       "artist": "NANAOAKARI",
@@ -90,17 +277,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7MUPfeqBdA1wCA2yTre7Q4",
-      "name": "Cast List",
-      "artist": "3000m",
-      "album": "Super Mario World (Original Game Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
-      "playedAt": "2026-01-15T06:43:40.879Z",
-      "spotifyUrl": "https://open.spotify.com/track/7MUPfeqBdA1wCA2yTre7Q4",
-      "duration": 142153,
-      "previewUrl": ""
-    },
-    {
       "id": "54CAG8n70kKVbFV6l1zF4G",
       "name": "Adiemus",
       "artist": "Karl Jenkins, Mike Ratledge, Jody K. Jenkins, Adiemus, London Philharmonic Orchestra, Mary Carewe",
@@ -109,17 +285,6 @@
       "playedAt": "2026-01-15T03:49:24.222Z",
       "spotifyUrl": "https://open.spotify.com/track/54CAG8n70kKVbFV6l1zF4G",
       "duration": 237413,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-01-15T03:43:02.875Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
       "previewUrl": ""
     },
     {
@@ -165,139 +330,7 @@
       "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
       "duration": 242459,
       "previewUrl": ""
-    },
-    {
-      "id": "7oYCBKvdjrqp5vDbhDBuac",
-      "name": "KICK BACK",
-      "artist": "Kenshi Yonezu",
-      "album": "LOST CORNER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303d3216d6c463f993c96c9c7",
-      "playedAt": "2026-01-15T01:08:58.607Z",
-      "spotifyUrl": "https://open.spotify.com/track/7oYCBKvdjrqp5vDbhDBuac",
-      "duration": 194293,
-      "previewUrl": ""
-    },
-    {
-      "id": "7AqUE5AY514dbzeOAfJRa0",
-      "name": "LOSER",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-01-14T03:19:38.584Z",
-      "spotifyUrl": "https://open.spotify.com/track/7AqUE5AY514dbzeOAfJRa0",
-      "duration": 243818,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-01-14T03:15:37.143Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
-      "previewUrl": ""
-    },
-    {
-      "id": "0T4AitQuq8IJhWBWuZwkFA",
-      "name": "群青",
-      "artist": "YOASOBI",
-      "album": "群青",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735235b1b2b4feb3783e12a434",
-      "playedAt": "2026-01-14T03:10:03.081Z",
-      "spotifyUrl": "https://open.spotify.com/track/0T4AitQuq8IJhWBWuZwkFA",
-      "duration": 248444,
-      "previewUrl": ""
-    },
-    {
-      "id": "4n7nwDqrdx3qmJvEACOMrN",
-      "name": "Take Me to the Beach (feat. Ado)",
-      "artist": "Imagine Dragons, Ado",
-      "album": "Take Me to the Beach (feat. Ado)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a11303b900d06348d84337f",
-      "playedAt": "2026-01-14T03:05:46.472Z",
-      "spotifyUrl": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
-      "duration": 167066,
-      "previewUrl": ""
-    },
-    {
-      "id": "4XObDlhGp6sREJoZj2lFv2",
-      "name": "走れSAKAMOTO",
-      "artist": "Vaundy",
-      "album": "走れSAKAMOTO",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
-      "playedAt": "2026-01-14T00:51:14.294Z",
-      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
-      "duration": 205984,
-      "previewUrl": ""
-    },
-    {
-      "id": "6z1TvLTR0oOsWSJfDrERmj",
-      "name": "言って。",
-      "artist": "ヨルシカ",
-      "album": "夏草が邪魔をする",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27318b1145d9883e5b140151fa9",
-      "playedAt": "2026-01-14T00:47:31.784Z",
-      "spotifyUrl": "https://open.spotify.com/track/6z1TvLTR0oOsWSJfDrERmj",
-      "duration": 242182,
-      "previewUrl": ""
-    },
-    {
-      "id": "0RZfz4zLlFb1lNtoEr7yDR",
-      "name": "Alpha",
-      "artist": "C418",
-      "album": "Minecraft - Volume Beta",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734cf0b29eb06a92aa96acae64",
-      "playedAt": "2026-01-13T08:21:18.163Z",
-      "spotifyUrl": "https://open.spotify.com/track/0RZfz4zLlFb1lNtoEr7yDR",
-      "duration": 603000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4PO8fERDL1d1FQA7uHg8il",
-      "name": "Among Us",
-      "artist": "Sembari +",
-      "album": "Among Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
-      "playedAt": "2026-01-13T07:50:07.231Z",
-      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
-      "duration": 90508,
-      "previewUrl": ""
-    },
-    {
-      "id": "752WJrwNFCg0IRwKvr5RT5",
-      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "artist": "Tudd, GameChops",
-      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
-      "playedAt": "2026-01-10T04:15:01.548Z",
-      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
-      "duration": 237611,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FQcELLVZwSvarn27omhgd",
-      "name": "ukigumo",
-      "artist": "Hige Driver",
-      "album": "ヒゲドライバー 10th Anniversary Best",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
-      "playedAt": "2026-01-10T03:57:45.041Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
-      "duration": 215053,
-      "previewUrl": ""
-    },
-    {
-      "id": "7Hj7PMdrx3bKse1hhL7qv4",
-      "name": "寄り酔い",
-      "artist": "和ぬか",
-      "album": "青二才",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fb5000b5b30aa11e721afed",
-      "playedAt": "2026-01-10T03:52:19.184Z",
-      "spotifyUrl": "https://open.spotify.com/track/7Hj7PMdrx3bKse1hhL7qv4",
-      "duration": 219173,
-      "previewUrl": ""
     }
   ],
-  "total": 27
+  "total": 30
 }
