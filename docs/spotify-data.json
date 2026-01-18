@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-17T18:16:13.793Z",
+  "lastUpdated": "2026-01-18T01:03:39.141Z",
   "tracks": [
+    {
+      "id": "24OQcVtprM1PLCeNQ1eOlF",
+      "name": "白金ディスコ",
+      "artist": "物語シリーズ",
+      "album": "歌物語 Special Edition",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e1df8ec8f6466df02ca9864",
+      "playedAt": "2026-01-17T23:51:42.410Z",
+      "spotifyUrl": "https://open.spotify.com/track/24OQcVtprM1PLCeNQ1eOlF",
+      "duration": 256573,
+      "previewUrl": ""
+    },
     {
       "id": "4CTkQljbP19RftsQVJ8oxv",
       "name": "いらないもの",
@@ -318,17 +329,6 @@
       "playedAt": "2026-01-15T01:15:11.989Z",
       "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
       "duration": 120352,
-      "previewUrl": ""
-    },
-    {
-      "id": "17OQVshtovwVo2vk6tuzwn",
-      "name": "ライアーダンサー",
-      "artist": "マサラダ",
-      "album": "ライアーダンサー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-01-15T01:13:11.811Z",
-      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
-      "duration": 242459,
       "previewUrl": ""
     }
   ],
