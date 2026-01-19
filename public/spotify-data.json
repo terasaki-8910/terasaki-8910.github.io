@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-01-19T01:03:09.582Z",
+  "lastUpdated": "2026-01-19T06:24:58.425Z",
   "tracks": [
+    {
+      "id": "1alvT7oOwHZxuNS9w9C8L5",
+      "name": "Moment",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-01-19T02:35:22.647Z",
+      "spotifyUrl": "https://open.spotify.com/track/1alvT7oOwHZxuNS9w9C8L5",
+      "duration": 100605,
+      "previewUrl": ""
+    },
+    {
+      "id": "4K8QY8eufhwEg9EEix0Qqn",
+      "name": "Plug and Play",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-01-19T02:33:41.286Z",
+      "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
+      "duration": 127519,
+      "previewUrl": ""
+    },
+    {
+      "id": "5hiSDmqC8ZzNj2hW9M8rkT",
+      "name": "Accelerator",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-01-19T02:31:33.927Z",
+      "spotifyUrl": "https://open.spotify.com/track/5hiSDmqC8ZzNj2hW9M8rkT",
+      "duration": 110921,
+      "previewUrl": ""
+    },
+    {
+      "id": "2lxlXqP9OFxG0CrMBbVvuW",
+      "name": "Rolling beat",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-01-19T02:29:42.137Z",
+      "spotifyUrl": "https://open.spotify.com/track/2lxlXqP9OFxG0CrMBbVvuW",
+      "duration": 150399,
+      "previewUrl": ""
+    },
+    {
+      "id": "4bcDDVSs9DfRX2Thzjfif4",
+      "name": "Hello to Halo",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-01-19T02:27:11.219Z",
+      "spotifyUrl": "https://open.spotify.com/track/4bcDDVSs9DfRX2Thzjfif4",
+      "duration": 105190,
+      "previewUrl": ""
+    },
+    {
+      "id": "6qYkcg1U6JpKq0TQW91roa",
+      "name": "Illuminated Night",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-19T02:25:27.320Z",
+      "spotifyUrl": "https://open.spotify.com/track/6qYkcg1U6JpKq0TQW91roa",
+      "duration": 122003,
+      "previewUrl": ""
+    },
+    {
+      "id": "1Mmom43GtvQfeNxvM3rfUa",
+      "name": "Flip Flap Festival!",
+      "artist": "Synthion",
+      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
+      "playedAt": "2026-01-19T02:21:54.650Z",
+      "spotifyUrl": "https://open.spotify.com/track/1Mmom43GtvQfeNxvM3rfUa",
+      "duration": 123384,
+      "previewUrl": ""
+    },
+    {
+      "id": "2ANz2T37a2uN3d6w98h8vY",
+      "name": "Vinyl",
+      "artist": "King Gnu",
+      "album": "Tokyo Rendez-Vous",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0d02ba8facfe07e3e5a6eef",
+      "playedAt": "2026-01-19T02:19:16.288Z",
+      "spotifyUrl": "https://open.spotify.com/track/2ANz2T37a2uN3d6w98h8vY",
+      "duration": 294386,
+      "previewUrl": ""
+    },
     {
       "id": "5Lsdr0kU6beWlXns5yRzfT",
       "name": "アルティメットセンパイ",
@@ -200,17 +288,6 @@
       "previewUrl": ""
     },
     {
-      "id": "4K8QY8eufhwEg9EEix0Qqn",
-      "name": "Plug and Play",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-01-17T02:01:34.935Z",
-      "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
-      "duration": 127519,
-      "previewUrl": ""
-    },
-    {
       "id": "0QxUDD87uCY6G9hcWGVMMu",
       "name": "エリート",
       "artist": "Chinozo",
@@ -252,83 +329,6 @@
       "playedAt": "2026-01-17T01:52:57.182Z",
       "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
       "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "7loLSr7JUn78pLHitHr89Z",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "踊り子",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cf0c2728f46fc0a1d69fb038",
-      "playedAt": "2026-01-16T22:29:13.729Z",
-      "spotifyUrl": "https://open.spotify.com/track/7loLSr7JUn78pLHitHr89Z",
-      "duration": 230109,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LIpqsMbsfc8I7F0dsFXsv",
-      "name": "テトリス",
-      "artist": "柊マグネタイト",
-      "album": "テトリス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734349a5931dff5a37c5bff39f",
-      "playedAt": "2026-01-16T22:22:52.328Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
-      "duration": 142588,
-      "previewUrl": ""
-    },
-    {
-      "id": "38XY1ShCSiYwDaV51sFPT9",
-      "name": "マーシャル・マキシマイザー",
-      "artist": "柊マグネタイト, 可不",
-      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
-      "playedAt": "2026-01-16T22:20:06.661Z",
-      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
-      "duration": 163686,
-      "previewUrl": ""
-    },
-    {
-      "id": "40Z5C1LzwZYLWZp2lcvCEf",
-      "name": "うい麦畑でつかまえて",
-      "artist": "しぐれうい",
-      "album": "fiction",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731817a0860c4368f38c7a1144",
-      "playedAt": "2026-01-16T22:15:07.943Z",
-      "spotifyUrl": "https://open.spotify.com/track/40Z5C1LzwZYLWZp2lcvCEf",
-      "duration": 223320,
-      "previewUrl": ""
-    },
-    {
-      "id": "2qCYSa4J2wbREJ2MMITDws",
-      "name": "POP IN 2 - 有馬かな Solo Ver.-",
-      "artist": "B小町, 有馬かな(CV:潘めぐみ)",
-      "album": "TVアニメ「【推しの子】」キャラクターソングCD (Vol.4.5)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e47dc34284d434e34a517dbb",
-      "playedAt": "2026-01-16T22:11:23.938Z",
-      "spotifyUrl": "https://open.spotify.com/track/2qCYSa4J2wbREJ2MMITDws",
-      "duration": 267016,
-      "previewUrl": ""
-    },
-    {
-      "id": "2oRt9HVnW6bC7wIWQdTxDt",
-      "name": "ダダダダ天使",
-      "artist": "NANAOAKARI",
-      "album": "フライングベスト〜知らないの？巷で噂のダメ天使〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734669f677e8be828652297606",
-      "playedAt": "2026-01-15T11:25:09.007Z",
-      "spotifyUrl": "https://open.spotify.com/track/2oRt9HVnW6bC7wIWQdTxDt",
-      "duration": 219000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6HznFPNdvbxgzm5jJyNlwp",
-      "name": "オーバーライド",
-      "artist": "Yoshida Yasei",
-      "album": "オーバーライド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
-      "playedAt": "2026-01-15T06:44:23.825Z",
-      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
-      "duration": 138533,
       "previewUrl": ""
     }
   ],
