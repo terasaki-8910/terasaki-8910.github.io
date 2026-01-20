@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-01-19T18:18:42.595Z",
+  "lastUpdated": "2026-01-20T00:58:12.866Z",
   "tracks": [
+    {
+      "id": "3MDuA12HzorT65LovtOMKr",
+      "name": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
+      "artist": "吉本おじさん, 雨衣",
+      "album": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d90202395ea36020727d4919",
+      "playedAt": "2026-01-19T22:41:34.918Z",
+      "spotifyUrl": "https://open.spotify.com/track/3MDuA12HzorT65LovtOMKr",
+      "duration": 184800,
+      "previewUrl": ""
+    },
+    {
+      "id": "4n7nwDqrdx3qmJvEACOMrN",
+      "name": "Take Me to the Beach (feat. Ado)",
+      "artist": "Imagine Dragons, Ado",
+      "album": "Take Me to the Beach (feat. Ado)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a11303b900d06348d84337f",
+      "playedAt": "2026-01-19T22:31:58.601Z",
+      "spotifyUrl": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
+      "duration": 167066,
+      "previewUrl": ""
+    },
+    {
+      "id": "5zPgJVRYkuLYyE3mNenwf3",
+      "name": "Cotton Candy Island",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-19T22:31:25.443Z",
+      "spotifyUrl": "https://open.spotify.com/track/5zPgJVRYkuLYyE3mNenwf3",
+      "duration": 123050,
+      "previewUrl": ""
+    },
     {
       "id": "1alvT7oOwHZxuNS9w9C8L5",
       "name": "Moment",
@@ -296,39 +329,6 @@
       "playedAt": "2026-01-17T01:59:26.896Z",
       "spotifyUrl": "https://open.spotify.com/track/0QxUDD87uCY6G9hcWGVMMu",
       "duration": 169999,
-      "previewUrl": ""
-    },
-    {
-      "id": "7MUPfeqBdA1wCA2yTre7Q4",
-      "name": "Cast List",
-      "artist": "3000m",
-      "album": "Super Mario World (Original Game Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b30c5153381ceb1800d97b8",
-      "playedAt": "2026-01-17T01:56:37.026Z",
-      "spotifyUrl": "https://open.spotify.com/track/7MUPfeqBdA1wCA2yTre7Q4",
-      "duration": 142153,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2026-01-17T01:54:13.495Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-01-17T01:52:57.182Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
       "previewUrl": ""
     }
   ],
