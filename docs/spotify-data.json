@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-01-23T06:20:41.696Z",
+  "lastUpdated": "2026-01-23T12:26:15.031Z",
   "tracks": [
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-01-23T09:10:53.845Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
+    {
+      "id": "2tAeWToIlB5IRby3kZhMzQ",
+      "name": "Song of Storms",
+      "artist": "Super Piano 64, GameChops, Unplugged",
+      "album": "Zelda & Sleep",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1999fc2a0e2bcc1ee1cca75",
+      "playedAt": "2026-01-23T09:05:45.358Z",
+      "spotifyUrl": "https://open.spotify.com/track/2tAeWToIlB5IRby3kZhMzQ",
+      "duration": 164050,
+      "previewUrl": ""
+    },
+    {
+      "id": "0JbGlD1FjnczH63mC2t7An",
+      "name": "Escape from the City (From \"Sonic Adventure 2\")",
+      "artist": "Qumu",
+      "album": "Year 4",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f83a4a752cf4c9345994752",
+      "playedAt": "2026-01-23T09:02:48.075Z",
+      "spotifyUrl": "https://open.spotify.com/track/0JbGlD1FjnczH63mC2t7An",
+      "duration": 132401,
+      "previewUrl": ""
+    },
+    {
+      "id": "7tBvAWJ1TAyoZzgEuaSbby",
+      "name": "Sheik's Theme",
+      "artist": "Amy Turk",
+      "album": "Sheik's Theme",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27358d8138f3b0a76a17b13e325",
+      "playedAt": "2026-01-23T09:01:17.481Z",
+      "spotifyUrl": "https://open.spotify.com/track/7tBvAWJ1TAyoZzgEuaSbby",
+      "duration": 61145,
+      "previewUrl": ""
+    },
+    {
+      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
+      "name": "doodle",
+      "artist": "Zachz Winner",
+      "album": "doodle",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
+      "playedAt": "2026-01-23T09:00:41.884Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
+      "duration": 73918,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-01-23T08:58:19.161Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
+    {
+      "id": "6G8ghzF62TP7CkD1YBsIUT",
+      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
+      "artist": "Qumu",
+      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
+      "playedAt": "2026-01-23T08:48:56.684Z",
+      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
+      "duration": 114871,
+      "previewUrl": ""
+    },
+    {
+      "id": "716HpbfSkMkU7TwQsJlhHT",
+      "name": "Sweden",
+      "artist": "C418",
+      "album": "Minecraft - Volume Alpha",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6f6056c9ded5242ca245c56",
+      "playedAt": "2026-01-23T08:47:04.343Z",
+      "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
+      "duration": 215500,
+      "previewUrl": ""
+    },
     {
       "id": "3MDuA12HzorT65LovtOMKr",
       "name": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
@@ -145,17 +233,6 @@
       "previewUrl": ""
     },
     {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-01-18T04:39:50.381Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
-      "previewUrl": ""
-    },
-    {
       "id": "4h9wh7iOZ0GGn8QVp4RAOB",
       "name": "I Ain't Worried",
       "artist": "OneRepublic",
@@ -252,83 +329,6 @@
       "playedAt": "2026-01-17T02:22:33.648Z",
       "spotifyUrl": "https://open.spotify.com/track/5hCjdTRz0why3FREkJDxkh",
       "duration": 129826,
-      "previewUrl": ""
-    },
-    {
-      "id": "4YxR5rzn3iDVPDYZSBMA0q",
-      "name": "Connected Sky",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-01-17T02:20:16.987Z",
-      "spotifyUrl": "https://open.spotify.com/track/4YxR5rzn3iDVPDYZSBMA0q",
-      "duration": 120529,
-      "previewUrl": ""
-    },
-    {
-      "id": "59hVbgr8rfYkDbHfr8RcGI",
-      "name": "IRIS OUT",
-      "artist": "Kenshi Yonezu",
-      "album": "IRIS OUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
-      "playedAt": "2026-01-17T02:11:59.859Z",
-      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
-      "duration": 151573,
-      "previewUrl": ""
-    },
-    {
-      "id": "0NMdTDx7LCJdm3ioJ1cDcg",
-      "name": "Koi is Love",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-01-17T02:09:30.452Z",
-      "spotifyUrl": "https://open.spotify.com/track/0NMdTDx7LCJdm3ioJ1cDcg",
-      "duration": 108719,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Vf5mopw2fxxZLylqQRNci",
-      "name": "Starting Pistol",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-01-17T02:07:37.498Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Vf5mopw2fxxZLylqQRNci",
-      "duration": 113608,
-      "previewUrl": ""
-    },
-    {
-      "id": "5nkMGXU1zq7RhhGZlrOyJZ",
-      "name": "SAKURA PUNCH - Hard Arrange",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-01-17T02:05:42.950Z",
-      "spotifyUrl": "https://open.spotify.com/track/5nkMGXU1zq7RhhGZlrOyJZ",
-      "duration": 122086,
-      "previewUrl": ""
-    },
-    {
-      "id": "4wnNNv11a0YHSlXJos9boy",
-      "name": "Luxury Cool",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-01-17T02:03:40.675Z",
-      "spotifyUrl": "https://open.spotify.com/track/4wnNNv11a0YHSlXJos9boy",
-      "duration": 125002,
-      "previewUrl": ""
-    },
-    {
-      "id": "0QxUDD87uCY6G9hcWGVMMu",
-      "name": "エリート",
-      "artist": "Chinozo",
-      "album": "エリート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734d4a6142bbca45e92436ae29",
-      "playedAt": "2026-01-17T01:59:26.896Z",
-      "spotifyUrl": "https://open.spotify.com/track/0QxUDD87uCY6G9hcWGVMMu",
-      "duration": 169999,
       "previewUrl": ""
     }
   ],
