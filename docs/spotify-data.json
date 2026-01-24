@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-01-24T06:18:37.798Z",
+  "lastUpdated": "2026-01-24T12:21:53.128Z",
   "tracks": [
+    {
+      "id": "08YwAPnX8sygJUXG9rvhDv",
+      "name": "ハルジオン",
+      "artist": "YOASOBI",
+      "album": "THE BOOK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339917845c74c9e64320fbed9",
+      "playedAt": "2026-01-24T07:46:53.785Z",
+      "spotifyUrl": "https://open.spotify.com/track/08YwAPnX8sygJUXG9rvhDv",
+      "duration": 198600,
+      "previewUrl": ""
+    },
+    {
+      "id": "7wnOPAiqvIG4dTvEInj0YT",
+      "name": "Teenager Forever",
+      "artist": "King Gnu",
+      "album": "CEREMONY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2272c8966971b7b04066241",
+      "playedAt": "2026-01-24T07:43:34.573Z",
+      "spotifyUrl": "https://open.spotify.com/track/7wnOPAiqvIG4dTvEInj0YT",
+      "duration": 189080,
+      "previewUrl": ""
+    },
+    {
+      "id": "45zHzJfSpq7HSnGBub9tTk",
+      "name": "Black † White",
+      "artist": "野水いおり",
+      "album": "Hat Trick",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730fa8d44239baa6df5f5b81b5",
+      "playedAt": "2026-01-24T07:40:25.078Z",
+      "spotifyUrl": "https://open.spotify.com/track/45zHzJfSpq7HSnGBub9tTk",
+      "duration": 274314,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YqVJ2YSgwxWpfuENocF2t",
+      "name": "Hello,world!",
+      "artist": "BUMP OF CHICKEN",
+      "album": "Butterflies",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5233a87900584258a21f267",
+      "playedAt": "2026-01-24T07:35:50.057Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YqVJ2YSgwxWpfuENocF2t",
+      "duration": 248453,
+      "previewUrl": ""
+    },
+    {
+      "id": "1huqzMaPdQkXuOJaLxrC2s",
+      "name": "すずめ",
+      "artist": "RADWIMPS, Toaka",
+      "album": "すずめ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348d4eaf595967959fc3be747",
+      "playedAt": "2026-01-24T07:31:41.368Z",
+      "spotifyUrl": "https://open.spotify.com/track/1huqzMaPdQkXuOJaLxrC2s",
+      "duration": 236390,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
@@ -274,61 +329,6 @@
       "playedAt": "2026-01-17T23:51:42.410Z",
       "spotifyUrl": "https://open.spotify.com/track/24OQcVtprM1PLCeNQ1eOlF",
       "duration": 256573,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CTkQljbP19RftsQVJ8oxv",
-      "name": "いらないもの",
-      "artist": "Tatsuya Kitani, natori",
-      "album": "いらないもの",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b401f871eba227d2a24a7505",
-      "playedAt": "2026-01-17T02:44:25.133Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CTkQljbP19RftsQVJ8oxv",
-      "duration": 185566,
-      "previewUrl": ""
-    },
-    {
-      "id": "5IqKUsttgHgGQWhKQWDOQo",
-      "name": "potatoになっていく (feat. 天馬司&鳳えむ&草薙寧々&神代類&初音ミク)",
-      "artist": "ワンダーランズ×ショウタイム",
-      "album": "セカイはまだ始まってすらいない/potatoになっていく",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738701934eca8f1856bdbe4af0",
-      "playedAt": "2026-01-17T02:41:20.137Z",
-      "spotifyUrl": "https://open.spotify.com/track/5IqKUsttgHgGQWhKQWDOQo",
-      "duration": 187500,
-      "previewUrl": ""
-    },
-    {
-      "id": "4deK4ZvtN70312pN4ny2lK",
-      "name": "HITO Mania",
-      "artist": "Sasuke Haraguchi",
-      "album": "HITO Mania",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27335aa12d25c8a068b3050ad43",
-      "playedAt": "2026-01-17T02:37:44.646Z",
-      "spotifyUrl": "https://open.spotify.com/track/4deK4ZvtN70312pN4ny2lK",
-      "duration": 127200,
-      "previewUrl": ""
-    },
-    {
-      "id": "3jmQnsr4YxDIrCJ7GbE7vM",
-      "name": "トンデモワンダーズ",
-      "artist": "sasakure.UK",
-      "album": "トンデモワンダーズ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f2605232a9b7d779004e5ce4",
-      "playedAt": "2026-01-17T02:35:00.920Z",
-      "spotifyUrl": "https://open.spotify.com/track/3jmQnsr4YxDIrCJ7GbE7vM",
-      "duration": 195822,
-      "previewUrl": ""
-    },
-    {
-      "id": "2ddvvAWIGyqJjeM0u2o853",
-      "name": "Fantastic future",
-      "artist": "Yukari Tamura",
-      "album": "螺旋の果実",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d03a07279e98d0b8a1928712",
-      "playedAt": "2026-01-17T02:26:47.618Z",
-      "spotifyUrl": "https://open.spotify.com/track/2ddvvAWIGyqJjeM0u2o853",
-      "duration": 255706,
       "previewUrl": ""
     }
   ],
