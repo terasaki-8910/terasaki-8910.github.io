@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-24T00:57:41.390Z",
+  "lastUpdated": "2026-01-24T06:18:37.798Z",
   "tracks": [
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
@@ -7,9 +7,20 @@
       "artist": "Vaundy",
       "album": "replica",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-01-23T09:10:53.845Z",
+      "playedAt": "2026-01-24T05:05:10.400Z",
       "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
       "duration": 229328,
+      "previewUrl": ""
+    },
+    {
+      "id": "3HUDCgZgaY3ZVWohToy4LJ",
+      "name": "Toca Toca",
+      "artist": "Fly Project",
+      "album": "Toca Toca (Remixes)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27308415ac82c630195babf6a2a",
+      "playedAt": "2026-01-24T05:00:50.677Z",
+      "spotifyUrl": "https://open.spotify.com/track/3HUDCgZgaY3ZVWohToy4LJ",
+      "duration": 165605,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-01-17T02:26:47.618Z",
       "spotifyUrl": "https://open.spotify.com/track/2ddvvAWIGyqJjeM0u2o853",
       "duration": 255706,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hCjdTRz0why3FREkJDxkh",
-      "name": "Pixel Time",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-01-17T02:22:33.648Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hCjdTRz0why3FREkJDxkh",
-      "duration": 129826,
       "previewUrl": ""
     }
   ],
