@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-25T01:05:34.908Z",
+  "lastUpdated": "2026-01-25T06:18:49.004Z",
   "tracks": [
+    {
+      "id": "4H9ju2EvBSFUd6GAduYGtM",
+      "name": "Up to 21°C",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-01-25T05:43:52.020Z",
+      "spotifyUrl": "https://open.spotify.com/track/4H9ju2EvBSFUd6GAduYGtM",
+      "duration": 131434,
+      "previewUrl": ""
+    },
     {
       "id": "08YwAPnX8sygJUXG9rvhDv",
       "name": "ハルジオン",
@@ -318,17 +329,6 @@
       "playedAt": "2026-01-18T01:52:48.058Z",
       "spotifyUrl": "https://open.spotify.com/track/1bIZxrSkbxatnTo8ObcIxX",
       "duration": 281903,
-      "previewUrl": ""
-    },
-    {
-      "id": "24OQcVtprM1PLCeNQ1eOlF",
-      "name": "白金ディスコ",
-      "artist": "物語シリーズ",
-      "album": "歌物語 Special Edition",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e1df8ec8f6466df02ca9864",
-      "playedAt": "2026-01-17T23:51:42.410Z",
-      "spotifyUrl": "https://open.spotify.com/track/24OQcVtprM1PLCeNQ1eOlF",
-      "duration": 256573,
       "previewUrl": ""
     }
   ],
