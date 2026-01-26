@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-01-25T18:17:28.311Z",
+  "lastUpdated": "2026-01-26T01:04:06.338Z",
   "tracks": [
+    {
+      "id": "0N1fB13SqzxQfnYdYQQvbe",
+      "name": "Cherry Berry Merry",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-01-26T00:58:17.550Z",
+      "spotifyUrl": "https://open.spotify.com/track/0N1fB13SqzxQfnYdYQQvbe",
+      "duration": 131244,
+      "previewUrl": ""
+    },
+    {
+      "id": "0NMdTDx7LCJdm3ioJ1cDcg",
+      "name": "Koi is Love",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-01-26T00:56:05.979Z",
+      "spotifyUrl": "https://open.spotify.com/track/0NMdTDx7LCJdm3ioJ1cDcg",
+      "duration": 108719,
+      "previewUrl": ""
+    },
+    {
+      "id": "7EJSXrqE4WY9U5oAprRJcW",
+      "name": "Responsibility",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-01-26T00:54:16.353Z",
+      "spotifyUrl": "https://open.spotify.com/track/7EJSXrqE4WY9U5oAprRJcW",
+      "duration": 122214,
+      "previewUrl": ""
+    },
+    {
+      "id": "1HWp3T9mxQxd4UAPjkAjRE",
+      "name": "Fruitful Blossom",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-26T00:52:13.383Z",
+      "spotifyUrl": "https://open.spotify.com/track/1HWp3T9mxQxd4UAPjkAjRE",
+      "duration": 88211,
+      "previewUrl": ""
+    },
+    {
+      "id": "1l09TMYGe1ApGHZrIbfnq9",
+      "name": "Shooting Athletes",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-26T00:50:45.045Z",
+      "spotifyUrl": "https://open.spotify.com/track/1l09TMYGe1ApGHZrIbfnq9",
+      "duration": 120484,
+      "previewUrl": ""
+    },
+    {
+      "id": "752WJrwNFCg0IRwKvr5RT5",
+      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "artist": "Tudd, GameChops",
+      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
+      "playedAt": "2026-01-26T00:09:28.889Z",
+      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
+      "duration": 237611,
+      "previewUrl": ""
+    },
     {
       "id": "4H9ju2EvBSFUd6GAduYGtM",
       "name": "Up to 21°C",
@@ -263,72 +329,6 @@
       "playedAt": "2026-01-19T02:25:27.320Z",
       "spotifyUrl": "https://open.spotify.com/track/6qYkcg1U6JpKq0TQW91roa",
       "duration": 122003,
-      "previewUrl": ""
-    },
-    {
-      "id": "1Mmom43GtvQfeNxvM3rfUa",
-      "name": "Flip Flap Festival!",
-      "artist": "Synthion",
-      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
-      "playedAt": "2026-01-19T02:21:54.650Z",
-      "spotifyUrl": "https://open.spotify.com/track/1Mmom43GtvQfeNxvM3rfUa",
-      "duration": 123384,
-      "previewUrl": ""
-    },
-    {
-      "id": "2ANz2T37a2uN3d6w98h8vY",
-      "name": "Vinyl",
-      "artist": "King Gnu",
-      "album": "Tokyo Rendez-Vous",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0d02ba8facfe07e3e5a6eef",
-      "playedAt": "2026-01-19T02:19:16.288Z",
-      "spotifyUrl": "https://open.spotify.com/track/2ANz2T37a2uN3d6w98h8vY",
-      "duration": 294386,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Lsdr0kU6beWlXns5yRzfT",
-      "name": "アルティメットセンパイ",
-      "artist": "PinocchioP",
-      "album": "アルティメットセンパイ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738062ab9575231af71266ef19",
-      "playedAt": "2026-01-18T05:22:05.971Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Lsdr0kU6beWlXns5yRzfT",
-      "duration": 218068,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      "playedAt": "2026-01-18T05:18:27.196Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "4h9wh7iOZ0GGn8QVp4RAOB",
-      "name": "I Ain't Worried",
-      "artist": "OneRepublic",
-      "album": "I Ain’t Worried (Music From The Motion Picture \"Top Gun: Maverick\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
-      "playedAt": "2026-01-18T04:33:09.328Z",
-      "spotifyUrl": "https://open.spotify.com/track/4h9wh7iOZ0GGn8QVp4RAOB",
-      "duration": 148485,
-      "previewUrl": ""
-    },
-    {
-      "id": "1bIZxrSkbxatnTo8ObcIxX",
-      "name": "orion",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-01-18T01:52:48.058Z",
-      "spotifyUrl": "https://open.spotify.com/track/1bIZxrSkbxatnTo8ObcIxX",
-      "duration": 281903,
       "previewUrl": ""
     }
   ],
