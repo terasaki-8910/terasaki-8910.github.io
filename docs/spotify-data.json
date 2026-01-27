@@ -1,6 +1,127 @@
 {
-  "lastUpdated": "2026-01-26T18:21:46.172Z",
+  "lastUpdated": "2026-01-27T01:02:58.170Z",
   "tracks": [
+    {
+      "id": "7xWXWraHp5tqoksl0awFFG",
+      "name": "Dive into Summer",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-27T00:40:34.043Z",
+      "spotifyUrl": "https://open.spotify.com/track/7xWXWraHp5tqoksl0awFFG",
+      "duration": 118269,
+      "previewUrl": ""
+    },
+    {
+      "id": "0l3hpilXDwSmkcEzdIhvjb",
+      "name": "Neo City Dive",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-01-27T00:38:35.042Z",
+      "spotifyUrl": "https://open.spotify.com/track/0l3hpilXDwSmkcEzdIhvjb",
+      "duration": 137161,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tqHJ0fHwS0ZDtumFtGRKg",
+      "name": "Alkaline Tears",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-01-27T00:36:17.424Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tqHJ0fHwS0ZDtumFtGRKg",
+      "duration": 145516,
+      "previewUrl": ""
+    },
+    {
+      "id": "1g5nDEvyuteIW7nrQHFMsu",
+      "name": "System All Green",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-01-27T00:33:51.488Z",
+      "spotifyUrl": "https://open.spotify.com/track/1g5nDEvyuteIW7nrQHFMsu",
+      "duration": 120025,
+      "previewUrl": ""
+    },
+    {
+      "id": "7DbeeMHXn3aW6e7NYJWgF2",
+      "name": "Wave & Conquer",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-27T00:31:50.799Z",
+      "spotifyUrl": "https://open.spotify.com/track/7DbeeMHXn3aW6e7NYJWgF2",
+      "duration": 123519,
+      "previewUrl": ""
+    },
+    {
+      "id": "0hWLesGpaD2HDPybhp4qfZ",
+      "name": "夢路の花 - Instrumental Ver.",
+      "artist": "ヒナ(CV:広橋涼)",
+      "album": "ブルーアーカイブ「夢路の花」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f086ef205cd0c3179e883992",
+      "playedAt": "2026-01-27T00:29:47.023Z",
+      "spotifyUrl": "https://open.spotify.com/track/0hWLesGpaD2HDPybhp4qfZ",
+      "duration": 192642,
+      "previewUrl": ""
+    },
+    {
+      "id": "5itk2nCZQziIrLFZ7AB3qS",
+      "name": "RE Aoharu",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-01-27T00:26:33.659Z",
+      "spotifyUrl": "https://open.spotify.com/track/5itk2nCZQziIrLFZ7AB3qS",
+      "duration": 141375,
+      "previewUrl": ""
+    },
+    {
+      "id": "2lSyylDDCDOKVUPQnv6Ffy",
+      "name": "Takaramonogatari",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-01-27T00:24:11.681Z",
+      "spotifyUrl": "https://open.spotify.com/track/2lSyylDDCDOKVUPQnv6Ffy",
+      "duration": 145584,
+      "previewUrl": ""
+    },
+    {
+      "id": "23KEubQrG4uUKYTSG2Ooev",
+      "name": "Hinagesi",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-01-27T00:21:45.467Z",
+      "spotifyUrl": "https://open.spotify.com/track/23KEubQrG4uUKYTSG2Ooev",
+      "duration": 119936,
+      "previewUrl": ""
+    },
+    {
+      "id": "5zzcrYiYLMoAQF0rm6Sxol",
+      "name": "Aira",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-01-27T00:19:45.126Z",
+      "spotifyUrl": "https://open.spotify.com/track/5zzcrYiYLMoAQF0rm6Sxol",
+      "duration": 136092,
+      "previewUrl": ""
+    },
+    {
+      "id": "6TuPspch5jwyxAteIhEP50",
+      "name": "Honey Jam",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-01-27T00:17:28.361Z",
+      "spotifyUrl": "https://open.spotify.com/track/6TuPspch5jwyxAteIhEP50",
+      "duration": 137852,
+      "previewUrl": ""
+    },
     {
       "id": "0N1fB13SqzxQfnYdYQQvbe",
       "name": "Cherry Berry Merry",
@@ -208,127 +329,6 @@
       "playedAt": "2026-01-23T08:58:19.161Z",
       "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
       "duration": 215053,
-      "previewUrl": ""
-    },
-    {
-      "id": "6G8ghzF62TP7CkD1YBsIUT",
-      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "artist": "Qumu",
-      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
-      "playedAt": "2026-01-23T08:48:56.684Z",
-      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
-      "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "716HpbfSkMkU7TwQsJlhHT",
-      "name": "Sweden",
-      "artist": "C418",
-      "album": "Minecraft - Volume Alpha",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6f6056c9ded5242ca245c56",
-      "playedAt": "2026-01-23T08:47:04.343Z",
-      "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
-      "duration": 215500,
-      "previewUrl": ""
-    },
-    {
-      "id": "3MDuA12HzorT65LovtOMKr",
-      "name": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
-      "artist": "吉本おじさん, 雨衣",
-      "album": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d90202395ea36020727d4919",
-      "playedAt": "2026-01-20T20:15:59.263Z",
-      "spotifyUrl": "https://open.spotify.com/track/3MDuA12HzorT65LovtOMKr",
-      "duration": 184800,
-      "previewUrl": ""
-    },
-    {
-      "id": "4n7nwDqrdx3qmJvEACOMrN",
-      "name": "Take Me to the Beach (feat. Ado)",
-      "artist": "Imagine Dragons, Ado",
-      "album": "Take Me to the Beach (feat. Ado)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a11303b900d06348d84337f",
-      "playedAt": "2026-01-19T22:31:58.601Z",
-      "spotifyUrl": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
-      "duration": 167066,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zPgJVRYkuLYyE3mNenwf3",
-      "name": "Cotton Candy Island",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-01-19T22:31:25.443Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zPgJVRYkuLYyE3mNenwf3",
-      "duration": 123050,
-      "previewUrl": ""
-    },
-    {
-      "id": "1alvT7oOwHZxuNS9w9C8L5",
-      "name": "Moment",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-01-19T02:35:22.647Z",
-      "spotifyUrl": "https://open.spotify.com/track/1alvT7oOwHZxuNS9w9C8L5",
-      "duration": 100605,
-      "previewUrl": ""
-    },
-    {
-      "id": "4K8QY8eufhwEg9EEix0Qqn",
-      "name": "Plug and Play",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-01-19T02:33:41.286Z",
-      "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
-      "duration": 127519,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hiSDmqC8ZzNj2hW9M8rkT",
-      "name": "Accelerator",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-01-19T02:31:33.927Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hiSDmqC8ZzNj2hW9M8rkT",
-      "duration": 110921,
-      "previewUrl": ""
-    },
-    {
-      "id": "2lxlXqP9OFxG0CrMBbVvuW",
-      "name": "Rolling beat",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-01-19T02:29:42.137Z",
-      "spotifyUrl": "https://open.spotify.com/track/2lxlXqP9OFxG0CrMBbVvuW",
-      "duration": 150399,
-      "previewUrl": ""
-    },
-    {
-      "id": "4bcDDVSs9DfRX2Thzjfif4",
-      "name": "Hello to Halo",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-01-19T02:27:11.219Z",
-      "spotifyUrl": "https://open.spotify.com/track/4bcDDVSs9DfRX2Thzjfif4",
-      "duration": 105190,
-      "previewUrl": ""
-    },
-    {
-      "id": "6qYkcg1U6JpKq0TQW91roa",
-      "name": "Illuminated Night",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-01-19T02:25:27.320Z",
-      "spotifyUrl": "https://open.spotify.com/track/6qYkcg1U6JpKq0TQW91roa",
-      "duration": 122003,
       "previewUrl": ""
     }
   ],
