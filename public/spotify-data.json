@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-27T06:21:26.642Z",
+  "lastUpdated": "2026-01-27T12:27:11.502Z",
   "tracks": [
+    {
+      "id": "4PO8fERDL1d1FQA7uHg8il",
+      "name": "Among Us",
+      "artist": "Sembari +",
+      "album": "Among Us",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
+      "playedAt": "2026-01-27T08:59:21.881Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
+      "duration": 90508,
+      "previewUrl": ""
+    },
     {
       "id": "7hZ2wV0F3Ca17GTSYHH2f1",
       "name": "メトロシティ",
@@ -318,17 +329,6 @@
       "playedAt": "2026-01-27T02:05:30.637Z",
       "spotifyUrl": "https://open.spotify.com/track/1rAyzUlpPGidpt5N84tkVt",
       "duration": 93641,
-      "previewUrl": ""
-    },
-    {
-      "id": "08JL0Sj30SFTuJif2H9nXJ",
-      "name": "CrossFire",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-01-27T02:03:56.467Z",
-      "spotifyUrl": "https://open.spotify.com/track/08JL0Sj30SFTuJif2H9nXJ",
-      "duration": 110589,
       "previewUrl": ""
     }
   ],
