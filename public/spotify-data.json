@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-01-29T06:34:28.204Z",
+  "lastUpdated": "2026-01-29T12:32:50.918Z",
   "tracks": [
+    {
+      "id": "3zuOoqvVzxEzXi0D0Ma4SM",
+      "name": "Alpha",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
+      "playedAt": "2026-01-29T07:15:44.179Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zuOoqvVzxEzXi0D0Ma4SM",
+      "duration": 603000,
+      "previewUrl": ""
+    },
     {
       "id": "4PO8fERDL1d1FQA7uHg8il",
       "name": "Among Us",
@@ -318,17 +329,6 @@
       "playedAt": "2026-01-27T02:17:14.594Z",
       "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
       "duration": 215500,
-      "previewUrl": ""
-    },
-    {
-      "id": "1rAyzUlpPGidpt5N84tkVt",
-      "name": "Midnight Trip",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-01-27T02:05:30.637Z",
-      "spotifyUrl": "https://open.spotify.com/track/1rAyzUlpPGidpt5N84tkVt",
-      "duration": 93641,
       "previewUrl": ""
     }
   ],
