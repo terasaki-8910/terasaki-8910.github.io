@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-02-01T12:26:52.680Z",
+  "lastUpdated": "2026-02-01T18:20:53.065Z",
   "tracks": [
+    {
+      "id": "0QPqMlD4u1yIMCHYg3huvQ",
+      "name": "ダイヤモンドは砕けない〜メインテーマ〜",
+      "artist": "Yugo Kanno",
+      "album": "ジョジョの奇妙な冒険 ダイヤモンドは砕けない O.S.T (Vol.1〜Good Morning Morioh Cho〜)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273802bf5dbeec706a5f77c7b9a",
+      "playedAt": "2026-02-01T16:20:05.115Z",
+      "spotifyUrl": "https://open.spotify.com/track/0QPqMlD4u1yIMCHYg3huvQ",
+      "duration": 247880,
+      "previewUrl": ""
+    },
+    {
+      "id": "4eFjE882anJTh5j0lGeek5",
+      "name": "il vento d'oro",
+      "artist": "Yugo Kanno",
+      "album": "ジョジョの奇妙な冒険 黄金の風 O.S.T (vol.1 Overture)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27357d45ab0c0428bd0965ce6f4",
+      "playedAt": "2026-02-01T16:15:57.791Z",
+      "spotifyUrl": "https://open.spotify.com/track/4eFjE882anJTh5j0lGeek5",
+      "duration": 295575,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-02-01T16:10:52.775Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
     {
       "id": "3zuOoqvVzxEzXi0D0Ma4SM",
       "name": "Alpha",
@@ -296,39 +329,6 @@
       "playedAt": "2026-01-27T02:29:19.349Z",
       "spotifyUrl": "https://open.spotify.com/track/3R7bfoEKPkxaukeC3ZSn4o",
       "duration": 289826,
-      "previewUrl": ""
-    },
-    {
-      "id": "6VRU4oTgt7cIKhx7G8jGb7",
-      "name": "The Eraser",
-      "artist": "Thom Yorke",
-      "album": "The Eraser",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
-      "playedAt": "2026-01-27T02:24:29.015Z",
-      "spotifyUrl": "https://open.spotify.com/track/6VRU4oTgt7cIKhx7G8jGb7",
-      "duration": 295866,
-      "previewUrl": ""
-    },
-    {
-      "id": "6G8ghzF62TP7CkD1YBsIUT",
-      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "artist": "Qumu",
-      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
-      "playedAt": "2026-01-27T02:18:47.046Z",
-      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
-      "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "716HpbfSkMkU7TwQsJlhHT",
-      "name": "Sweden",
-      "artist": "C418",
-      "album": "Minecraft - Volume Alpha",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6f6056c9ded5242ca245c56",
-      "playedAt": "2026-01-27T02:17:14.594Z",
-      "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
-      "duration": 215500,
       "previewUrl": ""
     }
   ],
