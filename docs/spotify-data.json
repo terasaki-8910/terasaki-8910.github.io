@@ -1,15 +1,48 @@
 {
-  "lastUpdated": "2026-02-04T12:35:40.387Z",
+  "lastUpdated": "2026-02-04T18:35:03.319Z",
   "tracks": [
+    {
+      "id": "3UDe37nc2yvttJXlNk6Itr",
+      "name": "テレキャスタービーボーイ (long ver.)",
+      "artist": "THREEE",
+      "album": "パンデミック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ea035a934d5ec3aa051e6029",
+      "playedAt": "2026-02-04T13:12:56.584Z",
+      "spotifyUrl": "https://open.spotify.com/track/3UDe37nc2yvttJXlNk6Itr",
+      "duration": 164500,
+      "previewUrl": ""
+    },
     {
       "id": "17OQVshtovwVo2vk6tuzwn",
       "name": "ライアーダンサー",
       "artist": "マサラダ",
       "album": "ライアーダンサー",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-02-04T05:21:10.118Z",
+      "playedAt": "2026-02-04T13:01:41.081Z",
       "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
       "duration": 242459,
+      "previewUrl": ""
+    },
+    {
+      "id": "4H9ju2EvBSFUd6GAduYGtM",
+      "name": "Up to 21°C",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-02-04T12:54:35.226Z",
+      "spotifyUrl": "https://open.spotify.com/track/4H9ju2EvBSFUd6GAduYGtM",
+      "duration": 131434,
+      "previewUrl": ""
+    },
+    {
+      "id": "6HznFPNdvbxgzm5jJyNlwp",
+      "name": "オーバーライド",
+      "artist": "Yoshida Yasei",
+      "album": "オーバーライド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
+      "playedAt": "2026-02-04T12:52:13.740Z",
+      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
+      "duration": 138533,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-01-27T05:08:30.768Z",
       "spotifyUrl": "https://open.spotify.com/track/1poGez6IaTb1gtJxkXdlb8",
       "duration": 306000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6unPQ3WjSYWpKWjSVPA0KE",
-      "name": "ロマンスがありあまる",
-      "artist": "Gesu No Kiwami Otome",
-      "album": "両成敗",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8a4036d02f2af9b21bdc1f1",
-      "playedAt": "2026-01-27T05:03:25.020Z",
-      "spotifyUrl": "https://open.spotify.com/track/6unPQ3WjSYWpKWjSVPA0KE",
-      "duration": 224640,
-      "previewUrl": ""
-    },
-    {
-      "id": "4XObDlhGp6sREJoZj2lFv2",
-      "name": "走れSAKAMOTO",
-      "artist": "Vaundy",
-      "album": "走れSAKAMOTO",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
-      "playedAt": "2026-01-27T05:00:09.273Z",
-      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
-      "duration": 205984,
-      "previewUrl": ""
-    },
-    {
-      "id": "7M3TZDUNvaNBo0qtWVaZif",
-      "name": "WanteD! WanteD!",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "ENSEMBLE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27322c627adf9c8754c9302fa35",
-      "playedAt": "2026-01-27T04:56:12.663Z",
-      "spotifyUrl": "https://open.spotify.com/track/7M3TZDUNvaNBo0qtWVaZif",
-      "duration": 217386,
       "previewUrl": ""
     }
   ],
