@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-02-04T01:07:39.707Z",
+  "lastUpdated": "2026-02-04T06:37:49.080Z",
   "tracks": [
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2026-02-04T05:21:10.118Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
+      "previewUrl": ""
+    },
+    {
+      "id": "2cwvwUyyjjFsv55EywX9Zo",
+      "name": "光るなら",
+      "artist": "Goose house",
+      "album": "光るなら",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273df77f0ec50e27f01dd122d1f",
+      "playedAt": "2026-02-04T05:09:08.902Z",
+      "spotifyUrl": "https://open.spotify.com/track/2cwvwUyyjjFsv55EywX9Zo",
+      "duration": 254133,
+      "previewUrl": ""
+    },
+    {
+      "id": "4PO8fERDL1d1FQA7uHg8il",
+      "name": "Among Us",
+      "artist": "Sembari +",
+      "album": "Among Us",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
+      "playedAt": "2026-02-04T05:07:21.818Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
+      "duration": 90508,
+      "previewUrl": ""
+    },
+    {
+      "id": "0K8HZrpxySH9R001UPv8H5",
+      "name": "青い栞",
+      "artist": "Galileo Galilei",
+      "album": "サークルゲーム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27302536be14625a6688fa82466",
+      "playedAt": "2026-02-04T02:48:25.682Z",
+      "spotifyUrl": "https://open.spotify.com/track/0K8HZrpxySH9R001UPv8H5",
+      "duration": 338960,
+      "previewUrl": ""
+    },
+    {
+      "id": "4A3G4Chh8DTJftwJEf5tOp",
+      "name": "Butter-Fly （デジモンアドベンチャー全話OP）",
+      "artist": "Sho Oosawa",
+      "album": "熱烈！アニソン魂 THE BEST カバー楽曲集 TVアニメシリーズ「デジモンシリーズ」 vol.1",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734530ac19c33d4d897312d452",
+      "playedAt": "2026-02-04T02:42:46.236Z",
+      "spotifyUrl": "https://open.spotify.com/track/4A3G4Chh8DTJftwJEf5tOp",
+      "duration": 257950,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-02-04T02:24:25.517Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
+      "previewUrl": ""
+    },
+    {
+      "id": "4oxGI8yyghLuMV7ybRG3kg",
+      "name": "Obsessed With You",
+      "artist": "Central Cee",
+      "album": "23",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1f05c994777b79bc5c87547",
+      "playedAt": "2026-02-04T02:15:20.335Z",
+      "spotifyUrl": "https://open.spotify.com/track/4oxGI8yyghLuMV7ybRG3kg",
+      "duration": 108650,
+      "previewUrl": ""
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-02-04T02:13:31.336Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
     {
       "id": "4X0QJAUUAFm6FmbUPBnA5M",
       "name": "いーあるふぁんくらぶ",
@@ -98,17 +186,6 @@
       "playedAt": "2026-01-29T07:15:44.179Z",
       "spotifyUrl": "https://open.spotify.com/track/3zuOoqvVzxEzXi0D0Ma4SM",
       "duration": 603000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4PO8fERDL1d1FQA7uHg8il",
-      "name": "Among Us",
-      "artist": "Sembari +",
-      "album": "Among Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
-      "playedAt": "2026-01-27T08:59:21.881Z",
-      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
-      "duration": 90508,
       "previewUrl": ""
     },
     {
@@ -252,83 +329,6 @@
       "playedAt": "2026-01-27T04:56:12.663Z",
       "spotifyUrl": "https://open.spotify.com/track/7M3TZDUNvaNBo0qtWVaZif",
       "duration": 217386,
-      "previewUrl": ""
-    },
-    {
-      "id": "6XnNSPDZQXrbxbcO0IQ3ED",
-      "name": "A Brain in a Bottle",
-      "artist": "Thom Yorke",
-      "album": "Tomorrow's Modern Boxes",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273be6ab502ab57e4fcfe0e3dab",
-      "playedAt": "2026-01-27T04:55:08.347Z",
-      "spotifyUrl": "https://open.spotify.com/track/6XnNSPDZQXrbxbcO0IQ3ED",
-      "duration": 280439,
-      "previewUrl": ""
-    },
-    {
-      "id": "6FhWelfRDMFZRtFUU6SIdC",
-      "name": "怪獣",
-      "artist": "sakanaction",
-      "album": "怪獣",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d7f2ac644f635e94a193736",
-      "playedAt": "2026-01-27T04:52:41.499Z",
-      "spotifyUrl": "https://open.spotify.com/track/6FhWelfRDMFZRtFUU6SIdC",
-      "duration": 252722,
-      "previewUrl": ""
-    },
-    {
-      "id": "6megNXGjmim4OitjZnIn9v",
-      "name": "春雷",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-01-27T04:48:07.561Z",
-      "spotifyUrl": "https://open.spotify.com/track/6megNXGjmim4OitjZnIn9v",
-      "duration": 288887,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-01-27T04:43:16.796Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Tk8x1l6o6bOT9I8sIh0BF",
-      "name": "Constant Moderato Piano Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-01-27T04:40:19.529Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Tk8x1l6o6bOT9I8sIh0BF",
-      "duration": 185197,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Y0Kxmy7o8SNsMOZP9Kc5R",
-      "name": "The Clock",
-      "artist": "Thom Yorke",
-      "album": "The Eraser",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
-      "playedAt": "2026-01-27T02:56:34.395Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Y0Kxmy7o8SNsMOZP9Kc5R",
-      "duration": 253373,
-      "previewUrl": ""
-    },
-    {
-      "id": "1pX7VlGPmb1P7Mbtlnvt2p",
-      "name": "Harrowdown Hill",
-      "artist": "Thom Yorke",
-      "album": "The Eraser",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
-      "playedAt": "2026-01-27T02:52:20.418Z",
-      "spotifyUrl": "https://open.spotify.com/track/1pX7VlGPmb1P7Mbtlnvt2p",
-      "duration": 278640,
       "previewUrl": ""
     }
   ],
