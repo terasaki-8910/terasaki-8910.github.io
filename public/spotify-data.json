@@ -1,6 +1,116 @@
 {
-  "lastUpdated": "2026-02-05T06:44:20.154Z",
+  "lastUpdated": "2026-02-05T12:37:00.377Z",
   "tracks": [
+    {
+      "id": "2Y0Kxmy7o8SNsMOZP9Kc5R",
+      "name": "The Clock",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-02-05T09:46:23.048Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Y0Kxmy7o8SNsMOZP9Kc5R",
+      "duration": 253373,
+      "previewUrl": ""
+    },
+    {
+      "id": "6r5PYnGBu1hkQrk3zPkt1I",
+      "name": "イガク",
+      "artist": "Sasuke Haraguchi",
+      "album": "イガク",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
+      "playedAt": "2026-02-05T09:34:57.862Z",
+      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
+      "duration": 120352,
+      "previewUrl": ""
+    },
+    {
+      "id": "1pX7VlGPmb1P7Mbtlnvt2p",
+      "name": "Harrowdown Hill",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-02-05T08:17:43.319Z",
+      "spotifyUrl": "https://open.spotify.com/track/1pX7VlGPmb1P7Mbtlnvt2p",
+      "duration": 278640,
+      "previewUrl": ""
+    },
+    {
+      "id": "4jHYJZd4feGQMS9iE78QVe",
+      "name": "And It Rained All Night",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-02-05T08:13:40.760Z",
+      "spotifyUrl": "https://open.spotify.com/track/4jHYJZd4feGQMS9iE78QVe",
+      "duration": 255933,
+      "previewUrl": ""
+    },
+    {
+      "id": "73lxA4sBvqcSKzDNydgcFc",
+      "name": "Cymbal Rush",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-02-05T08:08:48.200Z",
+      "spotifyUrl": "https://open.spotify.com/track/73lxA4sBvqcSKzDNydgcFc",
+      "duration": 314546,
+      "previewUrl": ""
+    },
+    {
+      "id": "3oC3iuyvwfaTCOBWL6YOYj",
+      "name": "Skip Divided",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-02-05T08:03:35.660Z",
+      "spotifyUrl": "https://open.spotify.com/track/3oC3iuyvwfaTCOBWL6YOYj",
+      "duration": 215813,
+      "previewUrl": ""
+    },
+    {
+      "id": "1yr5rQnDL8QhJWCI6rPId8",
+      "name": "Atoms For Peace",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-02-05T07:59:50.328Z",
+      "spotifyUrl": "https://open.spotify.com/track/1yr5rQnDL8QhJWCI6rPId8",
+      "duration": 313613,
+      "previewUrl": ""
+    },
+    {
+      "id": "2XNaPTYDeQcTqAaWoHKMEp",
+      "name": "Analyse",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-02-05T07:52:23.597Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XNaPTYDeQcTqAaWoHKMEp",
+      "duration": 242786,
+      "previewUrl": ""
+    },
+    {
+      "id": "1PGCzcLCqV1yu9M3FmxKlu",
+      "name": "ゴールデンタイムラバー",
+      "artist": "Sukima Switch",
+      "album": "POPMAN’S WORLD ～All Time Best 2003-2013～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8b567d8a00d38c441ecbca1",
+      "playedAt": "2026-02-05T07:47:21.659Z",
+      "spotifyUrl": "https://open.spotify.com/track/1PGCzcLCqV1yu9M3FmxKlu",
+      "duration": 339720,
+      "previewUrl": ""
+    },
+    {
+      "id": "16VSqz6sKQtVO1CUXtGCvJ",
+      "name": "K.K. Cruisin'",
+      "artist": "Tudd, GameChops",
+      "album": "K.K. Cruisin'",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734207058fb2b6d76782a56c98",
+      "playedAt": "2026-02-05T07:47:03.581Z",
+      "spotifyUrl": "https://open.spotify.com/track/16VSqz6sKQtVO1CUXtGCvJ",
+      "duration": 235751,
+      "previewUrl": ""
+    },
     {
       "id": "713oQBD0QSy5uQv7HRyZal",
       "name": "Absolute Victory! - Game Clear",
@@ -43,17 +153,6 @@
       "playedAt": "2026-02-05T02:24:49.582Z",
       "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
       "duration": 229133,
-      "previewUrl": ""
-    },
-    {
-      "id": "6r5PYnGBu1hkQrk3zPkt1I",
-      "name": "イガク",
-      "artist": "Sasuke Haraguchi",
-      "album": "イガク",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
-      "playedAt": "2026-02-05T02:18:59.809Z",
-      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
-      "duration": 120352,
       "previewUrl": ""
     },
     {
@@ -230,105 +329,6 @@
       "playedAt": "2026-02-03T22:02:04.735Z",
       "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
       "duration": 151573,
-      "previewUrl": ""
-    },
-    {
-      "id": "0QPqMlD4u1yIMCHYg3huvQ",
-      "name": "ダイヤモンドは砕けない〜メインテーマ〜",
-      "artist": "Yugo Kanno",
-      "album": "ジョジョの奇妙な冒険 ダイヤモンドは砕けない O.S.T (Vol.1〜Good Morning Morioh Cho〜)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273802bf5dbeec706a5f77c7b9a",
-      "playedAt": "2026-02-01T16:20:05.115Z",
-      "spotifyUrl": "https://open.spotify.com/track/0QPqMlD4u1yIMCHYg3huvQ",
-      "duration": 247880,
-      "previewUrl": ""
-    },
-    {
-      "id": "4eFjE882anJTh5j0lGeek5",
-      "name": "il vento d'oro",
-      "artist": "Yugo Kanno",
-      "album": "ジョジョの奇妙な冒険 黄金の風 O.S.T (vol.1 Overture)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27357d45ab0c0428bd0965ce6f4",
-      "playedAt": "2026-02-01T16:15:57.791Z",
-      "spotifyUrl": "https://open.spotify.com/track/4eFjE882anJTh5j0lGeek5",
-      "duration": 295575,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FQcELLVZwSvarn27omhgd",
-      "name": "ukigumo",
-      "artist": "Hige Driver",
-      "album": "ヒゲドライバー 10th Anniversary Best",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
-      "playedAt": "2026-02-01T16:10:52.775Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
-      "duration": 215053,
-      "previewUrl": ""
-    },
-    {
-      "id": "3zuOoqvVzxEzXi0D0Ma4SM",
-      "name": "Alpha",
-      "artist": "C418",
-      "album": "Minecraft - Volume Beta",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
-      "playedAt": "2026-01-29T07:15:44.179Z",
-      "spotifyUrl": "https://open.spotify.com/track/3zuOoqvVzxEzXi0D0Ma4SM",
-      "duration": 603000,
-      "previewUrl": ""
-    },
-    {
-      "id": "7hZ2wV0F3Ca17GTSYHH2f1",
-      "name": "メトロシティ",
-      "artist": "imase, natori",
-      "album": "メトロシティ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27375b7de023f3b78a63f146dac",
-      "playedAt": "2026-01-27T05:43:13.342Z",
-      "spotifyUrl": "https://open.spotify.com/track/7hZ2wV0F3Ca17GTSYHH2f1",
-      "duration": 200511,
-      "previewUrl": ""
-    },
-    {
-      "id": "1MYyy6zh2ErfJMkiqkCZWJ",
-      "name": "暗く黒く",
-      "artist": "ZUTOMAYO",
-      "album": "ぐされ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27345e670c7e25b4d0c1891d283",
-      "playedAt": "2026-01-27T05:39:51.987Z",
-      "spotifyUrl": "https://open.spotify.com/track/1MYyy6zh2ErfJMkiqkCZWJ",
-      "duration": 249293,
-      "previewUrl": ""
-    },
-    {
-      "id": "0zxyK9Ih5rnN485VY73bUp",
-      "name": "Luna say maybe",
-      "artist": "初星学園, 美波, 月村手毬",
-      "album": "Luna say maybe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
-      "playedAt": "2026-01-27T05:35:42.196Z",
-      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
-      "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "5sMZm3jJiLgkbDOGSztRSY",
-      "name": "メランコリーキッチン",
-      "artist": "Kenshi Yonezu",
-      "album": "YANKEE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
-      "playedAt": "2026-01-27T05:31:16.540Z",
-      "spotifyUrl": "https://open.spotify.com/track/5sMZm3jJiLgkbDOGSztRSY",
-      "duration": 218653,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lx9ahLiuVTK1ArFp9yAmL",
-      "name": "Ｗ●ＲＫ",
-      "artist": "ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ, Sheena Ringo",
-      "album": "Ｗ●ＲＫ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ad39f74a37339cc36b7f0551",
-      "playedAt": "2026-01-27T05:27:37.303Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lx9ahLiuVTK1ArFp9yAmL",
-      "duration": 201073,
       "previewUrl": ""
     }
   ],
