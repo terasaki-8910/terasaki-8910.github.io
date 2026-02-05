@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-02-05T01:08:23.793Z",
+  "lastUpdated": "2026-02-05T06:44:20.154Z",
   "tracks": [
+    {
+      "id": "713oQBD0QSy5uQv7HRyZal",
+      "name": "Absolute Victory! - Game Clear",
+      "artist": "Michael Staple",
+      "album": "Pier Pressure (Original Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5dd81c592cb82d3dc633ac7",
+      "playedAt": "2026-02-05T03:40:21.468Z",
+      "spotifyUrl": "https://open.spotify.com/track/713oQBD0QSy5uQv7HRyZal",
+      "duration": 9136,
+      "previewUrl": ""
+    },
+    {
+      "id": "42jfxm2vaqcrKKKWM9yX7Q",
+      "name": "7 PM (Animal Crossing)",
+      "artist": "Tudd, General Offensive, GameChops",
+      "album": "Smash & Chill",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737d9fb400914a9f3a6effd874",
+      "playedAt": "2026-02-05T03:39:58.675Z",
+      "spotifyUrl": "https://open.spotify.com/track/42jfxm2vaqcrKKKWM9yX7Q",
+      "duration": 193319,
+      "previewUrl": ""
+    },
+    {
+      "id": "6UN73IYd0hZxLi8wFPMQij",
+      "name": "Players",
+      "artist": "Coi Leray",
+      "album": "Players",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735626453d29a0124dea22fb1b",
+      "playedAt": "2026-02-05T02:28:59.808Z",
+      "spotifyUrl": "https://open.spotify.com/track/6UN73IYd0hZxLi8wFPMQij",
+      "duration": 139560,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-02-05T02:24:49.582Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
+      "previewUrl": ""
+    },
+    {
+      "id": "6r5PYnGBu1hkQrk3zPkt1I",
+      "name": "イガク",
+      "artist": "Sasuke Haraguchi",
+      "album": "イガク",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
+      "playedAt": "2026-02-05T02:18:59.809Z",
+      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
+      "duration": 120352,
+      "previewUrl": ""
+    },
+    {
+      "id": "5vNRhkKd0yEAg8suGBpjeY",
+      "name": "APT.",
+      "artist": "ROSÉ, Bruno Mars",
+      "album": "APT.",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27336032cb4acd9df050bc2e197",
+      "playedAt": "2026-02-05T02:13:31.224Z",
+      "spotifyUrl": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY",
+      "duration": 169917,
+      "previewUrl": ""
+    },
     {
       "id": "2QLc2zqIucqAugU70T3sJv",
       "name": "オドループ",
@@ -101,17 +167,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6NYbDTmstd7JSUWl2hVBqR",
-      "name": "Sprinter",
-      "artist": "Dave, Central Cee",
-      "album": "Sprinter",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
-      "playedAt": "2026-02-04T02:24:25.517Z",
-      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
-      "duration": 229133,
-      "previewUrl": ""
-    },
-    {
       "id": "4oxGI8yyghLuMV7ybRG3kg",
       "name": "Obsessed With You",
       "artist": "Central Cee",
@@ -153,17 +208,6 @@
       "playedAt": "2026-02-03T22:21:46.449Z",
       "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
       "duration": 156972,
-      "previewUrl": ""
-    },
-    {
-      "id": "6r5PYnGBu1hkQrk3zPkt1I",
-      "name": "イガク",
-      "artist": "Sasuke Haraguchi",
-      "album": "イガク",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
-      "playedAt": "2026-02-03T22:13:29.858Z",
-      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
-      "duration": 120352,
       "previewUrl": ""
     },
     {
@@ -285,50 +329,6 @@
       "playedAt": "2026-01-27T05:27:37.303Z",
       "spotifyUrl": "https://open.spotify.com/track/7lx9ahLiuVTK1ArFp9yAmL",
       "duration": 201073,
-      "previewUrl": ""
-    },
-    {
-      "id": "3gHgE02K4p2wHiUZ2RPWpS",
-      "name": "ねぇねぇねぇ。",
-      "artist": "PinocchioP",
-      "album": "ラヴ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e06a68d3033eca4fda57ab45",
-      "playedAt": "2026-01-27T05:24:17.894Z",
-      "spotifyUrl": "https://open.spotify.com/track/3gHgE02K4p2wHiUZ2RPWpS",
-      "duration": 210607,
-      "previewUrl": ""
-    },
-    {
-      "id": "5U4PgFWzfzY7VEg9Ck4ziF",
-      "name": "ガーデン",
-      "artist": "Fujii Kaze",
-      "album": "LOVE ALL SERVE ALL",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af62b027ee85ae2e2f7c9702",
-      "playedAt": "2026-01-27T05:20:44.640Z",
-      "spotifyUrl": "https://open.spotify.com/track/5U4PgFWzfzY7VEg9Ck4ziF",
-      "duration": 229333,
-      "previewUrl": ""
-    },
-    {
-      "id": "38XY1ShCSiYwDaV51sFPT9",
-      "name": "マーシャル・マキシマイザー",
-      "artist": "柊マグネタイト, 可不",
-      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
-      "playedAt": "2026-01-27T05:16:54.733Z",
-      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
-      "duration": 163686,
-      "previewUrl": ""
-    },
-    {
-      "id": "5bUWFHUTbXQcmqI6vWL62j",
-      "name": "グランドエスケープ",
-      "artist": "RADWIMPS, Toko Miura",
-      "album": "天気の子 (complete version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f995bf0052673398dceb506",
-      "playedAt": "2026-01-27T05:14:11.347Z",
-      "spotifyUrl": "https://open.spotify.com/track/5bUWFHUTbXQcmqI6vWL62j",
-      "duration": 339160,
       "previewUrl": ""
     }
   ],
