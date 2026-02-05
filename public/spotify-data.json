@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-02-04T18:35:03.319Z",
+  "lastUpdated": "2026-02-05T01:08:23.793Z",
   "tracks": [
+    {
+      "id": "2QLc2zqIucqAugU70T3sJv",
+      "name": "オドループ",
+      "artist": "frederic",
+      "album": "oddloop",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273062fe0891600a07f4a8b9ace",
+      "playedAt": "2026-02-05T00:46:20.513Z",
+      "spotifyUrl": "https://open.spotify.com/track/2QLc2zqIucqAugU70T3sJv",
+      "duration": 255293,
+      "previewUrl": ""
+    },
     {
       "id": "3UDe37nc2yvttJXlNk6Itr",
       "name": "テレキャスタービーボーイ (long ver.)",
@@ -318,17 +329,6 @@
       "playedAt": "2026-01-27T05:14:11.347Z",
       "spotifyUrl": "https://open.spotify.com/track/5bUWFHUTbXQcmqI6vWL62j",
       "duration": 339160,
-      "previewUrl": ""
-    },
-    {
-      "id": "1poGez6IaTb1gtJxkXdlb8",
-      "name": "ヒステリックナイトガール",
-      "artist": "PSYQUI, Such",
-      "album": "STYLEY!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731a8bba168d85553d9b2d47a9",
-      "playedAt": "2026-01-27T05:08:30.768Z",
-      "spotifyUrl": "https://open.spotify.com/track/1poGez6IaTb1gtJxkXdlb8",
-      "duration": 306000,
       "previewUrl": ""
     }
   ],
