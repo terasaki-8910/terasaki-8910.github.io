@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-02-08T06:38:19.543Z",
+  "lastUpdated": "2026-02-08T12:26:44.909Z",
   "tracks": [
+    {
+      "id": "4oxGI8yyghLuMV7ybRG3kg",
+      "name": "Obsessed With You",
+      "artist": "Central Cee",
+      "album": "23",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1f05c994777b79bc5c87547",
+      "playedAt": "2026-02-08T06:50:48.967Z",
+      "spotifyUrl": "https://open.spotify.com/track/4oxGI8yyghLuMV7ybRG3kg",
+      "duration": 108650,
+      "previewUrl": ""
+    },
+    {
+      "id": "1LtfbFMuaZRjgbsA7cNBtU",
+      "name": "最終鬼畜妹フランドール・Ｓ",
+      "artist": "ビートまりお",
+      "album": "東方インストライク",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f674facf2229d448f3683d6e",
+      "playedAt": "2026-02-08T06:49:00.678Z",
+      "spotifyUrl": "https://open.spotify.com/track/1LtfbFMuaZRjgbsA7cNBtU",
+      "duration": 205680,
+      "previewUrl": ""
+    },
+    {
+      "id": "5tcnPaFhcpSLx7ihFwI9DM",
+      "name": "ココロオドル -original version-",
+      "artist": "nobodyknows+",
+      "album": "ココロオドル",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
+      "playedAt": "2026-02-08T06:48:59.511Z",
+      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
+      "duration": 253533,
+      "previewUrl": ""
+    },
+    {
+      "id": "6MJFNhbXbqXCbHP24yLltO",
+      "name": "ダーリンダンス",
+      "artist": "Kairikibear",
+      "album": "ダーリンシンドローム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e24eeaab0da33f5dff9513d8",
+      "playedAt": "2026-02-08T06:41:33.836Z",
+      "spotifyUrl": "https://open.spotify.com/track/6MJFNhbXbqXCbHP24yLltO",
+      "duration": 206274,
+      "previewUrl": ""
+    },
     {
       "id": "6HznFPNdvbxgzm5jJyNlwp",
       "name": "オーバーライド",
@@ -101,17 +145,6 @@
       "previewUrl": ""
     },
     {
-      "id": "1LtfbFMuaZRjgbsA7cNBtU",
-      "name": "最終鬼畜妹フランドール・Ｓ",
-      "artist": "ビートまりお",
-      "album": "東方インストライク",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f674facf2229d448f3683d6e",
-      "playedAt": "2026-02-08T06:07:43.577Z",
-      "spotifyUrl": "https://open.spotify.com/track/1LtfbFMuaZRjgbsA7cNBtU",
-      "duration": 205680,
-      "previewUrl": ""
-    },
-    {
       "id": "6MwAs47LdYmlstiDmHzksi",
       "name": "チルノのパーフェクトさんすう教室",
       "artist": "IOSYS",
@@ -131,28 +164,6 @@
       "playedAt": "2026-02-06T12:08:28.981Z",
       "spotifyUrl": "https://open.spotify.com/track/23COHsoGsY4zDb5xrSocJo",
       "duration": 190498,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tcnPaFhcpSLx7ihFwI9DM",
-      "name": "ココロオドル -original version-",
-      "artist": "nobodyknows+",
-      "album": "ココロオドル",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
-      "playedAt": "2026-02-06T12:04:40.476Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
-      "duration": 253533,
-      "previewUrl": ""
-    },
-    {
-      "id": "6MJFNhbXbqXCbHP24yLltO",
-      "name": "ダーリンダンス",
-      "artist": "Kairikibear",
-      "album": "ダーリンシンドローム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e24eeaab0da33f5dff9513d8",
-      "playedAt": "2026-02-06T11:51:10.488Z",
-      "spotifyUrl": "https://open.spotify.com/track/6MJFNhbXbqXCbHP24yLltO",
-      "duration": 206274,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-02-06T01:37:41.855Z",
       "spotifyUrl": "https://open.spotify.com/track/56bxyWKituPcwaPsuQ8q8q",
       "duration": 126641,
-      "previewUrl": ""
-    },
-    {
-      "id": "7nbg3jC74cBn36hmOOnqOZ",
-      "name": "Yumeji Party",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-02-06T01:35:34.781Z",
-      "spotifyUrl": "https://open.spotify.com/track/7nbg3jC74cBn36hmOOnqOZ",
-      "duration": 117088,
       "previewUrl": ""
     }
   ],
