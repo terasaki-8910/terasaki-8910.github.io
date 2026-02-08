@@ -1,6 +1,116 @@
 {
-  "lastUpdated": "2026-02-08T01:30:05.478Z",
+  "lastUpdated": "2026-02-08T06:38:19.543Z",
   "tracks": [
+    {
+      "id": "6HznFPNdvbxgzm5jJyNlwp",
+      "name": "オーバーライド",
+      "artist": "Yoshida Yasei",
+      "album": "オーバーライド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
+      "playedAt": "2026-02-08T06:38:07.154Z",
+      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-02-08T06:35:48.181Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
+    {
+      "id": "3SAgoXsKEGMlIGNtOvs0vV",
+      "name": "インドア系ならトラックメイカー",
+      "artist": "Yunomi, nicamoq",
+      "album": "ゆのもきゅ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e3a8cc0c4984a9abe5c886b4",
+      "playedAt": "2026-02-08T06:32:06.903Z",
+      "spotifyUrl": "https://open.spotify.com/track/3SAgoXsKEGMlIGNtOvs0vV",
+      "duration": 195585,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-02-08T06:28:50.791Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
+      "previewUrl": ""
+    },
+    {
+      "id": "6r5PYnGBu1hkQrk3zPkt1I",
+      "name": "イガク",
+      "artist": "Sasuke Haraguchi",
+      "album": "イガク",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
+      "playedAt": "2026-02-08T06:25:01.371Z",
+      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
+      "duration": 120352,
+      "previewUrl": ""
+    },
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2026-02-08T06:23:00.114Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FXu6nhlIgbpgxt61ntlnR",
+      "name": "Override",
+      "artist": "Yoshida Yasei",
+      "album": "Override",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
+      "playedAt": "2026-02-08T06:18:57.366Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vziRWZny2GDwHX2UYJxa2",
+      "name": "おちゃめ機能",
+      "artist": "Lon",
+      "album": "Upload feat.Vocalist",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
+      "playedAt": "2026-02-08T06:16:38.215Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
+      "duration": 252066,
+      "previewUrl": ""
+    },
+    {
+      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "name": "Butter Building",
+      "artist": "Xoc",
+      "album": "What's Pink and Sucks?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
+      "playedAt": "2026-02-08T06:09:40.336Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "duration": 98754,
+      "previewUrl": ""
+    },
+    {
+      "id": "1LtfbFMuaZRjgbsA7cNBtU",
+      "name": "最終鬼畜妹フランドール・Ｓ",
+      "artist": "ビートまりお",
+      "album": "東方インストライク",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f674facf2229d448f3683d6e",
+      "playedAt": "2026-02-08T06:07:43.577Z",
+      "spotifyUrl": "https://open.spotify.com/track/1LtfbFMuaZRjgbsA7cNBtU",
+      "duration": 205680,
+      "previewUrl": ""
+    },
     {
       "id": "6MwAs47LdYmlstiDmHzksi",
       "name": "チルノのパーフェクトさんすう教室",
@@ -35,39 +145,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6HznFPNdvbxgzm5jJyNlwp",
-      "name": "オーバーライド",
-      "artist": "Yoshida Yasei",
-      "album": "オーバーライド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
-      "playedAt": "2026-02-06T12:00:26.096Z",
-      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
-      "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      "playedAt": "2026-02-06T11:58:06.882Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "3SAgoXsKEGMlIGNtOvs0vV",
-      "name": "インドア系ならトラックメイカー",
-      "artist": "Yunomi, nicamoq",
-      "album": "ゆのもきゅ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e3a8cc0c4984a9abe5c886b4",
-      "playedAt": "2026-02-06T11:54:25.703Z",
-      "spotifyUrl": "https://open.spotify.com/track/3SAgoXsKEGMlIGNtOvs0vV",
-      "duration": 195585,
-      "previewUrl": ""
-    },
-    {
       "id": "6MJFNhbXbqXCbHP24yLltO",
       "name": "ダーリンダンス",
       "artist": "Kairikibear",
@@ -79,39 +156,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6NYbDTmstd7JSUWl2hVBqR",
-      "name": "Sprinter",
-      "artist": "Dave, Central Cee",
-      "album": "Sprinter",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
-      "playedAt": "2026-02-06T11:47:44.138Z",
-      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
-      "duration": 229133,
-      "previewUrl": ""
-    },
-    {
-      "id": "17OQVshtovwVo2vk6tuzwn",
-      "name": "ライアーダンサー",
-      "artist": "マサラダ",
-      "album": "ライアーダンサー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-02-06T11:43:53.529Z",
-      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
-      "duration": 242459,
-      "previewUrl": ""
-    },
-    {
-      "id": "4FXu6nhlIgbpgxt61ntlnR",
-      "name": "Override",
-      "artist": "Yoshida Yasei",
-      "album": "Override",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
-      "playedAt": "2026-02-06T11:39:50.173Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
-      "duration": 138533,
-      "previewUrl": ""
-    },
-    {
       "id": "13XIvFx53mpzO1jSIJC0Ad",
       "name": "Pumpin' Junkies",
       "artist": "t+pazolite",
@@ -120,17 +164,6 @@
       "playedAt": "2026-02-06T11:37:31.424Z",
       "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
       "duration": 269465,
-      "previewUrl": ""
-    },
-    {
-      "id": "6r5PYnGBu1hkQrk3zPkt1I",
-      "name": "イガク",
-      "artist": "Sasuke Haraguchi",
-      "album": "イガク",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
-      "playedAt": "2026-02-06T11:33:01.574Z",
-      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
-      "duration": 120352,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-02-06T01:35:34.781Z",
       "spotifyUrl": "https://open.spotify.com/track/7nbg3jC74cBn36hmOOnqOZ",
       "duration": 117088,
-      "previewUrl": ""
-    },
-    {
-      "id": "5TLlH4NqFwbs9pjWUMGK5H",
-      "name": "Signal of Abydos",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-02-06T01:33:36.943Z",
-      "spotifyUrl": "https://open.spotify.com/track/5TLlH4NqFwbs9pjWUMGK5H",
-      "duration": 116821,
-      "previewUrl": ""
-    },
-    {
-      "id": "2lxlXqP9OFxG0CrMBbVvuW",
-      "name": "Rolling beat",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-02-06T01:31:42.031Z",
-      "spotifyUrl": "https://open.spotify.com/track/2lxlXqP9OFxG0CrMBbVvuW",
-      "duration": 150399,
-      "previewUrl": ""
-    },
-    {
-      "id": "3r58Epvfc3Yd4cpS6qNdnZ",
-      "name": "Lovely Picnic",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-02-06T01:29:08.561Z",
-      "spotifyUrl": "https://open.spotify.com/track/3r58Epvfc3Yd4cpS6qNdnZ",
-      "duration": 138531,
       "previewUrl": ""
     }
   ],
