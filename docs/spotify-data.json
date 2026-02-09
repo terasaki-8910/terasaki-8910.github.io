@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-02-09T06:54:17.401Z",
+  "lastUpdated": "2026-02-09T12:43:11.803Z",
   "tracks": [
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-02-09T10:12:43.319Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
     {
       "id": "4oxGI8yyghLuMV7ybRG3kg",
       "name": "Obsessed With You",
@@ -318,17 +329,6 @@
       "playedAt": "2026-02-06T01:39:36.698Z",
       "spotifyUrl": "https://open.spotify.com/track/4PQsYLm1YARMAHTjGl9zcb",
       "duration": 113432,
-      "previewUrl": ""
-    },
-    {
-      "id": "56bxyWKituPcwaPsuQ8q8q",
-      "name": "Usagi Flap",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-02-06T01:37:41.855Z",
-      "spotifyUrl": "https://open.spotify.com/track/56bxyWKituPcwaPsuQ8q8q",
-      "duration": 126641,
       "previewUrl": ""
     }
   ],
