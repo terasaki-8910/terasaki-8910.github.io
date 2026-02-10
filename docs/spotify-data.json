@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-02-10T06:54:06.061Z",
+  "lastUpdated": "2026-02-10T12:47:46.604Z",
   "tracks": [
+    {
+      "id": "73Ua9z2DSgEoOWAKiClnhn",
+      "name": "バグ",
+      "artist": "Kairikibear",
+      "album": "バグ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c1af8eeb09da9c5c9b84003c",
+      "playedAt": "2026-02-10T12:09:59.042Z",
+      "spotifyUrl": "https://open.spotify.com/track/73Ua9z2DSgEoOWAKiClnhn",
+      "duration": 171612,
+      "previewUrl": ""
+    },
+    {
+      "id": "638PHAOYgcooFRkjjDBadh",
+      "name": "Pokémon Center Jazz",
+      "artist": "The Deku Trio, GameChops, Unplugged",
+      "album": "Pokémon Center Jazz",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273daa28eae6acb923891cc1f83",
+      "playedAt": "2026-02-10T07:51:51.330Z",
+      "spotifyUrl": "https://open.spotify.com/track/638PHAOYgcooFRkjjDBadh",
+      "duration": 198620,
+      "previewUrl": ""
+    },
+    {
+      "id": "1QC4Ztt2GlFWpdSMLwt5ol",
+      "name": "LOV3 (Feat. Bryan Chase, Okasian)",
+      "artist": "Sik-K, Lil Moshpit, Bryan Chase, Okasian",
+      "album": "K-FLIP+",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27373353f72d6760d107a955847",
+      "playedAt": "2026-02-10T07:36:28.160Z",
+      "spotifyUrl": "https://open.spotify.com/track/1QC4Ztt2GlFWpdSMLwt5ol",
+      "duration": 236240,
+      "previewUrl": ""
+    },
+    {
+      "id": "4mVZ9cv6pGt36VNjm6CTue",
+      "name": "fml .",
+      "artist": "fakemink",
+      "album": "The Boy who cried Terrified .",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273423ed6dcc25a665806ded0c0",
+      "playedAt": "2026-02-10T07:32:30.894Z",
+      "spotifyUrl": "https://open.spotify.com/track/4mVZ9cv6pGt36VNjm6CTue",
+      "duration": 160870,
+      "previewUrl": ""
+    },
+    {
+      "id": "554qQSs9lpRVq6TlaaiIKT",
+      "name": "4 Raws",
+      "artist": "EsDeeKid",
+      "album": "Rebel",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cff4bd68d5d0dd9a0a748045",
+      "playedAt": "2026-02-10T07:29:50.476Z",
+      "spotifyUrl": "https://open.spotify.com/track/554qQSs9lpRVq6TlaaiIKT",
+      "duration": 146666,
+      "previewUrl": ""
+    },
+    {
+      "id": "3WIV7gukpFbj7YotPoUVb2",
+      "name": "NOW OR NEVER II",
+      "artist": "Tkandz, Lil Baby",
+      "album": "NOW OR NEVER II",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739f0c549149cdbfed92d1713b",
+      "playedAt": "2026-02-10T07:11:37.902Z",
+      "spotifyUrl": "https://open.spotify.com/track/3WIV7gukpFbj7YotPoUVb2",
+      "duration": 158357,
+      "previewUrl": ""
+    },
     {
       "id": "3igbfkHq3s5wGMvC8iAscj",
       "name": "PARISIENNE",
@@ -39,7 +105,7 @@
       "name": "Championship",
       "artist": "M Huncho",
       "album": "Championship",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733ea529bc3fe02e7b7ae572ff",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b6ec17c04886434c21d1d2d3",
       "playedAt": "2026-02-10T05:31:23.286Z",
       "spotifyUrl": "https://open.spotify.com/track/5oBW8J1xSX50w6yKWQGRql",
       "duration": 122159,
@@ -263,72 +329,6 @@
       "playedAt": "2026-02-10T02:33:12.265Z",
       "spotifyUrl": "https://open.spotify.com/track/3oC3iuyvwfaTCOBWL6YOYj",
       "duration": 215813,
-      "previewUrl": ""
-    },
-    {
-      "id": "3R7bfoEKPkxaukeC3ZSn4o",
-      "name": "Black Swan",
-      "artist": "Thom Yorke",
-      "album": "The Eraser",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
-      "playedAt": "2026-02-10T02:29:18.684Z",
-      "spotifyUrl": "https://open.spotify.com/track/3R7bfoEKPkxaukeC3ZSn4o",
-      "duration": 289826,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FQcELLVZwSvarn27omhgd",
-      "name": "ukigumo",
-      "artist": "Hige Driver",
-      "album": "ヒゲドライバー 10th Anniversary Best",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
-      "playedAt": "2026-02-09T10:12:43.319Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
-      "duration": 215053,
-      "previewUrl": ""
-    },
-    {
-      "id": "4oxGI8yyghLuMV7ybRG3kg",
-      "name": "Obsessed With You",
-      "artist": "Central Cee",
-      "album": "23",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1f05c994777b79bc5c87547",
-      "playedAt": "2026-02-08T06:50:48.967Z",
-      "spotifyUrl": "https://open.spotify.com/track/4oxGI8yyghLuMV7ybRG3kg",
-      "duration": 108650,
-      "previewUrl": ""
-    },
-    {
-      "id": "1LtfbFMuaZRjgbsA7cNBtU",
-      "name": "最終鬼畜妹フランドール・Ｓ",
-      "artist": "ビートまりお",
-      "album": "東方インストライク",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f674facf2229d448f3683d6e",
-      "playedAt": "2026-02-08T06:49:00.678Z",
-      "spotifyUrl": "https://open.spotify.com/track/1LtfbFMuaZRjgbsA7cNBtU",
-      "duration": 205680,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tcnPaFhcpSLx7ihFwI9DM",
-      "name": "ココロオドル -original version-",
-      "artist": "nobodyknows+",
-      "album": "ココロオドル",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
-      "playedAt": "2026-02-08T06:48:59.511Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
-      "duration": 253533,
-      "previewUrl": ""
-    },
-    {
-      "id": "6MJFNhbXbqXCbHP24yLltO",
-      "name": "ダーリンダンス",
-      "artist": "Kairikibear",
-      "album": "ダーリンシンドローム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e24eeaab0da33f5dff9513d8",
-      "playedAt": "2026-02-08T06:41:33.836Z",
-      "spotifyUrl": "https://open.spotify.com/track/6MJFNhbXbqXCbHP24yLltO",
-      "duration": 206274,
       "previewUrl": ""
     }
   ],
