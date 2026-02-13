@@ -1,6 +1,127 @@
 {
-  "lastUpdated": "2026-02-13T06:47:02.220Z",
+  "lastUpdated": "2026-02-13T12:34:50.384Z",
   "tracks": [
+    {
+      "id": "4Wf7ZlYcNtjrAWttBTaRvv",
+      "name": "High School Monster",
+      "artist": "ロクデナシ宇宙",
+      "album": "ロクデナシバス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d00171c7dcf5726044a635c0",
+      "playedAt": "2026-02-13T10:32:22.924Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Wf7ZlYcNtjrAWttBTaRvv",
+      "duration": 190000,
+      "previewUrl": ""
+    },
+    {
+      "id": "6FhWelfRDMFZRtFUU6SIdC",
+      "name": "怪獣",
+      "artist": "sakanaction",
+      "album": "怪獣",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d7f2ac644f635e94a193736",
+      "playedAt": "2026-02-13T10:29:12.680Z",
+      "spotifyUrl": "https://open.spotify.com/track/6FhWelfRDMFZRtFUU6SIdC",
+      "duration": 252722,
+      "previewUrl": ""
+    },
+    {
+      "id": "7DWrCtuIkEbZOFUvCoYkEV",
+      "name": "上京タワー",
+      "artist": "MOROHA",
+      "album": "MOROHA IV",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eca5b39d11b5ad0fa6ac8239",
+      "playedAt": "2026-02-13T10:24:58.984Z",
+      "spotifyUrl": "https://open.spotify.com/track/7DWrCtuIkEbZOFUvCoYkEV",
+      "duration": 226933,
+      "previewUrl": ""
+    },
+    {
+      "id": "5mjkeVu24NbkHeX8zt7muo",
+      "name": "革命",
+      "artist": "MOROHA",
+      "album": "MOROHA BEST～十年再録～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27329ad94df44a774c409b63495",
+      "playedAt": "2026-02-13T10:21:11.693Z",
+      "spotifyUrl": "https://open.spotify.com/track/5mjkeVu24NbkHeX8zt7muo",
+      "duration": 291466,
+      "previewUrl": ""
+    },
+    {
+      "id": "3dPQuX8Gs42Y7b454ybpMR",
+      "name": "Seven Nation Army",
+      "artist": "The White Stripes",
+      "album": "Elephant",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737028981d09d2e5833c9c78ad",
+      "playedAt": "2026-02-13T08:00:34.054Z",
+      "spotifyUrl": "https://open.spotify.com/track/3dPQuX8Gs42Y7b454ybpMR",
+      "duration": 232106,
+      "previewUrl": ""
+    },
+    {
+      "id": "3YXESfwTxdZxldkpN9BnBL",
+      "name": "Seventh Heaven",
+      "artist": "INOHA",
+      "album": "ALOHA INOHA",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aae3e0634dfc3b4ceb667e17",
+      "playedAt": "2026-02-13T07:56:41.304Z",
+      "spotifyUrl": "https://open.spotify.com/track/3YXESfwTxdZxldkpN9BnBL",
+      "duration": 234499,
+      "previewUrl": ""
+    },
+    {
+      "id": "0QPqMlD4u1yIMCHYg3huvQ",
+      "name": "ダイヤモンドは砕けない〜メインテーマ〜",
+      "artist": "Yugo Kanno",
+      "album": "ジョジョの奇妙な冒険 ダイヤモンドは砕けない O.S.T (Vol.1〜Good Morning Morioh Cho〜)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273802bf5dbeec706a5f77c7b9a",
+      "playedAt": "2026-02-13T07:52:46.149Z",
+      "spotifyUrl": "https://open.spotify.com/track/0QPqMlD4u1yIMCHYg3huvQ",
+      "duration": 247880,
+      "previewUrl": ""
+    },
+    {
+      "id": "46gSk82duJtX3TTA182ruG",
+      "name": "This fffire - New Version",
+      "artist": "Franz Ferdinand",
+      "album": "This fffire",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c4046985c8b4f9478e0af14e",
+      "playedAt": "2026-02-13T07:48:37.604Z",
+      "spotifyUrl": "https://open.spotify.com/track/46gSk82duJtX3TTA182ruG",
+      "duration": 218080,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-02-13T07:39:13.546Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "5OQIvZoUPvfQq02tITKjQZ",
+      "name": "水流のロック",
+      "artist": "Natsuko Nisshoku",
+      "album": "瞼瞼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
+      "playedAt": "2026-02-13T07:36:05.095Z",
+      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
+      "duration": 179173,
+      "previewUrl": ""
+    },
+    {
+      "id": "0OK190AzBSYD6cR3BYYzEQ",
+      "name": "サニーボーイ・ラプソディ",
+      "artist": "toe",
+      "album": "NOW I SEE THE LIGHT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c639158b8bcaa1918315463d",
+      "playedAt": "2026-02-13T07:25:51.015Z",
+      "spotifyUrl": "https://open.spotify.com/track/0OK190AzBSYD6cR3BYYzEQ",
+      "duration": 263966,
+      "previewUrl": ""
+    },
     {
       "id": "30oddeV4b75MDQ6JvkAXCW",
       "name": "グッドバイ -album version-",
@@ -208,127 +329,6 @@
       "playedAt": "2026-02-12T06:41:49.651Z",
       "spotifyUrl": "https://open.spotify.com/track/3oSxiGDZr2AbJLu2PzAQuY",
       "duration": 221538,
-      "previewUrl": ""
-    },
-    {
-      "id": "716HpbfSkMkU7TwQsJlhHT",
-      "name": "Sweden",
-      "artist": "C418",
-      "album": "Minecraft - Volume Alpha",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6f6056c9ded5242ca245c56",
-      "playedAt": "2026-02-12T06:38:07.597Z",
-      "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
-      "duration": 215500,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XbryOVSaPXhpre0Yj4MUv",
-      "name": "Squid Sisters (The Fresh Remix)",
-      "artist": "MandoPony",
-      "album": "Songs for Gamers, Vol. 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273860b382cdec10b0565373a4c",
-      "playedAt": "2026-02-12T06:34:31.445Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
-      "duration": 195375,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FQcELLVZwSvarn27omhgd",
-      "name": "ukigumo",
-      "artist": "Hige Driver",
-      "album": "ヒゲドライバー 10th Anniversary Best",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
-      "playedAt": "2026-02-12T06:31:15.531Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
-      "duration": 215053,
-      "previewUrl": ""
-    },
-    {
-      "id": "46gSk82duJtX3TTA182ruG",
-      "name": "This fffire - New Version",
-      "artist": "Franz Ferdinand",
-      "album": "This fffire",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c4046985c8b4f9478e0af14e",
-      "playedAt": "2026-02-12T06:26:02.319Z",
-      "spotifyUrl": "https://open.spotify.com/track/46gSk82duJtX3TTA182ruG",
-      "duration": 218080,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tcnPaFhcpSLx7ihFwI9DM",
-      "name": "ココロオドル -original version-",
-      "artist": "nobodyknows+",
-      "album": "ココロオドル",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
-      "playedAt": "2026-02-12T06:15:04.035Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
-      "duration": 253533,
-      "previewUrl": ""
-    },
-    {
-      "id": "3SAgoXsKEGMlIGNtOvs0vV",
-      "name": "インドア系ならトラックメイカー",
-      "artist": "Yunomi, nicamoq",
-      "album": "ゆのもきゅ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e3a8cc0c4984a9abe5c886b4",
-      "playedAt": "2026-02-12T05:13:58.223Z",
-      "spotifyUrl": "https://open.spotify.com/track/3SAgoXsKEGMlIGNtOvs0vV",
-      "duration": 195585,
-      "previewUrl": ""
-    },
-    {
-      "id": "43CMcyGeImlZjy1oN0NVNG",
-      "name": "モエチャッカファイア",
-      "artist": "issey",
-      "album": "モエチャッカファイア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732c3840e66768368e20042fe6",
-      "playedAt": "2026-02-12T05:06:54.423Z",
-      "spotifyUrl": "https://open.spotify.com/track/43CMcyGeImlZjy1oN0NVNG",
-      "duration": 155981,
-      "previewUrl": ""
-    },
-    {
-      "id": "4cPwi7lcWxRQNEb4xC77fC",
-      "name": "TAIDADA",
-      "artist": "ZUTOMAYO",
-      "album": "TAIDADA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b0af801025f43d05000913a9",
-      "playedAt": "2026-02-12T05:06:50.178Z",
-      "spotifyUrl": "https://open.spotify.com/track/4cPwi7lcWxRQNEb4xC77fC",
-      "duration": 226026,
-      "previewUrl": ""
-    },
-    {
-      "id": "4DzBWi8RyUtxQSMZYuSSqt",
-      "name": "愛にできることはまだあるかい",
-      "artist": "RADWIMPS",
-      "album": "天気の子 (complete version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f995bf0052673398dceb506",
-      "playedAt": "2026-02-12T03:43:23.018Z",
-      "spotifyUrl": "https://open.spotify.com/track/4DzBWi8RyUtxQSMZYuSSqt",
-      "duration": 414373,
-      "previewUrl": ""
-    },
-    {
-      "id": "096KHkONhQm4MQNH35mU22",
-      "name": "鬼ノ宴",
-      "artist": "TOMONARI SORA\t",
-      "album": "鬼ノ宴",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b31680ab85031d2be2a3df6b",
-      "playedAt": "2026-02-12T03:36:28.535Z",
-      "spotifyUrl": "https://open.spotify.com/track/096KHkONhQm4MQNH35mU22",
-      "duration": 175998,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-02-12T03:33:31.620Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
       "previewUrl": ""
     }
   ],
