@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-02-14T01:09:28.463Z",
+  "lastUpdated": "2026-02-14T06:32:44.492Z",
   "tracks": [
+    {
+      "id": "20I8RduZC2PWMWTDCZuuAN",
+      "name": "Take Me Out",
+      "artist": "Franz Ferdinand",
+      "album": "Franz Ferdinand",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a5d1c06a8172d4861367953c",
+      "playedAt": "2026-02-14T01:42:00.723Z",
+      "spotifyUrl": "https://open.spotify.com/track/20I8RduZC2PWMWTDCZuuAN",
+      "duration": 237026,
+      "previewUrl": ""
+    },
     {
       "id": "4Wf7ZlYcNtjrAWttBTaRvv",
       "name": "High School Monster",
@@ -318,17 +329,6 @@
       "playedAt": "2026-02-12T06:46:21.385Z",
       "spotifyUrl": "https://open.spotify.com/track/7okzFlIjgHdb8cwy5u6upP",
       "duration": 271336,
-      "previewUrl": ""
-    },
-    {
-      "id": "3oSxiGDZr2AbJLu2PzAQuY",
-      "name": "Maple Treeway (Mario Kart Wii)",
-      "artist": "The Consouls, PitTan",
-      "album": "Maple Treeway (Mario Kart Wii)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a326d29f92010679662ab31",
-      "playedAt": "2026-02-12T06:41:49.651Z",
-      "spotifyUrl": "https://open.spotify.com/track/3oSxiGDZr2AbJLu2PzAQuY",
-      "duration": 221538,
       "previewUrl": ""
     }
   ],
