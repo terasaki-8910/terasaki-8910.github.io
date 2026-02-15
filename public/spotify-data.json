@@ -1,13 +1,68 @@
 {
-  "lastUpdated": "2026-02-15T06:38:42.879Z",
+  "lastUpdated": "2026-02-15T12:27:26.996Z",
   "tracks": [
+    {
+      "id": "6U7R5ul36mu86agWahTekr",
+      "name": "New Sentimentality",
+      "artist": "toe",
+      "album": "New Sentimentality - EP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731613b09e0c27a64d034ca18f",
+      "playedAt": "2026-02-15T07:16:37.988Z",
+      "spotifyUrl": "https://open.spotify.com/track/6U7R5ul36mu86agWahTekr",
+      "duration": 281000,
+      "previewUrl": ""
+    },
+    {
+      "id": "2cQvqPTPdNRobgKMbFVWHi",
+      "name": "月、欠け feat. ACO",
+      "artist": "toe, ACO",
+      "album": "The Future Is Now - EP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27356ead71a13764c316b4169b0",
+      "playedAt": "2026-02-15T07:11:56.445Z",
+      "spotifyUrl": "https://open.spotify.com/track/2cQvqPTPdNRobgKMbFVWHi",
+      "duration": 262800,
+      "previewUrl": ""
+    },
+    {
+      "id": "1lBxGvrnW7wUVfPNurc9Wj",
+      "name": "Looonely",
+      "artist": "Cheer Chen, toe, OOG",
+      "album": "越洋電話, Vol. 1",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273489df33716dbb02bd4bec37f",
+      "playedAt": "2026-02-15T07:07:32.926Z",
+      "spotifyUrl": "https://open.spotify.com/track/1lBxGvrnW7wUVfPNurc9Wj",
+      "duration": 235747,
+      "previewUrl": ""
+    },
+    {
+      "id": "3hprYt6kZnlZgaEk0XbM5e",
+      "name": "メトロノーム",
+      "artist": "toe",
+      "album": "the book about my idle plot on a vague anxiety",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b5a7cac5f838dcd77512037d",
+      "playedAt": "2026-02-15T07:03:36.861Z",
+      "spotifyUrl": "https://open.spotify.com/track/3hprYt6kZnlZgaEk0XbM5e",
+      "duration": 217440,
+      "previewUrl": ""
+    },
+    {
+      "id": "6LAYbmRL7eBueEa2jqfXSW",
+      "name": "Valsqotch (feat. chi＊tree)",
+      "artist": "owl*tree, chi*tree",
+      "album": "maimai でらっくす ベストアルバム ちほー 2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27351aaea68a3c04edd08468c9d",
+      "playedAt": "2026-02-15T06:59:05.857Z",
+      "spotifyUrl": "https://open.spotify.com/track/6LAYbmRL7eBueEa2jqfXSW",
+      "duration": 156173,
+      "previewUrl": ""
+    },
     {
       "id": "7pgo1C8l5AX3pkwktxIklG",
       "name": "Baqeela (feat. seki＊tree) - Long Version",
       "artist": "owl*tree, seki*tree",
       "album": "pvq",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-02-15T00:14:29.706Z",
+      "playedAt": "2026-02-15T06:56:28.144Z",
       "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
       "duration": 252923,
       "previewUrl": ""
@@ -274,61 +329,6 @@
       "playedAt": "2026-02-13T04:34:03.485Z",
       "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
       "duration": 98754,
-      "previewUrl": ""
-    },
-    {
-      "id": "6MJFNhbXbqXCbHP24yLltO",
-      "name": "ダーリンダンス",
-      "artist": "Kairikibear",
-      "album": "ダーリンシンドローム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e24eeaab0da33f5dff9513d8",
-      "playedAt": "2026-02-13T04:32:24.697Z",
-      "spotifyUrl": "https://open.spotify.com/track/6MJFNhbXbqXCbHP24yLltO",
-      "duration": 206274,
-      "previewUrl": ""
-    },
-    {
-      "id": "17OQVshtovwVo2vk6tuzwn",
-      "name": "ライアーダンサー",
-      "artist": "マサラダ",
-      "album": "ライアーダンサー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-02-13T04:28:55.138Z",
-      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
-      "duration": 242459,
-      "previewUrl": ""
-    },
-    {
-      "id": "5ic62hKqeDhZsa9l6YQxzJ",
-      "name": "メズマライザー (feat. 初音ミク&重音テト)",
-      "artist": "32ki, Hatsune Miku, 重音テト",
-      "album": "メズマライザー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321333eb66e3cf9f3818e789f",
-      "playedAt": "2026-02-12T08:31:29.794Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
-      "duration": 156972,
-      "previewUrl": ""
-    },
-    {
-      "id": "6HznFPNdvbxgzm5jJyNlwp",
-      "name": "オーバーライド",
-      "artist": "Yoshida Yasei",
-      "album": "オーバーライド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
-      "playedAt": "2026-02-12T08:06:18.770Z",
-      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
-      "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      "playedAt": "2026-02-12T08:03:55.132Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
       "previewUrl": ""
     }
   ],
