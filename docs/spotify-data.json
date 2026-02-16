@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-02-16T12:38:16.706Z",
+  "lastUpdated": "2026-02-16T18:29:55.400Z",
   "tracks": [
+    {
+      "id": "0vziRWZny2GDwHX2UYJxa2",
+      "name": "おちゃめ機能",
+      "artist": "Lon",
+      "album": "Upload feat.Vocalist",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
+      "playedAt": "2026-02-16T12:41:11.754Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
+      "duration": 252066,
+      "previewUrl": ""
+    },
     {
       "id": "6HznFPNdvbxgzm5jJyNlwp",
       "name": "オーバーライド",
@@ -164,17 +175,6 @@
       "playedAt": "2026-02-16T02:07:52.286Z",
       "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
       "duration": 120352,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vziRWZny2GDwHX2UYJxa2",
-      "name": "おちゃめ機能",
-      "artist": "Lon",
-      "album": "Upload feat.Vocalist",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
-      "playedAt": "2026-02-16T02:05:51.540Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
-      "duration": 252066,
       "previewUrl": ""
     },
     {
