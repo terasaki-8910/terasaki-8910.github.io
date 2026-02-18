@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-02-18T06:50:36.419Z",
+  "lastUpdated": "2026-02-18T12:37:47.148Z",
   "tracks": [
+    {
+      "id": "1CedH7KCdaEN322k8zWPU4",
+      "name": "(AND) NOW I SEE THE LIGHT",
+      "artist": "toe, Jonah Yano",
+      "album": "(AND) NOW I SEE THE LIGHT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27327854f18b0b2a58b7456e8b5",
+      "playedAt": "2026-02-18T08:40:40.140Z",
+      "spotifyUrl": "https://open.spotify.com/track/1CedH7KCdaEN322k8zWPU4",
+      "duration": 222781,
+      "previewUrl": ""
+    },
+    {
+      "id": "5jCTCwOWE2uGWxRqx5crNS",
+      "name": "キアロスクーロ",
+      "artist": "toe",
+      "album": "NOW I SEE THE LIGHT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c639158b8bcaa1918315463d",
+      "playedAt": "2026-02-18T06:50:46.015Z",
+      "spotifyUrl": "https://open.spotify.com/track/5jCTCwOWE2uGWxRqx5crNS",
+      "duration": 203383,
+      "previewUrl": ""
+    },
     {
       "id": "47hoAzQmbCmDeFPrMANfNy",
       "name": "The Faber",
@@ -307,28 +329,6 @@
       "playedAt": "2026-02-16T01:57:08.922Z",
       "spotifyUrl": "https://open.spotify.com/track/6MJFNhbXbqXCbHP24yLltO",
       "duration": 206274,
-      "previewUrl": ""
-    },
-    {
-      "id": "6U7R5ul36mu86agWahTekr",
-      "name": "New Sentimentality",
-      "artist": "toe",
-      "album": "New Sentimentality - EP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731613b09e0c27a64d034ca18f",
-      "playedAt": "2026-02-15T07:16:37.988Z",
-      "spotifyUrl": "https://open.spotify.com/track/6U7R5ul36mu86agWahTekr",
-      "duration": 281000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2cQvqPTPdNRobgKMbFVWHi",
-      "name": "月、欠け feat. ACO",
-      "artist": "toe, ACO",
-      "album": "The Future Is Now - EP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27356ead71a13764c316b4169b0",
-      "playedAt": "2026-02-15T07:11:56.445Z",
-      "spotifyUrl": "https://open.spotify.com/track/2cQvqPTPdNRobgKMbFVWHi",
-      "duration": 262800,
       "previewUrl": ""
     }
   ],
