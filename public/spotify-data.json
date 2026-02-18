@@ -1,15 +1,114 @@
 {
-  "lastUpdated": "2026-02-18T01:14:27.668Z",
+  "lastUpdated": "2026-02-18T06:50:36.419Z",
   "tracks": [
+    {
+      "id": "47hoAzQmbCmDeFPrMANfNy",
+      "name": "The Faber",
+      "artist": "toe",
+      "album": "That's Another Story_Less Track Version for Digital Delivery",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ed18dfb77bb536bff76f7553",
+      "playedAt": "2026-02-18T06:47:22.199Z",
+      "spotifyUrl": "https://open.spotify.com/track/47hoAzQmbCmDeFPrMANfNy",
+      "duration": 224786,
+      "previewUrl": ""
+    },
+    {
+      "id": "3vVEIBrqDmp8NpSxl9sSIJ",
+      "name": "月、欠け_BudaMunk Remix",
+      "artist": "toe",
+      "album": "That's Another Story_Less Track Version for Digital Delivery",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ed18dfb77bb536bff76f7553",
+      "playedAt": "2026-02-18T06:43:37.932Z",
+      "spotifyUrl": "https://open.spotify.com/track/3vVEIBrqDmp8NpSxl9sSIJ",
+      "duration": 240413,
+      "previewUrl": ""
+    },
+    {
+      "id": "1PV7b1oXEoFJuo6APz7VfZ",
+      "name": "Because I Hear You",
+      "artist": "toe",
+      "album": "HEAR YOU",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b7c4d39fd906393858b184f",
+      "playedAt": "2026-02-18T06:39:37.869Z",
+      "spotifyUrl": "https://open.spotify.com/track/1PV7b1oXEoFJuo6APz7VfZ",
+      "duration": 281549,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XjEfdeVYkCCv7LNxjalQ1",
+      "name": "Etude Of Solitude",
+      "artist": "toe",
+      "album": "Our Latest Number",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c7b7c4f7bc2d309b66da8a1",
+      "playedAt": "2026-02-18T06:34:53.711Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XjEfdeVYkCCv7LNxjalQ1",
+      "duration": 270654,
+      "previewUrl": ""
+    },
+    {
+      "id": "6uwu167XZyMWjWcEIvtDER",
+      "name": "Commit Ballad feat. Chara_Mitsu the Beats Remix",
+      "artist": "toe, Chara",
+      "album": "That's Another Story_Less Track Version for Digital Delivery",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ed18dfb77bb536bff76f7553",
+      "playedAt": "2026-02-18T06:30:22.368Z",
+      "spotifyUrl": "https://open.spotify.com/track/6uwu167XZyMWjWcEIvtDER",
+      "duration": 243186,
+      "previewUrl": ""
+    },
+    {
+      "id": "30oddeV4b75MDQ6JvkAXCW",
+      "name": "グッドバイ -album version-",
+      "artist": "toe",
+      "album": "For Long Tomorrow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273218f23e309df278d5b04748c",
+      "playedAt": "2026-02-18T06:26:18.546Z",
+      "spotifyUrl": "https://open.spotify.com/track/30oddeV4b75MDQ6JvkAXCW",
+      "duration": 425533,
+      "previewUrl": ""
+    },
+    {
+      "id": "1pX7VlGPmb1P7Mbtlnvt2p",
+      "name": "Harrowdown Hill",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-02-18T06:18:17.560Z",
+      "spotifyUrl": "https://open.spotify.com/track/1pX7VlGPmb1P7Mbtlnvt2p",
+      "duration": 278640,
+      "previewUrl": ""
+    },
+    {
+      "id": "7tBvAWJ1TAyoZzgEuaSbby",
+      "name": "Sheik's Theme",
+      "artist": "Amy Turk",
+      "album": "Sheik's Theme",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27358d8138f3b0a76a17b13e325",
+      "playedAt": "2026-02-18T06:08:28.129Z",
+      "spotifyUrl": "https://open.spotify.com/track/7tBvAWJ1TAyoZzgEuaSbby",
+      "duration": 61145,
+      "previewUrl": ""
+    },
     {
       "id": "7pgo1C8l5AX3pkwktxIklG",
       "name": "Baqeela (feat. seki＊tree) - Long Version",
       "artist": "owl*tree, seki*tree",
       "album": "pvq",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-02-17T12:50:58.012Z",
+      "playedAt": "2026-02-18T06:07:26.520Z",
       "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
       "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-02-18T01:54:39.335Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
       "previewUrl": ""
     },
     {
@@ -230,105 +329,6 @@
       "playedAt": "2026-02-15T07:11:56.445Z",
       "spotifyUrl": "https://open.spotify.com/track/2cQvqPTPdNRobgKMbFVWHi",
       "duration": 262800,
-      "previewUrl": ""
-    },
-    {
-      "id": "1lBxGvrnW7wUVfPNurc9Wj",
-      "name": "Looonely",
-      "artist": "Cheer Chen, toe, OOG",
-      "album": "越洋電話, Vol. 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273489df33716dbb02bd4bec37f",
-      "playedAt": "2026-02-15T07:07:32.926Z",
-      "spotifyUrl": "https://open.spotify.com/track/1lBxGvrnW7wUVfPNurc9Wj",
-      "duration": 235747,
-      "previewUrl": ""
-    },
-    {
-      "id": "3hprYt6kZnlZgaEk0XbM5e",
-      "name": "メトロノーム",
-      "artist": "toe",
-      "album": "the book about my idle plot on a vague anxiety",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b5a7cac5f838dcd77512037d",
-      "playedAt": "2026-02-15T07:03:36.861Z",
-      "spotifyUrl": "https://open.spotify.com/track/3hprYt6kZnlZgaEk0XbM5e",
-      "duration": 217440,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LAYbmRL7eBueEa2jqfXSW",
-      "name": "Valsqotch (feat. chi＊tree)",
-      "artist": "owl*tree, chi*tree",
-      "album": "maimai でらっくす ベストアルバム ちほー 2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27351aaea68a3c04edd08468c9d",
-      "playedAt": "2026-02-15T06:59:05.857Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LAYbmRL7eBueEa2jqfXSW",
-      "duration": 156173,
-      "previewUrl": ""
-    },
-    {
-      "id": "1qpGMJi0ippCaMUOs7cz2q",
-      "name": "Let You Down",
-      "artist": "Dawid Podsiadło",
-      "album": "Let You Down",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734cbc82ffc53e6d7707c2bd7b",
-      "playedAt": "2026-02-14T09:05:44.526Z",
-      "spotifyUrl": "https://open.spotify.com/track/1qpGMJi0ippCaMUOs7cz2q",
-      "duration": 227046,
-      "previewUrl": ""
-    },
-    {
-      "id": "4hWI3r78IDOhPXSHd2f0Az",
-      "name": "長く短い祭",
-      "artist": "Sheena Ringo, 浮雲",
-      "album": "長く短い祭 / 神様、仏様",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a88b2c88c6f5dc9dca4c4eeb",
-      "playedAt": "2026-02-14T08:27:45.112Z",
-      "spotifyUrl": "https://open.spotify.com/track/4hWI3r78IDOhPXSHd2f0Az",
-      "duration": 249546,
-      "previewUrl": ""
-    },
-    {
-      "id": "20I8RduZC2PWMWTDCZuuAN",
-      "name": "Take Me Out",
-      "artist": "Franz Ferdinand",
-      "album": "Franz Ferdinand",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a5d1c06a8172d4861367953c",
-      "playedAt": "2026-02-14T01:42:00.723Z",
-      "spotifyUrl": "https://open.spotify.com/track/20I8RduZC2PWMWTDCZuuAN",
-      "duration": 237026,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Wf7ZlYcNtjrAWttBTaRvv",
-      "name": "High School Monster",
-      "artist": "ロクデナシ宇宙",
-      "album": "ロクデナシバス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d00171c7dcf5726044a635c0",
-      "playedAt": "2026-02-13T10:32:22.924Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Wf7ZlYcNtjrAWttBTaRvv",
-      "duration": 190000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6FhWelfRDMFZRtFUU6SIdC",
-      "name": "怪獣",
-      "artist": "sakanaction",
-      "album": "怪獣",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d7f2ac644f635e94a193736",
-      "playedAt": "2026-02-13T10:29:12.680Z",
-      "spotifyUrl": "https://open.spotify.com/track/6FhWelfRDMFZRtFUU6SIdC",
-      "duration": 252722,
-      "previewUrl": ""
-    },
-    {
-      "id": "7DWrCtuIkEbZOFUvCoYkEV",
-      "name": "上京タワー",
-      "artist": "MOROHA",
-      "album": "MOROHA IV",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eca5b39d11b5ad0fa6ac8239",
-      "playedAt": "2026-02-13T10:24:58.984Z",
-      "spotifyUrl": "https://open.spotify.com/track/7DWrCtuIkEbZOFUvCoYkEV",
-      "duration": 226933,
       "previewUrl": ""
     }
   ],
