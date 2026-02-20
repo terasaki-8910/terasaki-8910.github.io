@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-02-20T06:41:38.681Z",
+  "lastUpdated": "2026-02-20T12:34:29.632Z",
   "tracks": [
+    {
+      "id": "3oSxiGDZr2AbJLu2PzAQuY",
+      "name": "Maple Treeway (Mario Kart Wii)",
+      "artist": "The Consouls, PitTan",
+      "album": "Maple Treeway (Mario Kart Wii)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a326d29f92010679662ab31",
+      "playedAt": "2026-02-20T12:31:32.091Z",
+      "spotifyUrl": "https://open.spotify.com/track/3oSxiGDZr2AbJLu2PzAQuY",
+      "duration": 221538,
+      "previewUrl": ""
+    },
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-02-20T12:27:50.036Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "2XbryOVSaPXhpre0Yj4MUv",
+      "name": "Squid Sisters (The Fresh Remix)",
+      "artist": "MandoPony",
+      "album": "Songs for Gamers, Vol. 1",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273860b382cdec10b0565373a4c",
+      "playedAt": "2026-02-20T10:19:58.958Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
+      "duration": 195375,
+      "previewUrl": ""
+    },
     {
       "id": "4PO8fERDL1d1FQA7uHg8il",
       "name": "Among Us",
@@ -65,17 +98,6 @@
       "playedAt": "2026-02-20T03:46:39.895Z",
       "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
       "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-02-20T03:44:44.506Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-02-18T06:34:53.711Z",
       "spotifyUrl": "https://open.spotify.com/track/5XjEfdeVYkCCv7LNxjalQ1",
       "duration": 270654,
-      "previewUrl": ""
-    },
-    {
-      "id": "6uwu167XZyMWjWcEIvtDER",
-      "name": "Commit Ballad feat. Chara_Mitsu the Beats Remix",
-      "artist": "toe, Chara",
-      "album": "That's Another Story_Less Track Version for Digital Delivery",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ed18dfb77bb536bff76f7553",
-      "playedAt": "2026-02-18T06:30:22.368Z",
-      "spotifyUrl": "https://open.spotify.com/track/6uwu167XZyMWjWcEIvtDER",
-      "duration": 243186,
-      "previewUrl": ""
-    },
-    {
-      "id": "30oddeV4b75MDQ6JvkAXCW",
-      "name": "グッドバイ -album version-",
-      "artist": "toe",
-      "album": "For Long Tomorrow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273218f23e309df278d5b04748c",
-      "playedAt": "2026-02-18T06:26:18.546Z",
-      "spotifyUrl": "https://open.spotify.com/track/30oddeV4b75MDQ6JvkAXCW",
-      "duration": 425533,
       "previewUrl": ""
     }
   ],
