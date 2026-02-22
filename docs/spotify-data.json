@@ -1,6 +1,105 @@
 {
-  "lastUpdated": "2026-02-22T06:34:51.566Z",
+  "lastUpdated": "2026-02-22T12:26:55.421Z",
   "tracks": [
+    {
+      "id": "30oddeV4b75MDQ6JvkAXCW",
+      "name": "グッドバイ -album version-",
+      "artist": "toe",
+      "album": "For Long Tomorrow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273218f23e309df278d5b04748c",
+      "playedAt": "2026-02-22T10:38:45.684Z",
+      "spotifyUrl": "https://open.spotify.com/track/30oddeV4b75MDQ6JvkAXCW",
+      "duration": 425533,
+      "previewUrl": ""
+    },
+    {
+      "id": "52xD6uqJJNZGJHoxzJ5ktV",
+      "name": "This Feelin’ Only Knows",
+      "artist": "Keishi Tanaka",
+      "album": "BREATH",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328c00b46395cdc0b204ac026",
+      "playedAt": "2026-02-22T10:15:38.138Z",
+      "spotifyUrl": "https://open.spotify.com/track/52xD6uqJJNZGJHoxzJ5ktV",
+      "duration": 251213,
+      "previewUrl": ""
+    },
+    {
+      "id": "30VIzWkFeaouuHpSmaQA3u",
+      "name": "SIX DAY WONDER",
+      "artist": "Straightener",
+      "album": "21st CENTURY ROCK BAND",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cee3d45fb2dc94b0489ec545",
+      "playedAt": "2026-02-22T10:11:24.445Z",
+      "spotifyUrl": "https://open.spotify.com/track/30VIzWkFeaouuHpSmaQA3u",
+      "duration": 228986,
+      "previewUrl": ""
+    },
+    {
+      "id": "56lLsOLE58RdsoNsFk51D4",
+      "name": "DOCUMENT",
+      "artist": "TENDRE",
+      "album": "NOT IN ALMIGHTY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a2dbed03b25af30fb974f91",
+      "playedAt": "2026-02-22T10:07:34.864Z",
+      "spotifyUrl": "https://open.spotify.com/track/56lLsOLE58RdsoNsFk51D4",
+      "duration": 280084,
+      "previewUrl": ""
+    },
+    {
+      "id": "6PVKMD1QiJ8mNol5w0gmir",
+      "name": "魔法",
+      "artist": "KOTORI",
+      "album": "TSUBASA",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b631703b54acb4e3a9b26053",
+      "playedAt": "2026-02-22T10:02:59.511Z",
+      "spotifyUrl": "https://open.spotify.com/track/6PVKMD1QiJ8mNol5w0gmir",
+      "duration": 193093,
+      "previewUrl": ""
+    },
+    {
+      "id": "1btkIsb2uGkmrEyILUG39Z",
+      "name": "君の隣",
+      "artist": "グソクムズ",
+      "album": "ハロー！グッドモーニング！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27344e77e1b912c51a7af25b478",
+      "playedAt": "2026-02-22T09:59:40.424Z",
+      "spotifyUrl": "https://open.spotify.com/track/1btkIsb2uGkmrEyILUG39Z",
+      "duration": 316283,
+      "previewUrl": ""
+    },
+    {
+      "id": "0q8KghnaH3KqwvEYzakaXe",
+      "name": "君とdrive",
+      "artist": "YONA YONA WEEKENDERS",
+      "album": "唄が歩く時",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27314fb5264c0da0020ce25e87a",
+      "playedAt": "2026-02-22T09:54:23.825Z",
+      "spotifyUrl": "https://open.spotify.com/track/0q8KghnaH3KqwvEYzakaXe",
+      "duration": 259614,
+      "previewUrl": ""
+    },
+    {
+      "id": "3BIPud4oUlgafVcWewFc7u",
+      "name": "I'm NOT Dead",
+      "artist": "Lucky Kilimanjaro",
+      "album": "TOUGH PLAY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d5e3edc987b04a5690646dc",
+      "playedAt": "2026-02-22T09:50:26.720Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BIPud4oUlgafVcWewFc7u",
+      "duration": 152013,
+      "previewUrl": ""
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-02-22T09:47:35.302Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
     {
       "id": "0kCRrfk1WV7QMnlxqhpwV9",
       "name": "ラビットホール",
@@ -43,17 +142,6 @@
       "playedAt": "2026-02-22T05:43:58.178Z",
       "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
       "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "3BIPud4oUlgafVcWewFc7u",
-      "name": "I'm NOT Dead",
-      "artist": "Lucky Kilimanjaro",
-      "album": "TOUGH PLAY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d5e3edc987b04a5690646dc",
-      "playedAt": "2026-02-22T05:14:37.139Z",
-      "spotifyUrl": "https://open.spotify.com/track/3BIPud4oUlgafVcWewFc7u",
-      "duration": 152013,
       "previewUrl": ""
     },
     {
@@ -178,17 +266,6 @@
       "previewUrl": ""
     },
     {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      "playedAt": "2026-02-22T03:08:28.069Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
-      "previewUrl": ""
-    },
-    {
       "id": "3ofKGe3tyjISVukIYOMQqP",
       "name": "魔理沙は大変なものを盗んでいきました",
       "artist": "IOSYS",
@@ -252,83 +329,6 @@
       "playedAt": "2026-02-22T01:11:28.254Z",
       "spotifyUrl": "https://open.spotify.com/track/2mOgz38YkByMHtL0PiaQbZ",
       "duration": 367802,
-      "previewUrl": ""
-    },
-    {
-      "id": "716HpbfSkMkU7TwQsJlhHT",
-      "name": "Sweden",
-      "artist": "C418",
-      "album": "Minecraft - Volume Alpha",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6f6056c9ded5242ca245c56",
-      "playedAt": "2026-02-22T01:04:47.408Z",
-      "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
-      "duration": 215500,
-      "previewUrl": ""
-    },
-    {
-      "id": "3gmXqu9iSaCY77y0NpY7dt",
-      "name": "Cynthia: Champion Cynthia (From \"Pokémon Diamond and Pearl\") / Battle! Champion (From \"Pokémon Diamond and Pearl\")",
-      "artist": "Qumu",
-      "album": "Year 3",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f595848a71a4edb4da60395",
-      "playedAt": "2026-02-22T01:01:11.381Z",
-      "spotifyUrl": "https://open.spotify.com/track/3gmXqu9iSaCY77y0NpY7dt",
-      "duration": 192376,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FQcELLVZwSvarn27omhgd",
-      "name": "ukigumo",
-      "artist": "Hige Driver",
-      "album": "ヒゲドライバー 10th Anniversary Best",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
-      "playedAt": "2026-02-22T00:57:58.428Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
-      "duration": 215053,
-      "previewUrl": ""
-    },
-    {
-      "id": "4ZN7u9FmQa7Lp1TCafAgsn",
-      "name": "Moog City 2",
-      "artist": "C418",
-      "album": "Minecraft - Volume Beta",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
-      "playedAt": "2026-02-22T00:54:22.627Z",
-      "spotifyUrl": "https://open.spotify.com/track/4ZN7u9FmQa7Lp1TCafAgsn",
-      "duration": 180000,
-      "previewUrl": ""
-    },
-    {
-      "id": "3qazo1nDoHIWHg8KHVmujW",
-      "name": "Song Of Storms",
-      "artist": "The Marcus Hedges Trend Orchestra",
-      "album": "Zelda: Link's Ocarina Orchestrated",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aa940b57213e789d913f8546",
-      "playedAt": "2026-02-22T00:51:22.116Z",
-      "spotifyUrl": "https://open.spotify.com/track/3qazo1nDoHIWHg8KHVmujW",
-      "duration": 82940,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2026-02-22T00:49:59.071Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "0JbGlD1FjnczH63mC2t7An",
-      "name": "Escape from the City (From \"Sonic Adventure 2\")",
-      "artist": "Qumu",
-      "album": "Year 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f83a4a752cf4c9345994752",
-      "playedAt": "2026-02-22T00:48:44.473Z",
-      "spotifyUrl": "https://open.spotify.com/track/0JbGlD1FjnczH63mC2t7An",
-      "duration": 132401,
       "previewUrl": ""
     }
   ],
