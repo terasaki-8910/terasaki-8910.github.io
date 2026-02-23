@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-02-23T01:12:16.647Z",
+  "lastUpdated": "2026-02-23T06:53:13.007Z",
   "tracks": [
+    {
+      "id": "3BIPud4oUlgafVcWewFc7u",
+      "name": "I'm NOT Dead",
+      "artist": "Lucky Kilimanjaro",
+      "album": "TOUGH PLAY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d5e3edc987b04a5690646dc",
+      "playedAt": "2026-02-23T06:28:48.055Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BIPud4oUlgafVcWewFc7u",
+      "duration": 152013,
+      "previewUrl": ""
+    },
     {
       "id": "0x7Tuf2Y9oKJJiD9iy1mka",
       "name": "グッドバイ",
@@ -120,17 +131,6 @@
       "playedAt": "2026-02-23T00:05:20.180Z",
       "spotifyUrl": "https://open.spotify.com/track/2RJuCZXtZYubzTW78kmaBx",
       "duration": 203506,
-      "previewUrl": ""
-    },
-    {
-      "id": "3BIPud4oUlgafVcWewFc7u",
-      "name": "I'm NOT Dead",
-      "artist": "Lucky Kilimanjaro",
-      "album": "TOUGH PLAY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d5e3edc987b04a5690646dc",
-      "playedAt": "2026-02-23T00:01:56.452Z",
-      "spotifyUrl": "https://open.spotify.com/track/3BIPud4oUlgafVcWewFc7u",
-      "duration": 152013,
       "previewUrl": ""
     },
     {
