@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-02-24T06:47:14.818Z",
+  "lastUpdated": "2026-02-24T12:39:49.323Z",
   "tracks": [
+    {
+      "id": "5tcnPaFhcpSLx7ihFwI9DM",
+      "name": "ココロオドル -original version-",
+      "artist": "nobodyknows+",
+      "album": "ココロオドル",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
+      "playedAt": "2026-02-24T09:34:36.223Z",
+      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
+      "duration": 253533,
+      "previewUrl": ""
+    },
     {
       "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
       "name": "Butter Building",
@@ -318,17 +329,6 @@
       "playedAt": "2026-02-22T05:50:20.622Z",
       "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
       "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "17OQVshtovwVo2vk6tuzwn",
-      "name": "ライアーダンサー",
-      "artist": "マサラダ",
-      "album": "ライアーダンサー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-02-22T05:48:01.367Z",
-      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
-      "duration": 242459,
       "previewUrl": ""
     }
   ],
