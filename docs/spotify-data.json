@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-03-02T06:43:29.513Z",
+  "lastUpdated": "2026-03-02T12:34:35.010Z",
   "tracks": [
+    {
+      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "name": "Butter Building",
+      "artist": "Xoc",
+      "album": "What's Pink and Sucks?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
+      "playedAt": "2026-03-02T11:30:01.458Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "duration": 98754,
+      "previewUrl": ""
+    },
     {
       "id": "0vziRWZny2GDwHX2UYJxa2",
       "name": "おちゃめ機能",
@@ -98,17 +109,6 @@
       "playedAt": "2026-02-24T09:34:36.223Z",
       "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
       "duration": 253533,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
-      "name": "Butter Building",
-      "artist": "Xoc",
-      "album": "What's Pink and Sucks?",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
-      "playedAt": "2026-02-24T06:01:24.846Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
-      "duration": 98754,
       "previewUrl": ""
     },
     {
