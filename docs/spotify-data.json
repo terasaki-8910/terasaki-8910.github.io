@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-03-03T12:33:38.333Z",
+  "lastUpdated": "2026-03-03T18:34:27.963Z",
   "tracks": [
+    {
+      "id": "35HhTsMus2B7hA7rfbrp84",
+      "name": "ライオン",
+      "artist": "May'n, 中島愛",
+      "album": "「マクロスF」オープニングテーマ　ライオン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732adcb5fdd7cd48b096577e83",
+      "playedAt": "2026-03-03T14:58:18.313Z",
+      "spotifyUrl": "https://open.spotify.com/track/35HhTsMus2B7hA7rfbrp84",
+      "duration": 303657,
+      "previewUrl": ""
+    },
     {
       "id": "2aUi8LUGneXeDMMd4YJecL",
       "name": "TONBO",
@@ -318,17 +329,6 @@
       "playedAt": "2026-02-23T00:27:24.434Z",
       "spotifyUrl": "https://open.spotify.com/track/56lLsOLE58RdsoNsFk51D4",
       "duration": 280084,
-      "previewUrl": ""
-    },
-    {
-      "id": "52iPISrUdczDuhNyCYgwqk",
-      "name": "東京",
-      "artist": "KOTORI",
-      "album": "KOTORI",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27374c72f25da62504de93a24c3",
-      "playedAt": "2026-02-23T00:22:43.991Z",
-      "spotifyUrl": "https://open.spotify.com/track/52iPISrUdczDuhNyCYgwqk",
-      "duration": 284677,
       "previewUrl": ""
     }
   ],
