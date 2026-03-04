@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-03-04T01:08:43.644Z",
+  "lastUpdated": "2026-03-04T06:34:16.106Z",
   "tracks": [
+    {
+      "id": "4MnCYguz7oO1NmZ4ZQulEn",
+      "name": "灼熱スイッチ",
+      "artist": "雀が原中学卓球部",
+      "album": "灼熱スイッチ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339bec7ad804f2a1699fb9477",
+      "playedAt": "2026-03-04T05:20:13.903Z",
+      "spotifyUrl": "https://open.spotify.com/track/4MnCYguz7oO1NmZ4ZQulEn",
+      "duration": 282893,
+      "previewUrl": ""
+    },
+    {
+      "id": "0ZnvQc8Ql8foFq4aprS3ke",
+      "name": "明日の私に幸あれ",
+      "artist": "NANAOAKARI",
+      "album": "明日の私に幸あれ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f1ee1e68197e721a0edb69d1",
+      "playedAt": "2026-03-04T05:15:30.246Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ZnvQc8Ql8foFq4aprS3ke",
+      "duration": 214627,
+      "previewUrl": ""
+    },
+    {
+      "id": "122LTTfqKfL5G2Mo1rgC1g",
+      "name": "天使にふれたよ!",
+      "artist": "Ho - Kago Tea Time",
+      "album": "放課後ティータイム Ⅱ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cb5cdcd9f8e6f1a681b80fc7",
+      "playedAt": "2026-03-04T05:10:36.640Z",
+      "spotifyUrl": "https://open.spotify.com/track/122LTTfqKfL5G2Mo1rgC1g",
+      "duration": 281893,
+      "previewUrl": ""
+    },
+    {
+      "id": "3BPnFpAL02Bos8EoTLnO9R",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "KPP BEST",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
+      "playedAt": "2026-03-04T05:10:18.916Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
+      "duration": 200253,
+      "previewUrl": ""
+    },
     {
       "id": "6Rx8pboFNZs2stlRlCO3iI",
       "name": "バンザイ ～好きでよかった～",
@@ -285,50 +329,6 @@
       "playedAt": "2026-02-27T12:32:02.758Z",
       "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
       "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "6NYbDTmstd7JSUWl2hVBqR",
-      "name": "Sprinter",
-      "artist": "Dave, Central Cee",
-      "album": "Sprinter",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
-      "playedAt": "2026-02-27T12:29:43.891Z",
-      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
-      "duration": 229133,
-      "previewUrl": ""
-    },
-    {
-      "id": "46gSk82duJtX3TTA182ruG",
-      "name": "This fffire - New Version",
-      "artist": "Franz Ferdinand",
-      "album": "This fffire",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c4046985c8b4f9478e0af14e",
-      "playedAt": "2026-02-24T05:55:32.431Z",
-      "spotifyUrl": "https://open.spotify.com/track/46gSk82duJtX3TTA182ruG",
-      "duration": 218080,
-      "previewUrl": ""
-    },
-    {
-      "id": "0IQVVmfCfAaWt8GAV0DtIR",
-      "name": "踊りの合図",
-      "artist": "Lucky Kilimanjaro",
-      "album": "TOUGH PLAY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d5e3edc987b04a5690646dc",
-      "playedAt": "2026-02-24T05:49:50.266Z",
-      "spotifyUrl": "https://open.spotify.com/track/0IQVVmfCfAaWt8GAV0DtIR",
-      "duration": 197821,
-      "previewUrl": ""
-    },
-    {
-      "id": "7hOskESv9D8tUS4lqfpkEn",
-      "name": "檄! 帝国華撃団",
-      "artist": "横山 智佐 (真宮寺 さくら), 帝国歌劇団",
-      "album": "パチスロ『サクラ大戦 ～熱き血潮に～』Original Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27324a0b8ad03feabab7ff0acdb",
-      "playedAt": "2026-02-24T05:48:54.740Z",
-      "spotifyUrl": "https://open.spotify.com/track/7hOskESv9D8tUS4lqfpkEn",
-      "duration": 184053,
       "previewUrl": ""
     }
   ],
