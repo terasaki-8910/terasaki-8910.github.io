@@ -1,6 +1,116 @@
 {
-  "lastUpdated": "2026-03-04T06:34:16.106Z",
+  "lastUpdated": "2026-03-04T12:33:05.944Z",
   "tracks": [
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-03-04T11:58:08.531Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "2BBIUV8wIBbqc7HXObzdgH",
+      "name": "愛♡スクリ～ム！",
+      "artist": "AiScReam",
+      "album": "愛♡スクリ～ム！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732590b046b72d6ce5d6703ee7",
+      "playedAt": "2026-03-04T11:41:20.640Z",
+      "spotifyUrl": "https://open.spotify.com/track/2BBIUV8wIBbqc7HXObzdgH",
+      "duration": 262106,
+      "previewUrl": ""
+    },
+    {
+      "id": "6DNcnUEh0bOSZ7uHDclwIS",
+      "name": "ピースサイン - Peace Sign",
+      "artist": "Kenshi Yonezu",
+      "album": "ピースサイン - Peace Sign",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b63f3516605726c0b32218be",
+      "playedAt": "2026-03-04T11:39:27.262Z",
+      "spotifyUrl": "https://open.spotify.com/track/6DNcnUEh0bOSZ7uHDclwIS",
+      "duration": 237289,
+      "previewUrl": ""
+    },
+    {
+      "id": "3fbEsr4mfsFbKYOBU074Fy",
+      "name": "ムーンライト伝説",
+      "artist": "DALI",
+      "album": "美少女戦士セーラームーン ベスト",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315873fc3d2e1d8b9c7915eb0",
+      "playedAt": "2026-03-04T11:35:29.462Z",
+      "spotifyUrl": "https://open.spotify.com/track/3fbEsr4mfsFbKYOBU074Fy",
+      "duration": 175573,
+      "previewUrl": ""
+    },
+    {
+      "id": "0XT65K4AnBTrjq9x32aj8v",
+      "name": "プレパレード",
+      "artist": "逢坂大河・櫛枝実乃梨・川嶋亜美(釘宮理恵、堀江由衣、喜多村英梨)",
+      "album": "プレパレード",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306304207870db2dcd3affc47",
+      "playedAt": "2026-03-04T11:32:33.742Z",
+      "spotifyUrl": "https://open.spotify.com/track/0XT65K4AnBTrjq9x32aj8v",
+      "duration": 204840,
+      "previewUrl": ""
+    },
+    {
+      "id": "1COAlDjRh3XW8yAB8UN929",
+      "name": "Q&A リサイタル！",
+      "artist": "Haruka Tomatsu",
+      "album": "Sunny Side Story",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d154b3b2072bd36ee5c178f8",
+      "playedAt": "2026-03-04T11:29:07.890Z",
+      "spotifyUrl": "https://open.spotify.com/track/1COAlDjRh3XW8yAB8UN929",
+      "duration": 289800,
+      "previewUrl": ""
+    },
+    {
+      "id": "47IJAEuqiu4r1dEoEExfMA",
+      "name": "空想メソロギヰ",
+      "artist": "Yousei Teikoku",
+      "album": "PAX VESANIA",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd463667d0879f62cfdf863d",
+      "playedAt": "2026-03-04T11:24:17.494Z",
+      "spotifyUrl": "https://open.spotify.com/track/47IJAEuqiu4r1dEoEExfMA",
+      "duration": 243226,
+      "previewUrl": ""
+    },
+    {
+      "id": "7onucgU6HHFbtZ9r0jXgmy",
+      "name": "DREAM SOLISTER",
+      "artist": "TRUE",
+      "album": "Joy Heart",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
+      "playedAt": "2026-03-04T11:20:13.872Z",
+      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
+      "duration": 300533,
+      "previewUrl": ""
+    },
+    {
+      "id": "0JbGlD1FjnczH63mC2t7An",
+      "name": "Escape from the City (From \"Sonic Adventure 2\")",
+      "artist": "Qumu",
+      "album": "Year 4",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f83a4a752cf4c9345994752",
+      "playedAt": "2026-03-04T11:14:26.059Z",
+      "spotifyUrl": "https://open.spotify.com/track/0JbGlD1FjnczH63mC2t7An",
+      "duration": 132401,
+      "previewUrl": ""
+    },
+    {
+      "id": "6G8ghzF62TP7CkD1YBsIUT",
+      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
+      "artist": "Qumu",
+      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
+      "playedAt": "2026-03-04T11:12:13.142Z",
+      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
+      "duration": 114871,
+      "previewUrl": ""
+    },
     {
       "id": "4MnCYguz7oO1NmZ4ZQulEn",
       "name": "灼熱スイッチ",
@@ -189,17 +299,6 @@
       "previewUrl": ""
     },
     {
-      "id": "03xt11xuwiqUQBMYKwEWKz",
-      "name": "モニタリング",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-03-03T21:00:01.694Z",
-      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
-      "duration": 176960,
-      "previewUrl": ""
-    },
-    {
       "id": "35HhTsMus2B7hA7rfbrp84",
       "name": "ライオン",
       "artist": "May'n, 中島愛",
@@ -230,105 +329,6 @@
       "playedAt": "2026-03-03T09:48:10.241Z",
       "spotifyUrl": "https://open.spotify.com/track/0stypPnjCXn7vqmsx45RTj",
       "duration": 220551,
-      "previewUrl": ""
-    },
-    {
-      "id": "59vsbcxyjO4IB6o51btck7",
-      "name": "Out of Control",
-      "artist": "Nothing’s Carved In Stone",
-      "album": "REVOLT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339d06081a329acfb0f07d71d",
-      "playedAt": "2026-03-03T09:44:29.839Z",
-      "spotifyUrl": "https://open.spotify.com/track/59vsbcxyjO4IB6o51btck7",
-      "duration": 275066,
-      "previewUrl": ""
-    },
-    {
-      "id": "5jUrtH6i5ttE536S2Qv99D",
-      "name": "居心地のいい部屋",
-      "artist": "Keishi Tanaka, LOSTAGE",
-      "album": "居心地のいい部屋",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733498143da89df1472936fb9d",
-      "playedAt": "2026-03-03T09:39:53.669Z",
-      "spotifyUrl": "https://open.spotify.com/track/5jUrtH6i5ttE536S2Qv99D",
-      "duration": 298884,
-      "previewUrl": ""
-    },
-    {
-      "id": "4PO8fERDL1d1FQA7uHg8il",
-      "name": "Among Us",
-      "artist": "Sembari +",
-      "album": "Among Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
-      "playedAt": "2026-03-03T08:17:32.721Z",
-      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
-      "duration": 90508,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2026-03-03T07:32:26.934Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "5QS01sq07pThdktoNUxXRZ",
-      "name": "うっせぇわ",
-      "artist": "Ado",
-      "album": "狂言",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732cd7888600aafe2eb8b6be9f",
-      "playedAt": "2026-03-03T07:23:40.060Z",
-      "spotifyUrl": "https://open.spotify.com/track/5QS01sq07pThdktoNUxXRZ",
-      "duration": 206893,
-      "previewUrl": ""
-    },
-    {
-      "id": "1jGgXrE7rXoc9OFGi9m4sH",
-      "name": "ナイト・オブ・ナイツ (Game size)",
-      "artist": "COOL&CREATE",
-      "album": "オールナイト・オブ・ナイツ　ルナティック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273323d0915433bb684eec0e30f",
-      "playedAt": "2026-03-03T07:04:11.010Z",
-      "spotifyUrl": "https://open.spotify.com/track/1jGgXrE7rXoc9OFGi9m4sH",
-      "duration": 125496,
-      "previewUrl": ""
-    },
-    {
-      "id": "3BIPud4oUlgafVcWewFc7u",
-      "name": "I'm NOT Dead",
-      "artist": "Lucky Kilimanjaro",
-      "album": "TOUGH PLAY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d5e3edc987b04a5690646dc",
-      "playedAt": "2026-03-03T06:59:08.209Z",
-      "spotifyUrl": "https://open.spotify.com/track/3BIPud4oUlgafVcWewFc7u",
-      "duration": 152013,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-02-28T10:43:14.008Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "4FXu6nhlIgbpgxt61ntlnR",
-      "name": "Override",
-      "artist": "Yoshida Yasei",
-      "album": "Override",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
-      "playedAt": "2026-02-27T12:32:02.758Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
-      "duration": 138533,
       "previewUrl": ""
     }
   ],
