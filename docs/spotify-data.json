@@ -1,6 +1,171 @@
 {
-  "lastUpdated": "2026-03-05T06:37:55.363Z",
+  "lastUpdated": "2026-03-05T12:36:27.043Z",
   "tracks": [
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-03-05T08:50:51.826Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-03-05T08:47:17.800Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "13XIvFx53mpzO1jSIJC0Ad",
+      "name": "Pumpin' Junkies",
+      "artist": "t+pazolite",
+      "album": "絢爛喧騒オリエント",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
+      "playedAt": "2026-03-05T08:37:05.958Z",
+      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
+      "duration": 269465,
+      "previewUrl": ""
+    },
+    {
+      "id": "0kCRrfk1WV7QMnlxqhpwV9",
+      "name": "ラビットホール",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-03-05T08:32:35.857Z",
+      "spotifyUrl": "https://open.spotify.com/track/0kCRrfk1WV7QMnlxqhpwV9",
+      "duration": 158866,
+      "previewUrl": ""
+    },
+    {
+      "id": "6r5PYnGBu1hkQrk3zPkt1I",
+      "name": "イガク",
+      "artist": "Sasuke Haraguchi",
+      "album": "イガク",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
+      "playedAt": "2026-03-05T08:27:24.116Z",
+      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
+      "duration": 120352,
+      "previewUrl": ""
+    },
+    {
+      "id": "2bueaIrRAoBSisx7wumhVK",
+      "name": "Tetoris",
+      "artist": "柊マグネタイト",
+      "album": "Tetoris",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bbadd30b5c09d066ff7d130c",
+      "playedAt": "2026-03-05T08:25:07.648Z",
+      "spotifyUrl": "https://open.spotify.com/track/2bueaIrRAoBSisx7wumhVK",
+      "duration": 142588,
+      "previewUrl": ""
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-03-05T08:21:51.957Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
+    {
+      "id": "7facNrW6VRW8s3ICZ8G1uW",
+      "name": "RPG",
+      "artist": "SEKAI NO OWARI",
+      "album": "Tree",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b17a98d5c1bcbd868cc921d",
+      "playedAt": "2026-03-05T08:14:46.533Z",
+      "spotifyUrl": "https://open.spotify.com/track/7facNrW6VRW8s3ICZ8G1uW",
+      "duration": 291346,
+      "previewUrl": ""
+    },
+    {
+      "id": "3Kt6UReyCtmrYvbsHb3STj",
+      "name": "ラグトレイン",
+      "artist": "稲葉曇",
+      "album": "ラグトレイン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ab8b5fedaddf9f6ca79684f9",
+      "playedAt": "2026-03-05T08:10:54.661Z",
+      "spotifyUrl": "https://open.spotify.com/track/3Kt6UReyCtmrYvbsHb3STj",
+      "duration": 251428,
+      "previewUrl": ""
+    },
+    {
+      "id": "45zHzJfSpq7HSnGBub9tTk",
+      "name": "Black † White",
+      "artist": "野水いおり",
+      "album": "Hat Trick",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730fa8d44239baa6df5f5b81b5",
+      "playedAt": "2026-03-05T07:53:44.044Z",
+      "spotifyUrl": "https://open.spotify.com/track/45zHzJfSpq7HSnGBub9tTk",
+      "duration": 274314,
+      "previewUrl": ""
+    },
+    {
+      "id": "08Eb6W0AC4WV4hMFATZqoY",
+      "name": "可愛くてごめん",
+      "artist": "HoneyWorks, ちゅーたん(CV:早見沙織)",
+      "album": "ねぇ、好きって痛いよ。～告白実行委員会キャラクターソング集～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737a7e7992bf1353777cba99e5",
+      "playedAt": "2026-03-05T07:49:09.218Z",
+      "spotifyUrl": "https://open.spotify.com/track/08Eb6W0AC4WV4hMFATZqoY",
+      "duration": 219840,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WMeDp0t2UJmy21PRKAOzx",
+      "name": "ヒトリゴト",
+      "artist": "ClariS",
+      "album": "ヒトリゴト",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334257c272ad39c28b6562e0f",
+      "playedAt": "2026-03-05T07:45:28.779Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WMeDp0t2UJmy21PRKAOzx",
+      "duration": 235093,
+      "previewUrl": ""
+    },
+    {
+      "id": "7lFzS8uBjpXckGjQQcpJrW",
+      "name": "不可逆リプレイス - Fukagyaku Replace",
+      "artist": "MY FIRST STORY",
+      "album": "ANTITHESE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a7c40bdda1c31a91cb8bd474",
+      "playedAt": "2026-03-05T07:41:15.892Z",
+      "spotifyUrl": "https://open.spotify.com/track/7lFzS8uBjpXckGjQQcpJrW",
+      "duration": 233733,
+      "previewUrl": ""
+    },
+    {
+      "id": "6dCeYPmR97wXMKgfZxU4wU",
+      "name": "Cagayake!GIRLS",
+      "artist": "平沢唯(CV:豊崎愛生), 秋山澪(CV:日笠陽子), 桜高軽音部, 田井中律(CV:佐藤聡美), 琴吹紬(CV:寿美菜子)",
+      "album": "Cagayake!GIRLS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361691c9e66dd553bc44badb6",
+      "playedAt": "2026-03-05T07:37:21.606Z",
+      "spotifyUrl": "https://open.spotify.com/track/6dCeYPmR97wXMKgfZxU4wU",
+      "duration": 250120,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-03-05T06:50:17.299Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
+      "previewUrl": ""
+    },
     {
       "id": "43CMcyGeImlZjy1oN0NVNG",
       "name": "モエチャッカファイア",
@@ -10,17 +175,6 @@
       "playedAt": "2026-03-05T06:26:40.616Z",
       "spotifyUrl": "https://open.spotify.com/track/43CMcyGeImlZjy1oN0NVNG",
       "duration": 155981,
-      "previewUrl": ""
-    },
-    {
-      "id": "13XIvFx53mpzO1jSIJC0Ad",
-      "name": "Pumpin' Junkies",
-      "artist": "t+pazolite",
-      "album": "絢爛喧騒オリエント",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
-      "playedAt": "2026-03-05T04:59:14.997Z",
-      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
-      "duration": 269465,
       "previewUrl": ""
     },
     {
@@ -43,17 +197,6 @@
       "playedAt": "2026-03-05T04:50:09.589Z",
       "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
       "duration": 134071,
-      "previewUrl": ""
-    },
-    {
-      "id": "03xt11xuwiqUQBMYKwEWKz",
-      "name": "モニタリング",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-03-05T04:45:35.383Z",
-      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
-      "duration": 176960,
       "previewUrl": ""
     },
     {
@@ -87,17 +230,6 @@
       "playedAt": "2026-03-05T04:29:06.223Z",
       "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
       "duration": 163686,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-03-05T04:26:22.635Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
       "previewUrl": ""
     },
     {
@@ -197,138 +329,6 @@
       "playedAt": "2026-03-04T11:39:27.262Z",
       "spotifyUrl": "https://open.spotify.com/track/6DNcnUEh0bOSZ7uHDclwIS",
       "duration": 237289,
-      "previewUrl": ""
-    },
-    {
-      "id": "3fbEsr4mfsFbKYOBU074Fy",
-      "name": "ムーンライト伝説",
-      "artist": "DALI",
-      "album": "美少女戦士セーラームーン ベスト",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315873fc3d2e1d8b9c7915eb0",
-      "playedAt": "2026-03-04T11:35:29.462Z",
-      "spotifyUrl": "https://open.spotify.com/track/3fbEsr4mfsFbKYOBU074Fy",
-      "duration": 175573,
-      "previewUrl": ""
-    },
-    {
-      "id": "0XT65K4AnBTrjq9x32aj8v",
-      "name": "プレパレード",
-      "artist": "逢坂大河・櫛枝実乃梨・川嶋亜美(釘宮理恵、堀江由衣、喜多村英梨)",
-      "album": "プレパレード",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306304207870db2dcd3affc47",
-      "playedAt": "2026-03-04T11:32:33.742Z",
-      "spotifyUrl": "https://open.spotify.com/track/0XT65K4AnBTrjq9x32aj8v",
-      "duration": 204840,
-      "previewUrl": ""
-    },
-    {
-      "id": "1COAlDjRh3XW8yAB8UN929",
-      "name": "Q&A リサイタル！",
-      "artist": "Haruka Tomatsu",
-      "album": "Sunny Side Story",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d154b3b2072bd36ee5c178f8",
-      "playedAt": "2026-03-04T11:29:07.890Z",
-      "spotifyUrl": "https://open.spotify.com/track/1COAlDjRh3XW8yAB8UN929",
-      "duration": 289800,
-      "previewUrl": ""
-    },
-    {
-      "id": "47IJAEuqiu4r1dEoEExfMA",
-      "name": "空想メソロギヰ",
-      "artist": "Yousei Teikoku",
-      "album": "PAX VESANIA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd463667d0879f62cfdf863d",
-      "playedAt": "2026-03-04T11:24:17.494Z",
-      "spotifyUrl": "https://open.spotify.com/track/47IJAEuqiu4r1dEoEExfMA",
-      "duration": 243226,
-      "previewUrl": ""
-    },
-    {
-      "id": "7onucgU6HHFbtZ9r0jXgmy",
-      "name": "DREAM SOLISTER",
-      "artist": "TRUE",
-      "album": "Joy Heart",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
-      "playedAt": "2026-03-04T11:20:13.872Z",
-      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
-      "duration": 300533,
-      "previewUrl": ""
-    },
-    {
-      "id": "0JbGlD1FjnczH63mC2t7An",
-      "name": "Escape from the City (From \"Sonic Adventure 2\")",
-      "artist": "Qumu",
-      "album": "Year 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f83a4a752cf4c9345994752",
-      "playedAt": "2026-03-04T11:14:26.059Z",
-      "spotifyUrl": "https://open.spotify.com/track/0JbGlD1FjnczH63mC2t7An",
-      "duration": 132401,
-      "previewUrl": ""
-    },
-    {
-      "id": "6G8ghzF62TP7CkD1YBsIUT",
-      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "artist": "Qumu",
-      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
-      "playedAt": "2026-03-04T11:12:13.142Z",
-      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
-      "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "4MnCYguz7oO1NmZ4ZQulEn",
-      "name": "灼熱スイッチ",
-      "artist": "雀が原中学卓球部",
-      "album": "灼熱スイッチ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339bec7ad804f2a1699fb9477",
-      "playedAt": "2026-03-04T05:20:13.903Z",
-      "spotifyUrl": "https://open.spotify.com/track/4MnCYguz7oO1NmZ4ZQulEn",
-      "duration": 282893,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ZnvQc8Ql8foFq4aprS3ke",
-      "name": "明日の私に幸あれ",
-      "artist": "NANAOAKARI",
-      "album": "明日の私に幸あれ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f1ee1e68197e721a0edb69d1",
-      "playedAt": "2026-03-04T05:15:30.246Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ZnvQc8Ql8foFq4aprS3ke",
-      "duration": 214627,
-      "previewUrl": ""
-    },
-    {
-      "id": "122LTTfqKfL5G2Mo1rgC1g",
-      "name": "天使にふれたよ!",
-      "artist": "Ho - Kago Tea Time",
-      "album": "放課後ティータイム Ⅱ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cb5cdcd9f8e6f1a681b80fc7",
-      "playedAt": "2026-03-04T05:10:36.640Z",
-      "spotifyUrl": "https://open.spotify.com/track/122LTTfqKfL5G2Mo1rgC1g",
-      "duration": 281893,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Rx8pboFNZs2stlRlCO3iI",
-      "name": "バンザイ ～好きでよかった～",
-      "artist": "Ulfuls",
-      "album": "バンザイ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6f1c64567af6a4515c6d4b1",
-      "playedAt": "2026-03-03T21:58:08.590Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Rx8pboFNZs2stlRlCO3iI",
-      "duration": 277600,
-      "previewUrl": ""
-    },
-    {
-      "id": "2UUwBDALzJuThY88Ro2lD2",
-      "name": "フォニイ",
-      "artist": "可不, ツミキ",
-      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
-      "playedAt": "2026-03-03T21:42:07.737Z",
-      "spotifyUrl": "https://open.spotify.com/track/2UUwBDALzJuThY88Ro2lD2",
-      "duration": 189884,
       "previewUrl": ""
     }
   ],
