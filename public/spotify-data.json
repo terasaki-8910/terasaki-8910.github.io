@@ -1,15 +1,48 @@
 {
-  "lastUpdated": "2026-03-05T12:36:27.043Z",
+  "lastUpdated": "2026-03-05T19:07:42.164Z",
   "tracks": [
     {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-03-05T08:50:51.826Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
+      "id": "6HznFPNdvbxgzm5jJyNlwp",
+      "name": "オーバーライド",
+      "artist": "Yoshida Yasei",
+      "album": "オーバーライド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
+      "playedAt": "2026-03-05T15:25:50.585Z",
+      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "name": "Butter Building",
+      "artist": "Xoc",
+      "album": "What's Pink and Sucks?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
+      "playedAt": "2026-03-05T15:23:31.465Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "duration": 98754,
+      "previewUrl": ""
+    },
+    {
+      "id": "6LAYbmRL7eBueEa2jqfXSW",
+      "name": "Valsqotch (feat. chi＊tree)",
+      "artist": "owl*tree, chi*tree",
+      "album": "maimai でらっくす ベストアルバム ちほー 2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27351aaea68a3c04edd08468c9d",
+      "playedAt": "2026-03-05T15:21:52.316Z",
+      "spotifyUrl": "https://open.spotify.com/track/6LAYbmRL7eBueEa2jqfXSW",
+      "duration": 156173,
+      "previewUrl": ""
+    },
+    {
+      "id": "2bueaIrRAoBSisx7wumhVK",
+      "name": "Tetoris",
+      "artist": "柊マグネタイト",
+      "album": "Tetoris",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bbadd30b5c09d066ff7d130c",
+      "playedAt": "2026-03-05T15:19:16.010Z",
+      "spotifyUrl": "https://open.spotify.com/track/2bueaIrRAoBSisx7wumhVK",
+      "duration": 142588,
       "previewUrl": ""
     },
     {
@@ -18,9 +51,119 @@
       "artist": "DECO*27",
       "album": "TRANSFORM",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-03-05T08:47:17.800Z",
+      "playedAt": "2026-03-05T15:16:52.289Z",
       "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
       "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "7M3TZDUNvaNBo0qtWVaZif",
+      "name": "WanteD! WanteD!",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "ENSEMBLE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27322c627adf9c8754c9302fa35",
+      "playedAt": "2026-03-05T15:10:59.393Z",
+      "spotifyUrl": "https://open.spotify.com/track/7M3TZDUNvaNBo0qtWVaZif",
+      "duration": 217386,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-03-05T15:07:21.759Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
+    {
+      "id": "6unPQ3WjSYWpKWjSVPA0KE",
+      "name": "ロマンスがありあまる",
+      "artist": "Gesu No Kiwami Otome",
+      "album": "両成敗",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8a4036d02f2af9b21bdc1f1",
+      "playedAt": "2026-03-05T15:03:31.721Z",
+      "spotifyUrl": "https://open.spotify.com/track/6unPQ3WjSYWpKWjSVPA0KE",
+      "duration": 224640,
+      "previewUrl": ""
+    },
+    {
+      "id": "0GWNtMohuYUEHVZ40tcnHF",
+      "name": "SPECIALZ",
+      "artist": "King Gnu",
+      "album": "SPECIALZ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734ad6e7ba87518d193e08e578",
+      "playedAt": "2026-03-05T14:59:46.722Z",
+      "spotifyUrl": "https://open.spotify.com/track/0GWNtMohuYUEHVZ40tcnHF",
+      "duration": 238986,
+      "previewUrl": ""
+    },
+    {
+      "id": "6x7SB38tuekpu4xpH9OIPY",
+      "name": "地球儀 - Spinning Globe",
+      "artist": "Kenshi Yonezu",
+      "album": "地球儀 - Spinning Globe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732d701db43f9a93a214fa4404",
+      "playedAt": "2026-03-05T14:55:49.816Z",
+      "spotifyUrl": "https://open.spotify.com/track/6x7SB38tuekpu4xpH9OIPY",
+      "duration": 273437,
+      "previewUrl": ""
+    },
+    {
+      "id": "5bUWFHUTbXQcmqI6vWL62j",
+      "name": "グランドエスケープ",
+      "artist": "RADWIMPS, Toko Miura",
+      "album": "天気の子 (complete version)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f995bf0052673398dceb506",
+      "playedAt": "2026-03-05T14:51:12.700Z",
+      "spotifyUrl": "https://open.spotify.com/track/5bUWFHUTbXQcmqI6vWL62j",
+      "duration": 339160,
+      "previewUrl": ""
+    },
+    {
+      "id": "5WsjuvYrFRi9cqKBscT3oq",
+      "name": "INTERNET YAMERO",
+      "artist": "NEEDY GIRL OVERDOSE, KOTOKO, Aiobahn +81",
+      "album": "INTERNET YAMERO",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273303b75439516c43beca42581",
+      "playedAt": "2026-03-05T14:43:39.748Z",
+      "spotifyUrl": "https://open.spotify.com/track/5WsjuvYrFRi9cqKBscT3oq",
+      "duration": 241834,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-03-05T14:39:37.468Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
+    {
+      "id": "3BPnFpAL02Bos8EoTLnO9R",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "KPP BEST",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
+      "playedAt": "2026-03-05T14:36:27.405Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-03-05T13:20:55.962Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
       "previewUrl": ""
     },
     {
@@ -54,17 +197,6 @@
       "playedAt": "2026-03-05T08:27:24.116Z",
       "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
       "duration": 120352,
-      "previewUrl": ""
-    },
-    {
-      "id": "2bueaIrRAoBSisx7wumhVK",
-      "name": "Tetoris",
-      "artist": "柊マグネタイト",
-      "album": "Tetoris",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bbadd30b5c09d066ff7d130c",
-      "playedAt": "2026-03-05T08:25:07.648Z",
-      "spotifyUrl": "https://open.spotify.com/track/2bueaIrRAoBSisx7wumhVK",
-      "duration": 142588,
       "previewUrl": ""
     },
     {
@@ -197,138 +329,6 @@
       "playedAt": "2026-03-05T04:50:09.589Z",
       "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
       "duration": 134071,
-      "previewUrl": ""
-    },
-    {
-      "id": "3BPnFpAL02Bos8EoTLnO9R",
-      "name": "キミに100パーセント",
-      "artist": "Kyary Pamyu Pamyu",
-      "album": "KPP BEST",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
-      "playedAt": "2026-03-05T04:35:14.570Z",
-      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
-      "duration": 200253,
-      "previewUrl": ""
-    },
-    {
-      "id": "4n7nwDqrdx3qmJvEACOMrN",
-      "name": "Take Me to the Beach (feat. Ado)",
-      "artist": "Imagine Dragons, Ado",
-      "album": "Take Me to the Beach (feat. Ado)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a11303b900d06348d84337f",
-      "playedAt": "2026-03-05T04:31:53.788Z",
-      "spotifyUrl": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
-      "duration": 167066,
-      "previewUrl": ""
-    },
-    {
-      "id": "38XY1ShCSiYwDaV51sFPT9",
-      "name": "マーシャル・マキシマイザー",
-      "artist": "柊マグネタイト, 可不",
-      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
-      "playedAt": "2026-03-05T04:29:06.223Z",
-      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
-      "duration": 163686,
-      "previewUrl": ""
-    },
-    {
-      "id": "45YBVp6zMwQZRbUDcPzmMB",
-      "name": "アイネクライネ",
-      "artist": "Kenshi Yonezu",
-      "album": "YANKEE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
-      "playedAt": "2026-03-05T04:20:49.924Z",
-      "spotifyUrl": "https://open.spotify.com/track/45YBVp6zMwQZRbUDcPzmMB",
-      "duration": 288013,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YqVJ2YSgwxWpfuENocF2t",
-      "name": "Hello,world!",
-      "artist": "BUMP OF CHICKEN",
-      "album": "Butterflies",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5233a87900584258a21f267",
-      "playedAt": "2026-03-05T04:07:54.906Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YqVJ2YSgwxWpfuENocF2t",
-      "duration": 248453,
-      "previewUrl": ""
-    },
-    {
-      "id": "6megNXGjmim4OitjZnIn9v",
-      "name": "春雷",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-03-05T04:03:45.739Z",
-      "spotifyUrl": "https://open.spotify.com/track/6megNXGjmim4OitjZnIn9v",
-      "duration": 288887,
-      "previewUrl": ""
-    },
-    {
-      "id": "7M3TZDUNvaNBo0qtWVaZif",
-      "name": "WanteD! WanteD!",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "ENSEMBLE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27322c627adf9c8754c9302fa35",
-      "playedAt": "2026-03-05T03:58:56.454Z",
-      "spotifyUrl": "https://open.spotify.com/track/7M3TZDUNvaNBo0qtWVaZif",
-      "duration": 217386,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-03-05T03:57:03.225Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "55i8T5u1mEGq8ZhawQxPqe",
-      "name": "Lost Princess",
-      "artist": "ペコリーヌ (CV: M・A・O), コッコロ (CV: 伊藤美来), キャル (CV: 立花理香)",
-      "album": "アニメ「プリンセスコネクト! Re:Dive」テーマソング 「それでもともに歩いていく」&「Lost Princess」",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738bcb8ec08ea9094115caeda0",
-      "playedAt": "2026-03-05T03:51:38.804Z",
-      "spotifyUrl": "https://open.spotify.com/track/55i8T5u1mEGq8ZhawQxPqe",
-      "duration": 235706,
-      "previewUrl": ""
-    },
-    {
-      "id": "6MJFNhbXbqXCbHP24yLltO",
-      "name": "ダーリンダンス",
-      "artist": "Kairikibear",
-      "album": "ダーリンシンドローム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e24eeaab0da33f5dff9513d8",
-      "playedAt": "2026-03-04T16:03:36.404Z",
-      "spotifyUrl": "https://open.spotify.com/track/6MJFNhbXbqXCbHP24yLltO",
-      "duration": 206274,
-      "previewUrl": ""
-    },
-    {
-      "id": "2BBIUV8wIBbqc7HXObzdgH",
-      "name": "愛♡スクリ～ム！",
-      "artist": "AiScReam",
-      "album": "愛♡スクリ～ム！",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732590b046b72d6ce5d6703ee7",
-      "playedAt": "2026-03-04T11:41:20.640Z",
-      "spotifyUrl": "https://open.spotify.com/track/2BBIUV8wIBbqc7HXObzdgH",
-      "duration": 262106,
-      "previewUrl": ""
-    },
-    {
-      "id": "6DNcnUEh0bOSZ7uHDclwIS",
-      "name": "ピースサイン - Peace Sign",
-      "artist": "Kenshi Yonezu",
-      "album": "ピースサイン - Peace Sign",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b63f3516605726c0b32218be",
-      "playedAt": "2026-03-04T11:39:27.262Z",
-      "spotifyUrl": "https://open.spotify.com/track/6DNcnUEh0bOSZ7uHDclwIS",
-      "duration": 237289,
       "previewUrl": ""
     }
   ],
