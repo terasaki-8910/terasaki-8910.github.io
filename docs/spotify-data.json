@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-03-06T06:34:38.181Z",
+  "lastUpdated": "2026-03-06T12:32:13.321Z",
   "tracks": [
+    {
+      "id": "6H0PLsSYMzDOqhLgyOlzIj",
+      "name": "感電",
+      "artist": "Kenshi Yonezu",
+      "album": "STRAY SHEEP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273775e8184725e0fb89337dd9a",
+      "playedAt": "2026-03-06T10:10:31.750Z",
+      "spotifyUrl": "https://open.spotify.com/track/6H0PLsSYMzDOqhLgyOlzIj",
+      "duration": 264533,
+      "previewUrl": ""
+    },
     {
       "id": "6MwAs47LdYmlstiDmHzksi",
       "name": "チルノのパーフェクトさんすう教室",
@@ -318,17 +329,6 @@
       "playedAt": "2026-03-05T06:26:40.616Z",
       "spotifyUrl": "https://open.spotify.com/track/43CMcyGeImlZjy1oN0NVNG",
       "duration": 155981,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-03-05T04:54:44.923Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
       "previewUrl": ""
     }
   ],
