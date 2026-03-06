@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-03-05T19:07:42.164Z",
+  "lastUpdated": "2026-03-06T01:14:52.376Z",
   "tracks": [
+    {
+      "id": "6MwAs47LdYmlstiDmHzksi",
+      "name": "チルノのパーフェクトさんすう教室",
+      "artist": "IOSYS",
+      "album": "東方氷雪歌集",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fe910682585a207091d63cde",
+      "playedAt": "2026-03-06T01:10:35.749Z",
+      "spotifyUrl": "https://open.spotify.com/track/6MwAs47LdYmlstiDmHzksi",
+      "duration": 278635,
+      "previewUrl": ""
+    },
     {
       "id": "6HznFPNdvbxgzm5jJyNlwp",
       "name": "オーバーライド",
@@ -318,17 +329,6 @@
       "playedAt": "2026-03-05T04:54:44.923Z",
       "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
       "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "6lcqXYjDSGxx69DurXx0rF",
-      "name": "ループザルーム (feat. 初音ミク)",
-      "artist": "ルシノ, Hatsune Miku",
-      "album": "ループザルーム / ランベントアリア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
-      "playedAt": "2026-03-05T04:50:09.589Z",
-      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
-      "duration": 134071,
       "previewUrl": ""
     }
   ],
