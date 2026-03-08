@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-03-08T12:26:42.739Z",
+  "lastUpdated": "2026-03-08T18:19:59.303Z",
   "tracks": [
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-03-08T12:40:30.230Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
+    {
+      "id": "5mqucSnaCVI1kW6ewrXYE2",
+      "name": "Talking Box (Dirty Pop Remix)",
+      "artist": "WurtS",
+      "album": "Talking Box (Dirty Pop Remix)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27323988edcd8de03b090e77caa",
+      "playedAt": "2026-03-08T12:28:32.532Z",
+      "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
+      "duration": 128978,
+      "previewUrl": ""
+    },
     {
       "id": "7fru0rxutpi08K7Q112saF",
       "name": "Talking Box",
@@ -32,17 +54,6 @@
       "playedAt": "2026-03-08T11:27:11.605Z",
       "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
       "duration": 206000,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-03-08T11:23:45.166Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
       "previewUrl": ""
     },
     {
@@ -274,17 +285,6 @@
       "playedAt": "2026-03-05T15:10:59.393Z",
       "spotifyUrl": "https://open.spotify.com/track/7M3TZDUNvaNBo0qtWVaZif",
       "duration": 217386,
-      "previewUrl": ""
-    },
-    {
-      "id": "6unPQ3WjSYWpKWjSVPA0KE",
-      "name": "ロマンスがありあまる",
-      "artist": "Gesu No Kiwami Otome",
-      "album": "両成敗",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8a4036d02f2af9b21bdc1f1",
-      "playedAt": "2026-03-05T15:03:31.721Z",
-      "spotifyUrl": "https://open.spotify.com/track/6unPQ3WjSYWpKWjSVPA0KE",
-      "duration": 224640,
       "previewUrl": ""
     }
   ],
