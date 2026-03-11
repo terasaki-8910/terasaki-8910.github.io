@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-03-10T18:35:08.282Z",
+  "lastUpdated": "2026-03-11T01:06:49.801Z",
   "tracks": [
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-03-11T00:11:52.566Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
     {
       "id": "0HqZX76SFLDz2aW8aiqi7G",
       "name": "Bones",
@@ -109,17 +120,6 @@
       "playedAt": "2026-03-10T09:01:07.957Z",
       "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
       "duration": 176960,
-      "previewUrl": ""
-    },
-    {
-      "id": "1DOZa2VoazIiDjGYlUQTlW",
-      "name": "SUN",
-      "artist": "Gen Hoshino",
-      "album": "YELLOW DANCER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
-      "playedAt": "2026-03-10T08:58:06.149Z",
-      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
-      "duration": 241466,
       "previewUrl": ""
     },
     {
