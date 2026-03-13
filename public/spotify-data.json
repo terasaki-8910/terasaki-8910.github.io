@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-03-13T12:34:33.408Z",
+  "lastUpdated": "2026-03-13T18:28:11.288Z",
   "tracks": [
+    {
+      "id": "4K8QY8eufhwEg9EEix0Qqn",
+      "name": "Plug and Play",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-03-13T14:48:29.990Z",
+      "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
+      "duration": 127519,
+      "previewUrl": ""
+    },
+    {
+      "id": "6x8iT2f5PiUlWVyV1Y2Wjs",
+      "name": "メリュー",
+      "artist": "n-buna",
+      "album": "花と水飴、最終電車",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273424682188a4aa630657d2c00",
+      "playedAt": "2026-03-13T14:46:22.310Z",
+      "spotifyUrl": "https://open.spotify.com/track/6x8iT2f5PiUlWVyV1Y2Wjs",
+      "duration": 212583,
+      "previewUrl": ""
+    },
+    {
+      "id": "5Lsdr0kU6beWlXns5yRzfT",
+      "name": "アルティメットセンパイ",
+      "artist": "PinocchioP",
+      "album": "アルティメットセンパイ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738062ab9575231af71266ef19",
+      "playedAt": "2026-03-13T14:42:49.227Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Lsdr0kU6beWlXns5yRzfT",
+      "duration": 218068,
+      "previewUrl": ""
+    },
+    {
+      "id": "6IJVyZiFoAY86LC81KXU0N",
+      "name": "奮い立つCDショップにて",
+      "artist": "MOROHA",
+      "album": "奮い立つCDショップにて",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b761ffbbd607f58562b2548f32",
+      "playedAt": "2026-03-13T13:01:31.373Z",
+      "spotifyUrl": "https://open.spotify.com/track/6IJVyZiFoAY86LC81KXU0N",
+      "duration": 232941,
+      "previewUrl": ""
+    },
     {
       "id": "45YBVp6zMwQZRbUDcPzmMB",
       "name": "アイネクライネ",
@@ -285,50 +329,6 @@
       "playedAt": "2026-03-11T03:03:36.268Z",
       "spotifyUrl": "https://open.spotify.com/track/2yozZfRYHP7Elsymghu5t3",
       "duration": 280856,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lT3oj3gxE6AJb87ZK8up7",
-      "name": "いらない",
-      "artist": "sakanaction",
-      "album": "いらない",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27377b8e1d157752397bf24f3a8",
-      "playedAt": "2026-03-11T02:58:55.037Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lT3oj3gxE6AJb87ZK8up7",
-      "duration": 226313,
-      "previewUrl": ""
-    },
-    {
-      "id": "1DOZa2VoazIiDjGYlUQTlW",
-      "name": "SUN",
-      "artist": "Gen Hoshino",
-      "album": "YELLOW DANCER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
-      "playedAt": "2026-03-11T00:11:52.566Z",
-      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
-      "duration": 241466,
-      "previewUrl": ""
-    },
-    {
-      "id": "0HqZX76SFLDz2aW8aiqi7G",
-      "name": "Bones",
-      "artist": "Imagine Dragons",
-      "album": "Bones",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273813713582dcc508e7d5073c4",
-      "playedAt": "2026-03-10T13:47:43.115Z",
-      "spotifyUrl": "https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G",
-      "duration": 165264,
-      "previewUrl": ""
-    },
-    {
-      "id": "5YADi8VnCwx5ahhwNdgQaZ",
-      "name": "How Many Boogie",
-      "artist": "SKRYU, WAZGOGG, Fuma no KTR",
-      "album": "わすれもの",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27301729ef621de4f62bcdd05b9",
-      "playedAt": "2026-03-10T13:24:26.723Z",
-      "spotifyUrl": "https://open.spotify.com/track/5YADi8VnCwx5ahhwNdgQaZ",
-      "duration": 159047,
       "previewUrl": ""
     }
   ],
