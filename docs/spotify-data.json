@@ -1,15 +1,48 @@
 {
-  "lastUpdated": "2026-03-14T18:23:12.470Z",
+  "lastUpdated": "2026-03-15T01:20:50.596Z",
   "tracks": [
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-03-14T22:38:34.917Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "55i8T5u1mEGq8ZhawQxPqe",
+      "name": "Lost Princess",
+      "artist": "ペコリーヌ (CV: M・A・O), コッコロ (CV: 伊藤美来), キャル (CV: 立花理香)",
+      "album": "アニメ「プリンセスコネクト! Re:Dive」テーマソング 「それでもともに歩いていく」&「Lost Princess」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738bcb8ec08ea9094115caeda0",
+      "playedAt": "2026-03-14T22:30:22.453Z",
+      "spotifyUrl": "https://open.spotify.com/track/55i8T5u1mEGq8ZhawQxPqe",
+      "duration": 235706,
+      "previewUrl": ""
+    },
     {
       "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
       "name": "STAY TUNE",
       "artist": "Suchmos",
       "album": "THE KIDS",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
-      "playedAt": "2026-03-14T16:55:08.498Z",
+      "playedAt": "2026-03-14T22:26:22.989Z",
       "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
       "duration": 298746,
+      "previewUrl": ""
+    },
+    {
+      "id": "2EmkTBTh964LQen4Vz0svg",
+      "name": "花になって - Be a flower",
+      "artist": "Ryokuoushoku Shakai",
+      "album": "花になって - Be a flower",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27389e9b12f91f811198b14e15d",
+      "playedAt": "2026-03-14T21:50:57.352Z",
+      "spotifyUrl": "https://open.spotify.com/track/2EmkTBTh964LQen4Vz0svg",
+      "duration": 199333,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-03-11T03:30:37.656Z",
       "spotifyUrl": "https://open.spotify.com/track/3hRRYgBeunE3PTmnzATTS0",
       "duration": 263600,
-      "previewUrl": ""
-    },
-    {
-      "id": "38XY1ShCSiYwDaV51sFPT9",
-      "name": "マーシャル・マキシマイザー",
-      "artist": "柊マグネタイト, 可不",
-      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
-      "playedAt": "2026-03-11T03:26:14.378Z",
-      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
-      "duration": 163686,
-      "previewUrl": ""
-    },
-    {
-      "id": "3P2aSkjcbUYbcYr13EFE8n",
-      "name": "空も飛べるはず",
-      "artist": "SPITZ",
-      "album": "CYCLE HIT 1991-1997 Spitz Complete Single Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a4feca9399f68cc2ba1200",
-      "playedAt": "2026-03-11T03:23:29.182Z",
-      "spotifyUrl": "https://open.spotify.com/track/3P2aSkjcbUYbcYr13EFE8n",
-      "duration": 271400,
-      "previewUrl": ""
-    },
-    {
-      "id": "4n7nwDqrdx3qmJvEACOMrN",
-      "name": "Take Me to the Beach (feat. Ado)",
-      "artist": "Imagine Dragons, Ado",
-      "album": "Take Me to the Beach (feat. Ado)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a11303b900d06348d84337f",
-      "playedAt": "2026-03-11T03:18:57.528Z",
-      "spotifyUrl": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
-      "duration": 167066,
       "previewUrl": ""
     }
   ],
