@@ -1,15 +1,26 @@
 {
-  "lastUpdated": "2026-03-16T07:04:33.650Z",
+  "lastUpdated": "2026-03-16T12:45:29.302Z",
   "tracks": [
     {
-      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
-      "name": "STAY TUNE",
-      "artist": "Suchmos",
-      "album": "THE KIDS",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
-      "playedAt": "2026-03-15T15:38:03.678Z",
-      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
-      "duration": 298746,
+      "id": "07rg7ciYLLffOV5Fpe0I2F",
+      "name": "Oshama Scramble!",
+      "artist": "t+pazolite",
+      "album": "maimai ALL PERFECT COLLECTiON 3",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
+      "playedAt": "2026-03-16T12:34:43.438Z",
+      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
+      "duration": 124146,
+      "previewUrl": ""
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-03-16T12:32:38.165Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
       "previewUrl": ""
     },
     {
@@ -18,9 +29,42 @@
       "artist": "owl*tree, seki*tree",
       "album": "pvq",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-03-14T22:38:34.917Z",
+      "playedAt": "2026-03-16T12:26:18.207Z",
       "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
       "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-03-16T12:07:41.265Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "3BPnFpAL02Bos8EoTLnO9R",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "KPP BEST",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
+      "playedAt": "2026-03-16T12:03:21.017Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-03-16T11:58:48.001Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
       "previewUrl": ""
     },
     {
@@ -29,9 +73,64 @@
       "artist": "ペコリーヌ (CV: M・A・O), コッコロ (CV: 伊藤美来), キャル (CV: 立花理香)",
       "album": "アニメ「プリンセスコネクト! Re:Dive」テーマソング 「それでもともに歩いていく」&「Lost Princess」",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2738bcb8ec08ea9094115caeda0",
-      "playedAt": "2026-03-14T22:30:22.453Z",
+      "playedAt": "2026-03-16T11:55:37.944Z",
       "spotifyUrl": "https://open.spotify.com/track/55i8T5u1mEGq8ZhawQxPqe",
       "duration": 235706,
+      "previewUrl": ""
+    },
+    {
+      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
+      "name": "STAY TUNE",
+      "artist": "Suchmos",
+      "album": "THE KIDS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
+      "playedAt": "2026-03-16T11:47:50.996Z",
+      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
+      "duration": 298746,
+      "previewUrl": ""
+    },
+    {
+      "id": "4yTgjFgrfoGRIVoSCL95O2",
+      "name": "High School Monster - 1.2倍速ver",
+      "artist": "ロクデナシ宇宙",
+      "album": "High School Monster (1.2倍速ver)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735da088c7fed0a0a66db8645c",
+      "playedAt": "2026-03-16T11:40:46.702Z",
+      "spotifyUrl": "https://open.spotify.com/track/4yTgjFgrfoGRIVoSCL95O2",
+      "duration": 158324,
+      "previewUrl": ""
+    },
+    {
+      "id": "0j2T0R9dR9qdJYsB7ciXhf",
+      "name": "Stronger",
+      "artist": "Kanye West",
+      "album": "Graduation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27326f7f19c7f0381e56156c94a",
+      "playedAt": "2026-03-16T11:38:07.558Z",
+      "spotifyUrl": "https://open.spotify.com/track/0j2T0R9dR9qdJYsB7ciXhf",
+      "duration": 311866,
+      "previewUrl": ""
+    },
+    {
+      "id": "2e1gUS6Wv8GS8ZT6FMeE1J",
+      "name": "ただ声一つ",
+      "artist": "Rokudenashi",
+      "album": "ただ声一つ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de2d1cf763ed06e6874e1e91",
+      "playedAt": "2026-03-16T11:32:55.180Z",
+      "spotifyUrl": "https://open.spotify.com/track/2e1gUS6Wv8GS8ZT6FMeE1J",
+      "duration": 161561,
+      "previewUrl": ""
+    },
+    {
+      "id": "5mqucSnaCVI1kW6ewrXYE2",
+      "name": "Talking Box (Dirty Pop Remix)",
+      "artist": "WurtS",
+      "album": "Talking Box (Dirty Pop Remix)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27323988edcd8de03b090e77caa",
+      "playedAt": "2026-03-16T11:30:13.113Z",
+      "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
+      "duration": 128978,
       "previewUrl": ""
     },
     {
@@ -145,17 +244,6 @@
       "previewUrl": ""
     },
     {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-03-12T08:37:34.116Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
-      "previewUrl": ""
-    },
-    {
       "id": "7lUaEsQVwvNEjaJNcvc1CN",
       "name": "サウダージ",
       "artist": "PornoGraffitti",
@@ -241,94 +329,6 @@
       "playedAt": "2026-03-11T04:00:01.778Z",
       "spotifyUrl": "https://open.spotify.com/track/6H0PLsSYMzDOqhLgyOlzIj",
       "duration": 264533,
-      "previewUrl": ""
-    },
-    {
-      "id": "4XObDlhGp6sREJoZj2lFv2",
-      "name": "走れSAKAMOTO",
-      "artist": "Vaundy",
-      "album": "走れSAKAMOTO",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
-      "playedAt": "2026-03-11T03:55:36.804Z",
-      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
-      "duration": 205984,
-      "previewUrl": ""
-    },
-    {
-      "id": "5pN2AyWwjzwRoI7gukEVNd",
-      "name": "さよーならまたいつか！- Sayonara",
-      "artist": "Kenshi Yonezu",
-      "album": "LOST CORNER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303d3216d6c463f993c96c9c7",
-      "playedAt": "2026-03-11T03:52:11.274Z",
-      "spotifyUrl": "https://open.spotify.com/track/5pN2AyWwjzwRoI7gukEVNd",
-      "duration": 201280,
-      "previewUrl": ""
-    },
-    {
-      "id": "6x7SB38tuekpu4xpH9OIPY",
-      "name": "地球儀 - Spinning Globe",
-      "artist": "Kenshi Yonezu",
-      "album": "地球儀 - Spinning Globe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732d701db43f9a93a214fa4404",
-      "playedAt": "2026-03-11T03:48:48.532Z",
-      "spotifyUrl": "https://open.spotify.com/track/6x7SB38tuekpu4xpH9OIPY",
-      "duration": 273437,
-      "previewUrl": ""
-    },
-    {
-      "id": "7hZ2wV0F3Ca17GTSYHH2f1",
-      "name": "メトロシティ",
-      "artist": "imase, natori",
-      "album": "メトロシティ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27375b7de023f3b78a63f146dac",
-      "playedAt": "2026-03-11T03:44:14.618Z",
-      "spotifyUrl": "https://open.spotify.com/track/7hZ2wV0F3Ca17GTSYHH2f1",
-      "duration": 200511,
-      "previewUrl": ""
-    },
-    {
-      "id": "153lRbNmhQZVi69kbhmjY8",
-      "name": "ヒッチコック",
-      "artist": "ヨルシカ",
-      "album": "負け犬にアンコールはいらない",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328b535c92629e3c8d20ec242",
-      "playedAt": "2026-03-11T03:40:53.835Z",
-      "spotifyUrl": "https://open.spotify.com/track/153lRbNmhQZVi69kbhmjY8",
-      "duration": 222813,
-      "previewUrl": ""
-    },
-    {
-      "id": "3rWyLf6o3RMbUeK4aafkHd",
-      "name": "p.h. - cover",
-      "artist": "suisoh",
-      "album": "p.h. (cover)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736f4be5c667dfbf2c2781c4c9",
-      "playedAt": "2026-03-11T03:37:10.708Z",
-      "spotifyUrl": "https://open.spotify.com/track/3rWyLf6o3RMbUeK4aafkHd",
-      "duration": 152929,
-      "previewUrl": ""
-    },
-    {
-      "id": "0GWNtMohuYUEHVZ40tcnHF",
-      "name": "SPECIALZ",
-      "artist": "King Gnu",
-      "album": "SPECIALZ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734ad6e7ba87518d193e08e578",
-      "playedAt": "2026-03-11T03:34:37.254Z",
-      "spotifyUrl": "https://open.spotify.com/track/0GWNtMohuYUEHVZ40tcnHF",
-      "duration": 238986,
-      "previewUrl": ""
-    },
-    {
-      "id": "3hRRYgBeunE3PTmnzATTS0",
-      "name": "天体観測",
-      "artist": "BUMP OF CHICKEN",
-      "album": "jupiter",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5017c120597ec5a35015ef6",
-      "playedAt": "2026-03-11T03:30:37.656Z",
-      "spotifyUrl": "https://open.spotify.com/track/3hRRYgBeunE3PTmnzATTS0",
-      "duration": 263600,
       "previewUrl": ""
     }
   ],
