@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-03-16T12:45:29.302Z",
+  "lastUpdated": "2026-03-16T18:47:28.604Z",
   "tracks": [
+    {
+      "id": "3yGMNQFdIflEty0tdKlEdd",
+      "name": "DEAREST DROP",
+      "artist": "田所あずさ",
+      "album": "So What?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b4790c1ba1bb723318913b47",
+      "playedAt": "2026-03-16T12:50:00.159Z",
+      "spotifyUrl": "https://open.spotify.com/track/3yGMNQFdIflEty0tdKlEdd",
+      "duration": 305440,
+      "previewUrl": ""
+    },
     {
       "id": "07rg7ciYLLffOV5Fpe0I2F",
       "name": "Oshama Scramble!",
@@ -318,17 +329,6 @@
       "playedAt": "2026-03-11T04:03:30.223Z",
       "spotifyUrl": "https://open.spotify.com/track/38FcQO2ta2pScW2sriQI2x",
       "duration": 207813,
-      "previewUrl": ""
-    },
-    {
-      "id": "6H0PLsSYMzDOqhLgyOlzIj",
-      "name": "感電",
-      "artist": "Kenshi Yonezu",
-      "album": "STRAY SHEEP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273775e8184725e0fb89337dd9a",
-      "playedAt": "2026-03-11T04:00:01.778Z",
-      "spotifyUrl": "https://open.spotify.com/track/6H0PLsSYMzDOqhLgyOlzIj",
-      "duration": 264533,
       "previewUrl": ""
     }
   ],
