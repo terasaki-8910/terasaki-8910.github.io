@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-03-18T06:50:34.856Z",
+  "lastUpdated": "2026-03-18T12:44:35.453Z",
   "tracks": [
+    {
+      "id": "5Vf5mopw2fxxZLylqQRNci",
+      "name": "Starting Pistol",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-03-18T09:44:36.303Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Vf5mopw2fxxZLylqQRNci",
+      "duration": 113608,
+      "previewUrl": ""
+    },
+    {
+      "id": "60oFLtrgr39Rlnb5KiQkDt",
+      "name": "Irasshaimase",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-03-18T09:42:42.391Z",
+      "spotifyUrl": "https://open.spotify.com/track/60oFLtrgr39Rlnb5KiQkDt",
+      "duration": 130386,
+      "previewUrl": ""
+    },
+    {
+      "id": "1rAyzUlpPGidpt5N84tkVt",
+      "name": "Midnight Trip",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-03-18T09:40:31.286Z",
+      "spotifyUrl": "https://open.spotify.com/track/1rAyzUlpPGidpt5N84tkVt",
+      "duration": 93641,
+      "previewUrl": ""
+    },
     {
       "id": "7pgo1C8l5AX3pkwktxIklG",
       "name": "Baqeela (feat. seki＊tree) - Long Version",
@@ -296,39 +329,6 @@
       "playedAt": "2026-03-11T04:23:24.212Z",
       "spotifyUrl": "https://open.spotify.com/track/0Gp8MWnUzS5V2lvTr25c2A",
       "duration": 165266,
-      "previewUrl": ""
-    },
-    {
-      "id": "364JzOajs76bJymjHm3sVY",
-      "name": "ピースサイン - Peace Sign",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-03-11T04:20:36.453Z",
-      "spotifyUrl": "https://open.spotify.com/track/364JzOajs76bJymjHm3sVY",
-      "duration": 238525,
-      "previewUrl": ""
-    },
-    {
-      "id": "78W4mTLIh4qoLu92W4IQhO",
-      "name": "ライラック",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "ライラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732dad118eff6a430b28a457bd",
-      "playedAt": "2026-03-11T04:12:15.639Z",
-      "spotifyUrl": "https://open.spotify.com/track/78W4mTLIh4qoLu92W4IQhO",
-      "duration": 288200,
-      "previewUrl": ""
-    },
-    {
-      "id": "1huqzMaPdQkXuOJaLxrC2s",
-      "name": "すずめ",
-      "artist": "RADWIMPS, Toaka",
-      "album": "すずめ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348d4eaf595967959fc3be747",
-      "playedAt": "2026-03-11T04:07:27.198Z",
-      "spotifyUrl": "https://open.spotify.com/track/1huqzMaPdQkXuOJaLxrC2s",
-      "duration": 236390,
       "previewUrl": ""
     }
   ],
