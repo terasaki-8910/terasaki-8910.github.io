@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-03-19T06:44:45.500Z",
+  "lastUpdated": "2026-03-19T12:38:31.118Z",
   "tracks": [
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-03-19T12:03:31.895Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "55i8T5u1mEGq8ZhawQxPqe",
+      "name": "Lost Princess",
+      "artist": "ペコリーヌ (CV: M・A・O), コッコロ (CV: 伊藤美来), キャル (CV: 立花理香)",
+      "album": "アニメ「プリンセスコネクト! Re:Dive」テーマソング 「それでもともに歩いていく」&「Lost Princess」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738bcb8ec08ea9094115caeda0",
+      "playedAt": "2026-03-19T11:59:10.626Z",
+      "spotifyUrl": "https://open.spotify.com/track/55i8T5u1mEGq8ZhawQxPqe",
+      "duration": 235706,
+      "previewUrl": ""
+    },
+    {
+      "id": "752WJrwNFCg0IRwKvr5RT5",
+      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "artist": "Tudd, GameChops",
+      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
+      "playedAt": "2026-03-19T07:42:09.835Z",
+      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
+      "duration": 237611,
+      "previewUrl": ""
+    },
+    {
+      "id": "5mqucSnaCVI1kW6ewrXYE2",
+      "name": "Talking Box (Dirty Pop Remix)",
+      "artist": "WurtS",
+      "album": "Talking Box (Dirty Pop Remix)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27323988edcd8de03b090e77caa",
+      "playedAt": "2026-03-19T07:38:04.482Z",
+      "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
+      "duration": 128978,
+      "previewUrl": ""
+    },
     {
       "id": "0O3KfIQyO9XqQoJgat9O0N",
       "name": "ロウワー (feat. 重音テト) - Cover",
@@ -54,17 +98,6 @@
       "playedAt": "2026-03-19T06:29:48.557Z",
       "spotifyUrl": "https://open.spotify.com/track/7lQ8MOhq6IN2w8EYcFNSUk",
       "duration": 290320,
-      "previewUrl": ""
-    },
-    {
-      "id": "5XsPjGw1ADBcVU0i7mwNb1",
-      "name": "Campus mode!!",
-      "artist": "初星学園",
-      "album": "Campus mode!!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
-      "playedAt": "2026-03-19T06:24:57.903Z",
-      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
-      "duration": 260015,
       "previewUrl": ""
     },
     {
@@ -211,17 +244,6 @@
       "previewUrl": ""
     },
     {
-      "id": "55i8T5u1mEGq8ZhawQxPqe",
-      "name": "Lost Princess",
-      "artist": "ペコリーヌ (CV: M・A・O), コッコロ (CV: 伊藤美来), キャル (CV: 立花理香)",
-      "album": "アニメ「プリンセスコネクト! Re:Dive」テーマソング 「それでもともに歩いていく」&「Lost Princess」",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738bcb8ec08ea9094115caeda0",
-      "playedAt": "2026-03-16T11:55:37.944Z",
-      "spotifyUrl": "https://open.spotify.com/track/55i8T5u1mEGq8ZhawQxPqe",
-      "duration": 235706,
-      "previewUrl": ""
-    },
-    {
       "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
       "name": "STAY TUNE",
       "artist": "Suchmos",
@@ -266,17 +288,6 @@
       "previewUrl": ""
     },
     {
-      "id": "5mqucSnaCVI1kW6ewrXYE2",
-      "name": "Talking Box (Dirty Pop Remix)",
-      "artist": "WurtS",
-      "album": "Talking Box (Dirty Pop Remix)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27323988edcd8de03b090e77caa",
-      "playedAt": "2026-03-16T11:30:13.113Z",
-      "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
-      "duration": 128978,
-      "previewUrl": ""
-    },
-    {
       "id": "2EmkTBTh964LQen4Vz0svg",
       "name": "花になって - Be a flower",
       "artist": "Ryokuoushoku Shakai",
@@ -308,29 +319,7 @@
       "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
       "duration": 176960,
       "previewUrl": ""
-    },
-    {
-      "id": "0zxyK9Ih5rnN485VY73bUp",
-      "name": "Luna say maybe",
-      "artist": "初星学園, 美波, 月村手毬",
-      "album": "Luna say maybe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
-      "playedAt": "2026-03-13T18:38:44.784Z",
-      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
-      "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "4K8QY8eufhwEg9EEix0Qqn",
-      "name": "Plug and Play",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-03-13T14:48:29.990Z",
-      "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
-      "duration": 127519,
-      "previewUrl": ""
     }
   ],
-  "total": 30
+  "total": 29
 }
