@@ -1,6 +1,204 @@
 {
-  "lastUpdated": "2026-03-19T12:38:31.118Z",
+  "lastUpdated": "2026-03-19T18:41:38.370Z",
   "tracks": [
+    {
+      "id": "2UUwBDALzJuThY88Ro2lD2",
+      "name": "フォニイ",
+      "artist": "可不, ツミキ",
+      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
+      "playedAt": "2026-03-19T15:32:13.437Z",
+      "spotifyUrl": "https://open.spotify.com/track/2UUwBDALzJuThY88Ro2lD2",
+      "duration": 189884,
+      "previewUrl": ""
+    },
+    {
+      "id": "54CNsOo0aB99blVSQZxQpD",
+      "name": "ベノム",
+      "artist": "Kairikibear",
+      "album": "ベノム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306773204741d000cfcf4e195",
+      "playedAt": "2026-03-19T14:36:03.117Z",
+      "spotifyUrl": "https://open.spotify.com/track/54CNsOo0aB99blVSQZxQpD",
+      "duration": 203033,
+      "previewUrl": ""
+    },
+    {
+      "id": "6LIpqsMbsfc8I7F0dsFXsv",
+      "name": "テトリス",
+      "artist": "柊マグネタイト",
+      "album": "テトリス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734349a5931dff5a37c5bff39f",
+      "playedAt": "2026-03-19T14:32:09.506Z",
+      "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
+      "duration": 142588,
+      "previewUrl": ""
+    },
+    {
+      "id": "0ASw64KfzSUtChQDfzC906",
+      "name": "脳漿炸裂ガール 2015ver.",
+      "artist": "rerulili",
+      "album": "厨病激発ボーイ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a34d6ee798d20ff79b23cad3",
+      "playedAt": "2026-03-19T14:29:46.457Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ASw64KfzSUtChQDfzC906",
+      "duration": 192440,
+      "previewUrl": ""
+    },
+    {
+      "id": "5lojBXokpBOfuTDly9Bksx",
+      "name": "KING",
+      "artist": "Kanaria",
+      "album": "KING",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27319bb3ebaa41cb4899f2e738a",
+      "playedAt": "2026-03-19T14:26:33.215Z",
+      "spotifyUrl": "https://open.spotify.com/track/5lojBXokpBOfuTDly9Bksx",
+      "duration": 134750,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FXu6nhlIgbpgxt61ntlnR",
+      "name": "Override",
+      "artist": "Yoshida Yasei",
+      "album": "Override",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
+      "playedAt": "2026-03-19T14:24:17.961Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-03-19T14:21:58.699Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "0kCRrfk1WV7QMnlxqhpwV9",
+      "name": "ラビットホール",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-03-19T14:16:42.068Z",
+      "spotifyUrl": "https://open.spotify.com/track/0kCRrfk1WV7QMnlxqhpwV9",
+      "duration": 158866,
+      "previewUrl": ""
+    },
+    {
+      "id": "0M1JGQcBPw0Wx4HJTYSnAz",
+      "name": "チュルリラ・チュルリラ・ダッダッダ!",
+      "artist": "WADATAKEAKI KurageP",
+      "album": "わたしの未成年観測",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273838599bf66f74d68baa3e183",
+      "playedAt": "2026-03-19T14:14:02.982Z",
+      "spotifyUrl": "https://open.spotify.com/track/0M1JGQcBPw0Wx4HJTYSnAz",
+      "duration": 196466,
+      "previewUrl": ""
+    },
+    {
+      "id": "6T2b2vKSdZuvbUzK3WIGJM",
+      "name": "ラヴィ",
+      "artist": "THREEE",
+      "album": "ラヴィ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733fee586e9a8ec4b9c65ac9e6",
+      "playedAt": "2026-03-19T14:10:45.895Z",
+      "spotifyUrl": "https://open.spotify.com/track/6T2b2vKSdZuvbUzK3WIGJM",
+      "duration": 180000,
+      "previewUrl": ""
+    },
+    {
+      "id": "3gHgE02K4p2wHiUZ2RPWpS",
+      "name": "ねぇねぇねぇ。",
+      "artist": "PinocchioP",
+      "album": "ラヴ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e06a68d3033eca4fda57ab45",
+      "playedAt": "2026-03-19T14:07:00.130Z",
+      "spotifyUrl": "https://open.spotify.com/track/3gHgE02K4p2wHiUZ2RPWpS",
+      "duration": 210607,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vziRWZny2GDwHX2UYJxa2",
+      "name": "おちゃめ機能",
+      "artist": "Lon",
+      "album": "Upload feat.Vocalist",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
+      "playedAt": "2026-03-19T14:03:29.224Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
+      "duration": 252066,
+      "previewUrl": ""
+    },
+    {
+      "id": "3eIGW5DUVP5zkGFXZSZQ6o",
+      "name": "ロウワー",
+      "artist": "ぬゆり",
+      "album": "ロウワー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273004e4e3650116604aa4f3ebe",
+      "playedAt": "2026-03-19T13:59:16.618Z",
+      "spotifyUrl": "https://open.spotify.com/track/3eIGW5DUVP5zkGFXZSZQ6o",
+      "duration": 230000,
+      "previewUrl": ""
+    },
+    {
+      "id": "7BLegh1dL5SMT3mCEyHsdA",
+      "name": "Forever Lost (\"Made in Abyss: Dawn of the Deep Soul\")",
+      "artist": "LadyIgiko, Brandon Yates",
+      "album": "Forever Lost (\"Made in Abyss: Dawn of the Deep Soul\")",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27360cbc9147f269bf169e69061",
+      "playedAt": "2026-03-19T13:57:09.829Z",
+      "spotifyUrl": "https://open.spotify.com/track/7BLegh1dL5SMT3mCEyHsdA",
+      "duration": 256756,
+      "previewUrl": ""
+    },
+    {
+      "id": "0WvCL9bRZZeH0BFf35jeZ3",
+      "name": "ルマ",
+      "artist": "Kairikibear",
+      "album": "ダーリンシンドローム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e24eeaab0da33f5dff9513d8",
+      "playedAt": "2026-03-19T13:55:26.127Z",
+      "spotifyUrl": "https://open.spotify.com/track/0WvCL9bRZZeH0BFf35jeZ3",
+      "duration": 187012,
+      "previewUrl": ""
+    },
+    {
+      "id": "3UDe37nc2yvttJXlNk6Itr",
+      "name": "テレキャスタービーボーイ (long ver.)",
+      "artist": "THREEE",
+      "album": "パンデミック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ea035a934d5ec3aa051e6029",
+      "playedAt": "2026-03-19T13:52:18.836Z",
+      "spotifyUrl": "https://open.spotify.com/track/3UDe37nc2yvttJXlNk6Itr",
+      "duration": 164500,
+      "previewUrl": ""
+    },
+    {
+      "id": "4ImjstkvWuxK1eElOJYd6R",
+      "name": "Execution Clap",
+      "artist": "TRAP CHICK, 重音テト",
+      "album": "Execution Clap",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732fd4533d6e092910cc45a8c7",
+      "playedAt": "2026-03-19T13:49:33.478Z",
+      "spotifyUrl": "https://open.spotify.com/track/4ImjstkvWuxK1eElOJYd6R",
+      "duration": 191250,
+      "previewUrl": ""
+    },
+    {
+      "id": "4n7nwDqrdx3qmJvEACOMrN",
+      "name": "Take Me to the Beach (feat. Ado)",
+      "artist": "Imagine Dragons, Ado",
+      "album": "Take Me to the Beach (feat. Ado)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a11303b900d06348d84337f",
+      "playedAt": "2026-03-19T12:38:33.997Z",
+      "spotifyUrl": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
+      "duration": 167066,
+      "previewUrl": ""
+    },
     {
       "id": "5XsPjGw1ADBcVU0i7mwNb1",
       "name": "Campus mode!!",
@@ -132,194 +330,7 @@
       "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
       "duration": 300533,
       "previewUrl": ""
-    },
-    {
-      "id": "5Vf5mopw2fxxZLylqQRNci",
-      "name": "Starting Pistol",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-03-18T09:44:36.303Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Vf5mopw2fxxZLylqQRNci",
-      "duration": 113608,
-      "previewUrl": ""
-    },
-    {
-      "id": "60oFLtrgr39Rlnb5KiQkDt",
-      "name": "Irasshaimase",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-03-18T09:42:42.391Z",
-      "spotifyUrl": "https://open.spotify.com/track/60oFLtrgr39Rlnb5KiQkDt",
-      "duration": 130386,
-      "previewUrl": ""
-    },
-    {
-      "id": "1rAyzUlpPGidpt5N84tkVt",
-      "name": "Midnight Trip",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-03-18T09:40:31.286Z",
-      "spotifyUrl": "https://open.spotify.com/track/1rAyzUlpPGidpt5N84tkVt",
-      "duration": 93641,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-03-17T07:14:12.751Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "6tgfPk01WoB2cK78rDEq2m",
-      "name": "Don’t Lie (feat. Nemzzz)",
-      "artist": "A1 x J1, Nemzzz",
-      "album": "Don’t Lie (feat. Nemzzz)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273609029c15e8ac03dfdc4a58e",
-      "playedAt": "2026-03-17T07:09:57.743Z",
-      "spotifyUrl": "https://open.spotify.com/track/6tgfPk01WoB2cK78rDEq2m",
-      "duration": 138591,
-      "previewUrl": ""
-    },
-    {
-      "id": "3yGMNQFdIflEty0tdKlEdd",
-      "name": "DEAREST DROP",
-      "artist": "田所あずさ",
-      "album": "So What?",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b4790c1ba1bb723318913b47",
-      "playedAt": "2026-03-16T12:50:00.159Z",
-      "spotifyUrl": "https://open.spotify.com/track/3yGMNQFdIflEty0tdKlEdd",
-      "duration": 305440,
-      "previewUrl": ""
-    },
-    {
-      "id": "07rg7ciYLLffOV5Fpe0I2F",
-      "name": "Oshama Scramble!",
-      "artist": "t+pazolite",
-      "album": "maimai ALL PERFECT COLLECTiON 3",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
-      "playedAt": "2026-03-16T12:34:43.438Z",
-      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
-      "duration": 124146,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      "playedAt": "2026-03-16T12:32:38.165Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "3BPnFpAL02Bos8EoTLnO9R",
-      "name": "キミに100パーセント",
-      "artist": "Kyary Pamyu Pamyu",
-      "album": "KPP BEST",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
-      "playedAt": "2026-03-16T12:03:21.017Z",
-      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
-      "duration": 200253,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-03-16T11:58:48.001Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
-      "previewUrl": ""
-    },
-    {
-      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
-      "name": "STAY TUNE",
-      "artist": "Suchmos",
-      "album": "THE KIDS",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
-      "playedAt": "2026-03-16T11:47:50.996Z",
-      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
-      "duration": 298746,
-      "previewUrl": ""
-    },
-    {
-      "id": "4yTgjFgrfoGRIVoSCL95O2",
-      "name": "High School Monster - 1.2倍速ver",
-      "artist": "ロクデナシ宇宙",
-      "album": "High School Monster (1.2倍速ver)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735da088c7fed0a0a66db8645c",
-      "playedAt": "2026-03-16T11:40:46.702Z",
-      "spotifyUrl": "https://open.spotify.com/track/4yTgjFgrfoGRIVoSCL95O2",
-      "duration": 158324,
-      "previewUrl": ""
-    },
-    {
-      "id": "0j2T0R9dR9qdJYsB7ciXhf",
-      "name": "Stronger",
-      "artist": "Kanye West",
-      "album": "Graduation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27326f7f19c7f0381e56156c94a",
-      "playedAt": "2026-03-16T11:38:07.558Z",
-      "spotifyUrl": "https://open.spotify.com/track/0j2T0R9dR9qdJYsB7ciXhf",
-      "duration": 311866,
-      "previewUrl": ""
-    },
-    {
-      "id": "2e1gUS6Wv8GS8ZT6FMeE1J",
-      "name": "ただ声一つ",
-      "artist": "Rokudenashi",
-      "album": "ただ声一つ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de2d1cf763ed06e6874e1e91",
-      "playedAt": "2026-03-16T11:32:55.180Z",
-      "spotifyUrl": "https://open.spotify.com/track/2e1gUS6Wv8GS8ZT6FMeE1J",
-      "duration": 161561,
-      "previewUrl": ""
-    },
-    {
-      "id": "2EmkTBTh964LQen4Vz0svg",
-      "name": "花になって - Be a flower",
-      "artist": "Ryokuoushoku Shakai",
-      "album": "花になって - Be a flower",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27389e9b12f91f811198b14e15d",
-      "playedAt": "2026-03-14T21:50:57.352Z",
-      "spotifyUrl": "https://open.spotify.com/track/2EmkTBTh964LQen4Vz0svg",
-      "duration": 199333,
-      "previewUrl": ""
-    },
-    {
-      "id": "59hVbgr8rfYkDbHfr8RcGI",
-      "name": "IRIS OUT",
-      "artist": "Kenshi Yonezu",
-      "album": "IRIS OUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
-      "playedAt": "2026-03-14T11:57:52.683Z",
-      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
-      "duration": 151573,
-      "previewUrl": ""
-    },
-    {
-      "id": "03xt11xuwiqUQBMYKwEWKz",
-      "name": "モニタリング",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-03-14T11:55:20.886Z",
-      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
-      "duration": 176960,
-      "previewUrl": ""
     }
   ],
-  "total": 29
+  "total": 30
 }
