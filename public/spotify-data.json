@@ -1,6 +1,105 @@
 {
-  "lastUpdated": "2026-03-19T01:15:12.661Z",
+  "lastUpdated": "2026-03-19T06:44:45.500Z",
   "tracks": [
+    {
+      "id": "0O3KfIQyO9XqQoJgat9O0N",
+      "name": "ロウワー (feat. 重音テト) - Cover",
+      "artist": "タカオカミズキ, Teto Kasane",
+      "album": "ロウワー (feat. 重音テト) [Cover]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273383091b8495188b1f12a326d",
+      "playedAt": "2026-03-19T06:44:32.763Z",
+      "spotifyUrl": "https://open.spotify.com/track/0O3KfIQyO9XqQoJgat9O0N",
+      "duration": 230000,
+      "previewUrl": ""
+    },
+    {
+      "id": "4PXTz0TbOtqE3cGWImYri3",
+      "name": "うい麦畑でつかまえて",
+      "artist": "しぐれうい",
+      "album": "うい麦畑でつかまえて",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b6c0e611ea1428d09ec78d3",
+      "playedAt": "2026-03-19T06:40:43.001Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PXTz0TbOtqE3cGWImYri3",
+      "duration": 224285,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-03-19T06:36:57.634Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
+    {
+      "id": "6x8iT2f5PiUlWVyV1Y2Wjs",
+      "name": "メリュー",
+      "artist": "n-buna",
+      "album": "花と水飴、最終電車",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273424682188a4aa630657d2c00",
+      "playedAt": "2026-03-19T06:33:21.771Z",
+      "spotifyUrl": "https://open.spotify.com/track/6x8iT2f5PiUlWVyV1Y2Wjs",
+      "duration": 212583,
+      "previewUrl": ""
+    },
+    {
+      "id": "7lQ8MOhq6IN2w8EYcFNSUk",
+      "name": "Without Me",
+      "artist": "Eminem",
+      "album": "The Eminem Show",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ca5c90113b30c3c43ffb8f4",
+      "playedAt": "2026-03-19T06:29:48.557Z",
+      "spotifyUrl": "https://open.spotify.com/track/7lQ8MOhq6IN2w8EYcFNSUk",
+      "duration": 290320,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-03-19T06:24:57.903Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "6lQwleGzfHjfBiM4v2R5IN",
+      "name": "Summertime Blues",
+      "artist": "Brian Setzer",
+      "album": "La Bamba (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ff5b92cf2aadcd8dd5500536",
+      "playedAt": "2026-03-19T03:59:43.890Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lQwleGzfHjfBiM4v2R5IN",
+      "duration": 160733,
+      "previewUrl": ""
+    },
+    {
+      "id": "0omQt0YfcdYM6RnA5EVTw2",
+      "name": "Virtual Storm - Hard Arrange",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-03-19T02:30:02.164Z",
+      "spotifyUrl": "https://open.spotify.com/track/0omQt0YfcdYM6RnA5EVTw2",
+      "duration": 131802,
+      "previewUrl": ""
+    },
+    {
+      "id": "7onucgU6HHFbtZ9r0jXgmy",
+      "name": "DREAM SOLISTER",
+      "artist": "TRUE",
+      "album": "Joy Heart",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
+      "playedAt": "2026-03-19T02:29:51.275Z",
+      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
+      "duration": 300533,
+      "previewUrl": ""
+    },
     {
       "id": "5Vf5mopw2fxxZLylqQRNci",
       "name": "Starting Pistol",
@@ -87,17 +186,6 @@
       "playedAt": "2026-03-16T12:32:38.165Z",
       "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
       "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "5XsPjGw1ADBcVU0i7mwNb1",
-      "name": "Campus mode!!",
-      "artist": "初星学園",
-      "album": "Campus mode!!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
-      "playedAt": "2026-03-16T12:07:41.265Z",
-      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
-      "duration": 260015,
       "previewUrl": ""
     },
     {
@@ -241,94 +329,6 @@
       "playedAt": "2026-03-13T14:48:29.990Z",
       "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
       "duration": 127519,
-      "previewUrl": ""
-    },
-    {
-      "id": "6x8iT2f5PiUlWVyV1Y2Wjs",
-      "name": "メリュー",
-      "artist": "n-buna",
-      "album": "花と水飴、最終電車",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273424682188a4aa630657d2c00",
-      "playedAt": "2026-03-13T14:46:22.310Z",
-      "spotifyUrl": "https://open.spotify.com/track/6x8iT2f5PiUlWVyV1Y2Wjs",
-      "duration": 212583,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Lsdr0kU6beWlXns5yRzfT",
-      "name": "アルティメットセンパイ",
-      "artist": "PinocchioP",
-      "album": "アルティメットセンパイ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738062ab9575231af71266ef19",
-      "playedAt": "2026-03-13T14:42:49.227Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Lsdr0kU6beWlXns5yRzfT",
-      "duration": 218068,
-      "previewUrl": ""
-    },
-    {
-      "id": "6IJVyZiFoAY86LC81KXU0N",
-      "name": "奮い立つCDショップにて",
-      "artist": "MOROHA",
-      "album": "奮い立つCDショップにて",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b761ffbbd607f58562b2548f32",
-      "playedAt": "2026-03-13T13:01:31.373Z",
-      "spotifyUrl": "https://open.spotify.com/track/6IJVyZiFoAY86LC81KXU0N",
-      "duration": 232941,
-      "previewUrl": ""
-    },
-    {
-      "id": "45YBVp6zMwQZRbUDcPzmMB",
-      "name": "アイネクライネ",
-      "artist": "Kenshi Yonezu",
-      "album": "YANKEE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
-      "playedAt": "2026-03-12T14:37:32.290Z",
-      "spotifyUrl": "https://open.spotify.com/track/45YBVp6zMwQZRbUDcPzmMB",
-      "duration": 288013,
-      "previewUrl": ""
-    },
-    {
-      "id": "21htkjP5rYjD3CXG3y9wCT",
-      "name": "オレンジ",
-      "artist": "7!!",
-      "album": "アニップス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731e80ff49846a5654e005d411",
-      "playedAt": "2026-03-12T08:43:29.266Z",
-      "spotifyUrl": "https://open.spotify.com/track/21htkjP5rYjD3CXG3y9wCT",
-      "duration": 350200,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lUaEsQVwvNEjaJNcvc1CN",
-      "name": "サウダージ",
-      "artist": "PornoGraffitti",
-      "album": "PORNO GRAFFITTI BEST RED'S",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738770cf0b8d9ddacf4f286688",
-      "playedAt": "2026-03-12T08:37:01.608Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lUaEsQVwvNEjaJNcvc1CN",
-      "duration": 261239,
-      "previewUrl": ""
-    },
-    {
-      "id": "02vOyaNCKGX8uhjggOIH83",
-      "name": "エンヴィーベイビー",
-      "artist": "Kanaria",
-      "album": "エンヴィーベイビー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fa53d481a829f303078565eb",
-      "playedAt": "2026-03-12T08:31:57.171Z",
-      "spotifyUrl": "https://open.spotify.com/track/02vOyaNCKGX8uhjggOIH83",
-      "duration": 135789,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Gp8MWnUzS5V2lvTr25c2A",
-      "name": "ビビデバ",
-      "artist": "Hoshimachi Suisei",
-      "album": "ビビデバ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d2da332b0bcdf081df91d036",
-      "playedAt": "2026-03-11T04:23:24.212Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Gp8MWnUzS5V2lvTr25c2A",
-      "duration": 165266,
       "previewUrl": ""
     }
   ],
