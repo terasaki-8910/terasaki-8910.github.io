@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-03-20T06:41:15.951Z",
+  "lastUpdated": "2026-03-20T12:35:10.852Z",
   "tracks": [
+    {
+      "id": "0vDqNzQqEhl7boeRS3Joli",
+      "name": "好きすぎて滅！",
+      "artist": "M!LK",
+      "album": "好きすぎて滅！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
+      "playedAt": "2026-03-20T10:59:16.975Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
+      "duration": 212400,
+      "previewUrl": ""
+    },
+    {
+      "id": "4YxR5rzn3iDVPDYZSBMA0q",
+      "name": "Connected Sky",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-03-20T08:08:37.837Z",
+      "spotifyUrl": "https://open.spotify.com/track/4YxR5rzn3iDVPDYZSBMA0q",
+      "duration": 120529,
+      "previewUrl": ""
+    },
     {
       "id": "2UUwBDALzJuThY88Ro2lD2",
       "name": "フォニイ",
@@ -307,28 +329,6 @@
       "playedAt": "2026-03-19T03:59:43.890Z",
       "spotifyUrl": "https://open.spotify.com/track/6lQwleGzfHjfBiM4v2R5IN",
       "duration": 160733,
-      "previewUrl": ""
-    },
-    {
-      "id": "0omQt0YfcdYM6RnA5EVTw2",
-      "name": "Virtual Storm - Hard Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-03-19T02:30:02.164Z",
-      "spotifyUrl": "https://open.spotify.com/track/0omQt0YfcdYM6RnA5EVTw2",
-      "duration": 131802,
-      "previewUrl": ""
-    },
-    {
-      "id": "7onucgU6HHFbtZ9r0jXgmy",
-      "name": "DREAM SOLISTER",
-      "artist": "TRUE",
-      "album": "Joy Heart",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
-      "playedAt": "2026-03-19T02:29:51.275Z",
-      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
-      "duration": 300533,
       "previewUrl": ""
     }
   ],
