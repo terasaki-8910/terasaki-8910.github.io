@@ -1,15 +1,15 @@
 {
-  "lastUpdated": "2026-03-21T06:30:38.779Z",
+  "lastUpdated": "2026-03-21T12:26:51.865Z",
   "tracks": [
     {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-03-21T04:50:40.581Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
+      "id": "0vDqNzQqEhl7boeRS3Joli",
+      "name": "好きすぎて滅！",
+      "artist": "M!LK",
+      "album": "好きすぎて滅！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
+      "playedAt": "2026-03-21T11:39:42.887Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
+      "duration": 212400,
       "previewUrl": ""
     },
     {
@@ -18,9 +18,108 @@
       "artist": "RADWIMPS, Toko Miura",
       "album": "天気の子 (complete version)",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f995bf0052673398dceb506",
-      "playedAt": "2026-03-21T04:47:25.817Z",
+      "playedAt": "2026-03-21T11:36:02.105Z",
       "spotifyUrl": "https://open.spotify.com/track/5bUWFHUTbXQcmqI6vWL62j",
       "duration": 339160,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-03-21T11:32:19.509Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
+    {
+      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
+      "name": "STAY TUNE",
+      "artist": "Suchmos",
+      "album": "THE KIDS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
+      "playedAt": "2026-03-21T11:28:29.609Z",
+      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
+      "duration": 298746,
+      "previewUrl": ""
+    },
+    {
+      "id": "0JncJnMiDjLpeYURyhFgch",
+      "name": "365日の紙飛行機",
+      "artist": "AKB48",
+      "album": "サムネイル<Type A>",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27371c8a0b9a128451abf918b24",
+      "playedAt": "2026-03-21T11:19:21.956Z",
+      "spotifyUrl": "https://open.spotify.com/track/0JncJnMiDjLpeYURyhFgch",
+      "duration": 283373,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-03-21T10:55:24.065Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
+    {
+      "id": "0T4AitQuq8IJhWBWuZwkFA",
+      "name": "群青",
+      "artist": "YOASOBI",
+      "album": "群青",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735235b1b2b4feb3783e12a434",
+      "playedAt": "2026-03-21T10:09:08.003Z",
+      "spotifyUrl": "https://open.spotify.com/track/0T4AitQuq8IJhWBWuZwkFA",
+      "duration": 248444,
+      "previewUrl": ""
+    },
+    {
+      "id": "3P2aSkjcbUYbcYr13EFE8n",
+      "name": "空も飛べるはず",
+      "artist": "SPITZ",
+      "album": "CYCLE HIT 1991-1997 Spitz Complete Single Collection",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a4feca9399f68cc2ba1200",
+      "playedAt": "2026-03-21T10:04:59.275Z",
+      "spotifyUrl": "https://open.spotify.com/track/3P2aSkjcbUYbcYr13EFE8n",
+      "duration": 271400,
+      "previewUrl": ""
+    },
+    {
+      "id": "4XObDlhGp6sREJoZj2lFv2",
+      "name": "走れSAKAMOTO",
+      "artist": "Vaundy",
+      "album": "走れSAKAMOTO",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
+      "playedAt": "2026-03-21T10:00:27.209Z",
+      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
+      "duration": 205984,
+      "previewUrl": ""
+    },
+    {
+      "id": "4ImjstkvWuxK1eElOJYd6R",
+      "name": "Execution Clap",
+      "artist": "TRAP CHICK, 重音テト",
+      "album": "Execution Clap",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732fd4533d6e092910cc45a8c7",
+      "playedAt": "2026-03-21T09:57:00.420Z",
+      "spotifyUrl": "https://open.spotify.com/track/4ImjstkvWuxK1eElOJYd6R",
+      "duration": 191250,
+      "previewUrl": ""
+    },
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-03-21T09:54:39.749Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
       "previewUrl": ""
     },
     {
@@ -156,17 +255,6 @@
       "previewUrl": ""
     },
     {
-      "id": "0vDqNzQqEhl7boeRS3Joli",
-      "name": "好きすぎて滅！",
-      "artist": "M!LK",
-      "album": "好きすぎて滅！",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
-      "playedAt": "2026-03-21T04:01:25.698Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
-      "duration": 212400,
-      "previewUrl": ""
-    },
-    {
       "id": "2MmgGuQzr0kkiA04lMdPXW",
       "name": "トウキョウ・シャンディ・ランデヴ",
       "artist": "MAISONdes, 花譜, ツミキ",
@@ -241,94 +329,6 @@
       "playedAt": "2026-03-19T14:32:09.506Z",
       "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
       "duration": 142588,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ASw64KfzSUtChQDfzC906",
-      "name": "脳漿炸裂ガール 2015ver.",
-      "artist": "rerulili",
-      "album": "厨病激発ボーイ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a34d6ee798d20ff79b23cad3",
-      "playedAt": "2026-03-19T14:29:46.457Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ASw64KfzSUtChQDfzC906",
-      "duration": 192440,
-      "previewUrl": ""
-    },
-    {
-      "id": "5lojBXokpBOfuTDly9Bksx",
-      "name": "KING",
-      "artist": "Kanaria",
-      "album": "KING",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27319bb3ebaa41cb4899f2e738a",
-      "playedAt": "2026-03-19T14:26:33.215Z",
-      "spotifyUrl": "https://open.spotify.com/track/5lojBXokpBOfuTDly9Bksx",
-      "duration": 134750,
-      "previewUrl": ""
-    },
-    {
-      "id": "4FXu6nhlIgbpgxt61ntlnR",
-      "name": "Override",
-      "artist": "Yoshida Yasei",
-      "album": "Override",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
-      "playedAt": "2026-03-19T14:24:17.961Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
-      "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "03xt11xuwiqUQBMYKwEWKz",
-      "name": "モニタリング",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-03-19T14:21:58.699Z",
-      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
-      "duration": 176960,
-      "previewUrl": ""
-    },
-    {
-      "id": "0kCRrfk1WV7QMnlxqhpwV9",
-      "name": "ラビットホール",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-03-19T14:16:42.068Z",
-      "spotifyUrl": "https://open.spotify.com/track/0kCRrfk1WV7QMnlxqhpwV9",
-      "duration": 158866,
-      "previewUrl": ""
-    },
-    {
-      "id": "0M1JGQcBPw0Wx4HJTYSnAz",
-      "name": "チュルリラ・チュルリラ・ダッダッダ!",
-      "artist": "WADATAKEAKI KurageP",
-      "album": "わたしの未成年観測",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273838599bf66f74d68baa3e183",
-      "playedAt": "2026-03-19T14:14:02.982Z",
-      "spotifyUrl": "https://open.spotify.com/track/0M1JGQcBPw0Wx4HJTYSnAz",
-      "duration": 196466,
-      "previewUrl": ""
-    },
-    {
-      "id": "6T2b2vKSdZuvbUzK3WIGJM",
-      "name": "ラヴィ",
-      "artist": "THREEE",
-      "album": "ラヴィ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733fee586e9a8ec4b9c65ac9e6",
-      "playedAt": "2026-03-19T14:10:45.895Z",
-      "spotifyUrl": "https://open.spotify.com/track/6T2b2vKSdZuvbUzK3WIGJM",
-      "duration": 180000,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vziRWZny2GDwHX2UYJxa2",
-      "name": "おちゃめ機能",
-      "artist": "Lon",
-      "album": "Upload feat.Vocalist",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
-      "playedAt": "2026-03-19T14:03:29.224Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
-      "duration": 252066,
       "previewUrl": ""
     }
   ],
