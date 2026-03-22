@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-03-22T06:38:04.834Z",
+  "lastUpdated": "2026-03-22T12:28:17.878Z",
   "tracks": [
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-03-22T10:43:57.967Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vDqNzQqEhl7boeRS3Joli",
+      "name": "好きすぎて滅！",
+      "artist": "M!LK",
+      "album": "好きすぎて滅！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
+      "playedAt": "2026-03-22T10:40:47.416Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
+      "duration": 212400,
+      "previewUrl": ""
+    },
+    {
+      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
+      "name": "STAY TUNE",
+      "artist": "Suchmos",
+      "album": "THE KIDS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
+      "playedAt": "2026-03-22T07:50:00.046Z",
+      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
+      "duration": 298746,
+      "previewUrl": ""
+    },
     {
       "id": "59hVbgr8rfYkDbHfr8RcGI",
       "name": "IRIS OUT",
@@ -10,28 +43,6 @@
       "playedAt": "2026-03-22T00:11:25.497Z",
       "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
       "duration": 151573,
-      "previewUrl": ""
-    },
-    {
-      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
-      "name": "STAY TUNE",
-      "artist": "Suchmos",
-      "album": "THE KIDS",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
-      "playedAt": "2026-03-21T14:27:19.146Z",
-      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
-      "duration": 298746,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vDqNzQqEhl7boeRS3Joli",
-      "name": "好きすぎて滅！",
-      "artist": "M!LK",
-      "album": "好きすぎて滅！",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
-      "playedAt": "2026-03-21T14:17:52.525Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
-      "duration": 212400,
       "previewUrl": ""
     },
     {
@@ -65,17 +76,6 @@
       "playedAt": "2026-03-21T11:19:21.956Z",
       "spotifyUrl": "https://open.spotify.com/track/0JncJnMiDjLpeYURyhFgch",
       "duration": 283373,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-03-21T10:55:24.065Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
       "previewUrl": ""
     },
     {
