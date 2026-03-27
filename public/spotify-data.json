@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-03-27T06:56:14.514Z",
+  "lastUpdated": "2026-03-27T12:39:51.733Z",
   "tracks": [
+    {
+      "id": "2YZa7FpeKe423Wvme0yKNf",
+      "name": "いますぐ輪廻",
+      "artist": "NAKISO",
+      "album": "いますぐ輪廻",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342f821a5480cf2b8248db543",
+      "playedAt": "2026-03-27T11:30:51.567Z",
+      "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
+      "duration": 122482,
+      "previewUrl": ""
+    },
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-03-27T11:01:27.674Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-03-27T10:55:20.914Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
     {
       "id": "1TFv0KXyFvC7eCP2ury0KV",
       "name": "スパークル - movie ver.",
@@ -286,51 +319,7 @@
       "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
       "duration": 179173,
       "previewUrl": ""
-    },
-    {
-      "id": "45zHzJfSpq7HSnGBub9tTk",
-      "name": "Black † White",
-      "artist": "野水いおり",
-      "album": "Hat Trick",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730fa8d44239baa6df5f5b81b5",
-      "playedAt": "2026-03-21T04:27:51.995Z",
-      "spotifyUrl": "https://open.spotify.com/track/45zHzJfSpq7HSnGBub9tTk",
-      "duration": 274314,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WMeDp0t2UJmy21PRKAOzx",
-      "name": "ヒトリゴト",
-      "artist": "ClariS",
-      "album": "ヒトリゴト",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334257c272ad39c28b6562e0f",
-      "playedAt": "2026-03-21T04:23:16.390Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WMeDp0t2UJmy21PRKAOzx",
-      "duration": 235093,
-      "previewUrl": ""
-    },
-    {
-      "id": "7wnOPAiqvIG4dTvEInj0YT",
-      "name": "Teenager Forever",
-      "artist": "King Gnu",
-      "album": "CEREMONY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2272c8966971b7b04066241",
-      "playedAt": "2026-03-21T04:18:50.050Z",
-      "spotifyUrl": "https://open.spotify.com/track/7wnOPAiqvIG4dTvEInj0YT",
-      "duration": 189080,
-      "previewUrl": ""
-    },
-    {
-      "id": "6yv4uty2hl96Wu0RFoYsxO",
-      "name": "かいじゅうのマーチ",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-03-21T04:15:40.416Z",
-      "spotifyUrl": "https://open.spotify.com/track/6yv4uty2hl96Wu0RFoYsxO",
-      "duration": 295730,
-      "previewUrl": ""
     }
   ],
-  "total": 30
+  "total": 29
 }
