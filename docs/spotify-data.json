@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-28T01:13:12.886Z",
+  "lastUpdated": "2026-03-28T06:45:13.498Z",
   "tracks": [
     {
       "id": "4tjRvHjQu2fK8uEgXtjiTN",
@@ -7,9 +7,20 @@
       "artist": "kamiyado",
       "album": "グリズリーに襲われたら♡",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-03-27T23:53:21.637Z",
+      "playedAt": "2026-03-28T02:18:53.802Z",
       "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
       "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-03-28T02:13:49.989Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
       "previewUrl": ""
     },
     {
@@ -109,17 +120,6 @@
       "playedAt": "2026-03-23T04:34:35.430Z",
       "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
       "duration": 200253,
-      "previewUrl": ""
-    },
-    {
-      "id": "03xt11xuwiqUQBMYKwEWKz",
-      "name": "モニタリング",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-03-22T15:23:07.766Z",
-      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
-      "duration": 176960,
       "previewUrl": ""
     },
     {
@@ -275,29 +275,7 @@
       "spotifyUrl": "https://open.spotify.com/track/3gHgE02K4p2wHiUZ2RPWpS",
       "duration": 210607,
       "previewUrl": ""
-    },
-    {
-      "id": "06XQvnJb53SUYmlWIhUXUi",
-      "name": "怪物",
-      "artist": "YOASOBI",
-      "album": "怪物",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2efc5e5f5922ca1f1b88928",
-      "playedAt": "2026-03-21T04:41:35.890Z",
-      "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
-      "duration": 206000,
-      "previewUrl": ""
-    },
-    {
-      "id": "5skCbGGAnc7Ns18Figz54h",
-      "name": "Bunny Girl",
-      "artist": "AKASAKI",
-      "album": "Bunny Girl",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd8fc70761b16b25f92244d9",
-      "playedAt": "2026-03-21T04:38:09.390Z",
-      "spotifyUrl": "https://open.spotify.com/track/5skCbGGAnc7Ns18Figz54h",
-      "duration": 217492,
-      "previewUrl": ""
     }
   ],
-  "total": 27
+  "total": 25
 }
