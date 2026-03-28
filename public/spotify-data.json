@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-03-27T18:42:33.039Z",
+  "lastUpdated": "2026-03-28T01:13:12.886Z",
   "tracks": [
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-03-27T23:53:21.637Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
     {
       "id": "2YZa7FpeKe423Wvme0yKNf",
       "name": "いますぐ輪廻",
@@ -21,17 +32,6 @@
       "playedAt": "2026-03-27T11:01:27.674Z",
       "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
       "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-03-27T10:55:20.914Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     },
     {
@@ -297,29 +297,7 @@
       "spotifyUrl": "https://open.spotify.com/track/5skCbGGAnc7Ns18Figz54h",
       "duration": 217492,
       "previewUrl": ""
-    },
-    {
-      "id": "56xCsaFsih5swf7IZXPYzU",
-      "name": "きゅうくらりん",
-      "artist": "いよわ",
-      "album": "きゅうくらりん",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e094c1bd11b4dde2cba4d8c7",
-      "playedAt": "2026-03-21T04:34:31.259Z",
-      "spotifyUrl": "https://open.spotify.com/track/56xCsaFsih5swf7IZXPYzU",
-      "duration": 217090,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-03-21T04:30:53.756Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
-      "previewUrl": ""
     }
   ],
-  "total": 29
+  "total": 27
 }
