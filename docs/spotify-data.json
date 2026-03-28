@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-03-28T06:45:13.498Z",
+  "lastUpdated": "2026-03-28T12:32:10.948Z",
   "tracks": [
+    {
+      "id": "3zrmJWuIWUmrhhSAZnlOYF",
+      "name": "にんじゃりばんばん",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "なんだこれくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
+      "playedAt": "2026-03-28T10:28:03.707Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zrmJWuIWUmrhhSAZnlOYF",
+      "duration": 266686,
+      "previewUrl": ""
+    },
     {
       "id": "4tjRvHjQu2fK8uEgXtjiTN",
       "name": "グリズリーに襲われたら♡",
@@ -263,17 +274,6 @@
       "playedAt": "2026-03-21T10:00:27.209Z",
       "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
       "duration": 205984,
-      "previewUrl": ""
-    },
-    {
-      "id": "3gHgE02K4p2wHiUZ2RPWpS",
-      "name": "ねぇねぇねぇ。",
-      "artist": "PinocchioP",
-      "album": "ラヴ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e06a68d3033eca4fda57ab45",
-      "playedAt": "2026-03-21T04:45:16.211Z",
-      "spotifyUrl": "https://open.spotify.com/track/3gHgE02K4p2wHiUZ2RPWpS",
-      "duration": 210607,
       "previewUrl": ""
     }
   ],
