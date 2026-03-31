@@ -1,13 +1,24 @@
 {
-  "lastUpdated": "2026-03-31T12:53:10.957Z",
+  "lastUpdated": "2026-03-31T18:45:52.100Z",
   "tracks": [
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-03-31T15:39:18.011Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
     {
       "id": "6V84TVb99ggmz1w9Bm3x8v",
       "name": "ぴんきーれっど！",
       "artist": "FRUITS ZIPPER",
       "album": "NEW KAWAII / フルーツバスケット",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bfbeb8215ee3eb860d9aac4",
-      "playedAt": "2026-03-31T11:00:46.417Z",
+      "playedAt": "2026-03-31T14:09:49.856Z",
       "spotifyUrl": "https://open.spotify.com/track/6V84TVb99ggmz1w9Bm3x8v",
       "duration": 242091,
       "previewUrl": ""
@@ -318,17 +329,6 @@
       "playedAt": "2026-03-22T13:45:30.119Z",
       "spotifyUrl": "https://open.spotify.com/track/6megNXGjmim4OitjZnIn9v",
       "duration": 288887,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vDqNzQqEhl7boeRS3Joli",
-      "name": "好きすぎて滅！",
-      "artist": "M!LK",
-      "album": "好きすぎて滅！",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
-      "playedAt": "2026-03-22T13:37:24.315Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
-      "duration": 212400,
       "previewUrl": ""
     }
   ],
