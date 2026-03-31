@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-03-31T07:01:14.100Z",
+  "lastUpdated": "2026-03-31T12:53:10.957Z",
   "tracks": [
+    {
+      "id": "6V84TVb99ggmz1w9Bm3x8v",
+      "name": "ぴんきーれっど！",
+      "artist": "FRUITS ZIPPER",
+      "album": "NEW KAWAII / フルーツバスケット",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bfbeb8215ee3eb860d9aac4",
+      "playedAt": "2026-03-31T11:00:46.417Z",
+      "spotifyUrl": "https://open.spotify.com/track/6V84TVb99ggmz1w9Bm3x8v",
+      "duration": 242091,
+      "previewUrl": ""
+    },
+    {
+      "id": "53I1pWLuvMBmfmxxwMJcJ3",
+      "name": "キスハグ侵略者！",
+      "artist": "iLiFE!",
+      "album": "キスハグ侵略者！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d0b2282ce18f0a8a7a06a93",
+      "playedAt": "2026-03-31T08:45:05.978Z",
+      "spotifyUrl": "https://open.spotify.com/track/53I1pWLuvMBmfmxxwMJcJ3",
+      "duration": 231226,
+      "previewUrl": ""
+    },
+    {
+      "id": "5w1lbtD8X8D8H970EiNWBT",
+      "name": "チョコスプレー♡",
+      "artist": "いぎなり東北産",
+      "album": "チョコスプレー♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736e046c25841d3637e11b410c",
+      "playedAt": "2026-03-31T08:41:14.051Z",
+      "spotifyUrl": "https://open.spotify.com/track/5w1lbtD8X8D8H970EiNWBT",
+      "duration": 207160,
+      "previewUrl": ""
+    },
+    {
+      "id": "2iFegucLSbIncYLOJVxnSU",
+      "name": "絶対アイドル辞めないで",
+      "artist": "=LOVE",
+      "album": "絶対アイドル辞めないで",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331de4bcc9f38137474313dd4",
+      "playedAt": "2026-03-31T08:37:46.426Z",
+      "spotifyUrl": "https://open.spotify.com/track/2iFegucLSbIncYLOJVxnSU",
+      "duration": 232500,
+      "previewUrl": ""
+    },
+    {
+      "id": "3ftr8VIFtTJq2pscGtRUli",
+      "name": "HEARTRIS",
+      "artist": "NiziU",
+      "album": "Press Play",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730679ed663ebb979280fb9a2b",
+      "playedAt": "2026-03-31T08:33:53.810Z",
+      "spotifyUrl": "https://open.spotify.com/track/3ftr8VIFtTJq2pscGtRUli",
+      "duration": 180883,
+      "previewUrl": ""
+    },
+    {
+      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
+      "name": "STAY TUNE",
+      "artist": "Suchmos",
+      "album": "THE KIDS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
+      "playedAt": "2026-03-31T08:09:49.613Z",
+      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
+      "duration": 298746,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-03-31T07:06:26.558Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
@@ -10,17 +87,6 @@
       "playedAt": "2026-03-31T06:54:59.682Z",
       "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
       "duration": 229328,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-03-31T06:08:12.629Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     },
     {
@@ -46,17 +112,6 @@
       "previewUrl": ""
     },
     {
-      "id": "2iFegucLSbIncYLOJVxnSU",
-      "name": "絶対アイドル辞めないで",
-      "artist": "=LOVE",
-      "album": "絶対アイドル辞めないで",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331de4bcc9f38137474313dd4",
-      "playedAt": "2026-03-30T10:18:35.177Z",
-      "spotifyUrl": "https://open.spotify.com/track/2iFegucLSbIncYLOJVxnSU",
-      "duration": 232500,
-      "previewUrl": ""
-    },
-    {
       "id": "0awDhtiMxhWAdUe1VIsjaX",
       "name": "キス・ミー・パティシエ",
       "artist": "CANDY TUNE",
@@ -65,17 +120,6 @@
       "playedAt": "2026-03-30T04:50:42.231Z",
       "spotifyUrl": "https://open.spotify.com/track/0awDhtiMxhWAdUe1VIsjaX",
       "duration": 216000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6V84TVb99ggmz1w9Bm3x8v",
-      "name": "ぴんきーれっど！",
-      "artist": "FRUITS ZIPPER",
-      "album": "NEW KAWAII / フルーツバスケット",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bfbeb8215ee3eb860d9aac4",
-      "playedAt": "2026-03-30T04:47:05.315Z",
-      "spotifyUrl": "https://open.spotify.com/track/6V84TVb99ggmz1w9Bm3x8v",
-      "duration": 242091,
       "previewUrl": ""
     },
     {
@@ -175,17 +219,6 @@
       "playedAt": "2026-03-23T12:46:59.714Z",
       "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
       "duration": 151573,
-      "previewUrl": ""
-    },
-    {
-      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
-      "name": "STAY TUNE",
-      "artist": "Suchmos",
-      "album": "THE KIDS",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
-      "playedAt": "2026-03-23T12:42:32.026Z",
-      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
-      "duration": 298746,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-03-22T13:37:24.315Z",
       "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
       "duration": 212400,
-      "previewUrl": ""
-    },
-    {
-      "id": "5bUWFHUTbXQcmqI6vWL62j",
-      "name": "グランドエスケープ",
-      "artist": "RADWIMPS, Toko Miura",
-      "album": "天気の子 (complete version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f995bf0052673398dceb506",
-      "playedAt": "2026-03-21T11:36:02.105Z",
-      "spotifyUrl": "https://open.spotify.com/track/5bUWFHUTbXQcmqI6vWL62j",
-      "duration": 339160,
-      "previewUrl": ""
-    },
-    {
-      "id": "0JncJnMiDjLpeYURyhFgch",
-      "name": "365日の紙飛行機",
-      "artist": "AKB48",
-      "album": "サムネイル<Type A>",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27371c8a0b9a128451abf918b24",
-      "playedAt": "2026-03-21T11:19:21.956Z",
-      "spotifyUrl": "https://open.spotify.com/track/0JncJnMiDjLpeYURyhFgch",
-      "duration": 283373,
-      "previewUrl": ""
-    },
-    {
-      "id": "0T4AitQuq8IJhWBWuZwkFA",
-      "name": "群青",
-      "artist": "YOASOBI",
-      "album": "群青",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735235b1b2b4feb3783e12a434",
-      "playedAt": "2026-03-21T10:09:08.003Z",
-      "spotifyUrl": "https://open.spotify.com/track/0T4AitQuq8IJhWBWuZwkFA",
-      "duration": 248444,
       "previewUrl": ""
     }
   ],
