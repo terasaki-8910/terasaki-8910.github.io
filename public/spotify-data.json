@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-04-01T01:27:45.703Z",
+  "lastUpdated": "2026-04-01T07:08:06.649Z",
   "tracks": [
+    {
+      "id": "5qgxx7wxqBRL9c3BXtklRt",
+      "name": "君セン！",
+      "artist": "iLiFE!",
+      "album": "アイライフスターターパック！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27397dcd484c20616d3e136a7c5",
+      "playedAt": "2026-04-01T06:08:48.955Z",
+      "spotifyUrl": "https://open.spotify.com/track/5qgxx7wxqBRL9c3BXtklRt",
+      "duration": 248400,
+      "previewUrl": ""
+    },
+    {
+      "id": "1PeBPKbOCc370rnLKploBL",
+      "name": "ジュエリー (Prod. imase)",
+      "artist": "LE SSERAFIM",
+      "album": "ジュエリー (Prod. imase)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273911c746f67ef44c09b034c0b",
+      "playedAt": "2026-04-01T06:04:40.335Z",
+      "spotifyUrl": "https://open.spotify.com/track/1PeBPKbOCc370rnLKploBL",
+      "duration": 163813,
+      "previewUrl": ""
+    },
+    {
+      "id": "1wqDsHxriuC1I8VfTCwr7N",
+      "name": "トワイライト",
+      "artist": "B小町",
+      "album": "トワイライト",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734ca9cd8d727fc338f4ec4bc2",
+      "playedAt": "2026-04-01T06:01:55.842Z",
+      "spotifyUrl": "https://open.spotify.com/track/1wqDsHxriuC1I8VfTCwr7N",
+      "duration": 242504,
+      "previewUrl": ""
+    },
     {
       "id": "0aB0v4027ukVziUGwVGYpG",
       "name": "tv off (feat. lefty gunplay)",
@@ -296,39 +329,6 @@
       "playedAt": "2026-03-22T15:12:59.316Z",
       "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
       "duration": 241466,
-      "previewUrl": ""
-    },
-    {
-      "id": "49F3htNmwzPKFycPdOrDvf",
-      "name": "Subtitle",
-      "artist": "OFFICIAL HIGE DANDISM",
-      "album": "Subtitle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d69b54199b7773b97a57a196",
-      "playedAt": "2026-03-22T15:12:51.147Z",
-      "spotifyUrl": "https://open.spotify.com/track/49F3htNmwzPKFycPdOrDvf",
-      "duration": 305509,
-      "previewUrl": ""
-    },
-    {
-      "id": "45YBVp6zMwQZRbUDcPzmMB",
-      "name": "アイネクライネ",
-      "artist": "Kenshi Yonezu",
-      "album": "YANKEE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
-      "playedAt": "2026-03-22T13:50:18.434Z",
-      "spotifyUrl": "https://open.spotify.com/track/45YBVp6zMwQZRbUDcPzmMB",
-      "duration": 288013,
-      "previewUrl": ""
-    },
-    {
-      "id": "6megNXGjmim4OitjZnIn9v",
-      "name": "春雷",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-03-22T13:45:30.119Z",
-      "spotifyUrl": "https://open.spotify.com/track/6megNXGjmim4OitjZnIn9v",
-      "duration": 288887,
       "previewUrl": ""
     }
   ],
