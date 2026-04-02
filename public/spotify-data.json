@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-04-02T07:00:20.510Z",
+  "lastUpdated": "2026-04-02T12:47:42.903Z",
   "tracks": [
+    {
+      "id": "6V84TVb99ggmz1w9Bm3x8v",
+      "name": "ぴんきーれっど！",
+      "artist": "FRUITS ZIPPER",
+      "album": "NEW KAWAII / フルーツバスケット",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bfbeb8215ee3eb860d9aac4",
+      "playedAt": "2026-04-02T07:15:09.651Z",
+      "spotifyUrl": "https://open.spotify.com/track/6V84TVb99ggmz1w9Bm3x8v",
+      "duration": 242091,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-04-02T07:09:34.576Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
     {
       "id": "07rg7ciYLLffOV5Fpe0I2F",
       "name": "Oshama Scramble!",
@@ -101,17 +123,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6V84TVb99ggmz1w9Bm3x8v",
-      "name": "ぴんきーれっど！",
-      "artist": "FRUITS ZIPPER",
-      "album": "NEW KAWAII / フルーツバスケット",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bfbeb8215ee3eb860d9aac4",
-      "playedAt": "2026-03-31T14:09:49.856Z",
-      "spotifyUrl": "https://open.spotify.com/track/6V84TVb99ggmz1w9Bm3x8v",
-      "duration": 242091,
-      "previewUrl": ""
-    },
-    {
       "id": "53I1pWLuvMBmfmxxwMJcJ3",
       "name": "キスハグ侵略者！",
       "artist": "iLiFE!",
@@ -164,17 +175,6 @@
       "playedAt": "2026-03-31T08:09:49.613Z",
       "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
       "duration": 298746,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-03-31T07:06:26.558Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     },
     {
