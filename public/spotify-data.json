@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-04-03T01:20:03.233Z",
+  "lastUpdated": "2026-04-03T06:57:23.907Z",
   "tracks": [
+    {
+      "id": "0epHGco0rSWDSDVlppfUWL",
+      "name": "Commit Ballad feat. Chara",
+      "artist": "toe, Chara",
+      "album": "HEAR YOU",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b7c4d39fd906393858b184f",
+      "playedAt": "2026-04-03T04:49:11.180Z",
+      "spotifyUrl": "https://open.spotify.com/track/0epHGco0rSWDSDVlppfUWL",
+      "duration": 245915,
+      "previewUrl": ""
+    },
+    {
+      "id": "6njCYAgcQgHAmbN7VChcrI",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737ac9daff68bbeeb56d69e894",
+      "playedAt": "2026-04-03T04:47:56.875Z",
+      "spotifyUrl": "https://open.spotify.com/track/6njCYAgcQgHAmbN7VChcrI",
+      "duration": 251173,
+      "previewUrl": ""
+    },
     {
       "id": "6V84TVb99ggmz1w9Bm3x8v",
       "name": "ぴんきーれっど！",
@@ -200,17 +222,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6njCYAgcQgHAmbN7VChcrI",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737ac9daff68bbeeb56d69e894",
-      "playedAt": "2026-03-30T10:22:52.324Z",
-      "spotifyUrl": "https://open.spotify.com/track/6njCYAgcQgHAmbN7VChcrI",
-      "duration": 251173,
-      "previewUrl": ""
-    },
-    {
       "id": "0awDhtiMxhWAdUe1VIsjaX",
       "name": "キス・ミー・パティシエ",
       "artist": "CANDY TUNE",
@@ -318,17 +329,6 @@
       "playedAt": "2026-03-23T04:41:44.457Z",
       "spotifyUrl": "https://open.spotify.com/track/7lUaEsQVwvNEjaJNcvc1CN",
       "duration": 261239,
-      "previewUrl": ""
-    },
-    {
-      "id": "0FOVGBW0RpVRuDuUuN4ZVw",
-      "name": "ヨワネハキ",
-      "artist": "MAISONdes, 和ぬか, asmi",
-      "album": "ヨワネハキ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b5173af606dd660218869b77",
-      "playedAt": "2026-03-23T04:37:22.437Z",
-      "spotifyUrl": "https://open.spotify.com/track/0FOVGBW0RpVRuDuUuN4ZVw",
-      "duration": 166966,
       "previewUrl": ""
     }
   ],
