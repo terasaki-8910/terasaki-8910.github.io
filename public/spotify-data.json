@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-04-05T01:23:38.206Z",
+  "lastUpdated": "2026-04-05T06:54:20.971Z",
   "tracks": [
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-04-05T04:22:46.460Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
     {
       "id": "0epHGco0rSWDSDVlppfUWL",
       "name": "Commit Ballad feat. Chara",
@@ -32,17 +43,6 @@
       "playedAt": "2026-04-02T07:15:09.651Z",
       "spotifyUrl": "https://open.spotify.com/track/6V84TVb99ggmz1w9Bm3x8v",
       "duration": 242091,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-04-02T07:09:34.576Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     },
     {
