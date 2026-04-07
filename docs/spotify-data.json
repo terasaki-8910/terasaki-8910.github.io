@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-04-07T12:56:19.196Z",
+  "lastUpdated": "2026-04-07T18:47:15.718Z",
   "tracks": [
+    {
+      "id": "6MwAs47LdYmlstiDmHzksi",
+      "name": "チルノのパーフェクトさんすう教室",
+      "artist": "IOSYS",
+      "album": "東方氷雪歌集",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fe910682585a207091d63cde",
+      "playedAt": "2026-04-07T14:22:41.900Z",
+      "spotifyUrl": "https://open.spotify.com/track/6MwAs47LdYmlstiDmHzksi",
+      "duration": 278635,
+      "previewUrl": ""
+    },
     {
       "id": "1YfXeoQ39zL9IWHOTrL8bg",
       "name": "海馬成長痛",
@@ -318,17 +329,6 @@
       "playedAt": "2026-03-30T10:31:07.462Z",
       "spotifyUrl": "https://open.spotify.com/track/3c1nNLlZarwI1ovwJ09OgR",
       "duration": 227866,
-      "previewUrl": ""
-    },
-    {
-      "id": "0awDhtiMxhWAdUe1VIsjaX",
-      "name": "キス・ミー・パティシエ",
-      "artist": "CANDY TUNE",
-      "album": "CANDY TUNE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734213a378e5874aa470dc4ee6",
-      "playedAt": "2026-03-30T04:50:42.231Z",
-      "spotifyUrl": "https://open.spotify.com/track/0awDhtiMxhWAdUe1VIsjaX",
-      "duration": 216000,
       "previewUrl": ""
     }
   ],
