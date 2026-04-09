@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-04-09T12:58:33.047Z",
+  "lastUpdated": "2026-04-09T18:49:22.815Z",
   "tracks": [
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-04-09T14:31:15.165Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-04-09T14:26:35.472Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vziRWZny2GDwHX2UYJxa2",
+      "name": "おちゃめ機能",
+      "artist": "Lon",
+      "album": "Upload feat.Vocalist",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
+      "playedAt": "2026-04-09T14:23:25.355Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
+      "duration": 252066,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-04-09T14:19:14.096Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2026-04-09T14:14:47.755Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
+      "previewUrl": ""
+    },
     {
       "id": "07rg7ciYLLffOV5Fpe0I2F",
       "name": "Oshama Scramble!",
@@ -10,17 +65,6 @@
       "playedAt": "2026-04-09T12:52:32.957Z",
       "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
       "duration": 124146,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-04-09T09:21:11.198Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     },
     {
@@ -43,17 +87,6 @@
       "playedAt": "2026-04-09T09:14:44.554Z",
       "spotifyUrl": "https://open.spotify.com/track/0kCRrfk1WV7QMnlxqhpwV9",
       "duration": 158866,
-      "previewUrl": ""
-    },
-    {
-      "id": "17OQVshtovwVo2vk6tuzwn",
-      "name": "ライアーダンサー",
-      "artist": "マサラダ",
-      "album": "ライアーダンサー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-04-09T09:12:05.406Z",
-      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
-      "duration": 242459,
       "previewUrl": ""
     },
     {
@@ -145,17 +178,6 @@
       "previewUrl": ""
     },
     {
-      "id": "03xt11xuwiqUQBMYKwEWKz",
-      "name": "モニタリング",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-04-08T17:24:18.036Z",
-      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
-      "duration": 176960,
-      "previewUrl": ""
-    },
-    {
       "id": "5ic62hKqeDhZsa9l6YQxzJ",
       "name": "メズマライザー (feat. 初音ミク&重音テト)",
       "artist": "32ki, Hatsune Miku, 重音テト",
@@ -242,51 +264,7 @@
       "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
       "duration": 229133,
       "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-04-07T10:57:02.004Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
-      "previewUrl": ""
-    },
-    {
-      "id": "0QTR1xpynHJJvKnLyOx1Zo",
-      "name": "踅夜市",
-      "artist": "Sorry Youth, 余佩真",
-      "album": "歹勢好勢",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d7879f00f410d0238db3f3fe",
-      "playedAt": "2026-04-07T07:38:13.968Z",
-      "spotifyUrl": "https://open.spotify.com/track/0QTR1xpynHJJvKnLyOx1Zo",
-      "duration": 267118,
-      "previewUrl": ""
-    },
-    {
-      "id": "7CkReQlOUnEHp9LP6tVfCF",
-      "name": "Kimochy",
-      "artist": "Lucky Kilimanjaro",
-      "album": "Kimochy Season",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386bcfab2748169aea5890858",
-      "playedAt": "2026-04-06T10:29:06.394Z",
-      "spotifyUrl": "https://open.spotify.com/track/7CkReQlOUnEHp9LP6tVfCF",
-      "duration": 198673,
-      "previewUrl": ""
-    },
-    {
-      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
-      "name": "STAY TUNE",
-      "artist": "Suchmos",
-      "album": "THE KIDS",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
-      "playedAt": "2026-04-06T10:23:12.390Z",
-      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
-      "duration": 298746,
-      "previewUrl": ""
     }
   ],
-  "total": 26
+  "total": 24
 }
