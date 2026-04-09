@@ -1,6 +1,149 @@
 {
-  "lastUpdated": "2026-04-09T07:09:55.536Z",
+  "lastUpdated": "2026-04-09T12:58:33.047Z",
   "tracks": [
+    {
+      "id": "07rg7ciYLLffOV5Fpe0I2F",
+      "name": "Oshama Scramble!",
+      "artist": "t+pazolite",
+      "album": "maimai ALL PERFECT COLLECTiON 3",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
+      "playedAt": "2026-04-09T12:52:32.957Z",
+      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
+      "duration": 124146,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-04-09T09:21:11.198Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "6HznFPNdvbxgzm5jJyNlwp",
+      "name": "オーバーライド",
+      "artist": "Yoshida Yasei",
+      "album": "オーバーライド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
+      "playedAt": "2026-04-09T09:17:03.535Z",
+      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "0kCRrfk1WV7QMnlxqhpwV9",
+      "name": "ラビットホール",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-04-09T09:14:44.554Z",
+      "spotifyUrl": "https://open.spotify.com/track/0kCRrfk1WV7QMnlxqhpwV9",
+      "duration": 158866,
+      "previewUrl": ""
+    },
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2026-04-09T09:12:05.406Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
+      "previewUrl": ""
+    },
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-04-09T09:08:02.202Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "6LIpqsMbsfc8I7F0dsFXsv",
+      "name": "テトリス",
+      "artist": "柊マグネタイト",
+      "album": "テトリス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734349a5931dff5a37c5bff39f",
+      "playedAt": "2026-04-09T09:03:48.783Z",
+      "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
+      "duration": 142588,
+      "previewUrl": ""
+    },
+    {
+      "id": "5tcnPaFhcpSLx7ihFwI9DM",
+      "name": "ココロオドル -original version-",
+      "artist": "nobodyknows+",
+      "album": "ココロオドル",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
+      "playedAt": "2026-04-09T09:01:25.442Z",
+      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
+      "duration": 253533,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FXu6nhlIgbpgxt61ntlnR",
+      "name": "Override",
+      "artist": "Yoshida Yasei",
+      "album": "Override",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
+      "playedAt": "2026-04-09T08:57:11.469Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "6MwAs47LdYmlstiDmHzksi",
+      "name": "チルノのパーフェクトさんすう教室",
+      "artist": "IOSYS",
+      "album": "東方氷雪歌集",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fe910682585a207091d63cde",
+      "playedAt": "2026-04-09T08:54:52.405Z",
+      "spotifyUrl": "https://open.spotify.com/track/6MwAs47LdYmlstiDmHzksi",
+      "duration": 278635,
+      "previewUrl": ""
+    },
+    {
+      "id": "3SAgoXsKEGMlIGNtOvs0vV",
+      "name": "インドア系ならトラックメイカー",
+      "artist": "Yunomi, nicamoq",
+      "album": "ゆのもきゅ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e3a8cc0c4984a9abe5c886b4",
+      "playedAt": "2026-04-09T08:50:14.212Z",
+      "spotifyUrl": "https://open.spotify.com/track/3SAgoXsKEGMlIGNtOvs0vV",
+      "duration": 195585,
+      "previewUrl": ""
+    },
+    {
+      "id": "13XIvFx53mpzO1jSIJC0Ad",
+      "name": "Pumpin' Junkies",
+      "artist": "t+pazolite",
+      "album": "絢爛喧騒オリエント",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
+      "playedAt": "2026-04-09T08:46:57.223Z",
+      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
+      "duration": 269465,
+      "previewUrl": ""
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-04-09T08:42:19.713Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
     {
       "id": "03xt11xuwiqUQBMYKwEWKz",
       "name": "モニタリング",
@@ -24,17 +167,6 @@
       "previewUrl": ""
     },
     {
-      "id": "13XIvFx53mpzO1jSIJC0Ad",
-      "name": "Pumpin' Junkies",
-      "artist": "t+pazolite",
-      "album": "絢爛喧騒オリエント",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
-      "playedAt": "2026-04-08T17:12:21.459Z",
-      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
-      "duration": 269465,
-      "previewUrl": ""
-    },
-    {
       "id": "3BPnFpAL02Bos8EoTLnO9R",
       "name": "キミに100パーセント",
       "artist": "Kyary Pamyu Pamyu",
@@ -43,28 +175,6 @@
       "playedAt": "2026-04-08T16:32:57.015Z",
       "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
       "duration": 200253,
-      "previewUrl": ""
-    },
-    {
-      "id": "6HznFPNdvbxgzm5jJyNlwp",
-      "name": "オーバーライド",
-      "artist": "Yoshida Yasei",
-      "album": "オーバーライド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
-      "playedAt": "2026-04-08T16:29:36.283Z",
-      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
-      "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      "playedAt": "2026-04-08T16:27:17.253Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
       "previewUrl": ""
     },
     {
@@ -134,39 +244,6 @@
       "previewUrl": ""
     },
     {
-      "id": "4FXu6nhlIgbpgxt61ntlnR",
-      "name": "Override",
-      "artist": "Yoshida Yasei",
-      "album": "Override",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
-      "playedAt": "2026-04-08T10:29:14.602Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
-      "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tcnPaFhcpSLx7ihFwI9DM",
-      "name": "ココロオドル -original version-",
-      "artist": "nobodyknows+",
-      "album": "ココロオドル",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
-      "playedAt": "2026-04-08T10:26:55.425Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
-      "duration": 253533,
-      "previewUrl": ""
-    },
-    {
-      "id": "6MwAs47LdYmlstiDmHzksi",
-      "name": "チルノのパーフェクトさんすう教室",
-      "artist": "IOSYS",
-      "album": "東方氷雪歌集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fe910682585a207091d63cde",
-      "playedAt": "2026-04-07T14:22:41.900Z",
-      "spotifyUrl": "https://open.spotify.com/track/6MwAs47LdYmlstiDmHzksi",
-      "duration": 278635,
-      "previewUrl": ""
-    },
-    {
       "id": "1YfXeoQ39zL9IWHOTrL8bg",
       "name": "海馬成長痛",
       "artist": "ZUTOMAYO",
@@ -175,39 +252,6 @@
       "playedAt": "2026-04-07T10:57:02.004Z",
       "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
       "duration": 189533,
-      "previewUrl": ""
-    },
-    {
-      "id": "0kCRrfk1WV7QMnlxqhpwV9",
-      "name": "ラビットホール",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-04-07T10:53:16.831Z",
-      "spotifyUrl": "https://open.spotify.com/track/0kCRrfk1WV7QMnlxqhpwV9",
-      "duration": 158866,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-04-07T10:48:03.442Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-04-07T10:41:36.824Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     },
     {
@@ -242,84 +286,7 @@
       "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
       "duration": 298746,
       "previewUrl": ""
-    },
-    {
-      "id": "0epHGco0rSWDSDVlppfUWL",
-      "name": "Commit Ballad feat. Chara",
-      "artist": "toe, Chara",
-      "album": "HEAR YOU",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b7c4d39fd906393858b184f",
-      "playedAt": "2026-04-03T04:49:11.180Z",
-      "spotifyUrl": "https://open.spotify.com/track/0epHGco0rSWDSDVlppfUWL",
-      "duration": 245915,
-      "previewUrl": ""
-    },
-    {
-      "id": "6njCYAgcQgHAmbN7VChcrI",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737ac9daff68bbeeb56d69e894",
-      "playedAt": "2026-04-03T04:47:56.875Z",
-      "spotifyUrl": "https://open.spotify.com/track/6njCYAgcQgHAmbN7VChcrI",
-      "duration": 251173,
-      "previewUrl": ""
-    },
-    {
-      "id": "6V84TVb99ggmz1w9Bm3x8v",
-      "name": "ぴんきーれっど！",
-      "artist": "FRUITS ZIPPER",
-      "album": "NEW KAWAII / フルーツバスケット",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bfbeb8215ee3eb860d9aac4",
-      "playedAt": "2026-04-02T07:15:09.651Z",
-      "spotifyUrl": "https://open.spotify.com/track/6V84TVb99ggmz1w9Bm3x8v",
-      "duration": 242091,
-      "previewUrl": ""
-    },
-    {
-      "id": "07rg7ciYLLffOV5Fpe0I2F",
-      "name": "Oshama Scramble!",
-      "artist": "t+pazolite",
-      "album": "maimai ALL PERFECT COLLECTiON 3",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
-      "playedAt": "2026-04-02T06:55:25.675Z",
-      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
-      "duration": 124146,
-      "previewUrl": ""
-    },
-    {
-      "id": "59hVbgr8rfYkDbHfr8RcGI",
-      "name": "IRIS OUT",
-      "artist": "Kenshi Yonezu",
-      "album": "IRIS OUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
-      "playedAt": "2026-04-02T06:45:03.642Z",
-      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
-      "duration": 151573,
-      "previewUrl": ""
-    },
-    {
-      "id": "4ImjstkvWuxK1eElOJYd6R",
-      "name": "Execution Clap",
-      "artist": "TRAP CHICK, 重音テト",
-      "album": "Execution Clap",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732fd4533d6e092910cc45a8c7",
-      "playedAt": "2026-04-01T07:51:14.353Z",
-      "spotifyUrl": "https://open.spotify.com/track/4ImjstkvWuxK1eElOJYd6R",
-      "duration": 191250,
-      "previewUrl": ""
-    },
-    {
-      "id": "5qgxx7wxqBRL9c3BXtklRt",
-      "name": "君セン！",
-      "artist": "iLiFE!",
-      "album": "アイライフスターターパック！",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27397dcd484c20616d3e136a7c5",
-      "playedAt": "2026-04-01T06:08:48.955Z",
-      "spotifyUrl": "https://open.spotify.com/track/5qgxx7wxqBRL9c3BXtklRt",
-      "duration": 248400,
-      "previewUrl": ""
     }
   ],
-  "total": 29
+  "total": 26
 }
