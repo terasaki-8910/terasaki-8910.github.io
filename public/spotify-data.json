@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-04-12T01:27:39.231Z",
+  "lastUpdated": "2026-04-12T07:02:54.084Z",
   "tracks": [
+    {
+      "id": "6lcqXYjDSGxx69DurXx0rF",
+      "name": "ループザルーム (feat. 初音ミク)",
+      "artist": "ルシノ, Hatsune Miku",
+      "album": "ループザルーム / ランベントアリア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
+      "playedAt": "2026-04-12T04:18:44.273Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
+      "duration": 134071,
+      "previewUrl": ""
+    },
     {
       "id": "03xt11xuwiqUQBMYKwEWKz",
       "name": "モニタリング",
@@ -219,17 +230,6 @@
       "playedAt": "2026-04-08T16:18:59.598Z",
       "spotifyUrl": "https://open.spotify.com/track/6MJFNhbXbqXCbHP24yLltO",
       "duration": 206274,
-      "previewUrl": ""
-    },
-    {
-      "id": "6lcqXYjDSGxx69DurXx0rF",
-      "name": "ループザルーム (feat. 初音ミク)",
-      "artist": "ルシノ, Hatsune Miku",
-      "album": "ループザルーム / ランベントアリア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
-      "playedAt": "2026-04-08T16:15:32.752Z",
-      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
-      "duration": 134071,
       "previewUrl": ""
     },
     {
