@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-04-16T13:04:42.372Z",
+  "lastUpdated": "2026-04-16T18:58:15.919Z",
   "tracks": [
+    {
+      "id": "3zrmJWuIWUmrhhSAZnlOYF",
+      "name": "にんじゃりばんばん",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "なんだこれくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
+      "playedAt": "2026-04-16T14:09:36.581Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zrmJWuIWUmrhhSAZnlOYF",
+      "duration": 266686,
+      "previewUrl": ""
+    },
     {
       "id": "4tjRvHjQu2fK8uEgXtjiTN",
       "name": "グリズリーに襲われたら♡",
@@ -266,5 +277,5 @@
       "previewUrl": ""
     }
   ],
-  "total": 24
+  "total": 25
 }
