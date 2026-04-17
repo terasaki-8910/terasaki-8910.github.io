@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-04-17T07:18:34.543Z",
+  "lastUpdated": "2026-04-17T12:55:13.201Z",
   "tracks": [
+    {
+      "id": "752WJrwNFCg0IRwKvr5RT5",
+      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "artist": "Tudd, GameChops",
+      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
+      "playedAt": "2026-04-17T08:17:03.012Z",
+      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
+      "duration": 237611,
+      "previewUrl": ""
+    },
+    {
+      "id": "13XIvFx53mpzO1jSIJC0Ad",
+      "name": "Pumpin' Junkies",
+      "artist": "t+pazolite",
+      "album": "絢爛喧騒オリエント",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
+      "playedAt": "2026-04-17T07:58:33.501Z",
+      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
+      "duration": 269465,
+      "previewUrl": ""
+    },
     {
       "id": "3zrmJWuIWUmrhhSAZnlOYF",
       "name": "にんじゃりばんばん",
@@ -244,17 +266,6 @@
       "previewUrl": ""
     },
     {
-      "id": "13XIvFx53mpzO1jSIJC0Ad",
-      "name": "Pumpin' Junkies",
-      "artist": "t+pazolite",
-      "album": "絢爛喧騒オリエント",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
-      "playedAt": "2026-04-09T08:46:57.223Z",
-      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
-      "duration": 269465,
-      "previewUrl": ""
-    },
-    {
       "id": "0aB0v4027ukVziUGwVGYpG",
       "name": "tv off (feat. lefty gunplay)",
       "artist": "Kendrick Lamar, Lefty Gunplay",
@@ -263,17 +274,6 @@
       "playedAt": "2026-04-09T08:42:19.713Z",
       "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
       "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "5ic62hKqeDhZsa9l6YQxzJ",
-      "name": "メズマライザー (feat. 初音ミク&重音テト)",
-      "artist": "32ki, Hatsune Miku, 重音テト",
-      "album": "メズマライザー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321333eb66e3cf9f3818e789f",
-      "playedAt": "2026-04-08T17:15:00.365Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
-      "duration": 156972,
       "previewUrl": ""
     }
   ],
