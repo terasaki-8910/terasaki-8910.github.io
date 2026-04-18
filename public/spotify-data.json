@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-04-18T01:20:36.601Z",
+  "lastUpdated": "2026-04-18T06:55:58.541Z",
   "tracks": [
+    {
+      "id": "3zuOoqvVzxEzXi0D0Ma4SM",
+      "name": "Alpha",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
+      "playedAt": "2026-04-18T04:11:38.672Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zuOoqvVzxEzXi0D0Ma4SM",
+      "duration": 603000,
+      "previewUrl": ""
+    },
     {
       "id": "752WJrwNFCg0IRwKvr5RT5",
       "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
@@ -277,5 +288,5 @@
       "previewUrl": ""
     }
   ],
-  "total": 25
+  "total": 26
 }
