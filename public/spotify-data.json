@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-04-19T12:36:54.497Z",
+  "lastUpdated": "2026-04-19T18:33:43.073Z",
   "tracks": [
+    {
+      "id": "4PO8fERDL1d1FQA7uHg8il",
+      "name": "Among Us",
+      "artist": "Sembari +",
+      "album": "Among Us",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
+      "playedAt": "2026-04-19T12:53:16.201Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
+      "duration": 90508,
+      "previewUrl": ""
+    },
     {
       "id": "2XbryOVSaPXhpre0Yj4MUv",
       "name": "Squid Sisters (The Fresh Remix)",
@@ -10,17 +21,6 @@
       "playedAt": "2026-04-19T06:37:42.539Z",
       "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
       "duration": 195375,
-      "previewUrl": ""
-    },
-    {
-      "id": "4PO8fERDL1d1FQA7uHg8il",
-      "name": "Among Us",
-      "artist": "Sembari +",
-      "album": "Among Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
-      "playedAt": "2026-04-18T10:24:32.269Z",
-      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
-      "duration": 90508,
       "previewUrl": ""
     },
     {
@@ -286,18 +286,7 @@
       "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
       "duration": 253533,
       "previewUrl": ""
-    },
-    {
-      "id": "4FXu6nhlIgbpgxt61ntlnR",
-      "name": "Override",
-      "artist": "Yoshida Yasei",
-      "album": "Override",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
-      "playedAt": "2026-04-09T08:57:11.469Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
-      "duration": 138533,
-      "previewUrl": ""
     }
   ],
-  "total": 27
+  "total": 26
 }
