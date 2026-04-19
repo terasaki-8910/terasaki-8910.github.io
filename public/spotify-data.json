@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-04-19T01:42:42.901Z",
+  "lastUpdated": "2026-04-19T07:06:10.257Z",
   "tracks": [
+    {
+      "id": "2XbryOVSaPXhpre0Yj4MUv",
+      "name": "Squid Sisters (The Fresh Remix)",
+      "artist": "MandoPony",
+      "album": "Songs for Gamers, Vol. 1",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273860b382cdec10b0565373a4c",
+      "playedAt": "2026-04-19T06:37:42.539Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
+      "duration": 195375,
+      "previewUrl": ""
+    },
     {
       "id": "4PO8fERDL1d1FQA7uHg8il",
       "name": "Among Us",
@@ -285,17 +296,6 @@
       "playedAt": "2026-04-09T08:57:11.469Z",
       "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
       "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "6MwAs47LdYmlstiDmHzksi",
-      "name": "チルノのパーフェクトさんすう教室",
-      "artist": "IOSYS",
-      "album": "東方氷雪歌集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fe910682585a207091d63cde",
-      "playedAt": "2026-04-09T08:54:52.405Z",
-      "spotifyUrl": "https://open.spotify.com/track/6MwAs47LdYmlstiDmHzksi",
-      "duration": 278635,
       "previewUrl": ""
     }
   ],
