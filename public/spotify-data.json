@@ -1,13 +1,24 @@
 {
-  "lastUpdated": "2026-04-19T18:33:43.073Z",
+  "lastUpdated": "2026-04-20T01:45:31.629Z",
   "tracks": [
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-04-19T20:57:31.298Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
     {
       "id": "4PO8fERDL1d1FQA7uHg8il",
       "name": "Among Us",
       "artist": "Sembari +",
       "album": "Among Us",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
-      "playedAt": "2026-04-19T12:53:16.201Z",
+      "playedAt": "2026-04-19T20:48:19.100Z",
       "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
       "duration": 90508,
       "previewUrl": ""
@@ -32,17 +43,6 @@
       "playedAt": "2026-04-18T10:20:26.462Z",
       "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
       "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-04-18T10:18:21.520Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
       "previewUrl": ""
     },
     {
@@ -264,29 +264,7 @@
       "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
       "duration": 242459,
       "previewUrl": ""
-    },
-    {
-      "id": "6LIpqsMbsfc8I7F0dsFXsv",
-      "name": "テトリス",
-      "artist": "柊マグネタイト",
-      "album": "テトリス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734349a5931dff5a37c5bff39f",
-      "playedAt": "2026-04-09T09:03:48.783Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
-      "duration": 142588,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tcnPaFhcpSLx7ihFwI9DM",
-      "name": "ココロオドル -original version-",
-      "artist": "nobodyknows+",
-      "album": "ココロオドル",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
-      "playedAt": "2026-04-09T09:01:25.442Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
-      "duration": 253533,
-      "previewUrl": ""
     }
   ],
-  "total": 26
+  "total": 24
 }
