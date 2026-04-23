@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-04-23T01:44:19.229Z",
+  "lastUpdated": "2026-04-23T07:21:40.308Z",
   "tracks": [
+    {
+      "id": "2XS2jEncSJsetNZdVtlpeo",
+      "name": "とくべチュ、して",
+      "artist": "=LOVE",
+      "album": "とくべチュ、して",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d7f3a9e810813d803a8173eb",
+      "playedAt": "2026-04-23T04:14:05.639Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XS2jEncSJsetNZdVtlpeo",
+      "duration": 239013,
+      "previewUrl": ""
+    },
+    {
+      "id": "78Kxv9YLtmyyupzhgtozIj",
+      "name": "沼れ！マイラバー",
+      "artist": "いぎなり東北産",
+      "album": "東北産万博",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736b38b60aca6c688ef0f5c229",
+      "playedAt": "2026-04-23T04:10:05.048Z",
+      "spotifyUrl": "https://open.spotify.com/track/78Kxv9YLtmyyupzhgtozIj",
+      "duration": 203128,
+      "previewUrl": ""
+    },
     {
       "id": "7pgo1C8l5AX3pkwktxIklG",
       "name": "Baqeela (feat. seki＊tree) - Long Version",
@@ -266,5 +288,5 @@
       "previewUrl": ""
     }
   ],
-  "total": 24
+  "total": 26
 }
