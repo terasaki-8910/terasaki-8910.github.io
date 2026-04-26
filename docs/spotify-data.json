@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-04-26T07:15:56.738Z",
+  "lastUpdated": "2026-04-26T12:40:47.048Z",
   "tracks": [
+    {
+      "id": "0bBemx10INOLoDQFLNWE5k",
+      "name": "smooooch・∀・ - Orchestra Arr.",
+      "artist": "kors k",
+      "album": "BEMANI SYMPHONY ORIGINAL SOUNDTRACK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5cc51df687ed356d6363330",
+      "playedAt": "2026-04-26T09:32:46.009Z",
+      "spotifyUrl": "https://open.spotify.com/track/0bBemx10INOLoDQFLNWE5k",
+      "duration": 241386,
+      "previewUrl": ""
+    },
     {
       "id": "17OQVshtovwVo2vk6tuzwn",
       "name": "ライアーダンサー",
@@ -318,17 +329,6 @@
       "playedAt": "2026-04-14T15:15:57.670Z",
       "spotifyUrl": "https://open.spotify.com/track/3SAgoXsKEGMlIGNtOvs0vV",
       "duration": 195585,
-      "previewUrl": ""
-    },
-    {
-      "id": "6r5PYnGBu1hkQrk3zPkt1I",
-      "name": "イガク",
-      "artist": "Sasuke Haraguchi",
-      "album": "イガク",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
-      "playedAt": "2026-04-14T15:11:19.927Z",
-      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
-      "duration": 120352,
       "previewUrl": ""
     }
   ],
