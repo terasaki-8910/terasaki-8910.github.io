@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-04-30T08:02:59.899Z",
+  "lastUpdated": "2026-04-30T13:19:20.456Z",
   "tracks": [
+    {
+      "id": "3hRRYgBeunE3PTmnzATTS0",
+      "name": "天体観測",
+      "artist": "BUMP OF CHICKEN",
+      "album": "jupiter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5017c120597ec5a35015ef6",
+      "playedAt": "2026-04-30T10:09:19.256Z",
+      "spotifyUrl": "https://open.spotify.com/track/3hRRYgBeunE3PTmnzATTS0",
+      "duration": 263600,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-04-30T10:09:18.051Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
     {
       "id": "5WsjuvYrFRi9cqKBscT3oq",
       "name": "INTERNET YAMERO",
@@ -142,17 +164,6 @@
       "playedAt": "2026-04-27T12:09:32.560Z",
       "spotifyUrl": "https://open.spotify.com/track/78iMXzsLekKWvg0MiaNzuW",
       "duration": 159706,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-04-27T12:05:59.172Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-04-25T03:49:44.886Z",
       "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
       "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XNaPTYDeQcTqAaWoHKMEp",
-      "name": "Analyse",
-      "artist": "Thom Yorke",
-      "album": "The Eraser",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
-      "playedAt": "2026-04-24T09:47:42.493Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XNaPTYDeQcTqAaWoHKMEp",
-      "duration": 242786,
       "previewUrl": ""
     }
   ],
