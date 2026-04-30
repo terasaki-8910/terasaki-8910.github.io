@@ -1,6 +1,215 @@
 {
-  "lastUpdated": "2026-04-30T13:19:20.456Z",
+  "lastUpdated": "2026-04-30T19:04:58.152Z",
   "tracks": [
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+      "playedAt": "2026-04-30T15:57:32.320Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
+    {
+      "id": "6HznFPNdvbxgzm5jJyNlwp",
+      "name": "オーバーライド",
+      "artist": "Yoshida Yasei",
+      "album": "オーバーライド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
+      "playedAt": "2026-04-30T15:53:50.016Z",
+      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "6r5PYnGBu1hkQrk3zPkt1I",
+      "name": "イガク",
+      "artist": "Sasuke Haraguchi",
+      "album": "イガク",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
+      "playedAt": "2026-04-30T14:47:53.026Z",
+      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
+      "duration": 120352,
+      "previewUrl": ""
+    },
+    {
+      "id": "13XIvFx53mpzO1jSIJC0Ad",
+      "name": "Pumpin' Junkies",
+      "artist": "t+pazolite",
+      "album": "絢爛喧騒オリエント",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
+      "playedAt": "2026-04-30T14:45:44.766Z",
+      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
+      "duration": 269465,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-04-30T14:41:14.863Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
+      "previewUrl": ""
+    },
+    {
+      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
+      "name": "doodle",
+      "artist": "Zachz Winner",
+      "album": "doodle",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
+      "playedAt": "2026-04-30T14:37:21.581Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
+      "duration": 73918,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-04-30T14:36:18.655Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
+    {
+      "id": "7hZ2wV0F3Ca17GTSYHH2f1",
+      "name": "メトロシティ",
+      "artist": "imase, natori",
+      "album": "メトロシティ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27375b7de023f3b78a63f146dac",
+      "playedAt": "2026-04-30T14:31:32.426Z",
+      "spotifyUrl": "https://open.spotify.com/track/7hZ2wV0F3Ca17GTSYHH2f1",
+      "duration": 200511,
+      "previewUrl": ""
+    },
+    {
+      "id": "5d0dz0ekefZ243cWDGiDJ1",
+      "name": "アイモライモ - Aimoraimo",
+      "artist": "tuki.",
+      "album": "アイモライモ - Aimoraimo",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bb4f7c3d1daff70f965aacd3",
+      "playedAt": "2026-04-30T14:28:11.389Z",
+      "spotifyUrl": "https://open.spotify.com/track/5d0dz0ekefZ243cWDGiDJ1",
+      "duration": 255320,
+      "previewUrl": ""
+    },
+    {
+      "id": "3rWyLf6o3RMbUeK4aafkHd",
+      "name": "p.h. - cover",
+      "artist": "suisoh",
+      "album": "p.h. (cover)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736f4be5c667dfbf2c2781c4c9",
+      "playedAt": "2026-04-30T14:23:55.875Z",
+      "spotifyUrl": "https://open.spotify.com/track/3rWyLf6o3RMbUeK4aafkHd",
+      "duration": 152929,
+      "previewUrl": ""
+    },
+    {
+      "id": "1mUBfxiEdsrVhkQCohevey",
+      "name": "ヨセアツメ",
+      "artist": "和ぬか",
+      "album": "ヨセアツメ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273879d3096a43336afe504b30f",
+      "playedAt": "2026-04-30T14:21:21.768Z",
+      "spotifyUrl": "https://open.spotify.com/track/1mUBfxiEdsrVhkQCohevey",
+      "duration": 197483,
+      "previewUrl": ""
+    },
+    {
+      "id": "3zbKiko8V3u2yn1RcT8xBZ",
+      "name": "青のすみか",
+      "artist": "Tatsuya Kitani",
+      "album": "ROUNDABOUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d49212018875a81c83b67e",
+      "playedAt": "2026-04-30T14:18:03.717Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zbKiko8V3u2yn1RcT8xBZ",
+      "duration": 196640,
+      "previewUrl": ""
+    },
+    {
+      "id": "5sMZm3jJiLgkbDOGSztRSY",
+      "name": "メランコリーキッチン",
+      "artist": "Kenshi Yonezu",
+      "album": "YANKEE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
+      "playedAt": "2026-04-30T14:14:46.643Z",
+      "spotifyUrl": "https://open.spotify.com/track/5sMZm3jJiLgkbDOGSztRSY",
+      "duration": 218653,
+      "previewUrl": ""
+    },
+    {
+      "id": "08YwAPnX8sygJUXG9rvhDv",
+      "name": "ハルジオン",
+      "artist": "YOASOBI",
+      "album": "THE BOOK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339917845c74c9e64320fbed9",
+      "playedAt": "2026-04-30T14:11:08.782Z",
+      "spotifyUrl": "https://open.spotify.com/track/08YwAPnX8sygJUXG9rvhDv",
+      "duration": 198600,
+      "previewUrl": ""
+    },
+    {
+      "id": "3F0hvTxaTJV6OsFnRqefXc",
+      "name": "アイデン貞貞メルトダウン",
+      "artist": "えなこ, P丸様｡",
+      "album": "アイデン貞貞メルトダウン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386001206942da71231c86b96",
+      "playedAt": "2026-04-30T14:07:48.439Z",
+      "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
+      "duration": 243880,
+      "previewUrl": ""
+    },
+    {
+      "id": "22sQUmLhT8umlEhQzDrzfJ",
+      "name": "第六感",
+      "artist": "Reol",
+      "album": "第六感",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27353172aaf6f532e9e45cbb841",
+      "playedAt": "2026-04-30T14:03:44.643Z",
+      "spotifyUrl": "https://open.spotify.com/track/22sQUmLhT8umlEhQzDrzfJ",
+      "duration": 191624,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FdpXwtpJfRltvFuTcpNL6",
+      "name": "モス",
+      "artist": "sakanaction",
+      "album": "834.194",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
+      "playedAt": "2026-04-30T14:00:32.448Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
+      "duration": 245000,
+      "previewUrl": ""
+    },
+    {
+      "id": "4PO8fERDL1d1FQA7uHg8il",
+      "name": "Among Us",
+      "artist": "Sembari +",
+      "album": "Among Us",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
+      "playedAt": "2026-04-30T13:56:07.358Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
+      "duration": 90508,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-04-30T13:33:54.940Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
     {
       "id": "3hRRYgBeunE3PTmnzATTS0",
       "name": "天体観測",
@@ -10,17 +219,6 @@
       "playedAt": "2026-04-30T10:09:19.256Z",
       "spotifyUrl": "https://open.spotify.com/track/3hRRYgBeunE3PTmnzATTS0",
       "duration": 263600,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-04-30T10:09:18.051Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     },
     {
@@ -79,17 +277,6 @@
       "previewUrl": ""
     },
     {
-      "id": "4FdpXwtpJfRltvFuTcpNL6",
-      "name": "モス",
-      "artist": "sakanaction",
-      "album": "834.194",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
-      "playedAt": "2026-04-30T02:52:48.026Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
-      "duration": 245000,
-      "previewUrl": ""
-    },
-    {
       "id": "1xr6xhzERfYXrNMdPi6Ru8",
       "name": "ラ・カンパネラ",
       "artist": "Franz Liszt, Nobuyuki Tsujii",
@@ -142,193 +329,6 @@
       "playedAt": "2026-04-29T07:17:21.502Z",
       "spotifyUrl": "https://open.spotify.com/track/7lT3oj3gxE6AJb87ZK8up7",
       "duration": 226313,
-      "previewUrl": ""
-    },
-    {
-      "id": "13XIvFx53mpzO1jSIJC0Ad",
-      "name": "Pumpin' Junkies",
-      "artist": "t+pazolite",
-      "album": "絢爛喧騒オリエント",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
-      "playedAt": "2026-04-27T12:45:55.644Z",
-      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
-      "duration": 269465,
-      "previewUrl": ""
-    },
-    {
-      "id": "78iMXzsLekKWvg0MiaNzuW",
-      "name": "Pokémon Sun, Moon - Battle vs. Ultra Beast",
-      "artist": "Arcade Player",
-      "album": "Pokémon: The Lost Themes, Vol. 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273944071188488a7913e8d6297",
-      "playedAt": "2026-04-27T12:09:32.560Z",
-      "spotifyUrl": "https://open.spotify.com/track/78iMXzsLekKWvg0MiaNzuW",
-      "duration": 159706,
-      "previewUrl": ""
-    },
-    {
-      "id": "4ImjstkvWuxK1eElOJYd6R",
-      "name": "Execution Clap",
-      "artist": "TRAP CHICK, 重音テト",
-      "album": "Execution Clap",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732fd4533d6e092910cc45a8c7",
-      "playedAt": "2026-04-27T12:01:54.456Z",
-      "spotifyUrl": "https://open.spotify.com/track/4ImjstkvWuxK1eElOJYd6R",
-      "duration": 191250,
-      "previewUrl": ""
-    },
-    {
-      "id": "2mOgz38YkByMHtL0PiaQbZ",
-      "name": "Brain Power - Long Version",
-      "artist": "NOMA",
-      "album": "Chronikle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d77c7feeb6d7ac657fe1cbd2",
-      "playedAt": "2026-04-27T05:41:41.510Z",
-      "spotifyUrl": "https://open.spotify.com/track/2mOgz38YkByMHtL0PiaQbZ",
-      "duration": 367802,
-      "previewUrl": ""
-    },
-    {
-      "id": "752WJrwNFCg0IRwKvr5RT5",
-      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "artist": "Tudd, GameChops",
-      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
-      "playedAt": "2026-04-27T05:41:41.307Z",
-      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
-      "duration": 237611,
-      "previewUrl": ""
-    },
-    {
-      "id": "638PHAOYgcooFRkjjDBadh",
-      "name": "Pokémon Center Jazz",
-      "artist": "The Deku Trio, GameChops, Unplugged",
-      "album": "Pokémon Center Jazz",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273daa28eae6acb923891cc1f83",
-      "playedAt": "2026-04-27T04:38:28.638Z",
-      "spotifyUrl": "https://open.spotify.com/track/638PHAOYgcooFRkjjDBadh",
-      "duration": 198620,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XbryOVSaPXhpre0Yj4MUv",
-      "name": "Squid Sisters (The Fresh Remix)",
-      "artist": "MandoPony",
-      "album": "Songs for Gamers, Vol. 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273860b382cdec10b0565373a4c",
-      "playedAt": "2026-04-27T04:35:09.714Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
-      "duration": 195375,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2026-04-27T04:20:35.395Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "4PO8fERDL1d1FQA7uHg8il",
-      "name": "Among Us",
-      "artist": "Sembari +",
-      "album": "Among Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
-      "playedAt": "2026-04-27T03:23:50.687Z",
-      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
-      "duration": 90508,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-04-27T03:23:37.025Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "2YZa7FpeKe423Wvme0yKNf",
-      "name": "いますぐ輪廻",
-      "artist": "NAKISO",
-      "album": "いますぐ輪廻",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342f821a5480cf2b8248db543",
-      "playedAt": "2026-04-27T03:21:38.602Z",
-      "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
-      "duration": 122482,
-      "previewUrl": ""
-    },
-    {
-      "id": "0bBemx10INOLoDQFLNWE5k",
-      "name": "smooooch・∀・ - Orchestra Arr.",
-      "artist": "kors k",
-      "album": "BEMANI SYMPHONY ORIGINAL SOUNDTRACK",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5cc51df687ed356d6363330",
-      "playedAt": "2026-04-26T09:32:46.009Z",
-      "spotifyUrl": "https://open.spotify.com/track/0bBemx10INOLoDQFLNWE5k",
-      "duration": 241386,
-      "previewUrl": ""
-    },
-    {
-      "id": "17OQVshtovwVo2vk6tuzwn",
-      "name": "ライアーダンサー",
-      "artist": "マサラダ",
-      "album": "ライアーダンサー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-04-25T06:31:47.899Z",
-      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
-      "duration": 242459,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-04-25T06:31:39.506Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tcnPaFhcpSLx7ihFwI9DM",
-      "name": "ココロオドル -original version-",
-      "artist": "nobodyknows+",
-      "album": "ココロオドル",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
-      "playedAt": "2026-04-25T03:55:42.749Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
-      "duration": 253533,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
-      "name": "Butter Building",
-      "artist": "Xoc",
-      "album": "What's Pink and Sucks?",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
-      "playedAt": "2026-04-25T03:51:24.104Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
-      "duration": 98754,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
-      "playedAt": "2026-04-25T03:49:44.886Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
       "previewUrl": ""
     }
   ],
