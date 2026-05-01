@@ -1,6 +1,116 @@
 {
-  "lastUpdated": "2026-05-01T08:01:15.574Z",
+  "lastUpdated": "2026-05-01T12:54:33.230Z",
   "tracks": [
+    {
+      "id": "07rg7ciYLLffOV5Fpe0I2F",
+      "name": "Oshama Scramble!",
+      "artist": "t+pazolite",
+      "album": "maimai ALL PERFECT COLLECTiON 3",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
+      "playedAt": "2026-05-01T12:52:54.030Z",
+      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
+      "duration": 124146,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FXu6nhlIgbpgxt61ntlnR",
+      "name": "Override",
+      "artist": "Yoshida Yasei",
+      "album": "Override",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
+      "playedAt": "2026-05-01T12:50:06.960Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "5tcnPaFhcpSLx7ihFwI9DM",
+      "name": "ココロオドル -original version-",
+      "artist": "nobodyknows+",
+      "album": "ココロオドル",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
+      "playedAt": "2026-05-01T12:47:47.698Z",
+      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
+      "duration": 253533,
+      "previewUrl": ""
+    },
+    {
+      "id": "3BPnFpAL02Bos8EoTLnO9R",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "KPP BEST",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
+      "playedAt": "2026-05-01T12:42:58.703Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "5pN2AyWwjzwRoI7gukEVNd",
+      "name": "さよーならまたいつか！- Sayonara",
+      "artist": "Kenshi Yonezu",
+      "album": "LOST CORNER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303d3216d6c463f993c96c9c7",
+      "playedAt": "2026-05-01T11:46:40.219Z",
+      "spotifyUrl": "https://open.spotify.com/track/5pN2AyWwjzwRoI7gukEVNd",
+      "duration": 201280,
+      "previewUrl": ""
+    },
+    {
+      "id": "3gmn76fCtpDazGMnN0QMHX",
+      "name": "NIGHT DANCER",
+      "artist": "imase",
+      "album": "POP CUBE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b062591b6a5c15652dd2bb5",
+      "playedAt": "2026-05-01T11:43:17.827Z",
+      "spotifyUrl": "https://open.spotify.com/track/3gmn76fCtpDazGMnN0QMHX",
+      "duration": 210600,
+      "previewUrl": ""
+    },
+    {
+      "id": "7lUaEsQVwvNEjaJNcvc1CN",
+      "name": "サウダージ",
+      "artist": "PornoGraffitti",
+      "album": "PORNO GRAFFITTI BEST RED'S",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738770cf0b8d9ddacf4f286688",
+      "playedAt": "2026-05-01T11:39:46.704Z",
+      "spotifyUrl": "https://open.spotify.com/track/7lUaEsQVwvNEjaJNcvc1CN",
+      "duration": 261239,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FdpXwtpJfRltvFuTcpNL6",
+      "name": "モス",
+      "artist": "sakanaction",
+      "album": "834.194",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
+      "playedAt": "2026-05-01T11:35:25.225Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
+      "duration": 245000,
+      "previewUrl": ""
+    },
+    {
+      "id": "7lT3oj3gxE6AJb87ZK8up7",
+      "name": "いらない",
+      "artist": "sakanaction",
+      "album": "いらない",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27377b8e1d157752397bf24f3a8",
+      "playedAt": "2026-05-01T11:31:19.392Z",
+      "spotifyUrl": "https://open.spotify.com/track/7lT3oj3gxE6AJb87ZK8up7",
+      "duration": 226313,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-05-01T10:30:36.421Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
     {
       "id": "4ImjstkvWuxK1eElOJYd6R",
       "name": "Execution Clap",
@@ -76,17 +186,6 @@
       "playedAt": "2026-04-30T14:37:21.581Z",
       "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
       "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FQcELLVZwSvarn27omhgd",
-      "name": "ukigumo",
-      "artist": "Hige Driver",
-      "album": "ヒゲドライバー 10th Anniversary Best",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
-      "playedAt": "2026-04-30T14:36:18.655Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
-      "duration": 215053,
       "previewUrl": ""
     },
     {
@@ -189,17 +288,6 @@
       "previewUrl": ""
     },
     {
-      "id": "4FdpXwtpJfRltvFuTcpNL6",
-      "name": "モス",
-      "artist": "sakanaction",
-      "album": "834.194",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
-      "playedAt": "2026-04-30T14:00:32.448Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
-      "duration": 245000,
-      "previewUrl": ""
-    },
-    {
       "id": "4PO8fERDL1d1FQA7uHg8il",
       "name": "Among Us",
       "artist": "Sembari +",
@@ -241,94 +329,6 @@
       "playedAt": "2026-04-30T03:10:47.763Z",
       "spotifyUrl": "https://open.spotify.com/track/5WsjuvYrFRi9cqKBscT3oq",
       "duration": 241834,
-      "previewUrl": ""
-    },
-    {
-      "id": "7wnOPAiqvIG4dTvEInj0YT",
-      "name": "Teenager Forever",
-      "artist": "King Gnu",
-      "album": "CEREMONY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2272c8966971b7b04066241",
-      "playedAt": "2026-04-30T03:06:45.389Z",
-      "spotifyUrl": "https://open.spotify.com/track/7wnOPAiqvIG4dTvEInj0YT",
-      "duration": 189080,
-      "previewUrl": ""
-    },
-    {
-      "id": "0VCJ5YjphljOf1YRcPp08v",
-      "name": "Try Everything",
-      "artist": "Shakira",
-      "album": "Zootopia (Original Motion Picture Soundtrack / Japanese version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273815ddbce7b7574c7f3936e85",
-      "playedAt": "2026-04-30T03:03:35.869Z",
-      "spotifyUrl": "https://open.spotify.com/track/0VCJ5YjphljOf1YRcPp08v",
-      "duration": 196880,
-      "previewUrl": ""
-    },
-    {
-      "id": "38FcQO2ta2pScW2sriQI2x",
-      "name": "Watch Me",
-      "artist": "天乃リリサ(CV: 前田佳織里), 橘 美花莉(CV: 鬼頭明里)",
-      "album": "Watch Me",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732ec1f3dd232589d74641b437",
-      "playedAt": "2026-04-30T03:00:18.463Z",
-      "spotifyUrl": "https://open.spotify.com/track/38FcQO2ta2pScW2sriQI2x",
-      "duration": 207813,
-      "previewUrl": ""
-    },
-    {
-      "id": "6z1TvLTR0oOsWSJfDrERmj",
-      "name": "言って。",
-      "artist": "ヨルシカ",
-      "album": "夏草が邪魔をする",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27318b1145d9883e5b140151fa9",
-      "playedAt": "2026-04-30T02:56:50.124Z",
-      "spotifyUrl": "https://open.spotify.com/track/6z1TvLTR0oOsWSJfDrERmj",
-      "duration": 242182,
-      "previewUrl": ""
-    },
-    {
-      "id": "1xr6xhzERfYXrNMdPi6Ru8",
-      "name": "ラ・カンパネラ",
-      "artist": "Franz Liszt, Nobuyuki Tsujii",
-      "album": "THE BEST",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c0ead6fc37519685e7f6ed54",
-      "playedAt": "2026-04-29T12:49:06.958Z",
-      "spotifyUrl": "https://open.spotify.com/track/1xr6xhzERfYXrNMdPi6Ru8",
-      "duration": 286946,
-      "previewUrl": ""
-    },
-    {
-      "id": "5XW0Yacfx0Mtmc5izRTcZ0",
-      "name": "世界はそれを愛と呼ぶんだぜ",
-      "artist": "Sambomaster",
-      "album": "世界はそれを愛と呼ぶんだぜ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36e9d452807b3be5de71975",
-      "playedAt": "2026-04-29T07:29:34.187Z",
-      "spotifyUrl": "https://open.spotify.com/track/5XW0Yacfx0Mtmc5izRTcZ0",
-      "duration": 312626,
-      "previewUrl": ""
-    },
-    {
-      "id": "1DOZa2VoazIiDjGYlUQTlW",
-      "name": "SUN",
-      "artist": "Gen Hoshino",
-      "album": "YELLOW DANCER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
-      "playedAt": "2026-04-29T07:24:23.417Z",
-      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
-      "duration": 241466,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-04-29T07:20:21.622Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
       "previewUrl": ""
     }
   ],
