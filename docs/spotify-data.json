@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-05-02T07:18:32.375Z",
+  "lastUpdated": "2026-05-02T12:45:11.862Z",
   "tracks": [
+    {
+      "id": "3hRRYgBeunE3PTmnzATTS0",
+      "name": "天体観測",
+      "artist": "BUMP OF CHICKEN",
+      "album": "jupiter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5017c120597ec5a35015ef6",
+      "playedAt": "2026-05-02T10:43:42.218Z",
+      "spotifyUrl": "https://open.spotify.com/track/3hRRYgBeunE3PTmnzATTS0",
+      "duration": 263600,
+      "previewUrl": ""
+    },
+    {
+      "id": "6yv4uty2hl96Wu0RFoYsxO",
+      "name": "かいじゅうのマーチ",
+      "artist": "Kenshi Yonezu",
+      "album": "BOOTLEG",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
+      "playedAt": "2026-05-02T07:26:44.620Z",
+      "spotifyUrl": "https://open.spotify.com/track/6yv4uty2hl96Wu0RFoYsxO",
+      "duration": 295730,
+      "previewUrl": ""
+    },
+    {
+      "id": "45zHzJfSpq7HSnGBub9tTk",
+      "name": "Black † White",
+      "artist": "野水いおり",
+      "album": "Hat Trick",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730fa8d44239baa6df5f5b81b5",
+      "playedAt": "2026-05-02T07:21:48.283Z",
+      "spotifyUrl": "https://open.spotify.com/track/45zHzJfSpq7HSnGBub9tTk",
+      "duration": 274314,
+      "previewUrl": ""
+    },
     {
       "id": "0JncJnMiDjLpeYURyhFgch",
       "name": "365日の紙飛行機",
@@ -296,39 +329,6 @@
       "playedAt": "2026-05-01T11:43:17.827Z",
       "spotifyUrl": "https://open.spotify.com/track/3gmn76fCtpDazGMnN0QMHX",
       "duration": 210600,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lUaEsQVwvNEjaJNcvc1CN",
-      "name": "サウダージ",
-      "artist": "PornoGraffitti",
-      "album": "PORNO GRAFFITTI BEST RED'S",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738770cf0b8d9ddacf4f286688",
-      "playedAt": "2026-05-01T11:39:46.704Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lUaEsQVwvNEjaJNcvc1CN",
-      "duration": 261239,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lT3oj3gxE6AJb87ZK8up7",
-      "name": "いらない",
-      "artist": "sakanaction",
-      "album": "いらない",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27377b8e1d157752397bf24f3a8",
-      "playedAt": "2026-05-01T11:31:19.392Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lT3oj3gxE6AJb87ZK8up7",
-      "duration": 226313,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FQcELLVZwSvarn27omhgd",
-      "name": "ukigumo",
-      "artist": "Hige Driver",
-      "album": "ヒゲドライバー 10th Anniversary Best",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
-      "playedAt": "2026-05-01T10:30:36.421Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
-      "duration": 215053,
       "previewUrl": ""
     }
   ],
