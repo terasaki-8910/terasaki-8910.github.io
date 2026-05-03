@@ -1,6 +1,138 @@
 {
-  "lastUpdated": "2026-05-03T01:51:32.190Z",
+  "lastUpdated": "2026-05-03T07:46:39.545Z",
   "tracks": [
+    {
+      "id": "7gDB5zDY7IxNmRfrJ9KR8J",
+      "name": "「聴きたかったダンスミュージック、リキッドルームに」",
+      "artist": "sakanaction",
+      "album": "834.194",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
+      "playedAt": "2026-05-03T07:03:54.820Z",
+      "spotifyUrl": "https://open.spotify.com/track/7gDB5zDY7IxNmRfrJ9KR8J",
+      "duration": 236080,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FdpXwtpJfRltvFuTcpNL6",
+      "name": "モス",
+      "artist": "sakanaction",
+      "album": "834.194",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
+      "playedAt": "2026-05-03T06:59:58.825Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
+      "duration": 245000,
+      "previewUrl": ""
+    },
+    {
+      "id": "2XNaPTYDeQcTqAaWoHKMEp",
+      "name": "Analyse",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-05-03T06:55:24.815Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XNaPTYDeQcTqAaWoHKMEp",
+      "duration": 242786,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-05-03T06:51:24.836Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
+    {
+      "id": "5FJhdIyGGX5emFtEnHfL8W",
+      "name": "Indoor Outdoor",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-05-03T06:51:03.481Z",
+      "spotifyUrl": "https://open.spotify.com/track/5FJhdIyGGX5emFtEnHfL8W",
+      "duration": 110543,
+      "previewUrl": ""
+    },
+    {
+      "id": "5apkSmsPJ11RYKMiVmvRwU",
+      "name": "Goal Wo Nerae!",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
+      "playedAt": "2026-05-03T06:49:48.619Z",
+      "spotifyUrl": "https://open.spotify.com/track/5apkSmsPJ11RYKMiVmvRwU",
+      "duration": 128690,
+      "previewUrl": ""
+    },
+    {
+      "id": "4K8QY8eufhwEg9EEix0Qqn",
+      "name": "Plug and Play",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-05-03T06:41:04.888Z",
+      "spotifyUrl": "https://open.spotify.com/track/4K8QY8eufhwEg9EEix0Qqn",
+      "duration": 127519,
+      "previewUrl": ""
+    },
+    {
+      "id": "5zWYk0B6rjwVI7FD9ac4Av",
+      "name": "Nobis",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Extra Soundtrack",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273726597ff49f85e9e5252967a",
+      "playedAt": "2026-05-03T06:38:56.518Z",
+      "spotifyUrl": "https://open.spotify.com/track/5zWYk0B6rjwVI7FD9ac4Av",
+      "duration": 78000,
+      "previewUrl": ""
+    },
+    {
+      "id": "1EbU0AL3mE4Zf2S1nuTcEi",
+      "name": "HIGH-VELOCITY",
+      "artist": "Aiobahn +81",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-05-03T06:37:38.145Z",
+      "spotifyUrl": "https://open.spotify.com/track/1EbU0AL3mE4Zf2S1nuTcEi",
+      "duration": 133770,
+      "previewUrl": ""
+    },
+    {
+      "id": "1THHBpbrXo8YUfDqwoYYPP",
+      "name": "Aoharu",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-05-03T06:35:23.895Z",
+      "spotifyUrl": "https://open.spotify.com/track/1THHBpbrXo8YUfDqwoYYPP",
+      "duration": 107997,
+      "previewUrl": ""
+    },
+    {
+      "id": "5DrHFFvpIJI1RktxXOXhxv",
+      "name": "Colorful Beach",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-05-03T06:33:35.235Z",
+      "spotifyUrl": "https://open.spotify.com/track/5DrHFFvpIJI1RktxXOXhxv",
+      "duration": 124054,
+      "previewUrl": ""
+    },
+    {
+      "id": "0NMdTDx7LCJdm3ioJ1cDcg",
+      "name": "Koi is Love",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-05-03T06:31:30.647Z",
+      "spotifyUrl": "https://open.spotify.com/track/0NMdTDx7LCJdm3ioJ1cDcg",
+      "duration": 108719,
+      "previewUrl": ""
+    },
     {
       "id": "03xt11xuwiqUQBMYKwEWKz",
       "name": "モニタリング",
@@ -21,17 +153,6 @@
       "playedAt": "2026-05-02T16:52:48.794Z",
       "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
       "duration": 229133,
-      "previewUrl": ""
-    },
-    {
-      "id": "4FdpXwtpJfRltvFuTcpNL6",
-      "name": "モス",
-      "artist": "sakanaction",
-      "album": "834.194",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
-      "playedAt": "2026-05-02T16:48:32.743Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
-      "duration": 245000,
       "previewUrl": ""
     },
     {
@@ -208,127 +329,6 @@
       "playedAt": "2026-05-01T13:21:33.248Z",
       "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
       "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "13XIvFx53mpzO1jSIJC0Ad",
-      "name": "Pumpin' Junkies",
-      "artist": "t+pazolite",
-      "album": "絢爛喧騒オリエント",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273accff0a6f63afbd55a8b9243",
-      "playedAt": "2026-05-01T13:20:55.063Z",
-      "spotifyUrl": "https://open.spotify.com/track/13XIvFx53mpzO1jSIJC0Ad",
-      "duration": 269465,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-05-01T13:12:57.636Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vziRWZny2GDwHX2UYJxa2",
-      "name": "おちゃめ機能",
-      "artist": "Lon",
-      "album": "Upload feat.Vocalist",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
-      "playedAt": "2026-05-01T13:08:44.615Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
-      "duration": 252066,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-05-01T13:04:31.711Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LIpqsMbsfc8I7F0dsFXsv",
-      "name": "テトリス",
-      "artist": "柊マグネタイト",
-      "album": "テトリス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734349a5931dff5a37c5bff39f",
-      "playedAt": "2026-05-01T13:01:21.441Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
-      "duration": 142588,
-      "previewUrl": ""
-    },
-    {
-      "id": "0kCRrfk1WV7QMnlxqhpwV9",
-      "name": "ラビットホール",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-05-01T12:58:58.579Z",
-      "spotifyUrl": "https://open.spotify.com/track/0kCRrfk1WV7QMnlxqhpwV9",
-      "duration": 158866,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-05-01T12:56:19.245Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
-      "previewUrl": ""
-    },
-    {
-      "id": "07rg7ciYLLffOV5Fpe0I2F",
-      "name": "Oshama Scramble!",
-      "artist": "t+pazolite",
-      "album": "maimai ALL PERFECT COLLECTiON 3",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
-      "playedAt": "2026-05-01T12:52:54.030Z",
-      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
-      "duration": 124146,
-      "previewUrl": ""
-    },
-    {
-      "id": "4FXu6nhlIgbpgxt61ntlnR",
-      "name": "Override",
-      "artist": "Yoshida Yasei",
-      "album": "Override",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831030709f11ab2fdafad3ad",
-      "playedAt": "2026-05-01T12:50:06.960Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FXu6nhlIgbpgxt61ntlnR",
-      "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tcnPaFhcpSLx7ihFwI9DM",
-      "name": "ココロオドル -original version-",
-      "artist": "nobodyknows+",
-      "album": "ココロオドル",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
-      "playedAt": "2026-05-01T12:47:47.698Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
-      "duration": 253533,
-      "previewUrl": ""
-    },
-    {
-      "id": "3BPnFpAL02Bos8EoTLnO9R",
-      "name": "キミに100パーセント",
-      "artist": "Kyary Pamyu Pamyu",
-      "album": "KPP BEST",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
-      "playedAt": "2026-05-01T12:42:58.703Z",
-      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
-      "duration": 200253,
       "previewUrl": ""
     }
   ],
