@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-05-05T01:52:59.234Z",
+  "lastUpdated": "2026-05-05T07:53:38.332Z",
   "tracks": [
+    {
+      "id": "3zuOoqvVzxEzXi0D0Ma4SM",
+      "name": "Alpha",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
+      "playedAt": "2026-05-05T07:13:48.792Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zuOoqvVzxEzXi0D0Ma4SM",
+      "duration": 603000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5QF2n0rgEm2whK6hl9gVBP",
+      "name": "どうにかなっちゃいそう！",
+      "artist": "NOMELON NOLEMON",
+      "album": "どうにかなっちゃいそう！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c342749a822a5d49aa82843",
+      "playedAt": "2026-05-05T07:13:29.497Z",
+      "spotifyUrl": "https://open.spotify.com/track/5QF2n0rgEm2whK6hl9gVBP",
+      "duration": 155245,
+      "previewUrl": ""
+    },
     {
       "id": "752WJrwNFCg0IRwKvr5RT5",
       "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
@@ -307,28 +329,6 @@
       "playedAt": "2026-05-02T06:37:21.571Z",
       "spotifyUrl": "https://open.spotify.com/track/153lRbNmhQZVi69kbhmjY8",
       "duration": 222813,
-      "previewUrl": ""
-    },
-    {
-      "id": "096KHkONhQm4MQNH35mU22",
-      "name": "鬼ノ宴",
-      "artist": "TOMONARI SORA\t",
-      "album": "鬼ノ宴",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b31680ab85031d2be2a3df6b",
-      "playedAt": "2026-05-02T06:33:38.287Z",
-      "spotifyUrl": "https://open.spotify.com/track/096KHkONhQm4MQNH35mU22",
-      "duration": 175998,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YqVJ2YSgwxWpfuENocF2t",
-      "name": "Hello,world!",
-      "artist": "BUMP OF CHICKEN",
-      "album": "Butterflies",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5233a87900584258a21f267",
-      "playedAt": "2026-05-02T06:30:41.673Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YqVJ2YSgwxWpfuENocF2t",
-      "duration": 248453,
       "previewUrl": ""
     }
   ],
