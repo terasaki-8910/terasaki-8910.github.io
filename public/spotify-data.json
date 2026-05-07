@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-07T13:26:46.467Z",
+  "lastUpdated": "2026-05-07T19:25:00.822Z",
   "tracks": [
     {
       "id": "5QF2n0rgEm2whK6hl9gVBP",
@@ -7,9 +7,20 @@
       "artist": "NOMELON NOLEMON",
       "album": "どうにかなっちゃいそう！",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c342749a822a5d49aa82843",
-      "playedAt": "2026-05-06T07:55:14.359Z",
+      "playedAt": "2026-05-07T16:58:20.597Z",
       "spotifyUrl": "https://open.spotify.com/track/5QF2n0rgEm2whK6hl9gVBP",
       "duration": 155245,
+      "previewUrl": ""
+    },
+    {
+      "id": "55i8T5u1mEGq8ZhawQxPqe",
+      "name": "Lost Princess",
+      "artist": "ペコリーヌ (CV: M・A・O), コッコロ (CV: 伊藤美来), キャル (CV: 立花理香)",
+      "album": "アニメ「プリンセスコネクト! Re:Dive」テーマソング 「それでもともに歩いていく」&「Lost Princess」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738bcb8ec08ea9094115caeda0",
+      "playedAt": "2026-05-07T16:53:50.582Z",
+      "spotifyUrl": "https://open.spotify.com/track/55i8T5u1mEGq8ZhawQxPqe",
+      "duration": 235706,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-05-02T06:44:44.811Z",
       "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
       "duration": 241466,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lx9ahLiuVTK1ArFp9yAmL",
-      "name": "Ｗ●ＲＫ",
-      "artist": "ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ, Sheena Ringo",
-      "album": "Ｗ●ＲＫ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ad39f74a37339cc36b7f0551",
-      "playedAt": "2026-05-02T06:40:42.920Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lx9ahLiuVTK1ArFp9yAmL",
-      "duration": 201073,
       "previewUrl": ""
     }
   ],
