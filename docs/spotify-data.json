@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-05-10T01:54:38.020Z",
+  "lastUpdated": "2026-05-10T07:55:41.835Z",
   "tracks": [
+    {
+      "id": "38XY1ShCSiYwDaV51sFPT9",
+      "name": "マーシャル・マキシマイザー",
+      "artist": "柊マグネタイト, 可不",
+      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
+      "playedAt": "2026-05-10T03:09:50.294Z",
+      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
+      "duration": 163686,
+      "previewUrl": ""
+    },
     {
       "id": "6H0PLsSYMzDOqhLgyOlzIj",
       "name": "感電",
@@ -318,17 +329,6 @@
       "playedAt": "2026-05-08T10:17:04.823Z",
       "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
       "duration": 243880,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-05-08T10:13:00.230Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
       "previewUrl": ""
     }
   ],
