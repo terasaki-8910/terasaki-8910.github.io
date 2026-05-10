@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-05-10T07:55:41.835Z",
+  "lastUpdated": "2026-05-10T12:54:00.917Z",
   "tracks": [
+    {
+      "id": "59h6J25QnnT8xshPTFLkpe",
+      "name": "あぶく",
+      "artist": "ヨルシカ",
+      "album": "あぶく",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
+      "playedAt": "2026-05-10T12:45:13.276Z",
+      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
+      "duration": 234613,
+      "previewUrl": ""
+    },
+    {
+      "id": "7lT3oj3gxE6AJb87ZK8up7",
+      "name": "いらない",
+      "artist": "sakanaction",
+      "album": "いらない",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27377b8e1d157752397bf24f3a8",
+      "playedAt": "2026-05-10T10:48:26.867Z",
+      "spotifyUrl": "https://open.spotify.com/track/7lT3oj3gxE6AJb87ZK8up7",
+      "duration": 226313,
+      "previewUrl": ""
+    },
     {
       "id": "38XY1ShCSiYwDaV51sFPT9",
       "name": "マーシャル・マキシマイザー",
@@ -307,28 +329,6 @@
       "playedAt": "2026-05-08T10:23:33.464Z",
       "spotifyUrl": "https://open.spotify.com/track/08YwAPnX8sygJUXG9rvhDv",
       "duration": 198600,
-      "previewUrl": ""
-    },
-    {
-      "id": "7wnOPAiqvIG4dTvEInj0YT",
-      "name": "Teenager Forever",
-      "artist": "King Gnu",
-      "album": "CEREMONY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2272c8966971b7b04066241",
-      "playedAt": "2026-05-08T10:20:14.430Z",
-      "spotifyUrl": "https://open.spotify.com/track/7wnOPAiqvIG4dTvEInj0YT",
-      "duration": 189080,
-      "previewUrl": ""
-    },
-    {
-      "id": "3F0hvTxaTJV6OsFnRqefXc",
-      "name": "アイデン貞貞メルトダウン",
-      "artist": "えなこ, P丸様｡",
-      "album": "アイデン貞貞メルトダウン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386001206942da71231c86b96",
-      "playedAt": "2026-05-08T10:17:04.823Z",
-      "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
-      "duration": 243880,
       "previewUrl": ""
     }
   ],
