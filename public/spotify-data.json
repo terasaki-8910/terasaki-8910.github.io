@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-05-11T02:04:41.113Z",
+  "lastUpdated": "2026-05-11T08:57:02.519Z",
   "tracks": [
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-05-11T08:51:04.967Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
     {
       "id": "2EjDBwyMAALFfKaaSUCRkz",
       "name": "キャットラビング",
@@ -318,17 +329,6 @@
       "playedAt": "2026-05-08T10:41:19.819Z",
       "spotifyUrl": "https://open.spotify.com/track/2yozZfRYHP7Elsymghu5t3",
       "duration": 280856,
-      "previewUrl": ""
-    },
-    {
-      "id": "7jPnEBC705NYqvU0Ky75ZF",
-      "name": "どんなときも。",
-      "artist": "八月のシンデレラナイン",
-      "album": "どんなときも。",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b935a35fd198250ac86ccdc",
-      "playedAt": "2026-05-08T10:36:38.676Z",
-      "spotifyUrl": "https://open.spotify.com/track/7jPnEBC705NYqvU0Ky75ZF",
-      "duration": 286066,
       "previewUrl": ""
     }
   ],
