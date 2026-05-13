@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-05-12T19:27:08.775Z",
+  "lastUpdated": "2026-05-13T02:06:27.157Z",
   "tracks": [
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-05-12T20:05:02.619Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
     {
       "id": "1DOZa2VoazIiDjGYlUQTlW",
       "name": "SUN",
@@ -32,17 +43,6 @@
       "playedAt": "2026-05-12T14:19:13.558Z",
       "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
       "duration": 234613,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-05-12T14:11:07.171Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
       "previewUrl": ""
     },
     {
