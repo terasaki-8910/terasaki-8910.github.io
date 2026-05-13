@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-05-13T08:33:02.585Z",
+  "lastUpdated": "2026-05-13T14:05:16.528Z",
   "tracks": [
+    {
+      "id": "73TEyhGLxixHAwzOdoamgV",
+      "name": "Aoi",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-05-13T10:19:40.786Z",
+      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
+      "duration": 256120,
+      "previewUrl": ""
+    },
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-05-13T10:11:47.583Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
@@ -10,17 +32,6 @@
       "playedAt": "2026-05-12T20:05:02.619Z",
       "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
       "duration": 229328,
-      "previewUrl": ""
-    },
-    {
-      "id": "1DOZa2VoazIiDjGYlUQTlW",
-      "name": "SUN",
-      "artist": "Gen Hoshino",
-      "album": "YELLOW DANCER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
-      "playedAt": "2026-05-12T14:27:40.573Z",
-      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
-      "duration": 241466,
       "previewUrl": ""
     },
     {
@@ -43,17 +54,6 @@
       "playedAt": "2026-05-12T14:19:13.558Z",
       "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
       "duration": 234613,
-      "previewUrl": ""
-    },
-    {
-      "id": "73TEyhGLxixHAwzOdoamgV",
-      "name": "Aoi",
-      "artist": "sakanaction",
-      "album": "sakanaction",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
-      "playedAt": "2026-05-12T14:07:16.921Z",
-      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
-      "duration": 256120,
       "previewUrl": ""
     },
     {
@@ -319,18 +319,7 @@
       "spotifyUrl": "https://open.spotify.com/track/6qB3lZIfnDC8TE2245NDtO",
       "duration": 302920,
       "previewUrl": ""
-    },
-    {
-      "id": "4C3AXZKVJM8RB0Q3rOpKJt",
-      "name": "Robogrex",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Extra Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273726597ff49f85e9e5252967a",
-      "playedAt": "2026-05-08T13:16:34.659Z",
-      "spotifyUrl": "https://open.spotify.com/track/4C3AXZKVJM8RB0Q3rOpKJt",
-      "duration": 131612,
-      "previewUrl": ""
     }
   ],
-  "total": 30
+  "total": 29
 }
