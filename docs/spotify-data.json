@@ -1,15 +1,103 @@
 {
-  "lastUpdated": "2026-05-15T02:06:54.364Z",
+  "lastUpdated": "2026-05-15T08:38:04.051Z",
   "tracks": [
+    {
+      "id": "73TEyhGLxixHAwzOdoamgV",
+      "name": "Aoi",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-05-15T06:05:44.820Z",
+      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
+      "duration": 256120,
+      "previewUrl": ""
+    },
+    {
+      "id": "5YdDZUF69TlvdfxaohH7E9",
+      "name": "オーバードライブ",
+      "artist": "KOTORI",
+      "album": "KOTORI",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27374c72f25da62504de93a24c3",
+      "playedAt": "2026-05-15T06:05:12.601Z",
+      "spotifyUrl": "https://open.spotify.com/track/5YdDZUF69TlvdfxaohH7E9",
+      "duration": 188137,
+      "previewUrl": ""
+    },
+    {
+      "id": "3bAeynDDD0i7yWgArxzbR5",
+      "name": "オリオン",
+      "artist": "KOTORI",
+      "album": "CLEAR",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732de61c8e5827bd387e1508ec",
+      "playedAt": "2026-05-15T05:35:00.789Z",
+      "spotifyUrl": "https://open.spotify.com/track/3bAeynDDD0i7yWgArxzbR5",
+      "duration": 246880,
+      "previewUrl": ""
+    },
+    {
+      "id": "0SKLijfjiR2mRN6aCKvFcy",
+      "name": "Masterpiece",
+      "artist": "KOTORI",
+      "album": "Good Luck",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e29904b6047a33a499969778",
+      "playedAt": "2026-05-15T05:30:53.003Z",
+      "spotifyUrl": "https://open.spotify.com/track/0SKLijfjiR2mRN6aCKvFcy",
+      "duration": 243933,
+      "previewUrl": ""
+    },
+    {
+      "id": "3wJHCry960drNlAUGrJLmz",
+      "name": "ただ君に晴れ",
+      "artist": "ヨルシカ",
+      "album": "負け犬にアンコールはいらない",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328b535c92629e3c8d20ec242",
+      "playedAt": "2026-05-15T05:25:30.038Z",
+      "spotifyUrl": "https://open.spotify.com/track/3wJHCry960drNlAUGrJLmz",
+      "duration": 198971,
+      "previewUrl": ""
+    },
     {
       "id": "5QF2n0rgEm2whK6hl9gVBP",
       "name": "どうにかなっちゃいそう！",
       "artist": "NOMELON NOLEMON",
       "album": "どうにかなっちゃいそう！",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c342749a822a5d49aa82843",
-      "playedAt": "2026-05-14T15:22:40.230Z",
+      "playedAt": "2026-05-15T05:17:53.704Z",
       "spotifyUrl": "https://open.spotify.com/track/5QF2n0rgEm2whK6hl9gVBP",
       "duration": 155245,
+      "previewUrl": ""
+    },
+    {
+      "id": "6qB3lZIfnDC8TE2245NDtO",
+      "name": "夜の踊り子",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-05-15T05:15:18.381Z",
+      "spotifyUrl": "https://open.spotify.com/track/6qB3lZIfnDC8TE2245NDtO",
+      "duration": 302920,
+      "previewUrl": ""
+    },
+    {
+      "id": "59h6J25QnnT8xshPTFLkpe",
+      "name": "あぶく",
+      "artist": "ヨルシカ",
+      "album": "あぶく",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
+      "playedAt": "2026-05-15T05:10:14.838Z",
+      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
+      "duration": 234613,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FdpXwtpJfRltvFuTcpNL6",
+      "name": "モス",
+      "artist": "sakanaction",
+      "album": "834.194",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
+      "playedAt": "2026-05-15T05:06:19.827Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
+      "duration": 245000,
       "previewUrl": ""
     },
     {
@@ -79,17 +167,6 @@
       "previewUrl": ""
     },
     {
-      "id": "73TEyhGLxixHAwzOdoamgV",
-      "name": "Aoi",
-      "artist": "sakanaction",
-      "album": "sakanaction",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
-      "playedAt": "2026-05-14T03:36:08.060Z",
-      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
-      "duration": 256120,
-      "previewUrl": ""
-    },
-    {
       "id": "0JncJnMiDjLpeYURyhFgch",
       "name": "365日の紙飛行機",
       "artist": "AKB48",
@@ -131,17 +208,6 @@
       "playedAt": "2026-05-13T15:45:41.758Z",
       "spotifyUrl": "https://open.spotify.com/track/7uqJ3N5wiISiyzkQMMCeMR",
       "duration": 283000,
-      "previewUrl": ""
-    },
-    {
-      "id": "59h6J25QnnT8xshPTFLkpe",
-      "name": "あぶく",
-      "artist": "ヨルシカ",
-      "album": "あぶく",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
-      "playedAt": "2026-05-13T15:40:40.031Z",
-      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
-      "duration": 234613,
       "previewUrl": ""
     },
     {
@@ -264,40 +330,7 @@
       "spotifyUrl": "https://open.spotify.com/track/7s2O8rpKRgPWhgqiHmmm4v",
       "duration": 271091,
       "previewUrl": ""
-    },
-    {
-      "id": "6z1TvLTR0oOsWSJfDrERmj",
-      "name": "言って。",
-      "artist": "ヨルシカ",
-      "album": "夏草が邪魔をする",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27318b1145d9883e5b140151fa9",
-      "playedAt": "2026-05-11T14:29:00.096Z",
-      "spotifyUrl": "https://open.spotify.com/track/6z1TvLTR0oOsWSJfDrERmj",
-      "duration": 242182,
-      "previewUrl": ""
-    },
-    {
-      "id": "6CIQOFf01zQ9qJaqhD6rlH",
-      "name": "ラビットホール",
-      "artist": "DECO*27",
-      "album": "ラビットホール",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273183b7a8494d8947e07343ad2",
-      "playedAt": "2026-05-11T13:23:51.391Z",
-      "spotifyUrl": "https://open.spotify.com/track/6CIQOFf01zQ9qJaqhD6rlH",
-      "duration": 159000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2EjDBwyMAALFfKaaSUCRkz",
-      "name": "キャットラビング",
-      "artist": "香椎モイミ",
-      "album": "キャットラビング",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c68ba6b949b41c5a4863009",
-      "playedAt": "2026-05-10T14:45:47.881Z",
-      "spotifyUrl": "https://open.spotify.com/track/2EjDBwyMAALFfKaaSUCRkz",
-      "duration": 117055,
-      "previewUrl": ""
     }
   ],
-  "total": 27
+  "total": 30
 }
