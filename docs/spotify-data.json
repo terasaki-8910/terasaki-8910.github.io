@@ -1,6 +1,149 @@
 {
-  "lastUpdated": "2026-05-16T12:57:14.197Z",
+  "lastUpdated": "2026-05-16T18:49:04.517Z",
   "tracks": [
+    {
+      "id": "19XVDw9shopE7w6odXNVSl",
+      "name": "アユミ☆マジカルショータイム - Remastered",
+      "artist": "kinoshita",
+      "album": "アユミ☆マジカルショータイム (Remastered)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273335adeda2437becf59e0d73f",
+      "playedAt": "2026-05-16T16:23:39.700Z",
+      "spotifyUrl": "https://open.spotify.com/track/19XVDw9shopE7w6odXNVSl",
+      "duration": 234000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ic62hKqeDhZsa9l6YQxzJ",
+      "name": "メズマライザー (feat. 初音ミク&重音テト)",
+      "artist": "32ki, Hatsune Miku, 重音テト",
+      "album": "メズマライザー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321333eb66e3cf9f3818e789f",
+      "playedAt": "2026-05-16T14:50:17.167Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
+      "duration": 156972,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vziRWZny2GDwHX2UYJxa2",
+      "name": "おちゃめ機能",
+      "artist": "Lon",
+      "album": "Upload feat.Vocalist",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
+      "playedAt": "2026-05-16T14:47:39.252Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
+      "duration": 252066,
+      "previewUrl": ""
+    },
+    {
+      "id": "6lcqXYjDSGxx69DurXx0rF",
+      "name": "ループザルーム (feat. 初音ミク)",
+      "artist": "ルシノ, Hatsune Miku",
+      "album": "ループザルーム / ランベントアリア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
+      "playedAt": "2026-05-16T14:43:26.616Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
+      "duration": 134071,
+      "previewUrl": ""
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "name": "tv off (feat. lefty gunplay)",
+      "artist": "Kendrick Lamar, Lefty Gunplay",
+      "album": "GNX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2a0a166493a2bde5480a420",
+      "playedAt": "2026-05-16T14:41:12.316Z",
+      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
+      "duration": 220690,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-05-16T14:37:31.086Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "5QF2n0rgEm2whK6hl9gVBP",
+      "name": "どうにかなっちゃいそう！",
+      "artist": "NOMELON NOLEMON",
+      "album": "どうにかなっちゃいそう！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c342749a822a5d49aa82843",
+      "playedAt": "2026-05-16T14:26:30.344Z",
+      "spotifyUrl": "https://open.spotify.com/track/5QF2n0rgEm2whK6hl9gVBP",
+      "duration": 155245,
+      "previewUrl": ""
+    },
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2026-05-16T14:23:29.586Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
+      "previewUrl": ""
+    },
+    {
+      "id": "3RoHAivw8gRyzlWDsvbFTB",
+      "name": "瞬間センチメンタル",
+      "artist": "SCANDAL",
+      "album": "TEMPTATION　BOX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273756439e1232a6f7d0e800b94",
+      "playedAt": "2026-05-16T14:00:08.659Z",
+      "spotifyUrl": "https://open.spotify.com/track/3RoHAivw8gRyzlWDsvbFTB",
+      "duration": 224626,
+      "previewUrl": ""
+    },
+    {
+      "id": "71KwQokFFfWqPziqvYr3j1",
+      "name": "Can Do",
+      "artist": "GRANRODEO",
+      "album": "CRACK STAR FLASH",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734ae6a2244c9513a8b3b6d487",
+      "playedAt": "2026-05-16T13:54:10.813Z",
+      "spotifyUrl": "https://open.spotify.com/track/71KwQokFFfWqPziqvYr3j1",
+      "duration": 263773,
+      "previewUrl": ""
+    },
+    {
+      "id": "4at8MHaxe5hFxcXiO2PPd4",
+      "name": "シュガーソングとビターステップ",
+      "artist": "UNISON SQUARE GARDEN",
+      "album": "SUB MACHINE, BEST MACHINE (Best Selected Edition)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6026aa38b62d9dfe40274d4",
+      "playedAt": "2026-05-16T13:48:00.926Z",
+      "spotifyUrl": "https://open.spotify.com/track/4at8MHaxe5hFxcXiO2PPd4",
+      "duration": 253813,
+      "previewUrl": ""
+    },
+    {
+      "id": "7fVuFTodvQPM5LKpT5vdFM",
+      "name": "GLAMOROUS SKY",
+      "artist": "NANA, Mika Nakashima",
+      "album": "THE END",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734dc2b665360956f17550bfb2",
+      "playedAt": "2026-05-16T13:43:46.445Z",
+      "spotifyUrl": "https://open.spotify.com/track/7fVuFTodvQPM5LKpT5vdFM",
+      "duration": 266360,
+      "previewUrl": ""
+    },
+    {
+      "id": "3cQWusqyt053W56L3XBiIs",
+      "name": "sailing day",
+      "artist": "BUMP OF CHICKEN",
+      "album": "ユグドラシル",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a1898d5e212658520cd0044",
+      "playedAt": "2026-05-16T13:39:19.487Z",
+      "spotifyUrl": "https://open.spotify.com/track/3cQWusqyt053W56L3XBiIs",
+      "duration": 244666,
+      "previewUrl": ""
+    },
     {
       "id": "1UuBZ4Q6avTXQH1Kwe4uu8",
       "name": "My World",
@@ -76,17 +219,6 @@
       "playedAt": "2026-05-16T10:28:54.296Z",
       "spotifyUrl": "https://open.spotify.com/track/1xeOtLjWyh4anACJKXzDkW",
       "duration": 202500,
-      "previewUrl": ""
-    },
-    {
-      "id": "5QF2n0rgEm2whK6hl9gVBP",
-      "name": "どうにかなっちゃいそう！",
-      "artist": "NOMELON NOLEMON",
-      "album": "どうにかなっちゃいそう！",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c342749a822a5d49aa82843",
-      "playedAt": "2026-05-16T09:33:27.312Z",
-      "spotifyUrl": "https://open.spotify.com/track/5QF2n0rgEm2whK6hl9gVBP",
-      "duration": 155245,
       "previewUrl": ""
     },
     {
@@ -197,138 +329,6 @@
       "playedAt": "2026-05-15T06:05:12.601Z",
       "spotifyUrl": "https://open.spotify.com/track/5YdDZUF69TlvdfxaohH7E9",
       "duration": 188137,
-      "previewUrl": ""
-    },
-    {
-      "id": "3bAeynDDD0i7yWgArxzbR5",
-      "name": "オリオン",
-      "artist": "KOTORI",
-      "album": "CLEAR",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732de61c8e5827bd387e1508ec",
-      "playedAt": "2026-05-15T05:35:00.789Z",
-      "spotifyUrl": "https://open.spotify.com/track/3bAeynDDD0i7yWgArxzbR5",
-      "duration": 246880,
-      "previewUrl": ""
-    },
-    {
-      "id": "0SKLijfjiR2mRN6aCKvFcy",
-      "name": "Masterpiece",
-      "artist": "KOTORI",
-      "album": "Good Luck",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e29904b6047a33a499969778",
-      "playedAt": "2026-05-15T05:30:53.003Z",
-      "spotifyUrl": "https://open.spotify.com/track/0SKLijfjiR2mRN6aCKvFcy",
-      "duration": 243933,
-      "previewUrl": ""
-    },
-    {
-      "id": "3wJHCry960drNlAUGrJLmz",
-      "name": "ただ君に晴れ",
-      "artist": "ヨルシカ",
-      "album": "負け犬にアンコールはいらない",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328b535c92629e3c8d20ec242",
-      "playedAt": "2026-05-15T05:25:30.038Z",
-      "spotifyUrl": "https://open.spotify.com/track/3wJHCry960drNlAUGrJLmz",
-      "duration": 198971,
-      "previewUrl": ""
-    },
-    {
-      "id": "6qB3lZIfnDC8TE2245NDtO",
-      "name": "夜の踊り子",
-      "artist": "sakanaction",
-      "album": "sakanaction",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
-      "playedAt": "2026-05-15T05:15:18.381Z",
-      "spotifyUrl": "https://open.spotify.com/track/6qB3lZIfnDC8TE2245NDtO",
-      "duration": 302920,
-      "previewUrl": ""
-    },
-    {
-      "id": "59h6J25QnnT8xshPTFLkpe",
-      "name": "あぶく",
-      "artist": "ヨルシカ",
-      "album": "あぶく",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
-      "playedAt": "2026-05-15T05:10:14.838Z",
-      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
-      "duration": 234613,
-      "previewUrl": ""
-    },
-    {
-      "id": "4FdpXwtpJfRltvFuTcpNL6",
-      "name": "モス",
-      "artist": "sakanaction",
-      "album": "834.194",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
-      "playedAt": "2026-05-15T05:06:19.827Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
-      "duration": 245000,
-      "previewUrl": ""
-    },
-    {
-      "id": "1DOZa2VoazIiDjGYlUQTlW",
-      "name": "SUN",
-      "artist": "Gen Hoshino",
-      "album": "YELLOW DANCER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
-      "playedAt": "2026-05-14T15:18:35.877Z",
-      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
-      "duration": 241466,
-      "previewUrl": ""
-    },
-    {
-      "id": "4NaaF28BeO9WzjDrSS71Nz",
-      "name": "ダンスホール",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "ダンスホール",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e552c9dbdf76676de1032ae0",
-      "playedAt": "2026-05-14T15:12:08.599Z",
-      "spotifyUrl": "https://open.spotify.com/track/4NaaF28BeO9WzjDrSS71Nz",
-      "duration": 203149,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YqVJ2YSgwxWpfuENocF2t",
-      "name": "Hello,world!",
-      "artist": "BUMP OF CHICKEN",
-      "album": "Butterflies",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5233a87900584258a21f267",
-      "playedAt": "2026-05-14T15:10:54.573Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YqVJ2YSgwxWpfuENocF2t",
-      "duration": 248453,
-      "previewUrl": ""
-    },
-    {
-      "id": "5U4PgFWzfzY7VEg9Ck4ziF",
-      "name": "ガーデン",
-      "artist": "Fujii Kaze",
-      "album": "LOVE ALL SERVE ALL",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af62b027ee85ae2e2f7c9702",
-      "playedAt": "2026-05-14T04:24:50.421Z",
-      "spotifyUrl": "https://open.spotify.com/track/5U4PgFWzfzY7VEg9Ck4ziF",
-      "duration": 229333,
-      "previewUrl": ""
-    },
-    {
-      "id": "1huqzMaPdQkXuOJaLxrC2s",
-      "name": "すずめ",
-      "artist": "RADWIMPS, Toaka",
-      "album": "すずめ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348d4eaf595967959fc3be747",
-      "playedAt": "2026-05-14T04:21:00.381Z",
-      "spotifyUrl": "https://open.spotify.com/track/1huqzMaPdQkXuOJaLxrC2s",
-      "duration": 236390,
-      "previewUrl": ""
-    },
-    {
-      "id": "1rN9QoVxw5U7TJkyaUR8C1",
-      "name": "unravel",
-      "artist": "TK from Ling tosite sigure",
-      "album": "Fantastic Magic",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b11c3ab5cb818192b7a61fdd",
-      "playedAt": "2026-05-14T03:40:07.386Z",
-      "spotifyUrl": "https://open.spotify.com/track/1rN9QoVxw5U7TJkyaUR8C1",
-      "duration": 238360,
       "previewUrl": ""
     }
   ],
