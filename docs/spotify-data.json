@@ -1,6 +1,116 @@
 {
-  "lastUpdated": "2026-05-18T19:23:27.898Z",
+  "lastUpdated": "2026-05-19T02:12:39.250Z",
   "tracks": [
+    {
+      "id": "6VzafntJXV7RKfdhSQdWOk",
+      "name": "Coffee Cats",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-05-19T01:09:08.934Z",
+      "spotifyUrl": "https://open.spotify.com/track/6VzafntJXV7RKfdhSQdWOk",
+      "duration": 173264,
+      "previewUrl": ""
+    },
+    {
+      "id": "0ip6DcnuQuul2ydk3ktaNr",
+      "name": "Colorful Mess",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-05-19T01:05:03.567Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ip6DcnuQuul2ydk3ktaNr",
+      "duration": 123006,
+      "previewUrl": ""
+    },
+    {
+      "id": "0KzeoUhFJGWl27nQv9NN5t",
+      "name": "Welcome School",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-05-19T01:03:00.066Z",
+      "spotifyUrl": "https://open.spotify.com/track/0KzeoUhFJGWl27nQv9NN5t",
+      "duration": 160176,
+      "previewUrl": ""
+    },
+    {
+      "id": "56bxyWKituPcwaPsuQ8q8q",
+      "name": "Usagi Flap",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-05-19T01:00:19.255Z",
+      "spotifyUrl": "https://open.spotify.com/track/56bxyWKituPcwaPsuQ8q8q",
+      "duration": 126641,
+      "previewUrl": ""
+    },
+    {
+      "id": "3IxQsWwE5B4jDUEC20euom",
+      "name": "Oriental Bounce",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
+      "playedAt": "2026-05-19T00:58:12.187Z",
+      "spotifyUrl": "https://open.spotify.com/track/3IxQsWwE5B4jDUEC20euom",
+      "duration": 130712,
+      "previewUrl": ""
+    },
+    {
+      "id": "02WAQBue79YrYY3CeCMDwB",
+      "name": "Formless Dream",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-05-19T00:56:01.465Z",
+      "spotifyUrl": "https://open.spotify.com/track/02WAQBue79YrYY3CeCMDwB",
+      "duration": 121122,
+      "previewUrl": ""
+    },
+    {
+      "id": "4C3AXZKVJM8RB0Q3rOpKJt",
+      "name": "Robogrex",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Extra Soundtrack",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273726597ff49f85e9e5252967a",
+      "playedAt": "2026-05-19T00:53:59.213Z",
+      "spotifyUrl": "https://open.spotify.com/track/4C3AXZKVJM8RB0Q3rOpKJt",
+      "duration": 131612,
+      "previewUrl": ""
+    },
+    {
+      "id": "034jvsVh9m8f2lRMvNeHWv",
+      "name": "Gourmet Race (From \"Kirby Super Star\")",
+      "artist": "Qumu",
+      "album": "Year 7",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734366c48ae7d8dce239c62c47",
+      "playedAt": "2026-05-19T00:53:23.380Z",
+      "spotifyUrl": "https://open.spotify.com/track/034jvsVh9m8f2lRMvNeHWv",
+      "duration": 195510,
+      "previewUrl": ""
+    },
+    {
+      "id": "69vC6ntf0WzHVk4xZEvTln",
+      "name": "Polyphonic",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-05-19T00:49:00.917Z",
+      "spotifyUrl": "https://open.spotify.com/track/69vC6ntf0WzHVk4xZEvTln",
+      "duration": 122577,
+      "previewUrl": ""
+    },
+    {
+      "id": "60oFLtrgr39Rlnb5KiQkDt",
+      "name": "Irasshaimase",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-05-19T00:46:57.957Z",
+      "spotifyUrl": "https://open.spotify.com/track/60oFLtrgr39Rlnb5KiQkDt",
+      "duration": 130386,
+      "previewUrl": ""
+    },
     {
       "id": "4Xfp9BcKrKYmxJPxn68Yb8",
       "name": "doodle",
@@ -219,116 +329,6 @@
       "playedAt": "2026-05-18T10:22:41.180Z",
       "spotifyUrl": "https://open.spotify.com/track/191fSWaJZKfUNyIz6fP32y",
       "duration": 123188,
-      "previewUrl": ""
-    },
-    {
-      "id": "5kCtg0z27lBVnDD1NPgTnO",
-      "name": "Nichirin",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-05-18T10:20:37.762Z",
-      "spotifyUrl": "https://open.spotify.com/track/5kCtg0z27lBVnDD1NPgTnO",
-      "duration": 129918,
-      "previewUrl": ""
-    },
-    {
-      "id": "5itk2nCZQziIrLFZ7AB3qS",
-      "name": "RE Aoharu",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-05-18T10:18:27.426Z",
-      "spotifyUrl": "https://open.spotify.com/track/5itk2nCZQziIrLFZ7AB3qS",
-      "duration": 141375,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Yb9nLUaGThL2BYkedY8wC",
-      "name": "Unwelcome School",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-05-18T10:16:06.063Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Yb9nLUaGThL2BYkedY8wC",
-      "duration": 120293,
-      "previewUrl": ""
-    },
-    {
-      "id": "1g5nDEvyuteIW7nrQHFMsu",
-      "name": "System All Green",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-05-18T10:14:04.833Z",
-      "spotifyUrl": "https://open.spotify.com/track/1g5nDEvyuteIW7nrQHFMsu",
-      "duration": 120025,
-      "previewUrl": ""
-    },
-    {
-      "id": "7r6aQK7wgZNoSfyvtUUoIO",
-      "name": "Future Bossa",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-05-18T10:12:04.040Z",
-      "spotifyUrl": "https://open.spotify.com/track/7r6aQK7wgZNoSfyvtUUoIO",
-      "duration": 130860,
-      "previewUrl": ""
-    },
-    {
-      "id": "0hWLesGpaD2HDPybhp4qfZ",
-      "name": "夢路の花 - Instrumental Ver.",
-      "artist": "ヒナ(CV:広橋涼)",
-      "album": "ブルーアーカイブ「夢路の花」",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f086ef205cd0c3179e883992",
-      "playedAt": "2026-05-18T10:09:52.759Z",
-      "spotifyUrl": "https://open.spotify.com/track/0hWLesGpaD2HDPybhp4qfZ",
-      "duration": 192642,
-      "previewUrl": ""
-    },
-    {
-      "id": "7xWXWraHp5tqoksl0awFFG",
-      "name": "Dive into Summer",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-05-18T10:06:40.008Z",
-      "spotifyUrl": "https://open.spotify.com/track/7xWXWraHp5tqoksl0awFFG",
-      "duration": 118269,
-      "previewUrl": ""
-    },
-    {
-      "id": "4bcDDVSs9DfRX2Thzjfif4",
-      "name": "Hello to Halo",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-05-18T10:04:41.675Z",
-      "spotifyUrl": "https://open.spotify.com/track/4bcDDVSs9DfRX2Thzjfif4",
-      "duration": 105190,
-      "previewUrl": ""
-    },
-    {
-      "id": "2S1wK8ocFeOUx4aBw6z2q8",
-      "name": "After School Dessert",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-05-18T10:02:55.090Z",
-      "spotifyUrl": "https://open.spotify.com/track/2S1wK8ocFeOUx4aBw6z2q8",
-      "duration": 122905,
-      "previewUrl": ""
-    },
-    {
-      "id": "3FrWEbGpO4IYPcoFeciKGd",
-      "name": "Aoharu - Band Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-05-18T10:00:52.716Z",
-      "spotifyUrl": "https://open.spotify.com/track/3FrWEbGpO4IYPcoFeciKGd",
-      "duration": 114703,
       "previewUrl": ""
     }
   ],
