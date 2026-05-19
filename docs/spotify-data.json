@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-05-19T14:34:37.229Z",
+  "lastUpdated": "2026-05-19T19:42:24.293Z",
   "tracks": [
+    {
+      "id": "73TEyhGLxixHAwzOdoamgV",
+      "name": "Aoi",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-05-19T16:29:18.551Z",
+      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
+      "duration": 256120,
+      "previewUrl": ""
+    },
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-05-19T16:22:03.869Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
+    {
+      "id": "59h6J25QnnT8xshPTFLkpe",
+      "name": "あぶく",
+      "artist": "ヨルシカ",
+      "album": "あぶく",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
+      "playedAt": "2026-05-19T15:22:04.175Z",
+      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
+      "duration": 234613,
+      "previewUrl": ""
+    },
     {
       "id": "6VzafntJXV7RKfdhSQdWOk",
       "name": "Coffee Cats",
@@ -296,39 +329,6 @@
       "playedAt": "2026-05-18T10:28:35.346Z",
       "spotifyUrl": "https://open.spotify.com/track/0ybO4uDO7FzOVWaASzcmCD",
       "duration": 137373,
-      "previewUrl": ""
-    },
-    {
-      "id": "6PRnAfLWJ5VXjyF8fNCz7g",
-      "name": "GIVE ME CHOCO♡",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-05-18T10:26:17.337Z",
-      "spotifyUrl": "https://open.spotify.com/track/6PRnAfLWJ5VXjyF8fNCz7g",
-      "duration": 95006,
-      "previewUrl": ""
-    },
-    {
-      "id": "2NcMbPHpfRjc2UdLIT4SQd",
-      "name": "Na Na Natsu!",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-05-18T10:24:42.256Z",
-      "spotifyUrl": "https://open.spotify.com/track/2NcMbPHpfRjc2UdLIT4SQd",
-      "duration": 119982,
-      "previewUrl": ""
-    },
-    {
-      "id": "191fSWaJZKfUNyIz6fP32y",
-      "name": "Oriental Drop",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
-      "playedAt": "2026-05-18T10:22:41.180Z",
-      "spotifyUrl": "https://open.spotify.com/track/191fSWaJZKfUNyIz6fP32y",
-      "duration": 123188,
       "previewUrl": ""
     }
   ],
