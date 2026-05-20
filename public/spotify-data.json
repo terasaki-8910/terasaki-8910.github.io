@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-05-19T19:42:24.293Z",
+  "lastUpdated": "2026-05-20T02:11:32.110Z",
   "tracks": [
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-05-20T02:10:22.398Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
     {
       "id": "73TEyhGLxixHAwzOdoamgV",
       "name": "Aoi",
@@ -318,17 +329,6 @@
       "playedAt": "2026-05-18T10:31:01.396Z",
       "spotifyUrl": "https://open.spotify.com/track/2lSyylDDCDOKVUPQnv6Ffy",
       "duration": 145584,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ybO4uDO7FzOVWaASzcmCD",
-      "name": "Constant Moderato",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-05-18T10:28:35.346Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ybO4uDO7FzOVWaASzcmCD",
-      "duration": 137373,
       "previewUrl": ""
     }
   ],
