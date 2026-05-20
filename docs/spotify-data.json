@@ -1,13 +1,24 @@
 {
-  "lastUpdated": "2026-05-20T02:11:32.110Z",
+  "lastUpdated": "2026-05-20T08:52:10.970Z",
   "tracks": [
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-05-20T07:52:22.777Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
       "artist": "Vaundy",
       "album": "replica",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-05-20T02:10:22.398Z",
+      "playedAt": "2026-05-20T02:14:10.515Z",
       "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
       "duration": 229328,
       "previewUrl": ""
@@ -21,17 +32,6 @@
       "playedAt": "2026-05-19T16:29:18.551Z",
       "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
       "duration": 256120,
-      "previewUrl": ""
-    },
-    {
-      "id": "1DOZa2VoazIiDjGYlUQTlW",
-      "name": "SUN",
-      "artist": "Gen Hoshino",
-      "album": "YELLOW DANCER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
-      "playedAt": "2026-05-19T16:22:03.869Z",
-      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
-      "duration": 241466,
       "previewUrl": ""
     },
     {
