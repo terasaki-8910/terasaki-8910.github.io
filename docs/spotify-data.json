@@ -1,15 +1,15 @@
 {
-  "lastUpdated": "2026-05-21T08:54:43.805Z",
+  "lastUpdated": "2026-05-21T14:38:51.936Z",
   "tracks": [
     {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-05-21T06:55:04.448Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
+      "id": "5skCbGGAnc7Ns18Figz54h",
+      "name": "Bunny Girl",
+      "artist": "AKASAKI",
+      "album": "Bunny Girl",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd8fc70761b16b25f92244d9",
+      "playedAt": "2026-05-21T12:12:55.336Z",
+      "spotifyUrl": "https://open.spotify.com/track/5skCbGGAnc7Ns18Figz54h",
+      "duration": 217492,
       "previewUrl": ""
     },
     {
@@ -18,7 +18,7 @@
       "artist": "ヨルシカ",
       "album": "あぶく",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
-      "playedAt": "2026-05-21T06:48:54.283Z",
+      "playedAt": "2026-05-21T12:09:18.214Z",
       "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
       "duration": 234613,
       "previewUrl": ""
@@ -29,9 +29,75 @@
       "artist": "sakanaction",
       "album": "sakanaction",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
-      "playedAt": "2026-05-21T06:43:20.816Z",
+      "playedAt": "2026-05-21T12:04:04.693Z",
       "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
       "duration": 256120,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-05-21T11:53:12.084Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-05-21T10:01:30.802Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
+    {
+      "id": "3rWyLf6o3RMbUeK4aafkHd",
+      "name": "p.h. - cover",
+      "artist": "suisoh",
+      "album": "p.h. (cover)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736f4be5c667dfbf2c2781c4c9",
+      "playedAt": "2026-05-21T09:43:01.544Z",
+      "spotifyUrl": "https://open.spotify.com/track/3rWyLf6o3RMbUeK4aafkHd",
+      "duration": 152929,
+      "previewUrl": ""
+    },
+    {
+      "id": "5bUWFHUTbXQcmqI6vWL62j",
+      "name": "グランドエスケープ",
+      "artist": "RADWIMPS, Toko Miura",
+      "album": "天気の子 (complete version)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f995bf0052673398dceb506",
+      "playedAt": "2026-05-21T09:40:10.296Z",
+      "spotifyUrl": "https://open.spotify.com/track/5bUWFHUTbXQcmqI6vWL62j",
+      "duration": 339160,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ajpbW6tBpqUI9foCtwlLw",
+      "name": "祝福",
+      "artist": "YOASOBI",
+      "album": "祝福",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5993ff2f059a0a5a7f6270b",
+      "playedAt": "2026-05-21T09:34:30.968Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ajpbW6tBpqUI9foCtwlLw",
+      "duration": 196235,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-05-21T06:55:04.448Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
       "previewUrl": ""
     },
     {
@@ -109,17 +175,6 @@
       "playedAt": "2026-05-20T12:45:45.426Z",
       "spotifyUrl": "https://open.spotify.com/track/5pN2AyWwjzwRoI7gukEVNd",
       "duration": 201280,
-      "previewUrl": ""
-    },
-    {
-      "id": "1DOZa2VoazIiDjGYlUQTlW",
-      "name": "SUN",
-      "artist": "Gen Hoshino",
-      "album": "YELLOW DANCER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
-      "playedAt": "2026-05-20T12:30:23.210Z",
-      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
-      "duration": 241466,
       "previewUrl": ""
     },
     {
@@ -274,61 +329,6 @@
       "playedAt": "2026-05-18T10:56:05.557Z",
       "spotifyUrl": "https://open.spotify.com/track/3cYVcsBK1CZkXoKaSYZqoj",
       "duration": 162697,
-      "previewUrl": ""
-    },
-    {
-      "id": "40ylzMzusmG45S4bdDSnPz",
-      "name": "Shooting Stars",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-05-18T10:53:31.933Z",
-      "spotifyUrl": "https://open.spotify.com/track/40ylzMzusmG45S4bdDSnPz",
-      "duration": 116839,
-      "previewUrl": ""
-    },
-    {
-      "id": "0omQt0YfcdYM6RnA5EVTw2",
-      "name": "Virtual Storm - Hard Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-05-18T10:51:27.991Z",
-      "spotifyUrl": "https://open.spotify.com/track/0omQt0YfcdYM6RnA5EVTw2",
-      "duration": 131802,
-      "previewUrl": ""
-    },
-    {
-      "id": "2DTkdJipk64ces3k4hjzGK",
-      "name": "KARAKURhythm",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-05-18T10:49:12.038Z",
-      "spotifyUrl": "https://open.spotify.com/track/2DTkdJipk64ces3k4hjzGK",
-      "duration": 121068,
-      "previewUrl": ""
-    },
-    {
-      "id": "1l09TMYGe1ApGHZrIbfnq9",
-      "name": "Shooting Athletes",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-05-18T10:47:09.812Z",
-      "spotifyUrl": "https://open.spotify.com/track/1l09TMYGe1ApGHZrIbfnq9",
-      "duration": 120484,
-      "previewUrl": ""
-    },
-    {
-      "id": "7AAtMYMJlUOmmUexnv3szU",
-      "name": "Interface - Hard Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-05-18T10:45:09.113Z",
-      "spotifyUrl": "https://open.spotify.com/track/7AAtMYMJlUOmmUexnv3szU",
-      "duration": 122135,
       "previewUrl": ""
     }
   ],
