@@ -1,15 +1,103 @@
 {
-  "lastUpdated": "2026-05-21T02:10:40.416Z",
+  "lastUpdated": "2026-05-21T08:54:43.805Z",
   "tracks": [
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-05-21T06:55:04.448Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
     {
       "id": "59h6J25QnnT8xshPTFLkpe",
       "name": "あぶく",
       "artist": "ヨルシカ",
       "album": "あぶく",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
-      "playedAt": "2026-05-20T12:56:34.480Z",
+      "playedAt": "2026-05-21T06:48:54.283Z",
       "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
       "duration": 234613,
+      "previewUrl": ""
+    },
+    {
+      "id": "73TEyhGLxixHAwzOdoamgV",
+      "name": "Aoi",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-05-21T06:43:20.816Z",
+      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
+      "duration": 256120,
+      "previewUrl": ""
+    },
+    {
+      "id": "1SdwlHsv8bWHbAlIw5Jfgo",
+      "name": "Laughter",
+      "artist": "OFFICIAL HIGE DANDISM",
+      "album": "Laughter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e3487c07d29e73d46211ac73",
+      "playedAt": "2026-05-21T06:37:01.635Z",
+      "spotifyUrl": "https://open.spotify.com/track/1SdwlHsv8bWHbAlIw5Jfgo",
+      "duration": 350299,
+      "previewUrl": ""
+    },
+    {
+      "id": "3wJHCry960drNlAUGrJLmz",
+      "name": "ただ君に晴れ",
+      "artist": "ヨルシカ",
+      "album": "負け犬にアンコールはいらない",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328b535c92629e3c8d20ec242",
+      "playedAt": "2026-05-21T06:37:00.248Z",
+      "spotifyUrl": "https://open.spotify.com/track/3wJHCry960drNlAUGrJLmz",
+      "duration": 198971,
+      "previewUrl": ""
+    },
+    {
+      "id": "5d0dz0ekefZ243cWDGiDJ1",
+      "name": "アイモライモ - Aimoraimo",
+      "artist": "tuki.",
+      "album": "アイモライモ - Aimoraimo",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bb4f7c3d1daff70f965aacd3",
+      "playedAt": "2026-05-21T06:32:07.923Z",
+      "spotifyUrl": "https://open.spotify.com/track/5d0dz0ekefZ243cWDGiDJ1",
+      "duration": 255320,
+      "previewUrl": ""
+    },
+    {
+      "id": "08YwAPnX8sygJUXG9rvhDv",
+      "name": "ハルジオン",
+      "artist": "YOASOBI",
+      "album": "THE BOOK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339917845c74c9e64320fbed9",
+      "playedAt": "2026-05-21T06:27:51.973Z",
+      "spotifyUrl": "https://open.spotify.com/track/08YwAPnX8sygJUXG9rvhDv",
+      "duration": 198600,
+      "previewUrl": ""
+    },
+    {
+      "id": "6megNXGjmim4OitjZnIn9v",
+      "name": "春雷",
+      "artist": "Kenshi Yonezu",
+      "album": "BOOTLEG",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
+      "playedAt": "2026-05-21T06:24:33.958Z",
+      "spotifyUrl": "https://open.spotify.com/track/6megNXGjmim4OitjZnIn9v",
+      "duration": 288887,
+      "previewUrl": ""
+    },
+    {
+      "id": "3Ht2iEekMrHRndj0sC5e2X",
+      "name": "カルマ",
+      "artist": "BUMP OF CHICKEN",
+      "album": "orbital period",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8bf4d447ecc2c7914cb791c",
+      "playedAt": "2026-05-21T06:19:43.730Z",
+      "spotifyUrl": "https://open.spotify.com/track/3Ht2iEekMrHRndj0sC5e2X",
+      "duration": 209973,
       "previewUrl": ""
     },
     {
@@ -24,17 +112,6 @@
       "previewUrl": ""
     },
     {
-      "id": "73TEyhGLxixHAwzOdoamgV",
-      "name": "Aoi",
-      "artist": "sakanaction",
-      "album": "sakanaction",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
-      "playedAt": "2026-05-20T12:42:23.673Z",
-      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
-      "duration": 256120,
-      "previewUrl": ""
-    },
-    {
       "id": "1DOZa2VoazIiDjGYlUQTlW",
       "name": "SUN",
       "artist": "Gen Hoshino",
@@ -43,17 +120,6 @@
       "playedAt": "2026-05-20T12:30:23.210Z",
       "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
       "duration": 241466,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-05-20T02:14:10.515Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
       "previewUrl": ""
     },
     {
@@ -263,72 +329,6 @@
       "playedAt": "2026-05-18T10:45:09.113Z",
       "spotifyUrl": "https://open.spotify.com/track/7AAtMYMJlUOmmUexnv3szU",
       "duration": 122135,
-      "previewUrl": ""
-    },
-    {
-      "id": "64tkKuNjL1cNexGbSdSjHQ",
-      "name": "Vivid Night",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-05-18T10:43:17.030Z",
-      "spotifyUrl": "https://open.spotify.com/track/64tkKuNjL1cNexGbSdSjHQ",
-      "duration": 105188,
-      "previewUrl": ""
-    },
-    {
-      "id": "5TLlH4NqFwbs9pjWUMGK5H",
-      "name": "Signal of Abydos",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-05-18T10:41:20.683Z",
-      "spotifyUrl": "https://open.spotify.com/track/5TLlH4NqFwbs9pjWUMGK5H",
-      "duration": 116821,
-      "previewUrl": ""
-    },
-    {
-      "id": "5FJhdIyGGX5emFtEnHfL8W",
-      "name": "Indoor Outdoor",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-05-18T10:39:23.567Z",
-      "spotifyUrl": "https://open.spotify.com/track/5FJhdIyGGX5emFtEnHfL8W",
-      "duration": 110543,
-      "previewUrl": ""
-    },
-    {
-      "id": "0N1fB13SqzxQfnYdYQQvbe",
-      "name": "Cherry Berry Merry",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-05-18T10:37:32.401Z",
-      "spotifyUrl": "https://open.spotify.com/track/0N1fB13SqzxQfnYdYQQvbe",
-      "duration": 131244,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zzcrYiYLMoAQF0rm6Sxol",
-      "name": "Aira",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-05-18T10:35:20.418Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zzcrYiYLMoAQF0rm6Sxol",
-      "duration": 136092,
-      "previewUrl": ""
-    },
-    {
-      "id": "6qYkcg1U6JpKq0TQW91roa",
-      "name": "Illuminated Night",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-05-18T10:33:03.887Z",
-      "spotifyUrl": "https://open.spotify.com/track/6qYkcg1U6JpKq0TQW91roa",
-      "duration": 122003,
       "previewUrl": ""
     }
   ],
