@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-05-22T14:14:15.058Z",
+  "lastUpdated": "2026-05-22T19:22:06.461Z",
   "tracks": [
+    {
+      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "name": "Butter Building",
+      "artist": "Xoc",
+      "album": "What's Pink and Sucks?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
+      "playedAt": "2026-05-22T16:56:14.840Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "duration": 98754,
+      "previewUrl": ""
+    },
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-05-22T16:43:53.933Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
+    {
+      "id": "1zp1lyCh8kznSCwLNZX0ql",
+      "name": "レイテストナンバー",
+      "artist": "toe",
+      "album": "Our Latest Number",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c7b7c4f7bc2d309b66da8a1",
+      "playedAt": "2026-05-22T16:43:04.749Z",
+      "spotifyUrl": "https://open.spotify.com/track/1zp1lyCh8kznSCwLNZX0ql",
+      "duration": 310586,
+      "previewUrl": ""
+    },
+    {
+      "id": "5jCTCwOWE2uGWxRqx5crNS",
+      "name": "キアロスクーロ",
+      "artist": "toe",
+      "album": "NOW I SEE THE LIGHT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c639158b8bcaa1918315463d",
+      "playedAt": "2026-05-22T16:37:53.447Z",
+      "spotifyUrl": "https://open.spotify.com/track/5jCTCwOWE2uGWxRqx5crNS",
+      "duration": 203383,
+      "previewUrl": ""
+    },
+    {
+      "id": "2RJuCZXtZYubzTW78kmaBx",
+      "name": "孤独の発明",
+      "artist": "toe",
+      "album": "the book about my idle plot on a vague anxiety",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b5a7cac5f838dcd77512037d",
+      "playedAt": "2026-05-22T16:34:29.759Z",
+      "spotifyUrl": "https://open.spotify.com/track/2RJuCZXtZYubzTW78kmaBx",
+      "duration": 203506,
+      "previewUrl": ""
+    },
+    {
+      "id": "7onucgU6HHFbtZ9r0jXgmy",
+      "name": "DREAM SOLISTER",
+      "artist": "TRUE",
+      "album": "Joy Heart",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
+      "playedAt": "2026-05-22T16:27:48.091Z",
+      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
+      "duration": 300533,
+      "previewUrl": ""
+    },
+    {
+      "id": "6Diwp8VlEBl8fuv7HnnLF4",
+      "name": "TOMORROW",
+      "artist": "Machico",
+      "album": "TVアニメ『この素晴らしい世界に祝福を! 2』オープニング・テーマ「TOMORROW」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a30fc95c84433a035f34b05",
+      "playedAt": "2026-05-22T14:57:08.253Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Diwp8VlEBl8fuv7HnnLF4",
+      "duration": 275533,
+      "previewUrl": ""
+    },
     {
       "id": "73TEyhGLxixHAwzOdoamgV",
       "name": "Aoi",
@@ -252,83 +329,6 @@
       "playedAt": "2026-05-22T09:59:56.200Z",
       "spotifyUrl": "https://open.spotify.com/track/5feA3fPJaYOHSLOYklCuMS",
       "duration": 109624,
-      "previewUrl": ""
-    },
-    {
-      "id": "7EvWvDR0UvxqXIAkKaQP5Z",
-      "name": "Future Lab",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-05-22T09:58:05.899Z",
-      "spotifyUrl": "https://open.spotify.com/track/7EvWvDR0UvxqXIAkKaQP5Z",
-      "duration": 120753,
-      "previewUrl": ""
-    },
-    {
-      "id": "60oFLtrgr39Rlnb5KiQkDt",
-      "name": "Irasshaimase",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-05-22T09:56:06.230Z",
-      "spotifyUrl": "https://open.spotify.com/track/60oFLtrgr39Rlnb5KiQkDt",
-      "duration": 130386,
-      "previewUrl": ""
-    },
-    {
-      "id": "5itk2nCZQziIrLFZ7AB3qS",
-      "name": "RE Aoharu",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-05-22T09:53:54.156Z",
-      "spotifyUrl": "https://open.spotify.com/track/5itk2nCZQziIrLFZ7AB3qS",
-      "duration": 141375,
-      "previewUrl": ""
-    },
-    {
-      "id": "5nkMGXU1zq7RhhGZlrOyJZ",
-      "name": "SAKURA PUNCH - Hard Arrange",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-05-22T09:51:32.002Z",
-      "spotifyUrl": "https://open.spotify.com/track/5nkMGXU1zq7RhhGZlrOyJZ",
-      "duration": 122086,
-      "previewUrl": ""
-    },
-    {
-      "id": "0N1fB13SqzxQfnYdYQQvbe",
-      "name": "Cherry Berry Merry",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-05-22T09:49:29.430Z",
-      "spotifyUrl": "https://open.spotify.com/track/0N1fB13SqzxQfnYdYQQvbe",
-      "duration": 131244,
-      "previewUrl": ""
-    },
-    {
-      "id": "7xVHDrR31ZkoLhRPA1ByM0",
-      "name": "HIGH5LANDER",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
-      "playedAt": "2026-05-22T09:47:17.526Z",
-      "spotifyUrl": "https://open.spotify.com/track/7xVHDrR31ZkoLhRPA1ByM0",
-      "duration": 123373,
-      "previewUrl": ""
-    },
-    {
-      "id": "4L330cbJvY8AEYIzJfUayE",
-      "name": "KIRISAME",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-05-22T09:45:12.836Z",
-      "spotifyUrl": "https://open.spotify.com/track/4L330cbJvY8AEYIzJfUayE",
-      "duration": 113204,
       "previewUrl": ""
     }
   ],
