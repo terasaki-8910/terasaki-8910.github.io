@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-05-23T08:05:24.549Z",
+  "lastUpdated": "2026-05-23T12:58:37.855Z",
   "tracks": [
+    {
+      "id": "2pl1Yo26URVBFQRrJXvyuX",
+      "name": "Goodbye",
+      "artist": "toe",
+      "album": "I Am Shark: Confessions Under Water, Vol. 3",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27335837b179ea3485776175708",
+      "playedAt": "2026-05-23T09:08:23.990Z",
+      "spotifyUrl": "https://open.spotify.com/track/2pl1Yo26URVBFQRrJXvyuX",
+      "duration": 454112,
+      "previewUrl": ""
+    },
+    {
+      "id": "0R6C8iuKONvuiXHfgPdONT",
+      "name": "RUN FOR WORD_first ver",
+      "artist": "toe",
+      "album": "That's Another Story_Less Track Version for Digital Delivery",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ed18dfb77bb536bff76f7553",
+      "playedAt": "2026-05-23T09:00:49.560Z",
+      "spotifyUrl": "https://open.spotify.com/track/0R6C8iuKONvuiXHfgPdONT",
+      "duration": 137413,
+      "previewUrl": ""
+    },
     {
       "id": "1PV7b1oXEoFJuo6APz7VfZ",
       "name": "Because I Hear You",
@@ -307,28 +329,6 @@
       "playedAt": "2026-05-23T04:13:45.053Z",
       "spotifyUrl": "https://open.spotify.com/track/6qcUFIPZU2sJXiI1sqzwZG",
       "duration": 250253,
-      "previewUrl": ""
-    },
-    {
-      "id": "30oddeV4b75MDQ6JvkAXCW",
-      "name": "グッドバイ -album version-",
-      "artist": "toe",
-      "album": "For Long Tomorrow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273218f23e309df278d5b04748c",
-      "playedAt": "2026-05-23T04:09:34.335Z",
-      "spotifyUrl": "https://open.spotify.com/track/30oddeV4b75MDQ6JvkAXCW",
-      "duration": 425533,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
-      "name": "Butter Building",
-      "artist": "Xoc",
-      "album": "What's Pink and Sucks?",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
-      "playedAt": "2026-05-22T16:56:14.840Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
-      "duration": 98754,
       "previewUrl": ""
     }
   ],
