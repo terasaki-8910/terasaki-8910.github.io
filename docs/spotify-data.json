@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-05-24T02:10:08.749Z",
+  "lastUpdated": "2026-05-24T08:15:54.576Z",
   "tracks": [
+    {
+      "id": "59h6J25QnnT8xshPTFLkpe",
+      "name": "あぶく",
+      "artist": "ヨルシカ",
+      "album": "あぶく",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
+      "playedAt": "2026-05-24T05:41:26.093Z",
+      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
+      "duration": 234613,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
@@ -318,17 +329,6 @@
       "playedAt": "2026-05-23T05:58:33.178Z",
       "spotifyUrl": "https://open.spotify.com/track/4hQK4OcnGSxHvy41vhWTaS",
       "duration": 239240,
-      "previewUrl": ""
-    },
-    {
-      "id": "4bFDzD87ueqThJ4xE8M1Cj",
-      "name": "モスキートンはもう聞こえない#2",
-      "artist": "toe",
-      "album": "For Long Tomorrow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273218f23e309df278d5b04748c",
-      "playedAt": "2026-05-23T05:54:33.395Z",
-      "spotifyUrl": "https://open.spotify.com/track/4bFDzD87ueqThJ4xE8M1Cj",
-      "duration": 139560,
       "previewUrl": ""
     }
   ],
