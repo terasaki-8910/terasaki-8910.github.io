@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-06-01T17:15:07.527Z",
+  "lastUpdated": "2026-06-01T21:20:33.037Z",
   "tracks": [
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-06-01T14:33:05.563Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
     {
       "id": "6wK78BaKK20QxyMhkZWXdh",
       "name": "Dolce Biblioteca",
@@ -318,17 +329,6 @@
       "playedAt": "2026-06-01T12:35:21.599Z",
       "spotifyUrl": "https://open.spotify.com/track/6Vh03bkEfXqekWp7Y1UBRb",
       "duration": 200213,
-      "previewUrl": ""
-    },
-    {
-      "id": "4L3Vw8hTyqJ1AdyypY4e61",
-      "name": "Call Me Maybe",
-      "artist": "Carly Rae Jepsen",
-      "album": "Kiss",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735039eac30f931ef39405717b",
-      "playedAt": "2026-06-01T12:32:11.143Z",
-      "spotifyUrl": "https://open.spotify.com/track/4L3Vw8hTyqJ1AdyypY4e61",
-      "duration": 193400,
       "previewUrl": ""
     }
   ],
