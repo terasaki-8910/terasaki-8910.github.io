@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-06-02T02:37:03.177Z",
+  "lastUpdated": "2026-06-02T10:01:50.198Z",
   "tracks": [
+    {
+      "id": "7nDkXyN86D6iszJdl0r8YB",
+      "name": "We'll Meet Again",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-06-02T09:54:26.272Z",
+      "spotifyUrl": "https://open.spotify.com/track/7nDkXyN86D6iszJdl0r8YB",
+      "duration": 195625,
+      "previewUrl": ""
+    },
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-06-02T09:00:44.471Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
+    {
+      "id": "4TA9L3T2yKWW0uz3lIvzxg",
+      "name": "Finale",
+      "artist": "Holder, GameChops",
+      "album": "Undertale Remixed",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d6f95bd49983c2ba98795633",
+      "playedAt": "2026-06-02T08:55:28.899Z",
+      "spotifyUrl": "https://open.spotify.com/track/4TA9L3T2yKWW0uz3lIvzxg",
+      "duration": 171250,
+      "previewUrl": ""
+    },
+    {
+      "id": "6fKcJ3VglKLGyLRaiEyDPo",
+      "name": "Spider Dance",
+      "artist": "Holder, GameChops",
+      "album": "Undertale Remixed",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d6f95bd49983c2ba98795633",
+      "playedAt": "2026-06-02T03:55:51.154Z",
+      "spotifyUrl": "https://open.spotify.com/track/6fKcJ3VglKLGyLRaiEyDPo",
+      "duration": 180004,
+      "previewUrl": ""
+    },
+    {
+      "id": "6PSKeBtijEy8OoL9dGDY60",
+      "name": "Funky Road",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-06-02T03:51:44.129Z",
+      "spotifyUrl": "https://open.spotify.com/track/6PSKeBtijEy8OoL9dGDY60",
+      "duration": 130789,
+      "previewUrl": ""
+    },
     {
       "id": "5XsPjGw1ADBcVU0i7mwNb1",
       "name": "Campus mode!!",
@@ -274,61 +329,6 @@
       "playedAt": "2026-06-01T12:51:11.105Z",
       "spotifyUrl": "https://open.spotify.com/track/7JJmb5XwzOO8jgpou264Ml",
       "duration": 199440,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pYfyrMNPn3wtoCyqcTVoI",
-      "name": "Moves Like Jagger - Studio Recording From \"The Voice\" Performance",
-      "artist": "Maroon 5, Christina Aguilera",
-      "album": "Hands All Over (Revised International Standard version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739585ff55fff75c5c07a619cb",
-      "playedAt": "2026-06-01T12:48:02.162Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pYfyrMNPn3wtoCyqcTVoI",
-      "duration": 201493,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ct6r3EGTcMLPtrXHDvVjc",
-      "name": "The Nights",
-      "artist": "Avicii",
-      "album": "The Days / Nights",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730ae4f4d42e4a09f3a29f64ad",
-      "playedAt": "2026-06-01T12:44:52.770Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ct6r3EGTcMLPtrXHDvVjc",
-      "duration": 176658,
-      "previewUrl": ""
-    },
-    {
-      "id": "7EQGXaVSyEDsCWKmUcfpLk",
-      "name": "Die Young",
-      "artist": "Kesha",
-      "album": "Warrior (Expanded Edition)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273edcab0fe7cf29d17751dad18",
-      "playedAt": "2026-06-01T12:42:05.146Z",
-      "spotifyUrl": "https://open.spotify.com/track/7EQGXaVSyEDsCWKmUcfpLk",
-      "duration": 211920,
-      "previewUrl": ""
-    },
-    {
-      "id": "1CiVz2WkmZRwhU3A6J2Gjz",
-      "name": "Shake It Off",
-      "artist": "Taylor Swift",
-      "album": "1989 (Big Machine Radio Release Special)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730432bfd9e6adb616fd8bcc97",
-      "playedAt": "2026-06-01T12:38:42.689Z",
-      "spotifyUrl": "https://open.spotify.com/track/1CiVz2WkmZRwhU3A6J2Gjz",
-      "duration": 219200,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Vh03bkEfXqekWp7Y1UBRb",
-      "name": "Live While We're Young",
-      "artist": "One Direction",
-      "album": "Take Me Home (Expanded Edition)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734e31e0d38b89b8fb239d4fbf",
-      "playedAt": "2026-06-01T12:35:21.599Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Vh03bkEfXqekWp7Y1UBRb",
-      "duration": 200213,
       "previewUrl": ""
     }
   ],
