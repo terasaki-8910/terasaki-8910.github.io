@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-06-03T02:45:05.209Z",
+  "lastUpdated": "2026-06-03T10:41:53.304Z",
   "tracks": [
+    {
+      "id": "7dTW21YAJxnAOiUh7Rtu9S",
+      "name": "怪獣の花唄",
+      "artist": "Vaundy",
+      "album": "strobo",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
+      "playedAt": "2026-06-03T06:19:17.164Z",
+      "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
+      "duration": 224804,
+      "previewUrl": ""
+    },
+    {
+      "id": "64yajM6CxtLghmgB53VeXT",
+      "name": "インフェルノ",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "インフェルノ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731a4e99f0c693fecc9038d3dd",
+      "playedAt": "2026-06-03T06:15:37.128Z",
+      "spotifyUrl": "https://open.spotify.com/track/64yajM6CxtLghmgB53VeXT",
+      "duration": 212546,
+      "previewUrl": ""
+    },
+    {
+      "id": "3OWQGA40CgyZ7AHhVTOe34",
+      "name": "前前前世",
+      "artist": "RADWIMPS",
+      "album": "人間開花",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731b70a19a834b7f15d33fe523",
+      "playedAt": "2026-06-03T06:12:07.545Z",
+      "spotifyUrl": "https://open.spotify.com/track/3OWQGA40CgyZ7AHhVTOe34",
+      "duration": 275066,
+      "previewUrl": ""
+    },
+    {
+      "id": "3x3xDJexQhxbFQUwCbUc0y",
+      "name": "完全感覚Dreamer",
+      "artist": "ONE OK ROCK",
+      "album": "Nicheシンドローム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739f8ec42c93505b1b29ccd630",
+      "playedAt": "2026-06-03T06:09:08.889Z",
+      "spotifyUrl": "https://open.spotify.com/track/3x3xDJexQhxbFQUwCbUc0y",
+      "duration": 252200,
+      "previewUrl": ""
+    },
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-06-03T06:04:32.170Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-06-03T06:03:24.906Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
     {
       "id": "6Jb6mPt99aEFELWrxzMkUX",
       "name": "Infinite Power",
@@ -263,72 +329,6 @@
       "playedAt": "2026-06-02T16:57:14.370Z",
       "spotifyUrl": "https://open.spotify.com/track/08ExAKQL1ccxqVrC9qzO9Q",
       "duration": 220824,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WttbQX5vAw6XXQftF3Ers",
-      "name": "Upwind",
-      "artist": "TheFatRat",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-02T16:54:02.264Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WttbQX5vAw6XXQftF3Ers",
-      "duration": 192000,
-      "previewUrl": ""
-    },
-    {
-      "id": "5yI7d2WghcH6ekN7D01J2w",
-      "name": "The Calling - Instrumental",
-      "artist": "TheFatRat",
-      "album": "The Calling",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e37b56b30e0d3d6bc73694da",
-      "playedAt": "2026-06-02T16:50:55.236Z",
-      "spotifyUrl": "https://open.spotify.com/track/5yI7d2WghcH6ekN7D01J2w",
-      "duration": 233590,
-      "previewUrl": ""
-    },
-    {
-      "id": "7dvPVoZHsfkZR46CvbiKHT",
-      "name": "MAYDAY",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "MAYDAY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d15aa64c7bf2bf8d23a9df40",
-      "playedAt": "2026-06-02T16:47:07.524Z",
-      "spotifyUrl": "https://open.spotify.com/track/7dvPVoZHsfkZR46CvbiKHT",
-      "duration": 247339,
-      "previewUrl": ""
-    },
-    {
-      "id": "06POVSGbIFuQsc721gLk6Q",
-      "name": "Close To The Sun",
-      "artist": "TheFatRat, Anjulie",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-06-02T16:43:05.353Z",
-      "spotifyUrl": "https://open.spotify.com/track/06POVSGbIFuQsc721gLk6Q",
-      "duration": 192239,
-      "previewUrl": ""
-    },
-    {
-      "id": "6anGosAX39TdpJGNQH3H9n",
-      "name": "Xenogenesis",
-      "artist": "TheFatRat",
-      "album": "Xenogenesis",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732b6426976b98690b35b21ded",
-      "playedAt": "2026-06-02T16:38:03.095Z",
-      "spotifyUrl": "https://open.spotify.com/track/6anGosAX39TdpJGNQH3H9n",
-      "duration": 233379,
-      "previewUrl": ""
-    },
-    {
-      "id": "6inzGTxyGsXVjpVKtFGrcE",
-      "name": "Rise Up",
-      "artist": "TheFatRat",
-      "album": "Rise Up",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273043a40737b9cded403f02ee4",
-      "playedAt": "2026-06-02T16:34:19.252Z",
-      "spotifyUrl": "https://open.spotify.com/track/6inzGTxyGsXVjpVKtFGrcE",
-      "duration": 169756,
       "previewUrl": ""
     }
   ],
