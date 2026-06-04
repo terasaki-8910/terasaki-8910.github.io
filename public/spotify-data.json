@@ -1,15 +1,59 @@
 {
-  "lastUpdated": "2026-06-04T02:39:34.248Z",
+  "lastUpdated": "2026-06-04T09:42:00.230Z",
   "tracks": [
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-06-04T07:46:16.868Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
     {
       "id": "7dTW21YAJxnAOiUh7Rtu9S",
       "name": "怪獣の花唄",
       "artist": "Vaundy",
       "album": "strobo",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
-      "playedAt": "2026-06-03T06:19:17.164Z",
+      "playedAt": "2026-06-04T07:37:53.048Z",
       "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
       "duration": 224804,
+      "previewUrl": ""
+    },
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-06-04T06:14:25.947Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-06-04T06:08:40.147Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
+    {
+      "id": "1HndxIIyhXnYpK8eaoamPR",
+      "name": "ハルカミライ",
+      "artist": "KANKAKU PIERO",
+      "album": "#HAL - ブラッククローバーver. -",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27337f127b38cd0afbb564ffed9",
+      "playedAt": "2026-06-04T06:04:29.597Z",
+      "spotifyUrl": "https://open.spotify.com/track/1HndxIIyhXnYpK8eaoamPR",
+      "duration": 177115,
       "previewUrl": ""
     },
     {
@@ -54,17 +98,6 @@
       "playedAt": "2026-06-03T06:04:32.170Z",
       "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
       "duration": 176960,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-06-03T06:03:24.906Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-06-02T23:59:25.853Z",
       "spotifyUrl": "https://open.spotify.com/track/4mP0t0KHdFrKXt7si43dYj",
       "duration": 180326,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FpXO7ehznN8Mh3sNfRd1r",
-      "name": "Oblivion",
-      "artist": "TheFatRat, Lola Blanc",
-      "album": "Oblivion",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
-      "playedAt": "2026-06-02T23:56:30.871Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
-      "duration": 211935,
-      "previewUrl": ""
-    },
-    {
-      "id": "4uhajAtJz72BBHkiIUvr7v",
-      "name": "Hiding In The Blue",
-      "artist": "TheFatRat, RIELL",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-02T17:00:44.048Z",
-      "spotifyUrl": "https://open.spotify.com/track/4uhajAtJz72BBHkiIUvr7v",
-      "duration": 221700,
-      "previewUrl": ""
-    },
-    {
-      "id": "08ExAKQL1ccxqVrC9qzO9Q",
-      "name": "Fly Away - Inukshuk Remix",
-      "artist": "TheFatRat, Anjulie, Inukshuk",
-      "album": "Fly Away (Inukshuk Remix)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273968d5ea0803eb8d58f059479",
-      "playedAt": "2026-06-02T16:57:14.370Z",
-      "spotifyUrl": "https://open.spotify.com/track/08ExAKQL1ccxqVrC9qzO9Q",
-      "duration": 220824,
       "previewUrl": ""
     }
   ],
