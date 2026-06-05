@@ -1,6 +1,182 @@
 {
-  "lastUpdated": "2026-06-05T09:29:09.986Z",
+  "lastUpdated": "2026-06-05T14:23:42.107Z",
   "tracks": [
+    {
+      "id": "1DOZa2VoazIiDjGYlUQTlW",
+      "name": "SUN",
+      "artist": "Gen Hoshino",
+      "album": "YELLOW DANCER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
+      "playedAt": "2026-06-05T12:51:46.804Z",
+      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
+      "duration": 241466,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-06-05T12:47:44.892Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
+    {
+      "id": "5hVAQTNarrb3lmWqg9Ens4",
+      "name": "Answer",
+      "artist": "Lilas",
+      "album": "Answer",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348c5cfdc37632311b3093be5",
+      "playedAt": "2026-06-05T12:43:55.257Z",
+      "spotifyUrl": "https://open.spotify.com/track/5hVAQTNarrb3lmWqg9Ens4",
+      "duration": 246000,
+      "previewUrl": ""
+    },
+    {
+      "id": "7dTW21YAJxnAOiUh7Rtu9S",
+      "name": "怪獣の花唄",
+      "artist": "Vaundy",
+      "album": "strobo",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
+      "playedAt": "2026-06-05T12:38:22.094Z",
+      "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
+      "duration": 224804,
+      "previewUrl": ""
+    },
+    {
+      "id": "3rWyLf6o3RMbUeK4aafkHd",
+      "name": "p.h. - cover",
+      "artist": "suisoh",
+      "album": "p.h. (cover)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736f4be5c667dfbf2c2781c4c9",
+      "playedAt": "2026-06-05T12:34:36.847Z",
+      "spotifyUrl": "https://open.spotify.com/track/3rWyLf6o3RMbUeK4aafkHd",
+      "duration": 152929,
+      "previewUrl": ""
+    },
+    {
+      "id": "02vOyaNCKGX8uhjggOIH83",
+      "name": "エンヴィーベイビー",
+      "artist": "Kanaria",
+      "album": "エンヴィーベイビー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fa53d481a829f303078565eb",
+      "playedAt": "2026-06-05T10:54:07.996Z",
+      "spotifyUrl": "https://open.spotify.com/track/02vOyaNCKGX8uhjggOIH83",
+      "duration": 135789,
+      "previewUrl": ""
+    },
+    {
+      "id": "6unPQ3WjSYWpKWjSVPA0KE",
+      "name": "ロマンスがありあまる",
+      "artist": "Gesu No Kiwami Otome",
+      "album": "両成敗",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8a4036d02f2af9b21bdc1f1",
+      "playedAt": "2026-06-05T10:51:51.770Z",
+      "spotifyUrl": "https://open.spotify.com/track/6unPQ3WjSYWpKWjSVPA0KE",
+      "duration": 224640,
+      "previewUrl": ""
+    },
+    {
+      "id": "1mUBfxiEdsrVhkQCohevey",
+      "name": "ヨセアツメ",
+      "artist": "和ぬか",
+      "album": "ヨセアツメ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273879d3096a43336afe504b30f",
+      "playedAt": "2026-06-05T10:48:06.659Z",
+      "spotifyUrl": "https://open.spotify.com/track/1mUBfxiEdsrVhkQCohevey",
+      "duration": 197483,
+      "previewUrl": ""
+    },
+    {
+      "id": "4oqUgyBXtbbJkeppHt8t2D",
+      "name": "嫌々",
+      "artist": "HALVES",
+      "album": "嫌々",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fab93f3bb8cfc0cd375b1415",
+      "playedAt": "2026-06-05T10:36:20.011Z",
+      "spotifyUrl": "https://open.spotify.com/track/4oqUgyBXtbbJkeppHt8t2D",
+      "duration": 184145,
+      "previewUrl": ""
+    },
+    {
+      "id": "6qB3lZIfnDC8TE2245NDtO",
+      "name": "夜の踊り子",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-06-05T10:33:15.425Z",
+      "spotifyUrl": "https://open.spotify.com/track/6qB3lZIfnDC8TE2245NDtO",
+      "duration": 302920,
+      "previewUrl": ""
+    },
+    {
+      "id": "6pllZAdgBf4QTcFUrF3DzL",
+      "name": "喜劇",
+      "artist": "Gen Hoshino",
+      "album": "喜劇",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e76ce8200edae0e2b1316393",
+      "playedAt": "2026-06-05T10:28:12.060Z",
+      "spotifyUrl": "https://open.spotify.com/track/6pllZAdgBf4QTcFUrF3DzL",
+      "duration": 230666,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WMeDp0t2UJmy21PRKAOzx",
+      "name": "ヒトリゴト",
+      "artist": "ClariS",
+      "album": "ヒトリゴト",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334257c272ad39c28b6562e0f",
+      "playedAt": "2026-06-05T10:24:20.961Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WMeDp0t2UJmy21PRKAOzx",
+      "duration": 235093,
+      "previewUrl": ""
+    },
+    {
+      "id": "5sMZm3jJiLgkbDOGSztRSY",
+      "name": "メランコリーキッチン",
+      "artist": "Kenshi Yonezu",
+      "album": "YANKEE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
+      "playedAt": "2026-06-05T10:20:25.405Z",
+      "spotifyUrl": "https://open.spotify.com/track/5sMZm3jJiLgkbDOGSztRSY",
+      "duration": 218653,
+      "previewUrl": ""
+    },
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2026-06-05T10:16:17.027Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
+      "previewUrl": ""
+    },
+    {
+      "id": "5WCK18MbTKuOcmLsOXMaHd",
+      "name": "ロキ",
+      "artist": "Mikito P",
+      "album": "DAISAN WAVE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736549e0ca9064d28052bade1a",
+      "playedAt": "2026-06-05T10:11:56.914Z",
+      "spotifyUrl": "https://open.spotify.com/track/5WCK18MbTKuOcmLsOXMaHd",
+      "duration": 230400,
+      "previewUrl": ""
+    },
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-06-05T10:08:06.015Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
     {
       "id": "5U4PgFWzfzY7VEg9Ck4ziF",
       "name": "ガーデン",
@@ -123,50 +299,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7dTW21YAJxnAOiUh7Rtu9S",
-      "name": "怪獣の花唄",
-      "artist": "Vaundy",
-      "album": "strobo",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
-      "playedAt": "2026-06-05T04:33:24.098Z",
-      "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
-      "duration": 224804,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-06-05T04:26:10.598Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-06-04T07:46:16.868Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
-      "previewUrl": ""
-    },
-    {
-      "id": "1DOZa2VoazIiDjGYlUQTlW",
-      "name": "SUN",
-      "artist": "Gen Hoshino",
-      "album": "YELLOW DANCER",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b70bdd96ad09d1c7cdb4d720",
-      "playedAt": "2026-06-04T06:14:25.947Z",
-      "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
-      "duration": 241466,
-      "previewUrl": ""
-    },
-    {
       "id": "1HndxIIyhXnYpK8eaoamPR",
       "name": "ハルカミライ",
       "artist": "KANKAKU PIERO",
@@ -197,138 +329,6 @@
       "playedAt": "2026-06-03T06:12:07.545Z",
       "spotifyUrl": "https://open.spotify.com/track/3OWQGA40CgyZ7AHhVTOe34",
       "duration": 275066,
-      "previewUrl": ""
-    },
-    {
-      "id": "3x3xDJexQhxbFQUwCbUc0y",
-      "name": "完全感覚Dreamer",
-      "artist": "ONE OK ROCK",
-      "album": "Nicheシンドローム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739f8ec42c93505b1b29ccd630",
-      "playedAt": "2026-06-03T06:09:08.889Z",
-      "spotifyUrl": "https://open.spotify.com/track/3x3xDJexQhxbFQUwCbUc0y",
-      "duration": 252200,
-      "previewUrl": ""
-    },
-    {
-      "id": "03xt11xuwiqUQBMYKwEWKz",
-      "name": "モニタリング",
-      "artist": "DECO*27",
-      "album": "TRANSFORM",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
-      "playedAt": "2026-06-03T06:04:32.170Z",
-      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
-      "duration": 176960,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Jb6mPt99aEFELWrxzMkUX",
-      "name": "Infinite Power",
-      "artist": "TheFatRat",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-06-03T00:57:49.429Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Jb6mPt99aEFELWrxzMkUX",
-      "duration": 208787,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FmkMCmpdWADteSGahQ6vE",
-      "name": "MAYDAY - Ghost'n'Ghost Remix",
-      "artist": "TheFatRat, Laura Brehm, Ghost'n'ghost",
-      "album": "MAYDAY (Remixes)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273079c71fb5364210b133753d1",
-      "playedAt": "2026-06-03T00:54:35.353Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FmkMCmpdWADteSGahQ6vE",
-      "duration": 298308,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Tsy1Bpa8j1LIh5Pyt0xSq",
-      "name": "Warrior Song",
-      "artist": "TheFatRat, Stasia Estep",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-03T00:49:57.285Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Tsy1Bpa8j1LIh5Pyt0xSq",
-      "duration": 118000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2JK39qzkUYKzGRPYMs1t3Q",
-      "name": "Prelude",
-      "artist": "TheFatRat",
-      "album": "Jackpot",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
-      "playedAt": "2026-06-03T00:47:18.009Z",
-      "spotifyUrl": "https://open.spotify.com/track/2JK39qzkUYKzGRPYMs1t3Q",
-      "duration": 88274,
-      "previewUrl": ""
-    },
-    {
-      "id": "3TKECbhjCdTLx1UuyUS0ye",
-      "name": "Chosen",
-      "artist": "TheFatRat, Laura Brehm, Anna Yvette",
-      "album": "Chosen",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331c16beab40e89973c84d81e",
-      "playedAt": "2026-06-03T00:45:56.185Z",
-      "spotifyUrl": "https://open.spotify.com/track/3TKECbhjCdTLx1UuyUS0ye",
-      "duration": 229946,
-      "previewUrl": ""
-    },
-    {
-      "id": "5JEaoWa9hDApNaydmIZsZq",
-      "name": "Our Song",
-      "artist": "TheFatRat, Cecilia Gault",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-03T00:42:24.008Z",
-      "spotifyUrl": "https://open.spotify.com/track/5JEaoWa9hDApNaydmIZsZq",
-      "duration": 191328,
-      "previewUrl": ""
-    },
-    {
-      "id": "4iANNVwdNgzwcjBeIPjHmV",
-      "name": "Reminiscence",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-03T00:39:29.122Z",
-      "spotifyUrl": "https://open.spotify.com/track/4iANNVwdNgzwcjBeIPjHmV",
-      "duration": 141500,
-      "previewUrl": ""
-    },
-    {
-      "id": "6kO9ixLq9K3hk7QCmYyXbw",
-      "name": "Let Love Win",
-      "artist": "TheFatRat, Anjulie",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-03T00:37:22.286Z",
-      "spotifyUrl": "https://open.spotify.com/track/6kO9ixLq9K3hk7QCmYyXbw",
-      "duration": 198684,
-      "previewUrl": ""
-    },
-    {
-      "id": "70KCi4RQImun0ItOquIhQ6",
-      "name": "Prelude - VIP Edit",
-      "artist": "TheFatRat, JJD",
-      "album": "Prelude (VIP Edit)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ed7938d583c701d2fd6a0ff",
-      "playedAt": "2026-06-03T00:34:30.101Z",
-      "spotifyUrl": "https://open.spotify.com/track/70KCi4RQImun0ItOquIhQ6",
-      "duration": 218230,
-      "previewUrl": ""
-    },
-    {
-      "id": "6sxX58w1mBWxqqFu5kh1fg",
-      "name": "Kingdom Come",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-03T00:31:01.985Z",
-      "spotifyUrl": "https://open.spotify.com/track/6sxX58w1mBWxqqFu5kh1fg",
-      "duration": 49250,
       "previewUrl": ""
     }
   ],
