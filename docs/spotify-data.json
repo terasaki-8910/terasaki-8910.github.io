@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-06-05T14:23:42.107Z",
+  "lastUpdated": "2026-06-05T19:40:29.653Z",
   "tracks": [
+    {
+      "id": "7dTW21YAJxnAOiUh7Rtu9S",
+      "name": "怪獣の花唄",
+      "artist": "Vaundy",
+      "album": "strobo",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
+      "playedAt": "2026-06-05T17:17:23.697Z",
+      "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
+      "duration": 224804,
+      "previewUrl": ""
+    },
     {
       "id": "1DOZa2VoazIiDjGYlUQTlW",
       "name": "SUN",
@@ -32,17 +43,6 @@
       "playedAt": "2026-06-05T12:43:55.257Z",
       "spotifyUrl": "https://open.spotify.com/track/5hVAQTNarrb3lmWqg9Ens4",
       "duration": 246000,
-      "previewUrl": ""
-    },
-    {
-      "id": "7dTW21YAJxnAOiUh7Rtu9S",
-      "name": "怪獣の花唄",
-      "artist": "Vaundy",
-      "album": "strobo",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
-      "playedAt": "2026-06-05T12:38:22.094Z",
-      "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
-      "duration": 224804,
       "previewUrl": ""
     },
     {
