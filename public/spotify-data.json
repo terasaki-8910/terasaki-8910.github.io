@@ -1,6 +1,149 @@
 {
-  "lastUpdated": "2026-06-05T02:14:48.885Z",
+  "lastUpdated": "2026-06-05T09:29:09.986Z",
   "tracks": [
+    {
+      "id": "5U4PgFWzfzY7VEg9Ck4ziF",
+      "name": "ガーデン",
+      "artist": "Fujii Kaze",
+      "album": "LOVE ALL SERVE ALL",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af62b027ee85ae2e2f7c9702",
+      "playedAt": "2026-06-05T05:52:48.773Z",
+      "spotifyUrl": "https://open.spotify.com/track/5U4PgFWzfzY7VEg9Ck4ziF",
+      "duration": 229333,
+      "previewUrl": ""
+    },
+    {
+      "id": "22sQUmLhT8umlEhQzDrzfJ",
+      "name": "第六感",
+      "artist": "Reol",
+      "album": "第六感",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27353172aaf6f532e9e45cbb841",
+      "playedAt": "2026-06-05T05:48:58.965Z",
+      "spotifyUrl": "https://open.spotify.com/track/22sQUmLhT8umlEhQzDrzfJ",
+      "duration": 191624,
+      "previewUrl": ""
+    },
+    {
+      "id": "08YwAPnX8sygJUXG9rvhDv",
+      "name": "ハルジオン",
+      "artist": "YOASOBI",
+      "album": "THE BOOK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339917845c74c9e64320fbed9",
+      "playedAt": "2026-06-05T05:45:46.904Z",
+      "spotifyUrl": "https://open.spotify.com/track/08YwAPnX8sygJUXG9rvhDv",
+      "duration": 198600,
+      "previewUrl": ""
+    },
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2026-06-05T05:42:19.564Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vDqNzQqEhl7boeRS3Joli",
+      "name": "好きすぎて滅！",
+      "artist": "M!LK",
+      "album": "好きすぎて滅！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
+      "playedAt": "2026-06-05T05:37:53.994Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
+      "duration": 212400,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-06-05T05:34:11.626Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "3TyK4snzMM5NP3lUyHLu0j",
+      "name": "Elegy",
+      "artist": "TheFatRat",
+      "album": "Jackpot",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
+      "playedAt": "2026-06-05T05:26:00.094Z",
+      "spotifyUrl": "https://open.spotify.com/track/3TyK4snzMM5NP3lUyHLu0j",
+      "duration": 193448,
+      "previewUrl": ""
+    },
+    {
+      "id": "1fBWbKfZ4DKIOacKBWakSQ",
+      "name": "Violet Sky",
+      "artist": "TheFatRat, Cecilia Gault",
+      "album": "PARALLAX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
+      "playedAt": "2026-06-05T05:08:28.430Z",
+      "spotifyUrl": "https://open.spotify.com/track/1fBWbKfZ4DKIOacKBWakSQ",
+      "duration": 189737,
+      "previewUrl": ""
+    },
+    {
+      "id": "669AIf5NRtK58b7muzHfQT",
+      "name": "We'll Meet Again - Instrumental",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "We'll Meet Again",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738707f39a451e13104f0582e8",
+      "playedAt": "2026-06-05T04:43:06.778Z",
+      "spotifyUrl": "https://open.spotify.com/track/669AIf5NRtK58b7muzHfQT",
+      "duration": 195625,
+      "previewUrl": ""
+    },
+    {
+      "id": "3LWX4IZJox89hxHcnxm3xI",
+      "name": "Jackpot",
+      "artist": "TheFatRat",
+      "album": "Jackpot",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
+      "playedAt": "2026-06-05T04:39:54.888Z",
+      "spotifyUrl": "https://open.spotify.com/track/3LWX4IZJox89hxHcnxm3xI",
+      "duration": 195873,
+      "previewUrl": ""
+    },
+    {
+      "id": "05q7gFhlRUtK8VKx4Kkw2e",
+      "name": "Monody - Radio Edit",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "Monody (Radio Edit)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f51dfe97855dd2e03520dcc7",
+      "playedAt": "2026-06-05T04:36:57.837Z",
+      "spotifyUrl": "https://open.spotify.com/track/05q7gFhlRUtK8VKx4Kkw2e",
+      "duration": 252213,
+      "previewUrl": ""
+    },
+    {
+      "id": "7dTW21YAJxnAOiUh7Rtu9S",
+      "name": "怪獣の花唄",
+      "artist": "Vaundy",
+      "album": "strobo",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
+      "playedAt": "2026-06-05T04:33:24.098Z",
+      "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
+      "duration": 224804,
+      "previewUrl": ""
+    },
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-06-05T04:26:10.598Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
@@ -13,17 +156,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7dTW21YAJxnAOiUh7Rtu9S",
-      "name": "怪獣の花唄",
-      "artist": "Vaundy",
-      "album": "strobo",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
-      "playedAt": "2026-06-04T07:37:53.048Z",
-      "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
-      "duration": 224804,
-      "previewUrl": ""
-    },
-    {
       "id": "1DOZa2VoazIiDjGYlUQTlW",
       "name": "SUN",
       "artist": "Gen Hoshino",
@@ -32,17 +164,6 @@
       "playedAt": "2026-06-04T06:14:25.947Z",
       "spotifyUrl": "https://open.spotify.com/track/1DOZa2VoazIiDjGYlUQTlW",
       "duration": 241466,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-06-04T06:08:40.147Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
       "previewUrl": ""
     },
     {
@@ -208,127 +329,6 @@
       "playedAt": "2026-06-03T00:31:01.985Z",
       "spotifyUrl": "https://open.spotify.com/track/6sxX58w1mBWxqqFu5kh1fg",
       "duration": 49250,
-      "previewUrl": ""
-    },
-    {
-      "id": "2JlSbcpPlaOttkoeosnFWP",
-      "name": "Never Be Alone",
-      "artist": "TheFatRat",
-      "album": "Never Be Alone",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b97b07477dbd084aa0e3450e",
-      "playedAt": "2026-06-03T00:30:17.723Z",
-      "spotifyUrl": "https://open.spotify.com/track/2JlSbcpPlaOttkoeosnFWP",
-      "duration": 260000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2yzcZvPl5k9TS0lDAaF4Sc",
-      "name": "Pride & Fear",
-      "artist": "TheFatRat, RIELL",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-03T00:26:00.279Z",
-      "spotifyUrl": "https://open.spotify.com/track/2yzcZvPl5k9TS0lDAaF4Sc",
-      "duration": 166802,
-      "previewUrl": ""
-    },
-    {
-      "id": "6YzMhlI36vzyDYvhjiVf54",
-      "name": "The Calling",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "The Calling",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e37b56b30e0d3d6bc73694da",
-      "playedAt": "2026-06-03T00:23:30.676Z",
-      "spotifyUrl": "https://open.spotify.com/track/6YzMhlI36vzyDYvhjiVf54",
-      "duration": 233590,
-      "previewUrl": ""
-    },
-    {
-      "id": "0xh7jcUe1WMBuxL4rvwEH0",
-      "name": "Love It When You Hurt Me",
-      "artist": "TheFatRat, Anjulie",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-03T00:20:10.172Z",
-      "spotifyUrl": "https://open.spotify.com/track/0xh7jcUe1WMBuxL4rvwEH0",
-      "duration": 190215,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Fj3MXqvmAZC6XO1LtnwSD",
-      "name": "Escaping Gravity",
-      "artist": "TheFatRat, Cecilia Gault",
-      "album": "Escaping Gravity",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738423d28272d45da62d883bd3",
-      "playedAt": "2026-06-03T00:17:10.516Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Fj3MXqvmAZC6XO1LtnwSD",
-      "duration": 205054,
-      "previewUrl": ""
-    },
-    {
-      "id": "4qBiiKNXaEjlFmYcIf7gUX",
-      "name": "Nemesis",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-03T00:13:49.953Z",
-      "spotifyUrl": "https://open.spotify.com/track/4qBiiKNXaEjlFmYcIf7gUX",
-      "duration": 82000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4sTZ6LbQSvNkswfij22TYI",
-      "name": "Arcadia",
-      "artist": "TheFatRat",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-03T00:12:33.023Z",
-      "spotifyUrl": "https://open.spotify.com/track/4sTZ6LbQSvNkswfij22TYI",
-      "duration": 187321,
-      "previewUrl": ""
-    },
-    {
-      "id": "1RW5JfUnIejreJBI8NvUHT",
-      "name": "Mad Moon Falling",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-03T00:09:29.686Z",
-      "spotifyUrl": "https://open.spotify.com/track/1RW5JfUnIejreJBI8NvUHT",
-      "duration": 80750,
-      "previewUrl": ""
-    },
-    {
-      "id": "5cKI0YTJOi1T5PPT1mrn5q",
-      "name": "Fly Away - JJD Remix",
-      "artist": "TheFatRat, Anjulie, JJD",
-      "album": "Fly Away (JJD Remix)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a3e1420dbe62f9f157ff560",
-      "playedAt": "2026-06-03T00:08:14.005Z",
-      "spotifyUrl": "https://open.spotify.com/track/5cKI0YTJOi1T5PPT1mrn5q",
-      "duration": 267062,
-      "previewUrl": ""
-    },
-    {
-      "id": "2PLMiHYcVixnjsG8QPiHFo",
-      "name": "Monody",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-06-03T00:04:08.170Z",
-      "spotifyUrl": "https://open.spotify.com/track/2PLMiHYcVixnjsG8QPiHFo",
-      "duration": 290467,
-      "previewUrl": ""
-    },
-    {
-      "id": "4mP0t0KHdFrKXt7si43dYj",
-      "name": "Epic",
-      "artist": "TheFatRat",
-      "album": "Jackpot",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
-      "playedAt": "2026-06-02T23:59:25.853Z",
-      "spotifyUrl": "https://open.spotify.com/track/4mP0t0KHdFrKXt7si43dYj",
-      "duration": 180326,
       "previewUrl": ""
     }
   ],
