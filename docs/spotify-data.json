@@ -1,13 +1,35 @@
 {
-  "lastUpdated": "2026-06-07T08:43:30.201Z",
+  "lastUpdated": "2026-06-07T13:19:54.691Z",
   "tracks": [
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-06-07T10:34:23.277Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "6Rx8pboFNZs2stlRlCO3iI",
+      "name": "バンザイ ～好きでよかった～",
+      "artist": "Ulfuls",
+      "album": "バンザイ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6f1c64567af6a4515c6d4b1",
+      "playedAt": "2026-06-07T09:35:26.709Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Rx8pboFNZs2stlRlCO3iI",
+      "duration": 277600,
+      "previewUrl": ""
+    },
     {
       "id": "69lyoI73JEsQr93FXs9CE1",
       "name": "純恋歌",
       "artist": "Shonan No Kaze",
       "album": "純恋歌",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736a6945a7de01a075ecf5ac05",
-      "playedAt": "2026-06-07T08:36:43.288Z",
+      "playedAt": "2026-06-07T09:31:54.161Z",
       "spotifyUrl": "https://open.spotify.com/track/69lyoI73JEsQr93FXs9CE1",
       "duration": 431426,
       "previewUrl": ""
@@ -307,28 +329,6 @@
       "playedAt": "2026-06-05T17:17:23.697Z",
       "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
       "duration": 224804,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-06-05T12:47:44.892Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hVAQTNarrb3lmWqg9Ens4",
-      "name": "Answer",
-      "artist": "Lilas",
-      "album": "Answer",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348c5cfdc37632311b3093be5",
-      "playedAt": "2026-06-05T12:43:55.257Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hVAQTNarrb3lmWqg9Ens4",
-      "duration": 246000,
       "previewUrl": ""
     }
   ],
