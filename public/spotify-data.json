@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-06-08T10:15:56.311Z",
+  "lastUpdated": "2026-06-08T15:26:25.245Z",
   "tracks": [
+    {
+      "id": "5EDGhmBKfck2msa8AgHnVs",
+      "name": "Rebirth",
+      "artist": "ACIDMAN",
+      "album": "INNOCENCE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27347b29a0f9cdd9fec814d6c3a",
+      "playedAt": "2026-06-08T11:55:08.716Z",
+      "spotifyUrl": "https://open.spotify.com/track/5EDGhmBKfck2msa8AgHnVs",
+      "duration": 205986,
+      "previewUrl": ""
+    },
     {
       "id": "1X7VQFZ23MgWshmLHYFRsZ",
       "name": "勝手にシンドバッド",
@@ -10,17 +21,6 @@
       "playedAt": "2026-06-08T06:48:05.193Z",
       "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
       "duration": 237133,
-      "previewUrl": ""
-    },
-    {
-      "id": "5EDGhmBKfck2msa8AgHnVs",
-      "name": "Rebirth",
-      "artist": "ACIDMAN",
-      "album": "INNOCENCE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27347b29a0f9cdd9fec814d6c3a",
-      "playedAt": "2026-06-08T06:39:39.935Z",
-      "spotifyUrl": "https://open.spotify.com/track/5EDGhmBKfck2msa8AgHnVs",
-      "duration": 205986,
       "previewUrl": ""
     },
     {
