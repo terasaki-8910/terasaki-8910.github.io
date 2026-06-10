@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-06-09T19:55:05.697Z",
+  "lastUpdated": "2026-06-10T02:14:49.645Z",
   "tracks": [
+    {
+      "id": "4qBiiKNXaEjlFmYcIf7gUX",
+      "name": "Nemesis",
+      "artist": "TheFatRat",
+      "album": "Warrior Songs",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
+      "playedAt": "2026-06-10T00:34:25.683Z",
+      "spotifyUrl": "https://open.spotify.com/track/4qBiiKNXaEjlFmYcIf7gUX",
+      "duration": 82000,
+      "previewUrl": ""
+    },
+    {
+      "id": "0iTI5FTB9iEUtcMdx9YyZS",
+      "name": "Stronger",
+      "artist": "TheFatRat, Slaydit, Anjulie",
+      "album": "Stronger",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27370a71a630e82020b916a7b92",
+      "playedAt": "2026-06-10T00:33:11.727Z",
+      "spotifyUrl": "https://open.spotify.com/track/0iTI5FTB9iEUtcMdx9YyZS",
+      "duration": 205500,
+      "previewUrl": ""
+    },
+    {
+      "id": "1gHSf9eduupc4MmXPQttkj",
+      "name": "The Storm",
+      "artist": "TheFatRat, Maisy Kay",
+      "album": "The Storm",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ecc70a3f6f6c8228ac08b65e",
+      "playedAt": "2026-06-10T00:30:00.704Z",
+      "spotifyUrl": "https://open.spotify.com/track/1gHSf9eduupc4MmXPQttkj",
+      "duration": 168577,
+      "previewUrl": ""
+    },
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-06-10T00:27:15.580Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FpXO7ehznN8Mh3sNfRd1r",
+      "name": "Oblivion",
+      "artist": "TheFatRat, Lola Blanc",
+      "album": "Oblivion",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
+      "playedAt": "2026-06-10T00:24:51.382Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
+      "duration": 211935,
+      "previewUrl": ""
+    },
     {
       "id": "5OQIvZoUPvfQq02tITKjQZ",
       "name": "水流のロック",
@@ -10,17 +65,6 @@
       "playedAt": "2026-06-09T13:38:15.938Z",
       "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
       "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FpXO7ehznN8Mh3sNfRd1r",
-      "name": "Oblivion",
-      "artist": "TheFatRat, Lola Blanc",
-      "album": "Oblivion",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
-      "playedAt": "2026-06-09T13:34:06.944Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
-      "duration": 211935,
       "previewUrl": ""
     },
     {
@@ -277,17 +321,6 @@
       "previewUrl": ""
     },
     {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-06-07T07:30:19.488Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
-      "previewUrl": ""
-    },
-    {
       "id": "71KwQokFFfWqPziqvYr3j1",
       "name": "Can Do",
       "artist": "GRANRODEO",
@@ -296,39 +329,6 @@
       "playedAt": "2026-06-07T07:28:12.052Z",
       "spotifyUrl": "https://open.spotify.com/track/71KwQokFFfWqPziqvYr3j1",
       "duration": 263773,
-      "previewUrl": ""
-    },
-    {
-      "id": "0lPfqcI3A8gQ9971nXxgq6",
-      "name": "カオスが極まる",
-      "artist": "UNISON SQUARE GARDEN",
-      "album": "カオスが極まる",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acb32a9b371d0d43f5daf076",
-      "playedAt": "2026-06-07T07:24:22.793Z",
-      "spotifyUrl": "https://open.spotify.com/track/0lPfqcI3A8gQ9971nXxgq6",
-      "duration": 230586,
-      "previewUrl": ""
-    },
-    {
-      "id": "3lUOzabhWYyRImRszpJGOU",
-      "name": "CHAINSAW BLOOD",
-      "artist": "Vaundy",
-      "album": "CHAINSAW BLOOD",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e089036cb9ce57b7b53558ed",
-      "playedAt": "2026-06-07T07:11:52.785Z",
-      "spotifyUrl": "https://open.spotify.com/track/3lUOzabhWYyRImRszpJGOU",
-      "duration": 200997,
-      "previewUrl": ""
-    },
-    {
-      "id": "39zRDK54BJJQqcIYydsfSy",
-      "name": "バイマイサイド",
-      "artist": "Hemenway",
-      "album": "バイマイサイド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734bd6c713af8a7d29fb251265",
-      "playedAt": "2026-06-07T07:08:36.727Z",
-      "spotifyUrl": "https://open.spotify.com/track/39zRDK54BJJQqcIYydsfSy",
-      "duration": 207093,
       "previewUrl": ""
     }
   ],
