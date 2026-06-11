@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-06-11T02:37:19.483Z",
+  "lastUpdated": "2026-06-11T10:03:57.388Z",
   "tracks": [
+    {
+      "id": "7wnOPAiqvIG4dTvEInj0YT",
+      "name": "Teenager Forever",
+      "artist": "King Gnu",
+      "album": "CEREMONY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2272c8966971b7b04066241",
+      "playedAt": "2026-06-11T08:04:21.532Z",
+      "spotifyUrl": "https://open.spotify.com/track/7wnOPAiqvIG4dTvEInj0YT",
+      "duration": 189080,
+      "previewUrl": ""
+    },
+    {
+      "id": "1JiASBuLLEUDT51rUJXuGj",
+      "name": "サーチライト",
+      "artist": "Kiro Akiyama",
+      "album": "FIZZY POP SYNDROME",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a1bb300535a825047bcbc75",
+      "playedAt": "2026-06-11T08:01:48.584Z",
+      "spotifyUrl": "https://open.spotify.com/track/1JiASBuLLEUDT51rUJXuGj",
+      "duration": 238346,
+      "previewUrl": ""
+    },
+    {
+      "id": "5TnkbWVrVUdu2EGXze1qTc",
+      "name": "Flash!!!",
+      "artist": "King Gnu",
+      "album": "Flash!!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27302fa2fc8ccf1408d8aa815a1",
+      "playedAt": "2026-06-11T05:36:44.695Z",
+      "spotifyUrl": "https://open.spotify.com/track/5TnkbWVrVUdu2EGXze1qTc",
+      "duration": 170666,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Y7e5ZGMmNnjc55KonC6Hf",
+      "name": "光のロック",
+      "artist": "Sambomaster",
+      "album": "光のロック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379330ddd7b696798c3cfd890",
+      "playedAt": "2026-06-11T05:33:49.419Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Y7e5ZGMmNnjc55KonC6Hf",
+      "duration": 246053,
+      "previewUrl": ""
+    },
+    {
+      "id": "4OQq1bcP12GQQXJNupxqfR",
+      "name": "again",
+      "artist": "YUI",
+      "album": "HOLIDAYS IN THE SUN",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fdec3ee19da7cd9b1b02ca9c",
+      "playedAt": "2026-06-11T05:29:55.460Z",
+      "spotifyUrl": "https://open.spotify.com/track/4OQq1bcP12GQQXJNupxqfR",
+      "duration": 254346,
+      "previewUrl": ""
+    },
+    {
+      "id": "6xMcEPhqP2GwiAlTAJFIbu",
+      "name": "未完成交響曲",
+      "artist": "ONE OK ROCK",
+      "album": "Nicheシンドローム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739f8ec42c93505b1b29ccd630",
+      "playedAt": "2026-06-11T05:21:21.185Z",
+      "spotifyUrl": "https://open.spotify.com/track/6xMcEPhqP2GwiAlTAJFIbu",
+      "duration": 208053,
+      "previewUrl": ""
+    },
     {
       "id": "1FpXO7ehznN8Mh3sNfRd1r",
       "name": "Oblivion",
@@ -263,72 +329,6 @@
       "playedAt": "2026-06-07T16:55:36.787Z",
       "spotifyUrl": "https://open.spotify.com/track/424ekFg5fk3v0vmf9K85mU",
       "duration": 251640,
-      "previewUrl": ""
-    },
-    {
-      "id": "65mHu2GHtlQ8Fy3akl6hgX",
-      "name": "平成ペイン",
-      "artist": "go!go!vanillas",
-      "album": "FOOLs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c94fabe8d09a501b7e161547",
-      "playedAt": "2026-06-07T13:50:32.660Z",
-      "spotifyUrl": "https://open.spotify.com/track/65mHu2GHtlQ8Fy3akl6hgX",
-      "duration": 236666,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-06-07T10:34:23.277Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Rx8pboFNZs2stlRlCO3iI",
-      "name": "バンザイ ～好きでよかった～",
-      "artist": "Ulfuls",
-      "album": "バンザイ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6f1c64567af6a4515c6d4b1",
-      "playedAt": "2026-06-07T09:35:26.709Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Rx8pboFNZs2stlRlCO3iI",
-      "duration": 277600,
-      "previewUrl": ""
-    },
-    {
-      "id": "69lyoI73JEsQr93FXs9CE1",
-      "name": "純恋歌",
-      "artist": "Shonan No Kaze",
-      "album": "純恋歌",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736a6945a7de01a075ecf5ac05",
-      "playedAt": "2026-06-07T09:31:54.161Z",
-      "spotifyUrl": "https://open.spotify.com/track/69lyoI73JEsQr93FXs9CE1",
-      "duration": 431426,
-      "previewUrl": ""
-    },
-    {
-      "id": "2vXuVpGXqIXF6KB2jeWhXI",
-      "name": "Believe",
-      "artist": "ARASHI",
-      "album": "Believe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bafb5db86a45e011e1c144bf",
-      "playedAt": "2026-06-07T08:30:45.869Z",
-      "spotifyUrl": "https://open.spotify.com/track/2vXuVpGXqIXF6KB2jeWhXI",
-      "duration": 284285,
-      "previewUrl": ""
-    },
-    {
-      "id": "2jdbZGFp8KVTuk0YxDNL4l",
-      "name": "高嶺の花子さん",
-      "artist": "back number",
-      "album": "ラブストーリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273783ed3c2af46af7ab7c671c0",
-      "playedAt": "2026-06-07T07:43:30.966Z",
-      "spotifyUrl": "https://open.spotify.com/track/2jdbZGFp8KVTuk0YxDNL4l",
-      "duration": 294813,
       "previewUrl": ""
     }
   ],
