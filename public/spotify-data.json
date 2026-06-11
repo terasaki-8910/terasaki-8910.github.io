@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-06-11T15:33:05.986Z",
+  "lastUpdated": "2026-06-11T20:08:58.428Z",
   "tracks": [
+    {
+      "id": "3wyWRt8myEL5o432jUXioi",
+      "name": "君色シグナル",
+      "artist": "Luna Haruna",
+      "album": "Candy Lips",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27365a30a7d8ca9452bcb995f79",
+      "playedAt": "2026-06-11T18:15:46.802Z",
+      "spotifyUrl": "https://open.spotify.com/track/3wyWRt8myEL5o432jUXioi",
+      "duration": 282586,
+      "previewUrl": ""
+    },
+    {
+      "id": "1SdwlHsv8bWHbAlIw5Jfgo",
+      "name": "Laughter",
+      "artist": "OFFICIAL HIGE DANDISM",
+      "album": "Laughter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e3487c07d29e73d46211ac73",
+      "playedAt": "2026-06-11T18:15:29.164Z",
+      "spotifyUrl": "https://open.spotify.com/track/1SdwlHsv8bWHbAlIw5Jfgo",
+      "duration": 350299,
+      "previewUrl": ""
+    },
+    {
+      "id": "05q7gFhlRUtK8VKx4Kkw2e",
+      "name": "Monody - Radio Edit",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "Monody (Radio Edit)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f51dfe97855dd2e03520dcc7",
+      "playedAt": "2026-06-11T15:39:28.161Z",
+      "spotifyUrl": "https://open.spotify.com/track/05q7gFhlRUtK8VKx4Kkw2e",
+      "duration": 252213,
+      "previewUrl": ""
+    },
     {
       "id": "7wnOPAiqvIG4dTvEInj0YT",
       "name": "Teenager Forever",
@@ -296,39 +329,6 @@
       "playedAt": "2026-06-09T03:09:20.090Z",
       "spotifyUrl": "https://open.spotify.com/track/5EDGhmBKfck2msa8AgHnVs",
       "duration": 205986,
-      "previewUrl": ""
-    },
-    {
-      "id": "1X7VQFZ23MgWshmLHYFRsZ",
-      "name": "勝手にシンドバッド",
-      "artist": "サザンオールスターズ",
-      "album": "勝手にシンドバッド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
-      "playedAt": "2026-06-09T03:05:53.575Z",
-      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
-      "duration": 237133,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hVAQTNarrb3lmWqg9Ens4",
-      "name": "Answer",
-      "artist": "Lilas",
-      "album": "Answer",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348c5cfdc37632311b3093be5",
-      "playedAt": "2026-06-07T18:24:17.298Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hVAQTNarrb3lmWqg9Ens4",
-      "duration": 246000,
-      "previewUrl": ""
-    },
-    {
-      "id": "424ekFg5fk3v0vmf9K85mU",
-      "name": "ココロオドル -original version-",
-      "artist": "nobodyknows+",
-      "album": "Do You Know ?",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ffac2fd7e4233d175253f687",
-      "playedAt": "2026-06-07T16:55:36.787Z",
-      "spotifyUrl": "https://open.spotify.com/track/424ekFg5fk3v0vmf9K85mU",
-      "duration": 251640,
       "previewUrl": ""
     }
   ],
