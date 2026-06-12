@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-06-11T20:08:58.428Z",
+  "lastUpdated": "2026-06-12T02:32:49.018Z",
   "tracks": [
+    {
+      "id": "4at8MHaxe5hFxcXiO2PPd4",
+      "name": "シュガーソングとビターステップ",
+      "artist": "UNISON SQUARE GARDEN",
+      "album": "SUB MACHINE, BEST MACHINE (Best Selected Edition)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6026aa38b62d9dfe40274d4",
+      "playedAt": "2026-06-12T00:45:28.693Z",
+      "spotifyUrl": "https://open.spotify.com/track/4at8MHaxe5hFxcXiO2PPd4",
+      "duration": 253813,
+      "previewUrl": ""
+    },
+    {
+      "id": "3vW2EZcRS0JtADChw8oKP8",
+      "name": "星座になれたら",
+      "artist": "結束バンド",
+      "album": "星座になれたら",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730e85079de6ce50ccda1bdf98",
+      "playedAt": "2026-06-11T21:41:28.301Z",
+      "spotifyUrl": "https://open.spotify.com/track/3vW2EZcRS0JtADChw8oKP8",
+      "duration": 258173,
+      "previewUrl": ""
+    },
     {
       "id": "3wyWRt8myEL5o432jUXioi",
       "name": "君色シグナル",
@@ -307,28 +329,6 @@
       "playedAt": "2026-06-09T05:13:14.707Z",
       "spotifyUrl": "https://open.spotify.com/track/6kqYPR6Aotq4QvoIgYKJoO",
       "duration": 190450,
-      "previewUrl": ""
-    },
-    {
-      "id": "2pCdOvMtxYMyDl54Judrfa",
-      "name": "Threnody",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-09T05:10:07.163Z",
-      "spotifyUrl": "https://open.spotify.com/track/2pCdOvMtxYMyDl54Judrfa",
-      "duration": 115750,
-      "previewUrl": ""
-    },
-    {
-      "id": "5EDGhmBKfck2msa8AgHnVs",
-      "name": "Rebirth",
-      "artist": "ACIDMAN",
-      "album": "INNOCENCE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27347b29a0f9cdd9fec814d6c3a",
-      "playedAt": "2026-06-09T03:09:20.090Z",
-      "spotifyUrl": "https://open.spotify.com/track/5EDGhmBKfck2msa8AgHnVs",
-      "duration": 205986,
       "previewUrl": ""
     }
   ],
