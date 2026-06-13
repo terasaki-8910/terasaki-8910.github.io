@@ -1,6 +1,138 @@
 {
-  "lastUpdated": "2026-06-13T08:45:46.062Z",
+  "lastUpdated": "2026-06-13T13:24:03.530Z",
   "tracks": [
+    {
+      "id": "4KRPj7zlugaGTpcY2KMalz",
+      "name": "Good Night Darling",
+      "artist": "SHANK",
+      "album": "Calling",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c6a202970d078f90c82384c",
+      "playedAt": "2026-06-13T12:23:18.114Z",
+      "spotifyUrl": "https://open.spotify.com/track/4KRPj7zlugaGTpcY2KMalz",
+      "duration": 200826,
+      "previewUrl": ""
+    },
+    {
+      "id": "7C5mex86dKjnB8PrHrU2Di",
+      "name": "Run Run",
+      "artist": "MONOEYES",
+      "album": "A Mirage In The Sun",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cad501af71d5cb424814bf1a",
+      "playedAt": "2026-06-13T12:20:14.189Z",
+      "spotifyUrl": "https://open.spotify.com/track/7C5mex86dKjnB8PrHrU2Di",
+      "duration": 221373,
+      "previewUrl": ""
+    },
+    {
+      "id": "4pjQ19ATjMCMFqnEF75O9T",
+      "name": "魂のルフラン",
+      "artist": "Yoko Takahashi",
+      "album": "魂のルフラン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273192ae0e3290f389801f378d9",
+      "playedAt": "2026-06-13T12:16:36.495Z",
+      "spotifyUrl": "https://open.spotify.com/track/4pjQ19ATjMCMFqnEF75O9T",
+      "duration": 314600,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Nl3vx5qRnATIckVRZxb4T",
+      "name": "何なんw",
+      "artist": "Fujii Kaze",
+      "album": "HELP EVER HURT NEVER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273731953ff97a79644f6eb7b4e",
+      "playedAt": "2026-06-13T12:16:32.994Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Nl3vx5qRnATIckVRZxb4T",
+      "duration": 320640,
+      "previewUrl": ""
+    },
+    {
+      "id": "5zydI0vRlMI6mrEKgZR8zq",
+      "name": "そばかす",
+      "artist": "JUDY AND MARY",
+      "album": "THE POWER SOURCE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cf8805ce8411879bc7673fb6",
+      "playedAt": "2026-06-13T10:56:24.196Z",
+      "spotifyUrl": "https://open.spotify.com/track/5zydI0vRlMI6mrEKgZR8zq",
+      "duration": 255706,
+      "previewUrl": ""
+    },
+    {
+      "id": "3DZG4wc2NQbgjR2m8iXpG1",
+      "name": "コネクト",
+      "artist": "ClariS",
+      "album": "BIRTHDAY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1d983fdd7ad9a41aa78c010",
+      "playedAt": "2026-06-13T10:52:07.951Z",
+      "spotifyUrl": "https://open.spotify.com/track/3DZG4wc2NQbgjR2m8iXpG1",
+      "duration": 270040,
+      "previewUrl": ""
+    },
+    {
+      "id": "7l8CkFFxcbH09wwBzq4XWi",
+      "name": "ZERO!!",
+      "artist": "栗林みな実",
+      "album": "ZERO!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273035cfff33da7425490325c2f",
+      "playedAt": "2026-06-13T10:47:37.382Z",
+      "spotifyUrl": "https://open.spotify.com/track/7l8CkFFxcbH09wwBzq4XWi",
+      "duration": 243826,
+      "previewUrl": ""
+    },
+    {
+      "id": "2yvmPp76lP4qG8ulICaGIo",
+      "name": "God knows...",
+      "artist": "涼宮ハルヒ (CV.平野 綾)",
+      "album": "涼宮ハルヒの詰合",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730dd2938fade1b1abe5d03ea9",
+      "playedAt": "2026-06-13T10:43:33.022Z",
+      "spotifyUrl": "https://open.spotify.com/track/2yvmPp76lP4qG8ulICaGIo",
+      "duration": 278908,
+      "previewUrl": ""
+    },
+    {
+      "id": "6Diwp8VlEBl8fuv7HnnLF4",
+      "name": "TOMORROW",
+      "artist": "Machico",
+      "album": "TVアニメ『この素晴らしい世界に祝福を! 2』オープニング・テーマ「TOMORROW」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a30fc95c84433a035f34b05",
+      "playedAt": "2026-06-13T10:38:53.583Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Diwp8VlEBl8fuv7HnnLF4",
+      "duration": 275533,
+      "previewUrl": ""
+    },
+    {
+      "id": "3YxsRgCkaQR9ckhabbz0yz",
+      "name": "太陽曰く燃えよカオス",
+      "artist": "Ushirokarahaiyoritai G",
+      "album": "太陽曰く燃えよカオス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9acf1a281e447d27fb3b52a",
+      "playedAt": "2026-06-13T10:34:17.516Z",
+      "spotifyUrl": "https://open.spotify.com/track/3YxsRgCkaQR9ckhabbz0yz",
+      "duration": 232000,
+      "previewUrl": ""
+    },
+    {
+      "id": "00pEXGlxPsGuLm4NqcVJzt",
+      "name": "海色",
+      "artist": "AKINO from bless4",
+      "album": "海色",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738f1a1ab060637d049a1d7b04",
+      "playedAt": "2026-06-13T10:30:24.991Z",
+      "spotifyUrl": "https://open.spotify.com/track/00pEXGlxPsGuLm4NqcVJzt",
+      "duration": 256933,
+      "previewUrl": ""
+    },
+    {
+      "id": "3wyWRt8myEL5o432jUXioi",
+      "name": "君色シグナル",
+      "artist": "Luna Haruna",
+      "album": "Candy Lips",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27365a30a7d8ca9452bcb995f79",
+      "playedAt": "2026-06-13T10:26:07.524Z",
+      "spotifyUrl": "https://open.spotify.com/track/3wyWRt8myEL5o432jUXioi",
+      "duration": 282586,
+      "previewUrl": ""
+    },
     {
       "id": "5NxmDq0yXBYGfCbMqvIXuv",
       "name": "UNDEAD",
@@ -123,17 +255,6 @@
       "previewUrl": ""
     },
     {
-      "id": "3wyWRt8myEL5o432jUXioi",
-      "name": "君色シグナル",
-      "artist": "Luna Haruna",
-      "album": "Candy Lips",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27365a30a7d8ca9452bcb995f79",
-      "playedAt": "2026-06-11T18:15:46.802Z",
-      "spotifyUrl": "https://open.spotify.com/track/3wyWRt8myEL5o432jUXioi",
-      "duration": 282586,
-      "previewUrl": ""
-    },
-    {
       "id": "1SdwlHsv8bWHbAlIw5Jfgo",
       "name": "Laughter",
       "artist": "OFFICIAL HIGE DANDISM",
@@ -208,127 +329,6 @@
       "playedAt": "2026-06-11T05:29:55.460Z",
       "spotifyUrl": "https://open.spotify.com/track/4OQq1bcP12GQQXJNupxqfR",
       "duration": 254346,
-      "previewUrl": ""
-    },
-    {
-      "id": "6xMcEPhqP2GwiAlTAJFIbu",
-      "name": "未完成交響曲",
-      "artist": "ONE OK ROCK",
-      "album": "Nicheシンドローム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739f8ec42c93505b1b29ccd630",
-      "playedAt": "2026-06-11T05:21:21.185Z",
-      "spotifyUrl": "https://open.spotify.com/track/6xMcEPhqP2GwiAlTAJFIbu",
-      "duration": 208053,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FpXO7ehznN8Mh3sNfRd1r",
-      "name": "Oblivion",
-      "artist": "TheFatRat, Lola Blanc",
-      "album": "Oblivion",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
-      "playedAt": "2026-06-10T07:05:44.890Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
-      "duration": 211935,
-      "previewUrl": ""
-    },
-    {
-      "id": "3LWX4IZJox89hxHcnxm3xI",
-      "name": "Jackpot",
-      "artist": "TheFatRat",
-      "album": "Jackpot",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
-      "playedAt": "2026-06-10T06:20:53.372Z",
-      "spotifyUrl": "https://open.spotify.com/track/3LWX4IZJox89hxHcnxm3xI",
-      "duration": 195873,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LtKpKOO0fyGBAbv761JCu",
-      "name": "Sunlight",
-      "artist": "TheFatRat, Phaera",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-06-10T02:59:48.597Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
-      "duration": 169952,
-      "previewUrl": ""
-    },
-    {
-      "id": "4qBiiKNXaEjlFmYcIf7gUX",
-      "name": "Nemesis",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-10T00:34:25.683Z",
-      "spotifyUrl": "https://open.spotify.com/track/4qBiiKNXaEjlFmYcIf7gUX",
-      "duration": 82000,
-      "previewUrl": ""
-    },
-    {
-      "id": "0iTI5FTB9iEUtcMdx9YyZS",
-      "name": "Stronger",
-      "artist": "TheFatRat, Slaydit, Anjulie",
-      "album": "Stronger",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27370a71a630e82020b916a7b92",
-      "playedAt": "2026-06-10T00:33:11.727Z",
-      "spotifyUrl": "https://open.spotify.com/track/0iTI5FTB9iEUtcMdx9YyZS",
-      "duration": 205500,
-      "previewUrl": ""
-    },
-    {
-      "id": "1gHSf9eduupc4MmXPQttkj",
-      "name": "The Storm",
-      "artist": "TheFatRat, Maisy Kay",
-      "album": "The Storm",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ecc70a3f6f6c8228ac08b65e",
-      "playedAt": "2026-06-10T00:30:00.704Z",
-      "spotifyUrl": "https://open.spotify.com/track/1gHSf9eduupc4MmXPQttkj",
-      "duration": 168577,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-06-10T00:27:15.580Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-06-09T13:38:15.938Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "6wow9d9i3AB2ltYCeBWFsY",
-      "name": "アポロ",
-      "artist": "PornoGraffitti",
-      "album": "PORNO GRAFFITTI BEST BLUE'S",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342d99967c387a76d54bed01f",
-      "playedAt": "2026-06-09T11:19:05.786Z",
-      "spotifyUrl": "https://open.spotify.com/track/6wow9d9i3AB2ltYCeBWFsY",
-      "duration": 259040,
-      "previewUrl": ""
-    },
-    {
-      "id": "6i3EXVygc3G7xqIqv0MJHV",
-      "name": "Afterlife",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-09T05:42:56.221Z",
-      "spotifyUrl": "https://open.spotify.com/track/6i3EXVygc3G7xqIqv0MJHV",
-      "duration": 140487,
       "previewUrl": ""
     }
   ],
