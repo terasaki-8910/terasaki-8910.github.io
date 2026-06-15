@@ -1,6 +1,116 @@
 {
-  "lastUpdated": "2026-06-15T02:42:13.351Z",
+  "lastUpdated": "2026-06-15T11:43:53.922Z",
   "tracks": [
+    {
+      "id": "23b70WxAS1W3x9X69MlVSo",
+      "name": "Lonely Go!",
+      "artist": "Brian the Sun",
+      "album": "MEME",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27308f413521662b7d735aa73c4",
+      "playedAt": "2026-06-15T09:30:56.644Z",
+      "spotifyUrl": "https://open.spotify.com/track/23b70WxAS1W3x9X69MlVSo",
+      "duration": 236106,
+      "previewUrl": ""
+    },
+    {
+      "id": "5W6MPJkFGk0TC5m0mZqt8x",
+      "name": "拝啓",
+      "artist": "teto",
+      "album": "手",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738917c158569592d81c160852",
+      "playedAt": "2026-06-15T09:27:03.460Z",
+      "spotifyUrl": "https://open.spotify.com/track/5W6MPJkFGk0TC5m0mZqt8x",
+      "duration": 250040,
+      "previewUrl": ""
+    },
+    {
+      "id": "77mHAXhT1h3nKsMMbMAkmn",
+      "name": "或る街の群青",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "album": "或る街の群青",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273501870d3c118138c7e660952",
+      "playedAt": "2026-06-15T09:23:19.532Z",
+      "spotifyUrl": "https://open.spotify.com/track/77mHAXhT1h3nKsMMbMAkmn",
+      "duration": 267293,
+      "previewUrl": ""
+    },
+    {
+      "id": "6em2W7rB1YRZDUTVfKV4mA",
+      "name": "モンスター",
+      "artist": "ELLEGARDEN",
+      "album": "RIOT ON THE GRILL",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730b0567d34c484d3ddc4700fa",
+      "playedAt": "2026-06-15T09:19:22.382Z",
+      "spotifyUrl": "https://open.spotify.com/track/6em2W7rB1YRZDUTVfKV4mA",
+      "duration": 197586,
+      "previewUrl": ""
+    },
+    {
+      "id": "35yJijnzVw4OjERdrehVFj",
+      "name": "Take Me Under",
+      "artist": "MAN WITH A MISSION",
+      "album": "Chasing the Horizon",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b65507ffa5c897ee087e72f0",
+      "playedAt": "2026-06-15T09:16:20.368Z",
+      "spotifyUrl": "https://open.spotify.com/track/35yJijnzVw4OjERdrehVFj",
+      "duration": 264733,
+      "previewUrl": ""
+    },
+    {
+      "id": "7KbJQTkQbhgaKYOEQGLfvR",
+      "name": "リルラ リルハ",
+      "artist": "Kaela Kimura",
+      "album": "Circle",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737cd7864f3e0f9fcbbfd99af5",
+      "playedAt": "2026-06-15T09:09:59.296Z",
+      "spotifyUrl": "https://open.spotify.com/track/7KbJQTkQbhgaKYOEQGLfvR",
+      "duration": 229826,
+      "previewUrl": ""
+    },
+    {
+      "id": "1X7VQFZ23MgWshmLHYFRsZ",
+      "name": "勝手にシンドバッド",
+      "artist": "サザンオールスターズ",
+      "album": "勝手にシンドバッド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
+      "playedAt": "2026-06-15T09:06:08.936Z",
+      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
+      "duration": 237133,
+      "previewUrl": ""
+    },
+    {
+      "id": "5S2SFGhEr3yH4lGeTwTxzO",
+      "name": "赤橙",
+      "artist": "ACIDMAN",
+      "album": "創",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9ea7ed3eed39253c33ca11b",
+      "playedAt": "2026-06-15T05:53:30.319Z",
+      "spotifyUrl": "https://open.spotify.com/track/5S2SFGhEr3yH4lGeTwTxzO",
+      "duration": 305933,
+      "previewUrl": ""
+    },
+    {
+      "id": "3txqYlzoDZGLoW8MGll9tQ",
+      "name": "リライト",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "album": "ソルファ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8dd23458921ec0c46801026",
+      "playedAt": "2026-06-15T05:44:59.003Z",
+      "spotifyUrl": "https://open.spotify.com/track/3txqYlzoDZGLoW8MGll9tQ",
+      "duration": 225493,
+      "previewUrl": ""
+    },
+    {
+      "id": "1trNMFcMvBIoQF6t5RGADP",
+      "name": "ホロライブ言えるかな？",
+      "artist": "角巻わため",
+      "album": "わためのうた vol.１",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730f0ce86510e986b45bb23e15",
+      "playedAt": "2026-06-15T05:39:57.777Z",
+      "spotifyUrl": "https://open.spotify.com/track/1trNMFcMvBIoQF6t5RGADP",
+      "duration": 120888,
+      "previewUrl": ""
+    },
     {
       "id": "7EvzUhU6zpdJxAsjNQZ1gN",
       "name": "メニメニマニマニ",
@@ -21,17 +131,6 @@
       "playedAt": "2026-06-14T18:15:13.524Z",
       "spotifyUrl": "https://open.spotify.com/track/0x81LpNEJr39sxGxzSkLXY",
       "duration": 283786,
-      "previewUrl": ""
-    },
-    {
-      "id": "1X7VQFZ23MgWshmLHYFRsZ",
-      "name": "勝手にシンドバッド",
-      "artist": "サザンオールスターズ",
-      "album": "勝手にシンドバッド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
-      "playedAt": "2026-06-14T15:47:31.617Z",
-      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
-      "duration": 237133,
       "previewUrl": ""
     },
     {
@@ -230,105 +329,6 @@
       "playedAt": "2026-06-13T10:52:07.951Z",
       "spotifyUrl": "https://open.spotify.com/track/3DZG4wc2NQbgjR2m8iXpG1",
       "duration": 270040,
-      "previewUrl": ""
-    },
-    {
-      "id": "7l8CkFFxcbH09wwBzq4XWi",
-      "name": "ZERO!!",
-      "artist": "栗林みな実",
-      "album": "ZERO!!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273035cfff33da7425490325c2f",
-      "playedAt": "2026-06-13T10:47:37.382Z",
-      "spotifyUrl": "https://open.spotify.com/track/7l8CkFFxcbH09wwBzq4XWi",
-      "duration": 243826,
-      "previewUrl": ""
-    },
-    {
-      "id": "2yvmPp76lP4qG8ulICaGIo",
-      "name": "God knows...",
-      "artist": "涼宮ハルヒ (CV.平野 綾)",
-      "album": "涼宮ハルヒの詰合",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730dd2938fade1b1abe5d03ea9",
-      "playedAt": "2026-06-13T10:43:33.022Z",
-      "spotifyUrl": "https://open.spotify.com/track/2yvmPp76lP4qG8ulICaGIo",
-      "duration": 278908,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Diwp8VlEBl8fuv7HnnLF4",
-      "name": "TOMORROW",
-      "artist": "Machico",
-      "album": "TVアニメ『この素晴らしい世界に祝福を! 2』オープニング・テーマ「TOMORROW」",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a30fc95c84433a035f34b05",
-      "playedAt": "2026-06-13T10:38:53.583Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Diwp8VlEBl8fuv7HnnLF4",
-      "duration": 275533,
-      "previewUrl": ""
-    },
-    {
-      "id": "3YxsRgCkaQR9ckhabbz0yz",
-      "name": "太陽曰く燃えよカオス",
-      "artist": "Ushirokarahaiyoritai G",
-      "album": "太陽曰く燃えよカオス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9acf1a281e447d27fb3b52a",
-      "playedAt": "2026-06-13T10:34:17.516Z",
-      "spotifyUrl": "https://open.spotify.com/track/3YxsRgCkaQR9ckhabbz0yz",
-      "duration": 232000,
-      "previewUrl": ""
-    },
-    {
-      "id": "00pEXGlxPsGuLm4NqcVJzt",
-      "name": "海色",
-      "artist": "AKINO from bless4",
-      "album": "海色",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738f1a1ab060637d049a1d7b04",
-      "playedAt": "2026-06-13T10:30:24.991Z",
-      "spotifyUrl": "https://open.spotify.com/track/00pEXGlxPsGuLm4NqcVJzt",
-      "duration": 256933,
-      "previewUrl": ""
-    },
-    {
-      "id": "3wyWRt8myEL5o432jUXioi",
-      "name": "君色シグナル",
-      "artist": "Luna Haruna",
-      "album": "Candy Lips",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27365a30a7d8ca9452bcb995f79",
-      "playedAt": "2026-06-13T10:26:07.524Z",
-      "spotifyUrl": "https://open.spotify.com/track/3wyWRt8myEL5o432jUXioi",
-      "duration": 282586,
-      "previewUrl": ""
-    },
-    {
-      "id": "5NxmDq0yXBYGfCbMqvIXuv",
-      "name": "UNDEAD",
-      "artist": "YOASOBI",
-      "album": "UNDEAD",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a4581aef9b70d42d5346c215",
-      "playedAt": "2026-06-12T10:01:05.122Z",
-      "spotifyUrl": "https://open.spotify.com/track/5NxmDq0yXBYGfCbMqvIXuv",
-      "duration": 182702,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CQjt0Ejf8clK3s7h6Za0P",
-      "name": "転生林檎",
-      "artist": "PinocchioP",
-      "album": "転生林檎",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273287a32b6a7991e4a949be3d0",
-      "playedAt": "2026-06-12T09:58:01.951Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CQjt0Ejf8clK3s7h6Za0P",
-      "duration": 219082,
-      "previewUrl": ""
-    },
-    {
-      "id": "2tlOVDJ3lQsUxz22vPJ4c4",
-      "name": "唱",
-      "artist": "Ado",
-      "album": "唱",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273985fe71d6d5d528429037716",
-      "playedAt": "2026-06-12T09:48:34.001Z",
-      "spotifyUrl": "https://open.spotify.com/track/2tlOVDJ3lQsUxz22vPJ4c4",
-      "duration": 189772,
       "previewUrl": ""
     }
   ],
