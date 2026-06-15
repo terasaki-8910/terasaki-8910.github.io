@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-06-14T19:07:43.373Z",
+  "lastUpdated": "2026-06-15T02:42:13.351Z",
   "tracks": [
+    {
+      "id": "7EvzUhU6zpdJxAsjNQZ1gN",
+      "name": "メニメニマニマニ",
+      "artist": "高宮なすの(CV:鳴海杏子)",
+      "album": "メニメニマニマニ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738c5d5a9becf242b34babda0a",
+      "playedAt": "2026-06-14T19:48:27.778Z",
+      "spotifyUrl": "https://open.spotify.com/track/7EvzUhU6zpdJxAsjNQZ1gN",
+      "duration": 269173,
+      "previewUrl": ""
+    },
     {
       "id": "0x81LpNEJr39sxGxzSkLXY",
       "name": "Isolation",
@@ -318,17 +329,6 @@
       "playedAt": "2026-06-12T09:48:34.001Z",
       "spotifyUrl": "https://open.spotify.com/track/2tlOVDJ3lQsUxz22vPJ4c4",
       "duration": 189772,
-      "previewUrl": ""
-    },
-    {
-      "id": "56xCsaFsih5swf7IZXPYzU",
-      "name": "きゅうくらりん",
-      "artist": "いよわ",
-      "album": "きゅうくらりん",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e094c1bd11b4dde2cba4d8c7",
-      "playedAt": "2026-06-12T09:45:23.748Z",
-      "spotifyUrl": "https://open.spotify.com/track/56xCsaFsih5swf7IZXPYzU",
-      "duration": 217090,
       "previewUrl": ""
     }
   ],
