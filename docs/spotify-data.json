@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-06-15T20:43:46.520Z",
+  "lastUpdated": "2026-06-16T02:44:39.379Z",
   "tracks": [
+    {
+      "id": "6lcqXYjDSGxx69DurXx0rF",
+      "name": "ループザルーム (feat. 初音ミク)",
+      "artist": "ルシノ, Hatsune Miku",
+      "album": "ループザルーム / ランベントアリア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
+      "playedAt": "2026-06-16T02:29:56.382Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
+      "duration": 134071,
+      "previewUrl": ""
+    },
     {
       "id": "5OQIvZoUPvfQq02tITKjQZ",
       "name": "水流のロック",
@@ -318,17 +329,6 @@
       "playedAt": "2026-06-13T12:20:14.189Z",
       "spotifyUrl": "https://open.spotify.com/track/7C5mex86dKjnB8PrHrU2Di",
       "duration": 221373,
-      "previewUrl": ""
-    },
-    {
-      "id": "4pjQ19ATjMCMFqnEF75O9T",
-      "name": "魂のルフラン",
-      "artist": "Yoko Takahashi",
-      "album": "魂のルフラン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273192ae0e3290f389801f378d9",
-      "playedAt": "2026-06-13T12:16:36.495Z",
-      "spotifyUrl": "https://open.spotify.com/track/4pjQ19ATjMCMFqnEF75O9T",
-      "duration": 314600,
       "previewUrl": ""
     }
   ],
