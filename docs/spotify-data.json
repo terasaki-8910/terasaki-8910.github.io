@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-06-16T20:37:01.237Z",
+  "lastUpdated": "2026-06-17T02:41:14.795Z",
   "tracks": [
+    {
+      "id": "1IAz8bEBFsOoosLueY1BPk",
+      "name": "陽炎",
+      "artist": "Fujifabric",
+      "album": "フジファブリック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739b9d5030abffd624f162439f",
+      "playedAt": "2026-06-17T01:53:08.093Z",
+      "spotifyUrl": "https://open.spotify.com/track/1IAz8bEBFsOoosLueY1BPk",
+      "duration": 295026,
+      "previewUrl": ""
+    },
+    {
+      "id": "56BhUbSc72pOBRjWARF2ZU",
+      "name": "STAY AWAY",
+      "artist": "L'Arc-en-Ciel",
+      "album": "STAY AWAY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27374038b61560cbed556d474e1",
+      "playedAt": "2026-06-17T01:48:20.725Z",
+      "spotifyUrl": "https://open.spotify.com/track/56BhUbSc72pOBRjWARF2ZU",
+      "duration": 240000,
+      "previewUrl": ""
+    },
+    {
+      "id": "6kRLCygHi8SvEL2MWbfzcg",
+      "name": "ハイヤーグラウンド",
+      "artist": "sumika",
+      "album": "AMUSIC",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ec2b7e3c5c9bdb6dd0a0fc28",
+      "playedAt": "2026-06-17T01:44:29.026Z",
+      "spotifyUrl": "https://open.spotify.com/track/6kRLCygHi8SvEL2MWbfzcg",
+      "duration": 227466,
+      "previewUrl": ""
+    },
+    {
+      "id": "64yajM6CxtLghmgB53VeXT",
+      "name": "インフェルノ",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "インフェルノ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731a4e99f0c693fecc9038d3dd",
+      "playedAt": "2026-06-17T01:40:49.261Z",
+      "spotifyUrl": "https://open.spotify.com/track/64yajM6CxtLghmgB53VeXT",
+      "duration": 212546,
+      "previewUrl": ""
+    },
     {
       "id": "75ydSk3JU7hqJFhyGQyhPZ",
       "name": "シーグラス",
@@ -65,17 +109,6 @@
       "playedAt": "2026-06-16T08:21:14.085Z",
       "spotifyUrl": "https://open.spotify.com/track/1AwfJENb63nQKuIWiuh0cy",
       "duration": 208160,
-      "previewUrl": ""
-    },
-    {
-      "id": "64yajM6CxtLghmgB53VeXT",
-      "name": "インフェルノ",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "インフェルノ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731a4e99f0c693fecc9038d3dd",
-      "playedAt": "2026-06-16T03:34:11.670Z",
-      "spotifyUrl": "https://open.spotify.com/track/64yajM6CxtLghmgB53VeXT",
-      "duration": 212546,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-06-15T05:53:30.319Z",
       "spotifyUrl": "https://open.spotify.com/track/5S2SFGhEr3yH4lGeTwTxzO",
       "duration": 305933,
-      "previewUrl": ""
-    },
-    {
-      "id": "3txqYlzoDZGLoW8MGll9tQ",
-      "name": "リライト",
-      "artist": "ASIAN KUNG-FU GENERATION",
-      "album": "ソルファ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8dd23458921ec0c46801026",
-      "playedAt": "2026-06-15T05:44:59.003Z",
-      "spotifyUrl": "https://open.spotify.com/track/3txqYlzoDZGLoW8MGll9tQ",
-      "duration": 225493,
-      "previewUrl": ""
-    },
-    {
-      "id": "1trNMFcMvBIoQF6t5RGADP",
-      "name": "ホロライブ言えるかな？",
-      "artist": "角巻わため",
-      "album": "わためのうた vol.１",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730f0ce86510e986b45bb23e15",
-      "playedAt": "2026-06-15T05:39:57.777Z",
-      "spotifyUrl": "https://open.spotify.com/track/1trNMFcMvBIoQF6t5RGADP",
-      "duration": 120888,
-      "previewUrl": ""
-    },
-    {
-      "id": "7EvzUhU6zpdJxAsjNQZ1gN",
-      "name": "メニメニマニマニ",
-      "artist": "高宮なすの(CV:鳴海杏子)",
-      "album": "メニメニマニマニ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738c5d5a9becf242b34babda0a",
-      "playedAt": "2026-06-14T19:48:27.778Z",
-      "spotifyUrl": "https://open.spotify.com/track/7EvzUhU6zpdJxAsjNQZ1gN",
-      "duration": 269173,
       "previewUrl": ""
     }
   ],
