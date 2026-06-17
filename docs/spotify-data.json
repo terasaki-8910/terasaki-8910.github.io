@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-06-17T02:41:14.795Z",
+  "lastUpdated": "2026-06-17T10:24:26.642Z",
   "tracks": [
+    {
+      "id": "7iMZOR2ZdKJH2jULKs24rO",
+      "name": "Silver Lining",
+      "artist": "Straightener",
+      "album": "フォーピース",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27377cde5513ec9b24d42c9c170",
+      "playedAt": "2026-06-17T09:01:33.358Z",
+      "spotifyUrl": "https://open.spotify.com/track/7iMZOR2ZdKJH2jULKs24rO",
+      "duration": 220225,
+      "previewUrl": ""
+    },
+    {
+      "id": "76R7LsPz5ZQ3xXzE66dBbj",
+      "name": "cream soda",
+      "artist": "Supercar",
+      "album": "スリーアウトチェンジ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc67b2b3b7a2282fbdbc3842",
+      "playedAt": "2026-06-17T06:02:10.378Z",
+      "spotifyUrl": "https://open.spotify.com/track/76R7LsPz5ZQ3xXzE66dBbj",
+      "duration": 193400,
+      "previewUrl": ""
+    },
     {
       "id": "1IAz8bEBFsOoosLueY1BPk",
       "name": "陽炎",
@@ -307,28 +329,6 @@
       "playedAt": "2026-06-15T09:09:59.296Z",
       "spotifyUrl": "https://open.spotify.com/track/7KbJQTkQbhgaKYOEQGLfvR",
       "duration": 229826,
-      "previewUrl": ""
-    },
-    {
-      "id": "1X7VQFZ23MgWshmLHYFRsZ",
-      "name": "勝手にシンドバッド",
-      "artist": "サザンオールスターズ",
-      "album": "勝手にシンドバッド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
-      "playedAt": "2026-06-15T09:06:08.936Z",
-      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
-      "duration": 237133,
-      "previewUrl": ""
-    },
-    {
-      "id": "5S2SFGhEr3yH4lGeTwTxzO",
-      "name": "赤橙",
-      "artist": "ACIDMAN",
-      "album": "創",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9ea7ed3eed39253c33ca11b",
-      "playedAt": "2026-06-15T05:53:30.319Z",
-      "spotifyUrl": "https://open.spotify.com/track/5S2SFGhEr3yH4lGeTwTxzO",
-      "duration": 305933,
       "previewUrl": ""
     }
   ],
