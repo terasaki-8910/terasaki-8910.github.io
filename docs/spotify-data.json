@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-06-18T02:37:56.162Z",
+  "lastUpdated": "2026-06-18T10:03:16.121Z",
   "tracks": [
+    {
+      "id": "2EHcM94vAEYFlNXXosOHRp",
+      "name": "狂乱 Hey Kids!!",
+      "artist": "THE ORAL CIGARETTES",
+      "album": "FIXION",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ff25f1a3333297cc123153b",
+      "playedAt": "2026-06-18T09:12:22.944Z",
+      "spotifyUrl": "https://open.spotify.com/track/2EHcM94vAEYFlNXXosOHRp",
+      "duration": 250973,
+      "previewUrl": ""
+    },
+    {
+      "id": "7onucgU6HHFbtZ9r0jXgmy",
+      "name": "DREAM SOLISTER",
+      "artist": "TRUE",
+      "album": "Joy Heart",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
+      "playedAt": "2026-06-18T09:08:17.447Z",
+      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
+      "duration": 300533,
+      "previewUrl": ""
+    },
+    {
+      "id": "3Qs3O0rc4R0hl7WkTuMJ6U",
+      "name": "金色グラフティー",
+      "artist": "ROTTENGRAFFTY",
+      "album": "Walk",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a601cf2c4b3e855e559fae2f",
+      "playedAt": "2026-06-18T09:03:12.387Z",
+      "spotifyUrl": "https://open.spotify.com/track/3Qs3O0rc4R0hl7WkTuMJ6U",
+      "duration": 258466,
+      "previewUrl": ""
+    },
+    {
+      "id": "5M6hrn7yus9MefXLBnCCVA",
+      "name": "SHAMROCK",
+      "artist": "UVERworld",
+      "album": "BUGRIGHT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738812abd2574046e5b0271389",
+      "playedAt": "2026-06-18T08:14:30.917Z",
+      "spotifyUrl": "https://open.spotify.com/track/5M6hrn7yus9MefXLBnCCVA",
+      "duration": 248493,
+      "previewUrl": ""
+    },
+    {
+      "id": "3txqYlzoDZGLoW8MGll9tQ",
+      "name": "リライト",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "album": "ソルファ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8dd23458921ec0c46801026",
+      "playedAt": "2026-06-18T08:10:21.890Z",
+      "spotifyUrl": "https://open.spotify.com/track/3txqYlzoDZGLoW8MGll9tQ",
+      "duration": 225493,
+      "previewUrl": ""
+    },
+    {
+      "id": "2pFHrl47m7jjQWb7c8iGgp",
+      "name": "NO SCARED",
+      "artist": "ONE OK ROCK",
+      "album": "残響リファレンス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27371a6a4b38da1045d8d700b2f",
+      "playedAt": "2026-06-18T08:06:06.576Z",
+      "spotifyUrl": "https://open.spotify.com/track/2pFHrl47m7jjQWb7c8iGgp",
+      "duration": 219186,
+      "previewUrl": ""
+    },
+    {
+      "id": "6FHgHDXiGnRfhrSok9xAz3",
+      "name": "ともに",
+      "artist": "WANIMA",
+      "album": "Everybody!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273be77ec342dae727a2ce8c7d7",
+      "playedAt": "2026-06-18T07:57:02.769Z",
+      "spotifyUrl": "https://open.spotify.com/track/6FHgHDXiGnRfhrSok9xAz3",
+      "duration": 207368,
+      "previewUrl": ""
+    },
     {
       "id": "4FdpXwtpJfRltvFuTcpNL6",
       "name": "モス",
@@ -252,83 +329,6 @@
       "playedAt": "2026-06-16T02:56:07.008Z",
       "spotifyUrl": "https://open.spotify.com/track/6orDsQsMy7BaqGoRWw3fVN",
       "duration": 265466,
-      "previewUrl": ""
-    },
-    {
-      "id": "6w6bBuMFTcqr6vWYs307ye",
-      "name": "未来の破片",
-      "artist": "ASIAN KUNG-FU GENERATION",
-      "album": "君繋ファイブエム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734144799774b2e857c1040d0c",
-      "playedAt": "2026-06-16T02:51:48.084Z",
-      "spotifyUrl": "https://open.spotify.com/track/6w6bBuMFTcqr6vWYs307ye",
-      "duration": 285840,
-      "previewUrl": ""
-    },
-    {
-      "id": "0var06tEoXUqS76RScrCCP",
-      "name": "クライマー",
-      "artist": "Galileo Galilei",
-      "album": "Sea and The Darkness",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27358af6e008452f076d1d1a9f1",
-      "playedAt": "2026-06-16T02:47:22.374Z",
-      "spotifyUrl": "https://open.spotify.com/track/0var06tEoXUqS76RScrCCP",
-      "duration": 190066,
-      "previewUrl": ""
-    },
-    {
-      "id": "6lcqXYjDSGxx69DurXx0rF",
-      "name": "ループザルーム (feat. 初音ミク)",
-      "artist": "ルシノ, Hatsune Miku",
-      "album": "ループザルーム / ランベントアリア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
-      "playedAt": "2026-06-16T02:29:56.382Z",
-      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
-      "duration": 134071,
-      "previewUrl": ""
-    },
-    {
-      "id": "5OQIvZoUPvfQq02tITKjQZ",
-      "name": "水流のロック",
-      "artist": "Natsuko Nisshoku",
-      "album": "瞼瞼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
-      "playedAt": "2026-06-15T16:08:16.996Z",
-      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
-      "duration": 179173,
-      "previewUrl": ""
-    },
-    {
-      "id": "3BPnFpAL02Bos8EoTLnO9R",
-      "name": "キミに100パーセント",
-      "artist": "Kyary Pamyu Pamyu",
-      "album": "KPP BEST",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
-      "playedAt": "2026-06-15T16:05:15.802Z",
-      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
-      "duration": 200253,
-      "previewUrl": ""
-    },
-    {
-      "id": "2ruHYPN3a77Ra8WvvPyfwb",
-      "name": "Beautiful",
-      "artist": "Superfly",
-      "album": "WHITE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273143971d98dba3b2830e39799",
-      "playedAt": "2026-06-15T15:57:38.563Z",
-      "spotifyUrl": "https://open.spotify.com/track/2ruHYPN3a77Ra8WvvPyfwb",
-      "duration": 297931,
-      "previewUrl": ""
-    },
-    {
-      "id": "23b70WxAS1W3x9X69MlVSo",
-      "name": "Lonely Go!",
-      "artist": "Brian the Sun",
-      "album": "MEME",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27308f413521662b7d735aa73c4",
-      "playedAt": "2026-06-15T09:30:56.644Z",
-      "spotifyUrl": "https://open.spotify.com/track/23b70WxAS1W3x9X69MlVSo",
-      "duration": 236106,
       "previewUrl": ""
     }
   ],
