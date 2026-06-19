@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-06-18T20:10:03.686Z",
+  "lastUpdated": "2026-06-19T02:53:50.194Z",
   "tracks": [
+    {
+      "id": "0ZnvQc8Ql8foFq4aprS3ke",
+      "name": "明日の私に幸あれ",
+      "artist": "NANAOAKARI",
+      "album": "明日の私に幸あれ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f1ee1e68197e721a0edb69d1",
+      "playedAt": "2026-06-19T02:23:33.364Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ZnvQc8Ql8foFq4aprS3ke",
+      "duration": 214627,
+      "previewUrl": ""
+    },
+    {
+      "id": "4MorYttxU39XKVoRlCopyz",
+      "name": "QUESTION",
+      "artist": "3年E組うた担(渚&茅野&業&磯貝&前原)",
+      "album": "QUESTION",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0f01a5f8f3e0d9a0f857870",
+      "playedAt": "2026-06-19T02:16:13.473Z",
+      "spotifyUrl": "https://open.spotify.com/track/4MorYttxU39XKVoRlCopyz",
+      "duration": 266226,
+      "previewUrl": ""
+    },
     {
       "id": "2EHcM94vAEYFlNXXosOHRp",
       "name": "狂乱 Hey Kids!!",
@@ -307,28 +329,6 @@
       "playedAt": "2026-06-16T03:18:34.154Z",
       "spotifyUrl": "https://open.spotify.com/track/3XKMO7tvyyUmxRvlJGhYQm",
       "duration": 217626,
-      "previewUrl": ""
-    },
-    {
-      "id": "7t2TdVo29LOQv6RxbAEqrI",
-      "name": "新世界",
-      "artist": "ACIDMAN",
-      "album": "新世界",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27333d003172c067573fadcf4db",
-      "playedAt": "2026-06-16T03:00:19.344Z",
-      "spotifyUrl": "https://open.spotify.com/track/7t2TdVo29LOQv6RxbAEqrI",
-      "duration": 264986,
-      "previewUrl": ""
-    },
-    {
-      "id": "6orDsQsMy7BaqGoRWw3fVN",
-      "name": "閃光",
-      "artist": "[Alexandros]",
-      "album": "閃光",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734e7f918d919693867de42278",
-      "playedAt": "2026-06-16T02:56:07.008Z",
-      "spotifyUrl": "https://open.spotify.com/track/6orDsQsMy7BaqGoRWw3fVN",
-      "duration": 265466,
       "previewUrl": ""
     }
   ],
