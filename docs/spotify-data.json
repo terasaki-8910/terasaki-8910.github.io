@@ -1,13 +1,35 @@
 {
-  "lastUpdated": "2026-06-19T19:24:12.452Z",
+  "lastUpdated": "2026-06-20T02:27:02.229Z",
   "tracks": [
+    {
+      "id": "6FHgHDXiGnRfhrSok9xAz3",
+      "name": "ともに",
+      "artist": "WANIMA",
+      "album": "Everybody!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273be77ec342dae727a2ce8c7d7",
+      "playedAt": "2026-06-19T21:11:00.853Z",
+      "spotifyUrl": "https://open.spotify.com/track/6FHgHDXiGnRfhrSok9xAz3",
+      "duration": 207368,
+      "previewUrl": ""
+    },
+    {
+      "id": "0rVH35mmwtelHycrJxFexC",
+      "name": "Rolling star",
+      "artist": "YUI",
+      "album": "CAN'T BUY MY LOVE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737508bd4e7236b2524dc2ec91",
+      "playedAt": "2026-06-19T20:26:51.270Z",
+      "spotifyUrl": "https://open.spotify.com/track/0rVH35mmwtelHycrJxFexC",
+      "duration": 188506,
+      "previewUrl": ""
+    },
     {
       "id": "3YOZLPRiTuYgItSGO41gPT",
       "name": "FLY HIGH!!",
       "artist": "BURNOUT SYNDROMES",
       "album": "檸檬",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2739b2fd3a5d29c28e87a25553a",
-      "playedAt": "2026-06-19T10:36:48.620Z",
+      "playedAt": "2026-06-19T20:26:31.655Z",
       "spotifyUrl": "https://open.spotify.com/track/3YOZLPRiTuYgItSGO41gPT",
       "duration": 244493,
       "previewUrl": ""
@@ -21,17 +43,6 @@
       "playedAt": "2026-06-19T10:35:28.664Z",
       "spotifyUrl": "https://open.spotify.com/track/1mUBfxiEdsrVhkQCohevey",
       "duration": 197483,
-      "previewUrl": ""
-    },
-    {
-      "id": "6FHgHDXiGnRfhrSok9xAz3",
-      "name": "ともに",
-      "artist": "WANIMA",
-      "album": "Everybody!!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273be77ec342dae727a2ce8c7d7",
-      "playedAt": "2026-06-19T10:23:39.293Z",
-      "spotifyUrl": "https://open.spotify.com/track/6FHgHDXiGnRfhrSok9xAz3",
-      "duration": 207368,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-06-16T08:48:14.703Z",
       "spotifyUrl": "https://open.spotify.com/track/75ydSk3JU7hqJFhyGQyhPZ",
       "duration": 182880,
-      "previewUrl": ""
-    },
-    {
-      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
-      "name": "STAY TUNE",
-      "artist": "Suchmos",
-      "album": "THE KIDS",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
-      "playedAt": "2026-06-16T08:42:50.455Z",
-      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
-      "duration": 298746,
       "previewUrl": ""
     }
   ],
