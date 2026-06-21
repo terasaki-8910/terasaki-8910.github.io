@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-06-21T09:34:23.845Z",
+  "lastUpdated": "2026-06-21T13:46:42.629Z",
   "tracks": [
+    {
+      "id": "2FXtYLpJKHEbtLuCDGpRrr",
+      "name": "怒りをくれよ",
+      "artist": "GLIM SPANKY",
+      "album": "Next One",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273335c7354e9ef12b4e4dc33ee",
+      "playedAt": "2026-06-21T13:08:17.813Z",
+      "spotifyUrl": "https://open.spotify.com/track/2FXtYLpJKHEbtLuCDGpRrr",
+      "duration": 208226,
+      "previewUrl": ""
+    },
+    {
+      "id": "3YxsRgCkaQR9ckhabbz0yz",
+      "name": "太陽曰く燃えよカオス",
+      "artist": "Ushirokarahaiyoritai G",
+      "album": "太陽曰く燃えよカオス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9acf1a281e447d27fb3b52a",
+      "playedAt": "2026-06-21T12:52:46.773Z",
+      "spotifyUrl": "https://open.spotify.com/track/3YxsRgCkaQR9ckhabbz0yz",
+      "duration": 232000,
+      "previewUrl": ""
+    },
+    {
+      "id": "0rVH35mmwtelHycrJxFexC",
+      "name": "Rolling star",
+      "artist": "YUI",
+      "album": "CAN'T BUY MY LOVE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737508bd4e7236b2524dc2ec91",
+      "playedAt": "2026-06-21T12:51:49.085Z",
+      "spotifyUrl": "https://open.spotify.com/track/0rVH35mmwtelHycrJxFexC",
+      "duration": 188506,
+      "previewUrl": ""
+    },
     {
       "id": "6FHgHDXiGnRfhrSok9xAz3",
       "name": "ともに",
@@ -10,17 +43,6 @@
       "playedAt": "2026-06-19T21:11:00.853Z",
       "spotifyUrl": "https://open.spotify.com/track/6FHgHDXiGnRfhrSok9xAz3",
       "duration": 207368,
-      "previewUrl": ""
-    },
-    {
-      "id": "0rVH35mmwtelHycrJxFexC",
-      "name": "Rolling star",
-      "artist": "YUI",
-      "album": "CAN'T BUY MY LOVE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737508bd4e7236b2524dc2ec91",
-      "playedAt": "2026-06-19T20:26:51.270Z",
-      "spotifyUrl": "https://open.spotify.com/track/0rVH35mmwtelHycrJxFexC",
-      "duration": 188506,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-06-17T01:44:29.026Z",
       "spotifyUrl": "https://open.spotify.com/track/6kRLCygHi8SvEL2MWbfzcg",
       "duration": 227466,
-      "previewUrl": ""
-    },
-    {
-      "id": "64yajM6CxtLghmgB53VeXT",
-      "name": "インフェルノ",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "インフェルノ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731a4e99f0c693fecc9038d3dd",
-      "playedAt": "2026-06-17T01:40:49.261Z",
-      "spotifyUrl": "https://open.spotify.com/track/64yajM6CxtLghmgB53VeXT",
-      "duration": 212546,
-      "previewUrl": ""
-    },
-    {
-      "id": "75ydSk3JU7hqJFhyGQyhPZ",
-      "name": "シーグラス",
-      "artist": "Straightener",
-      "album": "COLD DISC",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d474f2b19d1cd684dadff41",
-      "playedAt": "2026-06-16T08:48:14.703Z",
-      "spotifyUrl": "https://open.spotify.com/track/75ydSk3JU7hqJFhyGQyhPZ",
-      "duration": 182880,
       "previewUrl": ""
     }
   ],
