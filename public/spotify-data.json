@@ -1,15 +1,158 @@
 {
-  "lastUpdated": "2026-06-23T02:10:01.207Z",
+  "lastUpdated": "2026-06-23T08:57:03.363Z",
   "tracks": [
+    {
+      "id": "7nDkXyN86D6iszJdl0r8YB",
+      "name": "We'll Meet Again",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-06-23T06:03:02.915Z",
+      "spotifyUrl": "https://open.spotify.com/track/7nDkXyN86D6iszJdl0r8YB",
+      "duration": 195625,
+      "previewUrl": ""
+    },
+    {
+      "id": "4acUp61Zphwr9yDu6v8NDY",
+      "name": "Envelope",
+      "artist": "TheFatRat",
+      "album": "Warrior Songs",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
+      "playedAt": "2026-06-23T05:56:57.775Z",
+      "spotifyUrl": "https://open.spotify.com/track/4acUp61Zphwr9yDu6v8NDY",
+      "duration": 139000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5D8TpfKvwzKTtXSab3NHwf",
+      "name": "快盗Vを見逃すな",
+      "artist": "放課後クライマックスガールズ",
+      "album": "THE IDOLM@STER SHINY COLORS Song for Prism Shower of light / 快盗Vを見逃すな【放課後クライマックスガールズ盤】",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d51e04e10f682fa976accaa",
+      "playedAt": "2026-06-23T05:35:24.926Z",
+      "spotifyUrl": "https://open.spotify.com/track/5D8TpfKvwzKTtXSab3NHwf",
+      "duration": 186506,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-06-23T05:31:52.262Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "407GWcB9QwD3aiX0M7RCFT",
+      "name": "GYB!!",
+      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
+      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
+      "playedAt": "2026-06-23T05:11:27.853Z",
+      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
+      "duration": 218573,
+      "previewUrl": ""
+    },
+    {
+      "id": "7onucgU6HHFbtZ9r0jXgmy",
+      "name": "DREAM SOLISTER",
+      "artist": "TRUE",
+      "album": "Joy Heart",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
+      "playedAt": "2026-06-23T05:08:08.712Z",
+      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
+      "duration": 300533,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ALvDIJw5smrREM5iXmr6G",
+      "name": "僕らは今のなかで",
+      "artist": "μ's",
+      "album": "μ's Best Album Best Live! Collection Ⅱ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+      "playedAt": "2026-06-23T03:49:24.564Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
+      "duration": 274505,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-06-23T03:44:49.584Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "3hpksFLGhfTLPvvTFayutY",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b70fa4c3c795f211022b221ac2",
+      "playedAt": "2026-06-23T03:41:20.285Z",
+      "spotifyUrl": "https://open.spotify.com/track/3hpksFLGhfTLPvvTFayutY",
+      "duration": 255181,
+      "previewUrl": ""
+    },
     {
       "id": "4K65wBvHQPmnD6bTdN6BHt",
       "name": "Snow halation",
       "artist": "μ's",
       "album": "Snow halation",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
-      "playedAt": "2026-06-23T01:12:56.858Z",
+      "playedAt": "2026-06-23T03:37:16.826Z",
       "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
       "duration": 258714,
+      "previewUrl": ""
+    },
+    {
+      "id": "2isCWO5dMBDzyLscHVoJIO",
+      "name": "憧れをいっぱい",
+      "artist": "初星学園, 高木龍一, 倉本千奈",
+      "album": "憧れをいっぱい",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
+      "playedAt": "2026-06-23T03:32:57.579Z",
+      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
+      "duration": 288363,
+      "previewUrl": ""
+    },
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2026-06-23T03:28:08.698Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
+    {
+      "id": "6vRkYTrWDzzVrZTqBJFR0u",
+      "name": "Catch the Moment",
+      "artist": "LiSA",
+      "album": "LiTTLE DEViL PARADE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738f3dc36ed6737a2f83c723cd",
+      "playedAt": "2026-06-23T02:52:14.245Z",
+      "spotifyUrl": "https://open.spotify.com/track/6vRkYTrWDzzVrZTqBJFR0u",
+      "duration": 282626,
+      "previewUrl": ""
+    },
+    {
+      "id": "3txqYlzoDZGLoW8MGll9tQ",
+      "name": "リライト",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "album": "ソルファ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8dd23458921ec0c46801026",
+      "playedAt": "2026-06-23T02:45:15.926Z",
+      "spotifyUrl": "https://open.spotify.com/track/3txqYlzoDZGLoW8MGll9tQ",
+      "duration": 225493,
       "previewUrl": ""
     },
     {
@@ -54,17 +197,6 @@
       "playedAt": "2026-06-22T09:59:21.943Z",
       "spotifyUrl": "https://open.spotify.com/track/7wkXPwLKr7rrRdAfslbW1Z",
       "duration": 284413,
-      "previewUrl": ""
-    },
-    {
-      "id": "5ALvDIJw5smrREM5iXmr6G",
-      "name": "僕らは今のなかで",
-      "artist": "μ's",
-      "album": "μ's Best Album Best Live! Collection Ⅱ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
-      "playedAt": "2026-06-22T09:51:40.856Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
-      "duration": 274505,
       "previewUrl": ""
     },
     {
@@ -197,138 +329,6 @@
       "playedAt": "2026-06-22T06:44:26.498Z",
       "spotifyUrl": "https://open.spotify.com/track/6Jb6mPt99aEFELWrxzMkUX",
       "duration": 208787,
-      "previewUrl": ""
-    },
-    {
-      "id": "5JEaoWa9hDApNaydmIZsZq",
-      "name": "Our Song",
-      "artist": "TheFatRat, Cecilia Gault",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-22T06:41:31.355Z",
-      "spotifyUrl": "https://open.spotify.com/track/5JEaoWa9hDApNaydmIZsZq",
-      "duration": 191328,
-      "previewUrl": ""
-    },
-    {
-      "id": "3TKECbhjCdTLx1UuyUS0ye",
-      "name": "Chosen",
-      "artist": "TheFatRat, Laura Brehm, Anna Yvette",
-      "album": "Chosen",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331c16beab40e89973c84d81e",
-      "playedAt": "2026-06-22T06:38:53.779Z",
-      "spotifyUrl": "https://open.spotify.com/track/3TKECbhjCdTLx1UuyUS0ye",
-      "duration": 229946,
-      "previewUrl": ""
-    },
-    {
-      "id": "1ONOeA8bIBRdCBGIQlPFNG",
-      "name": "Ascendancy",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-22T06:35:32.377Z",
-      "spotifyUrl": "https://open.spotify.com/track/1ONOeA8bIBRdCBGIQlPFNG",
-      "duration": 50500,
-      "previewUrl": ""
-    },
-    {
-      "id": "06POVSGbIFuQsc721gLk6Q",
-      "name": "Close To The Sun",
-      "artist": "TheFatRat, Anjulie",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-06-22T06:34:48.581Z",
-      "spotifyUrl": "https://open.spotify.com/track/06POVSGbIFuQsc721gLk6Q",
-      "duration": 192239,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WttbQX5vAw6XXQftF3Ers",
-      "name": "Upwind",
-      "artist": "TheFatRat",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-22T06:31:42.523Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WttbQX5vAw6XXQftF3Ers",
-      "duration": 192000,
-      "previewUrl": ""
-    },
-    {
-      "id": "1RW5JfUnIejreJBI8NvUHT",
-      "name": "Mad Moon Falling",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-22T06:28:33.791Z",
-      "spotifyUrl": "https://open.spotify.com/track/1RW5JfUnIejreJBI8NvUHT",
-      "duration": 80750,
-      "previewUrl": ""
-    },
-    {
-      "id": "4acUp61Zphwr9yDu6v8NDY",
-      "name": "Envelope",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-22T06:27:18.124Z",
-      "spotifyUrl": "https://open.spotify.com/track/4acUp61Zphwr9yDu6v8NDY",
-      "duration": 139000,
-      "previewUrl": ""
-    },
-    {
-      "id": "669AIf5NRtK58b7muzHfQT",
-      "name": "We'll Meet Again - Instrumental",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "We'll Meet Again",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738707f39a451e13104f0582e8",
-      "playedAt": "2026-06-22T06:25:11.050Z",
-      "spotifyUrl": "https://open.spotify.com/track/669AIf5NRtK58b7muzHfQT",
-      "duration": 195625,
-      "previewUrl": ""
-    },
-    {
-      "id": "6inzGTxyGsXVjpVKtFGrcE",
-      "name": "Rise Up",
-      "artist": "TheFatRat",
-      "album": "Rise Up",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273043a40737b9cded403f02ee4",
-      "playedAt": "2026-06-22T06:22:00.422Z",
-      "spotifyUrl": "https://open.spotify.com/track/6inzGTxyGsXVjpVKtFGrcE",
-      "duration": 169756,
-      "previewUrl": ""
-    },
-    {
-      "id": "2yzcZvPl5k9TS0lDAaF4Sc",
-      "name": "Pride & Fear",
-      "artist": "TheFatRat, RIELL",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-22T06:19:15.565Z",
-      "spotifyUrl": "https://open.spotify.com/track/2yzcZvPl5k9TS0lDAaF4Sc",
-      "duration": 166802,
-      "previewUrl": ""
-    },
-    {
-      "id": "6YzMhlI36vzyDYvhjiVf54",
-      "name": "The Calling",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "The Calling",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e37b56b30e0d3d6bc73694da",
-      "playedAt": "2026-06-22T06:16:45.865Z",
-      "spotifyUrl": "https://open.spotify.com/track/6YzMhlI36vzyDYvhjiVf54",
-      "duration": 233590,
-      "previewUrl": ""
-    },
-    {
-      "id": "2FXtYLpJKHEbtLuCDGpRrr",
-      "name": "怒りをくれよ",
-      "artist": "GLIM SPANKY",
-      "album": "Next One",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273335c7354e9ef12b4e4dc33ee",
-      "playedAt": "2026-06-21T13:08:17.813Z",
-      "spotifyUrl": "https://open.spotify.com/track/2FXtYLpJKHEbtLuCDGpRrr",
-      "duration": 208226,
       "previewUrl": ""
     }
   ],
