@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-06-22T20:33:04.893Z",
+  "lastUpdated": "2026-06-23T02:10:01.207Z",
   "tracks": [
+    {
+      "id": "4K65wBvHQPmnD6bTdN6BHt",
+      "name": "Snow halation",
+      "artist": "μ's",
+      "album": "Snow halation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+      "playedAt": "2026-06-23T01:12:56.858Z",
+      "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
+      "duration": 258714,
+      "previewUrl": ""
+    },
+    {
+      "id": "3Ht2iEekMrHRndj0sC5e2X",
+      "name": "カルマ",
+      "artist": "BUMP OF CHICKEN",
+      "album": "orbital period",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8bf4d447ecc2c7914cb791c",
+      "playedAt": "2026-06-23T01:05:02.518Z",
+      "spotifyUrl": "https://open.spotify.com/track/3Ht2iEekMrHRndj0sC5e2X",
+      "duration": 209973,
+      "previewUrl": ""
+    },
     {
       "id": "1fBWbKfZ4DKIOacKBWakSQ",
       "name": "Violet Sky",
@@ -307,28 +329,6 @@
       "playedAt": "2026-06-21T13:08:17.813Z",
       "spotifyUrl": "https://open.spotify.com/track/2FXtYLpJKHEbtLuCDGpRrr",
       "duration": 208226,
-      "previewUrl": ""
-    },
-    {
-      "id": "3YxsRgCkaQR9ckhabbz0yz",
-      "name": "太陽曰く燃えよカオス",
-      "artist": "Ushirokarahaiyoritai G",
-      "album": "太陽曰く燃えよカオス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9acf1a281e447d27fb3b52a",
-      "playedAt": "2026-06-21T12:52:46.773Z",
-      "spotifyUrl": "https://open.spotify.com/track/3YxsRgCkaQR9ckhabbz0yz",
-      "duration": 232000,
-      "previewUrl": ""
-    },
-    {
-      "id": "0rVH35mmwtelHycrJxFexC",
-      "name": "Rolling star",
-      "artist": "YUI",
-      "album": "CAN'T BUY MY LOVE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737508bd4e7236b2524dc2ec91",
-      "playedAt": "2026-06-21T12:51:49.085Z",
-      "spotifyUrl": "https://open.spotify.com/track/0rVH35mmwtelHycrJxFexC",
-      "duration": 188506,
       "previewUrl": ""
     }
   ],
