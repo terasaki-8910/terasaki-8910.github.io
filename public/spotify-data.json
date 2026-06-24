@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-06-24T08:52:03.583Z",
+  "lastUpdated": "2026-06-24T14:05:04.372Z",
   "tracks": [
+    {
+      "id": "3CALjriGbql40HiGdfLoWm",
+      "name": "スタンドバイミー",
+      "artist": "Remioromen",
+      "album": "HORIZON",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732ec5290ce2b2465001dd183f",
+      "playedAt": "2026-06-24T09:23:23.277Z",
+      "spotifyUrl": "https://open.spotify.com/track/3CALjriGbql40HiGdfLoWm",
+      "duration": 303430,
+      "previewUrl": ""
+    },
     {
       "id": "1egHgM7sqysl8iB4uuZcDw",
       "name": "夜明けのBEAT",
@@ -252,17 +263,6 @@
       "playedAt": "2026-06-23T03:41:20.285Z",
       "spotifyUrl": "https://open.spotify.com/track/3hpksFLGhfTLPvvTFayutY",
       "duration": 255181,
-      "previewUrl": ""
-    },
-    {
-      "id": "6vRkYTrWDzzVrZTqBJFR0u",
-      "name": "Catch the Moment",
-      "artist": "LiSA",
-      "album": "LiTTLE DEViL PARADE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738f3dc36ed6737a2f83c723cd",
-      "playedAt": "2026-06-23T02:52:14.245Z",
-      "spotifyUrl": "https://open.spotify.com/track/6vRkYTrWDzzVrZTqBJFR0u",
-      "duration": 282626,
       "previewUrl": ""
     }
   ],
