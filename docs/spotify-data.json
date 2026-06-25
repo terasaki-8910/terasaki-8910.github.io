@@ -1,15 +1,103 @@
 {
-  "lastUpdated": "2026-06-25T08:45:55.269Z",
+  "lastUpdated": "2026-06-25T14:02:34.888Z",
   "tracks": [
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2026-06-25T11:27:19.521Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ALvDIJw5smrREM5iXmr6G",
+      "name": "僕らは今のなかで",
+      "artist": "μ's",
+      "album": "μ's Best Album Best Live! Collection Ⅱ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+      "playedAt": "2026-06-25T11:22:53.812Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
+      "duration": 274505,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-06-25T11:18:18.824Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
+      "name": "春を告げる",
+      "artist": "yama",
+      "album": "春を告げる",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
+      "playedAt": "2026-06-25T11:15:00.612Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
+      "duration": 196497,
+      "previewUrl": ""
+    },
     {
       "id": "1C1skAeFtnguXNlCYRQoCr",
       "name": "ブレインロット",
       "artist": "東京真中",
       "album": "ブレインロット",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
-      "playedAt": "2026-06-25T07:45:02.279Z",
+      "playedAt": "2026-06-25T11:11:43.530Z",
       "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
       "duration": 122888,
+      "previewUrl": ""
+    },
+    {
+      "id": "5g24szGiFbRVEZQC1luDmW",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
+      "playedAt": "2026-06-25T11:09:40.168Z",
+      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
+      "duration": 250253,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WGrtUmFwTaP5G8AeegajH",
+      "name": "POP IN 2",
+      "artist": "B小町, ルビー(CV:伊駒ゆりえ), 有馬かな(CV:潘めぐみ), MEMちょ(CV:大久保瑠美)",
+      "album": "TVアニメ「【推しの子】」キャラクターソングCD (Vol.4)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e53663aa5a7ec6f340cee041",
+      "playedAt": "2026-06-25T11:07:34.819Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WGrtUmFwTaP5G8AeegajH",
+      "duration": 267116,
+      "previewUrl": ""
+    },
+    {
+      "id": "5mqucSnaCVI1kW6ewrXYE2",
+      "name": "Talking Box (Dirty Pop Remix)",
+      "artist": "WurtS",
+      "album": "Talking Box (Dirty Pop Remix)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27323988edcd8de03b090e77caa",
+      "playedAt": "2026-06-25T08:51:54.001Z",
+      "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
+      "duration": 128978,
+      "previewUrl": ""
+    },
+    {
+      "id": "5gwzzDhUO1H4tIRRJDjnny",
+      "name": "MONOCHROME",
+      "artist": "suisoh",
+      "album": "MONOCHROME",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730615bcc106cbc4dfb40ab853",
+      "playedAt": "2026-06-25T08:49:31.347Z",
+      "spotifyUrl": "https://open.spotify.com/track/5gwzzDhUO1H4tIRRJDjnny",
+      "duration": 181457,
       "previewUrl": ""
     },
     {
@@ -123,17 +211,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-06-25T03:26:12.050Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
       "id": "5XsPjGw1ADBcVU0i7mwNb1",
       "name": "Campus mode!!",
       "artist": "初星学園",
@@ -244,28 +321,6 @@
       "previewUrl": ""
     },
     {
-      "id": "0zxyK9Ih5rnN485VY73bUp",
-      "name": "Luna say maybe",
-      "artist": "初星学園, 美波, 月村手毬",
-      "album": "Luna say maybe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
-      "playedAt": "2026-06-24T07:05:21.647Z",
-      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
-      "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "5ALvDIJw5smrREM5iXmr6G",
-      "name": "僕らは今のなかで",
-      "artist": "μ's",
-      "album": "μ's Best Album Best Live! Collection Ⅱ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
-      "playedAt": "2026-06-24T07:00:55.848Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
-      "duration": 274505,
-      "previewUrl": ""
-    },
-    {
       "id": "2isCWO5dMBDzyLscHVoJIO",
       "name": "憧れをいっぱい",
       "artist": "初星学園, 高木龍一, 倉本千奈",
@@ -275,51 +330,7 @@
       "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
       "duration": 288363,
       "previewUrl": ""
-    },
-    {
-      "id": "5g24szGiFbRVEZQC1luDmW",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
-      "playedAt": "2026-06-24T06:13:29.960Z",
-      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
-      "duration": 250253,
-      "previewUrl": ""
-    },
-    {
-      "id": "2JPLbjOn0wPCngEot2STUS",
-      "name": "Yonaguni",
-      "artist": "Bad Bunny",
-      "album": "Yonaguni",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27364afd6879102d03460bd3ad9",
-      "playedAt": "2026-06-24T06:07:34.308Z",
-      "spotifyUrl": "https://open.spotify.com/track/2JPLbjOn0wPCngEot2STUS",
-      "duration": 206710,
-      "previewUrl": ""
-    },
-    {
-      "id": "2FXtYLpJKHEbtLuCDGpRrr",
-      "name": "怒りをくれよ",
-      "artist": "GLIM SPANKY",
-      "album": "Next One",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273335c7354e9ef12b4e4dc33ee",
-      "playedAt": "2026-06-23T15:09:30.790Z",
-      "spotifyUrl": "https://open.spotify.com/track/2FXtYLpJKHEbtLuCDGpRrr",
-      "duration": 208226,
-      "previewUrl": ""
-    },
-    {
-      "id": "6eLQXa6uk2EW8drsiKbABZ",
-      "name": "TU SANCHO",
-      "artist": "Fuerza Regida",
-      "album": "111XPANTIA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2e90fbdec84b25e46573469",
-      "playedAt": "2026-06-23T13:53:11.378Z",
-      "spotifyUrl": "https://open.spotify.com/track/6eLQXa6uk2EW8drsiKbABZ",
-      "duration": 177994,
-      "previewUrl": ""
     }
   ],
-  "total": 29
+  "total": 30
 }
