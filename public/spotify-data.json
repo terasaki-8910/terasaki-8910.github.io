@@ -1,6 +1,160 @@
 {
-  "lastUpdated": "2026-06-25T02:11:31.416Z",
+  "lastUpdated": "2026-06-25T08:45:55.269Z",
   "tracks": [
+    {
+      "id": "1C1skAeFtnguXNlCYRQoCr",
+      "name": "ブレインロット",
+      "artist": "東京真中",
+      "album": "ブレインロット",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
+      "playedAt": "2026-06-25T07:45:02.279Z",
+      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
+      "duration": 122888,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-06-25T05:48:42.741Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "0Gp8MWnUzS5V2lvTr25c2A",
+      "name": "ビビデバ",
+      "artist": "Hoshimachi Suisei",
+      "album": "ビビデバ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d2da332b0bcdf081df91d036",
+      "playedAt": "2026-06-25T05:45:05.504Z",
+      "spotifyUrl": "https://open.spotify.com/track/0Gp8MWnUzS5V2lvTr25c2A",
+      "duration": 165266,
+      "previewUrl": ""
+    },
+    {
+      "id": "4CQjt0Ejf8clK3s7h6Za0P",
+      "name": "転生林檎",
+      "artist": "PinocchioP",
+      "album": "転生林檎",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273287a32b6a7991e4a949be3d0",
+      "playedAt": "2026-06-25T04:00:15.327Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CQjt0Ejf8clK3s7h6Za0P",
+      "duration": 219082,
+      "previewUrl": ""
+    },
+    {
+      "id": "0UBUg8NU4XJtQqzTPs8Pkr",
+      "name": "三原色",
+      "artist": "YOASOBI",
+      "album": "THE BOOK 2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c3625a413a9a79facea38c2",
+      "playedAt": "2026-06-25T03:56:35.752Z",
+      "spotifyUrl": "https://open.spotify.com/track/0UBUg8NU4XJtQqzTPs8Pkr",
+      "duration": 220253,
+      "previewUrl": ""
+    },
+    {
+      "id": "7Hj7PMdrx3bKse1hhL7qv4",
+      "name": "寄り酔い",
+      "artist": "和ぬか",
+      "album": "青二才",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fb5000b5b30aa11e721afed",
+      "playedAt": "2026-06-25T03:52:55.056Z",
+      "spotifyUrl": "https://open.spotify.com/track/7Hj7PMdrx3bKse1hhL7qv4",
+      "duration": 219173,
+      "previewUrl": ""
+    },
+    {
+      "id": "1huqzMaPdQkXuOJaLxrC2s",
+      "name": "すずめ",
+      "artist": "RADWIMPS, Toaka",
+      "album": "すずめ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348d4eaf595967959fc3be747",
+      "playedAt": "2026-06-25T03:49:15.448Z",
+      "spotifyUrl": "https://open.spotify.com/track/1huqzMaPdQkXuOJaLxrC2s",
+      "duration": 236390,
+      "previewUrl": ""
+    },
+    {
+      "id": "2UUwBDALzJuThY88Ro2lD2",
+      "name": "フォニイ",
+      "artist": "可不, ツミキ",
+      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
+      "playedAt": "2026-06-25T03:45:18.563Z",
+      "spotifyUrl": "https://open.spotify.com/track/2UUwBDALzJuThY88Ro2lD2",
+      "duration": 189884,
+      "previewUrl": ""
+    },
+    {
+      "id": "6FhWelfRDMFZRtFUU6SIdC",
+      "name": "怪獣",
+      "artist": "sakanaction",
+      "album": "怪獣",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d7f2ac644f635e94a193736",
+      "playedAt": "2026-06-25T03:42:08.294Z",
+      "spotifyUrl": "https://open.spotify.com/track/6FhWelfRDMFZRtFUU6SIdC",
+      "duration": 252722,
+      "previewUrl": ""
+    },
+    {
+      "id": "6x7SB38tuekpu4xpH9OIPY",
+      "name": "地球儀 - Spinning Globe",
+      "artist": "Kenshi Yonezu",
+      "album": "地球儀 - Spinning Globe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732d701db43f9a93a214fa4404",
+      "playedAt": "2026-06-25T03:37:55.116Z",
+      "spotifyUrl": "https://open.spotify.com/track/6x7SB38tuekpu4xpH9OIPY",
+      "duration": 273437,
+      "previewUrl": ""
+    },
+    {
+      "id": "3zbKiko8V3u2yn1RcT8xBZ",
+      "name": "青のすみか",
+      "artist": "Tatsuya Kitani",
+      "album": "ROUNDABOUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d49212018875a81c83b67e",
+      "playedAt": "2026-06-25T03:33:21.231Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zbKiko8V3u2yn1RcT8xBZ",
+      "duration": 196640,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-06-25T03:26:12.050Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-06-25T03:22:58.084Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-06-25T03:03:10.845Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
     {
       "id": "3CALjriGbql40HiGdfLoWm",
       "name": "スタンドバイミー",
@@ -68,17 +222,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-06-24T07:16:34.199Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
       "id": "407GWcB9QwD3aiX0M7RCFT",
       "name": "GYB!!",
       "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
@@ -120,28 +263,6 @@
       "playedAt": "2026-06-24T07:00:55.848Z",
       "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
       "duration": 274505,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-06-24T06:56:20.813Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
-      "previewUrl": ""
-    },
-    {
-      "id": "5XsPjGw1ADBcVU0i7mwNb1",
-      "name": "Campus mode!!",
-      "artist": "初星学園",
-      "album": "Campus mode!!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
-      "playedAt": "2026-06-24T06:53:04.640Z",
-      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
-      "duration": 260015,
       "previewUrl": ""
     },
     {
@@ -198,73 +319,7 @@
       "spotifyUrl": "https://open.spotify.com/track/6eLQXa6uk2EW8drsiKbABZ",
       "duration": 177994,
       "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-06-23T11:33:40.612Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
-      "previewUrl": ""
-    },
-    {
-      "id": "7nDkXyN86D6iszJdl0r8YB",
-      "name": "We'll Meet Again",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-06-23T06:03:02.915Z",
-      "spotifyUrl": "https://open.spotify.com/track/7nDkXyN86D6iszJdl0r8YB",
-      "duration": 195625,
-      "previewUrl": ""
-    },
-    {
-      "id": "4acUp61Zphwr9yDu6v8NDY",
-      "name": "Envelope",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-23T05:56:57.775Z",
-      "spotifyUrl": "https://open.spotify.com/track/4acUp61Zphwr9yDu6v8NDY",
-      "duration": 139000,
-      "previewUrl": ""
-    },
-    {
-      "id": "5D8TpfKvwzKTtXSab3NHwf",
-      "name": "快盗Vを見逃すな",
-      "artist": "放課後クライマックスガールズ",
-      "album": "THE IDOLM@STER SHINY COLORS Song for Prism Shower of light / 快盗Vを見逃すな【放課後クライマックスガールズ盤】",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d51e04e10f682fa976accaa",
-      "playedAt": "2026-06-23T05:35:24.926Z",
-      "spotifyUrl": "https://open.spotify.com/track/5D8TpfKvwzKTtXSab3NHwf",
-      "duration": 186506,
-      "previewUrl": ""
-    },
-    {
-      "id": "7onucgU6HHFbtZ9r0jXgmy",
-      "name": "DREAM SOLISTER",
-      "artist": "TRUE",
-      "album": "Joy Heart",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
-      "playedAt": "2026-06-23T05:08:08.712Z",
-      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
-      "duration": 300533,
-      "previewUrl": ""
-    },
-    {
-      "id": "3hpksFLGhfTLPvvTFayutY",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b70fa4c3c795f211022b221ac2",
-      "playedAt": "2026-06-23T03:41:20.285Z",
-      "spotifyUrl": "https://open.spotify.com/track/3hpksFLGhfTLPvvTFayutY",
-      "duration": 255181,
-      "previewUrl": ""
     }
   ],
-  "total": 24
+  "total": 29
 }
