@@ -1,15 +1,59 @@
 {
-  "lastUpdated": "2026-06-26T02:13:26.415Z",
+  "lastUpdated": "2026-06-26T08:48:50.143Z",
   "tracks": [
     {
-      "id": "5g24szGiFbRVEZQC1luDmW",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
-      "playedAt": "2026-06-25T15:16:39.939Z",
-      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
-      "duration": 250253,
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-06-26T06:02:06.635Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "0kydZmUCdp26zl8rfqGhcA",
+      "name": "Lost Princess",
+      "artist": "ペコリーヌ (CV: M・A・O), コッコロ (CV: 伊藤美来), キャル (CV: 立花理香)",
+      "album": "プリンセスコネクト！Re:Dive Lost Princess 〜ようこそ美食殿へ!〜",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733fcfbb387a51544860682215",
+      "playedAt": "2026-06-26T05:32:25.749Z",
+      "spotifyUrl": "https://open.spotify.com/track/0kydZmUCdp26zl8rfqGhcA",
+      "duration": 236333,
+      "previewUrl": ""
+    },
+    {
+      "id": "7kEva2rxsNMn07fyfZMRRn",
+      "name": "Cure For Me",
+      "artist": "AURORA",
+      "album": "Cure For Me",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ba4cc0508ba66eb8f099c9e",
+      "playedAt": "2026-06-26T05:22:28.293Z",
+      "spotifyUrl": "https://open.spotify.com/track/7kEva2rxsNMn07fyfZMRRn",
+      "duration": 201640,
+      "previewUrl": ""
+    },
+    {
+      "id": "5Cpo7btae5aI6QtOcVzWwB",
+      "name": "Dancin - Krono Remix",
+      "artist": "Aaron Smith, Krono, Luvli",
+      "album": "Dancin (Krono Remix)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737715dbcfe17cf4260d47c311",
+      "playedAt": "2026-06-26T05:19:06.209Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Cpo7btae5aI6QtOcVzWwB",
+      "duration": 198053,
+      "previewUrl": ""
+    },
+    {
+      "id": "4h9wh7iOZ0GGn8QVp4RAOB",
+      "name": "I Ain't Worried",
+      "artist": "OneRepublic",
+      "album": "I Ain’t Worried (Music From The Motion Picture \"Top Gun: Maverick\")",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
+      "playedAt": "2026-06-26T05:13:43.008Z",
+      "spotifyUrl": "https://open.spotify.com/track/4h9wh7iOZ0GGn8QVp4RAOB",
+      "duration": 148485,
       "previewUrl": ""
     },
     {
@@ -18,9 +62,64 @@
       "artist": "東京真中",
       "album": "ブレインロット",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
-      "playedAt": "2026-06-25T15:11:15.166Z",
+      "playedAt": "2026-06-26T05:10:38.265Z",
       "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
       "duration": 122888,
+      "previewUrl": ""
+    },
+    {
+      "id": "5g24szGiFbRVEZQC1luDmW",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
+      "playedAt": "2026-06-26T05:08:33.947Z",
+      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
+      "duration": 250253,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-06-26T05:01:16.632Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-06-26T04:23:32.701Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "4K65wBvHQPmnD6bTdN6BHt",
+      "name": "Snow halation",
+      "artist": "μ's",
+      "album": "Snow halation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+      "playedAt": "2026-06-26T04:20:18.470Z",
+      "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
+      "duration": 258714,
+      "previewUrl": ""
+    },
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2026-06-26T04:08:32.278Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
       "previewUrl": ""
     },
     {
@@ -29,7 +128,7 @@
       "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
       "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
-      "playedAt": "2026-06-25T15:08:06.869Z",
+      "playedAt": "2026-06-26T04:02:08.474Z",
       "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
       "duration": 218573,
       "previewUrl": ""
@@ -54,17 +153,6 @@
       "playedAt": "2026-06-25T11:22:53.812Z",
       "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
       "duration": 274505,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-06-25T11:18:18.824Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
       "previewUrl": ""
     },
     {
@@ -109,17 +197,6 @@
       "playedAt": "2026-06-25T08:49:31.347Z",
       "spotifyUrl": "https://open.spotify.com/track/5gwzzDhUO1H4tIRRJDjnny",
       "duration": 181457,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-06-25T05:48:42.741Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
       "previewUrl": ""
     },
     {
@@ -233,17 +310,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-06-25T03:03:10.845Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
-      "previewUrl": ""
-    },
-    {
       "id": "3CALjriGbql40HiGdfLoWm",
       "name": "スタンドバイミー",
       "artist": "Remioromen",
@@ -263,72 +329,6 @@
       "playedAt": "2026-06-24T08:03:24.522Z",
       "spotifyUrl": "https://open.spotify.com/track/1egHgM7sqysl8iB4uuZcDw",
       "duration": 222880,
-      "previewUrl": ""
-    },
-    {
-      "id": "39zRDK54BJJQqcIYydsfSy",
-      "name": "バイマイサイド",
-      "artist": "Hemenway",
-      "album": "バイマイサイド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734bd6c713af8a7d29fb251265",
-      "playedAt": "2026-06-24T07:59:47.532Z",
-      "spotifyUrl": "https://open.spotify.com/track/39zRDK54BJJQqcIYydsfSy",
-      "duration": 207093,
-      "previewUrl": ""
-    },
-    {
-      "id": "4ZArDD9FZ3I4thJeQkoOPv",
-      "name": "The Bravery",
-      "artist": "supercell",
-      "album": "The Bravery",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273218c01fc1e79310c395a0b11",
-      "playedAt": "2026-06-24T07:56:29.692Z",
-      "spotifyUrl": "https://open.spotify.com/track/4ZArDD9FZ3I4thJeQkoOPv",
-      "duration": 366786,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vGTbYvJkMOzwlgxHViUfE",
-      "name": "その向こうへ",
-      "artist": "10-FEET",
-      "album": "thread",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363674809f0964e14b28a14d6",
-      "playedAt": "2026-06-24T07:50:44.031Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vGTbYvJkMOzwlgxHViUfE",
-      "duration": 254106,
-      "previewUrl": ""
-    },
-    {
-      "id": "2wJ4FbmnPYxQOyjTmw0SH8",
-      "name": "アオキハルヘ",
-      "artist": "WOMCADOLE",
-      "album": "今宵零時、その方角へ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730c5320d66135688f6bf6815c",
-      "playedAt": "2026-06-24T07:46:51.898Z",
-      "spotifyUrl": "https://open.spotify.com/track/2wJ4FbmnPYxQOyjTmw0SH8",
-      "duration": 285146,
-      "previewUrl": ""
-    },
-    {
-      "id": "4K65wBvHQPmnD6bTdN6BHt",
-      "name": "Snow halation",
-      "artist": "μ's",
-      "album": "Snow halation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
-      "playedAt": "2026-06-24T07:09:40.907Z",
-      "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
-      "duration": 258714,
-      "previewUrl": ""
-    },
-    {
-      "id": "2isCWO5dMBDzyLscHVoJIO",
-      "name": "憧れをいっぱい",
-      "artist": "初星学園, 高木龍一, 倉本千奈",
-      "album": "憧れをいっぱい",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
-      "playedAt": "2026-06-24T06:13:55.057Z",
-      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
-      "duration": 288363,
       "previewUrl": ""
     }
   ],
