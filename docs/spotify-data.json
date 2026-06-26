@@ -1,15 +1,147 @@
 {
-  "lastUpdated": "2026-06-26T08:48:50.143Z",
+  "lastUpdated": "2026-06-26T14:01:29.536Z",
   "tracks": [
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-06-26T13:05:51.635Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
     {
       "id": "6WrytCYNqsPMgtpTpd9p7j",
       "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
       "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
       "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-06-26T06:02:06.635Z",
+      "playedAt": "2026-06-26T13:02:37.290Z",
       "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
       "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "7zsSPRgnqYgtfwAwmeeMZe",
+      "name": "がむしゃらに行こう！ - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, SHOW, Mitsu.J, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "がむしゃらに行こう！ (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734159c4f94b6e61ac02cd738d",
+      "playedAt": "2026-06-26T12:52:01.368Z",
+      "spotifyUrl": "https://open.spotify.com/track/7zsSPRgnqYgtfwAwmeeMZe",
+      "duration": 218000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-06-26T12:48:22.688Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "5g24szGiFbRVEZQC1luDmW",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
+      "playedAt": "2026-06-26T12:44:01.858Z",
+      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
+      "duration": 250253,
+      "previewUrl": ""
+    },
+    {
+      "id": "407GWcB9QwD3aiX0M7RCFT",
+      "name": "GYB!!",
+      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
+      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
+      "playedAt": "2026-06-26T12:39:51.024Z",
+      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
+      "duration": 218573,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ALvDIJw5smrREM5iXmr6G",
+      "name": "僕らは今のなかで",
+      "artist": "μ's",
+      "album": "μ's Best Album Best Live! Collection Ⅱ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+      "playedAt": "2026-06-26T12:29:06.401Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
+      "duration": 274505,
+      "previewUrl": ""
+    },
+    {
+      "id": "2isCWO5dMBDzyLscHVoJIO",
+      "name": "憧れをいっぱい",
+      "artist": "初星学園, 高木龍一, 倉本千奈",
+      "album": "憧れをいっぱい",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
+      "playedAt": "2026-06-26T12:24:31.383Z",
+      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
+      "duration": 288363,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-06-26T12:19:42.499Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "4K65wBvHQPmnD6bTdN6BHt",
+      "name": "Snow halation",
+      "artist": "μ's",
+      "album": "Snow halation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+      "playedAt": "2026-06-26T12:16:26.337Z",
+      "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
+      "duration": 258714,
+      "previewUrl": ""
+    },
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2026-06-26T11:50:50.903Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vziRWZny2GDwHX2UYJxa2",
+      "name": "おちゃめ機能",
+      "artist": "Lon",
+      "album": "Upload feat.Vocalist",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
+      "playedAt": "2026-06-26T11:44:57.531Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
+      "duration": 252066,
+      "previewUrl": ""
+    },
+    {
+      "id": "3YxsRgCkaQR9ckhabbz0yz",
+      "name": "太陽曰く燃えよカオス",
+      "artist": "Ushirokarahaiyoritai G",
+      "album": "太陽曰く燃えよカオス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9acf1a281e447d27fb3b52a",
+      "playedAt": "2026-06-26T11:40:44.939Z",
+      "spotifyUrl": "https://open.spotify.com/track/3YxsRgCkaQR9ckhabbz0yz",
+      "duration": 232000,
       "previewUrl": ""
     },
     {
@@ -68,50 +200,6 @@
       "previewUrl": ""
     },
     {
-      "id": "5g24szGiFbRVEZQC1luDmW",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
-      "playedAt": "2026-06-26T05:08:33.947Z",
-      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
-      "duration": 250253,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-06-26T05:01:16.632Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-06-26T04:23:32.701Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
-      "id": "4K65wBvHQPmnD6bTdN6BHt",
-      "name": "Snow halation",
-      "artist": "μ's",
-      "album": "Snow halation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
-      "playedAt": "2026-06-26T04:20:18.470Z",
-      "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
-      "duration": 258714,
-      "previewUrl": ""
-    },
-    {
       "id": "17OQVshtovwVo2vk6tuzwn",
       "name": "ライアーダンサー",
       "artist": "マサラダ",
@@ -120,39 +208,6 @@
       "playedAt": "2026-06-26T04:08:32.278Z",
       "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
       "duration": 242459,
-      "previewUrl": ""
-    },
-    {
-      "id": "407GWcB9QwD3aiX0M7RCFT",
-      "name": "GYB!!",
-      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
-      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
-      "playedAt": "2026-06-26T04:02:08.474Z",
-      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
-      "duration": 218573,
-      "previewUrl": ""
-    },
-    {
-      "id": "0zxyK9Ih5rnN485VY73bUp",
-      "name": "Luna say maybe",
-      "artist": "初星学園, 美波, 月村手毬",
-      "album": "Luna say maybe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
-      "playedAt": "2026-06-25T11:27:19.521Z",
-      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
-      "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "5ALvDIJw5smrREM5iXmr6G",
-      "name": "僕らは今のなかで",
-      "artist": "μ's",
-      "album": "μ's Best Album Best Live! Collection Ⅱ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
-      "playedAt": "2026-06-25T11:22:53.812Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
-      "duration": 274505,
       "previewUrl": ""
     },
     {
@@ -198,139 +253,7 @@
       "spotifyUrl": "https://open.spotify.com/track/5gwzzDhUO1H4tIRRJDjnny",
       "duration": 181457,
       "previewUrl": ""
-    },
-    {
-      "id": "0Gp8MWnUzS5V2lvTr25c2A",
-      "name": "ビビデバ",
-      "artist": "Hoshimachi Suisei",
-      "album": "ビビデバ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d2da332b0bcdf081df91d036",
-      "playedAt": "2026-06-25T05:45:05.504Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Gp8MWnUzS5V2lvTr25c2A",
-      "duration": 165266,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CQjt0Ejf8clK3s7h6Za0P",
-      "name": "転生林檎",
-      "artist": "PinocchioP",
-      "album": "転生林檎",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273287a32b6a7991e4a949be3d0",
-      "playedAt": "2026-06-25T04:00:15.327Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CQjt0Ejf8clK3s7h6Za0P",
-      "duration": 219082,
-      "previewUrl": ""
-    },
-    {
-      "id": "0UBUg8NU4XJtQqzTPs8Pkr",
-      "name": "三原色",
-      "artist": "YOASOBI",
-      "album": "THE BOOK 2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c3625a413a9a79facea38c2",
-      "playedAt": "2026-06-25T03:56:35.752Z",
-      "spotifyUrl": "https://open.spotify.com/track/0UBUg8NU4XJtQqzTPs8Pkr",
-      "duration": 220253,
-      "previewUrl": ""
-    },
-    {
-      "id": "7Hj7PMdrx3bKse1hhL7qv4",
-      "name": "寄り酔い",
-      "artist": "和ぬか",
-      "album": "青二才",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fb5000b5b30aa11e721afed",
-      "playedAt": "2026-06-25T03:52:55.056Z",
-      "spotifyUrl": "https://open.spotify.com/track/7Hj7PMdrx3bKse1hhL7qv4",
-      "duration": 219173,
-      "previewUrl": ""
-    },
-    {
-      "id": "1huqzMaPdQkXuOJaLxrC2s",
-      "name": "すずめ",
-      "artist": "RADWIMPS, Toaka",
-      "album": "すずめ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348d4eaf595967959fc3be747",
-      "playedAt": "2026-06-25T03:49:15.448Z",
-      "spotifyUrl": "https://open.spotify.com/track/1huqzMaPdQkXuOJaLxrC2s",
-      "duration": 236390,
-      "previewUrl": ""
-    },
-    {
-      "id": "2UUwBDALzJuThY88Ro2lD2",
-      "name": "フォニイ",
-      "artist": "可不, ツミキ",
-      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
-      "playedAt": "2026-06-25T03:45:18.563Z",
-      "spotifyUrl": "https://open.spotify.com/track/2UUwBDALzJuThY88Ro2lD2",
-      "duration": 189884,
-      "previewUrl": ""
-    },
-    {
-      "id": "6FhWelfRDMFZRtFUU6SIdC",
-      "name": "怪獣",
-      "artist": "sakanaction",
-      "album": "怪獣",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d7f2ac644f635e94a193736",
-      "playedAt": "2026-06-25T03:42:08.294Z",
-      "spotifyUrl": "https://open.spotify.com/track/6FhWelfRDMFZRtFUU6SIdC",
-      "duration": 252722,
-      "previewUrl": ""
-    },
-    {
-      "id": "6x7SB38tuekpu4xpH9OIPY",
-      "name": "地球儀 - Spinning Globe",
-      "artist": "Kenshi Yonezu",
-      "album": "地球儀 - Spinning Globe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732d701db43f9a93a214fa4404",
-      "playedAt": "2026-06-25T03:37:55.116Z",
-      "spotifyUrl": "https://open.spotify.com/track/6x7SB38tuekpu4xpH9OIPY",
-      "duration": 273437,
-      "previewUrl": ""
-    },
-    {
-      "id": "3zbKiko8V3u2yn1RcT8xBZ",
-      "name": "青のすみか",
-      "artist": "Tatsuya Kitani",
-      "album": "ROUNDABOUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d49212018875a81c83b67e",
-      "playedAt": "2026-06-25T03:33:21.231Z",
-      "spotifyUrl": "https://open.spotify.com/track/3zbKiko8V3u2yn1RcT8xBZ",
-      "duration": 196640,
-      "previewUrl": ""
-    },
-    {
-      "id": "5XsPjGw1ADBcVU0i7mwNb1",
-      "name": "Campus mode!!",
-      "artist": "初星学園",
-      "album": "Campus mode!!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
-      "playedAt": "2026-06-25T03:22:58.084Z",
-      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
-      "duration": 260015,
-      "previewUrl": ""
-    },
-    {
-      "id": "3CALjriGbql40HiGdfLoWm",
-      "name": "スタンドバイミー",
-      "artist": "Remioromen",
-      "album": "HORIZON",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732ec5290ce2b2465001dd183f",
-      "playedAt": "2026-06-24T09:23:23.277Z",
-      "spotifyUrl": "https://open.spotify.com/track/3CALjriGbql40HiGdfLoWm",
-      "duration": 303430,
-      "previewUrl": ""
-    },
-    {
-      "id": "1egHgM7sqysl8iB4uuZcDw",
-      "name": "夜明けのBEAT",
-      "artist": "Fujifabric",
-      "album": "MUSIC",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734cbe497097fd9eeb82134f5e",
-      "playedAt": "2026-06-24T08:03:24.522Z",
-      "spotifyUrl": "https://open.spotify.com/track/1egHgM7sqysl8iB4uuZcDw",
-      "duration": 222880,
-      "previewUrl": ""
     }
   ],
-  "total": 30
+  "total": 23
 }
