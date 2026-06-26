@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-06-26T14:01:29.536Z",
+  "lastUpdated": "2026-06-26T19:27:15.946Z",
   "tracks": [
+    {
+      "id": "7tGDXCPLpAScEwmqab9YZd",
+      "name": "Walking with you",
+      "artist": "Novelbright",
+      "album": "SKYWALK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e984d27d0de318dc56f123d4",
+      "playedAt": "2026-06-26T15:48:56.815Z",
+      "spotifyUrl": "https://open.spotify.com/track/7tGDXCPLpAScEwmqab9YZd",
+      "duration": 223186,
+      "previewUrl": ""
+    },
     {
       "id": "7ozF0VkZiDgXPt4Hwuao4i",
       "name": "仮装狂騒曲",
@@ -241,17 +252,6 @@
       "playedAt": "2026-06-25T08:51:54.001Z",
       "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
       "duration": 128978,
-      "previewUrl": ""
-    },
-    {
-      "id": "5gwzzDhUO1H4tIRRJDjnny",
-      "name": "MONOCHROME",
-      "artist": "suisoh",
-      "album": "MONOCHROME",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730615bcc106cbc4dfb40ab853",
-      "playedAt": "2026-06-25T08:49:31.347Z",
-      "spotifyUrl": "https://open.spotify.com/track/5gwzzDhUO1H4tIRRJDjnny",
-      "duration": 181457,
       "previewUrl": ""
     }
   ],
