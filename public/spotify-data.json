@@ -1,6 +1,259 @@
 {
-  "lastUpdated": "2026-06-27T08:25:07.437Z",
+  "lastUpdated": "2026-06-27T13:07:42.274Z",
   "tracks": [
+    {
+      "id": "2JK39qzkUYKzGRPYMs1t3Q",
+      "name": "Prelude",
+      "artist": "TheFatRat",
+      "album": "Jackpot",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
+      "playedAt": "2026-06-27T12:46:11.731Z",
+      "spotifyUrl": "https://open.spotify.com/track/2JK39qzkUYKzGRPYMs1t3Q",
+      "duration": 88274,
+      "previewUrl": ""
+    },
+    {
+      "id": "2JlSbcpPlaOttkoeosnFWP",
+      "name": "Never Be Alone",
+      "artist": "TheFatRat",
+      "album": "Never Be Alone",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b97b07477dbd084aa0e3450e",
+      "playedAt": "2026-06-27T12:44:49.655Z",
+      "spotifyUrl": "https://open.spotify.com/track/2JlSbcpPlaOttkoeosnFWP",
+      "duration": 260000,
+      "previewUrl": ""
+    },
+    {
+      "id": "6i3EXVygc3G7xqIqv0MJHV",
+      "name": "Afterlife",
+      "artist": "TheFatRat",
+      "album": "Warrior Songs",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
+      "playedAt": "2026-06-27T12:40:34.658Z",
+      "spotifyUrl": "https://open.spotify.com/track/6i3EXVygc3G7xqIqv0MJHV",
+      "duration": 140487,
+      "previewUrl": ""
+    },
+    {
+      "id": "669AIf5NRtK58b7muzHfQT",
+      "name": "We'll Meet Again - Instrumental",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "We'll Meet Again",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738707f39a451e13104f0582e8",
+      "playedAt": "2026-06-27T12:38:34.568Z",
+      "spotifyUrl": "https://open.spotify.com/track/669AIf5NRtK58b7muzHfQT",
+      "duration": 195625,
+      "previewUrl": ""
+    },
+    {
+      "id": "70KCi4RQImun0ItOquIhQ6",
+      "name": "Prelude - VIP Edit",
+      "artist": "TheFatRat, JJD",
+      "album": "Prelude (VIP Edit)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ed7938d583c701d2fd6a0ff",
+      "playedAt": "2026-06-27T12:35:23.933Z",
+      "spotifyUrl": "https://open.spotify.com/track/70KCi4RQImun0ItOquIhQ6",
+      "duration": 218230,
+      "previewUrl": ""
+    },
+    {
+      "id": "2PLMiHYcVixnjsG8QPiHFo",
+      "name": "Monody",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-06-27T12:32:19.867Z",
+      "spotifyUrl": "https://open.spotify.com/track/2PLMiHYcVixnjsG8QPiHFo",
+      "duration": 290467,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WttbQX5vAw6XXQftF3Ers",
+      "name": "Upwind",
+      "artist": "TheFatRat",
+      "album": "PARALLAX",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
+      "playedAt": "2026-06-27T12:27:35.378Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WttbQX5vAw6XXQftF3Ers",
+      "duration": 192000,
+      "previewUrl": ""
+    },
+    {
+      "id": "1gY87YRjhQKoE2ZWvDk3Rr",
+      "name": "No No No",
+      "artist": "TheFatRat",
+      "album": "No No No",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733eef946380f25dab213fbaa2",
+      "playedAt": "2026-06-27T12:24:28.350Z",
+      "spotifyUrl": "https://open.spotify.com/track/1gY87YRjhQKoE2ZWvDk3Rr",
+      "duration": 181824,
+      "previewUrl": ""
+    },
+    {
+      "id": "7dvPVoZHsfkZR46CvbiKHT",
+      "name": "MAYDAY",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "MAYDAY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d15aa64c7bf2bf8d23a9df40",
+      "playedAt": "2026-06-27T12:21:35.915Z",
+      "spotifyUrl": "https://open.spotify.com/track/7dvPVoZHsfkZR46CvbiKHT",
+      "duration": 247339,
+      "previewUrl": ""
+    },
+    {
+      "id": "1PxJxt2NrvHjkWMwBQtZJH",
+      "name": "ええねん",
+      "artist": "Ulfuls",
+      "album": "ええねん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b15cfb59f1e14dd076302f3",
+      "playedAt": "2026-06-27T11:53:15.295Z",
+      "spotifyUrl": "https://open.spotify.com/track/1PxJxt2NrvHjkWMwBQtZJH",
+      "duration": 208826,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Zz6FNkpg9w1GXSi6y3oYB",
+      "name": "壊れて消えるまで",
+      "artist": "10-FEET",
+      "album": "壊れて消えるまで",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730ba87ef36f29dd569e71a700",
+      "playedAt": "2026-06-27T11:49:49.537Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Zz6FNkpg9w1GXSi6y3oYB",
+      "duration": 249093,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Rl3nS8Alh9sTrJDC0RJuF",
+      "name": "風になって",
+      "artist": "[Alexandros]",
+      "album": "Where's My History?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f226038efae72ab68df47e60",
+      "playedAt": "2026-06-27T11:45:49.615Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Rl3nS8Alh9sTrJDC0RJuF",
+      "duration": 262133,
+      "previewUrl": ""
+    },
+    {
+      "id": "5JTHUBVCopgBufEkNcJ4mX",
+      "name": "POODLE",
+      "artist": "climbgrow",
+      "album": "FREEDOM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273814960f75c33dcabd0789b01",
+      "playedAt": "2026-06-27T11:41:35.469Z",
+      "spotifyUrl": "https://open.spotify.com/track/5JTHUBVCopgBufEkNcJ4mX",
+      "duration": 169640,
+      "previewUrl": ""
+    },
+    {
+      "id": "5SLnzO4lPHDvVGXdQczzX1",
+      "name": "Sign",
+      "artist": "FLOW",
+      "album": "Sign",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737d2f5d89e1a68d1430d3adaf",
+      "playedAt": "2026-06-27T11:39:01.027Z",
+      "spotifyUrl": "https://open.spotify.com/track/5SLnzO4lPHDvVGXdQczzX1",
+      "duration": 238066,
+      "previewUrl": ""
+    },
+    {
+      "id": "6bsQqsm2EAztXE6kk6hR2s",
+      "name": "閃光少女",
+      "artist": "Tokyo Incidents",
+      "album": "スポーツ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27391cd8b2000926390b414d14d",
+      "playedAt": "2026-06-27T11:35:11.376Z",
+      "spotifyUrl": "https://open.spotify.com/track/6bsQqsm2EAztXE6kk6hR2s",
+      "duration": 177266,
+      "previewUrl": ""
+    },
+    {
+      "id": "7fVuFTodvQPM5LKpT5vdFM",
+      "name": "GLAMOROUS SKY",
+      "artist": "NANA, Mika Nakashima",
+      "album": "THE END",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734dc2b665360956f17550bfb2",
+      "playedAt": "2026-06-27T11:28:47.553Z",
+      "spotifyUrl": "https://open.spotify.com/track/7fVuFTodvQPM5LKpT5vdFM",
+      "duration": 266360,
+      "previewUrl": ""
+    },
+    {
+      "id": "1xc9r9pgQ3CG7iViKPf0cQ",
+      "name": "イマジネーション",
+      "artist": "SPYAIR",
+      "album": "BEST",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731371e4c0b3f5b81c546692dd",
+      "playedAt": "2026-06-27T11:24:34.650Z",
+      "spotifyUrl": "https://open.spotify.com/track/1xc9r9pgQ3CG7iViKPf0cQ",
+      "duration": 179133,
+      "previewUrl": ""
+    },
+    {
+      "id": "1QG7GiWhJa5PfWCjvtUQGu",
+      "name": "CALLING",
+      "artist": "FLOW",
+      "album": "CALLING",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738a9c43ae17d08d1afb529936",
+      "playedAt": "2026-06-27T11:21:43.490Z",
+      "spotifyUrl": "https://open.spotify.com/track/1QG7GiWhJa5PfWCjvtUQGu",
+      "duration": 216146,
+      "previewUrl": ""
+    },
+    {
+      "id": "51GkuUEVKb17ctG5d6JYfI",
+      "name": "distance",
+      "artist": "Long Shot Party",
+      "album": "distance",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27302c41d8edb26b2704edfd3eb",
+      "playedAt": "2026-06-27T11:15:50.521Z",
+      "spotifyUrl": "https://open.spotify.com/track/51GkuUEVKb17ctG5d6JYfI",
+      "duration": 187026,
+      "previewUrl": ""
+    },
+    {
+      "id": "2EMkZExcXFYVk4W7JBxGKA",
+      "name": "スピード",
+      "artist": "Analogfish",
+      "album": "KISS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f3eb880baea0500c57d1f342",
+      "playedAt": "2026-06-27T11:12:49.404Z",
+      "spotifyUrl": "https://open.spotify.com/track/2EMkZExcXFYVk4W7JBxGKA",
+      "duration": 192480,
+      "previewUrl": ""
+    },
+    {
+      "id": "63Eem2YcddulJTylUNo4Xt",
+      "name": "Fighter",
+      "artist": "KANA-BOON",
+      "album": "NAMiDA",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cf331be97840f0cdf896b9e6",
+      "playedAt": "2026-06-27T11:09:52.200Z",
+      "spotifyUrl": "https://open.spotify.com/track/63Eem2YcddulJTylUNo4Xt",
+      "duration": 225106,
+      "previewUrl": ""
+    },
+    {
+      "id": "45YBVp6zMwQZRbUDcPzmMB",
+      "name": "アイネクライネ",
+      "artist": "Kenshi Yonezu",
+      "album": "YANKEE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
+      "playedAt": "2026-06-27T11:06:03.797Z",
+      "spotifyUrl": "https://open.spotify.com/track/45YBVp6zMwQZRbUDcPzmMB",
+      "duration": 288013,
+      "previewUrl": ""
+    },
+    {
+      "id": "7tGDXCPLpAScEwmqab9YZd",
+      "name": "Walking with you",
+      "artist": "Novelbright",
+      "album": "SKYWALK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e984d27d0de318dc56f123d4",
+      "playedAt": "2026-06-27T09:47:00.232Z",
+      "spotifyUrl": "https://open.spotify.com/track/7tGDXCPLpAScEwmqab9YZd",
+      "duration": 223186,
+      "previewUrl": ""
+    },
     {
       "id": "0ookCvrhGat2q6uV1R9Kq1",
       "name": "ぷりきゅきゅ",
@@ -10,17 +263,6 @@
       "playedAt": "2026-06-27T05:52:44.644Z",
       "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
       "duration": 229677,
-      "previewUrl": ""
-    },
-    {
-      "id": "7tGDXCPLpAScEwmqab9YZd",
-      "name": "Walking with you",
-      "artist": "Novelbright",
-      "album": "SKYWALK",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e984d27d0de318dc56f123d4",
-      "playedAt": "2026-06-26T15:48:56.815Z",
-      "spotifyUrl": "https://open.spotify.com/track/7tGDXCPLpAScEwmqab9YZd",
-      "duration": 223186,
       "previewUrl": ""
     },
     {
@@ -88,172 +330,7 @@
       "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
       "duration": 218573,
       "previewUrl": ""
-    },
-    {
-      "id": "5ALvDIJw5smrREM5iXmr6G",
-      "name": "僕らは今のなかで",
-      "artist": "μ's",
-      "album": "μ's Best Album Best Live! Collection Ⅱ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
-      "playedAt": "2026-06-26T12:29:06.401Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
-      "duration": 274505,
-      "previewUrl": ""
-    },
-    {
-      "id": "2isCWO5dMBDzyLscHVoJIO",
-      "name": "憧れをいっぱい",
-      "artist": "初星学園, 高木龍一, 倉本千奈",
-      "album": "憧れをいっぱい",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
-      "playedAt": "2026-06-26T12:24:31.383Z",
-      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
-      "duration": 288363,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-06-26T12:19:42.499Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
-      "previewUrl": ""
-    },
-    {
-      "id": "4K65wBvHQPmnD6bTdN6BHt",
-      "name": "Snow halation",
-      "artist": "μ's",
-      "album": "Snow halation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
-      "playedAt": "2026-06-26T12:16:26.337Z",
-      "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
-      "duration": 258714,
-      "previewUrl": ""
-    },
-    {
-      "id": "0zxyK9Ih5rnN485VY73bUp",
-      "name": "Luna say maybe",
-      "artist": "初星学園, 美波, 月村手毬",
-      "album": "Luna say maybe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
-      "playedAt": "2026-06-26T11:50:50.903Z",
-      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
-      "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vziRWZny2GDwHX2UYJxa2",
-      "name": "おちゃめ機能",
-      "artist": "Lon",
-      "album": "Upload feat.Vocalist",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
-      "playedAt": "2026-06-26T11:44:57.531Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
-      "duration": 252066,
-      "previewUrl": ""
-    },
-    {
-      "id": "3YxsRgCkaQR9ckhabbz0yz",
-      "name": "太陽曰く燃えよカオス",
-      "artist": "Ushirokarahaiyoritai G",
-      "album": "太陽曰く燃えよカオス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9acf1a281e447d27fb3b52a",
-      "playedAt": "2026-06-26T11:40:44.939Z",
-      "spotifyUrl": "https://open.spotify.com/track/3YxsRgCkaQR9ckhabbz0yz",
-      "duration": 232000,
-      "previewUrl": ""
-    },
-    {
-      "id": "0kydZmUCdp26zl8rfqGhcA",
-      "name": "Lost Princess",
-      "artist": "ペコリーヌ (CV: M・A・O), コッコロ (CV: 伊藤美来), キャル (CV: 立花理香)",
-      "album": "プリンセスコネクト！Re:Dive Lost Princess 〜ようこそ美食殿へ!〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733fcfbb387a51544860682215",
-      "playedAt": "2026-06-26T05:32:25.749Z",
-      "spotifyUrl": "https://open.spotify.com/track/0kydZmUCdp26zl8rfqGhcA",
-      "duration": 236333,
-      "previewUrl": ""
-    },
-    {
-      "id": "7kEva2rxsNMn07fyfZMRRn",
-      "name": "Cure For Me",
-      "artist": "AURORA",
-      "album": "Cure For Me",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ba4cc0508ba66eb8f099c9e",
-      "playedAt": "2026-06-26T05:22:28.293Z",
-      "spotifyUrl": "https://open.spotify.com/track/7kEva2rxsNMn07fyfZMRRn",
-      "duration": 201640,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Cpo7btae5aI6QtOcVzWwB",
-      "name": "Dancin - Krono Remix",
-      "artist": "Aaron Smith, Krono, Luvli",
-      "album": "Dancin (Krono Remix)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737715dbcfe17cf4260d47c311",
-      "playedAt": "2026-06-26T05:19:06.209Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Cpo7btae5aI6QtOcVzWwB",
-      "duration": 198053,
-      "previewUrl": ""
-    },
-    {
-      "id": "4h9wh7iOZ0GGn8QVp4RAOB",
-      "name": "I Ain't Worried",
-      "artist": "OneRepublic",
-      "album": "I Ain’t Worried (Music From The Motion Picture \"Top Gun: Maverick\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
-      "playedAt": "2026-06-26T05:13:43.008Z",
-      "spotifyUrl": "https://open.spotify.com/track/4h9wh7iOZ0GGn8QVp4RAOB",
-      "duration": 148485,
-      "previewUrl": ""
-    },
-    {
-      "id": "1C1skAeFtnguXNlCYRQoCr",
-      "name": "ブレインロット",
-      "artist": "東京真中",
-      "album": "ブレインロット",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
-      "playedAt": "2026-06-26T05:10:38.265Z",
-      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
-      "duration": 122888,
-      "previewUrl": ""
-    },
-    {
-      "id": "17OQVshtovwVo2vk6tuzwn",
-      "name": "ライアーダンサー",
-      "artist": "マサラダ",
-      "album": "ライアーダンサー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-06-26T04:08:32.278Z",
-      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
-      "duration": 242459,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
-      "name": "春を告げる",
-      "artist": "yama",
-      "album": "春を告げる",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
-      "playedAt": "2026-06-25T11:15:00.612Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
-      "duration": 196497,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WGrtUmFwTaP5G8AeegajH",
-      "name": "POP IN 2",
-      "artist": "B小町, ルビー(CV:伊駒ゆりえ), 有馬かな(CV:潘めぐみ), MEMちょ(CV:大久保瑠美)",
-      "album": "TVアニメ「【推しの子】」キャラクターソングCD (Vol.4)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e53663aa5a7ec6f340cee041",
-      "playedAt": "2026-06-25T11:07:34.819Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WGrtUmFwTaP5G8AeegajH",
-      "duration": 267116,
-      "previewUrl": ""
     }
   ],
-  "total": 23
+  "total": 30
 }
