@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-06-27T02:08:32.260Z",
+  "lastUpdated": "2026-06-27T08:25:07.437Z",
   "tracks": [
+    {
+      "id": "0ookCvrhGat2q6uV1R9Kq1",
+      "name": "ぷりきゅきゅ",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-06-27T05:52:44.644Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
+      "duration": 229677,
+      "previewUrl": ""
+    },
     {
       "id": "7tGDXCPLpAScEwmqab9YZd",
       "name": "Walking with you",
@@ -241,17 +252,6 @@
       "playedAt": "2026-06-25T11:07:34.819Z",
       "spotifyUrl": "https://open.spotify.com/track/6WGrtUmFwTaP5G8AeegajH",
       "duration": 267116,
-      "previewUrl": ""
-    },
-    {
-      "id": "5mqucSnaCVI1kW6ewrXYE2",
-      "name": "Talking Box (Dirty Pop Remix)",
-      "artist": "WurtS",
-      "album": "Talking Box (Dirty Pop Remix)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27323988edcd8de03b090e77caa",
-      "playedAt": "2026-06-25T08:51:54.001Z",
-      "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
-      "duration": 128978,
       "previewUrl": ""
     }
   ],
