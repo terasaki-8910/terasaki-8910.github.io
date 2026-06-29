@@ -1,6 +1,127 @@
 {
-  "lastUpdated": "2026-06-29T15:29:03.268Z",
+  "lastUpdated": "2026-06-29T19:41:28.585Z",
   "tracks": [
+    {
+      "id": "752WJrwNFCg0IRwKvr5RT5",
+      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "artist": "Tudd, GameChops",
+      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
+      "playedAt": "2026-06-29T16:45:49.129Z",
+      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
+      "duration": 237611,
+      "previewUrl": ""
+    },
+    {
+      "id": "3qazo1nDoHIWHg8KHVmujW",
+      "name": "Song Of Storms",
+      "artist": "The Marcus Hedges Trend Orchestra",
+      "album": "Zelda: Link's Ocarina Orchestrated",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aa940b57213e789d913f8546",
+      "playedAt": "2026-06-29T16:41:50.989Z",
+      "spotifyUrl": "https://open.spotify.com/track/3qazo1nDoHIWHg8KHVmujW",
+      "duration": 82940,
+      "previewUrl": ""
+    },
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-06-29T16:40:27.516Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "6G8ghzF62TP7CkD1YBsIUT",
+      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
+      "artist": "Qumu",
+      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
+      "playedAt": "2026-06-29T16:35:08.326Z",
+      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
+      "duration": 114871,
+      "previewUrl": ""
+    },
+    {
+      "id": "4ZN7u9FmQa7Lp1TCafAgsn",
+      "name": "Moog City 2",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
+      "playedAt": "2026-06-29T16:33:12.928Z",
+      "spotifyUrl": "https://open.spotify.com/track/4ZN7u9FmQa7Lp1TCafAgsn",
+      "duration": 180000,
+      "previewUrl": ""
+    },
+    {
+      "id": "7okzFlIjgHdb8cwy5u6upP",
+      "name": "Apocalypse",
+      "artist": "Jesper Kyd",
+      "album": "Hitman: Blood Money",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730617af302a400b7ab98a2dc6",
+      "playedAt": "2026-06-29T16:30:12.381Z",
+      "spotifyUrl": "https://open.spotify.com/track/7okzFlIjgHdb8cwy5u6upP",
+      "duration": 271336,
+      "previewUrl": ""
+    },
+    {
+      "id": "2XbryOVSaPXhpre0Yj4MUv",
+      "name": "Squid Sisters (The Fresh Remix)",
+      "artist": "MandoPony",
+      "album": "Songs for Gamers, Vol. 1",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273860b382cdec10b0565373a4c",
+      "playedAt": "2026-06-29T16:25:40.518Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
+      "duration": 195375,
+      "previewUrl": ""
+    },
+    {
+      "id": "4PO8fERDL1d1FQA7uHg8il",
+      "name": "Among Us",
+      "artist": "Sembari +",
+      "album": "Among Us",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
+      "playedAt": "2026-06-29T16:22:24.606Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
+      "duration": 90508,
+      "previewUrl": ""
+    },
+    {
+      "id": "034jvsVh9m8f2lRMvNeHWv",
+      "name": "Gourmet Race (From \"Kirby Super Star\")",
+      "artist": "Qumu",
+      "album": "Year 7",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734366c48ae7d8dce239c62c47",
+      "playedAt": "2026-06-29T16:20:53.484Z",
+      "spotifyUrl": "https://open.spotify.com/track/034jvsVh9m8f2lRMvNeHWv",
+      "duration": 195510,
+      "previewUrl": ""
+    },
+    {
+      "id": "2XNaPTYDeQcTqAaWoHKMEp",
+      "name": "Analyse",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-06-29T16:17:37.448Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XNaPTYDeQcTqAaWoHKMEp",
+      "duration": 242786,
+      "previewUrl": ""
+    },
+    {
+      "id": "5itk2nCZQziIrLFZ7AB3qS",
+      "name": "RE Aoharu",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-06-29T15:48:45.241Z",
+      "spotifyUrl": "https://open.spotify.com/track/5itk2nCZQziIrLFZ7AB3qS",
+      "duration": 141375,
+      "previewUrl": ""
+    },
     {
       "id": "6E8MwreOYsimH77OTdpGRJ",
       "name": "Alert",
@@ -208,127 +329,6 @@
       "playedAt": "2026-06-29T12:22:42.509Z",
       "spotifyUrl": "https://open.spotify.com/track/1gHSf9eduupc4MmXPQttkj",
       "duration": 168577,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-06-29T12:12:28.036Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
-      "previewUrl": ""
-    },
-    {
-      "id": "4qBiiKNXaEjlFmYcIf7gUX",
-      "name": "Nemesis",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-29T09:27:50.007Z",
-      "spotifyUrl": "https://open.spotify.com/track/4qBiiKNXaEjlFmYcIf7gUX",
-      "duration": 82000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Tsy1Bpa8j1LIh5Pyt0xSq",
-      "name": "Warrior Song",
-      "artist": "TheFatRat, Stasia Estep",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-06-29T09:26:30.494Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Tsy1Bpa8j1LIh5Pyt0xSq",
-      "duration": 118000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6okr2cuAQWjRCF8I5ZNcvV",
-      "name": "Fire",
-      "artist": "TheFatRat",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-06-29T09:24:37.592Z",
-      "spotifyUrl": "https://open.spotify.com/track/6okr2cuAQWjRCF8I5ZNcvV",
-      "duration": 209558,
-      "previewUrl": ""
-    },
-    {
-      "id": "2FpEXjGqe2dJJ9oB8c8Io2",
-      "name": "Unity",
-      "artist": "TheFatRat",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-06-29T09:21:37.021Z",
-      "spotifyUrl": "https://open.spotify.com/track/2FpEXjGqe2dJJ9oB8c8Io2",
-      "duration": 249285,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FpXO7ehznN8Mh3sNfRd1r",
-      "name": "Oblivion",
-      "artist": "TheFatRat, Lola Blanc",
-      "album": "Oblivion",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
-      "playedAt": "2026-06-29T09:16:57.863Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
-      "duration": 211935,
-      "previewUrl": ""
-    },
-    {
-      "id": "08ExAKQL1ccxqVrC9qzO9Q",
-      "name": "Fly Away - Inukshuk Remix",
-      "artist": "TheFatRat, Anjulie, Inukshuk",
-      "album": "Fly Away (Inukshuk Remix)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273968d5ea0803eb8d58f059479",
-      "playedAt": "2026-06-29T09:13:33.907Z",
-      "spotifyUrl": "https://open.spotify.com/track/08ExAKQL1ccxqVrC9qzO9Q",
-      "duration": 220824,
-      "previewUrl": ""
-    },
-    {
-      "id": "3TKECbhjCdTLx1UuyUS0ye",
-      "name": "Chosen",
-      "artist": "TheFatRat, Laura Brehm, Anna Yvette",
-      "album": "Chosen",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331c16beab40e89973c84d81e",
-      "playedAt": "2026-06-29T09:09:58.090Z",
-      "spotifyUrl": "https://open.spotify.com/track/3TKECbhjCdTLx1UuyUS0ye",
-      "duration": 229946,
-      "previewUrl": ""
-    },
-    {
-      "id": "3zuOoqvVzxEzXi0D0Ma4SM",
-      "name": "Alpha",
-      "artist": "C418",
-      "album": "Minecraft - Volume Beta",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
-      "playedAt": "2026-06-29T09:08:34.323Z",
-      "spotifyUrl": "https://open.spotify.com/track/3zuOoqvVzxEzXi0D0Ma4SM",
-      "duration": 603000,
-      "previewUrl": ""
-    },
-    {
-      "id": "0JbGlD1FjnczH63mC2t7An",
-      "name": "Escape from the City (From \"Sonic Adventure 2\")",
-      "artist": "Qumu",
-      "album": "Year 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f83a4a752cf4c9345994752",
-      "playedAt": "2026-06-29T08:59:24.026Z",
-      "spotifyUrl": "https://open.spotify.com/track/0JbGlD1FjnczH63mC2t7An",
-      "duration": 132401,
-      "previewUrl": ""
-    },
-    {
-      "id": "2mOgz38YkByMHtL0PiaQbZ",
-      "name": "Brain Power - Long Version",
-      "artist": "NOMA",
-      "album": "Chronikle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d77c7feeb6d7ac657fe1cbd2",
-      "playedAt": "2026-06-29T08:57:11.183Z",
-      "spotifyUrl": "https://open.spotify.com/track/2mOgz38YkByMHtL0PiaQbZ",
-      "duration": 367802,
       "previewUrl": ""
     }
   ],
