@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-07-01T14:06:37.305Z",
+  "lastUpdated": "2026-07-01T19:28:37.587Z",
   "tracks": [
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-07-01T17:26:46.982Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-07-01T17:24:04.730Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "5mqucSnaCVI1kW6ewrXYE2",
+      "name": "Talking Box (Dirty Pop Remix)",
+      "artist": "WurtS",
+      "album": "Talking Box (Dirty Pop Remix)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27323988edcd8de03b090e77caa",
+      "playedAt": "2026-07-01T17:20:08.566Z",
+      "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
+      "duration": 128978,
+      "previewUrl": ""
+    },
     {
       "id": "3gbUPOTnqFjXy5bPlEtXFm",
       "name": "優しさの理由",
@@ -296,39 +329,6 @@
       "playedAt": "2026-06-30T13:41:17.654Z",
       "spotifyUrl": "https://open.spotify.com/track/5Vf5mopw2fxxZLylqQRNci",
       "duration": 113608,
-      "previewUrl": ""
-    },
-    {
-      "id": "2DTkdJipk64ces3k4hjzGK",
-      "name": "KARAKURhythm",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-06-30T13:39:26.551Z",
-      "spotifyUrl": "https://open.spotify.com/track/2DTkdJipk64ces3k4hjzGK",
-      "duration": 121068,
-      "previewUrl": ""
-    },
-    {
-      "id": "1iTSbSZR3zBm9F5woj6OUR",
-      "name": "Chilling Out",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-06-30T13:37:28.526Z",
-      "spotifyUrl": "https://open.spotify.com/track/1iTSbSZR3zBm9F5woj6OUR",
-      "duration": 60800,
-      "previewUrl": ""
-    },
-    {
-      "id": "6qYkcg1U6JpKq0TQW91roa",
-      "name": "Illuminated Night",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-06-30T13:36:32.741Z",
-      "spotifyUrl": "https://open.spotify.com/track/6qYkcg1U6JpKq0TQW91roa",
-      "duration": 122003,
       "previewUrl": ""
     }
   ],
