@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-07-02T02:10:28.995Z",
+  "lastUpdated": "2026-07-02T08:40:28.996Z",
   "tracks": [
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-07-02T06:36:22.155Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
     {
       "id": "76kJA3LUe1uREGjlaOypkL",
       "name": "テレパシ",
@@ -318,17 +329,6 @@
       "playedAt": "2026-06-30T13:42:40.672Z",
       "spotifyUrl": "https://open.spotify.com/track/1HWp3T9mxQxd4UAPjkAjRE",
       "duration": 88211,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Vf5mopw2fxxZLylqQRNci",
-      "name": "Starting Pistol",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-06-30T13:41:17.654Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Vf5mopw2fxxZLylqQRNci",
-      "duration": 113608,
       "previewUrl": ""
     }
   ],
