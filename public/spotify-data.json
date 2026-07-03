@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-07-03T01:54:17.243Z",
+  "lastUpdated": "2026-07-03T08:47:23.962Z",
   "tracks": [
+    {
+      "id": "1C1skAeFtnguXNlCYRQoCr",
+      "name": "ブレインロット",
+      "artist": "東京真中",
+      "album": "ブレインロット",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
+      "playedAt": "2026-07-03T06:07:25.367Z",
+      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
+      "duration": 122888,
+      "previewUrl": ""
+    },
+    {
+      "id": "3LwvhfpgLdWazQYafa7Hgx",
+      "name": "リアルにぶっとばす",
+      "artist": "PinocchioP",
+      "album": "リアルにぶっとばす",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734426898439d9b86591ebe85a",
+      "playedAt": "2026-07-03T06:04:43.291Z",
+      "spotifyUrl": "https://open.spotify.com/track/3LwvhfpgLdWazQYafa7Hgx",
+      "duration": 207768,
+      "previewUrl": ""
+    },
+    {
+      "id": "63gc4cyfksT7P69ZbK1lTN",
+      "name": "Operation☆DOTABATA!",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-07-03T05:58:53.333Z",
+      "spotifyUrl": "https://open.spotify.com/track/63gc4cyfksT7P69ZbK1lTN",
+      "duration": 116186,
+      "previewUrl": ""
+    },
     {
       "id": "1YfXeoQ39zL9IWHOTrL8bg",
       "name": "海馬成長痛",
@@ -43,6 +76,17 @@
       "playedAt": "2026-07-01T17:20:08.566Z",
       "spotifyUrl": "https://open.spotify.com/track/5mqucSnaCVI1kW6ewrXYE2",
       "duration": 128978,
+      "previewUrl": ""
+    },
+    {
+      "id": "3qzkfEqjbRJ2kWyT6uebt8",
+      "name": "BLOODY STREAM",
+      "artist": "Coda",
+      "album": "BLOODY STREAM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acd8473fb1d6cbd11f394282",
+      "playedAt": "2026-07-01T05:13:04.089Z",
+      "spotifyUrl": "https://open.spotify.com/track/3qzkfEqjbRJ2kWyT6uebt8",
+      "duration": 261920,
       "previewUrl": ""
     },
     {
@@ -285,50 +329,6 @@
       "playedAt": "2026-06-30T13:49:45.788Z",
       "spotifyUrl": "https://open.spotify.com/track/64tkKuNjL1cNexGbSdSjHQ",
       "duration": 105188,
-      "previewUrl": ""
-    },
-    {
-      "id": "1g5nDEvyuteIW7nrQHFMsu",
-      "name": "System All Green",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-06-30T13:48:05.762Z",
-      "spotifyUrl": "https://open.spotify.com/track/1g5nDEvyuteIW7nrQHFMsu",
-      "duration": 120025,
-      "previewUrl": ""
-    },
-    {
-      "id": "4bcDDVSs9DfRX2Thzjfif4",
-      "name": "Hello to Halo",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-06-30T13:46:09.517Z",
-      "spotifyUrl": "https://open.spotify.com/track/4bcDDVSs9DfRX2Thzjfif4",
-      "duration": 105190,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ip6DcnuQuul2ydk3ktaNr",
-      "name": "Colorful Mess",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-06-30T13:44:30.240Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ip6DcnuQuul2ydk3ktaNr",
-      "duration": 123006,
-      "previewUrl": ""
-    },
-    {
-      "id": "1HWp3T9mxQxd4UAPjkAjRE",
-      "name": "Fruitful Blossom",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-06-30T13:42:40.672Z",
-      "spotifyUrl": "https://open.spotify.com/track/1HWp3T9mxQxd4UAPjkAjRE",
-      "duration": 88211,
       "previewUrl": ""
     }
   ],
