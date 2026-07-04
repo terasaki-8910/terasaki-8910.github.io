@@ -1,6 +1,182 @@
 {
-  "lastUpdated": "2026-07-04T01:53:50.815Z",
+  "lastUpdated": "2026-07-04T08:22:29.338Z",
   "tracks": [
+    {
+      "id": "638PHAOYgcooFRkjjDBadh",
+      "name": "Pokémon Center Jazz",
+      "artist": "The Deku Trio, GameChops, Unplugged",
+      "album": "Pokémon Center Jazz",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273daa28eae6acb923891cc1f83",
+      "playedAt": "2026-07-04T08:20:35.879Z",
+      "spotifyUrl": "https://open.spotify.com/track/638PHAOYgcooFRkjjDBadh",
+      "duration": 198620,
+      "previewUrl": ""
+    },
+    {
+      "id": "2XNaPTYDeQcTqAaWoHKMEp",
+      "name": "Analyse",
+      "artist": "Thom Yorke",
+      "album": "The Eraser",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
+      "playedAt": "2026-07-04T08:10:58.947Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XNaPTYDeQcTqAaWoHKMEp",
+      "duration": 242786,
+      "previewUrl": ""
+    },
+    {
+      "id": "2isCWO5dMBDzyLscHVoJIO",
+      "name": "憧れをいっぱい",
+      "artist": "初星学園, 高木龍一, 倉本千奈",
+      "album": "憧れをいっぱい",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
+      "playedAt": "2026-07-04T08:05:54.131Z",
+      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
+      "duration": 288363,
+      "previewUrl": ""
+    },
+    {
+      "id": "389rEslJY9vh7TZemIA4y7",
+      "name": "絶対零度",
+      "artist": "natori",
+      "album": "絶対零度",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e29a80447e75fc171dd4462",
+      "playedAt": "2026-07-04T08:01:51.905Z",
+      "spotifyUrl": "https://open.spotify.com/track/389rEslJY9vh7TZemIA4y7",
+      "duration": 198483,
+      "previewUrl": ""
+    },
+    {
+      "id": "6wow9d9i3AB2ltYCeBWFsY",
+      "name": "アポロ",
+      "artist": "PornoGraffitti",
+      "album": "PORNO GRAFFITTI BEST BLUE'S",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342d99967c387a76d54bed01f",
+      "playedAt": "2026-07-04T07:58:32.898Z",
+      "spotifyUrl": "https://open.spotify.com/track/6wow9d9i3AB2ltYCeBWFsY",
+      "duration": 259040,
+      "previewUrl": ""
+    },
+    {
+      "id": "5an1RVI4IDE9xP7iBRVssg",
+      "name": "モニタリング (Best Friend Remix)",
+      "artist": "DECO*27",
+      "album": "モニタリング (Best Friend Remix)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731ea5fc2e15ccf13c11940c31",
+      "playedAt": "2026-07-04T07:54:13.336Z",
+      "spotifyUrl": "https://open.spotify.com/track/5an1RVI4IDE9xP7iBRVssg",
+      "duration": 178383,
+      "previewUrl": ""
+    },
+    {
+      "id": "5g24szGiFbRVEZQC1luDmW",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
+      "playedAt": "2026-07-04T07:43:52.772Z",
+      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
+      "duration": 250253,
+      "previewUrl": ""
+    },
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2026-07-04T07:39:42.072Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ALvDIJw5smrREM5iXmr6G",
+      "name": "僕らは今のなかで",
+      "artist": "μ's",
+      "album": "μ's Best Album Best Live! Collection Ⅱ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+      "playedAt": "2026-07-04T07:35:16.499Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
+      "duration": 274505,
+      "previewUrl": ""
+    },
+    {
+      "id": "407GWcB9QwD3aiX0M7RCFT",
+      "name": "GYB!!",
+      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
+      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
+      "playedAt": "2026-07-04T07:30:41.522Z",
+      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
+      "duration": 218573,
+      "previewUrl": ""
+    },
+    {
+      "id": "0JncJnMiDjLpeYURyhFgch",
+      "name": "365日の紙飛行機",
+      "artist": "AKB48",
+      "album": "サムネイル<Type A>",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27371c8a0b9a128451abf918b24",
+      "playedAt": "2026-07-04T07:26:30.639Z",
+      "spotifyUrl": "https://open.spotify.com/track/0JncJnMiDjLpeYURyhFgch",
+      "duration": 283373,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-07-04T07:21:46.785Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
+    {
+      "id": "0HqZX76SFLDz2aW8aiqi7G",
+      "name": "Bones",
+      "artist": "Imagine Dragons",
+      "album": "Bones",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273813713582dcc508e7d5073c4",
+      "playedAt": "2026-07-04T07:18:36.788Z",
+      "spotifyUrl": "https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G",
+      "duration": 165264,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-07-04T07:15:51.078Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "4PQsYLm1YARMAHTjGl9zcb",
+      "name": "OperationD",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-07-04T07:13:55.694Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PQsYLm1YARMAHTjGl9zcb",
+      "duration": 113432,
+      "previewUrl": ""
+    },
+    {
+      "id": "191fSWaJZKfUNyIz6fP32y",
+      "name": "Oriental Drop",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
+      "playedAt": "2026-07-04T07:11:36.887Z",
+      "spotifyUrl": "https://open.spotify.com/track/191fSWaJZKfUNyIz6fP32y",
+      "duration": 123188,
+      "previewUrl": ""
+    },
     {
       "id": "5QF2n0rgEm2whK6hl9gVBP",
       "name": "どうにかなっちゃいそう！",
@@ -54,17 +230,6 @@
       "playedAt": "2026-07-03T05:58:53.333Z",
       "spotifyUrl": "https://open.spotify.com/track/63gc4cyfksT7P69ZbK1lTN",
       "duration": 116186,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-07-02T06:36:22.155Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
       "previewUrl": ""
     },
     {
@@ -164,171 +329,6 @@
       "playedAt": "2026-06-30T14:21:32.836Z",
       "spotifyUrl": "https://open.spotify.com/track/4L330cbJvY8AEYIzJfUayE",
       "duration": 113204,
-      "previewUrl": ""
-    },
-    {
-      "id": "1QyQcZHwmP3CROgVefgdWj",
-      "name": "Han-nari",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-06-30T14:19:55.580Z",
-      "spotifyUrl": "https://open.spotify.com/track/1QyQcZHwmP3CROgVefgdWj",
-      "duration": 102311,
-      "previewUrl": ""
-    },
-    {
-      "id": "7xWXWraHp5tqoksl0awFFG",
-      "name": "Dive into Summer",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-06-30T14:18:25.645Z",
-      "spotifyUrl": "https://open.spotify.com/track/7xWXWraHp5tqoksl0awFFG",
-      "duration": 118269,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Hqr6BwxIC8aZnwgamueaR",
-      "name": "Blue New Battle",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-06-30T14:16:30.310Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Hqr6BwxIC8aZnwgamueaR",
-      "duration": 96280,
-      "previewUrl": ""
-    },
-    {
-      "id": "23KEubQrG4uUKYTSG2Ooev",
-      "name": "Hinagesi",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-06-30T14:14:59.304Z",
-      "spotifyUrl": "https://open.spotify.com/track/23KEubQrG4uUKYTSG2Ooev",
-      "duration": 119936,
-      "previewUrl": ""
-    },
-    {
-      "id": "4wnNNv11a0YHSlXJos9boy",
-      "name": "Luxury Cool",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-06-30T14:13:07.594Z",
-      "spotifyUrl": "https://open.spotify.com/track/4wnNNv11a0YHSlXJos9boy",
-      "duration": 125002,
-      "previewUrl": ""
-    },
-    {
-      "id": "1BQEp8EiQNCASv5odu5ZMc",
-      "name": "Let me think about it",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-06-30T14:11:05.883Z",
-      "spotifyUrl": "https://open.spotify.com/track/1BQEp8EiQNCASv5odu5ZMc",
-      "duration": 130423,
-      "previewUrl": ""
-    },
-    {
-      "id": "0NMdTDx7LCJdm3ioJ1cDcg",
-      "name": "Koi is Love",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-06-30T14:09:00.929Z",
-      "spotifyUrl": "https://open.spotify.com/track/0NMdTDx7LCJdm3ioJ1cDcg",
-      "duration": 108719,
-      "previewUrl": ""
-    },
-    {
-      "id": "0mHroce3yL3wC2BWzYqOJq",
-      "name": "Vibes",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-06-30T14:05:15.268Z",
-      "spotifyUrl": "https://open.spotify.com/track/0mHroce3yL3wC2BWzYqOJq",
-      "duration": 136746,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zzcrYiYLMoAQF0rm6Sxol",
-      "name": "Aira",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-06-30T14:03:00.947Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zzcrYiYLMoAQF0rm6Sxol",
-      "duration": 136092,
-      "previewUrl": ""
-    },
-    {
-      "id": "2S1wK8ocFeOUx4aBw6z2q8",
-      "name": "After School Dessert",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-06-30T14:00:47.478Z",
-      "spotifyUrl": "https://open.spotify.com/track/2S1wK8ocFeOUx4aBw6z2q8",
-      "duration": 122905,
-      "previewUrl": ""
-    },
-    {
-      "id": "1rAyzUlpPGidpt5N84tkVt",
-      "name": "Midnight Trip",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-06-30T13:58:59.841Z",
-      "spotifyUrl": "https://open.spotify.com/track/1rAyzUlpPGidpt5N84tkVt",
-      "duration": 93641,
-      "previewUrl": ""
-    },
-    {
-      "id": "56bxyWKituPcwaPsuQ8q8q",
-      "name": "Usagi Flap",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-06-30T13:57:34.779Z",
-      "spotifyUrl": "https://open.spotify.com/track/56bxyWKituPcwaPsuQ8q8q",
-      "duration": 126641,
-      "previewUrl": ""
-    },
-    {
-      "id": "5apkSmsPJ11RYKMiVmvRwU",
-      "name": "Goal Wo Nerae!",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-06-30T13:55:45.662Z",
-      "spotifyUrl": "https://open.spotify.com/track/5apkSmsPJ11RYKMiVmvRwU",
-      "duration": 128690,
-      "previewUrl": ""
-    },
-    {
-      "id": "3yHCSxw8hi7tEaJxvJCWtR",
-      "name": "Summer Bounce",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-06-30T13:53:54.227Z",
-      "spotifyUrl": "https://open.spotify.com/track/3yHCSxw8hi7tEaJxvJCWtR",
-      "duration": 139254,
-      "previewUrl": ""
-    },
-    {
-      "id": "7AAtMYMJlUOmmUexnv3szU",
-      "name": "Interface - Hard Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-06-30T13:51:45.245Z",
-      "spotifyUrl": "https://open.spotify.com/track/7AAtMYMJlUOmmUexnv3szU",
-      "duration": 122135,
       "previewUrl": ""
     }
   ],
