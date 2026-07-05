@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-07-05T13:06:11.988Z",
+  "lastUpdated": "2026-07-05T19:00:23.458Z",
   "tracks": [
+    {
+      "id": "7tGDXCPLpAScEwmqab9YZd",
+      "name": "Walking with you",
+      "artist": "Novelbright",
+      "album": "SKYWALK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e984d27d0de318dc56f123d4",
+      "playedAt": "2026-07-05T13:48:03.947Z",
+      "spotifyUrl": "https://open.spotify.com/track/7tGDXCPLpAScEwmqab9YZd",
+      "duration": 223186,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-07-05T13:46:16.805Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "1C1skAeFtnguXNlCYRQoCr",
+      "name": "ブレインロット",
+      "artist": "東京真中",
+      "album": "ブレインロット",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
+      "playedAt": "2026-07-05T13:41:57.504Z",
+      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
+      "duration": 122888,
+      "previewUrl": ""
+    },
+    {
+      "id": "10Eyo4juZQFthKqlJgGMdp",
+      "name": "怪盗",
+      "artist": "back number",
+      "album": "怪盗",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae51734d04ef431b65a09a9a",
+      "playedAt": "2026-07-05T13:39:54.138Z",
+      "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
+      "duration": 196226,
+      "previewUrl": ""
+    },
     {
       "id": "4Xfp9BcKrKYmxJPxn68Yb8",
       "name": "doodle",
@@ -21,17 +65,6 @@
       "playedAt": "2026-07-05T12:48:54.761Z",
       "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
       "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "10Eyo4juZQFthKqlJgGMdp",
-      "name": "怪盗",
-      "artist": "back number",
-      "album": "怪盗",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae51734d04ef431b65a09a9a",
-      "playedAt": "2026-07-05T12:45:57.614Z",
-      "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
-      "duration": 196226,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-07-04T11:48:43.811Z",
       "spotifyUrl": "https://open.spotify.com/track/1l09TMYGe1ApGHZrIbfnq9",
       "duration": 120484,
-      "previewUrl": ""
-    },
-    {
-      "id": "0fW1Q0uCYWAPdSM1sz0eLs",
-      "name": "Barrier",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-07-04T11:13:21.773Z",
-      "spotifyUrl": "https://open.spotify.com/track/0fW1Q0uCYWAPdSM1sz0eLs",
-      "duration": 121224,
-      "previewUrl": ""
-    },
-    {
-      "id": "1alvT7oOwHZxuNS9w9C8L5",
-      "name": "Moment",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-07-04T11:11:23.738Z",
-      "spotifyUrl": "https://open.spotify.com/track/1alvT7oOwHZxuNS9w9C8L5",
-      "duration": 100605,
-      "previewUrl": ""
-    },
-    {
-      "id": "2DTkdJipk64ces3k4hjzGK",
-      "name": "KARAKURhythm",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-07-04T11:09:45.573Z",
-      "spotifyUrl": "https://open.spotify.com/track/2DTkdJipk64ces3k4hjzGK",
-      "duration": 121068,
       "previewUrl": ""
     }
   ],
