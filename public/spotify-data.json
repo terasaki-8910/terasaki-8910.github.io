@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-07-06T09:54:15.044Z",
+  "lastUpdated": "2026-07-06T14:56:57.412Z",
   "tracks": [
+    {
+      "id": "63gc4cyfksT7P69ZbK1lTN",
+      "name": "Operation☆DOTABATA!",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-07-06T13:14:42.172Z",
+      "spotifyUrl": "https://open.spotify.com/track/63gc4cyfksT7P69ZbK1lTN",
+      "duration": 116186,
+      "previewUrl": ""
+    },
+    {
+      "id": "4H9ju2EvBSFUd6GAduYGtM",
+      "name": "Up to 21°C",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-07-06T13:12:49.280Z",
+      "spotifyUrl": "https://open.spotify.com/track/4H9ju2EvBSFUd6GAduYGtM",
+      "duration": 131434,
+      "previewUrl": ""
+    },
+    {
+      "id": "5hCjdTRz0why3FREkJDxkh",
+      "name": "Pixel Time",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-07-06T13:10:29.335Z",
+      "spotifyUrl": "https://open.spotify.com/track/5hCjdTRz0why3FREkJDxkh",
+      "duration": 129826,
+      "previewUrl": ""
+    },
+    {
+      "id": "5NxmDq0yXBYGfCbMqvIXuv",
+      "name": "UNDEAD",
+      "artist": "YOASOBI",
+      "album": "UNDEAD",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a4581aef9b70d42d5346c215",
+      "playedAt": "2026-07-06T13:10:26.039Z",
+      "spotifyUrl": "https://open.spotify.com/track/5NxmDq0yXBYGfCbMqvIXuv",
+      "duration": 182702,
+      "previewUrl": ""
+    },
     {
       "id": "1YqVJ2YSgwxWpfuENocF2t",
       "name": "Hello,world!",
@@ -189,17 +233,6 @@
       "previewUrl": ""
     },
     {
-      "id": "63gc4cyfksT7P69ZbK1lTN",
-      "name": "Operation☆DOTABATA!",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-07-06T06:40:54.347Z",
-      "spotifyUrl": "https://open.spotify.com/track/63gc4cyfksT7P69ZbK1lTN",
-      "duration": 116186,
-      "previewUrl": ""
-    },
-    {
       "id": "6WrytCYNqsPMgtpTpd9p7j",
       "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
       "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
@@ -296,39 +329,6 @@
       "playedAt": "2026-07-05T12:28:28.989Z",
       "spotifyUrl": "https://open.spotify.com/track/096KHkONhQm4MQNH35mU22",
       "duration": 175998,
-      "previewUrl": ""
-    },
-    {
-      "id": "5cjjWH34eymyinmFKaAEEC",
-      "name": "うぉ",
-      "artist": "Yuuri",
-      "album": "うぉ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c65f49e17fc27c93761ada12",
-      "playedAt": "2026-07-05T12:25:32.548Z",
-      "spotifyUrl": "https://open.spotify.com/track/5cjjWH34eymyinmFKaAEEC",
-      "duration": 168026,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LAYbmRL7eBueEa2jqfXSW",
-      "name": "Valsqotch (feat. chi＊tree)",
-      "artist": "owl*tree, chi*tree",
-      "album": "maimai でらっくす ベストアルバム ちほー 2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27351aaea68a3c04edd08468c9d",
-      "playedAt": "2026-07-05T12:22:44.175Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LAYbmRL7eBueEa2jqfXSW",
-      "duration": 156173,
-      "previewUrl": ""
-    },
-    {
-      "id": "6FhWelfRDMFZRtFUU6SIdC",
-      "name": "怪獣",
-      "artist": "sakanaction",
-      "album": "怪獣",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d7f2ac644f635e94a193736",
-      "playedAt": "2026-07-05T12:20:07.553Z",
-      "spotifyUrl": "https://open.spotify.com/track/6FhWelfRDMFZRtFUU6SIdC",
-      "duration": 252722,
       "previewUrl": ""
     }
   ],
