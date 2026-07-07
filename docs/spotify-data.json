@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-07-07T02:02:28.838Z",
+  "lastUpdated": "2026-07-07T09:22:07.635Z",
   "tracks": [
+    {
+      "id": "4YxR5rzn3iDVPDYZSBMA0q",
+      "name": "Connected Sky",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-07-07T04:15:50.623Z",
+      "spotifyUrl": "https://open.spotify.com/track/4YxR5rzn3iDVPDYZSBMA0q",
+      "duration": 120529,
+      "previewUrl": ""
+    },
     {
       "id": "63gc4cyfksT7P69ZbK1lTN",
       "name": "Operation☆DOTABATA!",
@@ -318,17 +329,6 @@
       "playedAt": "2026-07-05T12:33:00.757Z",
       "spotifyUrl": "https://open.spotify.com/track/7okzFlIjgHdb8cwy5u6upP",
       "duration": 271336,
-      "previewUrl": ""
-    },
-    {
-      "id": "096KHkONhQm4MQNH35mU22",
-      "name": "鬼ノ宴",
-      "artist": "TOMONARI SORA\t",
-      "album": "鬼ノ宴",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b31680ab85031d2be2a3df6b",
-      "playedAt": "2026-07-05T12:28:28.989Z",
-      "spotifyUrl": "https://open.spotify.com/track/096KHkONhQm4MQNH35mU22",
-      "duration": 175998,
       "previewUrl": ""
     }
   ],
