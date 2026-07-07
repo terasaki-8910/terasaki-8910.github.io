@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-07-07T09:22:07.635Z",
+  "lastUpdated": "2026-07-07T14:04:59.755Z",
   "tracks": [
+    {
+      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
+      "name": "春を告げる",
+      "artist": "yama",
+      "album": "春を告げる",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
+      "playedAt": "2026-07-07T12:25:01.636Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
+      "duration": 196497,
+      "previewUrl": ""
+    },
     {
       "id": "4YxR5rzn3iDVPDYZSBMA0q",
       "name": "Connected Sky",
@@ -307,17 +318,6 @@
       "playedAt": "2026-07-05T12:48:54.761Z",
       "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
       "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
-      "name": "春を告げる",
-      "artist": "yama",
-      "album": "春を告げる",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
-      "playedAt": "2026-07-05T12:36:17.784Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
-      "duration": 196497,
       "previewUrl": ""
     },
     {
