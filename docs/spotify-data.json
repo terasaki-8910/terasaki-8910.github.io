@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-07-09T09:19:37.194Z",
+  "lastUpdated": "2026-07-09T14:28:57.100Z",
   "tracks": [
+    {
+      "id": "73rdU71fLEd0nW7HENRhKF",
+      "name": "キュートなキューたい",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-07-09T12:39:30.784Z",
+      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
+      "duration": 236000,
+      "previewUrl": ""
+    },
+    {
+      "id": "7Hj7PMdrx3bKse1hhL7qv4",
+      "name": "寄り酔い",
+      "artist": "和ぬか",
+      "album": "青二才",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fb5000b5b30aa11e721afed",
+      "playedAt": "2026-07-09T09:33:40.235Z",
+      "spotifyUrl": "https://open.spotify.com/track/7Hj7PMdrx3bKse1hhL7qv4",
+      "duration": 219173,
+      "previewUrl": ""
+    },
+    {
+      "id": "3hRRYgBeunE3PTmnzATTS0",
+      "name": "天体観測",
+      "artist": "BUMP OF CHICKEN",
+      "album": "jupiter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5017c120597ec5a35015ef6",
+      "playedAt": "2026-07-09T09:30:00.537Z",
+      "spotifyUrl": "https://open.spotify.com/track/3hRRYgBeunE3PTmnzATTS0",
+      "duration": 263600,
+      "previewUrl": ""
+    },
+    {
+      "id": "4NaaF28BeO9WzjDrSS71Nz",
+      "name": "ダンスホール",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "ダンスホール",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e552c9dbdf76676de1032ae0",
+      "playedAt": "2026-07-09T09:25:36.415Z",
+      "spotifyUrl": "https://open.spotify.com/track/4NaaF28BeO9WzjDrSS71Nz",
+      "duration": 203149,
+      "previewUrl": ""
+    },
+    {
+      "id": "3F0hvTxaTJV6OsFnRqefXc",
+      "name": "アイデン貞貞メルトダウン",
+      "artist": "えなこ, P丸様｡",
+      "album": "アイデン貞貞メルトダウン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386001206942da71231c86b96",
+      "playedAt": "2026-07-09T09:22:12.752Z",
+      "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
+      "duration": 243880,
+      "previewUrl": ""
+    },
     {
       "id": "3BupLnRgj4Ki7REboL6pA3",
       "name": "気まぐれロマンティック",
@@ -274,61 +329,6 @@
       "playedAt": "2026-07-08T06:25:30.904Z",
       "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
       "duration": 122482,
-      "previewUrl": ""
-    },
-    {
-      "id": "7AqUE5AY514dbzeOAfJRa0",
-      "name": "LOSER",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-07-08T03:04:23.920Z",
-      "spotifyUrl": "https://open.spotify.com/track/7AqUE5AY514dbzeOAfJRa0",
-      "duration": 243818,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-07-08T02:33:18.944Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
-      "id": "5IqKUsttgHgGQWhKQWDOQo",
-      "name": "potatoになっていく (feat. 天馬司&鳳えむ&草薙寧々&神代類&初音ミク)",
-      "artist": "ワンダーランズ×ショウタイム",
-      "album": "セカイはまだ始まってすらいない/potatoになっていく",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738701934eca8f1856bdbe4af0",
-      "playedAt": "2026-07-08T02:17:20.746Z",
-      "spotifyUrl": "https://open.spotify.com/track/5IqKUsttgHgGQWhKQWDOQo",
-      "duration": 187500,
-      "previewUrl": ""
-    },
-    {
-      "id": "4n7nwDqrdx3qmJvEACOMrN",
-      "name": "Take Me to the Beach (feat. Ado)",
-      "artist": "Imagine Dragons, Ado",
-      "album": "Take Me to the Beach (feat. Ado)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a11303b900d06348d84337f",
-      "playedAt": "2026-07-08T02:14:12.906Z",
-      "spotifyUrl": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
-      "duration": 167066,
-      "previewUrl": ""
-    },
-    {
-      "id": "4YxR5rzn3iDVPDYZSBMA0q",
-      "name": "Connected Sky",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-07-07T04:15:50.623Z",
-      "spotifyUrl": "https://open.spotify.com/track/4YxR5rzn3iDVPDYZSBMA0q",
-      "duration": 120529,
       "previewUrl": ""
     }
   ],
