@@ -1,6 +1,138 @@
 {
-  "lastUpdated": "2026-07-09T01:54:47.203Z",
+  "lastUpdated": "2026-07-09T09:19:37.194Z",
   "tracks": [
+    {
+      "id": "3BupLnRgj4Ki7REboL6pA3",
+      "name": "気まぐれロマンティック",
+      "artist": "Toko Inui",
+      "album": "IMAGINATION vol.2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a68f4cd598d7019e47ea3dda",
+      "playedAt": "2026-07-09T09:18:08.349Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BupLnRgj4Ki7REboL6pA3",
+      "duration": 245440,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WMeDp0t2UJmy21PRKAOzx",
+      "name": "ヒトリゴト",
+      "artist": "ClariS",
+      "album": "ヒトリゴト",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334257c272ad39c28b6562e0f",
+      "playedAt": "2026-07-09T09:14:02.386Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WMeDp0t2UJmy21PRKAOzx",
+      "duration": 235093,
+      "previewUrl": ""
+    },
+    {
+      "id": "2tlOVDJ3lQsUxz22vPJ4c4",
+      "name": "唱",
+      "artist": "Ado",
+      "album": "唱",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273985fe71d6d5d528429037716",
+      "playedAt": "2026-07-09T09:10:06.763Z",
+      "spotifyUrl": "https://open.spotify.com/track/2tlOVDJ3lQsUxz22vPJ4c4",
+      "duration": 189772,
+      "previewUrl": ""
+    },
+    {
+      "id": "2ZT6eELxeETGamaiXu6vmk",
+      "name": "more than words",
+      "artist": "Hitsujibungaku",
+      "album": "more than words",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a896d95ee294f8fe78766a4c",
+      "playedAt": "2026-07-09T09:06:56.352Z",
+      "spotifyUrl": "https://open.spotify.com/track/2ZT6eELxeETGamaiXu6vmk",
+      "duration": 289720,
+      "previewUrl": ""
+    },
+    {
+      "id": "1mUBfxiEdsrVhkQCohevey",
+      "name": "ヨセアツメ",
+      "artist": "和ぬか",
+      "album": "ヨセアツメ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273879d3096a43336afe504b30f",
+      "playedAt": "2026-07-09T09:02:06.107Z",
+      "spotifyUrl": "https://open.spotify.com/track/1mUBfxiEdsrVhkQCohevey",
+      "duration": 197483,
+      "previewUrl": ""
+    },
+    {
+      "id": "5sMZm3jJiLgkbDOGSztRSY",
+      "name": "メランコリーキッチン",
+      "artist": "Kenshi Yonezu",
+      "album": "YANKEE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f220d17ad81c943221ce335",
+      "playedAt": "2026-07-09T08:58:48.102Z",
+      "spotifyUrl": "https://open.spotify.com/track/5sMZm3jJiLgkbDOGSztRSY",
+      "duration": 218653,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
+      "name": "春を告げる",
+      "artist": "yama",
+      "album": "春を告げる",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
+      "playedAt": "2026-07-09T08:55:08.921Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
+      "duration": 196497,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-07-09T08:19:56.365Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "2isCWO5dMBDzyLscHVoJIO",
+      "name": "憧れをいっぱい",
+      "artist": "初星学園, 高木龍一, 倉本千奈",
+      "album": "憧れをいっぱい",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
+      "playedAt": "2026-07-09T06:08:18.538Z",
+      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
+      "duration": 288363,
+      "previewUrl": ""
+    },
+    {
+      "id": "5g24szGiFbRVEZQC1luDmW",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
+      "playedAt": "2026-07-09T06:03:29.732Z",
+      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
+      "duration": 250253,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-07-09T05:59:13.462Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-07-09T05:55:57.381Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
     {
       "id": "7tGDXCPLpAScEwmqab9YZd",
       "name": "Walking with you",
@@ -13,28 +145,6 @@
       "previewUrl": ""
     },
     {
-      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
-      "name": "春を告げる",
-      "artist": "yama",
-      "album": "春を告げる",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
-      "playedAt": "2026-07-08T07:34:40.129Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
-      "duration": 196497,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-07-08T07:31:20.122Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
-      "previewUrl": ""
-    },
-    {
       "id": "0ookCvrhGat2q6uV1R9Kq1",
       "name": "ぷりきゅきゅ",
       "artist": "CUTIE STREET",
@@ -43,17 +153,6 @@
       "playedAt": "2026-07-08T07:27:28.914Z",
       "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
       "duration": 229677,
-      "previewUrl": ""
-    },
-    {
-      "id": "2isCWO5dMBDzyLscHVoJIO",
-      "name": "憧れをいっぱい",
-      "artist": "初星学園, 高木龍一, 倉本千奈",
-      "album": "憧れをいっぱい",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
-      "playedAt": "2026-07-08T07:07:56.335Z",
-      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
-      "duration": 288363,
       "previewUrl": ""
     },
     {
@@ -178,17 +277,6 @@
       "previewUrl": ""
     },
     {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-07-08T06:23:27.896Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
-      "previewUrl": ""
-    },
-    {
       "id": "7AqUE5AY514dbzeOAfJRa0",
       "name": "LOSER",
       "artist": "Kenshi Yonezu",
@@ -241,94 +329,6 @@
       "playedAt": "2026-07-07T04:15:50.623Z",
       "spotifyUrl": "https://open.spotify.com/track/4YxR5rzn3iDVPDYZSBMA0q",
       "duration": 120529,
-      "previewUrl": ""
-    },
-    {
-      "id": "4H9ju2EvBSFUd6GAduYGtM",
-      "name": "Up to 21°C",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-07-06T13:12:49.280Z",
-      "spotifyUrl": "https://open.spotify.com/track/4H9ju2EvBSFUd6GAduYGtM",
-      "duration": 131434,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hCjdTRz0why3FREkJDxkh",
-      "name": "Pixel Time",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-07-06T13:10:29.335Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hCjdTRz0why3FREkJDxkh",
-      "duration": 129826,
-      "previewUrl": ""
-    },
-    {
-      "id": "5NxmDq0yXBYGfCbMqvIXuv",
-      "name": "UNDEAD",
-      "artist": "YOASOBI",
-      "album": "UNDEAD",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a4581aef9b70d42d5346c215",
-      "playedAt": "2026-07-06T13:10:26.039Z",
-      "spotifyUrl": "https://open.spotify.com/track/5NxmDq0yXBYGfCbMqvIXuv",
-      "duration": 182702,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-07-06T10:41:11.441Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YqVJ2YSgwxWpfuENocF2t",
-      "name": "Hello,world!",
-      "artist": "BUMP OF CHICKEN",
-      "album": "Butterflies",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5233a87900584258a21f267",
-      "playedAt": "2026-07-06T08:25:08.599Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YqVJ2YSgwxWpfuENocF2t",
-      "duration": 248453,
-      "previewUrl": ""
-    },
-    {
-      "id": "0GWNtMohuYUEHVZ40tcnHF",
-      "name": "SPECIALZ",
-      "artist": "King Gnu",
-      "album": "SPECIALZ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734ad6e7ba87518d193e08e578",
-      "playedAt": "2026-07-06T08:20:59.624Z",
-      "spotifyUrl": "https://open.spotify.com/track/0GWNtMohuYUEHVZ40tcnHF",
-      "duration": 238986,
-      "previewUrl": ""
-    },
-    {
-      "id": "1X7VQFZ23MgWshmLHYFRsZ",
-      "name": "勝手にシンドバッド",
-      "artist": "サザンオールスターズ",
-      "album": "勝手にシンドバッド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
-      "playedAt": "2026-07-06T08:17:00.130Z",
-      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
-      "duration": 237133,
-      "previewUrl": ""
-    },
-    {
-      "id": "2EmkTBTh964LQen4Vz0svg",
-      "name": "花になって - Be a flower",
-      "artist": "Ryokuoushoku Shakai",
-      "album": "花になって - Be a flower",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27389e9b12f91f811198b14e15d",
-      "playedAt": "2026-07-06T08:13:02.482Z",
-      "spotifyUrl": "https://open.spotify.com/track/2EmkTBTh964LQen4Vz0svg",
-      "duration": 199333,
       "previewUrl": ""
     }
   ],
