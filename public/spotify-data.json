@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-07-10T13:56:57.611Z",
+  "lastUpdated": "2026-07-10T19:14:27.969Z",
   "tracks": [
+    {
+      "id": "1UkdF0gQFjV8qJddYCgAWb",
+      "name": "Fall into the rabbit hole",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-07-10T16:52:44.045Z",
+      "spotifyUrl": "https://open.spotify.com/track/1UkdF0gQFjV8qJddYCgAWb",
+      "duration": 123511,
+      "previewUrl": ""
+    },
+    {
+      "id": "63gc4cyfksT7P69ZbK1lTN",
+      "name": "Operation☆DOTABATA!",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-07-10T16:49:56.728Z",
+      "spotifyUrl": "https://open.spotify.com/track/63gc4cyfksT7P69ZbK1lTN",
+      "duration": 116186,
+      "previewUrl": ""
+    },
+    {
+      "id": "0hWLesGpaD2HDPybhp4qfZ",
+      "name": "夢路の花 - Instrumental Ver.",
+      "artist": "ヒナ(CV:広橋涼)",
+      "album": "ブルーアーカイブ「夢路の花」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f086ef205cd0c3179e883992",
+      "playedAt": "2026-07-10T06:36:48.770Z",
+      "spotifyUrl": "https://open.spotify.com/track/0hWLesGpaD2HDPybhp4qfZ",
+      "duration": 192642,
+      "previewUrl": ""
+    },
     {
       "id": "5zPgJVRYkuLYyE3mNenwf3",
       "name": "Cotton Candy Island",
@@ -296,39 +329,6 @@
       "playedAt": "2026-07-09T09:33:40.235Z",
       "spotifyUrl": "https://open.spotify.com/track/7Hj7PMdrx3bKse1hhL7qv4",
       "duration": 219173,
-      "previewUrl": ""
-    },
-    {
-      "id": "3hRRYgBeunE3PTmnzATTS0",
-      "name": "天体観測",
-      "artist": "BUMP OF CHICKEN",
-      "album": "jupiter",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5017c120597ec5a35015ef6",
-      "playedAt": "2026-07-09T09:30:00.537Z",
-      "spotifyUrl": "https://open.spotify.com/track/3hRRYgBeunE3PTmnzATTS0",
-      "duration": 263600,
-      "previewUrl": ""
-    },
-    {
-      "id": "4NaaF28BeO9WzjDrSS71Nz",
-      "name": "ダンスホール",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "ダンスホール",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e552c9dbdf76676de1032ae0",
-      "playedAt": "2026-07-09T09:25:36.415Z",
-      "spotifyUrl": "https://open.spotify.com/track/4NaaF28BeO9WzjDrSS71Nz",
-      "duration": 203149,
-      "previewUrl": ""
-    },
-    {
-      "id": "3F0hvTxaTJV6OsFnRqefXc",
-      "name": "アイデン貞貞メルトダウン",
-      "artist": "えなこ, P丸様｡",
-      "album": "アイデン貞貞メルトダウン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386001206942da71231c86b96",
-      "playedAt": "2026-07-09T09:22:12.752Z",
-      "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
-      "duration": 243880,
       "previewUrl": ""
     }
   ],
