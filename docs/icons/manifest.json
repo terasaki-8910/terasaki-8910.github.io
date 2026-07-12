@@ -4,8 +4,8 @@
   "description": "無駄に洗練されたハイテク工場",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0A0E27",
-  "theme_color": "#0A0E27",
+  "background_color": "#F1F1F1",
+  "theme_color": "#F1F1F1",
   "icons": [
     {
       "src": "/icons/icon-192.png",
