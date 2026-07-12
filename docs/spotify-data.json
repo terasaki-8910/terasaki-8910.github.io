@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-07-12T01:44:21.905Z",
+  "lastUpdated": "2026-07-12T07:58:13.201Z",
   "tracks": [
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-07-12T07:24:52.714Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
     {
       "id": "4NQyMQj6jUkit4IFLZ3o8U",
       "name": "高音厨音域テスト",
@@ -10,17 +21,6 @@
       "playedAt": "2026-07-12T00:07:52.158Z",
       "spotifyUrl": "https://open.spotify.com/track/4NQyMQj6jUkit4IFLZ3o8U",
       "duration": 90333,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-07-12T00:03:13.922Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
       "previewUrl": ""
     },
     {
@@ -65,6 +65,17 @@
       "playedAt": "2026-07-11T10:02:07.958Z",
       "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
       "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "5FJhdIyGGX5emFtEnHfL8W",
+      "name": "Indoor Outdoor",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-07-10T19:22:00.208Z",
+      "spotifyUrl": "https://open.spotify.com/track/5FJhdIyGGX5emFtEnHfL8W",
+      "duration": 110543,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-07-10T05:01:35.790Z",
       "spotifyUrl": "https://open.spotify.com/track/4iANNVwdNgzwcjBeIPjHmV",
       "duration": 141500,
-      "previewUrl": ""
-    },
-    {
-      "id": "1fBWbKfZ4DKIOacKBWakSQ",
-      "name": "Violet Sky",
-      "artist": "TheFatRat, Cecilia Gault",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-07-10T04:59:19.278Z",
-      "spotifyUrl": "https://open.spotify.com/track/1fBWbKfZ4DKIOacKBWakSQ",
-      "duration": 189737,
       "previewUrl": ""
     }
   ],
