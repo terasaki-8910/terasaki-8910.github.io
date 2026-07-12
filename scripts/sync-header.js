@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 class HeaderSyncer {
   constructor() {
     this.headerPath = path.join(__dirname, '../src/components/Header.jsx');
-    this.spotifyHtmlPath = path.join(__dirname, '../public/spotify_recent.html');
+    this.spotifyHtmlPath = path.join(__dirname, '../spotify/index.html');
     this.sharedCssPath = path.join(__dirname, '../public/header-styles.css');
     this.headerCssPath = path.join(__dirname, '../src/components/Header.css');
   }
@@ -63,8 +63,14 @@ class HeaderSyncer {
     // className → class
     jsx = jsx.replace(/className=/g, 'class=');
 
-    // 残りのJSX式を削除
+    // 残りのJSX式を削除(onClick={handleThemeToggle}のような、静的HTMLでは
+    // 意味を持たないイベントハンドラ属性)
     jsx = jsx.replace(/\{[^}]*\}/g, '');
+
+    // 上の置換で "onClick=" のように属性名+"="だけが値なしで残ることがある。
+    // parse5(Viteのビルド時HTMLパーサー)はこれを構文エラーとして拒否するため、
+    // 属性名ごと丸ごと除去する。
+    jsx = jsx.replace(/\s+[a-zA-Z-]+=(?=\s|\/?>)/g, '');
 
     // 属性のクォートを正規化
     jsx = jsx.replace(/(\w+)=([^"\s>]+)"/g, '$1="$2"');

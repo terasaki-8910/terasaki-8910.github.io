@@ -1,3 +1,57 @@
+/* テーマトークン(このファイルはTailwind非経由・静的ページにも単体で
+   読み込まれるため、index.cssのCSS変数とは独立して自前で持つ)。
+   優先順位: prefers-color-scheme(OS既定) < [data-theme](明示トグル)。
+   静的ページ側でdata-themeを切り替えるJSは別途必要(既知のギャップ)。 */
+:root {
+  --header-bg: rgba(241, 241, 241, 0.88);
+  --header-border: rgba(0, 0, 0, 0.12);
+  --header-text: rgba(26, 26, 26, 0.9);
+  --header-box-bg: rgba(241, 241, 241, 0.92);
+  --header-box-border: rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-bg: rgba(18, 18, 18, 0.88);
+    --header-border: rgba(255, 255, 255, 0.12);
+    --header-text: rgba(237, 237, 237, 0.9);
+    --header-box-bg: rgba(18, 18, 18, 0.92);
+    --header-box-border: rgba(255, 255, 255, 0.12);
+  }
+}
+
+:root[data-theme="dark"] {
+  --header-bg: rgba(18, 18, 18, 0.88);
+  --header-border: rgba(255, 255, 255, 0.12);
+  --header-text: rgba(237, 237, 237, 0.9);
+  --header-box-bg: rgba(18, 18, 18, 0.92);
+  --header-box-border: rgba(255, 255, 255, 0.12);
+}
+
+:root[data-theme="light"] {
+  --header-bg: rgba(241, 241, 241, 0.88);
+  --header-border: rgba(0, 0, 0, 0.12);
+  --header-text: rgba(26, 26, 26, 0.9);
+  --header-box-bg: rgba(241, 241, 241, 0.92);
+  --header-box-border: rgba(0, 0, 0, 0.12);
+}
+
+/* サン/ムーンアイコンの出し分け。両方を常にDOMに置き、CSSだけで
+   表示を切り替える(静的ページ側でJSXの三項演算子が使えないため)。
+   デフォルト(data-theme未設定 = ライト相当)では月を出し、暗くする操作を促す。 */
+.cosmic-header__icon--moon {
+  display: block;
+}
+.cosmic-header__icon--sun {
+  display: none;
+}
+:root[data-theme="dark"] .cosmic-header__icon--moon {
+  display: none;
+}
+:root[data-theme="dark"] .cosmic-header__icon--sun {
+  display: block;
+}
+
 /* ヘッダーのベーススタイル */
 .cosmic-header {
   position: fixed;
@@ -6,15 +60,12 @@
   right: 0;
   z-index: 1000;
 
-  /* すりガラス効果と半透明背景 */
-  background: rgba(10, 14, 39, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--header-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
-  /* 境界線の光る効果 */
-  border-bottom: 1px solid rgba(100, 200, 255, 0.2);
+  border-bottom: 1px solid var(--header-border);
 
-  /* コンテンツの保護 */
   padding: 1rem 0;
 }
 
@@ -28,43 +79,37 @@
   align-items: center;
 }
 
+.cosmic-header__right-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cosmic-header__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* Homeリンクスタイル */
 .cosmic-header__home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--header-text);
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.2s ease;
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }
 
-.cosmic-header__home-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(100, 200, 255, 0.1), rgba(150, 100, 255, 0.1));
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
 .cosmic-header__home-link:hover {
-  color: #64c8ff;
-  text-shadow: 0 0 20px rgba(100, 200, 255, 0.8),
-               0 0 40px rgba(100, 200, 255, 0.4);
-  transform: translateY(-2px);
-}
-
-.cosmic-header__home-link:hover::before {
-  opacity: 1;
+  color: #4E8C72;
 }
 
 .cosmic-header__home-text {
@@ -72,10 +117,30 @@
   display: inline-block;
 }
 
+/* テーマ切替ボタン */
+.cosmic-header__theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: var(--header-box-bg);
+  border: 1px solid var(--header-box-border);
+  border-radius: 10px;
+  color: var(--header-text);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.cosmic-header__theme-toggle:hover {
+  border-color: #4E8C72;
+}
+
 /* Spotifyリンクスタイル */
 .cosmic-header__spotify-link {
   text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.2s ease;
 }
 
 .cosmic-header__spotify-box {
@@ -84,49 +149,16 @@
   gap: 0.75rem;
   padding: 0.75rem 1.5rem;
 
-  /* 背景と境界線 */
-  background: linear-gradient(135deg, rgba(30, 215, 96, 0.1), rgba(29, 185, 84, 0.05));
-  border: 1px solid rgba(30, 215, 96, 0.3);
+  background: rgba(29, 185, 84, 0.06);
+  border: 1px solid rgba(29, 185, 84, 0.25);
   border-radius: 12px;
 
-  /* マイクロな光る効果 */
-  box-shadow: 0 0 20px rgba(30, 215, 96, 0.2),
-              inset 0 0 20px rgba(30, 215, 96, 0.05);
-
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.cosmic-header__spotify-box::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(30, 215, 96, 0.1),
-    transparent
-  );
-  transform: rotate(45deg);
-  transition: all 0.6s ease;
-  opacity: 0;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .cosmic-header__spotify-box:hover {
-  transform: translateY(-3px) scale(1.05);
-  border-color: rgba(30, 215, 96, 0.8);
-  box-shadow: 0 8px 32px rgba(30, 215, 96, 0.4),
-              0 0 40px rgba(30, 215, 96, 0.3),
-              inset 0 0 30px rgba(30, 215, 96, 0.1);
-}
-
-.cosmic-header__spotify-box:hover::before {
-  opacity: 1;
-  animation: shimmer 0.6s ease;
+  border-color: rgba(29, 185, 84, 0.6);
+  background: rgba(29, 185, 84, 0.1);
 }
 
 .cosmic-header__spotify-icon {
@@ -141,40 +173,18 @@
   width: 100%;
   height: 100%;
   fill: #1db954;
-  transition: all 0.3s ease;
-}
-
-.cosmic-header__spotify-box:hover .spotify-logo {
-  fill: #1ed760;
-  filter: drop-shadow(0 0 10px rgba(30, 215, 96, 0.8));
 }
 
 .cosmic-header__spotify-text {
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--header-text);
   letter-spacing: 0.03em;
-  transition: all 0.3s ease;
 }
 
-.cosmic-header__spotify-box:hover .cosmic-header__spotify-text {
-  color: #1ed760;
-  text-shadow: 0 0 15px rgba(30, 215, 96, 0.6);
-}
-
-/* アニメーション */
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  }
-  100% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
-  }
-}
-
-/* レスポンシブ対応（必要に応じて） */
-@media (max-width: 768px) {
+/* レスポンシブ対応(769px〜768px幅の微調整) */
+@media (max-width: 768px) and (min-width: 641px) {
   .cosmic-header__container {
     padding: 0 1rem;
   }
@@ -192,11 +202,94 @@
   }
 }
 
+/* モバイル(640px以下): sasukeharaguchi.com型に、単一の横並びバーではなく
+   独立した小さな箱を画面の角に分散配置する。Home=左上、Spotifyアイコン=右上、
+   テーマ切替=右下。Header.jsxのJSX構造(<a>2本)は変更せず、position:fixedで
+   子要素だけを個別に画面角へ逃がす -- scripts/sync-header.jsが<a>のclassNameを
+   正規表現で直接パターンマッチしているため(sync-header.js:57-58)、JSXは触らない。 */
+@media (max-width: 640px) {
+  .cosmic-header {
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .cosmic-header__container {
+    padding: 0;
+    display: block;
+  }
+
+  .cosmic-header__home-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    min-height: 44px;
+    min-width: 44px;
+    background: var(--header-box-bg);
+    border: 1px solid var(--header-box-border);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  /* Spotifyラベルと同じ理由でモバイルはアイコンのみにする */
+  .cosmic-header__home-text {
+    display: none;
+  }
+
+  /* 右側グループも中身だけ角へ逃がすための空箱にする */
+  .cosmic-header__right-group {
+    display: contents;
+  }
+
+  .cosmic-header__theme-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* 外側の<a>とラッパーdivは position:fixed の子を持つだけの
+     空箱になる。box自体の背景/枠は消して幽霊ボックスを防ぐ。 */
+  .cosmic-header__spotify-box {
+    display: contents;
+  }
+
+  .cosmic-header__spotify-icon {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+    background: var(--header-box-bg);
+    border: 1px solid rgba(29, 185, 84, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .spotify-logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* アイコンと同じリンク先を指すラベルは冗長なので、モバイルでは非表示にする。
+     アクセシブルネームはHeader.jsxの<a>に付けたaria-labelで担保する。 */
+  .cosmic-header__spotify-text {
+    display: none;
+  }
+}
+
 /* アクティブ状態のスタイル */
 .cosmic-header__home-link--active {
-  color: #64c8ff;
-  text-shadow: 0 0 20px rgba(100, 200, 255, 0.6);
-  background: linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(150, 100, 255, 0.1));
+  color: #4E8C72;
+  background: rgba(127, 190, 160, 0.14);
   pointer-events: none; /* 現在ページなのでクリック不可 */
 }
 
@@ -205,26 +298,6 @@
 }
 
 .cosmic-header__spotify-link--active .cosmic-header__spotify-box {
-  background: linear-gradient(135deg, rgba(30, 215, 96, 0.2), rgba(29, 185, 84, 0.1));
-  border-color: rgba(30, 215, 96, 0.8);
-  box-shadow: 0 0 30px rgba(30, 215, 96, 0.4),
-              inset 0 0 20px rgba(30, 215, 96, 0.1);
-}
-
-.cosmic-header__spotify-link--active .spotify-logo {
-  fill: #1ed760;
-  filter: drop-shadow(0 0 10px rgba(30, 215, 96, 0.8));
-}
-
-.cosmic-header__spotify-link--active .cosmic-header__spotify-text {
-  color: #1ed760;
-  text-shadow: 0 0 15px rgba(30, 215, 96, 0.6);
-}
-
-/* 高解像度ディスプレイ対応 */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .cosmic-header {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
+  background: rgba(29, 185, 84, 0.12);
+  border-color: rgba(29, 185, 84, 0.6);
 }

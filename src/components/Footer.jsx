@@ -4,49 +4,47 @@ import { SlSocialSpotify } from "react-icons/sl";
 
 export default function Footer() {
   return (
-    <footer className="px-8 py-20 border-t border-white/10">
+    <footer className="px-8 py-20 border-t border-line">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-2 whitespace-nowrap">クソサイト製造工場</h3>
-            <p className="text-gray-500 text-lg">
-              💩 Site Projects Collection
-            </p>
+            <h3 className="text-2xl font-display text-ink mb-2 whitespace-nowrap">クソサイト製造工場</h3>
+            <p className="text-muted text-lg">Site Projects Collection</p>
           </div>
-          <div className="flex gap-6">
-            <a 
-              href="https://github.com/terasaki-8910" 
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/terasaki-8910"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-cyan transition-all hover:scale-110"
+              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-celeste transition-colors"
             >
-              <FaGithub className="text-2xl" />
+              <FaGithub className="text-xl text-ink" />
             </a>
-            <a 
-              href="https://open.spotify.com/user/4yzziiwdk53rx9ih2l6o04oa5?si=94d46b7aa75c4b70" 
-              className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-violet transition-all hover:scale-110"
+            <a
+              href="https://open.spotify.com/user/4yzziiwdk53rx9ih2l6o04oa5?si=94d46b7aa75c4b70"
+              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-celeste transition-colors"
             >
-              <SlSocialSpotify className="text-2xl" />
+              <SlSocialSpotify className="text-xl text-ink" />
             </a>
-            <a 
-              href="https://discord.gg/pc3z8CbX" 
-              className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-cyan transition-all hover:scale-110"
+            <a
+              href="https://discord.gg/pc3z8CbX"
+              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-celeste transition-colors"
             >
-              <FaDiscord className="text-2xl" />
+              <FaDiscord className="text-xl text-ink" />
             </a>
             <a
               href="https://x.com/fuyuiroo"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 glass rounded-full flex items-center justify-center hover:border-accent-violet transition-all hover:scale-110"
+              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-celeste transition-colors"
             >
-              <span className="text-xl">𝕏</span>
+              <span className="text-lg text-ink">𝕏</span>
             </a>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
-          <p>© 2025 terasaki-8910.github.io | Built with React, Three.js & GSAP</p>
+        <div className="mt-12 pt-8 border-t border-line text-center text-muted text-sm">
+          <p>© 2025 terasaki-8910.github.io | Built with React &amp; GSAP</p>
         </div>
       </div>
     </footer>

@@ -1,0 +1,49 @@
+name: Update GitHub Activity
+
+on:
+  schedule:
+    # 毎日 UTC 3時に実行 (JST 正午)
+    - cron: '0 3 * * *'
+  workflow_dispatch: # 手動実行も可能
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/update-github-activity.yml'
+      - 'scripts/update-github-activity.js'
+
+jobs:
+  update-github-activity:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update GitHub activity data
+        env:
+          GH_CONTRIB_TOKEN: ${{ secrets.GH_CONTRIB_TOKEN }}
+        run: node scripts/update-github-activity.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --staged --quiet || git commit -m "📊 Update GitHub activity data
+
+          🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+          Co-Authored-By: GitHub Action <action@users.noreply.github.com>"
+          git push

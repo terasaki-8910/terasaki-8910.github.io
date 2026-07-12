@@ -2,28 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
+/* クラフト明朝(アトリエこたつ、BOOTH配布)。個人・商用利用無料・web埋め込み許諾。
+   クレジット表記の必須記載なし(readme.txt / BOOTH利用規約を確認済み)。
+   フォントファイル単体の再配布・販売のみ禁止 -- サイトでの表示用途は許諾範囲内。 */
+@font-face {
+  font-family: 'Craft Mincho';
+  src: url('/fonts/craft-mincho.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fira Mono(Google Fonts, SIL OFL)。ラテン文字のみのサブセット。
+   16進カラーコードや日付など、monoフォントは英数字にしか使っていないため
+   日本語グリフは不要。 */
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('/fonts/fira-mono-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('/fonts/fira-mono-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('/fonts/fira-mono-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Zen Kurenaido(Google Fonts, SIL OFL)。このリポジトリのソース内で実際に
+   使われている日本語文字+印字可能ASCII全域(英数字・記号)をGoogle Fontsに
+   text=指定でリクエストしたサブセットを自ホスト(85KB)。ASCII全域を含めて
+   いるのは、英数字だけ別フォントにフォールバックして和文と字体が食い違う
+   (「Now」「To be continued」等が別書体で浮く)問題を防ぐため。新しい漢字を
+   含むコンテンツを追加した場合はこのサブセットの再生成が必要。 */
+@font-face {
+  font-family: 'Zen Kurenaido';
+  src: url('/fonts/zen-kurenaido.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-paper: #F1F1F1;
+  --color-surface: #E6E6E6;
+  --color-ink: #1A1A1A;
+  --color-muted: #6B6B6B;
+  --color-line: rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper: #121212;
+    --color-surface: #1D1D1D;
+    --color-ink: #EDEDED;
+    --color-muted: #8F8F8F;
+    --color-line: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* ヘッダーのテーマ切替ボタン(data-theme属性)が、OSのprefers-color-schemeより
+   優先する。ヘッダー用の変数はHeader.css側で独立定義しているので、
+   ここではサイト本体(index.css管轄)側の変数だけ上書きする。 */
+:root[data-theme="dark"] {
+  --color-paper: #121212;
+  --color-surface: #1D1D1D;
+  --color-ink: #EDEDED;
+  --color-muted: #8F8F8F;
+  --color-line: rgba(255, 255, 255, 0.12);
+}
+
+:root[data-theme="light"] {
+  --color-paper: #F1F1F1;
+  --color-surface: #E6E6E6;
+  --color-ink: #1A1A1A;
+  --color-muted: #6B6B6B;
+  --color-line: rgba(0, 0, 0, 0.12);
+}
+
 @layer base {
   * {
     @apply antialiased;
   }
-  
+
   body {
-    @apply bg-rich-black text-white overflow-x-hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    @apply bg-paper text-ink overflow-x-hidden font-sans;
   }
 
   html {
     scroll-behavior: auto;
   }
-}
 
-@layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan via-accent-violet to-accent-cyan;
-    background-size: 200% auto;
-  }
-
-  .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  :focus-visible {
+    outline: 2px solid theme('colors.celeste');
+    outline-offset: 2px;
   }
 }

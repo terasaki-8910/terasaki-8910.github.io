@@ -7,20 +7,9 @@ export default function Philosophy() {
   const textRef = useRef()
 
   useEffect(() => {
-    const section = sectionRef.current
     const text = textRef.current
 
-    gsap.to(section, {
-      scrollTrigger: {
-        trigger: section,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true,
-      },
-      backgroundColor: '#151B36',
-    })
-
-    gsap.fromTo(text, 
+    gsap.fromTo(text,
       { opacity: 0, y: 100 },
       {
         scrollTrigger: {
@@ -52,13 +41,16 @@ export default function Philosophy() {
 
   }, [])
 
+  // このセクションはスクロール連動の背景色変化を廃止し、前後(Hero/3D ASCII)と
+  // 同じ地の色で統一している。TASKS.mdの「背景ウィンドウ+重音テト」演出を
+  // 他のセクションに実装する際も、ここだけは窓を開けない"壁"として残す方針。
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center px-8 py-32 transition-colors duration-1000"
+      className="min-h-screen flex items-center justify-center px-8 py-32"
     >
       <div className="max-w-5xl">
-        <h2 className="text-massive font-bold mb-16 text-gradient">
+        <h2 className="text-massive font-medium font-display text-ink mb-16">
           Fuyuiro's Portfolio
         </h2>
         <div ref={textRef} className="space-y-8">

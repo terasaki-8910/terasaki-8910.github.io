@@ -7,5 +7,18 @@
     ],
     "deny": [],
     "ask": []
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(jq -r '.tool_input.file_path // empty'); if echo \"$file\" | grep -qE '(Header\\.jsx|Header\\.css)$'; then npm run sync-header; fi"
+          }
+        ]
+      }
+    ]
   }
 }
