@@ -64,12 +64,20 @@ export default function AsciiModelViewer({ modelUrl, name, credit, href, id }) {
         const box = new THREE.Box3().setFromObject(model)
         const size = new THREE.Vector3()
         box.getSize(size)
-        const center = new THREE.Vector3()
-        box.getCenter(center)
 
         const maxDim = Math.max(size.x, size.y, size.z) || 1
-        model.position.sub(center)
         model.scale.setScalar(2 / maxDim)
+
+        // 中心を原点に合わせる位置補正は、スケール適用後のボックスで
+        // 再計算する必要がある。Object3Dはローカル頂点にscaleを掛けた後で
+        // positionを加算するため、「スケール前のcenterをそのままpositionへ
+        // 渡す」と補正量にscale倍率が反映されず、center*(1-scale)分だけ
+        // 中心が原点からずれる(自転車では下端がほぼクリッピング・上に
+        // 大きな余白という非対称なフレーミングとして現れていた)。
+        const scaledBox = new THREE.Box3().setFromObject(model)
+        const scaledCenter = new THREE.Vector3()
+        scaledBox.getCenter(scaledCenter)
+        model.position.sub(scaledCenter)
 
         modelGroup.add(model)
         scene.add(modelGroup)
@@ -111,13 +119,19 @@ export default function AsciiModelViewer({ modelUrl, name, credit, href, id }) {
         // 縦・横それぞれの半値角(tan)から必要な距離を計算し、大きい方
         // (＝厳しい方の制約)を採用する。これで枠の縦横比が何であっても、
         // 上下か左右のどちらかがぴったり埋まる(無駄な余白なし)。
+        //
+        // カメラのYを持ち上げて見下ろす角度を付けていたが、その傾きが
+        // tanベースの計算(カメラが正面から見る前提)の対称性を崩し、
+        // 実測で上216px・下2px(1280x520の枠)という激しい非対称と
+        // 下端のほぼクリッピングを引き起こしていた。正面からの水平視点に
+        // 戻し、対称なマージンにする。
         const frameCamera = () => {
           const fovV = THREE.MathUtils.degToRad(camera.fov)
           const fovH = 2 * Math.atan(Math.tan(fovV / 2) * camera.aspect)
           const distV = verticalHalf / Math.tan(fovV / 2)
           const distH = horizontalRadius / Math.tan(fovH / 2)
-          const distance = Math.max(distV, distH) * 1.18
-          camera.position.set(0, verticalHalf * 0.15, distance)
+          const distance = Math.max(distV, distH) * 1.25
+          camera.position.set(0, 0, distance)
           camera.lookAt(0, 0, 0)
         }
 

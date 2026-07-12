@@ -5,13 +5,6 @@ import SpotifyRecentTracks from './SpotifyRecentTracks'
 
 const projects = [
   {
-    id: 1,
-    title: 'Experimental Lab #001',
-    description: 'インタラクティブなビジュアルエクスペリメント',
-    tags: ['WebGL', 'Three.js', 'Generative Art'],
-    link: '#',
-  },
-  {
     id: 2,
     title: 'Spotify Dashboard',
     description: '最近聴いた曲',
@@ -26,13 +19,6 @@ const projects = [
     tags: ['Steam', 'Discord', 'Community'],
     link: '#',
     gaming: true,
-  },
-  {
-    id: 4,
-    title: 'Code Playground',
-    description: 'アルゴリズムとデータ構造の遊び場',
-    tags: ['JavaScript', 'Algorithms', 'Visualization'],
-    link: '#',
   },
 ]
 

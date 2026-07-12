@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm run sync-header)",
       "Bash(npm install:*)",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "mcp__playwright__browser_navigate"
     ],
     "deny": [],
     "ask": []
