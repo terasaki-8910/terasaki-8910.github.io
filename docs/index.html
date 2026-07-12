@@ -63,11 +63,29 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="./assets/main-Cc7RgkwT.js"></script>
+    <script type="module" crossorigin src="./assets/main-PDoEEYpe.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/index-9ok8JEB7.js">
     <link rel="stylesheet" crossorigin href="./assets/index-TyN_uuJA.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO用の静的フォールバック(id: seo-fallback-content)。
+           React(createRoot().render())がマウント時にこの中身を丸ごと
+           置き換えるため、実際の訪問者にはJS読み込み前のごく短い間しか
+           見えない。プリレンダリングまではせず、クローラー向けに実際の
+           内容を反映した文章だけを直接ここに書いている。
+           Hero.jsx/Profile.jsx/Philosophy.jsxの基本プロフィール情報や
+           サイト名を変えたときは、ここも合わせて更新すること。 -->
+      <div id="seo-fallback-content">
+        <h1>クソサイト製造工場</h1>
+        <p>冬色 — Kuso Site Manufacturing Plant</p>
+        <p>
+          クソサイト製造工場へようこそ。クソサイト製造構造長の冬色と申します。
+          筑波大学大学院 情報学学位プログラム M1在学中。
+          実験的なプロジェクト、未完成なアイデア、そして挑戦の痕跡。ここは創造の実験場です。
+        </p>
+        <p>趣味は映画鑑賞、麻雀、サーバこねこね。好きなアーティストはサカナクション、CentralCee。</p>
+      </div>
+    </div>
   </body>
 </html>
