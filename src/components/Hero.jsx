@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import Header from './Header'
 import GithubActivity from './GithubActivity'
+import CommitLog from './CommitLog'
 
 export default function Hero() {
   const headerRef = useRef()
@@ -43,6 +44,7 @@ export default function Hero() {
         </p>
 
         <GithubActivity />
+        <CommitLog />
       </div>
     </section>
   )
