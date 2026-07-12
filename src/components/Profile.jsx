@@ -4,12 +4,12 @@ import { gsap } from 'gsap'
 const timeline = [
   {
     year: 'Now',
-    title: '筑波大学　情報学群　情報メディア創生学類　4年次在学中',
+    title: '筑波大学大学院　情報学学位プログラム　M1在学中',
     description: 'To be continued...',
   },
   {
     year: '2024',
-    title: '筑波大学　情報学群　情報メディア創生学類　３年次編入',
+    title: '筑波大学　情報学群　情報メディア創成学類　３年次編入',
     description: '情報系の知識を学ぶ',
   },
   {
@@ -21,7 +21,7 @@ const timeline = [
 
 const intro = [
   { label: 'HN', value: '冬色' },
-  { label: '趣味', value: '映画鑑賞、麻雀' },
+  { label: '趣味', value: '映画鑑賞、麻雀、サーバこねこね' },
   { label: '好きなアーティスト', value: 'サカナクション、CentralCee' },
 ]
 
