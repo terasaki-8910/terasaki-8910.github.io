@@ -34,3 +34,14 @@ svg/package-lock.json
 # spotify-data.json
 public/spotify-data.json
 docs/spotify-data.json
+
+# folder
+ignore/
+ignore/*
+ignore_project/
+ignore_project/*
+
+# spotify-data
+docs/spotify-data.json
+public/spotify-data.json
+ 
