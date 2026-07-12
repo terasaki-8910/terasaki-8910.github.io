@@ -10,11 +10,12 @@ function levelForCount(count, max) {
   return 1
 }
 
-// レベル0(コントリビューションなし)は bg-line だと地の色との
-// コントラストが低すぎて見えにくいため、一段濃い bg-surface + 枠線で
-// グリッドの構造そのものが常に視認できるようにする。
+// レベル0(コントリビューションなし)はbg-surfaceで塗ると、活動がある
+// セルと同じ「実体のある箱」に見えてしまい、何もしていない日まで主張が
+// 強くなる。塗りを消して極薄の枠線だけ残し、グリッドの構造は分かる程度に
+// 沈めることで、活動があるセル(celesteで塗られる)だけが浮き上がるようにする。
 const LEVEL_COLORS = [
-  'bg-surface border border-line',
+  'bg-transparent border border-line/40',
   'bg-celeste/25',
   'bg-celeste/50',
   'bg-celeste/75',
