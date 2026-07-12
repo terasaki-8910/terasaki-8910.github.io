@@ -452,12 +452,13 @@
                 const trackUri = `spotify:track:${track.id}`;
                 showSpotifyIframe();
 
+                // setTimeoutを挟むと(特にSafari/iOSで)クリック起点のユーザー操作
+                // 由来という扱いが切れ、自動再生ポリシーに引っかかりやすくなるため、
+                // loadUriのコールバック内で即座にplay()を呼ぶ
                 spotifyController.loadUri(trackUri, () => {
-                    setTimeout(() => {
-                        spotifyController.play();
-                        currentPlayingTrack = track.id;
-                        updatePlayButton(trackElement, true);
-                    }, 500);
+                    spotifyController.play();
+                    currentPlayingTrack = track.id;
+                    updatePlayButton(trackElement, true);
                 });
 
             } catch (error) {
