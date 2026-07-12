@@ -1,13 +1,35 @@
 {
-  "lastUpdated": "2026-07-11T18:43:46.248Z",
+  "lastUpdated": "2026-07-12T01:44:21.905Z",
   "tracks": [
+    {
+      "id": "4NQyMQj6jUkit4IFLZ3o8U",
+      "name": "高音厨音域テスト",
+      "artist": "木村わいP",
+      "album": "高音厨音域テスト",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315ae060f547fc1497ff4f344",
+      "playedAt": "2026-07-12T00:07:52.158Z",
+      "spotifyUrl": "https://open.spotify.com/track/4NQyMQj6jUkit4IFLZ3o8U",
+      "duration": 90333,
+      "previewUrl": ""
+    },
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-07-12T00:03:13.922Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
     {
       "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
       "name": "春を告げる",
       "artist": "yama",
       "album": "春を告げる",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
-      "playedAt": "2026-07-11T10:17:21.895Z",
+      "playedAt": "2026-07-11T23:57:22.292Z",
       "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
       "duration": 196497,
       "previewUrl": ""
@@ -18,7 +40,7 @@
       "artist": "東京真中",
       "album": "ブレインロット",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
-      "playedAt": "2026-07-11T10:10:53.515Z",
+      "playedAt": "2026-07-11T23:54:05.052Z",
       "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
       "duration": 122888,
       "previewUrl": ""
@@ -307,28 +329,6 @@
       "playedAt": "2026-07-10T04:59:19.278Z",
       "spotifyUrl": "https://open.spotify.com/track/1fBWbKfZ4DKIOacKBWakSQ",
       "duration": 189737,
-      "previewUrl": ""
-    },
-    {
-      "id": "7tGDXCPLpAScEwmqab9YZd",
-      "name": "Walking with you",
-      "artist": "Novelbright",
-      "album": "SKYWALK",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e984d27d0de318dc56f123d4",
-      "playedAt": "2026-07-09T15:03:52.530Z",
-      "spotifyUrl": "https://open.spotify.com/track/7tGDXCPLpAScEwmqab9YZd",
-      "duration": 223186,
-      "previewUrl": ""
-    },
-    {
-      "id": "73rdU71fLEd0nW7HENRhKF",
-      "name": "キュートなキューたい",
-      "artist": "CUTIE STREET",
-      "album": "キュートなキューたい / ナイスだね",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
-      "playedAt": "2026-07-09T12:39:30.784Z",
-      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
-      "duration": 236000,
       "previewUrl": ""
     }
   ],
