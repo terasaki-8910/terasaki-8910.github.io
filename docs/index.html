@@ -6,6 +6,7 @@
     <meta name="description" content="クソサイト製造工場 - 実験的なWebプロジェクトの集積地" />
     <title>クソサイト製造工場</title>
     <link rel="canonical" href="https://terasaki-8910.github.io/">
+    <meta name="google-site-verification" content="VY33ayMUdiJ2mzUZdicSZvt2gAkWO0UB9RWCCfWYbV4" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
@@ -38,6 +39,23 @@
     <!-- 共有ヘッダーCSS -->
     <link rel="stylesheet" href="./header-styles.css">
 
+    <!-- seo-fallback-contentを常に非表示にする。JS読み込み前の一瞬すら
+         見せたくないため、視覚的に完全に消す(クローラーはHTMLソースの
+         テキストとして読めるので、非表示でもSEO上の効果は変わらない)。 -->
+    <style>
+      #seo-fallback-content {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+
     <!-- 構造化データ -->
     <script type="application/ld+json">
     {
@@ -63,7 +81,7 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="./assets/main-Q6f8AjRY.js"></script>
+    <script type="module" crossorigin src="./assets/main-BZck8-Ca.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/index-C5pm0fjf.js">
     <link rel="stylesheet" crossorigin href="./assets/index-TyN_uuJA.css">
   </head>
