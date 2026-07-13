@@ -2,11 +2,13 @@ import Header from './components/Header'
 import AsciiGallery from './components/AsciiGallery'
 import Footer from './components/Footer'
 import ErrorBoundary from './components/ErrorBoundary'
+import PageBackground from './components/PageBackground'
 
 export default function AsciiPage() {
   return (
     <ErrorBoundary>
       <div className="relative">
+        <PageBackground />
         <div className="fixed top-0 left-0 right-0 z-50">
           <Header currentPage="ascii" />
         </div>

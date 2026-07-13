@@ -10,6 +10,7 @@ import ProjectShowcase from './components/ProjectShowcase'
 import Profile from './components/Profile'
 import Footer from './components/Footer'
 import ErrorBoundary from './components/ErrorBoundary'
+import PageBackground from './components/PageBackground'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -52,6 +53,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="relative">
+        <PageBackground />
         <Hero />
         <Philosophy />
         <AsciiGallery limit={2} linkToFull />

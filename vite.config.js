@@ -47,7 +47,11 @@ function getCommitLog() {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',  // GitHub Pages用に相対パスを使用
+  // username.github.ioのユーザーサイトは常にドメインルートで配信されるため
+  // 絶対パスを使う。相対パス(./)だと、GitHub Pagesが404.htmlを任意の深さの
+  // 存在しないURL(例: /foo/bar/baz)にそのまま返したときに、アセットの
+  // 相対パスがそのURLの深さを基準に解決されてしまい壊れる。
+  base: '/',
   define: {
     __COMMIT_LOG__: JSON.stringify(getCommitLog()),
   },
@@ -61,6 +65,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         ascii: resolve(__dirname, 'ascii/index.html'),
         spotify: resolve(__dirname, 'spotify/index.html'),
+        notfound: resolve(__dirname, '404.html'),
       },
       output: {
         manualChunks: undefined,
