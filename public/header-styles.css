@@ -3,36 +3,36 @@
    優先順位: prefers-color-scheme(OS既定) < [data-theme](明示トグル)。
    静的ページ側でdata-themeを切り替えるJSは別途必要(既知のギャップ)。 */
 :root {
-  --header-bg: rgba(241, 241, 241, 0.88);
+  --header-bg: #F1F1F1;
   --header-border: rgba(0, 0, 0, 0.12);
   --header-text: rgba(26, 26, 26, 0.9);
-  --header-box-bg: rgba(241, 241, 241, 0.92);
+  --header-box-bg: #F1F1F1;
   --header-box-border: rgba(0, 0, 0, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --header-bg: rgba(18, 18, 18, 0.88);
+    --header-bg: #121212;
     --header-border: rgba(255, 255, 255, 0.12);
     --header-text: rgba(237, 237, 237, 0.9);
-    --header-box-bg: rgba(18, 18, 18, 0.92);
+    --header-box-bg: #121212;
     --header-box-border: rgba(255, 255, 255, 0.12);
   }
 }
 
 :root[data-theme="dark"] {
-  --header-bg: rgba(18, 18, 18, 0.88);
+  --header-bg: #121212;
   --header-border: rgba(255, 255, 255, 0.12);
   --header-text: rgba(237, 237, 237, 0.9);
-  --header-box-bg: rgba(18, 18, 18, 0.92);
+  --header-box-bg: #121212;
   --header-box-border: rgba(255, 255, 255, 0.12);
 }
 
 :root[data-theme="light"] {
-  --header-bg: rgba(241, 241, 241, 0.88);
+  --header-bg: #F1F1F1;
   --header-border: rgba(0, 0, 0, 0.12);
   --header-text: rgba(26, 26, 26, 0.9);
-  --header-box-bg: rgba(241, 241, 241, 0.92);
+  --header-box-bg: #F1F1F1;
   --header-box-border: rgba(0, 0, 0, 0.12);
 }
 
@@ -52,7 +52,9 @@
   display: block;
 }
 
-/* ヘッダーのベーススタイル */
+/* ヘッダーのベーススタイル。すりガラス(backdrop-filter)は、サイト本体から
+   既に一掃した「AI感のある装飾」の最後の生き残りだったため撤去し、
+   他セクションと同じ不透明な地の色に統一した。 */
 .cosmic-header {
   position: fixed;
   top: 0;
@@ -61,8 +63,6 @@
   z-index: 1000;
 
   background: var(--header-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 
   border-bottom: 1px solid var(--header-border);
 
@@ -98,7 +98,8 @@
   object-fit: cover;
 }
 
-/* Homeリンクスタイル */
+/* Homeリンクスタイル。テーマ切替・Spotifyと同じ「中性の枠線を持つ箱」に
+   揃え、他の要素とバラバラだった見た目を統一している。 */
 .cosmic-header__home-link {
   display: inline-flex;
   align-items: center;
@@ -110,13 +111,16 @@
   font-weight: 500;
   letter-spacing: 0.05em;
   position: relative;
-  transition: color 0.2s ease;
+  background: var(--header-box-bg);
+  border: 1px solid var(--header-box-border);
+  border-radius: 4px;
+  transition: border-color 0.2s ease, color 0.2s ease;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
 }
 
 .cosmic-header__home-link:hover {
   color: #4E8C72;
+  border-color: #4E8C72;
 }
 
 .cosmic-header__home-text {
@@ -134,7 +138,7 @@
   padding: 0;
   background: var(--header-box-bg);
   border: 1px solid var(--header-box-border);
-  border-radius: 10px;
+  border-radius: 4px;
   color: var(--header-text);
   cursor: pointer;
   transition: border-color 0.2s ease;
@@ -150,22 +154,25 @@
   transition: border-color 0.2s ease;
 }
 
+/* 以前はSpotifyブランドの緑で塩られた特別扱いだったが、サイト全体の
+   「アクセントは1色(celeste)だけ」という方針に合わせ、他の箱(Home/
+   テーマ切替)と同じ中性の枠線+背景に統一した。ロゴアイコン自体の緑色
+   (.spotify-logoのfill)はブランド認識のため残す。 */
 .cosmic-header__spotify-box {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem 1.5rem;
 
-  background: rgba(29, 185, 84, 0.06);
-  border: 1px solid rgba(29, 185, 84, 0.25);
-  border-radius: 12px;
+  background: var(--header-box-bg);
+  border: 1px solid var(--header-box-border);
+  border-radius: 4px;
 
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .cosmic-header__spotify-box:hover {
-  border-color: rgba(29, 185, 84, 0.6);
-  background: rgba(29, 185, 84, 0.1);
+  border-color: #4E8C72;
 }
 
 .cosmic-header__spotify-icon {
@@ -237,9 +244,7 @@
     min-width: 44px;
     background: var(--header-box-bg);
     border: 1px solid var(--header-box-border);
-    border-radius: 10px;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    border-radius: 4px;
   }
 
   /* Spotifyラベルと同じ理由でモバイルはアイコンのみにする */
@@ -275,10 +280,8 @@
     width: 44px;
     height: 44px;
     background: var(--header-box-bg);
-    border: 1px solid rgba(29, 185, 84, 0.3);
-    border-radius: 10px;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid var(--header-box-border);
+    border-radius: 4px;
   }
 
   .spotify-logo {
@@ -296,6 +299,7 @@
 /* アクティブ状態のスタイル */
 .cosmic-header__home-link--active {
   color: #4E8C72;
+  border-color: #4E8C72;
   background: rgba(127, 190, 160, 0.14);
   pointer-events: none; /* 現在ページなのでクリック不可 */
 }
@@ -305,6 +309,6 @@
 }
 
 .cosmic-header__spotify-link--active .cosmic-header__spotify-box {
-  background: rgba(29, 185, 84, 0.12);
-  border-color: rgba(29, 185, 84, 0.6);
+  background: rgba(127, 190, 160, 0.14);
+  border-color: #4E8C72;
 }
