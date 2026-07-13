@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-07-13T01:46:50.472Z",
+  "lastUpdated": "2026-07-13T08:46:27.734Z",
   "tracks": [
+    {
+      "id": "4oqUgyBXtbbJkeppHt8t2D",
+      "name": "嫌々",
+      "artist": "HALVES",
+      "album": "嫌々",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fab93f3bb8cfc0cd375b1415",
+      "playedAt": "2026-07-13T08:14:19.744Z",
+      "spotifyUrl": "https://open.spotify.com/track/4oqUgyBXtbbJkeppHt8t2D",
+      "duration": 184145,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-07-13T08:11:11.256Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
     {
       "id": "4NQyMQj6jUkit4IFLZ3o8U",
       "name": "高音厨音域テスト",
@@ -307,28 +329,6 @@
       "playedAt": "2026-07-10T05:32:25.426Z",
       "spotifyUrl": "https://open.spotify.com/track/0omQt0YfcdYM6RnA5EVTw2",
       "duration": 131802,
-      "previewUrl": ""
-    },
-    {
-      "id": "3Lgu45e0zKzXxFemHON1fl",
-      "name": "Summer Attack!",
-      "artist": "EmoCosine",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-07-10T05:30:19.277Z",
-      "spotifyUrl": "https://open.spotify.com/track/3Lgu45e0zKzXxFemHON1fl",
-      "duration": 138707,
-      "previewUrl": ""
-    },
-    {
-      "id": "1gY87YRjhQKoE2ZWvDk3Rr",
-      "name": "No No No",
-      "artist": "TheFatRat",
-      "album": "No No No",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733eef946380f25dab213fbaa2",
-      "playedAt": "2026-07-10T05:12:13.078Z",
-      "spotifyUrl": "https://open.spotify.com/track/1gY87YRjhQKoE2ZWvDk3Rr",
-      "duration": 181824,
       "previewUrl": ""
     }
   ],
