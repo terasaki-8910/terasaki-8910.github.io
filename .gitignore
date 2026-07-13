@@ -7,6 +7,9 @@ dist
 dist-ssr
 *.local
 
+# Playwright MCPの検証用スクショ/ログ
+.playwright-mcp/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
