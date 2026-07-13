@@ -32,7 +32,7 @@ export default function Hero() {
         <Header currentPage="home" />
       </div>
 
-      <div ref={contentRef} className="text-center max-w-4xl mx-auto">
+      <div ref={contentRef} className="text-center max-w-4xl mx-auto w-full min-w-0">
         <h1
           className="font-display font-medium text-massive mb-6"
           style={{ color: 'rgb(250, 160, 160)', WebkitTextStroke: '6px black', paintOrder: 'stroke fill' }}

@@ -63,8 +63,6 @@ const Header = ({ currentPage = 'home' }) => {
           <a
             href="/spotify/"
             className={`cosmic-header__spotify-link ${currentPage === 'spotify' ? 'cosmic-header__spotify-link--active' : ''}`}
-            target={currentPage === 'spotify' ? '_self' : '_blank'}
-            rel="noopener noreferrer"
             aria-label="Spotify Dashboard"
           >
             <div className="cosmic-header__spotify-box">
