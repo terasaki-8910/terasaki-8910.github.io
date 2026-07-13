@@ -9,6 +9,7 @@
  * - apple-touch-icon.png (180x180)
  * - icon-192.png / icon-512.png (PWA用)
  * - og-image.png (1200x630, SNSシェア用)
+ * - home-avatar.png (128x128, ヘッダーのHomeリンク用。顔を中心にクロップ)
  * - manifest.json
  *
  * ラスター画像が入力のため、ベクター(favicon.svg)は生成しない。
@@ -81,6 +82,19 @@ async function generateOGImage(outputPath, bg) {
   console.log(`✓ 生成完了: ${outputPath} (${ogWidth}x${ogHeight})`);
 }
 
+// ヘッダーのHomeリンクは22px前後の丸アイコンとして表示するため、
+// 単純な全体リサイズ(favicon等と同じcover)だと顔ではなく上部の髪飾りが
+// 中心に来てしまう。目の位置を基準にした正方形を切り出してから縮小する。
+async function generateHomeAvatar(outputPath) {
+  const cropped = await sharp(logoBuffer)
+    .extract({ left: 230, top: 330, width: 600, height: 600 })
+    .resize(128, 128)
+    .png()
+    .toFile(outputPath);
+  console.log(`✓ 生成完了: ${outputPath} (128x128, 顔クロップ)`);
+  return cropped;
+}
+
 function generateManifest(outputPath) {
   const manifest = {
     name: 'クソサイト製造工場',
@@ -130,6 +144,7 @@ async function main() {
   await generatePNG(512, join(ICONS_DIR, 'icon-512.png'));
 
   await generateOGImage(join(ICONS_DIR, 'og-image.png'), bg);
+  await generateHomeAvatar(join(ICONS_DIR, 'home-avatar.png'));
 
   generateManifest(join(ICONS_DIR, 'manifest.json'));
 

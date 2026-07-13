@@ -91,6 +91,13 @@
   flex-shrink: 0;
 }
 
+.cosmic-header__home-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* Homeリンクスタイル */
 .cosmic-header__home-link {
   display: inline-flex;
