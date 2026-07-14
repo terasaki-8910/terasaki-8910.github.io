@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-07-14T07:45:43.421Z",
+  "lastUpdated": "2026-07-14T13:05:49.427Z",
   "tracks": [
+    {
+      "id": "1mWdTewIgB3gtBM3TOSFhB",
+      "name": "Butter",
+      "artist": "BTS",
+      "album": "Butter (Hotter, Sweeter, Cooler)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273240447f2da1433d8f4303596",
+      "playedAt": "2026-07-14T09:28:13.378Z",
+      "spotifyUrl": "https://open.spotify.com/track/1mWdTewIgB3gtBM3TOSFhB",
+      "duration": 164441,
+      "previewUrl": ""
+    },
+    {
+      "id": "5WsjuvYrFRi9cqKBscT3oq",
+      "name": "INTERNET YAMERO",
+      "artist": "NEEDY GIRL OVERDOSE, KOTOKO, Aiobahn +81",
+      "album": "INTERNET YAMERO",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273303b75439516c43beca42581",
+      "playedAt": "2026-07-14T09:20:19.533Z",
+      "spotifyUrl": "https://open.spotify.com/track/5WsjuvYrFRi9cqKBscT3oq",
+      "duration": 241834,
+      "previewUrl": ""
+    },
+    {
+      "id": "6megNXGjmim4OitjZnIn9v",
+      "name": "春雷",
+      "artist": "Kenshi Yonezu",
+      "album": "BOOTLEG",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
+      "playedAt": "2026-07-14T09:16:17.094Z",
+      "spotifyUrl": "https://open.spotify.com/track/6megNXGjmim4OitjZnIn9v",
+      "duration": 288887,
+      "previewUrl": ""
+    },
+    {
+      "id": "73TEyhGLxixHAwzOdoamgV",
+      "name": "Aoi",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-07-14T09:11:27.771Z",
+      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
+      "duration": 256120,
+      "previewUrl": ""
+    },
+    {
+      "id": "7lUaEsQVwvNEjaJNcvc1CN",
+      "name": "サウダージ",
+      "artist": "PornoGraffitti",
+      "album": "PORNO GRAFFITTI BEST RED'S",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738770cf0b8d9ddacf4f286688",
+      "playedAt": "2026-07-14T09:07:11.186Z",
+      "spotifyUrl": "https://open.spotify.com/track/7lUaEsQVwvNEjaJNcvc1CN",
+      "duration": 261239,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
+      "name": "春を告げる",
+      "artist": "yama",
+      "album": "春を告げる",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
+      "playedAt": "2026-07-14T09:02:49.514Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
+      "duration": 196497,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-07-14T08:56:37.474Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "4NQyMQj6jUkit4IFLZ3o8U",
+      "name": "高音厨音域テスト",
+      "artist": "木村わいP",
+      "album": "高音厨音域テスト",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315ae060f547fc1497ff4f344",
+      "playedAt": "2026-07-14T08:46:52.532Z",
+      "spotifyUrl": "https://open.spotify.com/track/4NQyMQj6jUkit4IFLZ3o8U",
+      "duration": 90333,
+      "previewUrl": ""
+    },
     {
       "id": "7ozF0VkZiDgXPt4Hwuao4i",
       "name": "仮装狂騒曲",
@@ -35,17 +123,6 @@
       "previewUrl": ""
     },
     {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-07-14T04:17:52.359Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
-      "previewUrl": ""
-    },
-    {
       "id": "0VjIjW4GlUZAMYd2vXMi3b",
       "name": "Blinding Lights",
       "artist": "The Weeknd",
@@ -76,17 +153,6 @@
       "playedAt": "2026-07-13T08:14:19.744Z",
       "spotifyUrl": "https://open.spotify.com/track/4oqUgyBXtbbJkeppHt8t2D",
       "duration": 184145,
-      "previewUrl": ""
-    },
-    {
-      "id": "4NQyMQj6jUkit4IFLZ3o8U",
-      "name": "高音厨音域テスト",
-      "artist": "木村わいP",
-      "album": "高音厨音域テスト",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315ae060f547fc1497ff4f344",
-      "playedAt": "2026-07-12T17:44:28.861Z",
-      "spotifyUrl": "https://open.spotify.com/track/4NQyMQj6jUkit4IFLZ3o8U",
-      "duration": 90333,
       "previewUrl": ""
     },
     {
@@ -131,17 +197,6 @@
       "playedAt": "2026-07-12T07:24:52.714Z",
       "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
       "duration": 137746,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
-      "name": "春を告げる",
-      "artist": "yama",
-      "album": "春を告げる",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
-      "playedAt": "2026-07-11T23:57:22.292Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
-      "duration": 196497,
       "previewUrl": ""
     },
     {
@@ -264,73 +319,7 @@
       "spotifyUrl": "https://open.spotify.com/track/7xWXWraHp5tqoksl0awFFG",
       "duration": 118269,
       "previewUrl": ""
-    },
-    {
-      "id": "5Vf5mopw2fxxZLylqQRNci",
-      "name": "Starting Pistol",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-07-10T05:45:52.838Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Vf5mopw2fxxZLylqQRNci",
-      "duration": 113608,
-      "previewUrl": ""
-    },
-    {
-      "id": "3FrWEbGpO4IYPcoFeciKGd",
-      "name": "Aoharu - Band Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-07-10T05:44:04.273Z",
-      "spotifyUrl": "https://open.spotify.com/track/3FrWEbGpO4IYPcoFeciKGd",
-      "duration": 114703,
-      "previewUrl": ""
-    },
-    {
-      "id": "6PSKeBtijEy8OoL9dGDY60",
-      "name": "Funky Road",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-07-10T05:42:17.540Z",
-      "spotifyUrl": "https://open.spotify.com/track/6PSKeBtijEy8OoL9dGDY60",
-      "duration": 130789,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zzcrYiYLMoAQF0rm6Sxol",
-      "name": "Aira",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-07-10T05:40:09.392Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zzcrYiYLMoAQF0rm6Sxol",
-      "duration": 136092,
-      "previewUrl": ""
-    },
-    {
-      "id": "7xVHDrR31ZkoLhRPA1ByM0",
-      "name": "HIGH5LANDER",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
-      "playedAt": "2026-07-10T05:37:56.048Z",
-      "spotifyUrl": "https://open.spotify.com/track/7xVHDrR31ZkoLhRPA1ByM0",
-      "duration": 123373,
-      "previewUrl": ""
-    },
-    {
-      "id": "1alvT7oOwHZxuNS9w9C8L5",
-      "name": "Moment",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-07-10T05:35:55.964Z",
-      "spotifyUrl": "https://open.spotify.com/track/1alvT7oOwHZxuNS9w9C8L5",
-      "duration": 100605,
-      "previewUrl": ""
     }
   ],
-  "total": 30
+  "total": 29
 }
