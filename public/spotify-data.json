@@ -1,26 +1,59 @@
 {
-  "lastUpdated": "2026-07-14T01:23:28.163Z",
+  "lastUpdated": "2026-07-14T07:45:43.421Z",
   "tracks": [
-    {
-      "id": "0VjIjW4GlUZAMYd2vXMi3b",
-      "name": "Blinding Lights",
-      "artist": "The Weeknd",
-      "album": "After Hours",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
-      "playedAt": "2026-07-13T16:57:50.495Z",
-      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
-      "duration": 200040,
-      "previewUrl": ""
-    },
     {
       "id": "7ozF0VkZiDgXPt4Hwuao4i",
       "name": "仮装狂騒曲",
       "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
       "album": "仮装狂騒曲",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-07-13T16:54:06.976Z",
+      "playedAt": "2026-07-14T06:10:04.296Z",
       "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
       "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "1chTElozugAFsW2x03IS6d",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "なんだこれくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
+      "playedAt": "2026-07-14T04:26:37.084Z",
+      "spotifyUrl": "https://open.spotify.com/track/1chTElozugAFsW2x03IS6d",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "73rdU71fLEd0nW7HENRhKF",
+      "name": "キュートなキューたい",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-07-14T04:23:16.388Z",
+      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
+      "duration": 236000,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-07-14T04:17:52.359Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "0VjIjW4GlUZAMYd2vXMi3b",
+      "name": "Blinding Lights",
+      "artist": "The Weeknd",
+      "album": "After Hours",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
+      "playedAt": "2026-07-14T04:11:01.887Z",
+      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
+      "duration": 200040,
       "previewUrl": ""
     },
     {
@@ -29,7 +62,7 @@
       "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
       "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-07-13T14:06:54.592Z",
+      "playedAt": "2026-07-14T03:58:59.004Z",
       "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
       "duration": 230766,
       "previewUrl": ""
@@ -43,17 +76,6 @@
       "playedAt": "2026-07-13T08:14:19.744Z",
       "spotifyUrl": "https://open.spotify.com/track/4oqUgyBXtbbJkeppHt8t2D",
       "duration": 184145,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-07-13T08:11:11.256Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-07-10T05:35:55.964Z",
       "spotifyUrl": "https://open.spotify.com/track/1alvT7oOwHZxuNS9w9C8L5",
       "duration": 100605,
-      "previewUrl": ""
-    },
-    {
-      "id": "2NcMbPHpfRjc2UdLIT4SQd",
-      "name": "Na Na Natsu!",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-07-10T05:34:20.433Z",
-      "spotifyUrl": "https://open.spotify.com/track/2NcMbPHpfRjc2UdLIT4SQd",
-      "duration": 119982,
-      "previewUrl": ""
-    },
-    {
-      "id": "0omQt0YfcdYM6RnA5EVTw2",
-      "name": "Virtual Storm - Hard Arrange",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-07-10T05:32:25.426Z",
-      "spotifyUrl": "https://open.spotify.com/track/0omQt0YfcdYM6RnA5EVTw2",
-      "duration": 131802,
       "previewUrl": ""
     }
   ],
