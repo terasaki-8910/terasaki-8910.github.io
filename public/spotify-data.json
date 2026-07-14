@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-07-14T13:05:49.427Z",
+  "lastUpdated": "2026-07-14T19:00:39.581Z",
   "tracks": [
+    {
+      "id": "0VjIjW4GlUZAMYd2vXMi3b",
+      "name": "Blinding Lights",
+      "artist": "The Weeknd",
+      "album": "After Hours",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
+      "playedAt": "2026-07-14T16:32:56.189Z",
+      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
+      "duration": 200040,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-07-14T14:11:45.386Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "0VwNdo84DaVYLIkbVO86ND",
+      "name": "We Are Never Ever Getting Back Together",
+      "artist": "Taylor Swift",
+      "album": "Red (Big Machine Radio Release Special)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731c248e90c3e569f90aef9dec",
+      "playedAt": "2026-07-14T14:03:55.354Z",
+      "spotifyUrl": "https://open.spotify.com/track/0VwNdo84DaVYLIkbVO86ND",
+      "duration": 193146,
+      "previewUrl": ""
+    },
+    {
+      "id": "4gdCLKxDflDweye4bsfNnW",
+      "name": "Bar Bar Bar",
+      "artist": "Crayon Pop",
+      "album": "Evolution Pop_Vol. 1",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ddcc6d9ec5844848b9c9b114",
+      "playedAt": "2026-07-14T14:00:41.634Z",
+      "spotifyUrl": "https://open.spotify.com/track/4gdCLKxDflDweye4bsfNnW",
+      "duration": 180532,
+      "previewUrl": ""
+    },
     {
       "id": "1mWdTewIgB3gtBM3TOSFhB",
       "name": "Butter",
@@ -90,17 +134,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-07-14T06:10:04.296Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
       "id": "1chTElozugAFsW2x03IS6d",
       "name": "キミに100パーセント",
       "artist": "Kyary Pamyu Pamyu",
@@ -120,17 +153,6 @@
       "playedAt": "2026-07-14T04:23:16.388Z",
       "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
       "duration": 236000,
-      "previewUrl": ""
-    },
-    {
-      "id": "0VjIjW4GlUZAMYd2vXMi3b",
-      "name": "Blinding Lights",
-      "artist": "The Weeknd",
-      "album": "After Hours",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
-      "playedAt": "2026-07-14T04:11:01.887Z",
-      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
-      "duration": 200040,
       "previewUrl": ""
     },
     {
@@ -253,73 +275,7 @@
       "spotifyUrl": "https://open.spotify.com/track/63gc4cyfksT7P69ZbK1lTN",
       "duration": 116186,
       "previewUrl": ""
-    },
-    {
-      "id": "0hWLesGpaD2HDPybhp4qfZ",
-      "name": "夢路の花 - Instrumental Ver.",
-      "artist": "ヒナ(CV:広橋涼)",
-      "album": "ブルーアーカイブ「夢路の花」",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f086ef205cd0c3179e883992",
-      "playedAt": "2026-07-10T06:36:48.770Z",
-      "spotifyUrl": "https://open.spotify.com/track/0hWLesGpaD2HDPybhp4qfZ",
-      "duration": 192642,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zPgJVRYkuLYyE3mNenwf3",
-      "name": "Cotton Candy Island",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-07-10T05:54:50.788Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zPgJVRYkuLYyE3mNenwf3",
-      "duration": 123050,
-      "previewUrl": ""
-    },
-    {
-      "id": "2S1wK8ocFeOUx4aBw6z2q8",
-      "name": "After School Dessert",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-07-10T05:52:50.706Z",
-      "spotifyUrl": "https://open.spotify.com/track/2S1wK8ocFeOUx4aBw6z2q8",
-      "duration": 122905,
-      "previewUrl": ""
-    },
-    {
-      "id": "4bcDDVSs9DfRX2Thzjfif4",
-      "name": "Hello to Halo",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-07-10T05:50:56.599Z",
-      "spotifyUrl": "https://open.spotify.com/track/4bcDDVSs9DfRX2Thzjfif4",
-      "duration": 105190,
-      "previewUrl": ""
-    },
-    {
-      "id": "7DbeeMHXn3aW6e7NYJWgF2",
-      "name": "Wave & Conquer",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-07-10T05:49:29.356Z",
-      "spotifyUrl": "https://open.spotify.com/track/7DbeeMHXn3aW6e7NYJWgF2",
-      "duration": 123519,
-      "previewUrl": ""
-    },
-    {
-      "id": "7xWXWraHp5tqoksl0awFFG",
-      "name": "Dive into Summer",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-07-10T05:47:42.176Z",
-      "spotifyUrl": "https://open.spotify.com/track/7xWXWraHp5tqoksl0awFFG",
-      "duration": 118269,
-      "previewUrl": ""
     }
   ],
-  "total": 29
+  "total": 25
 }
