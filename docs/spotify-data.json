@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-07-15T07:48:59.491Z",
+  "lastUpdated": "2026-07-15T13:09:44.622Z",
   "tracks": [
+    {
+      "id": "6lcqXYjDSGxx69DurXx0rF",
+      "name": "ループザルーム (feat. 初音ミク)",
+      "artist": "ルシノ, Hatsune Miku",
+      "album": "ループザルーム / ランベントアリア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
+      "playedAt": "2026-07-15T12:05:10.450Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
+      "duration": 134071,
+      "previewUrl": ""
+    },
+    {
+      "id": "017PF4Q3l4DBUiWoXk4OWT",
+      "name": "Break My Heart",
+      "artist": "Dua Lipa",
+      "album": "Future Nostalgia",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c88bae7846e62a8ba59ee0bd",
+      "playedAt": "2026-07-15T10:14:45.055Z",
+      "spotifyUrl": "https://open.spotify.com/track/017PF4Q3l4DBUiWoXk4OWT",
+      "duration": 221820,
+      "previewUrl": ""
+    },
+    {
+      "id": "0VjIjW4GlUZAMYd2vXMi3b",
+      "name": "Blinding Lights",
+      "artist": "The Weeknd",
+      "album": "After Hours",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
+      "playedAt": "2026-07-15T10:14:09.348Z",
+      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
+      "duration": 200040,
+      "previewUrl": ""
+    },
+    {
+      "id": "5OQIvZoUPvfQq02tITKjQZ",
+      "name": "水流のロック",
+      "artist": "Natsuko Nisshoku",
+      "album": "瞼瞼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
+      "playedAt": "2026-07-15T10:10:41.139Z",
+      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
+      "duration": 179173,
+      "previewUrl": ""
+    },
+    {
+      "id": "0FIDCNYYjNvPVimz5icugS",
+      "name": "Timeless (feat Playboi Carti)",
+      "artist": "The Weeknd, Playboi Carti",
+      "album": "Hurry Up Tomorrow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de79f330bc297af3fae736da",
+      "playedAt": "2026-07-15T07:55:29.602Z",
+      "spotifyUrl": "https://open.spotify.com/track/0FIDCNYYjNvPVimz5icugS",
+      "duration": 256000,
+      "previewUrl": ""
+    },
+    {
+      "id": "3JG1uFc40wfyrqaWC7iv0e",
+      "name": "i like the way you kiss me",
+      "artist": "Artemas",
+      "album": "yustyna",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9cd12dd361f5d40ca435868",
+      "playedAt": "2026-07-15T07:51:13.076Z",
+      "spotifyUrl": "https://open.spotify.com/track/3JG1uFc40wfyrqaWC7iv0e",
+      "duration": 142514,
+      "previewUrl": ""
+    },
     {
       "id": "1jEBSDN5vYViJQr78W7jr2",
       "name": "Light Switch",
@@ -263,72 +329,6 @@
       "playedAt": "2026-07-15T06:18:54.368Z",
       "spotifyUrl": "https://open.spotify.com/track/5QO79kh1waicV47BqGRL3g",
       "duration": 215626,
-      "previewUrl": ""
-    },
-    {
-      "id": "0VjIjW4GlUZAMYd2vXMi3b",
-      "name": "Blinding Lights",
-      "artist": "The Weeknd",
-      "album": "After Hours",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
-      "playedAt": "2026-07-15T06:14:20.877Z",
-      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
-      "duration": 200040,
-      "previewUrl": ""
-    },
-    {
-      "id": "10Eyo4juZQFthKqlJgGMdp",
-      "name": "怪盗",
-      "artist": "back number",
-      "album": "怪盗",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae51734d04ef431b65a09a9a",
-      "playedAt": "2026-07-15T02:59:49.586Z",
-      "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
-      "duration": 196226,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
-      "name": "春を告げる",
-      "artist": "yama",
-      "album": "春を告げる",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
-      "playedAt": "2026-07-15T02:56:32.906Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
-      "duration": 196497,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-07-15T02:38:08.711Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-07-15T02:34:31.278Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
-      "previewUrl": ""
-    },
-    {
-      "id": "4H89WUjBaQMIiqcnMSVX1j",
-      "name": "人マニア",
-      "artist": "Sasuke Haraguchi",
-      "album": "人マニア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f381b44dcb194d619a487dc",
-      "playedAt": "2026-07-15T02:32:13.233Z",
-      "spotifyUrl": "https://open.spotify.com/track/4H89WUjBaQMIiqcnMSVX1j",
-      "duration": 127200,
       "previewUrl": ""
     }
   ],
