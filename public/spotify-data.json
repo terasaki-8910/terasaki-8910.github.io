@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-07-16T01:41:04.862Z",
+  "lastUpdated": "2026-07-16T07:53:49.185Z",
   "tracks": [
+    {
+      "id": "2isCWO5dMBDzyLscHVoJIO",
+      "name": "憧れをいっぱい",
+      "artist": "初星学園, 高木龍一, 倉本千奈",
+      "album": "憧れをいっぱい",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
+      "playedAt": "2026-07-16T07:49:46.956Z",
+      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
+      "duration": 288363,
+      "previewUrl": ""
+    },
+    {
+      "id": "0pytLWYHCQdheIWB2Ay5Dk",
+      "name": "Ambitious",
+      "artist": "Jack Harlow",
+      "album": "Jackman.",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273476513434478fcdd4a6b2f6e",
+      "playedAt": "2026-07-16T07:43:41.710Z",
+      "spotifyUrl": "https://open.spotify.com/track/0pytLWYHCQdheIWB2Ay5Dk",
+      "duration": 172609,
+      "previewUrl": ""
+    },
     {
       "id": "6j3wDNKqEeZ6QwPtCcpJX8",
       "name": "Stop Giving Me Advice (with Jack Harlow & Dave)",
@@ -307,28 +329,6 @@
       "playedAt": "2026-07-15T07:48:50.047Z",
       "spotifyUrl": "https://open.spotify.com/track/1jEBSDN5vYViJQr78W7jr2",
       "duration": 187703,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Dvkj6JhhA12EX05fT7y2e",
-      "name": "As It Was",
-      "artist": "Harry Styles",
-      "album": "Harry's House",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27382ce362511fb3d9dda6578ee",
-      "playedAt": "2026-07-15T07:45:41.819Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Dvkj6JhhA12EX05fT7y2e",
-      "duration": 167303,
-      "previewUrl": ""
-    },
-    {
-      "id": "3CRDbSIZ4r5MsZ0YwxuEkn",
-      "name": "Stressed Out",
-      "artist": "Twenty One Pilots",
-      "album": "Blurryface",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732df0d98a423025032d0db1f7",
-      "playedAt": "2026-07-15T07:42:53.992Z",
-      "spotifyUrl": "https://open.spotify.com/track/3CRDbSIZ4r5MsZ0YwxuEkn",
-      "duration": 202333,
       "previewUrl": ""
     }
   ],
