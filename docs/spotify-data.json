@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-07-17T13:02:47.364Z",
+  "lastUpdated": "2026-07-17T18:51:55.766Z",
   "tracks": [
+    {
+      "id": "4lEk6fyJu7LLPenqL0Raj5",
+      "name": "阿修羅ちゃん",
+      "artist": "Ado",
+      "album": "阿修羅ちゃん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3dea665dd662e399ae6a2f2",
+      "playedAt": "2026-07-17T13:06:09.652Z",
+      "spotifyUrl": "https://open.spotify.com/track/4lEk6fyJu7LLPenqL0Raj5",
+      "duration": 196285,
+      "previewUrl": ""
+    },
     {
       "id": "1C1skAeFtnguXNlCYRQoCr",
       "name": "ブレインロット",
@@ -318,17 +329,6 @@
       "playedAt": "2026-07-16T08:42:49.535Z",
       "spotifyUrl": "https://open.spotify.com/track/0NMdTDx7LCJdm3ioJ1cDcg",
       "duration": 108719,
-      "previewUrl": ""
-    },
-    {
-      "id": "1rAyzUlpPGidpt5N84tkVt",
-      "name": "Midnight Trip",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-07-16T08:41:04.761Z",
-      "spotifyUrl": "https://open.spotify.com/track/1rAyzUlpPGidpt5N84tkVt",
-      "duration": 93641,
       "previewUrl": ""
     }
   ],
