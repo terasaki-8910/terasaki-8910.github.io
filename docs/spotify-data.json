@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-07-17T01:44:12.038Z",
+  "lastUpdated": "2026-07-17T07:50:55.517Z",
   "tracks": [
+    {
+      "id": "1YfXeoQ39zL9IWHOTrL8bg",
+      "name": "海馬成長痛",
+      "artist": "ZUTOMAYO",
+      "album": "海馬成長痛",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
+      "playedAt": "2026-07-17T06:02:47.499Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
+      "duration": 189533,
+      "previewUrl": ""
+    },
+    {
+      "id": "6kWxIqQDsKFYCJGbU4AjCX",
+      "name": "Hardest To Love",
+      "artist": "The Weeknd",
+      "album": "After Hours",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
+      "playedAt": "2026-07-17T05:30:59.540Z",
+      "spotifyUrl": "https://open.spotify.com/track/6kWxIqQDsKFYCJGbU4AjCX",
+      "duration": 211400,
+      "previewUrl": ""
+    },
     {
       "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
       "name": "春を告げる",
@@ -307,28 +329,6 @@
       "playedAt": "2026-07-16T08:33:03.064Z",
       "spotifyUrl": "https://open.spotify.com/track/1aW6Pm6mmRh1qkMuHkbD22",
       "duration": 140947,
-      "previewUrl": ""
-    },
-    {
-      "id": "63gc4cyfksT7P69ZbK1lTN",
-      "name": "Operation☆DOTABATA!",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-07-16T08:30:52.510Z",
-      "spotifyUrl": "https://open.spotify.com/track/63gc4cyfksT7P69ZbK1lTN",
-      "duration": 116186,
-      "previewUrl": ""
-    },
-    {
-      "id": "5bmw5BjTqXBEusbrv4bEnQ",
-      "name": "Sugar story",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-07-16T08:28:27.656Z",
-      "spotifyUrl": "https://open.spotify.com/track/5bmw5BjTqXBEusbrv4bEnQ",
-      "duration": 120188,
       "previewUrl": ""
     }
   ],
