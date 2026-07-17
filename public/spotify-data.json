@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-07-17T07:50:55.517Z",
+  "lastUpdated": "2026-07-17T13:02:47.364Z",
   "tracks": [
+    {
+      "id": "1C1skAeFtnguXNlCYRQoCr",
+      "name": "ブレインロット",
+      "artist": "東京真中",
+      "album": "ブレインロット",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
+      "playedAt": "2026-07-17T13:01:25.591Z",
+      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
+      "duration": 122888,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vDqNzQqEhl7boeRS3Joli",
+      "name": "好きすぎて滅！",
+      "artist": "M!LK",
+      "album": "好きすぎて滅！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
+      "playedAt": "2026-07-17T12:56:37.177Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
+      "duration": 212400,
+      "previewUrl": ""
+    },
+    {
+      "id": "0VjIjW4GlUZAMYd2vXMi3b",
+      "name": "Blinding Lights",
+      "artist": "The Weeknd",
+      "album": "After Hours",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
+      "playedAt": "2026-07-17T12:53:04.323Z",
+      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
+      "duration": 200040,
+      "previewUrl": ""
+    },
+    {
+      "id": "4BC7to7tQh5gF7BsuccT60",
+      "name": "バカ通信 (feat. 知声)",
+      "artist": "isonosuke, Chis-A",
+      "album": "バカ通信",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339568c60733dd83ba31b2c4a",
+      "playedAt": "2026-07-17T10:00:18.793Z",
+      "spotifyUrl": "https://open.spotify.com/track/4BC7to7tQh5gF7BsuccT60",
+      "duration": 149000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5QF2n0rgEm2whK6hl9gVBP",
+      "name": "どうにかなっちゃいそう！",
+      "artist": "NOMELON NOLEMON",
+      "album": "どうにかなっちゃいそう！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c342749a822a5d49aa82843",
+      "playedAt": "2026-07-17T09:07:41.807Z",
+      "spotifyUrl": "https://open.spotify.com/track/5QF2n0rgEm2whK6hl9gVBP",
+      "duration": 155245,
+      "previewUrl": ""
+    },
     {
       "id": "1YfXeoQ39zL9IWHOTrL8bg",
       "name": "海馬成長痛",
@@ -274,61 +329,6 @@
       "playedAt": "2026-07-16T08:41:04.761Z",
       "spotifyUrl": "https://open.spotify.com/track/1rAyzUlpPGidpt5N84tkVt",
       "duration": 93641,
-      "previewUrl": ""
-    },
-    {
-      "id": "30WkBZj2avgZJKk0hfLL4v",
-      "name": "NERINERI CHALLENGE",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-07-16T08:39:35.993Z",
-      "spotifyUrl": "https://open.spotify.com/track/30WkBZj2avgZJKk0hfLL4v",
-      "duration": 121800,
-      "previewUrl": ""
-    },
-    {
-      "id": "1g5nDEvyuteIW7nrQHFMsu",
-      "name": "System All Green",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-07-16T08:37:50.920Z",
-      "spotifyUrl": "https://open.spotify.com/track/1g5nDEvyuteIW7nrQHFMsu",
-      "duration": 120025,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hiSDmqC8ZzNj2hW9M8rkT",
-      "name": "Accelerator",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-07-16T08:35:55.103Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hiSDmqC8ZzNj2hW9M8rkT",
-      "duration": 110921,
-      "previewUrl": ""
-    },
-    {
-      "id": "1HWp3T9mxQxd4UAPjkAjRE",
-      "name": "Fruitful Blossom",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-07-16T08:34:18.337Z",
-      "spotifyUrl": "https://open.spotify.com/track/1HWp3T9mxQxd4UAPjkAjRE",
-      "duration": 88211,
-      "previewUrl": ""
-    },
-    {
-      "id": "1aW6Pm6mmRh1qkMuHkbD22",
-      "name": "Morose Dreamer",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
-      "playedAt": "2026-07-16T08:33:03.064Z",
-      "spotifyUrl": "https://open.spotify.com/track/1aW6Pm6mmRh1qkMuHkbD22",
-      "duration": 140947,
       "previewUrl": ""
     }
   ],
