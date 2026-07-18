@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-07-18T01:25:06.722Z",
+  "lastUpdated": "2026-07-18T07:25:46.535Z",
   "tracks": [
+    {
+      "id": "23eTkfMmq1LvqiDzeNHdVe",
+      "name": "前前前世 - movie ver.",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a0abdc8306966fee2e9076b2",
+      "playedAt": "2026-07-18T07:22:02.979Z",
+      "spotifyUrl": "https://open.spotify.com/track/23eTkfMmq1LvqiDzeNHdVe",
+      "duration": 285880,
+      "previewUrl": ""
+    },
     {
       "id": "4lEk6fyJu7LLPenqL0Raj5",
       "name": "阿修羅ちゃん",
@@ -318,17 +329,6 @@
       "playedAt": "2026-07-16T08:45:14.465Z",
       "spotifyUrl": "https://open.spotify.com/track/6wK78BaKK20QxyMhkZWXdh",
       "duration": 149928,
-      "previewUrl": ""
-    },
-    {
-      "id": "0NMdTDx7LCJdm3ioJ1cDcg",
-      "name": "Koi is Love",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
-      "playedAt": "2026-07-16T08:42:49.535Z",
-      "spotifyUrl": "https://open.spotify.com/track/0NMdTDx7LCJdm3ioJ1cDcg",
-      "duration": 108719,
       "previewUrl": ""
     }
   ],
