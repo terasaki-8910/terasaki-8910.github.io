@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-07-18T12:49:52.047Z",
+  "lastUpdated": "2026-07-18T18:44:47.468Z",
   "tracks": [
+    {
+      "id": "3gmn76fCtpDazGMnN0QMHX",
+      "name": "NIGHT DANCER",
+      "artist": "imase",
+      "album": "POP CUBE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b062591b6a5c15652dd2bb5",
+      "playedAt": "2026-07-18T14:39:52.829Z",
+      "spotifyUrl": "https://open.spotify.com/track/3gmn76fCtpDazGMnN0QMHX",
+      "duration": 210600,
+      "previewUrl": ""
+    },
     {
       "id": "04niDJQ3mzjkwzvid0Otoi",
       "name": "錠剤",
@@ -318,17 +329,6 @@
       "playedAt": "2026-07-16T08:49:14.951Z",
       "spotifyUrl": "https://open.spotify.com/track/0Yb9nLUaGThL2BYkedY8wC",
       "duration": 120293,
-      "previewUrl": ""
-    },
-    {
-      "id": "5kCtg0z27lBVnDD1NPgTnO",
-      "name": "Nichirin",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-07-16T08:47:22.169Z",
-      "spotifyUrl": "https://open.spotify.com/track/5kCtg0z27lBVnDD1NPgTnO",
-      "duration": 129918,
       "previewUrl": ""
     }
   ],
