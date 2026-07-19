@@ -8,6 +8,18 @@
     <link rel="canonical" href="https://terasaki-8910.github.io/">
     <meta name="google-site-verification" content="VY33ayMUdiJ2mzUZdicSZvt2gAkWO0UB9RWCCfWYbV4" />
 
+    <!-- 初回ペイントの背景色。本来はindex.css(bg-paper)が担うが、あちらは
+         外部stylesheetの読み込みを待つため、CSSバンドルより前に評価される
+         最初の一瞬(および素のHTMLしか見ない環境)でも白フラッシュせず
+         本サイトと同じ黄色/ダークになるよう、ここでも直接指定しておく。
+         theme-colorメタタグと同じ値を使うためハードコード(トークン参照不可)。 -->
+    <style>
+      html, body { background-color: #F9EC8E; }
+      @media (prefers-color-scheme: dark) {
+        html, body { background-color: #121212; }
+      }
+    </style>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
@@ -96,7 +108,8 @@
         <p>冬色 — Kuso Site Manufacturing Plant</p>
         <p>
           クソサイト製造工場へようこそ。クソサイト製造構造長の冬色と申します。
-          筑波大学大学院 情報学学位プログラム M1在学中。
+          舞鶴工業高等専門学校 電気情報工学科を経て、筑波大学 情報学群 情報メディア創成学類に編入学。
+          現在は筑波大学大学院 情報学学位プログラム M1在学中。
           実験的なプロジェクト、未完成なアイデア、そして挑戦の痕跡。ここは創造の実験場です。
         </p>
         <p>趣味は映画鑑賞、麻雀、サーバこねこね。好きなアーティストはサカナクション、CentralCee。</p>
