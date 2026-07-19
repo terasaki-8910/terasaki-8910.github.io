@@ -17,7 +17,7 @@ const projects = [
     title: 'Tsukuba Gomi Calendar',
     description: 'つくば市ごみ収集カレンダー — オープンデータ連携',
     tags: ['Open Data', 'iCal', 'React'],
-    link: '/gomi/',
+    link: '/gomi-tsukuba/',
   },
   {
     id: 3,

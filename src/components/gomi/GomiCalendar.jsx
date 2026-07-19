@@ -25,7 +25,7 @@ export default function GomiCalendar() {
 
   useEffect(() => {
     let cancelled = false
-    fetch('/gomi/data.json')
+    fetch('/gomi-tsukuba/data.json')
       .then((res) => {
         if (!res.ok) throw new Error(`data fetch failed: ${res.status}`)
         return res.json()

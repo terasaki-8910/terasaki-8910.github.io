@@ -1,5 +1,5 @@
-// ごみ収集カテゴリの表示定数(/gomi/)。
-// idはpublic/gomi/data.json(scripts/update-gomi-calendar.jsが生成)と対応する。
+// ごみ収集カテゴリの表示定数(/gomi-tsukuba/)。
+// idはpublic/gomi-tsukuba/data.json(scripts/update-gomi-calendar.jsが生成)と対応する。
 // ラベルをソースコード側に持つのはフォントサブセット抽出の対象にするため
 // (データ由来の文字はサブセットに入らずフォールバックしてしまう)。
 export const GOMI_CATEGORIES = [

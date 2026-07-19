@@ -39,7 +39,7 @@
 }
 
 /* Zen Kurenaido(Google Fonts, SIL OFL)。ソース内の日本語文字+印字可能
-   ASCII全域+public/gomi/data.jsonの町名/かな(データ由来でソース抽出に
+   ASCII全域+public/gomi-tsukuba/data.jsonの町名/かな(データ由来でソース抽出に
    載らないため明示的に追加)をpyftsubsetでサブセット化して自ホスト(137KB)。
    生成手順: google/fontsリポジトリのZenKurenaido-Regular.ttfを取得し、
    `python3 -m fontTools.subset <ttf> --text-file=<文字集合> --flavor=woff2`
@@ -64,7 +64,7 @@
   --color-muted: #696969;
   --color-line: rgba(0, 0, 0, 0.12);
 
-  /* ごみ収集カテゴリ色(/gomi/)。装飾ではなくデータの意味色(dataviz層)なので
+  /* ごみ収集カテゴリ色(/gomi-tsukuba/)。装飾ではなくデータの意味色(dataviz層)なので
      「アクセントはceleste 1色」方針とは別レイヤーとして共存させる。
      背景がペール黄のため黄系hueは不使用。全色、非テキスト用途(ドット/
      ボーダー)として背景比3:1以上を計算検証済み。 */

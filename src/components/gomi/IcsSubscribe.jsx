@@ -3,7 +3,7 @@ import { useState } from 'react'
 // iCal購読UI。icsはGitHub Pagesの静的ファイルとして配信されるため、
 // devサーバーで見ていてもURLは本番の絶対URLを使う(Googleカレンダー側から
 // 取得できる公開URLである必要があるため)。
-const ICS_BASE = 'https://terasaki-8910.github.io/gomi/ics/'
+const ICS_BASE = 'https://terasaki-8910.github.io/gomi-tsukuba/ics/'
 
 export default function IcsSubscribe({ areaSlug, areaLabel }) {
   const [copied, setCopied] = useState(false)

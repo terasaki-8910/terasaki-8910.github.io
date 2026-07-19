@@ -18,8 +18,8 @@
  * 変えたら)exit 1で失敗して既存データを保護する。
  *
  * 出力:
- *   public/gomi/data.json      — エリア別日程 + 町→エリアのマッピング
- *   public/gomi/ics/<slug>.ics — エリア別iCal(Googleカレンダー等の購読用)
+ *   public/gomi-tsukuba/data.json      — エリア別日程 + 町→エリアのマッピング
+ *   public/gomi-tsukuba/ics/<slug>.ics — エリア別iCal(Googleカレンダー等の購読用)
  */
 
 import fs from 'fs';
@@ -28,7 +28,7 @@ import { fileURLToPath } from 'url';
 import ExcelJS from 'exceljs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const OUT_DIR = path.join(__dirname, '../public/gomi');
+const OUT_DIR = path.join(__dirname, '../public/gomi-tsukuba');
 const ICS_DIR = path.join(OUT_DIR, 'ics');
 
 const PAGE_URL =
@@ -298,7 +298,7 @@ async function main() {
     console.log(`✅ ics/${slug}.ics (${uids.length}イベント)`);
   }
 
-  console.log(`\n✨ 完了 (${SITE_ORIGIN}/gomi/ で表示、ics購読URL: ${SITE_ORIGIN}/gomi/ics/<area>.ics)`);
+  console.log(`\n✨ 完了 (${SITE_ORIGIN}/gomi-tsukuba/ で表示、ics購読URL: ${SITE_ORIGIN}/gomi-tsukuba/ics/<area>.ics)`);
 }
 
 main().catch((e) => fail(e.stack || e.message));
