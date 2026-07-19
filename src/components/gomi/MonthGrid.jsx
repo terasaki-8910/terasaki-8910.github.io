@@ -26,6 +26,7 @@ export default function MonthGrid({
   selectedDate,
   onSelectDate,
   today,
+  onOpenAdd,
 }) {
   const { y, m } = viewYM
   const lead = firstWeekday(y, m)
@@ -78,14 +79,24 @@ export default function MonthGrid({
             const label =
               `${m}月${d}日: ` +
               (cats.length ? cats.map((c) => c.label).join('、') : '収集なし')
+            // セル自体はdiv+role="button"(日付選択用)。中のカテゴリチップは
+            // 個別のクリック対象(カレンダー追加)にするため、実button同士の
+            // 入れ子(無効なHTML)を避けてこの構造にしている。
             return (
-              <button
+              <div
                 key={iso}
-                type="button"
+                role="button"
+                tabIndex={0}
                 onClick={() => onSelectDate(iso)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    onSelectDate(iso)
+                  }
+                }}
                 aria-label={label}
                 aria-pressed={isSelected}
-                className={`min-h-[52px] md:min-h-[92px] p-1 md:p-1.5 text-left align-top transition-colors ${
+                className={`min-h-[52px] md:min-h-[92px] p-1 md:p-1.5 text-left align-top transition-colors cursor-pointer ${
                   isSelected ? 'bg-celeste-dim' : 'bg-paper hover:bg-celeste-dim'
                 } ${isToday ? 'ring-2 ring-inset ring-celeste' : ''}`}
               >
@@ -96,25 +107,32 @@ export default function MonthGrid({
                 >
                   {d}
                 </span>
-                {/* デスクトップ: 小チップ(最大3+超過表示) */}
+                {/* デスクトップ: 小チップ(最大3+超過表示)。クリックでカレンダーに追加 */}
                 <span className="hidden md:flex flex-col gap-0.5">
                   {cats.slice(0, 3).map((c) => (
-                    <span
+                    <button
                       key={c.id}
-                      className="block text-[10px] leading-tight text-ink px-1 py-px rounded-[2px] truncate"
+                      type="button"
+                      title={`${c.label}をカレンダーに追加`}
+                      aria-label={`${m}月${d}日の${c.label}をカレンダーに追加`}
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        onOpenAdd(iso, c)
+                      }}
+                      className="block w-full text-[10px] leading-tight text-ink px-1 py-px rounded-[2px] truncate text-left cursor-pointer hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-celeste transition-[filter]"
                       style={{
                         borderLeft: `3px solid ${gomiColor(c.id)}`,
                         backgroundColor: `color-mix(in srgb, ${gomiColor(c.id)} 14%, transparent)`,
                       }}
                     >
                       {c.short}
-                    </span>
+                    </button>
                   ))}
                   {cats.length > 3 && (
                     <span className="text-[10px] text-muted px-1">+{cats.length - 3}</span>
                   )}
                 </span>
-                {/* モバイル: 色ドット(最大4+超過ドット) */}
+                {/* モバイル: 色ドット(最大4+超過ドット)。ラベルが無いため非対話 */}
                 <span className="flex md:hidden flex-wrap gap-1">
                   {cats.slice(0, 4).map((c) => (
                     <span
@@ -127,7 +145,7 @@ export default function MonthGrid({
                     <span className="text-[9px] leading-none text-muted">+</span>
                   )}
                 </span>
-              </button>
+              </div>
             )
           })}
         </div>
@@ -137,7 +155,8 @@ export default function MonthGrid({
 }
 
 // 選択日の詳細(モバイル用)。デスクトップはセル内チップで足りるため非表示。
-export function DayDetail({ iso, days }) {
+// 各行をタップするとその日・カテゴリ単体をカレンダーに追加できる。
+export function DayDetail({ iso, days, onOpenAdd }) {
   const cats = orderCats(days[iso] || [])
   const { m, d } = parseISO(iso)
   return (
@@ -148,14 +167,22 @@ export function DayDetail({ iso, days }) {
       {cats.length === 0 ? (
         <p className="text-sm text-muted">収集はありません</p>
       ) : (
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           {cats.map((c) => (
-            <li key={c.id} className="flex items-center gap-3 text-sm text-ink">
-              <span
-                className="w-2.5 h-2.5 rounded-full shrink-0"
-                style={{ backgroundColor: gomiColor(c.id) }}
-              />
-              {c.label}
+            <li key={c.id}>
+              <button
+                type="button"
+                onClick={() => onOpenAdd(iso, c)}
+                aria-label={`${m}月${d}日の${c.label}をカレンダーに追加`}
+                className="w-full flex items-center gap-3 text-sm text-ink text-left py-1.5 -mx-1 px-1 rounded hover:bg-celeste-dim focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-celeste transition-colors cursor-pointer"
+              >
+                <span
+                  className="w-2.5 h-2.5 rounded-full shrink-0"
+                  style={{ backgroundColor: gomiColor(c.id) }}
+                />
+                {c.label}
+                <span className="ml-auto text-[10px] text-muted">カレンダーに追加</span>
+              </button>
             </li>
           ))}
         </ul>

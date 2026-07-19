@@ -5,6 +5,7 @@ import MonthGrid, { DayDetail } from './MonthGrid'
 import NextPickupList from './NextPickupList'
 import TownPicker from './TownPicker'
 import IcsSubscribe from './IcsSubscribe'
+import AddToCalendarModal from './AddToCalendarModal'
 
 const STORAGE_KEY = 'gomi-town'
 
@@ -22,6 +23,7 @@ export default function GomiCalendar() {
     return { y, m }
   })
   const [selectedDate, setSelectedDate] = useState(today)
+  const [addTarget, setAddTarget] = useState(null) // { iso, category } | null
 
   useEffect(() => {
     let cancelled = false
@@ -134,8 +136,13 @@ export default function GomiCalendar() {
           selectedDate={selectedDate}
           onSelectDate={setSelectedDate}
           today={today}
+          onOpenAdd={(iso, category) => setAddTarget({ iso, category })}
         />
-        <DayDetail iso={selectedDate} days={area.days} />
+        <DayDetail
+          iso={selectedDate}
+          days={area.days}
+          onOpenAdd={(iso, category) => setAddTarget({ iso, category })}
+        />
       </div>
 
       <div className="space-y-4 md:col-start-1">
@@ -155,6 +162,17 @@ export default function GomiCalendar() {
           {data.fiscalYear}年度 / 最終更新: {data.lastUpdated.slice(0, 10)}
         </p>
       </div>
+
+      {addTarget && (
+        <AddToCalendarModal
+          iso={addTarget.iso}
+          category={addTarget.category}
+          areaSlug={townEntry.a}
+          areaLabel={area.label}
+          fiscalYear={data.fiscalYear}
+          onClose={() => setAddTarget(null)}
+        />
+      )}
     </div>
   )
 }
