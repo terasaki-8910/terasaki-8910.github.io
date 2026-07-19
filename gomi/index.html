@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="つくば市ごみ収集カレンダー - クソサイト製造工場" />
-    <title>ごみ収集カレンダー | クソサイト製造工場</title>
+    <meta name="description" content="つくば市の地区別ごみ収集日程カレンダー。春日など225町丁字に対応、iCal(Googleカレンダー等)購読対応。市のオープンデータ(CC BY 4.0)を自動更新。" />
+    <title>つくば市ごみ収集カレンダー | クソサイト製造工場</title>
     <link rel="canonical" href="https://terasaki-8910.github.io/gomi/">
 
     <!-- Favicon -->
@@ -17,11 +17,82 @@
     <meta name="theme-color" content="#F9EC8E" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
 
+    <!-- Open Graph (SNSシェア用) -->
+    <meta property="og:title" content="つくば市ごみ収集カレンダー">
+    <meta property="og:description" content="つくば市の地区別ごみ収集日程カレンダー。iCal購読対応。">
+    <meta property="og:image" content="https://terasaki-8910.github.io/icons/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://terasaki-8910.github.io/gomi/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="つくば市ごみ収集カレンダー">
+    <meta name="twitter:description" content="つくば市の地区別ごみ収集日程カレンダー。iCal購読対応。">
+    <meta name="twitter:image" content="https://terasaki-8910.github.io/icons/og-image.png">
+
     <!-- 共有ヘッダーCSS -->
     <link rel="stylesheet" href="/header-styles.css">
+
+    <!-- seo-fallback-contentを常に非表示にする。index.htmlと同じ方式
+         (クローラーはHTMLソースのテキストとして読めるので、非表示でも
+         SEO上の効果は変わらない)。 -->
+    <style>
+      #seo-fallback-content {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "つくば市ごみ収集カレンダー",
+      "url": "https://terasaki-8910.github.io/gomi/",
+      "description": "つくば市の地区別ごみ収集日程カレンダー。225町丁字対応、iCal購読対応。",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "ja",
+      "isAccessibleForFree": true,
+      "author": {
+        "@type": "Person",
+        "name": "冬色",
+        "url": "https://terasaki-8910.github.io/"
+      }
+    }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO用の静的フォールバック(id: seo-fallback-content)。
+           React(createRoot().render())がマウント時にこの中身を丸ごと
+           置き換えるため、実際の訪問者にはJS読み込み前のごく短い間しか
+           見えない。GomiCalendar.jsxのカテゴリ名やデフォルト地区(春日)を
+           変えたときは、ここも合わせて更新すること。 -->
+      <div id="seo-fallback-content">
+        <h1>つくば市ごみ収集カレンダー</h1>
+        <p>
+          つくば市の地区(北地区・南地区・東地区・西地区A・西地区B)別ごみ収集日程カレンダーです。
+          春日をはじめ市内225町丁字の収集日を検索できます。
+          燃やせるごみ・燃やせないごみ・古紙、古布・プラスチック製容器包装・ペットボトル・びん・かん・
+          スプレー容器・粗大ごみ(予約制)の収集日を月間カレンダーと次回収集の一覧で確認できます。
+        </p>
+        <p>
+          つくば市が公開するごみ収集日程オープンデータ(CC BY 4.0)をもとに自動更新しており、
+          iCal形式での配信にも対応しているためGoogleカレンダー等への登録も可能です。
+        </p>
+      </div>
+    </div>
     <script type="module" src="/src/gomi-main.jsx"></script>
   </body>
 </html>
