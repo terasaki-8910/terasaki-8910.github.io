@@ -38,12 +38,14 @@
   font-display: swap;
 }
 
-/* Zen Kurenaido(Google Fonts, SIL OFL)。このリポジトリのソース内で実際に
-   使われている日本語文字+印字可能ASCII全域(英数字・記号)をGoogle Fontsに
-   text=指定でリクエストしたサブセットを自ホスト(85KB)。ASCII全域を含めて
-   いるのは、英数字だけ別フォントにフォールバックして和文と字体が食い違う
-   (「Now」「To be continued」等が別書体で浮く)問題を防ぐため。新しい漢字を
-   含むコンテンツを追加した場合はこのサブセットの再生成が必要。 */
+/* Zen Kurenaido(Google Fonts, SIL OFL)。ソース内の日本語文字+印字可能
+   ASCII全域+public/gomi/data.jsonの町名/かな(データ由来でソース抽出に
+   載らないため明示的に追加)をpyftsubsetでサブセット化して自ホスト(137KB)。
+   生成手順: google/fontsリポジトリのZenKurenaido-Regular.ttfを取得し、
+   `python3 -m fontTools.subset <ttf> --text-file=<文字集合> --flavor=woff2`
+   (以前のGoogle Fonts text=指定APIは文字数が多いとスライス配信に
+   フォールバックするため使えなくなった)。新しい漢字を含むコンテンツを
+   追加した場合はこのサブセットの再生成が必要。 */
 @font-face {
   font-family: 'Zen Kurenaido';
   src: url('/fonts/zen-kurenaido.woff2') format('woff2');
@@ -61,6 +63,20 @@
   --color-ink: #1A1A1A;
   --color-muted: #696969;
   --color-line: rgba(0, 0, 0, 0.12);
+
+  /* ごみ収集カテゴリ色(/gomi/)。装飾ではなくデータの意味色(dataviz層)なので
+     「アクセントはceleste 1色」方針とは別レイヤーとして共存させる。
+     背景がペール黄のため黄系hueは不使用。全色、非テキスト用途(ドット/
+     ボーダー)として背景比3:1以上を計算検証済み。 */
+  --gomi-burnable: #D0553F;
+  --gomi-bin: #8A63B8;
+  --gomi-spray: #B85C86;
+  --gomi-pet: #2E8878;
+  --gomi-nonburnable: #4A7DBE;
+  --gomi-paper: #8A6B4A;
+  --gomi-plastic: #B06428;
+  --gomi-can: #5E8E3E;
+  --gomi-oversized: #7A7A6E;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,6 +86,16 @@
     --color-ink: #EDEDED;
     --color-muted: #8F8F8F;
     --color-line: rgba(255, 255, 255, 0.12);
+
+    --gomi-burnable: #E07A66;
+    --gomi-bin: #AC8CD4;
+    --gomi-spray: #D488AC;
+    --gomi-pet: #66BCAC;
+    --gomi-nonburnable: #7AA5DC;
+    --gomi-paper: #B09578;
+    --gomi-plastic: #DC9A62;
+    --gomi-can: #8CB46A;
+    --gomi-oversized: #9A9A8E;
   }
 }
 
@@ -82,6 +108,16 @@
   --color-ink: #EDEDED;
   --color-muted: #8F8F8F;
   --color-line: rgba(255, 255, 255, 0.12);
+
+  --gomi-burnable: #E07A66;
+  --gomi-bin: #AC8CD4;
+  --gomi-spray: #D488AC;
+  --gomi-pet: #66BCAC;
+  --gomi-nonburnable: #7AA5DC;
+  --gomi-paper: #B09578;
+  --gomi-plastic: #DC9A62;
+  --gomi-can: #8CB46A;
+  --gomi-oversized: #9A9A8E;
 }
 
 :root[data-theme="light"] {
@@ -90,6 +126,16 @@
   --color-ink: #1A1A1A;
   --color-muted: #696969;
   --color-line: rgba(0, 0, 0, 0.12);
+
+  --gomi-burnable: #D0553F;
+  --gomi-bin: #8A63B8;
+  --gomi-spray: #B85C86;
+  --gomi-pet: #2E8878;
+  --gomi-nonburnable: #4A7DBE;
+  --gomi-paper: #8A6B4A;
+  --gomi-plastic: #B06428;
+  --gomi-can: #5E8E3E;
+  --gomi-oversized: #7A7A6E;
 }
 
 @layer base {

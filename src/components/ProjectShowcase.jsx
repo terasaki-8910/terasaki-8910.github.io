@@ -13,6 +13,13 @@ const projects = [
     spotify: true,
   },
   {
+    id: 4,
+    title: 'Tsukuba Gomi Calendar',
+    description: 'つくば市ごみ収集カレンダー — オープンデータ連携',
+    tags: ['Open Data', 'iCal', 'React'],
+    link: '/gomi/',
+  },
+  {
     id: 3,
     title: 'Gaming Archive',
     description: 'お気に入りのゲームコレクション',

@@ -1,0 +1,44 @@
+name: Update Gomi Calendar
+
+on:
+  schedule:
+    # 毎週月曜 6:00 JST (日曜 21:00 UTC)。市の更新は年度単位だが、
+    # 年度替わりのリンク差し替えに自動追従するため週次で確認する
+    - cron: '0 21 * * 0'
+  workflow_dispatch: # 手動実行も可能
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/update-gomi.yml'
+      - 'scripts/update-gomi-calendar.js'
+
+jobs:
+  update-gomi:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update gomi calendar data
+        run: node scripts/update-gomi-calendar.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/gomi
+          git diff --staged --quiet || git commit -m "🗑️ Update gomi calendar data"
+          git push

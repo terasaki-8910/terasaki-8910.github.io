@@ -4,7 +4,12 @@
       "Bash(npm run sync-header)",
       "Bash(npm install:*)",
       "Bash(npm run build)",
-      "mcp__playwright__browser_navigate"
+      "mcp__playwright__browser_navigate",
+      "Bash(curl -s \"https://www.city.tsukuba.lg.jp/soshikikarasagasu/seikatsukankyobukankyoeiseika/gyomuannai/2/1000820.html\" -o /private/tmp/claude-501/-Users-masa669-Documents-project-terasaki-8910-github-io/b8c4b1dc-e562-43c0-b350-66cfed7b6194/scratchpad/tsukuba-page.html)",
+      "Bash(curl -sL \"https://www.city.tsukuba.lg.jp/material/files/group/138/202703_calendar.xlsx\" -o /private/tmp/claude-501/-Users-masa669-Documents-project-terasaki-8910-github-io/b8c4b1dc-e562-43c0-b350-66cfed7b6194/scratchpad/tsukuba-calendar.xlsx)",
+      "Bash(python3 -c \"import openpyxl; print\\('openpyxl OK', openpyxl.__version__\\)\")",
+      "Bash(python3 -c \"import pandas; print\\('pandas OK'\\)\")",
+      "Bash(python3)"
     ],
     "deny": [],
     "ask": []

@@ -65,6 +65,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         ascii: resolve(__dirname, 'ascii/index.html'),
         spotify: resolve(__dirname, 'spotify/index.html'),
+        gomi: resolve(__dirname, 'gomi/index.html'),
         notfound: resolve(__dirname, '404.html'),
       },
       output: {
