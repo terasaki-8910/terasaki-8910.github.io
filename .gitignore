@@ -29,6 +29,8 @@ dist-ssr
 
 # markdwon
 *.md
+# documentation/配下は実装ドキュメントとしてコミットする(docs/はビルド成果物のため別物)
+!documentation/*.md
 
 # SVG icon generator
 svg/node_modules/
