@@ -7,8 +7,8 @@ import { buildDensitySortedCharset, NAME_CHARACTERS } from '../utils/asciiCharse
 const DARK_COLOR = '#B2FFFF'
 const LIGHT_COLOR = '#000000'
 
-// テーマ連動の文字色。#B2FFFFはライト背景(#F1F1F1)だとコントラスト比
-// 約1.08:1でほぼ見えないため、ライトモードのときだけ純黒にする。
+// テーマ連動の文字色。#B2FFFFはライト背景(#F9EC8E)だとコントラスト比が
+// 低くほぼ見えないため、ライトモードのときだけ純黒にする。
 function getEffectiveTheme() {
   const attr = document.documentElement.getAttribute('data-theme')
   if (attr === 'dark' || attr === 'light') return attr

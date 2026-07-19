@@ -53,10 +53,13 @@
 }
 
 :root {
-  --color-paper: #F1F1F1;
+  /* Alicemerix「Override」ジャケットの背景色(R249 G236 B142)。
+     mutedはこの背景に対してWCAG AA(4.5:1)をわずかに割り込むため
+     (#6B6B6B→4.42:1)、#696969に2段階だけ暗くして4.55:1を確保している。 */
+  --color-paper: #F9EC8E;
   --color-surface: #E6E6E6;
   --color-ink: #1A1A1A;
-  --color-muted: #6B6B6B;
+  --color-muted: #696969;
   --color-line: rgba(0, 0, 0, 0.12);
 }
 
@@ -82,10 +85,10 @@
 }
 
 :root[data-theme="light"] {
-  --color-paper: #F1F1F1;
+  --color-paper: #F9EC8E;
   --color-surface: #E6E6E6;
   --color-ink: #1A1A1A;
-  --color-muted: #6B6B6B;
+  --color-muted: #696969;
   --color-line: rgba(0, 0, 0, 0.12);
 }
 

@@ -3,10 +3,10 @@
    優先順位: prefers-color-scheme(OS既定) < [data-theme](明示トグル)。
    静的ページ側でdata-themeを切り替えるJSは別途必要(既知のギャップ)。 */
 :root {
-  --header-bg: #F1F1F1;
+  --header-bg: #F9EC8E;
   --header-border: rgba(0, 0, 0, 0.12);
   --header-text: rgba(26, 26, 26, 0.9);
-  --header-box-bg: #F1F1F1;
+  --header-box-bg: #F9EC8E;
   --header-box-border: rgba(0, 0, 0, 0.12);
 }
 
@@ -29,10 +29,10 @@
 }
 
 :root[data-theme="light"] {
-  --header-bg: #F1F1F1;
+  --header-bg: #F9EC8E;
   --header-border: rgba(0, 0, 0, 0.12);
   --header-text: rgba(26, 26, 26, 0.9);
-  --header-box-bg: #F1F1F1;
+  --header-box-bg: #F9EC8E;
   --header-box-border: rgba(0, 0, 0, 0.12);
 }
 
