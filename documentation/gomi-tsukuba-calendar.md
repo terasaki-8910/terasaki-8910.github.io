@@ -191,6 +191,30 @@ celesteのバッジで強調。粗大ごみのみ「（予約制）」の注記�
 配信URLはdevサーバーで見ていても常に本番の絶対URLを使う(Google側から取得できる
 必要があるため)。
 
+### 2.7 日付×カテゴリ単位のカレンダー追加(`AddToCalendarModal.jsx`)
+
+「この日はびんの日だったからメモしとこ」のような単発の記録用途として、
+エリア全体のiCal購読(2.6)とは別に、**特定の日×特定のカテゴリだけ**を
+個人のカレンダーに追加できる機能。
+
+- クリック対象: デスクトップは月グリッド内のカテゴリチップ自体、モバイルは
+  グリッドがドット表示のみのため、日付タップ後に出る詳細カード内の各行
+- クリックすると小さなダイアログ(backdrop+`role="dialog"`、Escape/背景
+  クリックで閉じるlight dismiss対応)が開き、「Googleカレンダーに追加」
+  (`calendar.google.com/calendar/render?action=TEMPLATE&...`のワンタイム
+  イベントリンク)と「.icsをダウンロード」(`src/utils/gomiIcs.js`が
+  ブラウザ側でその場に単発 VEVENT を組み立て、`data:text/calendar`
+  URIとしてダウンロードさせる)の2択を出す
+- UIDはエリア購読ics(`gomi-<area>-<yyyymmdd>-<catId>@...`)と同じ形式を
+  再利用し、同じ日・カテゴリなら常に同一イベントとして扱われるようにしている
+- 実装上の注意点: 日セル全体がクリック対象(タップで詳細表示)なので、
+  内部のカテゴリチップを個別クリック可能にするには`<button>`同士の入れ子
+  (無効なHTML)を避ける必要があった。日セルを`<button>`から
+  `<div role="button" tabIndex={0}>`に変更し、キー操作(Enter/Space)を
+  手動で実装した上で、チップは独立した`<button>`として子に持たせ、
+  チップ側の`onClick`で`stopPropagation()`して親セルの選択動作と競合しない
+  ようにしている
+
 ## 3. スクリーンショット
 
 ### デスクトップ・ライトテーマ
@@ -217,4 +241,6 @@ celesteのバッジで強調。粗大ごみのみ「（予約制）」の注記�
 | カテゴリ定数 | `src/data/gomiCategories.js` |
 | 日付ヘルパー | `src/utils/gomiDate.js` |
 | カテゴリ色トークン | `src/index.css`(`--gomi-*`) |
+| 単発カレンダー追加ダイアログ | `src/components/gomi/AddToCalendarModal.jsx` |
+| 単発ics/Googleリンク生成 | `src/utils/gomiIcs.js` |
 | 汎用カレンダーUI設計知見 | `~/.claude/skills/calendar-ui/SKILL.md` |
