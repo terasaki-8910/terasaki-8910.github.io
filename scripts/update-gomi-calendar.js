@@ -168,6 +168,12 @@ async function main() {
 
   const lastUpdated = new Date().toISOString();
 
+  // ---- 変更検知 ----
+  // lastUpdated(実行時刻)を除いた実質的な内容が既存ファイルと同一なら
+  // 何も書かずに終了する。これをしないとDTSTAMPやlastUpdatedの時刻だけが
+  // 変わった無意味な差分が毎週コミットされ続ける。
+  const dataPath = path.join(OUT_DIR, 'data.json');
+
   // ---- data.json ----
   const data = {
     lastUpdated,
@@ -201,13 +207,29 @@ async function main() {
       .map(([n, { kana, areaSlug }]) => ({ n, k: kana, a: areaSlug })),
   };
 
+  // 既存data.jsonとlastUpdated以外を比較し、同一なら書き込みをスキップ
+  if (fs.existsSync(dataPath)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+      const strip = (obj) => JSON.stringify({ ...obj, lastUpdated: null });
+      if (strip(prev) === strip(data)) {
+        console.log('ℹ️  データに変更なし。ファイルは更新しません。');
+        return;
+      }
+    } catch {
+      // 既存ファイルが壊れている場合は普通に書き直す
+    }
+  }
+
   fs.mkdirSync(ICS_DIR, { recursive: true });
-  fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data));
-  const jsonKb = (fs.statSync(path.join(OUT_DIR, 'data.json')).size / 1024).toFixed(1);
+  fs.writeFileSync(dataPath, JSON.stringify(data));
+  const jsonKb = (fs.statSync(dataPath).size / 1024).toFixed(1);
   console.log(`✅ data.json (${jsonKb}KB, ${towns.size}町, ${areas.size}エリア)`);
 
   // ---- ics(エリアごと) ----
-  const dtstamp = lastUpdated.replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+  // DTSTAMPは実行時刻ではなく年度から決定的に導出する。実行時刻を使うと
+  // 内容が同じでも毎回全icsファイルが書き換わってしまう
+  const dtstamp = `${fiscalYear}0401T000000Z`;
   for (const [slug, { label, days }] of areas) {
     const lines = [
       'BEGIN:VCALENDAR',
