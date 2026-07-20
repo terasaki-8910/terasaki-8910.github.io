@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-07-20T01:57:08.534Z",
+  "lastUpdated": "2026-07-20T08:38:14.488Z",
   "tracks": [
+    {
+      "id": "2MmgGuQzr0kkiA04lMdPXW",
+      "name": "トウキョウ・シャンディ・ランデヴ",
+      "artist": "MAISONdes, 花譜, ツミキ",
+      "album": "トウキョウ・シャンディ・ランデヴ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b37601cedd96a3850d46dfa",
+      "playedAt": "2026-07-20T08:16:31.708Z",
+      "spotifyUrl": "https://open.spotify.com/track/2MmgGuQzr0kkiA04lMdPXW",
+      "duration": 184766,
+      "previewUrl": ""
+    },
+    {
+      "id": "1huqzMaPdQkXuOJaLxrC2s",
+      "name": "すずめ",
+      "artist": "RADWIMPS, Toaka",
+      "album": "すずめ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348d4eaf595967959fc3be747",
+      "playedAt": "2026-07-20T08:13:23.802Z",
+      "spotifyUrl": "https://open.spotify.com/track/1huqzMaPdQkXuOJaLxrC2s",
+      "duration": 236390,
+      "previewUrl": ""
+    },
     {
       "id": "59hVbgr8rfYkDbHfr8RcGI",
       "name": "IRIS OUT",
@@ -307,28 +329,6 @@
       "playedAt": "2026-07-19T05:43:15.048Z",
       "spotifyUrl": "https://open.spotify.com/track/04niDJQ3mzjkwzvid0Otoi",
       "duration": 204800,
-      "previewUrl": ""
-    },
-    {
-      "id": "1C1skAeFtnguXNlCYRQoCr",
-      "name": "ブレインロット",
-      "artist": "東京真中",
-      "album": "ブレインロット",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
-      "playedAt": "2026-07-19T05:39:49.777Z",
-      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
-      "duration": 122888,
-      "previewUrl": ""
-    },
-    {
-      "id": "4BC7to7tQh5gF7BsuccT60",
-      "name": "バカ通信 (feat. 知声)",
-      "artist": "isonosuke, Chis-A",
-      "album": "バカ通信",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339568c60733dd83ba31b2c4a",
-      "playedAt": "2026-07-19T05:37:46.453Z",
-      "spotifyUrl": "https://open.spotify.com/track/4BC7to7tQh5gF7BsuccT60",
-      "duration": 149000,
       "previewUrl": ""
     }
   ],
