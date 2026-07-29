@@ -70,44 +70,54 @@ function updateDotEnv(refreshToken) {
   return true;
 }
 
-// 実行
-console.log('=== Spotify Refresh Token 再取得 ===\n');
-console.log('1. 以下のURLをブラウザで開き、Spotifyにログインして許可してください:\n');
-console.log(getAuthUrl());
-console.log('\n2. 許可すると callback.html にリダイレクトされます。');
-console.log('   そのアドレスバーのURL全体（またはcode=の値）をコピーしてください。');
-console.log('   例: https://terasaki-8910.github.io/callback.html?code=XXXX&state=YYYY\n');
-
-import readline from 'readline';
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-
-rl.question('リダイレクト後のURL（またはcodeの値）を貼り付けてください: ', async (answer) => {
-  try {
-    // URL全体を貼られても code だけ貼られても動くようにする
-    let code = answer.trim();
-    if (code.includes('code=')) {
-      code = new URL(code).searchParams.get('code') ?? code;
+/** URL全体を渡されても code だけ渡されても認証コードを取り出す。 */
+function extractCode(input) {
+  const s = input.trim().replace(/^["']|["']$/g, '');
+  if (s.includes('code=')) {
+    try {
+      return new URL(s).searchParams.get('code') ?? '';
+    } catch {
+      return new URLSearchParams(s.slice(s.indexOf('?') + 1)).get('code') ?? '';
     }
-    if (!code) throw new Error('認証コードを読み取れませんでした');
+  }
+  return s;
+}
 
-    const tokens = await exchangeCodeForTokens(code);
-    if (!tokens.refresh_token) throw new Error('レスポンスに refresh_token が含まれていません');
+async function redeem(input) {
+  const code = extractCode(input);
+  if (!code) throw new Error('認証コードを読み取れませんでした');
 
-    console.log('\n✅ トークン取得成功（値は表示しません）');
+  const tokens = await exchangeCodeForTokens(code);
+  if (!tokens.refresh_token) throw new Error('レスポンスに refresh_token が含まれていません');
 
-    saveToGitHubSecrets(tokens.refresh_token);
-    console.log('✅ GitHub Secrets の SPOTIFY_REFRESH_TOKEN を更新しました');
+  console.log('\n✅ トークン取得成功（値は表示しません）');
+  saveToGitHubSecrets(tokens.refresh_token);
+  console.log('✅ GitHub Secrets の SPOTIFY_REFRESH_TOKEN を更新しました');
+  if (updateDotEnv(tokens.refresh_token)) {
+    console.log('✅ ローカルの .env も更新しました');
+  }
+  console.log('\n次のコマンドで復旧を確認できます:');
+  console.log('  gh workflow run update-spotify.yml');
+}
 
-    if (updateDotEnv(tokens.refresh_token)) {
-      console.log('✅ ローカルの .env も更新しました');
-    }
+// 実行。
+// 引数でリダイレクト後のURL(またはcode)を渡せば非対話で完了する。
+// 対話プロンプトは端末が無い環境(CI・エディタ統合ターミナルの一部)で
+// 入力を受け取れず固まるため、引数渡しを既定の手順にしている。
+const arg = process.argv[2];
 
-    console.log('\n次のコマンドで復旧を確認できます:');
-    console.log('  gh workflow run update-spotify.yml');
-  } catch (error) {
+if (arg) {
+  redeem(arg).catch((error) => {
     console.error('❌ エラー:', error.message);
     process.exitCode = 1;
-  }
-
-  rl.close();
-});
+  });
+} else {
+  console.log('=== Spotify Refresh Token 再取得 ===\n');
+  console.log('1. 以下のURLをブラウザで開き、Spotifyにログインして許可してください:\n');
+  console.log(getAuthUrl());
+  console.log('\n2. 許可すると callback.html にリダイレクトされます。');
+  console.log('   そのアドレスバーのURL全体をコピーし、次を実行してください:\n');
+  console.log('   node scripts/get-refresh-token.js "<リダイレクト後のURL>"\n');
+  console.log('   例: node scripts/get-refresh-token.js "https://terasaki-8910.github.io/callback.html?code=XXXX&state=YYYY"');
+  console.log('\n   ※ 認証コードは1回限り・数分で失効します。取得したらすぐ実行してください。');
+}
