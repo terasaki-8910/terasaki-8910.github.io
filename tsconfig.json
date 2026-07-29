@@ -1,0 +1,30 @@
+{
+  "//": [
+    "TypeScriptは /chara-picker/ の推薦エンジン(src/chara/配下)専用。",
+    "既存の.jsxは allowJs + checkJs:false で「解決はするが型検査はしない」扱いにし、",
+    "移植前からあるコードには一切影響を与えない。",
+    "ビルド(vite build)はesbuildで.tsをトランスパイルするだけでtscを通さないため、",
+    "型検査は `npm run typecheck` の任意実行にとどめている(ビルドの失敗リスクを増やさない)。",
+    "設定値は移植元プロジェクト(Bayesian-chara-picker)のtsconfigを踏襲。"
+  ],
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "docs", "dist"]
+}

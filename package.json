@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
     "sync-header": "node scripts/sync-header.js",
     "dev:sync": "npm run sync-header && npm run dev"
   },
@@ -20,7 +21,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
-    "three": "^0.160.0"
+    "three": "^0.160.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -30,6 +32,7 @@
     "exceljs": "^4.4.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
+    "typescript": "^5.9.3",
     "vite": "^5.0.8"
   }
 }

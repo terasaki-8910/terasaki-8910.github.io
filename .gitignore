@@ -1,5 +1,8 @@
 # Dependencies
 node_modules
+# フォントサブセット生成(scripts/build-font-subset.mjs)用のPython venv。
+# macOSのpython3はPEP 668で外部管理のため、システムに直接入れずここに隔離する。
+.venv
 
 # Build output
 dist

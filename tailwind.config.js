@@ -18,6 +18,10 @@ export default {
         // 明暗どちらの地でも視認性を保つため両テーマ共通の固定値。
         'celeste': '#7FBEA0',
         'celeste-dim': 'rgba(127, 190, 160, 0.14)',
+        // celeste塗りの上に乗せる文字色。celeste自体がテーマで変わらないので
+        // これも固定値にする。inkを乗せるとダークテーマで1.83:1まで落ちるため
+        // (ライトは8.10:1)、テーマ追従のinkは使わない。この値なら両テーマ8.10:1。
+        'on-celeste': '#1A1A1A',
       },
       fontFamily: {
         'sans': ['"Zen Kurenaido"', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],

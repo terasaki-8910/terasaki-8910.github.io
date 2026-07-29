@@ -66,6 +66,7 @@ export default defineConfig({
         ascii: resolve(__dirname, 'ascii/index.html'),
         spotify: resolve(__dirname, 'spotify/index.html'),
         gomiTsukuba: resolve(__dirname, 'gomi-tsukuba/index.html'),
+        charaPicker: resolve(__dirname, 'chara-picker/index.html'),
         notfound: resolve(__dirname, '404.html'),
       },
       output: {

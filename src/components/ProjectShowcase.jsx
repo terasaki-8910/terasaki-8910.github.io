@@ -20,6 +20,13 @@ const projects = [
     link: '/gomi-tsukuba/',
   },
   {
+    id: 5,
+    title: '理想の推しア◯ネイター',
+    description: '質問への回答からベイズ推定でキャラを推測',
+    tags: ['Bayesian', 'TypeScript', 'React'],
+    link: '/chara-picker/',
+  },
+  {
     id: 3,
     title: 'Gaming Archive',
     description: 'お気に入りのゲームコレクション',

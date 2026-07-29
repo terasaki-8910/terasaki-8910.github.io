@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="いくつかの質問に答えると、条件に合うアニメ・ゲームキャラをベイズ推定で推測します。質問は回答に応じて動的に選ばれます。" />
+    <title>理想の推しア◯ネイター | クソサイト製造工場</title>
+    <link rel="canonical" href="https://terasaki-8910.github.io/chara-picker/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+    <link rel="shortcut icon" href="/icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#F9EC8E" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
+    <!-- Open Graph (SNSシェア用) -->
+    <meta property="og:title" content="理想の推しア◯ネイター">
+    <meta property="og:description" content="質問に答えると条件に合うキャラをベイズ推定で推測します。">
+    <meta property="og:image" content="https://terasaki-8910.github.io/icons/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://terasaki-8910.github.io/chara-picker/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="理想の推しア◯ネイター">
+    <meta name="twitter:description" content="質問に答えると条件に合うキャラをベイズ推定で推測します。">
+    <meta name="twitter:image" content="https://terasaki-8910.github.io/icons/og-image.png">
+
+    <!-- 共有ヘッダーCSS -->
+    <link rel="stylesheet" href="/header-styles.css">
+
+    <!-- 初回ペイントの背景色。index.htmlと同じ理由でここでも直接指定する
+         (CSSバンドルの読み込みを待たずに本サイトと同じ地の色にする)。 -->
+    <style>
+      html, body { background-color: #F9EC8E; }
+      @media (prefers-color-scheme: dark) {
+        html, body { background-color: #121212; }
+      }
+    </style>
+
+    <!-- seo-fallback-contentを常に非表示にする(index.htmlと同じ方式)。 -->
+    <style>
+      #seo-fallback-content {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "理想の推しア◯ネイター",
+      "url": "https://terasaki-8910.github.io/chara-picker/",
+      "description": "質問への回答からベイズ推定でキャラクターを推測するWebアプリ。",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "ja",
+      "isAccessibleForFree": true,
+      "author": {
+        "@type": "Person",
+        "name": "冬色",
+        "url": "https://terasaki-8910.github.io/"
+      }
+    }
+    </script>
+    <script type="module" crossorigin src="/assets/charaPicker-DTHcNyHU.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/index-ZVcZMA-Y.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BbLHSs2U.css">
+  </head>
+  <body>
+    <div id="root">
+      <!-- SEO用の静的フォールバック(id: seo-fallback-content)。
+           React(createRoot().render())がマウント時にこの中身を丸ごと置き換えるため、
+           実際の訪問者にはJS読み込み前のごく短い間しか見えない。
+           タイトルが伏せ字で検索一致に効かないぶん、ここで機構を説明しておく。
+           CharaPickerPage.jsxの見出し・説明文を変えたときはここも合わせて更新すること。 -->
+      <div id="seo-fallback-content">
+        <h1>理想の推しア◯ネイター</h1>
+        <p>
+          いくつかの質問に「はい」「たぶんそう」「わからない」「たぶん違う」「いいえ」の5段階で答えていくと、
+          回答に合うアニメ・ゲームのキャラクターを推測するWebアプリです。
+        </p>
+        <p>
+          次に聞く質問は固定順ではなく、その時点の回答から期待エントロピー削減量が最大になるものを
+          ベイズ推定で毎回選び直します。推測が外れた場合は候補を除外して聞き直し、
+          質問を尽くしても絞り込めない場合は近かった候補を提示します。
+          「おまかせ」で質問を飛ばして1体だけ提示することもできます。
+        </p>
+        <p>React・TypeScriptで実装。推定はすべてブラウザ内で完結します。</p>
+      </div>
+    </div>
+  </body>
+</html>
