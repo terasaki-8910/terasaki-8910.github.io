@@ -36,11 +36,37 @@ async function getAccessToken() {
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
     console.error('🔍 APIエラー詳細:', errorData);
+    if (errorData.error === 'invalid_grant') {
+      // 2026-07-20にこれで10日間気づかず止まった。原因が一目で分かるようにする。
+      console.error('');
+      console.error('=================================================================');
+      console.error(' リフレッシュトークンが無効です（期限切れ/失効）。');
+      console.error(' コードでは復旧できません。Spotifyで再認可し、GitHub Secretsの');
+      console.error(' SPOTIFY_REFRESH_TOKEN を更新してください:');
+      console.error('   node scripts/get-refresh-token.js');
+      console.error('   gh secret set SPOTIFY_REFRESH_TOKEN');
+      console.error('=================================================================');
+    }
     throw new Error(`アクセストークン取得失敗: ${response.status} ${response.statusText}`);
   }
 
   const data = await response.json();
   console.log('✅ アクセストークン取得成功');
+
+  // Spotifyはリフレッシュ時に新しいrefresh_tokenを返すことがある(ローテーション)。
+  // 返ってきたのに古いトークンを使い続けると、いずれ失効して更新が止まる
+  // (実際に2026-07-20から10日間停止した)。ここでは書き戻せない(Secretsへの
+  // 書き込み権限がGITHUB_TOKENに無い)ので、検知したら明示的に警告する。
+  if (data.refresh_token && data.refresh_token !== REFRESH_TOKEN) {
+    console.warn('');
+    console.warn('⚠️  Spotifyが新しいリフレッシュトークンを発行しました(ローテーション)。');
+    console.warn('   GitHub Secretsの SPOTIFY_REFRESH_TOKEN を更新しないと、');
+    console.warn('   古いトークンはいずれ失効して更新が止まります。');
+    console.warn('   更新用の値はログに出しません。次のコマンドで取得してください:');
+    console.warn('     node scripts/get-refresh-token.js');
+    console.warn('');
+  }
+
   return data.access_token;
 }
 

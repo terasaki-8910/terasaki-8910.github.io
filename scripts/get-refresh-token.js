@@ -1,4 +1,6 @@
 import dotenv from 'dotenv';
+import fs from 'fs';
+import { execFileSync } from 'child_process';
 dotenv.config();
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
@@ -15,7 +17,10 @@ function getAuthUrl() {
     client_id: CLIENT_ID,
     scope: SCOPES,
     redirect_uri: REDIRECT_URI,
-    state: Math.random().toString(36).substring(7) // セキュリティ用ランダム文字列
+    state: Math.random().toString(36).substring(7), // セキュリティ用ランダム文字列
+    // 既存の許可が残っていても必ず同意画面を出す。黙って古い認可を使い回されると
+    // 「再認可したのに直らない」状態になりやすいため。
+    show_dialog: 'true'
   });
 
   return `https://accounts.spotify.com/authorize?${params.toString()}`;
@@ -43,32 +48,65 @@ async function exchangeCodeForTokens(code) {
   return await response.json();
 }
 
+/**
+ * 取得したリフレッシュトークンをGitHub Secretsへ直接書き込む。
+ * 画面には出さない —— 端末のスクロールバックやログに残さないため
+ * （以前は console.log で表示していた）。
+ */
+function saveToGitHubSecrets(refreshToken) {
+  execFileSync('gh', ['secret', 'set', 'SPOTIFY_REFRESH_TOKEN'], {
+    input: refreshToken,
+    stdio: ['pipe', 'inherit', 'inherit'],
+  });
+}
+
+/** ローカル実行用に .env の SPOTIFY_REFRESH_TOKEN も差し替える（あれば）。 */
+function updateDotEnv(refreshToken) {
+  const envPath = '.env';
+  if (!fs.existsSync(envPath)) return false;
+  const body = fs.readFileSync(envPath, 'utf-8');
+  if (!/^SPOTIFY_REFRESH_TOKEN=/m.test(body)) return false;
+  fs.writeFileSync(envPath, body.replace(/^SPOTIFY_REFRESH_TOKEN=.*$/m, `SPOTIFY_REFRESH_TOKEN=${refreshToken}`));
+  return true;
+}
+
 // 実行
-console.log('=== Spotify Refresh Token 取得 ===\n');
-console.log('1. 以下のURLをブラウザで開いてください:');
+console.log('=== Spotify Refresh Token 再取得 ===\n');
+console.log('1. 以下のURLをブラウザで開き、Spotifyにログインして許可してください:\n');
 console.log(getAuthUrl());
-console.log('\n2. 認証後、リダイレクト先のURLから認証コードをコピーしてください');
-console.log('   URL例: http://localhost:3000/callback?code=AUTH_CODE_HERE&state=...\n');
+console.log('\n2. 許可すると callback.html にリダイレクトされます。');
+console.log('   そのアドレスバーのURL全体（またはcode=の値）をコピーしてください。');
+console.log('   例: https://terasaki-8910.github.io/callback.html?code=XXXX&state=YYYY\n');
 
-// Node.jsの場合は手動で認証コードを入力
 import readline from 'readline';
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
-rl.question('認証コードを入力してください: ', async (code) => {
+rl.question('リダイレクト後のURL（またはcodeの値）を貼り付けてください: ', async (answer) => {
   try {
+    // URL全体を貼られても code だけ貼られても動くようにする
+    let code = answer.trim();
+    if (code.includes('code=')) {
+      code = new URL(code).searchParams.get('code') ?? code;
+    }
+    if (!code) throw new Error('認証コードを読み取れませんでした');
+
     const tokens = await exchangeCodeForTokens(code);
+    if (!tokens.refresh_token) throw new Error('レスポンスに refresh_token が含まれていません');
 
-    console.log('\n✅ トークン取得成功！');
-    console.log('\n📝 GitHub Secretsに保存してください:');
-    console.log(`SPOTIFY_REFRESH_TOKEN: ${tokens.refresh_token}`);
-    console.log(`(初回アクセストークン: ${tokens.access_token})`);
-    console.log(`(有効期限: ${tokens.expires_in}秒)`);
+    console.log('\n✅ トークン取得成功（値は表示しません）');
 
+    saveToGitHubSecrets(tokens.refresh_token);
+    console.log('✅ GitHub Secrets の SPOTIFY_REFRESH_TOKEN を更新しました');
+
+    if (updateDotEnv(tokens.refresh_token)) {
+      console.log('✅ ローカルの .env も更新しました');
+    }
+
+    console.log('\n次のコマンドで復旧を確認できます:');
+    console.log('  gh workflow run update-spotify.yml');
   } catch (error) {
     console.error('❌ エラー:', error.message);
+    process.exitCode = 1;
   }
 
   rl.close();
