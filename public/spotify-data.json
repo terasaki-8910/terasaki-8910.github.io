@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-07-30T01:22:29.986Z",
+  "lastUpdated": "2026-07-30T08:05:55.630Z",
   "tracks": [
+    {
+      "id": "7zsSPRgnqYgtfwAwmeeMZe",
+      "name": "がむしゃらに行こう！ - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, SHOW, Mitsu.J, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "がむしゃらに行こう！ (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734159c4f94b6e61ac02cd738d",
+      "playedAt": "2026-07-30T06:13:10.684Z",
+      "spotifyUrl": "https://open.spotify.com/track/7zsSPRgnqYgtfwAwmeeMZe",
+      "duration": 218000,
+      "previewUrl": ""
+    },
+    {
+      "id": "0ookCvrhGat2q6uV1R9Kq1",
+      "name": "ぷりきゅきゅ",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-07-30T06:09:32.155Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
+      "duration": 229677,
+      "previewUrl": ""
+    },
+    {
+      "id": "2isCWO5dMBDzyLscHVoJIO",
+      "name": "憧れをいっぱい",
+      "artist": "初星学園, 高木龍一, 倉本千奈",
+      "album": "憧れをいっぱい",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
+      "playedAt": "2026-07-30T06:05:41.959Z",
+      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
+      "duration": 288363,
+      "previewUrl": ""
+    },
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-07-30T05:58:44.923Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
     {
       "id": "1chTElozugAFsW2x03IS6d",
       "name": "キミに100パーセント",
@@ -109,17 +153,6 @@
       "playedAt": "2026-07-27T16:57:41.534Z",
       "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
       "duration": 246936,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ookCvrhGat2q6uV1R9Kq1",
-      "name": "ぷりきゅきゅ",
-      "artist": "CUTIE STREET",
-      "album": "キュートなキューたい / ナイスだね",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
-      "playedAt": "2026-07-27T16:50:19.878Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
-      "duration": 229677,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-07-24T05:55:35.628Z",
       "spotifyUrl": "https://open.spotify.com/track/5Z9KJZvQzH6PFmb8SNkxuk",
       "duration": 212352,
-      "previewUrl": ""
-    },
-    {
-      "id": "7tGDXCPLpAScEwmqab9YZd",
-      "name": "Walking with you",
-      "artist": "Novelbright",
-      "album": "SKYWALK",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e984d27d0de318dc56f123d4",
-      "playedAt": "2026-07-24T05:48:11.828Z",
-      "spotifyUrl": "https://open.spotify.com/track/7tGDXCPLpAScEwmqab9YZd",
-      "duration": 223186,
-      "previewUrl": ""
-    },
-    {
-      "id": "5cyv0C8sidO5KhQiK7ErQ8",
-      "name": "NEW KAWAII",
-      "artist": "FRUITS ZIPPER",
-      "album": "NEW KAWAII",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27312c94252f1ed6f82d9e2ae59",
-      "playedAt": "2026-07-24T02:49:58.599Z",
-      "spotifyUrl": "https://open.spotify.com/track/5cyv0C8sidO5KhQiK7ErQ8",
-      "duration": 265787,
-      "previewUrl": ""
-    },
-    {
-      "id": "0JncJnMiDjLpeYURyhFgch",
-      "name": "365日の紙飛行機",
-      "artist": "AKB48",
-      "album": "サムネイル<Type A>",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27371c8a0b9a128451abf918b24",
-      "playedAt": "2026-07-24T02:49:53.547Z",
-      "spotifyUrl": "https://open.spotify.com/track/0JncJnMiDjLpeYURyhFgch",
-      "duration": 283373,
       "previewUrl": ""
     }
   ],
