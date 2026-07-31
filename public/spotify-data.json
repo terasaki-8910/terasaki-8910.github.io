@@ -1,13 +1,90 @@
 {
-  "lastUpdated": "2026-07-31T08:32:10.561Z",
+  "lastUpdated": "2026-07-31T13:29:40.158Z",
   "tracks": [
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-07-31T09:46:56.266Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
+    {
+      "id": "1chTElozugAFsW2x03IS6d",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "なんだこれくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
+      "playedAt": "2026-07-31T09:30:47.813Z",
+      "spotifyUrl": "https://open.spotify.com/track/1chTElozugAFsW2x03IS6d",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-07-31T09:27:26.984Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "73rdU71fLEd0nW7HENRhKF",
+      "name": "キュートなキューたい",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-07-31T09:23:21.840Z",
+      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
+      "duration": 236000,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-07-31T09:19:25.393Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "407GWcB9QwD3aiX0M7RCFT",
+      "name": "GYB!!",
+      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
+      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
+      "playedAt": "2026-07-31T09:14:04.939Z",
+      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
+      "duration": 218573,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-07-31T09:10:25.903Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
     {
       "id": "2le4lZquBURJYS6TcdAZdx",
       "name": "絶対王者チョコレート",
       "artist": "ゆらゆらシスターズ",
       "album": "絶対王者チョコレート",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-07-31T07:39:51.152Z",
+      "playedAt": "2026-07-31T09:07:09.688Z",
       "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
       "duration": 208223,
       "previewUrl": ""
@@ -21,6 +98,28 @@
       "playedAt": "2026-07-31T07:08:28.277Z",
       "spotifyUrl": "https://open.spotify.com/track/5cDNOPJOgcfI58PEsqyRnb",
       "duration": 173160,
+      "previewUrl": ""
+    },
+    {
+      "id": "4K65wBvHQPmnD6bTdN6BHt",
+      "name": "Snow halation",
+      "artist": "μ's",
+      "album": "Snow halation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273577d3168bb5d6601a1d377fe",
+      "playedAt": "2026-07-30T19:32:00.671Z",
+      "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
+      "duration": 258714,
+      "previewUrl": ""
+    },
+    {
+      "id": "2bban7nARYzL7djtfosvzq",
+      "name": "lazy cat",
+      "artist": "Eve",
+      "album": "lazy cat",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b73cf5d9f5005408eaff522152",
+      "playedAt": "2026-07-30T19:32:00.671Z",
+      "spotifyUrl": "https://open.spotify.com/track/2bban7nARYzL7djtfosvzq",
+      "duration": 153280,
       "previewUrl": ""
     },
     {
@@ -123,28 +222,6 @@
       "previewUrl": ""
     },
     {
-      "id": "1chTElozugAFsW2x03IS6d",
-      "name": "キミに100パーセント",
-      "artist": "Kyary Pamyu Pamyu",
-      "album": "なんだこれくしょん",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
-      "playedAt": "2026-07-30T13:12:07.823Z",
-      "spotifyUrl": "https://open.spotify.com/track/1chTElozugAFsW2x03IS6d",
-      "duration": 200253,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-07-30T13:12:07.445Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
       "id": "7zsSPRgnqYgtfwAwmeeMZe",
       "name": "がむしゃらに行こう！ - 花海咲季・月村手毬・藤田ことね ver.",
       "artist": "初星学園, SHOW, Mitsu.J, 花海咲季, 月村手毬, 藤田ことね",
@@ -178,39 +255,6 @@
       "previewUrl": ""
     },
     {
-      "id": "407GWcB9QwD3aiX0M7RCFT",
-      "name": "GYB!!",
-      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
-      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
-      "playedAt": "2026-07-29T08:51:25.588Z",
-      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
-      "duration": 218573,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-07-29T07:41:09.283Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-07-29T01:57:57.305Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
-      "previewUrl": ""
-    },
-    {
       "id": "0Gp8MWnUzS5V2lvTr25c2A",
       "name": "ビビデバ",
       "artist": "Hoshimachi Suisei",
@@ -230,17 +274,6 @@
       "playedAt": "2026-07-28T12:14:36.569Z",
       "spotifyUrl": "https://open.spotify.com/track/3zbKiko8V3u2yn1RcT8xBZ",
       "duration": 196640,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-07-28T12:10:40.587Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
       "previewUrl": ""
     },
     {
@@ -275,62 +308,7 @@
       "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
       "duration": 274505,
       "previewUrl": ""
-    },
-    {
-      "id": "1mUBfxiEdsrVhkQCohevey",
-      "name": "ヨセアツメ",
-      "artist": "和ぬか",
-      "album": "ヨセアツメ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273879d3096a43336afe504b30f",
-      "playedAt": "2026-07-27T15:30:41.248Z",
-      "spotifyUrl": "https://open.spotify.com/track/1mUBfxiEdsrVhkQCohevey",
-      "duration": 197483,
-      "previewUrl": ""
-    },
-    {
-      "id": "43CMcyGeImlZjy1oN0NVNG",
-      "name": "モエチャッカファイア",
-      "artist": "issey",
-      "album": "モエチャッカファイア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732c3840e66768368e20042fe6",
-      "playedAt": "2026-07-27T15:27:23.232Z",
-      "spotifyUrl": "https://open.spotify.com/track/43CMcyGeImlZjy1oN0NVNG",
-      "duration": 155981,
-      "previewUrl": ""
-    },
-    {
-      "id": "73TEyhGLxixHAwzOdoamgV",
-      "name": "Aoi",
-      "artist": "sakanaction",
-      "album": "sakanaction",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
-      "playedAt": "2026-07-27T15:24:46.718Z",
-      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
-      "duration": 256120,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
-      "name": "春を告げる",
-      "artist": "yama",
-      "album": "春を告げる",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
-      "playedAt": "2026-07-27T13:02:16.903Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
-      "duration": 196497,
-      "previewUrl": ""
-    },
-    {
-      "id": "0N1fB13SqzxQfnYdYQQvbe",
-      "name": "Cherry Berry Merry",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-07-27T12:40:05.233Z",
-      "spotifyUrl": "https://open.spotify.com/track/0N1fB13SqzxQfnYdYQQvbe",
-      "duration": 131244,
-      "previewUrl": ""
     }
   ],
-  "total": 30
+  "total": 28
 }
