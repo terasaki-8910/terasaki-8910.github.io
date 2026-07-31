@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-07-31T01:49:01.899Z",
+  "lastUpdated": "2026-07-31T08:32:10.561Z",
   "tracks": [
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-07-31T07:39:51.152Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "5cDNOPJOgcfI58PEsqyRnb",
+      "name": "Noob - Demo '25",
+      "artist": "Kroi",
+      "album": "Polyester (Custom Deluxe)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f04219c4b6872ce1c727c5e",
+      "playedAt": "2026-07-31T07:08:28.277Z",
+      "spotifyUrl": "https://open.spotify.com/track/5cDNOPJOgcfI58PEsqyRnb",
+      "duration": 173160,
+      "previewUrl": ""
+    },
     {
       "id": "0zxyK9Ih5rnN485VY73bUp",
       "name": "Luna say maybe",
@@ -10,17 +32,6 @@
       "playedAt": "2026-07-30T17:38:50.764Z",
       "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
       "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "2le4lZquBURJYS6TcdAZdx",
-      "name": "絶対王者チョコレート",
-      "artist": "ゆらゆらシスターズ",
-      "album": "絶対王者チョコレート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-07-30T17:34:25.069Z",
-      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
-      "duration": 208223,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-07-27T12:40:05.233Z",
       "spotifyUrl": "https://open.spotify.com/track/0N1fB13SqzxQfnYdYQQvbe",
       "duration": 131244,
-      "previewUrl": ""
-    },
-    {
-      "id": "6pgwMMBZP2rwNMj9uXfeHR",
-      "name": "Starry Confession",
-      "artist": "Synthion",
-      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
-      "playedAt": "2026-07-27T10:19:02.531Z",
-      "spotifyUrl": "https://open.spotify.com/track/6pgwMMBZP2rwNMj9uXfeHR",
-      "duration": 123538,
       "previewUrl": ""
     }
   ],
