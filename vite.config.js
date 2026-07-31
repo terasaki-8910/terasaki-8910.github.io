@@ -44,9 +44,29 @@ function getCommitLog() {
   }
 }
 
+// /chara-picker/ のセッションログ用エンドポイントをdev時だけ受け止める。
+// src/chara/hooks/useSessionLog.ts は移植元(Bayesian-chara-picker)と
+// 完全に同一のファイルとして同期している(scripts/sync-chara-picker.mjs)。
+// 向こうにはこのPOSTをファイルに追記する開発用プラグインがあるが、
+// こちらでは記録の必要が無い。受け側が無いとdev時に404が出続けるので、
+// 204で黙って捨てる。`apply: 'serve'`なので本番ビルドには一切含まれない
+// (本番では import.meta.env.DEV が false になりPOST自体が消える)。
+function charaSessionLogDevPlugin() {
+  return {
+    name: 'chara-session-log-dev',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use('/__session-log', (req, res) => {
+        res.statusCode = 204
+        res.end()
+      })
+    },
+  }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), charaSessionLogDevPlugin()],
   // username.github.ioのユーザーサイトは常にドメインルートで配信されるため
   // 絶対パスを使う。相対パス(./)だと、GitHub Pagesが404.htmlを任意の深さの
   // 存在しないURL(例: /foo/bar/baz)にそのまま返したときに、アセットの

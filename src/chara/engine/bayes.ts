@@ -27,10 +27,16 @@ export type QuestionsRuntimeFile = {
 };
 
 /*
- * 移植元（Bayesian-chara-picker）はこの2ファイルを静的importでバンドルに同梱していたが、
- * 移植先では public/chara-picker/ から実行時fetchする（データ約280KBを初期JSから外すため）。
- * そのため導出テーブルもモジュール初期化時ではなく initBayesData() で組み立てる。
- * 呼び出しは src/chara/data/loadCharaData.ts が一手に引き受けており、UI側からは見えない。
+ * likelihoods / questions.runtime は import せず、initBayesData() で外から注入する。
+ *
+ * 理由: このエンジンは配信方法の違う2つのアプリで共有されている。
+ *   - Bayesian-chara-picker: JSONを静的importしてバンドルに同梱（実行時ネットワーク0件 = D1）
+ *   - terasaki-8910.github.io (/chara-picker/): 実行時fetch（約280KBを初期JSから外すため）
+ * ここで静的importすると後者で必ずバンドルに載ってしまうため、データの取得元は
+ * 呼び出し側の責務にして、このファイル自体は両方で完全に同一に保つ。
+ * （同一に保つことで scripts/sync-chara-picker.mjs による機械的な同期が成立する）
+ *
+ * initBayesData() より前にエンジン関数を呼ぶと likelihoodOf() が明示的に投げる。
  */
 let likelihoods: LikelihoodsFile | null = null;
 let questionIndex = new Map<string, number>();

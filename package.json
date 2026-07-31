@@ -8,6 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
+    "sync:chara": "node scripts/sync-chara-picker.mjs",
+    "sync:chara:check": "node scripts/sync-chara-picker.mjs --check",
+    "build-font-subset": "node scripts/build-font-subset.mjs",
     "sync-header": "node scripts/sync-header.js",
     "dev:sync": "npm run sync-header && npm run dev"
   },

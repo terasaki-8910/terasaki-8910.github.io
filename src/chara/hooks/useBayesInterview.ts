@@ -19,9 +19,9 @@ import {
  * Snapshot/Action/undo/bonusPending/exhausted等の状態機械は完全に同じ構造を保つ
  * — 本番と別のロジックを二重実装して食い違うことを避けるため、意図的に揃えてある。
  *
- * 移植にあたっての変更点: 移植元では `dataset` を useInterview.ts から静的importして
- * いたが、こちらはデータを実行時fetchするため hook 引数で受け取る。reducer には
- * recentGuessIds と同じくaction経由で渡し、reducerを純粋なまま保つ。
+ * `dataset` は import せず引数で受け取る。データの取得方法（静的import / 実行時fetch）が
+ * アプリごとに異なるため（詳細は engine/bayes.ts 冒頭のコメント）。reducer へは
+ * recentGuessIds と同じく action 経由で渡し、reducer を純粋なまま保つ。
  */
 
 const NEAR_MISS_COUNT = 3;

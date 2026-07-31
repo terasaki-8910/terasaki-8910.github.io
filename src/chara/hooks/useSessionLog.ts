@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react';
 
 import type { Confidence } from '../engine/recommend';
 
-/** localStorageキー。サイト内の他ページ（theme / gomi-town 等）と衝突しない名前空間にしてある。 */
+/** e2e から参照する場合はこのキーと一致させること（useAgeConfirmation の作法に倣う）。 */
 export const SESSION_LOG_KEY = 'chara-picker:session-log';
 
 /** 保持する直近レコード数の上限。無限に肥大化させない。 */
@@ -54,14 +54,22 @@ function recentGuessIdsOf(records: readonly SessionLogRecord[]): string[] {
   return ids;
 }
 
-/*
- * 移植元にあった `sendToDevLogFile()`（dev中だけ /__session-log へPOSTし、
- * vite.config.ts の sessionLogDevPlugin が state/session-logs/log.jsonl に
- * 追記する仕組み）は移植していない。このサイトには受け側のプラグインが無く、
- * 呼んでも404になるだけのため。分析用のログ収集は移植元リポジトリ側で行う。
- * localStorage 側の記録＝クールダウン（同じキャラの連続提示を避ける）は
- * この hook 単体で完結しているのでそのまま動く。
+/**
+ * ローカル開発中だけ、`state/session-logs/log.jsonl` にもレコードを送る
+ * （`vite.config.ts` の `sessionLogDevPlugin` が受け取ってファイルに追記する）。
+ * `import.meta.env.DEV` は本番ビルドで静的に `false` に置き換わり、この
+ * ブロックごと dead code として消える —— GitHub Pages 等にデプロイした
+ * dist には `fetch` 呼び出し自体が存在しない（D1 に影響しない）。
+ * 失敗しても無視する（localStorage 側の記録・クールダウン機能は独立して動く）。
  */
+function sendToDevLogFile(record: SessionLogRecord): void {
+  if (!import.meta.env.DEV) return;
+  fetch('/__session-log', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(record),
+  }).catch(() => {});
+}
 
 export function useSessionLog(): { recentGuessIds: string[]; log(record: SessionLogRecord): void } {
   const [records, setRecords] = useState(readLog);
@@ -75,6 +83,7 @@ export function useSessionLog(): { recentGuessIds: string[]; log(record: Session
     const next = [...readLog(), record].slice(-LOG_CAP);
     writeLog(next);
     setRecords(next);
+    sendToDevLogFile(record);
   }, []);
 
   return { recentGuessIds: recentGuessIdsOf(records), log };
