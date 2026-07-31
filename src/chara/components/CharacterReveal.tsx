@@ -17,8 +17,7 @@ export function CharacterReveal(props: { scored: Scored; imageTestId: string }) 
   return (
     <>
       <CharacterImage
-        imagePath={character.imagePath}
-        imageApproved={character.imageApproved}
+        characterId={character.id}
         name={character.name}
         testId={props.imageTestId}
         className="mt-6"

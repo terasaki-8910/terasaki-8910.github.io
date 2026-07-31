@@ -45,6 +45,24 @@ const DATA_FILES = [
   { from: 'data/supply.json', to: 'public/chara-picker/supply.json' },
   { from: 'data/bayes/likelihoods.json', to: 'public/chara-picker/likelihoods.json' },
   { from: 'data/bayes/questions.runtime.json', to: 'public/chara-picker/questions.runtime.json' },
+  // キャラid → Danbooruのcharacterタグ。画像を実行時に引くのに使う。
+  // 開発元が category=4 検証・作品タグとの共起率・hitomi件数との桁比較まで
+  // 済ませた結果なので、こちらで作り直さない。
+  //
+  // 原本(71KB)は候補リスト・共起率・確認日時といった導出の検証記録を持つが、
+  // 表示側が要るのは対応表そのものだけなので、id→タグに絞って配信する
+  // (タグがnullのキャラは画像を引けないので落とす)。
+  {
+    from: 'data/bayes/tag-map.json',
+    to: 'public/chara-picker/tag-map.json',
+    transform: (json) => {
+      const tags = {};
+      for (const [id, entry] of Object.entries(json.entries ?? {})) {
+        if (entry?.tag) tags[id] = entry.tag;
+      }
+      return { version: json.version ?? 1, tags };
+    },
+  },
 ];
 
 /** エンジン。両リポジトリで完全に同一のファイルとして保つ（そのままコピー）。 */
@@ -96,7 +114,9 @@ function renderContent(entry, kind) {
   const raw = fs.readFileSync(src, 'utf-8');
   if (kind !== 'data') return Buffer.from(raw, 'utf-8');
   try {
-    return Buffer.from(JSON.stringify(JSON.parse(raw)), 'utf-8');
+    const json = JSON.parse(raw);
+    // transform を持つものは表示に必要な形へ絞ってから配信する
+    return Buffer.from(JSON.stringify(entry.transform ? entry.transform(json) : json), 'utf-8');
   } catch (e) {
     fail(`${entry.from} のJSONを解釈できません: ${e.message}`);
   }
