@@ -22,10 +22,16 @@ const API = 'https://danbooru.donmai.us';
 const RATING = 'rating:general';
 
 /**
- * スコア下限。レーティングは利用者の自己申告なので、付け間違いを引く確率を
- * 下げるために併用する（極端に低スコアの投稿はタグ付けも荒い傾向）。
+ * 検索タグは未認証だと3つが上限（4つ目で PostQuery::TagLimitError。実測）。
+ * その3枠を「キャラ / rating:general / order:score」に使い切っているので、
+ * 「単体絵だけ」の絞り込みはクエリでは書けない。
+ *
+ * 代わりに上位をまとめて取り、`solo` タグの有無でクライアント側で選り分ける
+ * （`only=` はタグ数に数えられないので tag_string_general を貰える）。
+ * General限定ミラー(safebooru.donmai.us)ならrating枠が空くが、あちらは
+ * 2タグ上限でさらに厳しく、order:score と solo を両立できないため使わない。
  */
-const MIN_SCORE = 20;
+const POOL_SIZE = 40;
 
 export type CharaImage = {
   imageUrl: string;
@@ -44,8 +50,17 @@ type DanbooruPost = {
   large_file_url?: string;
   file_url?: string;
   tag_string_artist?: string;
+  tag_string_general?: string;
+  tag_string_character?: string;
   source?: string;
 };
+
+/**
+ * キャラごとに1度引いた画像を保持する。同じキャラなら常に同じ絵を返すため、
+ * 「この子かな?」で見た絵が「はい」を押した結果画面で別物に変わらない
+ * （画面遷移でコンポーネントが再マウントされるので、これが無いと毎回引き直す）。
+ */
+const imageCache = new Map<string, CharaImage | null>();
 
 let tagMap: Record<string, string> | null = null;
 
@@ -98,8 +113,15 @@ function normalizeSource(source: string | undefined): string | null {
  * タグ数は「キャラ+rating+score+order」で4つ。無料枠のタグ数制限に触れた場合は
  * order/scoreを落として取り直し、クライアント側で最良を選ぶ（1リクエストで済む）。
  */
-export async function fetchCharaImage(tag: string, signal?: AbortSignal): Promise<CharaImage | null> {
-  const only = 'id,large_file_url,file_url,tag_string_artist,source';
+export async function fetchCharaImage(
+  characterId: string,
+  tag: string,
+  signal?: AbortSignal,
+): Promise<CharaImage | null> {
+  const cached = imageCache.get(characterId);
+  if (cached !== undefined) return cached;
+
+  const only = 'id,large_file_url,file_url,tag_string_artist,tag_string_general,tag_string_character,source';
 
   const build = (post: DanbooruPost): CharaImage | null => {
     const imageUrl = post.large_file_url ?? post.file_url;
@@ -121,21 +143,46 @@ export async function fetchCharaImage(tag: string, signal?: AbortSignal): Promis
     return Array.isArray(json) ? (json as DanbooruPost[]) : [];
   };
 
+  const isSolo = (p: DanbooruPost) => (p.tag_string_general ?? '').split(' ').includes('solo');
+
+  /**
+   * 写っているキャラの種類数。`solo` タグは当てにならない
+   * （100人以上写ったコラージュ画像に solo が付いている例を実際に確認した）ため、
+   * キャラクタータグの数も併せて見る。同一キャラの衣装違い
+   * （lisbeth_(sao) と lisbeth_(sao-alo) など）で2件になることがあるので2までは許す。
+   */
+  const charCount = (p: DanbooruPost) => (p.tag_string_character ?? '').split(' ').filter(Boolean).length;
+
+  const pick = (posts: DanbooruPost[]): CharaImage | null => {
+    const usable = posts.filter((p) => p.large_file_url ?? p.file_url);
+    if (usable.length === 0) return null;
+    // 「このキャラ1人が描かれた絵」に近いものから順に候補を探す。
+    // 全部空振りしたら最後は全体から選ぶ（絵が出ないよりはまし）。
+    const pool =
+      usable.filter((p) => isSolo(p) && charCount(p) <= 2).length > 0
+        ? usable.filter((p) => isSolo(p) && charCount(p) <= 2)
+        : usable.filter((p) => charCount(p) <= 2).length > 0
+          ? usable.filter((p) => charCount(p) <= 2)
+          : usable.filter(isSolo).length > 0
+            ? usable.filter(isSolo)
+            : usable;
+    return build(pool[Math.floor(Math.random() * pool.length)]);
+  };
+
+  let result: CharaImage | null = null;
   try {
-    const posts = await get(`${tag} ${RATING} score:>=${MIN_SCORE} order:random`, 1);
-    const found = posts.length > 0 ? build(posts[0]) : null;
-    if (found) return found;
+    // スコア上位をまとめて取り、その中から選ぶ。上位固定だと毎回同じ絵になり、
+    // 完全ランダムだと質が安定しないので、「上位40件の中からランダム」にする。
+    result = pick(await get(`${tag} ${RATING} order:score`, POOL_SIZE));
   } catch {
-    // タグ数制限(422)等。下のフォールバックへ。
+    try {
+      // タグ数制限などで弾かれた場合はメタタグを削って取り直す
+      result = pick(await get(`${tag} ${RATING}`, POOL_SIZE));
+    } catch {
+      result = null;
+    }
   }
 
-  try {
-    // メタタグを削ってキャラ+ratingの2つに抑え、複数件から選ぶ
-    const posts = await get(`${tag} ${RATING}`, 30);
-    const pool = posts.filter((p) => p.large_file_url ?? p.file_url);
-    if (pool.length === 0) return null;
-    return build(pool[Math.floor(Math.random() * pool.length)]);
-  } catch {
-    return null;
-  }
+  imageCache.set(characterId, result);
+  return result;
 }

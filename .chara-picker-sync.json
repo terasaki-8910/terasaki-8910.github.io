@@ -1,6 +1,6 @@
 {
   "files": {
-    "public/chara-picker/tag-map.json": "52688a31e67ce353e23c428979f118e9ff4522063e0693d5e5829de8de31e44f",
+    "public/chara-picker/tag-map.json": "bcb0c6b45263c1cb50f4699968e0dc4cb74ba0e7a7d501c54141e8cf9f772d46",
     "public/chara-picker/characters.json": "c929c3edc57487af8703dcbf4eb80fd5276a65252aec67041d4787e6d2c2bac3",
     "public/chara-picker/supply.json": "903b0970c075faf2a762efd405d995125106ec17e858929bbb758f7c8632a693",
     "public/chara-picker/likelihoods.json": "e45a8a5ce7bd95f14ecdd4073a5811b5014fcc535593fb633edf8deb8d94b1c2",
@@ -14,8 +14,8 @@
     "src/chara/hooks/useBayesInterview.ts": "1dade06810497b29804d95a305764571c1e8fec2ebf9bfcd143a54a7f660d737",
     "src/chara/hooks/useSessionLog.ts": "5d59ef1fa9ae83638af3088fbe04e89caa997d568de19a94b3269ac1e5e10127"
   },
-  "syncedAt": "2026-07-31T11:30:50.621Z",
-  "upstreamCommit": "f72d2dd7a0794bab17e4861648a58f1479fae834",
-  "upstreamSubject": "data(bayes): 志波空鶴のDanbooruタグをoverrideで確定(kukaku→kuukaku)",
+  "syncedAt": "2026-07-31T17:50:07.120Z",
+  "upstreamCommit": "ffa7757fe4eb2225f3246f573be3aaa179cf7a5d",
+  "upstreamSubject": "fix(data): Danbooruタグの誤対応5件を修正、未検証だった15件を検証済みに",
   "upstreamDirty": false
 }

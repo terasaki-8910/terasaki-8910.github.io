@@ -19,12 +19,16 @@ export function CharacterImage(props: {
   const { characterId, name, testId, className } = props;
   const [state, setState] = useState<'loading' | 'ready' | 'none'>('loading');
   const [image, setImage] = useState<CharaImage | null>(null);
+  // 第三者CDNへの直リンクなので、取得できても表示に失敗することがある
+  // (実際に ERR_CONNECTION_CLOSED を観測)。壊れた画像アイコンを出さずに枠へ戻す。
+  const [broken, setBroken] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
     let cancelled = false;
     setState('loading');
     setImage(null);
+    setBroken(false);
 
     (async () => {
       try {
@@ -34,7 +38,7 @@ export function CharacterImage(props: {
           if (!cancelled) setState('none');
           return;
         }
-        const found = await fetchCharaImage(tag, controller.signal);
+        const found = await fetchCharaImage(characterId, tag, controller.signal);
         if (cancelled) return;
         setImage(found);
         setState(found ? 'ready' : 'none');
@@ -61,7 +65,7 @@ export function CharacterImage(props: {
     );
   }
 
-  if (state === 'none' || !image) {
+  if (state === 'none' || !image || broken) {
     return (
       <div data-testid={testId} className={frame}>
         <div className="flex h-full w-full items-center justify-center" aria-hidden="true">
@@ -81,7 +85,13 @@ export function CharacterImage(props: {
         className={`${frame} block transition-opacity hover:opacity-90`}
         aria-label={`${name}の画像をDanbooruで開く`}
       >
-        <img src={image.imageUrl} alt={name} loading="lazy" className="h-full w-full object-cover" />
+        <img
+          src={image.imageUrl}
+          alt={name}
+          loading="lazy"
+          onError={() => setBroken(true)}
+          className="h-full w-full object-cover"
+        />
       </a>
       {/* 第三者の著作物なので出典を必ず添える */}
       <figcaption className="mt-2 text-left text-[11px] leading-relaxed text-muted">

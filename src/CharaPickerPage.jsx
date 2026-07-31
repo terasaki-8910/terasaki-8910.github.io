@@ -3,8 +3,12 @@ import Footer from './components/Footer'
 import ErrorBoundary from './components/ErrorBoundary'
 import PageBackground from './components/PageBackground'
 import CharaPickerApp from './chara/CharaPickerApp'
+import { pickPhrase, TAGLINE_PHRASES } from './chara/data/phrases'
 
 export default function CharaPickerPage() {
+  // 読み込みのたびに1つ選ぶ。文言の候補は src/chara/data/phrases.ts で編集できる。
+  const tagline = pickPhrase(TAGLINE_PHRASES, 'いくつかの質問に答えると、条件に合うキャラを推測します')
+
   return (
     <ErrorBoundary>
       <div className="relative">
@@ -17,9 +21,7 @@ export default function CharaPickerPage() {
             <h1 className="text-massive font-medium font-display text-ink mb-2">
               理想の推しア◯ネイター
             </h1>
-            <p className="text-muted mb-10">
-              いくつかの質問に答えると、条件に合うキャラを推測します
-            </p>
+            <p className="text-muted mb-10">{tagline}</p>
             <CharaPickerApp />
           </div>
         </div>
