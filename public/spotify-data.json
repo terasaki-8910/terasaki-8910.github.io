@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-07-31T13:29:40.158Z",
+  "lastUpdated": "2026-07-31T19:06:28.969Z",
   "tracks": [
+    {
+      "id": "06XQvnJb53SUYmlWIhUXUi",
+      "name": "怪物",
+      "artist": "YOASOBI",
+      "album": "怪物",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2efc5e5f5922ca1f1b88928",
+      "playedAt": "2026-07-31T17:28:00.341Z",
+      "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
+      "duration": 206000,
+      "previewUrl": ""
+    },
     {
       "id": "76kJA3LUe1uREGjlaOypkL",
       "name": "テレパシ",
@@ -296,17 +307,6 @@
       "playedAt": "2026-07-27T16:57:41.534Z",
       "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
       "duration": 246936,
-      "previewUrl": ""
-    },
-    {
-      "id": "5ALvDIJw5smrREM5iXmr6G",
-      "name": "僕らは今のなかで",
-      "artist": "μ's",
-      "album": "μ's Best Album Best Live! Collection Ⅱ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
-      "playedAt": "2026-07-27T16:46:29.667Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
-      "duration": 274505,
       "previewUrl": ""
     }
   ],
