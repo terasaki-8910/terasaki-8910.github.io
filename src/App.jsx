@@ -8,6 +8,7 @@ import AsciiGallery from './components/AsciiGallery'
 import Philosophy from './components/Philosophy'
 import ProjectShowcase from './components/ProjectShowcase'
 import Profile from './components/Profile'
+import CommitLog from './components/CommitLog'
 import Footer from './components/Footer'
 import ErrorBoundary from './components/ErrorBoundary'
 import PageBackground from './components/PageBackground'
@@ -59,6 +60,7 @@ function App() {
         <AsciiGallery limit={2} linkToFull />
         <ProjectShowcase />
         <Profile />
+        <CommitLog />
         <Footer />
       </div>
     </ErrorBoundary>
