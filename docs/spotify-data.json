@@ -1,6 +1,182 @@
 {
-  "lastUpdated": "2026-08-01T08:02:07.299Z",
+  "lastUpdated": "2026-08-01T12:55:04.310Z",
   "tracks": [
+    {
+      "id": "17A3UTMUWzCRn7I42exBhF",
+      "name": "君と羊と青",
+      "artist": "RADWIMPS",
+      "album": "絶体絶命",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730988155f2cd3a59251cd340e",
+      "playedAt": "2026-08-01T12:50:39.121Z",
+      "spotifyUrl": "https://open.spotify.com/track/17A3UTMUWzCRn7I42exBhF",
+      "duration": 162280,
+      "previewUrl": ""
+    },
+    {
+      "id": "699ku1Ebqi9pwi0IwnRPET",
+      "name": "サイハテアイニ",
+      "artist": "RADWIMPS",
+      "album": "サイハテアイニ / 洗脳",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733586e02986ded6e995a87cec",
+      "playedAt": "2026-08-01T12:47:56.345Z",
+      "spotifyUrl": "https://open.spotify.com/track/699ku1Ebqi9pwi0IwnRPET",
+      "duration": 221920,
+      "previewUrl": ""
+    },
+    {
+      "id": "3SMpsXpVrFju2OUzFtJPws",
+      "name": "なんでもないや - movie ver.",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a0abdc8306966fee2e9076b2",
+      "playedAt": "2026-08-01T12:42:47.422Z",
+      "spotifyUrl": "https://open.spotify.com/track/3SMpsXpVrFju2OUzFtJPws",
+      "duration": 344053,
+      "previewUrl": ""
+    },
+    {
+      "id": "3HOOzsN7ypLG53pyBq9eeL",
+      "name": "カオスが極まる",
+      "artist": "UNISON SQUARE GARDEN",
+      "album": "Ninth Peel",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27380d422dacc1c34382835dfba",
+      "playedAt": "2026-08-01T12:36:46.249Z",
+      "spotifyUrl": "https://open.spotify.com/track/3HOOzsN7ypLG53pyBq9eeL",
+      "duration": 231093,
+      "previewUrl": ""
+    },
+    {
+      "id": "73rdU71fLEd0nW7HENRhKF",
+      "name": "キュートなキューたい",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-08-01T12:31:17.805Z",
+      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
+      "duration": 236000,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-08-01T12:27:21.368Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-08-01T12:24:07.234Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-08-01T12:19:59.824Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-08-01T12:16:43.742Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ALvDIJw5smrREM5iXmr6G",
+      "name": "僕らは今のなかで",
+      "artist": "μ's",
+      "album": "μ's Best Album Best Live! Collection Ⅱ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+      "playedAt": "2026-08-01T11:42:02.062Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
+      "duration": 274505,
+      "previewUrl": ""
+    },
+    {
+      "id": "2isCWO5dMBDzyLscHVoJIO",
+      "name": "憧れをいっぱい",
+      "artist": "初星学園, 高木龍一, 倉本千奈",
+      "album": "憧れをいっぱい",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
+      "playedAt": "2026-08-01T11:13:28.006Z",
+      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
+      "duration": 288363,
+      "previewUrl": ""
+    },
+    {
+      "id": "7zsSPRgnqYgtfwAwmeeMZe",
+      "name": "がむしゃらに行こう！ - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, SHOW, Mitsu.J, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "がむしゃらに行こう！ (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734159c4f94b6e61ac02cd738d",
+      "playedAt": "2026-08-01T11:08:39.165Z",
+      "spotifyUrl": "https://open.spotify.com/track/7zsSPRgnqYgtfwAwmeeMZe",
+      "duration": 218000,
+      "previewUrl": ""
+    },
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-08-01T11:05:00.697Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "10Eyo4juZQFthKqlJgGMdp",
+      "name": "怪盗",
+      "artist": "back number",
+      "album": "怪盗",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae51734d04ef431b65a09a9a",
+      "playedAt": "2026-08-01T10:49:50.834Z",
+      "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
+      "duration": 196226,
+      "previewUrl": ""
+    },
+    {
+      "id": "0QOb6OYWyRzdUP4d4Imi61",
+      "name": "Wasted Nights",
+      "artist": "ONE OK ROCK",
+      "album": "Eye of the Storm",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e427590ddf78e316dccdc14",
+      "playedAt": "2026-08-01T10:45:19.699Z",
+      "spotifyUrl": "https://open.spotify.com/track/0QOb6OYWyRzdUP4d4Imi61",
+      "duration": 224773,
+      "previewUrl": ""
+    },
+    {
+      "id": "59h6J25QnnT8xshPTFLkpe",
+      "name": "あぶく",
+      "artist": "ヨルシカ",
+      "album": "あぶく",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
+      "playedAt": "2026-08-01T10:41:14.937Z",
+      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
+      "duration": 234613,
+      "previewUrl": ""
+    },
     {
       "id": "06XQvnJb53SUYmlWIhUXUi",
       "name": "怪物",
@@ -35,39 +211,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-07-31T09:27:26.984Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
-      "id": "73rdU71fLEd0nW7HENRhKF",
-      "name": "キュートなキューたい",
-      "artist": "CUTIE STREET",
-      "album": "キュートなキューたい / ナイスだね",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
-      "playedAt": "2026-07-31T09:23:21.840Z",
-      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
-      "duration": 236000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-07-31T09:19:25.393Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
-      "previewUrl": ""
-    },
-    {
       "id": "407GWcB9QwD3aiX0M7RCFT",
       "name": "GYB!!",
       "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
@@ -76,28 +219,6 @@
       "playedAt": "2026-07-31T09:14:04.939Z",
       "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
       "duration": 218573,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-07-31T09:10:25.903Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
-      "previewUrl": ""
-    },
-    {
-      "id": "2le4lZquBURJYS6TcdAZdx",
-      "name": "絶対王者チョコレート",
-      "artist": "ゆらゆらシスターズ",
-      "album": "絶対王者チョコレート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-07-31T09:07:09.688Z",
-      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
-      "duration": 208223,
       "previewUrl": ""
     },
     {
@@ -178,17 +299,6 @@
       "previewUrl": ""
     },
     {
-      "id": "59h6J25QnnT8xshPTFLkpe",
-      "name": "あぶく",
-      "artist": "ヨルシカ",
-      "album": "あぶく",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
-      "playedAt": "2026-07-30T17:08:57.596Z",
-      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
-      "duration": 234613,
-      "previewUrl": ""
-    },
-    {
       "id": "78W4mTLIh4qoLu92W4IQhO",
       "name": "ライラック",
       "artist": "Mrs. GREEN APPLE",
@@ -197,17 +307,6 @@
       "playedAt": "2026-07-30T17:05:02.511Z",
       "spotifyUrl": "https://open.spotify.com/track/78W4mTLIh4qoLu92W4IQhO",
       "duration": 288200,
-      "previewUrl": ""
-    },
-    {
-      "id": "10Eyo4juZQFthKqlJgGMdp",
-      "name": "怪盗",
-      "artist": "back number",
-      "album": "怪盗",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae51734d04ef431b65a09a9a",
-      "playedAt": "2026-07-30T17:00:03.199Z",
-      "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
-      "duration": 196226,
       "previewUrl": ""
     },
     {
@@ -222,28 +321,6 @@
       "previewUrl": ""
     },
     {
-      "id": "0QOb6OYWyRzdUP4d4Imi61",
-      "name": "Wasted Nights",
-      "artist": "ONE OK ROCK",
-      "album": "Eye of the Storm",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e427590ddf78e316dccdc14",
-      "playedAt": "2026-07-30T13:25:47.734Z",
-      "spotifyUrl": "https://open.spotify.com/track/0QOb6OYWyRzdUP4d4Imi61",
-      "duration": 224773,
-      "previewUrl": ""
-    },
-    {
-      "id": "7zsSPRgnqYgtfwAwmeeMZe",
-      "name": "がむしゃらに行こう！ - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, SHOW, Mitsu.J, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "がむしゃらに行こう！ (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734159c4f94b6e61ac02cd738d",
-      "playedAt": "2026-07-30T06:13:10.684Z",
-      "spotifyUrl": "https://open.spotify.com/track/7zsSPRgnqYgtfwAwmeeMZe",
-      "duration": 218000,
-      "previewUrl": ""
-    },
-    {
       "id": "0ookCvrhGat2q6uV1R9Kq1",
       "name": "ぷりきゅきゅ",
       "artist": "CUTIE STREET",
@@ -253,62 +330,7 @@
       "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
       "duration": 229677,
       "previewUrl": ""
-    },
-    {
-      "id": "2isCWO5dMBDzyLscHVoJIO",
-      "name": "憧れをいっぱい",
-      "artist": "初星学園, 高木龍一, 倉本千奈",
-      "album": "憧れをいっぱい",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
-      "playedAt": "2026-07-30T06:05:41.959Z",
-      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
-      "duration": 288363,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Gp8MWnUzS5V2lvTr25c2A",
-      "name": "ビビデバ",
-      "artist": "Hoshimachi Suisei",
-      "album": "ビビデバ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d2da332b0bcdf081df91d036",
-      "playedAt": "2026-07-28T16:11:59.907Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Gp8MWnUzS5V2lvTr25c2A",
-      "duration": 165266,
-      "previewUrl": ""
-    },
-    {
-      "id": "3zbKiko8V3u2yn1RcT8xBZ",
-      "name": "青のすみか",
-      "artist": "Tatsuya Kitani",
-      "album": "ROUNDABOUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d49212018875a81c83b67e",
-      "playedAt": "2026-07-28T12:14:36.569Z",
-      "spotifyUrl": "https://open.spotify.com/track/3zbKiko8V3u2yn1RcT8xBZ",
-      "duration": 196640,
-      "previewUrl": ""
-    },
-    {
-      "id": "47IJAEuqiu4r1dEoEExfMA",
-      "name": "空想メソロギヰ",
-      "artist": "Yousei Teikoku",
-      "album": "PAX VESANIA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd463667d0879f62cfdf863d",
-      "playedAt": "2026-07-28T12:10:31.877Z",
-      "spotifyUrl": "https://open.spotify.com/track/47IJAEuqiu4r1dEoEExfMA",
-      "duration": 243226,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-07-27T16:57:41.534Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
-      "previewUrl": ""
     }
   ],
-  "total": 28
+  "total": 30
 }
