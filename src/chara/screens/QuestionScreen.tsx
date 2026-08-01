@@ -28,7 +28,13 @@ export function QuestionScreen(props: {
   const { probe, askedCount, canUndo, onAnswer, onUndo, onOmakase, onRestart } = props;
 
   return (
-    <div data-testid="question" className="min-w-0">
+    // key に probe.key を与えて質問ごとにアニメーションを再生させる
+    // （同じ要素が使い回されると入場アニメーションが走らないため）。
+    <div
+      key={probe.key}
+      data-testid="question"
+      className="min-w-0 motion-safe:animate-rise-in"
+    >
       <p className="font-mono text-xs tracking-wider text-muted">{askedCount + 1}問目</p>
 
       <h2 className="mt-3 text-2xl md:text-3xl font-display text-ink">{probe.prompt}</h2>

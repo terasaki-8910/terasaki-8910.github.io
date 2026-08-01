@@ -14,7 +14,11 @@ export function GuessScreen(props: {
   const { guess, canUndo, onConfirm, onReject, onUndo, onRestart } = props;
 
   return (
-    <div data-testid="guess" className="flex min-w-0 flex-col items-center text-center">
+    <div
+      key={guess.character.id}
+      data-testid="guess"
+      className="flex min-w-0 flex-col items-center text-center motion-safe:animate-rise-in"
+    >
       <p className="font-mono text-xs tracking-wider text-muted">この子かな?</p>
 
       <CharacterReveal scored={guess} imageTestId="guess-image" />
