@@ -10,8 +10,8 @@
   --header-box-border: rgba(0, 0, 0, 0.12);
   /* index.css の --color-accent と同じ値。こちらは静的ページにも単体で
      読み込まれるためTailwindを経由できず、独立して持つ必要がある。 */
-  --header-accent: #BE4B63;
-  --header-accent-dim: rgba(190, 75, 99, 0.14);
+  --header-accent: #FAA0A0;
+  --header-accent-dim: rgba(250, 160, 160, 0.14);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,8 +42,8 @@
   --header-text: rgba(26, 26, 26, 0.9);
   --header-box-bg: #F9EC8E;
   --header-box-border: rgba(0, 0, 0, 0.12);
-  --header-accent: #BE4B63;
-  --header-accent-dim: rgba(190, 75, 99, 0.14);
+  --header-accent: #FAA0A0;
+  --header-accent-dim: rgba(250, 160, 160, 0.14);
 }
 
 /* サン/ムーンアイコンの出し分け。両方を常にDOMに置き、CSSだけで
