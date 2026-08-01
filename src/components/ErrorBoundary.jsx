@@ -50,7 +50,7 @@ class ErrorBoundary extends Component {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 onClick={() => window.location.reload()}
-                className="px-8 py-4 bg-celeste hover:bg-celeste/80 text-ink font-bold rounded-lg transition-colors"
+                className="px-8 py-4 bg-accent hover:bg-accent/80 text-on-accent font-bold rounded-lg transition-colors"
               >
                 ページを再読み込み
               </button>

@@ -8,6 +8,10 @@
   --header-text: rgba(26, 26, 26, 0.9);
   --header-box-bg: #F9EC8E;
   --header-box-border: rgba(0, 0, 0, 0.12);
+  /* index.css の --color-accent と同じ値。こちらは静的ページにも単体で
+     読み込まれるためTailwindを経由できず、独立して持つ必要がある。 */
+  --header-accent: #BE4B63;
+  --header-accent-dim: rgba(190, 75, 99, 0.14);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +21,8 @@
     --header-text: rgba(237, 237, 237, 0.9);
     --header-box-bg: #121212;
     --header-box-border: rgba(255, 255, 255, 0.12);
+    --header-accent: #FAA0A0;
+    --header-accent-dim: rgba(250, 160, 160, 0.14);
   }
 }
 
@@ -26,6 +32,8 @@
   --header-text: rgba(237, 237, 237, 0.9);
   --header-box-bg: #121212;
   --header-box-border: rgba(255, 255, 255, 0.12);
+  --header-accent: #FAA0A0;
+  --header-accent-dim: rgba(250, 160, 160, 0.14);
 }
 
 :root[data-theme="light"] {
@@ -34,6 +42,8 @@
   --header-text: rgba(26, 26, 26, 0.9);
   --header-box-bg: #F9EC8E;
   --header-box-border: rgba(0, 0, 0, 0.12);
+  --header-accent: #BE4B63;
+  --header-accent-dim: rgba(190, 75, 99, 0.14);
 }
 
 /* サン/ムーンアイコンの出し分け。両方を常にDOMに置き、CSSだけで
@@ -121,8 +131,8 @@
 }
 
 .cosmic-header__home-link:hover {
-  color: #4E8C72;
-  border-color: #4E8C72;
+  color: var(--header-accent);
+  border-color: var(--header-accent);
 }
 
 .cosmic-header__home-text {
@@ -148,7 +158,7 @@
 }
 
 .cosmic-header__theme-toggle:hover {
-  border-color: #4E8C72;
+  border-color: var(--header-accent);
 }
 
 /* Spotifyリンクスタイル */
@@ -158,7 +168,7 @@
 }
 
 /* 以前はSpotifyブランドの緑で塩られた特別扱いだったが、サイト全体の
-   「アクセントは1色(celeste)だけ」という方針に合わせ、他の箱(Home/
+   「アクセントは1色(accent)だけ」という方針に合わせ、他の箱(Home/
    テーマ切替)と同じ中性の枠線+背景に統一した。ロゴアイコン自体の緑色
    (.spotify-logoのfill)はブランド認識のため残す。 */
 .cosmic-header__spotify-box {
@@ -177,7 +187,7 @@
 }
 
 .cosmic-header__spotify-box:hover {
-  border-color: #4E8C72;
+  border-color: var(--header-accent);
 }
 
 .cosmic-header__spotify-icon {
@@ -303,9 +313,9 @@
 
 /* アクティブ状態のスタイル */
 .cosmic-header__home-link--active {
-  color: #4E8C72;
-  border-color: #4E8C72;
-  background: rgba(127, 190, 160, 0.14);
+  color: var(--header-accent);
+  border-color: var(--header-accent);
+  background: var(--header-accent-dim);
   pointer-events: none; /* 現在ページなのでクリック不可 */
 }
 
@@ -314,6 +324,6 @@
 }
 
 .cosmic-header__spotify-link--active .cosmic-header__spotify-box {
-  background: rgba(127, 190, 160, 0.14);
-  border-color: #4E8C72;
+  background: var(--header-accent-dim);
+  border-color: var(--header-accent);
 }

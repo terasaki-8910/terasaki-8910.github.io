@@ -14,14 +14,14 @@ export default {
         'ink': 'var(--color-ink)',
         'muted': 'var(--color-muted)',
         'line': 'var(--color-line)',
-        // サイト全体で唯一のアクセントカラー(チェレステグリーン近似)。
-        // 明暗どちらの地でも視認性を保つため両テーマ共通の固定値。
-        'celeste': '#7FBEA0',
-        'celeste-dim': 'rgba(127, 190, 160, 0.14)',
-        // celeste塗りの上に乗せる文字色。celeste自体がテーマで変わらないので
-        // これも固定値にする。inkを乗せるとダークテーマで1.83:1まで落ちるため
-        // (ライトは8.10:1)、テーマ追従のinkは使わない。この値なら両テーマ8.10:1。
-        'on-celeste': '#1A1A1A',
+        // サイト全体で唯一のアクセントカラー(Heroタイトルと同系のピンク)。
+        // 実体はindex.cssの--color-accentで、テーマごとに濃さが変わる
+        // (淡黄と近黒の両方で3:1を満たす単一色が存在しないため。詳細はindex.css)。
+        // 不透明度修飾子(bg-accent/25 等)を効かせるため<alpha-value>形式にする。
+        'accent': 'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-dim': 'rgb(var(--color-accent) / 0.14)',
+        // accent塗りの上に乗せる文字色。accentがテーマで変わるのでこれも追従する。
+        'on-accent': 'rgb(var(--color-on-accent) / <alpha-value>)',
       },
       fontFamily: {
         'sans': ['"Zen Kurenaido"', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],

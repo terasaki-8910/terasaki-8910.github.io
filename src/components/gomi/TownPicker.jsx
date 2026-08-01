@@ -27,13 +27,13 @@ export default function TownPicker({ towns, value, areaLabel, onChange }) {
         onChange={(e) => setQuery(e.target.value)}
         placeholder="町名で検索(かな可)"
         aria-controls="gomi-town-select"
-        className="w-full bg-paper text-ink text-sm border border-line rounded px-3 py-2 mb-2 focus:outline-none focus:border-celeste placeholder:text-muted"
+        className="w-full bg-paper text-ink text-sm border border-line rounded px-3 py-2 mb-2 focus:outline-none focus:border-accent placeholder:text-muted"
       />
       <select
         id="gomi-town-select"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-paper text-ink text-sm border border-line rounded px-3 py-2.5 focus:outline-none focus:border-celeste"
+        className="w-full bg-paper text-ink text-sm border border-line rounded px-3 py-2.5 focus:outline-none focus:border-accent"
       >
         {GOMI_AREAS.map((area) => {
           const group = visible.filter((t) => t.a === area.slug)

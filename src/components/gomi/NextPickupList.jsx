@@ -35,7 +35,7 @@ export default function NextPickupList({ days, today }) {
                 {next ? formatShort(next) : '予定なし'}
               </span>
               {rel && (
-                <span className="shrink-0 text-xs font-medium text-celeste">{rel}</span>
+                <span className="shrink-0 text-xs font-medium text-accent">{rel}</span>
               )}
             </li>
           )

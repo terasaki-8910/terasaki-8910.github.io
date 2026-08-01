@@ -97,7 +97,7 @@ export default function Profile() {
                   ref={(el) => (itemsRef.current[index] = el)}
                   className="relative pl-6 border-l border-line"
                 >
-                  <div className="text-sm font-mono text-celeste">{item.year}</div>
+                  <div className="text-sm font-mono text-accent">{item.year}</div>
                   <h4 className="text-xl font-display text-ink mt-2">{item.title}</h4>
                   <p className="text-muted leading-relaxed mt-1">{item.description}</p>
                 </div>

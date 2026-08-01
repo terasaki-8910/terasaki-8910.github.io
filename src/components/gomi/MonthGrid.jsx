@@ -38,7 +38,7 @@ export default function MonthGrid({
   while (cells.length % 7 !== 0) cells.push(null)
 
   const navBtn =
-    'w-10 h-10 flex items-center justify-center border border-line rounded bg-paper text-ink hover:border-celeste hover:text-celeste transition-colors disabled:opacity-30 disabled:pointer-events-none'
+    'w-10 h-10 flex items-center justify-center border border-line rounded bg-paper text-ink hover:border-accent hover:text-accent transition-colors disabled:opacity-30 disabled:pointer-events-none'
 
   return (
     <div className="min-w-0">
@@ -53,7 +53,7 @@ export default function MonthGrid({
           <button
             type="button"
             onClick={onToday}
-            className="h-10 px-4 flex items-center border border-line rounded bg-paper text-sm text-ink hover:border-celeste hover:text-celeste transition-colors"
+            className="h-10 px-4 flex items-center border border-line rounded bg-paper text-sm text-ink hover:border-accent hover:text-accent transition-colors"
           >
             今日
           </button>
@@ -97,12 +97,12 @@ export default function MonthGrid({
                 aria-label={label}
                 aria-pressed={isSelected}
                 className={`min-h-[52px] md:min-h-[92px] p-1 md:p-1.5 text-left align-top transition-colors cursor-pointer ${
-                  isSelected ? 'bg-celeste-dim' : 'bg-paper hover:bg-celeste-dim'
-                } ${isToday ? 'ring-2 ring-inset ring-celeste' : ''}`}
+                  isSelected ? 'bg-accent-dim' : 'bg-paper hover:bg-accent-dim'
+                } ${isToday ? 'ring-2 ring-inset ring-accent' : ''}`}
               >
                 <span
                   className={`block text-xs font-mono mb-1 ${
-                    isToday ? 'text-celeste font-bold' : 'text-muted'
+                    isToday ? 'text-accent font-bold' : 'text-muted'
                   }`}
                 >
                   {d}
@@ -119,7 +119,7 @@ export default function MonthGrid({
                         e.stopPropagation()
                         onOpenAdd(iso, c)
                       }}
-                      className="block w-full text-[10px] leading-tight text-ink px-1 py-px rounded-[2px] truncate text-left cursor-pointer hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-celeste transition-[filter]"
+                      className="block w-full text-[10px] leading-tight text-ink px-1 py-px rounded-[2px] truncate text-left cursor-pointer hover:brightness-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-[filter]"
                       style={{
                         borderLeft: `3px solid ${gomiColor(c.id)}`,
                         backgroundColor: `color-mix(in srgb, ${gomiColor(c.id)} 14%, transparent)`,
@@ -174,7 +174,7 @@ export function DayDetail({ iso, days, onOpenAdd }) {
                 type="button"
                 onClick={() => onOpenAdd(iso, c)}
                 aria-label={`${m}月${d}日の${c.label}をカレンダーに追加`}
-                className="w-full flex items-center gap-3 text-sm text-ink text-left py-1.5 -mx-1 px-1 rounded hover:bg-celeste-dim focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-celeste transition-colors cursor-pointer"
+                className="w-full flex items-center gap-3 text-sm text-ink text-left py-1.5 -mx-1 px-1 rounded hover:bg-accent-dim focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors cursor-pointer"
               >
                 <span
                   className="w-2.5 h-2.5 rounded-full shrink-0"

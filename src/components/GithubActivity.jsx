@@ -13,13 +13,13 @@ function levelForCount(count, max) {
 // レベル0(コントリビューションなし)はbg-surfaceで塗ると、活動がある
 // セルと同じ「実体のある箱」に見えてしまい、何もしていない日まで主張が
 // 強くなる。塗りを消して極薄の枠線だけ残し、グリッドの構造は分かる程度に
-// 沈めることで、活動があるセル(celesteで塗られる)だけが浮き上がるようにする。
+// 沈めることで、活動があるセル(accentで塗られる)だけが浮き上がるようにする。
 const LEVEL_COLORS = [
   'bg-transparent border border-line/40',
-  'bg-celeste/25',
-  'bg-celeste/50',
-  'bg-celeste/75',
-  'bg-celeste',
+  'bg-accent/25',
+  'bg-accent/50',
+  'bg-accent/75',
+  'bg-accent',
 ]
 
 export default function GithubActivity() {

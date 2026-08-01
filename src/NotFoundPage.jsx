@@ -23,13 +23,13 @@ export default function NotFoundPage() {
             お探しのページは見つかりませんでした。
           </p>
           <div className="flex flex-wrap gap-x-8 gap-y-3 justify-center text-sm font-mono">
-            <a href="/" className="text-ink hover:text-celeste transition-colors">
+            <a href="/" className="text-ink hover:text-accent transition-colors">
               Home →
             </a>
-            <a href="/ascii/" className="text-ink hover:text-celeste transition-colors">
+            <a href="/ascii/" className="text-ink hover:text-accent transition-colors">
               3D ASCII →
             </a>
-            <a href="/spotify/" className="text-ink hover:text-celeste transition-colors">
+            <a href="/spotify/" className="text-ink hover:text-accent transition-colors">
               Spotify Dashboard →
             </a>
           </div>

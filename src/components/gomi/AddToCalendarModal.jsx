@@ -21,7 +21,7 @@ export default function AddToCalendarModal({ iso, category, areaSlug, areaLabel,
   const fileName = `gomi-${areaSlug}-${iso}-${category.id}.ics`
 
   const btn =
-    'block w-full text-center text-sm border border-line rounded px-3 py-2.5 text-ink hover:border-celeste hover:text-celeste transition-colors'
+    'block w-full text-center text-sm border border-line rounded px-3 py-2.5 text-ink hover:border-accent hover:text-accent transition-colors'
 
   return (
     <div

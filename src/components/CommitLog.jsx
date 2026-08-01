@@ -16,7 +16,7 @@ export default function CommitLog() {
               href={`https://github.com/terasaki-8910/terasaki-8910.github.io/commit/${commit.fullHash}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-muted hover:text-celeste transition-colors shrink-0"
+              className="font-mono text-muted hover:text-accent transition-colors shrink-0"
             >
               {commit.hash}
             </a>
@@ -29,7 +29,7 @@ export default function CommitLog() {
         href="https://github.com/terasaki-8910/terasaki-8910.github.io/commits/main"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block mt-3 text-xs font-mono text-muted hover:text-celeste transition-colors"
+        className="inline-block mt-3 text-xs font-mono text-muted hover:text-accent transition-colors"
       >
         GitHubで全履歴を見る →
       </a>

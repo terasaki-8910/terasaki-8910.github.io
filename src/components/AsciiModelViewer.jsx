@@ -179,7 +179,7 @@ export default function AsciiModelViewer({ modelUrl, name, credit, href, id }) {
   return (
     <div id={id} className="scroll-mt-24">
       {href ? (
-        <a href={href} className="block text-2xl font-display text-ink hover:text-celeste transition-colors mb-3">
+        <a href={href} className="block text-2xl font-display text-ink hover:text-accent transition-colors mb-3">
           {name}
         </a>
       ) : (
@@ -192,7 +192,7 @@ export default function AsciiModelViewer({ modelUrl, name, credit, href, id }) {
       {credit && (
         <p className="text-xs font-mono text-muted mt-2">
           {credit.title} by {credit.author} ({credit.license}) —{' '}
-          <a href={credit.sourceUrl} target="_blank" rel="noopener noreferrer" className="hover:text-celeste">
+          <a href={credit.sourceUrl} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
             source
           </a>
         </p>

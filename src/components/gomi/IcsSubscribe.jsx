@@ -18,7 +18,7 @@ export default function IcsSubscribe({ areaSlug, areaLabel }) {
   }
 
   const btn =
-    'block w-full text-center text-sm border border-line rounded px-3 py-2.5 text-ink hover:border-celeste hover:text-celeste transition-colors'
+    'block w-full text-center text-sm border border-line rounded px-3 py-2.5 text-ink hover:border-accent hover:text-accent transition-colors'
 
   return (
     <div className="border border-line rounded p-4">

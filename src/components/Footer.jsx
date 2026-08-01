@@ -16,19 +16,19 @@ export default function Footer() {
               href="https://github.com/terasaki-8910"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-celeste transition-colors"
+              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-accent transition-colors"
             >
               <FaGithub className="text-xl text-ink" />
             </a>
             <a
               href="https://open.spotify.com/user/4yzziiwdk53rx9ih2l6o04oa5?si=94d46b7aa75c4b70"
-              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-celeste transition-colors"
+              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-accent transition-colors"
             >
               <SlSocialSpotify className="text-xl text-ink" />
             </a>
             <a
               href="https://discord.gg/pc3z8CbX"
-              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-celeste transition-colors"
+              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-accent transition-colors"
             >
               <FaDiscord className="text-xl text-ink" />
             </a>
@@ -36,7 +36,7 @@ export default function Footer() {
               href="https://x.com/fuyuiroo"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-celeste transition-colors"
+              className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-accent transition-colors"
             >
               <span className="text-lg text-ink">𝕏</span>
             </a>

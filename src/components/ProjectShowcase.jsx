@@ -72,7 +72,7 @@ export default function ProjectShowcase() {
               className="border-b border-line py-10"
             >
               <a href={project.link} className="group block">
-                <h3 className="text-2xl font-display text-ink group-hover:text-celeste transition-colors">
+                <h3 className="text-2xl font-display text-ink group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-muted text-lg mt-3">{project.description}</p>

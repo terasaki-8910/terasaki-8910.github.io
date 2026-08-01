@@ -222,7 +222,7 @@ export default function SpotifyRecentTracks({ limit = 30 }) {
             </div>
 
             <div className="min-w-0 flex-1">
-              <h3 className="text-ink font-medium text-sm truncate group-hover:text-celeste transition-colors">
+              <h3 className="text-ink font-medium text-sm truncate group-hover:text-accent transition-colors">
                 {track.name}
               </h3>
               <p className="text-muted text-xs truncate mt-0.5">

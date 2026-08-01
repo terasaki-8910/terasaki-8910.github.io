@@ -153,7 +153,7 @@ export default function GomiCalendar() {
             href={data.source.page}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-celeste transition-colors"
+            className="underline hover:text-accent transition-colors"
           >
             {data.source.attribution}
           </a>

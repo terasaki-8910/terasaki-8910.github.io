@@ -14,7 +14,7 @@ export default function AsciiGallery({ limit, linkToFull = false }) {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-massive font-medium font-display text-ink mb-12">
           {linkToFull ? (
-            <a href="/ascii/" className="hover:text-celeste transition-colors">
+            <a href="/ascii/" className="hover:text-accent transition-colors">
               3D ASCII
             </a>
           ) : (
@@ -42,7 +42,7 @@ export default function AsciiGallery({ limit, linkToFull = false }) {
             <button
               type="button"
               onClick={() => setExpanded((v) => !v)}
-              className="text-sm text-muted hover:text-celeste transition-colors"
+              className="text-sm text-muted hover:text-accent transition-colors"
             >
               {expanded ? '閉じる' : `他${hidden.length}件を表示`}
             </button>
