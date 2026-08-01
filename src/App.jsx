@@ -57,9 +57,11 @@ function App() {
         <PageBackground />
         <Hero />
         <Philosophy />
+        {/* 自己紹介・経歴は先に見せる(Philosophyの直後)。作品紹介より
+            人となりを先に置く方針。 */}
+        <Profile />
         <AsciiGallery limit={2} linkToFull />
         <ProjectShowcase />
-        <Profile />
         <CommitLog />
         <Footer />
       </div>

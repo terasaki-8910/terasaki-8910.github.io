@@ -65,17 +65,15 @@ export default function Philosophy() {
             <span className="word">冬色と</span>
             <span className="word">申します！</span>
           </p>
+          {/* この段落は index.html の #seo-fallback-content と同じ内容にしておくこと
+              (クローラーに見せる文章とページ実物を一致させるため)。 */}
           <p className="text-base md:text-xl leading-relaxed text-gray-500 font-light">
-            <span className="word">実験的な</span>
+            <span className="word">取り組んできた</span>
             <span className="word">プロジェクト、</span>
-            <span className="word">未完成な</span>
+            <span className="word">未完成の</span>
             <span className="word">アイデア、</span>
-            <span className="word">そして</span>
-            <span className="word">挑戦の</span>
-            <span className="word">痕跡。</span>
-            <span className="word">ここは</span>
-            <span className="word">創造の</span>
-            <span className="word">実験場。</span>
+            <span className="word">ついでの</span>
+            <span className="word">自己紹介。</span>
           </p>
         </div>
       </div>
