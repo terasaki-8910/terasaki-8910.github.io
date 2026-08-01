@@ -97,8 +97,8 @@ async function generateHomeAvatar(outputPath) {
 
 function generateManifest(outputPath) {
   const manifest = {
-    name: 'クソサイト製造工場',
-    short_name: 'クソサイト',
+    name: '@Override — 冬色',
+    short_name: '@Override',
     description: '無駄に洗練されたハイテク工場',
     start_url: '/',
     display: 'standalone',

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-display text-ink mb-2 whitespace-nowrap">クソサイト製造工場</h3>
+            <h3 className="text-2xl font-display text-ink mb-2 whitespace-nowrap">@Override</h3>
             <p className="text-muted text-lg">Site Projects Collection</p>
           </div>
           <div className="flex gap-4">

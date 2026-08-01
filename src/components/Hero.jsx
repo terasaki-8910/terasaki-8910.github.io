@@ -32,14 +32,18 @@ export default function Hero() {
       </div>
 
       <div ref={contentRef} className="text-center max-w-4xl mx-auto w-full min-w-0">
+        {/* サイト名。Javaの@Overrideに由来し、地の色(#F9EC8E)の出典である
+            Alicemerix「オーバーライド」とも掛けている(index.css参照)。
+            @Override単体だと検索で埋もれるため、<title>やOGP側には「冬色」を
+            必ず併記している(index.html)。見た目とtitleタグは別物でよい。 */}
         <h1
           className="font-display font-medium text-massive mb-6"
           style={{ color: 'rgb(250, 160, 160)', WebkitTextStroke: '6px black', paintOrder: 'stroke fill' }}
         >
-          クソサイト製造工場
+          @Override
         </h1>
         <p className="text-lg md:text-xl text-muted tracking-wide mb-20">
-          冬色 — Kuso Site Manufacturing Plant
+          冬色（ふゆいろ / Fuyuiro） — 再定義中
         </p>
 
         <GithubActivity />
