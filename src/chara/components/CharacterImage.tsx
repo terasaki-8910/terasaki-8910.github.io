@@ -124,16 +124,20 @@ export function CharacterImage(props: {
 
 /**
  * 読み込み中の仮マーク。ドット絵モーションに差し替える予定の場所。
- * prefers-reduced-motion では点滅を止める。
+ *
+ * ここは Danbooru への実際の通信待ち（体感で数百ms）なので、待たせている
+ * ことを示すインジケータに意味がある。質問の切り替えに入れていた人工的な
+ * 「考え中」とは性質が違う（あちらは待たせる理由が無いので撤去した）。
+ * prefers-reduced-motion では動きを止める。
  */
 function LoadingMark() {
   return (
-    <span className="flex gap-1" aria-hidden="true">
+    <span className="flex items-end gap-1" aria-hidden="true">
       {[0, 1, 2].map((i) => (
         <span
           key={i}
-          className="h-1.5 w-1.5 rounded-[1px] bg-muted motion-safe:animate-pulse"
-          style={{ animationDelay: `${i * 160}ms` }}
+          className="h-3 w-1 rounded-[1px] bg-muted motion-safe:animate-think motion-reduce:opacity-60"
+          style={{ animationDelay: `${i * 150}ms` }}
         />
       ))}
     </span>

@@ -5,61 +5,40 @@ import { useBayesInterview } from './hooks/useBayesInterview';
 import { useSessionLog, type SessionLogRecord } from './hooks/useSessionLog';
 import { omakase, type Dataset, type Scored } from './engine/recommend';
 import type { Probe } from './engine/questions';
-import { Thinking } from './components/Thinking';
 import { GuessScreen } from './screens/GuessScreen';
 import { NoGuessScreen } from './screens/NoGuessScreen';
 import { QuestionScreen } from './screens/QuestionScreen';
 import { ResultScreen } from './screens/ResultScreen';
 
 /**
- * 回答してから次の質問が出るまでの間（ミリ秒）。
- * 短すぎると考えている感が出ず、長いと単に待たされる。実機で触って詰めた値。
+ * 「同じ対象への二重発火」だけを弾くガード。
+ *
+ * 一度は回答後に「考え中」の間を挟んでいたが、単に待たされるだけで邪魔だと
+ * いう判断で撤去した。次の質問は即座に出す。「考えている感」は待ち時間ではなく
+ * 入場アニメーション（rise-in）が担う——こちらは表示中もクリックを受け付けるので
+ * 体感の待ち時間が増えない。
+ *
+ * 防ぎたいのは「1つの質問に2回答えてしまう」ことだけなので、経過時間ではなく
+ * 対象のキー（質問なら probe.key、推測なら character.id）で判定する。
+ * 時間で弾く方式だと、素早く連続で回答したときに正当なクリックまで無言で
+ * 無視されてしまう（実測で確認したため、この方式に変えた）。
  */
-const THINK_MS = 550;
+function useTargetGuard() {
+  const lastKey = useRef<string | null>(null);
 
-/**
- * 「いいえ」で候補を外したあとは、次を出すまでを少し長めにする。
- * 即座に別のキャラが出ると「適当に返しているのでは」という印象になるため
- * （利用者からの指摘。engine側でも再質問の下限が入っている）。
- */
-const THINK_MS_AFTER_REJECT = 900;
-
-/** 回答/拒否のたびに一定時間「考え中」を挟むためのフック。 */
-function useThinkingGate() {
-  const [thinking, setThinking] = useState(false);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const clear = useCallback(() => {
-    if (timer.current !== null) {
-      clearTimeout(timer.current);
-      timer.current = null;
-    }
+  /** 同じ key での再実行を無視する。key が変われば即座に通る。 */
+  const run = useCallback((key: string, action: () => void) => {
+    if (lastKey.current === key) return;
+    lastKey.current = key;
+    action();
   }, []);
 
-  // アンマウント後にsetStateしないよう後片付けする
-  useEffect(() => clear, [clear]);
+  /** 「一つ前に戻る」「最初からやり直す」で同じ質問が再登場しうるので解除する。 */
+  const reset = useCallback(() => {
+    lastKey.current = null;
+  }, []);
 
-  /** 指定時間だけ「考え中」にしてから action を実行する。実行中の連打は無視。 */
-  const run = useCallback(
-    (action: () => void, ms: number) => {
-      if (timer.current !== null) return;
-      setThinking(true);
-      timer.current = setTimeout(() => {
-        timer.current = null;
-        setThinking(false);
-        action();
-      }, ms);
-    },
-    [],
-  );
-
-  /** やり直し等で即座に抜けたいとき。 */
-  const cancel = useCallback(() => {
-    clear();
-    setThinking(false);
-  }, [clear]);
-
-  return { thinking, run, cancel };
+  return { run, reset };
 }
 
 /**
@@ -71,7 +50,7 @@ function BayesFlow({ dataset }: { dataset: Dataset }) {
   const interview = useBayesInterview(dataset);
   const { log } = useSessionLog();
   const [omakaseResult, setOmakaseResult] = useState<Scored | null>(null);
-  const { thinking, run: runThinking, cancel: cancelThinking } = useThinkingGate();
+  const { run: guard, reset: resetGuard } = useTargetGuard();
 
   const handleOmakase = useCallback(() => {
     const result = omakase(dataset, { seed: Date.now() });
@@ -89,19 +68,16 @@ function BayesFlow({ dataset }: { dataset: Dataset }) {
   }, [dataset, log]);
 
   const handleRestart = useCallback(() => {
-    cancelThinking();
+    resetGuard();
     interview.reset();
     setOmakaseResult(null);
-  }, [cancelThinking, interview]);
+  }, [resetGuard, interview]);
 
   // おまかせは質問・推測ループを経ない独立経路。結果表示中は interview 側の状態
   // （質問の途中経過など）を無視して直接 result 画面へ出す。
   if (omakaseResult !== null) {
     return <ResultScreen result={omakaseResult} onRestart={handleRestart} />;
   }
-
-  // 回答・拒否の直後は、次の質問/推測を出す前に「考え中」を挟む。
-  if (thinking) return <Thinking />;
 
   switch (interview.phase) {
     case 'asking':
@@ -112,8 +88,11 @@ function BayesFlow({ dataset }: { dataset: Dataset }) {
           probe={interview.probe as unknown as Probe}
           askedCount={interview.askedCount}
           canUndo={interview.canUndo}
-          onAnswer={(confidence) => runThinking(() => interview.answer(confidence), THINK_MS)}
-          onUndo={interview.undo}
+          onAnswer={(confidence) => guard(interview.probe.key, () => interview.answer(confidence))}
+          onUndo={() => {
+            resetGuard();
+            interview.undo();
+          }}
           onOmakase={handleOmakase}
           onRestart={handleRestart}
         />
@@ -124,8 +103,11 @@ function BayesFlow({ dataset }: { dataset: Dataset }) {
           guess={interview.guess}
           canUndo={interview.canUndo}
           onConfirm={interview.confirm}
-          onReject={() => runThinking(() => interview.reject(), THINK_MS_AFTER_REJECT)}
-          onUndo={interview.undo}
+          onReject={() => guard(interview.guess.character.id, () => interview.reject())}
+          onUndo={() => {
+            resetGuard();
+            interview.undo();
+          }}
           onRestart={handleRestart}
         />
       );
