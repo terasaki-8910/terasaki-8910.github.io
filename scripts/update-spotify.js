@@ -123,6 +123,26 @@ function formatTracks(items) {
   return tracks;
 }
 
+/**
+ * 曲の中身が前回と同じかどうか。`lastUpdated` は実行するたびに必ず変わるので、
+ * それを除いて比較する。
+ *
+ * これをしないと、再生履歴が1曲も増えていなくてもタイムスタンプだけの差分で
+ * 毎回コミットが積まれる（6時間ごとに1回、中身ゼロのコミットが増え続ける）。
+ * gomiパイプラインで同じ問題を直したときと同じ考え方。
+ */
+function isSameContent(prevPath, next) {
+  if (!fs.existsSync(prevPath)) return false;
+  try {
+    const prev = JSON.parse(fs.readFileSync(prevPath, 'utf-8'));
+    const strip = (d) => JSON.stringify({ ...d, lastUpdated: null });
+    return strip(prev) === strip(next);
+  } catch {
+    // 前回分が壊れている場合は普通に書き直す
+    return false;
+  }
+}
+
 // JSONファイルを生成
 function generateJSON(tracks) {
   const data = {
@@ -132,11 +152,23 @@ function generateJSON(tracks) {
   };
 
   const outputPath = path.join(process.cwd(), 'public', 'spotify-data.json');
-  fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
   const docsPath = path.join(process.cwd(), 'docs', 'spotify-data.json');
-  fs.writeFileSync(docsPath, JSON.stringify(data, null, 2));
+
+  // 中身が変わっていなければ一切書き込まない。書き込まなければ git diff も出ず、
+  // ワークフローの `git diff --staged --quiet` がコミットを作らない。
+  if (isSameContent(outputPath, data)) {
+    console.log('ℹ️  再生履歴に変更なし。ファイルは更新しません。');
+    return { ...data, unchanged: true };
+  }
+
+  fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+  // docs/ はビルド成果物だが、Spotifyデータだけは実行時fetchで読むため
+  // ここでも直接更新する（次のビルドを待たずに本番へ反映させる）。
+  if (fs.existsSync(path.dirname(docsPath))) {
+    fs.writeFileSync(docsPath, JSON.stringify(data, null, 2));
+    console.log(`📁 JSONファイルを生成: ${docsPath}`);
+  }
   console.log(`📁 JSONファイルを生成: ${outputPath}`);
-  console.log(`📁 JSONファイルを生成: ${docsPath}`);
 
   return data;
 }
@@ -157,6 +189,11 @@ async function main() {
 
     // 4. JSONファイル生成
     const data = generateJSON(tracks);
+
+    if (data.unchanged) {
+      console.log('✅ 完了(変更なしのためコミットは発生しません)');
+      return;
+    }
 
     console.log('✅ Spotifyデータ更新完了!');
     console.log(`📊 更新件数: ${tracks.length}曲`);

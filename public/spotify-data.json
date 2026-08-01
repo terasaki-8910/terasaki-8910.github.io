@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-08-01T12:55:04.310Z",
+  "lastUpdated": "2026-08-01T18:06:48.217Z",
   "tracks": [
+    {
+      "id": "1C1skAeFtnguXNlCYRQoCr",
+      "name": "ブレインロット",
+      "artist": "東京真中",
+      "album": "ブレインロット",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
+      "playedAt": "2026-08-01T17:13:10.224Z",
+      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
+      "duration": 122888,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-08-01T16:58:30.897Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "0ookCvrhGat2q6uV1R9Kq1",
+      "name": "ぷりきゅきゅ",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-08-01T14:46:50.759Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
+      "duration": 229677,
+      "previewUrl": ""
+    },
+    {
+      "id": "0sYJuUuQlfDPY31vmnB1WW",
+      "name": "ワールドエンドガールフレンド",
+      "artist": "RADWIMPS",
+      "album": "ワールドエンドガールフレンド",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b75f05605a37c266158f33b413",
+      "playedAt": "2026-08-01T14:46:50.759Z",
+      "spotifyUrl": "https://open.spotify.com/track/0sYJuUuQlfDPY31vmnB1WW",
+      "duration": 236576,
+      "previewUrl": ""
+    },
+    {
+      "id": "7swTJOnvm3zEg7QdmJs52T",
+      "name": "夢灯籠",
+      "artist": "RADWIMPS",
+      "album": "君の名は。",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a0abdc8306966fee2e9076b2",
+      "playedAt": "2026-08-01T13:58:51.071Z",
+      "spotifyUrl": "https://open.spotify.com/track/7swTJOnvm3zEg7QdmJs52T",
+      "duration": 131666,
+      "previewUrl": ""
+    },
+    {
+      "id": "0PUoNLjLtrSCNwIvvbERS2",
+      "name": "愛にできることはまだあるかい",
+      "artist": "RADWIMPS",
+      "album": "天気の子",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27317eae79af1f8ba14e6710b0e",
+      "playedAt": "2026-08-01T13:27:24.407Z",
+      "spotifyUrl": "https://open.spotify.com/track/0PUoNLjLtrSCNwIvvbERS2",
+      "duration": 414466,
+      "previewUrl": ""
+    },
     {
       "id": "17A3UTMUWzCRn7I42exBhF",
       "name": "君と羊と青",
@@ -263,72 +329,6 @@
       "playedAt": "2026-07-30T17:38:50.764Z",
       "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
       "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "4CQjt0Ejf8clK3s7h6Za0P",
-      "name": "転生林檎",
-      "artist": "PinocchioP",
-      "album": "転生林檎",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273287a32b6a7991e4a949be3d0",
-      "playedAt": "2026-07-30T17:20:50.916Z",
-      "spotifyUrl": "https://open.spotify.com/track/4CQjt0Ejf8clK3s7h6Za0P",
-      "duration": 219082,
-      "previewUrl": ""
-    },
-    {
-      "id": "2ANz2T37a2uN3d6w98h8vY",
-      "name": "Vinyl",
-      "artist": "King Gnu",
-      "album": "Tokyo Rendez-Vous",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0d02ba8facfe07e3e5a6eef",
-      "playedAt": "2026-07-30T17:17:11.397Z",
-      "spotifyUrl": "https://open.spotify.com/track/2ANz2T37a2uN3d6w98h8vY",
-      "duration": 294386,
-      "previewUrl": ""
-    },
-    {
-      "id": "08YwAPnX8sygJUXG9rvhDv",
-      "name": "ハルジオン",
-      "artist": "YOASOBI",
-      "album": "THE BOOK",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339917845c74c9e64320fbed9",
-      "playedAt": "2026-07-30T17:12:16.577Z",
-      "spotifyUrl": "https://open.spotify.com/track/08YwAPnX8sygJUXG9rvhDv",
-      "duration": 198600,
-      "previewUrl": ""
-    },
-    {
-      "id": "78W4mTLIh4qoLu92W4IQhO",
-      "name": "ライラック",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "ライラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732dad118eff6a430b28a457bd",
-      "playedAt": "2026-07-30T17:05:02.511Z",
-      "spotifyUrl": "https://open.spotify.com/track/78W4mTLIh4qoLu92W4IQhO",
-      "duration": 288200,
-      "previewUrl": ""
-    },
-    {
-      "id": "0kosUz0jePvjiz4ctmR6wL",
-      "name": "Dai Dai",
-      "artist": "Shakira, Burna Boy",
-      "album": "Dai Dai",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303cadf1b3fe324c1dc710ed4",
-      "playedAt": "2026-07-30T13:29:34.809Z",
-      "spotifyUrl": "https://open.spotify.com/track/0kosUz0jePvjiz4ctmR6wL",
-      "duration": 223448,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ookCvrhGat2q6uV1R9Kq1",
-      "name": "ぷりきゅきゅ",
-      "artist": "CUTIE STREET",
-      "album": "キュートなキューたい / ナイスだね",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
-      "playedAt": "2026-07-30T06:09:32.155Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
-      "duration": 229677,
       "previewUrl": ""
     }
   ],
