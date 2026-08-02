@@ -98,6 +98,27 @@ CHARA_PICKER_REPO=/path/to/chara_picker npm run sync:chara
 python3 -m venv .venv && .venv/bin/python3 -m pip install fonttools brotli
 ```
 
+## ズレ検出はハードフィルタを手写ししない
+
+`loadCharaData.ts` は「推薦対象になりうるのに `likelihoods.json` に居ないキャラ」を
+ロード時に検出してまとめて失敗させる。この判定は**必ず `survivors()` を呼ぶ**こと。
+
+初版はフィルタ条件をその場に書き写していたが、2026-08-01に開発元が
+`reviewed === true` をハードフィルタへ追加したため、条件が食い違った。
+食い違うと「開発元では推薦対象外なので尤度を持たないキャラ」を欠落扱いにして、
+**開発元は正常なのにサイトだけページ全体がロード失敗する**。
+`survivors()` はvendoredファイル（`engine/recommend.ts`）なので、
+そこを見に行けば条件は常に開発元と一致する。
+
+## 同期の記録
+
+| 日付 | 取り込み元 | 内容 |
+|---|---|---|
+| 2026-07-31 | `ffa7757` | 移植時の初期取り込み。184体 |
+| 2026-08-02 | `0678951` | 488体（103作品、487体査読済み）。軸を4つ追加（`stature`/`occupation`、`personality`/`hairColor`/`mood`の複数値化）で質問は139問に。「いいえ」後は最低3問・最大6問聞いてから再推測（`bayesShouldReguess`）。`guessing`フェーズが`candidates`（上位5候補）を返すようになった |
+
+実行時に取得するJSONは合計807KB（gzip 91KB）。GitHub Pagesはgzipで配信する。
+
 ## 関連ファイル
 
 | 役割 | パス |

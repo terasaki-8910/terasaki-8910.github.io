@@ -10,19 +10,37 @@ const AGE_FEEL_VALUES = ['幼い', '同年代', '年上', '熟れた'] as const;
 /** 体格のみ。胸は BUST_VALUES に分離した（旧「グラマー」は体格と胸を混同していた）。 */
 const BUILD_VALUES = ['華奢', '標準', 'むっちり'] as const;
 const BUST_VALUES = ['小さい', '標準', '大きい', 'とても大きい'] as const;
-const PERSONALITY_VALUES = ['クール', '元気', 'おっとり', '生意気', '内気', '姉御'] as const;
-const ROLES_VALUES = ['幼馴染', '後輩', '先輩', '姉', '妹', '母性', '教師', '主従', 'ライバル'] as const;
+const PERSONALITY_VALUES = ['クール', '元気', 'おっとり', '生意気', '内気', '姉御', 'むっつり'] as const;
+const ROLES_VALUES = ['幼馴染', '後輩', '先輩', '姉', '妹', '母性', '教師', '主従', 'ライバル', '恋人・伴侶', '友人'] as const;
 const DISTANCE_VALUES = ['積極的', 'やや積極的', '中立', 'やや受け身', '受け身'] as const;
 /** 髪色・肌色はそれぞれ独立した軸に移した（旧 looks の「白髪」「褐色」）。 */
-const LOOKS_VALUES = ['眼鏡', 'ケモミミ', '角', '尻尾', '長髪', 'ツインテール'] as const;
-const HAIR_COLOR_VALUES = ['黒', '白', '金', '茶', '赤', '青', '緑', '桃', '紫', '銀'] as const;
+const LOOKS_VALUES = ['眼鏡', 'ケモミミ', '角', '尻尾', '長髪', 'ツインテール', '眼帯'] as const;
+const HAIR_COLOR_VALUES = ['黒', '白', '金', '茶', '赤', '青', '緑', '桃', '紫', '銀', '橙'] as const;
 const SKIN_TONE_VALUES = ['色白', '標準', '褐色'] as const;
-const OUTFIT_VALUES = ['制服', 'メイド', '巫女', 'ナース', '魔法少女', '軍服', 'OL'] as const;
+const OUTFIT_VALUES = ['制服', 'メイド', '巫女', 'ナース', '魔法少女', '軍服', 'OL', '和服・着物'] as const;
 const SPECIES_VALUES = ['人間', 'エルフ', '獣人', '魔族', '機械', '不死'] as const;
 const MOOD_VALUES = ['甘め', '支配的', '従属的', '純愛寄り', '背徳寄り'] as const;
 const COMBAT_VALUES = ['戦う', '戦わない'] as const;
 /** 「学校に通っているか」に相当する広い分岐。所属名はこれとは別に自由記述で持つ。 */
 const AFFILIATION_KIND_VALUES = ['学生', '社会人', '軍・組織', '冒険者', '非人間・その他'] as const;
+/**
+ * 身長の印象。BUILD_VALUES（体格の太さ）とは独立した軸——「華奢だが長身」
+ * 「むっちりだが小柄」のどちらも普通に存在するため、1軸に混ぜない。
+ */
+const STATURE_VALUES = ['小柄', '標準', '長身'] as const;
+/**
+ * 職業・立場。`affiliationKind`（学生/社会人/…の5値）より細かく、
+ * `affiliationName`（「ミレニアムサイエンススクール（C&C）」のような固有名）より粗い
+ * 中間粒度にする——固有名をそのまま質問にすると1キャラしか該当せず
+ * 「絞り込む質問」ではなく「答えを知っているか確かめる質問」になってしまうため。
+ * 複数値: 「巫女であり神様でもある」「アイドルでありアスリートでもある」が普通にある。
+ */
+const OCCUPATION_VALUES = [
+  '忍者', '海賊', '兵士・軍人', '警察・公安', 'スパイ・暗殺者', 'アイドル・芸能',
+  'アスリート', '巫女・神職', '神様・精霊', 'メイド・従者', '王族・貴族',
+  '医療従事者', '研究者・発明家', '魔法使い・魔術師',
+  '会社員・OL', '教師・講師', '格闘家・武道家',
+] as const;
 
 /**
  * 軸の値は `string`（配列軸は `string[]`）で緩く型付けする。
@@ -37,15 +55,28 @@ export type Axes = {
   ageFeel: string | null;
   build: string | null;
   bust: string | null;
-  personality: string | null;
+  /**
+   * 性格は複数値（配列）。1値限定だと「クールだが実はむっつり」のような
+   * 併存する特性を表現できず、ユーザーから明示指摘があった（例: ダクネス）。
+   * roles/occupation と同じ「持つか持たないか」の集合として扱う——
+   * 頼光「甘め0.7/支配的0.3」のような重み付き確率分布は意図的に採らない
+   * （マージ式の新規設計が要り、既存のestimateAxisMultiLikelihood/
+   * estimateLlmLikelihoodをそのまま流用できないため。ユーザー合意済み、
+   * 2026-08-01）。必須8軸の1つなので空配列は許容しない（A4）。
+   */
+  personality: string[];
   roles: string[];
   distance: string | null;
   looks: string[];
-  hairColor: string | null;
+  /** 複数値（配列）。personality/mood と同じモデル（2026-08-01。ナヒーダの
+   * 白62%/緑62%のような毛先グラデーションを表現するため）。必須8軸の1つなので
+   * 空配列は許容しない（A4）。 */
+  hairColor: string[];
   skinTone: string | null;
   outfit: string[];
   species: string | null;
-  mood: string | null;
+  /** 複数値（配列）。personality と同じ理由・同じモデル（2026-08-01）。必須ではないので空配列=未設定。 */
+  mood: string[];
   combat: string | null;
   affiliationKind: string | null;
   /**
@@ -54,6 +85,8 @@ export type Axes = {
    * 収束したときだけ聞く深掘り質問（Akinator の「〜学校？」に相当）に使う。
    */
   affiliationName: string | null;
+  stature: string | null;
+  occupation: string[];
 };
 
 export type AxisKey = keyof Axes;
@@ -132,18 +165,20 @@ const axesSchema: z.ZodType<Axes> = z.object({
   ageFeel: z.enum(AGE_FEEL_VALUES),
   build: z.enum(BUILD_VALUES),
   bust: z.enum(BUST_VALUES),
-  personality: z.enum(PERSONALITY_VALUES),
+  personality: z.array(z.enum(PERSONALITY_VALUES)).min(1),
   roles: z.array(z.enum(ROLES_VALUES)),
   distance: z.enum(DISTANCE_VALUES).nullable(),
   looks: z.array(z.enum(LOOKS_VALUES)),
-  hairColor: z.enum(HAIR_COLOR_VALUES),
+  hairColor: z.array(z.enum(HAIR_COLOR_VALUES)).min(1),
   skinTone: z.enum(SKIN_TONE_VALUES).nullable(),
   outfit: z.array(z.enum(OUTFIT_VALUES)),
   species: z.enum(SPECIES_VALUES).nullable(),
-  mood: z.enum(MOOD_VALUES).nullable(),
+  mood: z.array(z.enum(MOOD_VALUES)),
   combat: z.enum(COMBAT_VALUES),
   affiliationKind: z.enum(AFFILIATION_KIND_VALUES),
   affiliationName: z.string().min(1).nullable(),
+  stature: z.enum(STATURE_VALUES).nullable(),
+  occupation: z.array(z.enum(OCCUPATION_VALUES)),
 });
 
 const hitomiQuerySchema: z.ZodType<HitomiQuery> = z.object({

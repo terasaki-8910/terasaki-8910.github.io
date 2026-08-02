@@ -1,5 +1,5 @@
 import { initBayesData, type LikelihoodsFile, type QuestionsRuntimeFile } from '../engine/bayes';
-import type { Dataset } from '../engine/recommend';
+import { survivors, type Dataset } from '../engine/recommend';
 import { charactersSchema, supplyFileSchema } from './schema';
 
 /*
@@ -48,8 +48,13 @@ export async function loadCharaData(): Promise<CharaData> {
 
   // ファイル間のズレ検出。推薦対象になりうるキャラが likelihoods に無いと
   // 推測の途中で初めて落ちるので、ここで先に気づけるようにする。
-  const missing = characters
-    .filter((c) => c.axes.genderExpression !== '男性' && !c.provisional)
+  //
+  // 判定は必ず survivors() に委ねる——ここでハードフィルタを手写しすると、
+  // 移植元がフィルタを足したときにサイト側だけ古い条件で検査してしまう。
+  // 実際 2026-08-01 に移植元が `reviewed === true` をハードフィルタへ追加しており、
+  // 手写しのままだと「移植元では推薦対象外なので likelihoods を持たないキャラ」を
+  // 欠落扱いにしてページ全体をロード失敗させる状態だった。
+  const missing = survivors({ characters, supply })
     .filter((c) => likelihoods.chars[c.id] === undefined)
     .map((c) => c.id);
   if (missing.length > 0) {
