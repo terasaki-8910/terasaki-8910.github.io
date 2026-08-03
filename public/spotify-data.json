@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-08-02T12:56:35.330Z",
+  "lastUpdated": "2026-08-03T09:19:35.418Z",
   "tracks": [
+    {
+      "id": "42GBdIrdGnkvIc4tUH4sON",
+      "name": "やっちゃった",
+      "artist": "Hannya",
+      "album": "根こそぎ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27393a1c1967c96fcabf1982bb5",
+      "playedAt": "2026-08-03T08:43:53.165Z",
+      "spotifyUrl": "https://open.spotify.com/track/42GBdIrdGnkvIc4tUH4sON",
+      "duration": 234530,
+      "previewUrl": ""
+    },
+    {
+      "id": "4Z6zwtZtZ5V2GGb2DL6sXU",
+      "name": "韻波句徒",
+      "artist": "CHEHON",
+      "album": "韻波句徒",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27353b9c24bb39f5690829cc4df",
+      "playedAt": "2026-08-03T08:39:26.177Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Z6zwtZtZ5V2GGb2DL6sXU",
+      "duration": 293266,
+      "previewUrl": ""
+    },
+    {
+      "id": "06XQvnJb53SUYmlWIhUXUi",
+      "name": "怪物",
+      "artist": "YOASOBI",
+      "album": "怪物",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2efc5e5f5922ca1f1b88928",
+      "playedAt": "2026-08-03T06:46:09.712Z",
+      "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
+      "duration": 206000,
+      "previewUrl": ""
+    },
     {
       "id": "06POVSGbIFuQsc721gLk6Q",
       "name": "Close To The Sun",
@@ -296,39 +329,6 @@
       "playedAt": "2026-08-02T10:17:44.540Z",
       "spotifyUrl": "https://open.spotify.com/track/3TKECbhjCdTLx1UuyUS0ye",
       "duration": 229946,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LtKpKOO0fyGBAbv761JCu",
-      "name": "Sunlight",
-      "artist": "TheFatRat, Phaera",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-08-02T10:14:02.143Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
-      "duration": 169952,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Jb6mPt99aEFELWrxzMkUX",
-      "name": "Infinite Power",
-      "artist": "TheFatRat",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-08-02T10:11:11.414Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Jb6mPt99aEFELWrxzMkUX",
-      "duration": 208787,
-      "previewUrl": ""
-    },
-    {
-      "id": "5yI7d2WghcH6ekN7D01J2w",
-      "name": "The Calling - Instrumental",
-      "artist": "TheFatRat",
-      "album": "The Calling",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e37b56b30e0d3d6bc73694da",
-      "playedAt": "2026-08-02T10:07:57.350Z",
-      "spotifyUrl": "https://open.spotify.com/track/5yI7d2WghcH6ekN7D01J2w",
-      "duration": 233590,
       "previewUrl": ""
     }
   ],
