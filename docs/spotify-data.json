@@ -1,13 +1,24 @@
 {
-  "lastUpdated": "2026-08-03T09:19:35.418Z",
+  "lastUpdated": "2026-08-03T14:14:01.087Z",
   "tracks": [
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-08-03T14:10:01.175Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
     {
       "id": "42GBdIrdGnkvIc4tUH4sON",
       "name": "やっちゃった",
       "artist": "Hannya",
       "album": "根こそぎ",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27393a1c1967c96fcabf1982bb5",
-      "playedAt": "2026-08-03T08:43:53.165Z",
+      "playedAt": "2026-08-03T14:05:05.930Z",
       "spotifyUrl": "https://open.spotify.com/track/42GBdIrdGnkvIc4tUH4sON",
       "duration": 234530,
       "previewUrl": ""
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-02T10:26:59.584Z",
       "spotifyUrl": "https://open.spotify.com/track/4Tsy1Bpa8j1LIh5Pyt0xSq",
       "duration": 118000,
-      "previewUrl": ""
-    },
-    {
-      "id": "3TKECbhjCdTLx1UuyUS0ye",
-      "name": "Chosen",
-      "artist": "TheFatRat, Laura Brehm, Anna Yvette",
-      "album": "Chosen",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331c16beab40e89973c84d81e",
-      "playedAt": "2026-08-02T10:17:44.540Z",
-      "spotifyUrl": "https://open.spotify.com/track/3TKECbhjCdTLx1UuyUS0ye",
-      "duration": 229946,
       "previewUrl": ""
     }
   ],
