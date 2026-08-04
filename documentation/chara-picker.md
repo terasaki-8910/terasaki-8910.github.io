@@ -116,6 +116,7 @@ python3 -m venv .venv && .venv/bin/python3 -m pip install fonttools brotli
 |---|---|---|
 | 2026-07-31 | `ffa7757` | 移植時の初期取り込み。184体 |
 | 2026-08-02 | `0678951` | 488体（103作品、487体査読済み）。軸を4つ追加（`stature`/`occupation`、`personality`/`hairColor`/`mood`の複数値化）で質問は139問に。「いいえ」後は最低3問・最大6問聞いてから再推測（`bayesShouldReguess`）。`guessing`フェーズが`candidates`（上位5候補）を返すようになった |
+| 2026-08-04 | `bac460c` | 根拠が肯定方向のみになった（従来は「いいえ」で一致した根拠も返しており、UIが`confidence`を無視して描画するため「翼を持たない」が「外見的特徴: 翼」と出ていた）。`profileEntriesFor()`が追加され、回答に関係なくキャラが持つ属性を表示用の優先順位で最大5件返す |
 
 実行時に取得するJSONは合計807KB（gzip 91KB）。GitHub Pagesはgzipで配信する。
 
