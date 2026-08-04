@@ -1,6 +1,138 @@
 {
-  "lastUpdated": "2026-08-03T14:14:01.087Z",
+  "lastUpdated": "2026-08-04T08:17:41.643Z",
   "tracks": [
+    {
+      "id": "1WZGyYe1PDvQ5aaET6qILe",
+      "name": "金星のダンス",
+      "artist": "Nayutalien",
+      "album": "ナユタン星からの物体Z",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273759ef471de167f1d2ca36bd7",
+      "playedAt": "2026-08-04T07:59:29.653Z",
+      "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
+      "duration": 209333,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-08-04T07:55:38.602Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "2isCWO5dMBDzyLscHVoJIO",
+      "name": "憧れをいっぱい",
+      "artist": "初星学園, 高木龍一, 倉本千奈",
+      "album": "憧れをいっぱい",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
+      "playedAt": "2026-08-04T07:55:33.970Z",
+      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
+      "duration": 288363,
+      "previewUrl": ""
+    },
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2026-08-04T06:54:21.027Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-08-04T06:49:55.249Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "5YADi8VnCwx5ahhwNdgQaZ",
+      "name": "How Many Boogie",
+      "artist": "SKRYU, WAZGOGG, Fuma no KTR",
+      "album": "わすれもの",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27301729ef621de4f62bcdd05b9",
+      "playedAt": "2026-08-04T06:17:16.869Z",
+      "spotifyUrl": "https://open.spotify.com/track/5YADi8VnCwx5ahhwNdgQaZ",
+      "duration": 159047,
+      "previewUrl": ""
+    },
+    {
+      "id": "1gHSf9eduupc4MmXPQttkj",
+      "name": "The Storm",
+      "artist": "TheFatRat, Maisy Kay",
+      "album": "The Storm",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ecc70a3f6f6c8228ac08b65e",
+      "playedAt": "2026-08-04T05:56:29.524Z",
+      "spotifyUrl": "https://open.spotify.com/track/1gHSf9eduupc4MmXPQttkj",
+      "duration": 168577,
+      "previewUrl": ""
+    },
+    {
+      "id": "6YzMhlI36vzyDYvhjiVf54",
+      "name": "The Calling",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "The Calling",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e37b56b30e0d3d6bc73694da",
+      "playedAt": "2026-08-04T05:53:45.979Z",
+      "spotifyUrl": "https://open.spotify.com/track/6YzMhlI36vzyDYvhjiVf54",
+      "duration": 233590,
+      "previewUrl": ""
+    },
+    {
+      "id": "2pCdOvMtxYMyDl54Judrfa",
+      "name": "Threnody",
+      "artist": "TheFatRat",
+      "album": "Warrior Songs",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
+      "playedAt": "2026-08-04T05:48:01.640Z",
+      "spotifyUrl": "https://open.spotify.com/track/2pCdOvMtxYMyDl54Judrfa",
+      "duration": 115750,
+      "previewUrl": ""
+    },
+    {
+      "id": "3tvFxJH15FZzpncReusLNW",
+      "name": "Solitude",
+      "artist": "TheFatRat, Slaydit",
+      "album": "Solitude",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aaf49393dcc8385880e00c21",
+      "playedAt": "2026-08-04T05:46:10.990Z",
+      "spotifyUrl": "https://open.spotify.com/track/3tvFxJH15FZzpncReusLNW",
+      "duration": 208695,
+      "previewUrl": ""
+    },
+    {
+      "id": "3TKECbhjCdTLx1UuyUS0ye",
+      "name": "Chosen",
+      "artist": "TheFatRat, Laura Brehm, Anna Yvette",
+      "album": "Chosen",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331c16beab40e89973c84d81e",
+      "playedAt": "2026-08-04T05:42:50.933Z",
+      "spotifyUrl": "https://open.spotify.com/track/3TKECbhjCdTLx1UuyUS0ye",
+      "duration": 229946,
+      "previewUrl": ""
+    },
+    {
+      "id": "6anGosAX39TdpJGNQH3H9n",
+      "name": "Xenogenesis",
+      "artist": "TheFatRat",
+      "album": "Xenogenesis",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732b6426976b98690b35b21ded",
+      "playedAt": "2026-08-04T05:39:08.431Z",
+      "spotifyUrl": "https://open.spotify.com/track/6anGosAX39TdpJGNQH3H9n",
+      "duration": 233379,
+      "previewUrl": ""
+    },
     {
       "id": "6WrytCYNqsPMgtpTpd9p7j",
       "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
@@ -134,17 +266,6 @@
       "previewUrl": ""
     },
     {
-      "id": "1gHSf9eduupc4MmXPQttkj",
-      "name": "The Storm",
-      "artist": "TheFatRat, Maisy Kay",
-      "album": "The Storm",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ecc70a3f6f6c8228ac08b65e",
-      "playedAt": "2026-08-02T11:24:57.214Z",
-      "spotifyUrl": "https://open.spotify.com/track/1gHSf9eduupc4MmXPQttkj",
-      "duration": 168577,
-      "previewUrl": ""
-    },
-    {
       "id": "1fBWbKfZ4DKIOacKBWakSQ",
       "name": "Violet Sky",
       "artist": "TheFatRat, Cecilia Gault",
@@ -208,127 +329,6 @@
       "playedAt": "2026-08-02T11:05:28.450Z",
       "spotifyUrl": "https://open.spotify.com/track/2JlSbcpPlaOttkoeosnFWP",
       "duration": 260000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6i3EXVygc3G7xqIqv0MJHV",
-      "name": "Afterlife",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-02T11:01:13.487Z",
-      "spotifyUrl": "https://open.spotify.com/track/6i3EXVygc3G7xqIqv0MJHV",
-      "duration": 140487,
-      "previewUrl": ""
-    },
-    {
-      "id": "669AIf5NRtK58b7muzHfQT",
-      "name": "We'll Meet Again - Instrumental",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "We'll Meet Again",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738707f39a451e13104f0582e8",
-      "playedAt": "2026-08-02T10:53:33.602Z",
-      "spotifyUrl": "https://open.spotify.com/track/669AIf5NRtK58b7muzHfQT",
-      "duration": 195625,
-      "previewUrl": ""
-    },
-    {
-      "id": "1IaHxYsIUhTY5EyfQkt4Xl",
-      "name": "Fly Away",
-      "artist": "TheFatRat, Anjulie",
-      "album": "Fly Away",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273062fd03d7ef8ad5f773b89e7",
-      "playedAt": "2026-08-02T10:50:20.253Z",
-      "spotifyUrl": "https://open.spotify.com/track/1IaHxYsIUhTY5EyfQkt4Xl",
-      "duration": 194267,
-      "previewUrl": ""
-    },
-    {
-      "id": "3LWX4IZJox89hxHcnxm3xI",
-      "name": "Jackpot",
-      "artist": "TheFatRat",
-      "album": "Jackpot",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
-      "playedAt": "2026-08-02T10:47:12.045Z",
-      "spotifyUrl": "https://open.spotify.com/track/3LWX4IZJox89hxHcnxm3xI",
-      "duration": 195873,
-      "previewUrl": ""
-    },
-    {
-      "id": "05q7gFhlRUtK8VKx4Kkw2e",
-      "name": "Monody - Radio Edit",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "Monody (Radio Edit)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f51dfe97855dd2e03520dcc7",
-      "playedAt": "2026-08-02T10:44:01.201Z",
-      "spotifyUrl": "https://open.spotify.com/track/05q7gFhlRUtK8VKx4Kkw2e",
-      "duration": 252213,
-      "previewUrl": ""
-    },
-    {
-      "id": "6sxX58w1mBWxqqFu5kh1fg",
-      "name": "Kingdom Come",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-02T10:35:32.760Z",
-      "spotifyUrl": "https://open.spotify.com/track/6sxX58w1mBWxqqFu5kh1fg",
-      "duration": 49250,
-      "previewUrl": ""
-    },
-    {
-      "id": "4mP0t0KHdFrKXt7si43dYj",
-      "name": "Epic",
-      "artist": "TheFatRat",
-      "album": "Jackpot",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
-      "playedAt": "2026-08-02T10:34:50.502Z",
-      "spotifyUrl": "https://open.spotify.com/track/4mP0t0KHdFrKXt7si43dYj",
-      "duration": 180326,
-      "previewUrl": ""
-    },
-    {
-      "id": "2JK39qzkUYKzGRPYMs1t3Q",
-      "name": "Prelude",
-      "artist": "TheFatRat",
-      "album": "Jackpot",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
-      "playedAt": "2026-08-02T10:32:05.622Z",
-      "spotifyUrl": "https://open.spotify.com/track/2JK39qzkUYKzGRPYMs1t3Q",
-      "duration": 88274,
-      "previewUrl": ""
-    },
-    {
-      "id": "2pCdOvMtxYMyDl54Judrfa",
-      "name": "Threnody",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-02T10:30:41.298Z",
-      "spotifyUrl": "https://open.spotify.com/track/2pCdOvMtxYMyDl54Judrfa",
-      "duration": 115750,
-      "previewUrl": ""
-    },
-    {
-      "id": "4iANNVwdNgzwcjBeIPjHmV",
-      "name": "Reminiscence",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-02T10:29:00.526Z",
-      "spotifyUrl": "https://open.spotify.com/track/4iANNVwdNgzwcjBeIPjHmV",
-      "duration": 141500,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Tsy1Bpa8j1LIh5Pyt0xSq",
-      "name": "Warrior Song",
-      "artist": "TheFatRat, Stasia Estep",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-02T10:26:59.584Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Tsy1Bpa8j1LIh5Pyt0xSq",
-      "duration": 118000,
       "previewUrl": ""
     }
   ],
