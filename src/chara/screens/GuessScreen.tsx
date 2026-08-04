@@ -1,3 +1,4 @@
+import { CandidateList } from '../components/CandidateList';
 import { CharacterReveal } from '../components/CharacterReveal';
 import { OUTLINE_BUTTON, PRIMARY_BUTTON, QUIET_LINK_BUTTON } from '../components/styles';
 import type { Scored } from '../engine/recommend';
@@ -5,13 +6,14 @@ import type { Scored } from '../engine/recommend';
 /** 単一推測 + はい/いいえ確認（「思い浮かべているのは○○、はい/いいえ」の形）。 */
 export function GuessScreen(props: {
   guess: Scored;
+  candidates: readonly Scored[];
   canUndo: boolean;
   onConfirm(): void;
   onReject(): void;
   onUndo(): void;
   onRestart(): void;
 }) {
-  const { guess, canUndo, onConfirm, onReject, onUndo, onRestart } = props;
+  const { guess, candidates, canUndo, onConfirm, onReject, onUndo, onRestart } = props;
 
   return (
     <div
@@ -31,6 +33,10 @@ export function GuessScreen(props: {
           いいえ、違います
         </button>
       </div>
+
+      {/* 主要アクションより下に置く。畳んだ状態で始めるのは、「はい/いいえ」より
+          先に候補一覧が目に入ると、答えを選ぶ画面ではなく順位表に見えるため。 */}
+      <CandidateList guess={guess} candidates={candidates} />
 
       <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
         {canUndo && (

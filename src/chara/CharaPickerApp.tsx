@@ -101,6 +101,7 @@ function BayesFlow({ dataset }: { dataset: Dataset }) {
       return (
         <GuessScreen
           guess={interview.guess}
+          candidates={interview.candidates}
           canUndo={interview.canUndo}
           onConfirm={interview.confirm}
           onReject={() => guard(interview.guess.character.id, () => interview.reject())}
