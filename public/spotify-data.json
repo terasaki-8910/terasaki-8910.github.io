@@ -1,15 +1,15 @@
 {
-  "lastUpdated": "2026-08-05T01:29:58.393Z",
+  "lastUpdated": "2026-08-05T08:14:44.603Z",
   "tracks": [
     {
-      "id": "2XVijjSdl61s9Bx3gIZZPo",
-      "name": "ひめごと*クライシスターズ",
-      "artist": "ONIMAI SISTERS",
-      "album": "ひめごと*クライシスターズ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27384120b34ac33ae705feff386",
-      "playedAt": "2026-08-04T20:33:32.013Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XVijjSdl61s9Bx3gIZZPo",
-      "duration": 214253,
+      "id": "7IT4zkiTd5pfYJBLEmaewZ",
+      "name": "ちょっと一息",
+      "artist": "Alisa Okehazama",
+      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
+      "playedAt": "2026-08-05T06:06:01.457Z",
+      "spotifyUrl": "https://open.spotify.com/track/7IT4zkiTd5pfYJBLEmaewZ",
+      "duration": 84500,
       "previewUrl": ""
     },
     {
@@ -18,9 +18,31 @@
       "artist": "えなこ, P丸様｡",
       "album": "アイデン貞貞メルトダウン",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27386001206942da71231c86b96",
-      "playedAt": "2026-08-04T20:25:58.565Z",
+      "playedAt": "2026-08-05T05:57:53.638Z",
       "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
       "duration": 243880,
+      "previewUrl": ""
+    },
+    {
+      "id": "2XVijjSdl61s9Bx3gIZZPo",
+      "name": "ひめごと*クライシスターズ",
+      "artist": "ONIMAI SISTERS",
+      "album": "ひめごと*クライシスターズ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27384120b34ac33ae705feff386",
+      "playedAt": "2026-08-05T02:48:05.511Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XVijjSdl61s9Bx3gIZZPo",
+      "duration": 214253,
+      "previewUrl": ""
+    },
+    {
+      "id": "07CNkPThef2VFCCFh6xrRd",
+      "name": "アイデン貞貞メルトダウン - まひろ&みはりver.",
+      "artist": "緒山まひろ(CV:高野麻里佳), 緒山みはり(CV:石原夏織)",
+      "album": "アイデン貞貞メルトダウン (まひろ&みはりver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737cffb2f3d0c8bb253b27adc9",
+      "playedAt": "2026-08-05T02:40:07.109Z",
+      "spotifyUrl": "https://open.spotify.com/track/07CNkPThef2VFCCFh6xrRd",
+      "duration": 243226,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-02T11:19:19.916Z",
       "spotifyUrl": "https://open.spotify.com/track/5cKI0YTJOi1T5PPT1mrn5q",
       "duration": 267062,
-      "previewUrl": ""
-    },
-    {
-      "id": "3TyK4snzMM5NP3lUyHLu0j",
-      "name": "Elegy",
-      "artist": "TheFatRat",
-      "album": "Jackpot",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
-      "playedAt": "2026-08-02T11:14:59.614Z",
-      "spotifyUrl": "https://open.spotify.com/track/3TyK4snzMM5NP3lUyHLu0j",
-      "duration": 193448,
-      "previewUrl": ""
-    },
-    {
-      "id": "7dvPVoZHsfkZR46CvbiKHT",
-      "name": "MAYDAY",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "MAYDAY",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d15aa64c7bf2bf8d23a9df40",
-      "playedAt": "2026-08-02T11:11:54.312Z",
-      "spotifyUrl": "https://open.spotify.com/track/7dvPVoZHsfkZR46CvbiKHT",
-      "duration": 247339,
       "previewUrl": ""
     }
   ],
