@@ -45,7 +45,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-line text-center text-muted text-sm">
           <p>© 2025 terasaki-8910.github.io | Built with React &amp; GSAP</p>
-          <p className="mt-2">キャラクターイラスト: Yasson(吉田夜世)</p>
+          <p className="mt-2">アイコン: 若狭フユ（イラスト: Yasson / 吉田夜世）</p>
         </div>
       </div>
     </footer>
