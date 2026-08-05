@@ -1,7 +1,7 @@
 {
-  "name": "@Override — 冬色",
-  "short_name": "@Override",
-  "description": "無駄に洗練されたハイテク工場",
+  "name": "@オーバーライド — 冬色",
+  "short_name": "@オーバーライド",
+  "description": "冬色のポートフォリオ。取り組んできたプロジェクト、未完成のアイデア、ついでの自己紹介。",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F9EC8E",

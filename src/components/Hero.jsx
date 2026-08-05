@@ -32,18 +32,24 @@ export default function Hero() {
       </div>
 
       <div ref={contentRef} className="text-center max-w-4xl mx-auto w-full min-w-0">
-        {/* サイト名。Javaの@Overrideに由来し、地の色(#F9EC8E)の出典である
-            Alicemerix「オーバーライド」とも掛けている(index.css参照)。
-            @Override単体だと検索で埋もれるため、<title>やOGP側には「冬色」を
-            必ず併記している(index.html)。見た目とtitleタグは別物でよい。 */}
+        {/* サイト名。地の色(#F9EC8E)の出典であるAlicemerix「オーバーライド」に由来
+            (index.css参照)。旧「@Override」(Javaのアノテーション由来)は英字単体で
+            検索に埋もれる上、既存の英語ワードそのものだったため改めた。カタカナに
+            したことで実在プログラム構文とは競合しなくなっている。
+            <title>やOGP側には引き続き「冬色」を併記している(index.html)。
+            見た目とtitleタグは別物でよい。 */}
         <h1
           className="font-display font-medium text-massive mb-6"
           style={{ color: 'rgb(250, 160, 160)', WebkitTextStroke: '6px black', paintOrder: 'stroke fill' }}
         >
-          @Override
+          @オーバーライド
         </h1>
-        <p className="text-lg md:text-xl text-muted tracking-wide mb-20">
-          冬色（ふゆいろ / Fuyuiro） — 再定義中
+        {/* サブタイトルは歌詞のオマージュ。h1の「オーバーライド」を、
+            「半端な関数を書き換える」という具体的な行為として言い換えている。 */}
+        <p className="text-lg md:text-xl text-muted tracking-wide mb-20 leading-relaxed">
+          半端なアプリの関数を
+          <br />
+          少々ここらでオーバーライド
         </p>
 
         <GithubActivity />

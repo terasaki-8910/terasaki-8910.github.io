@@ -78,7 +78,7 @@ class ErrorBoundary extends Component {
 
             {/* Footer */}
             <p className="mt-8 text-sm text-muted">
-              © 2024 @Override
+              © 2024 @オーバーライド
             </p>
           </div>
         </div>

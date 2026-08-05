@@ -38,7 +38,7 @@
   font-display: swap;
 }
 
-/* Zen Kurenaido(Google Fonts, SIL OFL)をサブセット化して自ホスト(205KB/1191文字種)。
+/* Zen Kurenaido(Google Fonts, SIL OFL)をサブセット化して自ホスト(206KB/1194文字種)。
    収録対象はソース内の日本語(コメントは除外)+印字可能ASCII全域+データ由来の
    表示文字(ごみカレンダーの町名/かな、キャラピッカーのキャラ名/作品名/質問文)。
    データ由来の文字はソースをgrepしても出てこないため、明示的に抽出対象に

@@ -55,7 +55,7 @@ export default function Philosophy() {
         </h2>
         <div ref={textRef} className="space-y-8">
           <p className="text-2xl md:text-4xl leading-relaxed font-light">
-            <span className="word">@Overrideへ</span>
+            <span className="word">@オーバーライドへ</span>
             <span className="word">ようこそ！</span>
           </p>
           <p className="text-lg md:text-3xl leading-relaxed text-gray-400 font-light">
