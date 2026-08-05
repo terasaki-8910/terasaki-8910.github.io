@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-08-05T08:14:44.603Z",
+  "lastUpdated": "2026-08-05T13:41:16.324Z",
   "tracks": [
+    {
+      "id": "4rPmTBTX1wobDkGYXKvcGR",
+      "name": "secret base ～君がくれたもの～ (10 years after Ver.)",
+      "artist": "本間芽衣子（CV.茅野愛衣）, 安城鳴子（CV.戸松 遥）, 鶴見知利子（CV.早見沙織）",
+      "album": "secret base ～君がくれたもの～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730267461fc0a66551d454fa22",
+      "playedAt": "2026-08-05T13:26:14.096Z",
+      "spotifyUrl": "https://open.spotify.com/track/4rPmTBTX1wobDkGYXKvcGR",
+      "duration": 352493,
+      "previewUrl": ""
+    },
+    {
+      "id": "0O3KfIQyO9XqQoJgat9O0N",
+      "name": "ロウワー (feat. 重音テト) - Cover",
+      "artist": "タカオカミズキ, Teto Kasane",
+      "album": "ロウワー (feat. 重音テト) [Cover]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273383091b8495188b1f12a326d",
+      "playedAt": "2026-08-05T13:20:21.072Z",
+      "spotifyUrl": "https://open.spotify.com/track/0O3KfIQyO9XqQoJgat9O0N",
+      "duration": 230000,
+      "previewUrl": ""
+    },
+    {
+      "id": "4eBAg8eiu2kGCtpjTmTHAf",
+      "name": "クライアイ",
+      "artist": "初星学園, GLIM SPANKY, 雨夜 燕",
+      "album": "クライアイ",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7da2915dda046b9399ae18d0c",
+      "playedAt": "2026-08-05T13:16:29.792Z",
+      "spotifyUrl": "https://open.spotify.com/track/4eBAg8eiu2kGCtpjTmTHAf",
+      "duration": 212437,
+      "previewUrl": ""
+    },
+    {
+      "id": "0CWAQlHsvfqcKJVVz9up2R",
+      "name": "セレナーデ",
+      "artist": "natori",
+      "album": "深海",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27329f649edf51edde6fdf01a09",
+      "playedAt": "2026-08-05T10:33:26.074Z",
+      "spotifyUrl": "https://open.spotify.com/track/0CWAQlHsvfqcKJVVz9up2R",
+      "duration": 219733,
+      "previewUrl": ""
+    },
     {
       "id": "7IT4zkiTd5pfYJBLEmaewZ",
       "name": "ちょっと一息",
@@ -285,50 +329,6 @@
       "playedAt": "2026-08-02T11:33:54.199Z",
       "spotifyUrl": "https://open.spotify.com/track/4acUp61Zphwr9yDu6v8NDY",
       "duration": 139000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WttbQX5vAw6XXQftF3Ers",
-      "name": "Upwind",
-      "artist": "TheFatRat",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-08-02T11:31:47.016Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WttbQX5vAw6XXQftF3Ers",
-      "duration": 192000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2FpEXjGqe2dJJ9oB8c8Io2",
-      "name": "Unity",
-      "artist": "TheFatRat",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-08-02T11:28:39.915Z",
-      "spotifyUrl": "https://open.spotify.com/track/2FpEXjGqe2dJJ9oB8c8Io2",
-      "duration": 249285,
-      "previewUrl": ""
-    },
-    {
-      "id": "1fBWbKfZ4DKIOacKBWakSQ",
-      "name": "Violet Sky",
-      "artist": "TheFatRat, Cecilia Gault",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-08-02T11:22:20.985Z",
-      "spotifyUrl": "https://open.spotify.com/track/1fBWbKfZ4DKIOacKBWakSQ",
-      "duration": 189737,
-      "previewUrl": ""
-    },
-    {
-      "id": "5cKI0YTJOi1T5PPT1mrn5q",
-      "name": "Fly Away - JJD Remix",
-      "artist": "TheFatRat, Anjulie, JJD",
-      "album": "Fly Away (JJD Remix)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a3e1420dbe62f9f157ff560",
-      "playedAt": "2026-08-02T11:19:19.916Z",
-      "spotifyUrl": "https://open.spotify.com/track/5cKI0YTJOi1T5PPT1mrn5q",
-      "duration": 267062,
       "previewUrl": ""
     }
   ],
