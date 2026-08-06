@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-08-05T13:41:16.324Z",
+  "lastUpdated": "2026-08-06T13:39:31.630Z",
   "tracks": [
+    {
+      "id": "2f5mdjFr905MKOuP4krySE",
+      "name": "はじめてのスポブラ",
+      "artist": "阿知波大輔",
+      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
+      "playedAt": "2026-08-06T12:32:34.200Z",
+      "spotifyUrl": "https://open.spotify.com/track/2f5mdjFr905MKOuP4krySE",
+      "duration": 103000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5GDrAA3qkQ9m0twzY2jVtc",
+      "name": "まひろによる考察",
+      "artist": "阿知波大輔",
+      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
+      "playedAt": "2026-08-06T12:30:50.760Z",
+      "spotifyUrl": "https://open.spotify.com/track/5GDrAA3qkQ9m0twzY2jVtc",
+      "duration": 85500,
+      "previewUrl": ""
+    },
+    {
+      "id": "4XhXGXQ35rMYw7oSXnNLlk",
+      "name": "ひめごと*クライシスターズ - Instrumental",
+      "artist": "ONIMAI SISTERS",
+      "album": "ひめごと*クライシスターズ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee7769fd601392fc68835709",
+      "playedAt": "2026-08-06T12:29:24.792Z",
+      "spotifyUrl": "https://open.spotify.com/track/4XhXGXQ35rMYw7oSXnNLlk",
+      "duration": 214600,
+      "previewUrl": ""
+    },
+    {
+      "id": "0CWAQlHsvfqcKJVVz9up2R",
+      "name": "セレナーデ",
+      "artist": "natori",
+      "album": "深海",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27329f649edf51edde6fdf01a09",
+      "playedAt": "2026-08-06T10:49:05.868Z",
+      "spotifyUrl": "https://open.spotify.com/track/0CWAQlHsvfqcKJVVz9up2R",
+      "duration": 219733,
+      "previewUrl": ""
+    },
+    {
+      "id": "33gJvypliwGReG8DU5XeXz",
+      "name": "お兄ちゃんはおしまい！",
+      "artist": "阿知波大輔",
+      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
+      "playedAt": "2026-08-06T10:05:10.752Z",
+      "spotifyUrl": "https://open.spotify.com/track/33gJvypliwGReG8DU5XeXz",
+      "duration": 196000,
+      "previewUrl": ""
+    },
     {
       "id": "4rPmTBTX1wobDkGYXKvcGR",
       "name": "secret base ～君がくれたもの～ (10 years after Ver.)",
@@ -32,17 +87,6 @@
       "playedAt": "2026-08-05T13:16:29.792Z",
       "spotifyUrl": "https://open.spotify.com/track/4eBAg8eiu2kGCtpjTmTHAf",
       "duration": 212437,
-      "previewUrl": ""
-    },
-    {
-      "id": "0CWAQlHsvfqcKJVVz9up2R",
-      "name": "セレナーデ",
-      "artist": "natori",
-      "album": "深海",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27329f649edf51edde6fdf01a09",
-      "playedAt": "2026-08-05T10:33:26.074Z",
-      "spotifyUrl": "https://open.spotify.com/track/0CWAQlHsvfqcKJVVz9up2R",
-      "duration": 219733,
       "previewUrl": ""
     },
     {
@@ -285,50 +329,6 @@
       "playedAt": "2026-08-02T11:46:08.719Z",
       "spotifyUrl": "https://open.spotify.com/track/4uhajAtJz72BBHkiIUvr7v",
       "duration": 221700,
-      "previewUrl": ""
-    },
-    {
-      "id": "0xh7jcUe1WMBuxL4rvwEH0",
-      "name": "Love It When You Hurt Me",
-      "artist": "TheFatRat, Anjulie",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-08-02T11:42:34.315Z",
-      "spotifyUrl": "https://open.spotify.com/track/0xh7jcUe1WMBuxL4rvwEH0",
-      "duration": 190215,
-      "previewUrl": ""
-    },
-    {
-      "id": "6kO9ixLq9K3hk7QCmYyXbw",
-      "name": "Let Love Win",
-      "artist": "TheFatRat, Anjulie",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-08-02T11:39:32.573Z",
-      "spotifyUrl": "https://open.spotify.com/track/6kO9ixLq9K3hk7QCmYyXbw",
-      "duration": 198684,
-      "previewUrl": ""
-    },
-    {
-      "id": "0XvyNVENfelHTG8FbSpjM3",
-      "name": "Elevate",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-02T11:36:29.615Z",
-      "spotifyUrl": "https://open.spotify.com/track/0XvyNVENfelHTG8FbSpjM3",
-      "duration": 163000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4acUp61Zphwr9yDu6v8NDY",
-      "name": "Envelope",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-02T11:33:54.199Z",
-      "spotifyUrl": "https://open.spotify.com/track/4acUp61Zphwr9yDu6v8NDY",
-      "duration": 139000,
       "previewUrl": ""
     }
   ],
