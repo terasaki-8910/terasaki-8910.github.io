@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-08-06T13:39:31.630Z",
+  "lastUpdated": "2026-08-06T23:48:43.091Z",
   "tracks": [
+    {
+      "id": "0mv6O3IejpeOgmKhzZ5TLl",
+      "name": "ショック",
+      "artist": "Alisa Okehazama",
+      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
+      "playedAt": "2026-08-06T14:27:56.924Z",
+      "spotifyUrl": "https://open.spotify.com/track/0mv6O3IejpeOgmKhzZ5TLl",
+      "duration": 83500,
+      "previewUrl": ""
+    },
+    {
+      "id": "6Nj1Un0tU3RyFZvCsz97Sj",
+      "name": "アイキャッチC",
+      "artist": "阿知波大輔",
+      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
+      "playedAt": "2026-08-06T14:26:32.819Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Nj1Un0tU3RyFZvCsz97Sj",
+      "duration": 8000,
+      "previewUrl": ""
+    },
+    {
+      "id": "07CNkPThef2VFCCFh6xrRd",
+      "name": "アイデン貞貞メルトダウン - まひろ&みはりver.",
+      "artist": "緒山まひろ(CV:高野麻里佳), 緒山みはり(CV:石原夏織)",
+      "album": "アイデン貞貞メルトダウン (まひろ&みはりver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737cffb2f3d0c8bb253b27adc9",
+      "playedAt": "2026-08-06T14:26:23.998Z",
+      "spotifyUrl": "https://open.spotify.com/track/07CNkPThef2VFCCFh6xrRd",
+      "duration": 243226,
+      "previewUrl": ""
+    },
     {
       "id": "2f5mdjFr905MKOuP4krySE",
       "name": "はじめてのスポブラ",
@@ -120,17 +153,6 @@
       "playedAt": "2026-08-05T02:48:05.511Z",
       "spotifyUrl": "https://open.spotify.com/track/2XVijjSdl61s9Bx3gIZZPo",
       "duration": 214253,
-      "previewUrl": ""
-    },
-    {
-      "id": "07CNkPThef2VFCCFh6xrRd",
-      "name": "アイデン貞貞メルトダウン - まひろ&みはりver.",
-      "artist": "緒山まひろ(CV:高野麻里佳), 緒山みはり(CV:石原夏織)",
-      "album": "アイデン貞貞メルトダウン (まひろ&みはりver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737cffb2f3d0c8bb253b27adc9",
-      "playedAt": "2026-08-05T02:40:07.109Z",
-      "spotifyUrl": "https://open.spotify.com/track/07CNkPThef2VFCCFh6xrRd",
-      "duration": 243226,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-03T06:46:09.712Z",
       "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
       "duration": 206000,
-      "previewUrl": ""
-    },
-    {
-      "id": "06POVSGbIFuQsc721gLk6Q",
-      "name": "Close To The Sun",
-      "artist": "TheFatRat, Anjulie",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-08-02T11:49:15.619Z",
-      "spotifyUrl": "https://open.spotify.com/track/06POVSGbIFuQsc721gLk6Q",
-      "duration": 192239,
-      "previewUrl": ""
-    },
-    {
-      "id": "4uhajAtJz72BBHkiIUvr7v",
-      "name": "Hiding In The Blue",
-      "artist": "TheFatRat, RIELL",
-      "album": "PARALLAX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334666061eea81fa4b36ba2b9",
-      "playedAt": "2026-08-02T11:46:08.719Z",
-      "spotifyUrl": "https://open.spotify.com/track/4uhajAtJz72BBHkiIUvr7v",
-      "duration": 221700,
       "previewUrl": ""
     }
   ],
