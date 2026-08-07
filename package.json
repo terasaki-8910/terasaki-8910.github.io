@@ -11,6 +11,7 @@
     "sync:chara": "node scripts/sync-chara-picker.mjs",
     "sync:chara:check": "node scripts/sync-chara-picker.mjs --check",
     "build-font-subset": "node scripts/build-font-subset.mjs",
+    "clean-craft-mincho": ".venv/bin/python3 scripts/clean-craft-mincho.py",
     "sync-header": "node scripts/sync-header.js",
     "dev:sync": "npm run sync-header && npm run dev"
   },
