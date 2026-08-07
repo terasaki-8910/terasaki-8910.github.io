@@ -9,7 +9,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const commits = __COMMIT_LOG__
 const INITIAL_COUNT = __COMMIT_LOG_INITIAL__
 
-const LANE_COLORS = ['var(--lane-0)', 'var(--lane-1)', 'var(--lane-2)', 'var(--lane-3)', 'var(--lane-4)']
+// レーン0(常に本流=main)とレーン1(最も頻繁に再利用される、直近のfeatureブランチ用)
+// が並んで見える頻度が圧倒的に高いため、この2つの識別しやすさを最優先する。
+// 元の並び(indigo→cyan)は色相差41°しかなく、実機で「ほぼ同じ色に見える」と
+// 指摘された(indigo 230°/cyanは189°、どちらも寒色でHSLの明度も近い)。
+// amber(37°)ならindigoと約167°離れ、寒色/暖色で明確に分かれる。
+// トークン自体(index.cssの--lane-0〜4、背景に対するWCAG比は検証済み)は変えず、
+// 使用順だけ入れ替える。
+const LANE_COLORS = ['var(--lane-0)', 'var(--lane-3)', 'var(--lane-2)', 'var(--lane-1)', 'var(--lane-4)']
 const LANE_WIDTH = 18
 const ROW_HEIGHT = 40
 const DOT_RADIUS = 4
