@@ -108,7 +108,15 @@ function computeGraph(commits) {
   }
   for (let i = 0; i < segments.length - 1; i++) {
     const after = laneSnapshotsAfterRow[i]
-    const touchedLanes = new Set(segments[i].map((s) => s.toLane).concat(rows[i].lane))
+    // 「この行のdivergeで新規に開いたレーン(toLane)」だけを除外する。
+    // rows[i].lane(この行自身が乗っているレーン)は除外してはいけない——
+    // このコミットが分岐・合流を起こさない限り、そのレーン自身の直進接続を
+    // 描く手段がここ以外に無いため。かつてrows[i].laneを無条件でここに含めていて、
+    // 分岐しない行(履歴の大半)のthrough接続が一切生成されず、グラフの接続線が
+    // 消える/合流部分だけが不自然にうねって見えるバグになっていた
+    // (2026-08-07、実機レビューで発覚。computeGraph()を実データに対して直接
+    // 実行し、分岐の無い行のsegmentsが軒並み空配列になっていることで確認)。
+    const touchedLanes = new Set(segments[i].map((s) => s.toLane))
     after.forEach((waitingFor, idx) => {
       if (waitingFor !== null && !touchedLanes.has(idx)) {
         segments[i].push({ type: 'through', fromLane: idx, toLane: idx, color: colorForLane(idx) })
