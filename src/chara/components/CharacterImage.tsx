@@ -129,8 +129,12 @@ export function CharacterImage(props: {
  * ことを示すインジケータに意味がある。質問の切り替えに入れていた人工的な
  * 「考え中」とは性質が違う（あちらは待たせる理由が無いので撤去した）。
  * prefers-reduced-motion では動きを止める。
+ *
+ * export しているのは、トップページのおまかせプレビュー
+ * (src/components/HomeCharaOmakase.tsx)でも同じ読み込み待ちの意味を持つため
+ * 再利用するから。
  */
-function LoadingMark() {
+export function LoadingMark() {
   return (
     <span className="flex items-end gap-1" aria-hidden="true">
       {[0, 1, 2].map((i) => (

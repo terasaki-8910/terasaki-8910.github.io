@@ -2,6 +2,8 @@ import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SpotifyRecentTracks from './SpotifyRecentTracks'
+import HomeGomiPreview from './HomeGomiPreview'
+import HomeCharaOmakase from './HomeCharaOmakase'
 
 const projects = [
   {
@@ -18,6 +20,7 @@ const projects = [
     description: 'つくば市ごみ収集カレンダー — オープンデータ連携',
     tags: ['Open Data', 'iCal', 'React'],
     link: '/gomi-tsukuba/',
+    gomi: true,
   },
   {
     id: 5,
@@ -25,6 +28,7 @@ const projects = [
     description: '質問への回答からベイズ推定でキャラを推測',
     tags: ['Bayesian', 'TypeScript', 'React'],
     link: '/chara-picker/',
+    charaPicker: true,
   },
   {
     id: 3,
@@ -91,6 +95,16 @@ export default function ProjectShowcase() {
               {project.spotify && (
                 <div className="mt-6">
                   <SpotifyRecentTracks limit={3} />
+                </div>
+              )}
+              {project.gomi && (
+                <div className="mt-6">
+                  <HomeGomiPreview />
+                </div>
+              )}
+              {project.charaPicker && (
+                <div className="mt-6">
+                  <HomeCharaOmakase />
                 </div>
               )}
             </article>
