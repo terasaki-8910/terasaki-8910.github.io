@@ -32,7 +32,7 @@ export default function HomeGomiPreview() {
         if (cancelled) return
         const townEntry = data.towns.find((t) => t.n === GOMI_DEFAULT_TOWN) || data.towns[0]
         const area = data.areas[townEntry.a]
-        setState({ status: 'ready', area, townKana: townEntry.k })
+        setState({ status: 'ready', area, townName: townEntry.n })
       })
       .catch(() => {
         if (!cancelled) setState({ status: 'error' })
@@ -67,9 +67,9 @@ export default function HomeGomiPreview() {
   return (
     <div>
       {/* カード見出しの説明文で既に「つくば市」と言っているため、ここでは
-          プレビュー対象の町名(かな)だけ添える。「つくば市 かすが」のような
-          重複表記は避ける(本人指定)。 */}
-      <p className="text-xs text-muted mb-2">{state.townKana}</p>
+          プレビュー対象の町名だけ添える。「つくば市 春日」のような
+          重複表記は避ける(本人指定)。表記は漢字(かな不要、本人指定)。 */}
+      <p className="text-xs text-muted mb-2">{state.townName}</p>
       <div className="space-y-2">
         {rows.map(({ label, cats }) => (
           <div key={label} className="flex items-center gap-2.5 text-sm">
