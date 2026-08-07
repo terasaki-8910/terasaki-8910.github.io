@@ -32,7 +32,7 @@ export default function HomeGomiPreview() {
         if (cancelled) return
         const townEntry = data.towns.find((t) => t.n === GOMI_DEFAULT_TOWN) || data.towns[0]
         const area = data.areas[townEntry.a]
-        setState({ status: 'ready', area })
+        setState({ status: 'ready', area, townKana: townEntry.k })
       })
       .catch(() => {
         if (!cancelled) setState({ status: 'error' })
@@ -65,28 +65,34 @@ export default function HomeGomiPreview() {
   })
 
   return (
-    <div className="space-y-2">
-      {rows.map(({ label, cats }) => (
-        <div key={label} className="flex items-center gap-2.5 text-sm">
-          <span className="shrink-0 w-9 font-mono text-xs text-accent">{label}</span>
-          {cats.length === 0 ? (
-            <span className="text-muted">収集なし</span>
-          ) : (
-            <span className="flex flex-wrap items-center gap-x-3 gap-y-1 min-w-0">
-              {cats.map((c) => (
-                <span key={c.id} className="flex items-center gap-1.5 text-ink">
-                  <span
-                    className="w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: gomiColor(c.id) }}
-                    aria-hidden="true"
-                  />
-                  {c.short}
-                </span>
-              ))}
-            </span>
-          )}
-        </div>
-      ))}
+    <div>
+      {/* カード見出しの説明文で既に「つくば市」と言っているため、ここでは
+          プレビュー対象の町名(かな)だけ添える。「つくば市 かすが」のような
+          重複表記は避ける(本人指定)。 */}
+      <p className="text-xs text-muted mb-2">{state.townKana}</p>
+      <div className="space-y-2">
+        {rows.map(({ label, cats }) => (
+          <div key={label} className="flex items-center gap-2.5 text-sm">
+            <span className="shrink-0 w-9 font-mono text-xs text-accent">{label}</span>
+            {cats.length === 0 ? (
+              <span className="text-muted">収集なし</span>
+            ) : (
+              <span className="flex flex-wrap items-center gap-x-3 gap-y-1 min-w-0">
+                {cats.map((c) => (
+                  <span key={c.id} className="flex items-center gap-1.5 text-ink">
+                    <span
+                      className="w-2 h-2 rounded-full shrink-0"
+                      style={{ backgroundColor: gomiColor(c.id) }}
+                      aria-hidden="true"
+                    />
+                    {c.short}
+                  </span>
+                ))}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

@@ -169,7 +169,7 @@ export async function fetchCharaImage(
     return build(pool[Math.floor(Math.random() * pool.length)]);
   };
 
-  let result: CharaImage | null = null;
+  let result: CharaImage | null;
   try {
     // スコア上位をまとめて取り、その中から選ぶ。上位固定だと毎回同じ絵になり、
     // 完全ランダムだと質が安定しないので、「上位40件の中からランダム」にする。
@@ -179,7 +179,15 @@ export async function fetchCharaImage(
       // タグ数制限などで弾かれた場合はメタタグを削って取り直す
       result = pick(await get(`${tag} ${RATING}`, POOL_SIZE));
     } catch {
-      result = null;
+      // 通信そのものが失敗した場合（レート制限・切断等。実際に
+      // ERR_CONNECTION_CLOSED を観測済み）。ここで null をキャッシュすると
+      // 「本当に画像が無いキャラ」と区別がつかなくなり、そのページセッション中
+      // 二度と再試行されない（不知火フレアで実際に発生・再現し、Danbooruに
+      // 直接クエリしたところ solo 画像が複数見つかったため、通信失敗であって
+      // 画像が無いわけではなかったと判明）。キャッシュせずに返し、次回の
+      // 呼び出し（再度おまかせで同じキャラを引く・画面を開き直す等）で
+      // 再試行できるようにする。
+      return null;
     }
   }
 
