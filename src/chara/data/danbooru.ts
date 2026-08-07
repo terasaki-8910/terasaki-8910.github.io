@@ -107,6 +107,70 @@ function normalizeSource(source: string | undefined): string | null {
   return source;
 }
 
+/** クエリ自体が悪くて何度叩いても失敗するエラー（タグ数制限のPostQuery::TagLimitError等の4xx）。
+ * これだけは`fetchJsonWithRetry`内でリトライせず即座に投げ、呼び出し元の
+ * 「メタタグを削って取り直す」フォールバックへ即座に渡す。5xx・429・fetch自体の
+ * 例外（切断等）はこの型で包まないことで、通常通りリトライ対象のままにする。 */
+class NonRetryableHttpError extends Error {}
+
+function isNonRetryableStatus(status: number): boolean {
+  return status >= 400 && status < 500 && status !== 429;
+}
+
+/** signalのabortを尊重するsleep。中断されたら即座に例外で抜ける（無駄な待機をしない）。 */
+function abortableDelay(ms: number, signal?: AbortSignal): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (signal?.aborted) {
+      reject(new DOMException('Aborted', 'AbortError'));
+      return;
+    }
+    const timer = setTimeout(resolve, ms);
+    signal?.addEventListener(
+      'abort',
+      () => {
+        clearTimeout(timer);
+        reject(new DOMException('Aborted', 'AbortError'));
+      },
+      { once: true },
+    );
+  });
+}
+
+/**
+ * fetch + JSON化に、通信の一時的な失敗（切断・タイムアウト・5xx・429）だけを対象にした
+ * 指数バックオフ再試行を追加する。
+ *
+ * 「不知火フレア」「橘ありす」で実際に発生した「画像なし」は、Danbooru側に画像が
+ * 十分あり・tag-map解決も正しいのに、通信の瞬断だけが原因だった（本番で
+ * ERR_CONNECTION_CLOSED を観測済み）。従来は失敗をキャッシュしないことで
+ * 「リロードすれば直る」状態にはしていたが、それでも初回で失敗が目に見えるのは
+ * 望ましくない。認証無しの共有APIに負荷をかけすぎない範囲で、初回失敗を
+ * こちら側で吸収する。
+ *
+ * 最大2回まで再試行（計3回試行）、300ms→900msの指数バックオフ。控えめな回数に
+ * しているのは、Danbooruが未認証アクセスへ課すレート制限を実測できておらず
+ * （悪化させたくない）、かつ「この子かな?」の体感待ち時間をむやみに伸ばさないため。
+ */
+async function fetchJsonWithRetry(url: string, signal?: AbortSignal, maxRetries = 2): Promise<unknown> {
+  let lastError: unknown;
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    if (attempt > 0) await abortableDelay(300 * 2 ** (attempt - 1), signal);
+    try {
+      const res = await fetch(url, { signal });
+      if (!res.ok) {
+        if (isNonRetryableStatus(res.status)) throw new NonRetryableHttpError(String(res.status));
+        throw new Error(String(res.status)); // 5xx/429: リトライ対象として下のcatchへ
+      }
+      return await res.json();
+    } catch (err) {
+      if (err instanceof DOMException && err.name === 'AbortError') throw err;
+      if (err instanceof NonRetryableHttpError) throw err;
+      lastError = err;
+    }
+  }
+  throw lastError;
+}
+
 /**
  * キャラの代表画像を1枚引く。見つからなければ null（枠だけ出す）。
  *
@@ -137,9 +201,7 @@ export async function fetchCharaImage(
 
   const get = async (tags: string, limit: number): Promise<DanbooruPost[]> => {
     const url = `${API}/posts.json?tags=${encodeURIComponent(tags)}&limit=${limit}&only=${only}`;
-    const res = await fetch(url, { signal });
-    if (!res.ok) throw new Error(String(res.status));
-    const json: unknown = await res.json();
+    const json: unknown = await fetchJsonWithRetry(url, signal);
     return Array.isArray(json) ? (json as DanbooruPost[]) : [];
   };
 
@@ -174,18 +236,23 @@ export async function fetchCharaImage(
     // スコア上位をまとめて取り、その中から選ぶ。上位固定だと毎回同じ絵になり、
     // 完全ランダムだと質が安定しないので、「上位40件の中からランダム」にする。
     result = pick(await get(`${tag} ${RATING} order:score`, POOL_SIZE));
-  } catch {
+  } catch (err) {
+    // 呼び出し元(CharacterImage.tsxのunmount時等)によるabortは、リトライ済み・
+    // フォールバック済みでも尊重して即座に伝播させる。無名catchで飲み込むと
+    // abort後にさらにフォールバッククエリへ進んでしまい、中断の意味が無くなる。
+    if (err instanceof DOMException && err.name === 'AbortError') throw err;
     try {
       // タグ数制限などで弾かれた場合はメタタグを削って取り直す
       result = pick(await get(`${tag} ${RATING}`, POOL_SIZE));
-    } catch {
+    } catch (err2) {
+      if (err2 instanceof DOMException && err2.name === 'AbortError') throw err2;
       // 通信そのものが失敗した場合（レート制限・切断等。実際に
-      // ERR_CONNECTION_CLOSED を観測済み）。ここで null をキャッシュすると
-      // 「本当に画像が無いキャラ」と区別がつかなくなり、そのページセッション中
-      // 二度と再試行されない（不知火フレアで実際に発生・再現し、Danbooruに
-      // 直接クエリしたところ solo 画像が複数見つかったため、通信失敗であって
-      // 画像が無いわけではなかったと判明）。キャッシュせずに返し、次回の
-      // 呼び出し（再度おまかせで同じキャラを引く・画面を開き直す等）で
+      // ERR_CONNECTION_CLOSED を観測済み）。fetchJsonWithRetryで数回再試行しても
+      // なお失敗した状態。ここで null をキャッシュすると「本当に画像が無いキャラ」と
+      // 区別がつかなくなり、そのページセッション中二度と再試行されない（不知火フレアで
+      // 実際に発生・再現し、Danbooruに直接クエリしたところ solo 画像が複数見つかった
+      // ため、通信失敗であって画像が無いわけではなかったと判明）。キャッシュせずに
+      // 返し、次回の呼び出し（再度おまかせで同じキャラを引く・画面を開き直す等）で
       // 再試行できるようにする。
       return null;
     }
