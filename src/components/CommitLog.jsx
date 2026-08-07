@@ -9,14 +9,20 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const commits = __COMMIT_LOG__
 const INITIAL_COUNT = __COMMIT_LOG_INITIAL__
 
-// レーン0(常に本流=main)とレーン1(最も頻繁に再利用される、直近のfeatureブランチ用)
-// が並んで見える頻度が圧倒的に高いため、この2つの識別しやすさを最優先する。
-// 元の並び(indigo→cyan)は色相差41°しかなく、実機で「ほぼ同じ色に見える」と
-// 指摘された(indigo 230°/cyanは189°、どちらも寒色でHSLの明度も近い)。
-// amber(37°)ならindigoと約167°離れ、寒色/暖色で明確に分かれる。
-// トークン自体(index.cssの--lane-0〜4、背景に対するWCAG比は検証済み)は変えず、
-// 使用順だけ入れ替える。
+// 色は「レーン番号(=X座標)」ではなく「レーンが開かれた回数」で決める。
+// このリポジトリの実際の運用(1〜2コミットの短命なfeatureブランチが次々
+// mainへ合流する)では、閉じたレーン番号がすぐ別の無関係なブランチに
+// 再利用される。レーン番号そのものに色を固定すると、9本の別々のブランチが
+// 全部「同じレーン1」を使い回すせいで全部同じ色になり、「1本の枝が
+// 行ったり来たりしているだけ」に見えてしまっていた(2026-08-07、実機
+// レビューで指摘。90件の実データでcomputeGraph()を直接検証して確認)。
+//
+// 対処: mainの色(indigo)はレーン0専用に固定し、それ以外の全レーンは
+// 「開かれた通し番号」で残り4色を順に回す。トークン自体
+// (index.cssの--lane-0〜4、背景に対するWCAG比は検証済み)は変えない。
 const LANE_COLORS = ['var(--lane-0)', 'var(--lane-3)', 'var(--lane-2)', 'var(--lane-1)', 'var(--lane-4)']
+/** mainのindigo(LANE_COLORSの0番目)を除いた、featureブランチ用の巡回色。 */
+const BRANCH_COLOR_INDICES = [1, 2, 3, 4]
 const LANE_WIDTH = 18
 const ROW_HEIGHT = 40
 const DOT_RADIUS = 4
@@ -35,14 +41,30 @@ const DOT_RADIUS = 4
  */
 function computeGraph(commits) {
   const lanes = [] // lanes[i] = そのレーンが待っているコミットhash、nullなら空き
+  const laneColorIdx = [] // lanes[]と同じ添字。そのレーン(座標)に今割り当てられている色のindex
   const rows = []
   const segments = [] // segments[i] = rows[i]とrows[i+1]の間の接続線たち
 
-  const colorForLane = (lane) => LANE_COLORS[lane % LANE_COLORS.length]
+  const colorForLane = (lane) => LANE_COLORS[laneColorIdx[lane] ?? 0]
+  // レーンを開く。レーン0(=最初に開かれるレーン。このリポジトリの運用では常にmain)
+  // だけはindigo固定、それ以外は「開かれた通し番号」で残り4色を巡回させる。
+  // レーン"番号"(=X座標)に直接色を固定すると、閉じたレーン番号が別の無関係な
+  // ブランチにすぐ再利用されるこのリポジトリの運用(1〜2コミットの短命な
+  // featureブランチが次々合流する)では、9本の別ブランチが全部同じレーン番号=
+  // 同じ色になり「1本の枝が行き来しているだけ」に見えてしまっていた
+  // (2026-08-07、実機レビューで指摘。90件の実データでcomputeGraph()を
+  // 直接検証して確認・修正)。
+  let branchColorCounter = 0
   const openLane = () => {
     const free = lanes.indexOf(null)
     const idx = free !== -1 ? free : lanes.length
     if (idx >= lanes.length) lanes.length = idx + 1
+    if (idx === 0) {
+      laneColorIdx[idx] = 0
+    } else {
+      laneColorIdx[idx] = BRANCH_COLOR_INDICES[branchColorCounter % BRANCH_COLOR_INDICES.length]
+      branchColorCounter += 1
+    }
     return idx
   }
 
@@ -60,7 +82,7 @@ function computeGraph(commits) {
     if (rowIndex > 0) {
       const converging = matchIndices.filter((idx) => idx !== lane)
       for (const idx of converging) {
-        segments[rowIndex - 1].push({ type: 'converge', fromLane: idx, toLane: lane, color })
+        segments[rowIndex - 1].push({ type: 'converge', fromLane: idx, toLane: lane, color: colorForLane(idx) })
         lanes[idx] = null
       }
     } else {
@@ -86,35 +108,46 @@ function computeGraph(commits) {
   // 直進(このコミットと無関係に、次の行でもまだ有効なレーン)を各segmentへ追加する。
   // rows[rowIndex]処理「直後」の lanes 状態と、rows[rowIndex+1]処理「直前」の
   // lanes 状態は同じ配列を使い回しているため、rowIndexごとに直進判定をしていては
-  // 二度手間になる。ここでは各行の処理直後のスナップショットを別途取り直す。
+  // 二度手間になる。ここでは各行の処理直後のスナップショットを別途取り直す
+  // (色の割り当てロジックも上のopenLane()と全く同じ手順で再現する必要がある)。
   const laneSnapshotsAfterRow = []
+  const laneColorSnapshotsAfterRow = []
   {
     const replay = []
-    commits.forEach((commit, rowIndex) => {
+    const replayColorIdx = []
+    let replayBranchColorCounter = 0
+    const openReplayLane = () => {
+      const free = replay.indexOf(null)
+      const idx = free !== -1 ? free : replay.length
+      if (idx >= replay.length) replay.length = idx + 1
+      if (idx === 0) {
+        replayColorIdx[idx] = 0
+      } else {
+        replayColorIdx[idx] = BRANCH_COLOR_INDICES[replayBranchColorCounter % BRANCH_COLOR_INDICES.length]
+        replayBranchColorCounter += 1
+      }
+      return idx
+    }
+    commits.forEach((commit) => {
       const matchIndices = []
       replay.forEach((w, idx) => {
         if (w === commit.hash) matchIndices.push(idx)
       })
-      const lane = matchIndices.length > 0 ? Math.min(...matchIndices) : (() => {
-        const free = replay.indexOf(null)
-        const idx = free !== -1 ? free : replay.length
-        if (idx >= replay.length) replay.length = idx + 1
-        return idx
-      })()
+      const lane = matchIndices.length > 0 ? Math.min(...matchIndices) : openReplayLane()
       for (const idx of matchIndices) if (idx !== lane) replay[idx] = null
       const [firstParent, ...restParents] = commit.parents
       replay[lane] = firstParent ?? null
       for (const p of restParents) {
-        const free = replay.indexOf(null)
-        const idx = free !== -1 ? free : replay.length
-        if (idx >= replay.length) replay.length = idx + 1
-        replay[idx] = p
+        const newLane = openReplayLane()
+        replay[newLane] = p
       }
       laneSnapshotsAfterRow.push([...replay])
+      laneColorSnapshotsAfterRow.push([...replayColorIdx])
     })
   }
   for (let i = 0; i < segments.length - 1; i++) {
     const after = laneSnapshotsAfterRow[i]
+    const afterColor = laneColorSnapshotsAfterRow[i]
     // 「この行のdivergeで新規に開いたレーン(toLane)」だけを除外する。
     // rows[i].lane(この行自身が乗っているレーン)は除外してはいけない——
     // このコミットが分岐・合流を起こさない限り、そのレーン自身の直進接続を
@@ -126,7 +159,7 @@ function computeGraph(commits) {
     const touchedLanes = new Set(segments[i].map((s) => s.toLane))
     after.forEach((waitingFor, idx) => {
       if (waitingFor !== null && !touchedLanes.has(idx)) {
-        segments[i].push({ type: 'through', fromLane: idx, toLane: idx, color: colorForLane(idx) })
+        segments[i].push({ type: 'through', fromLane: idx, toLane: idx, color: LANE_COLORS[afterColor[idx] ?? 0] })
       }
     })
   }
