@@ -23,6 +23,16 @@ const INITIAL_COUNT = __COMMIT_LOG_INITIAL__
 const LANE_COLORS = ['var(--lane-0)', 'var(--lane-3)', 'var(--lane-2)', 'var(--lane-1)', 'var(--lane-4)']
 /** mainのindigo(LANE_COLORSの0番目)を除いた、featureブランチ用の巡回色。 */
 const BRANCH_COLOR_INDICES = [1, 2, 3, 4]
+// レーンの「位置」(X座標)も、空いたら即座に最も左の空きへ詰めていた。
+// このリポジトリの運用(短命ブランチが次々合流)では、閉じたレーンが
+// 常に同じ位置(レーン1)にしか戻らないため、色を分けても「同じ場所を
+// 行ったり来たりしているだけ」に見えていた(2026-08-07、実機レビューで
+// 「列は2つだけじゃなくていい」と指摘)。位置についても、空きレーンの
+// 再利用は「今開いているレーン数がMAX_LANESに達するまでは行わない」
+// (常に右へ新しい列を足す)ことで、色だけでなく位置でも各ブランチが
+// 視覚的に独立して見えるようにする。上限に達したら、そこで初めて
+// 最も左の空きレーンを再利用し、横幅が際限なく伸びるのを防ぐ。
+const MAX_LANES = 8
 const LANE_WIDTH = 18
 const ROW_HEIGHT = 40
 const DOT_RADIUS = 4
@@ -56,8 +66,9 @@ function computeGraph(commits) {
   // 直接検証して確認・修正)。
   let branchColorCounter = 0
   const openLane = () => {
-    const free = lanes.indexOf(null)
-    const idx = free !== -1 ? free : lanes.length
+    // MAX_LANES未満なら常に新しい列を右へ足す。上限に達して初めて
+    // 最も左の空きレーンを再利用する(位置の使い回しを遅らせる。上のコメント参照)。
+    const idx = lanes.length < MAX_LANES ? lanes.length : (lanes.indexOf(null) !== -1 ? lanes.indexOf(null) : lanes.length)
     if (idx >= lanes.length) lanes.length = idx + 1
     if (idx === 0) {
       laneColorIdx[idx] = 0
@@ -117,8 +128,7 @@ function computeGraph(commits) {
     const replayColorIdx = []
     let replayBranchColorCounter = 0
     const openReplayLane = () => {
-      const free = replay.indexOf(null)
-      const idx = free !== -1 ? free : replay.length
+      const idx = replay.length < MAX_LANES ? replay.length : (replay.indexOf(null) !== -1 ? replay.indexOf(null) : replay.length)
       if (idx >= replay.length) replay.length = idx + 1
       if (idx === 0) {
         replayColorIdx[idx] = 0
