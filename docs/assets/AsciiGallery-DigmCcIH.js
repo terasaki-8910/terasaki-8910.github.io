@@ -1,4 +1,4 @@
-import{r as Bi,j as mt}from"./index-DiocDcIh.js";const ks=[{id:"bianchi",name:"Bianchi",modelUrl:"/models/bike.glb",credit:{title:"Bicycle",author:"Poly by Google",license:"CC BY 3.0",sourceUrl:"https://poly.pizza/m/19VoUuA2pcN"}}];/**
+import{r as Bi,j as mt}from"./index-JUS7TzgX.js";const ks=[{id:"bianchi",name:"Bianchi",modelUrl:"/models/bike.glb",credit:{title:"Bicycle",author:"Poly by Google",license:"CC BY 3.0",sourceUrl:"https://poly.pizza/m/19VoUuA2pcN"}}];/**
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
