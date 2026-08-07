@@ -30,8 +30,30 @@ const DENSE_KEEP_RATIO = 0.6
 const MIN_BLOCK_HEIGHT = 44
 const MAX_BLOCK_HEIGHT = 220
 
+// ブロックを浮遊させる縦位置のオフセット幅(px)。+/-この範囲で揺れる。
+// 高さ(contributionCount由来)とは無関係な軸なので、全ブロック共通の底辺に
+// 揃った「棒グラフ」に見えないようにする(実機レビューで指摘された点)。
+const OFFSET_RANGE = 56
+
+// スクロール距離の短縮率。1.0だと横方向の移動量と同じ縦スクロール量が
+// 必要になり「スクロールが重い」と感じられたため、同じ横移動をより短い
+// 縦スクロールで完了させる(実機レビューで指摘された点)。
+const SCROLL_DISTANCE_FACTOR = 0.55
+
 function formatYmd(dateStr) {
   return dateStr.replaceAll('-', '')
+}
+
+// 文字列から決定論的な整数オフセットを作る(Math.random不使用。同じ日付なら
+// リロードしても常に同じ位置になる)。乱数種ではなく日付文字列そのものが
+// 入力なので、コミット数やビルド時刻に依存せず再現する。
+function hashOffset(str, range) {
+  let h = 0
+  for (let i = 0; i < str.length; i++) {
+    h = (Math.imul(h, 31) + str.charCodeAt(i)) | 0
+  }
+  const span = range * 2 + 1
+  return (((h % span) + span) % span) - range
 }
 
 function pickAndScaleDays(days) {
@@ -62,6 +84,7 @@ function pickAndScaleDays(days) {
 }
 
 function ActivityBlock({ day }) {
+  const offset = hashOffset(day.date, OFFSET_RANGE)
   return (
     <a
       href={GITHUB_PROFILE_URL}
@@ -69,6 +92,7 @@ function ActivityBlock({ day }) {
       rel="noopener noreferrer"
       title={`${day.date}: ${day.contributionCount} contributions`}
       className="group flex shrink-0 flex-col items-start gap-2"
+      style={{ transform: `translateY(${offset}px)` }}
     >
       <div
         className="w-16 border border-line transition-colors group-hover:border-accent md:w-20"
@@ -89,12 +113,15 @@ function ActivityBlock({ day }) {
 
 function LoadingSkeleton() {
   return (
-    <div className="flex gap-6 overflow-x-hidden px-4 py-12 md:px-12">
+    <div className="flex items-center gap-6 overflow-x-hidden px-4 py-12 md:px-12">
       {Array.from({ length: 10 }).map((_, i) => (
         <div
           key={i}
           className="w-16 shrink-0 animate-pulse border border-line bg-surface md:w-20"
-          style={{ height: `${60 + ((i * 37) % 140)}px` }}
+          style={{
+            height: `${60 + ((i * 37) % 140)}px`,
+            transform: `translateY(${hashOffset(String(i), OFFSET_RANGE)}px)`,
+          }}
         />
       ))}
     </div>
@@ -154,7 +181,10 @@ export default function GithubActivity() {
         scrollTrigger: {
           trigger: container,
           start: 'top top',
-          end: () => `+=${scrollAmount()}`,
+          // 横方向の移動量そのまま(等倍)を縦スクロール距離に要求すると
+          // 「スクロールが重い」と感じられたため、短縮率を掛けて同じ横移動を
+          // より短い縦スクロールで完了させる。
+          end: () => `+=${scrollAmount() * SCROLL_DISTANCE_FACTOR}`,
           scrub: 1,
           pin: true,
           invalidateOnRefresh: true,
@@ -177,7 +207,7 @@ export default function GithubActivity() {
     <section ref={containerRef} className="relative overflow-hidden">
       <div
         ref={trackRef}
-        className="flex items-end gap-6 overflow-x-auto px-4 py-16 will-change-transform md:overflow-x-visible md:px-12 md:py-24"
+        className="flex items-center gap-6 overflow-x-auto px-4 py-16 will-change-transform md:overflow-x-visible md:px-12 md:py-24"
       >
         {days.map((day) => (
           <ActivityBlock key={day.date} day={day} />
