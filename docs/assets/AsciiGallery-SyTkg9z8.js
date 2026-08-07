@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:docs/assets/AsciiGallery-DxT3IUGd.js
-import{r as Bi,j as mt}from"./index-au0fzJmp.js";const ks=[{id:"bianchi",name:"Bianchi",modelUrl:"/models/bike.glb",credit:{title:"Bicycle",author:"Poly by Google",license:"CC BY 3.0",sourceUrl:"https://poly.pizza/m/19VoUuA2pcN"}}];/**
-========
-import{r as Bi,j as mt}from"./index-I8zLkN8Q.js";const ks=[{id:"bianchi",name:"Bianchi",modelUrl:"/models/bike.glb",credit:{title:"Bicycle",author:"Poly by Google",license:"CC BY 3.0",sourceUrl:"https://poly.pizza/m/19VoUuA2pcN"}}];/**
->>>>>>>> ff3aa54 (コミット履歴をGitKraken風のブランチグラフに作り替え):docs/assets/AsciiGallery-UmSp7DpJ.js
+import{r as Bi,j as mt}from"./index-Bmdnh0QY.js";const ks=[{id:"bianchi",name:"Bianchi",modelUrl:"/models/bike.glb",credit:{title:"Bicycle",author:"Poly by Google",license:"CC BY 3.0",sourceUrl:"https://poly.pizza/m/19VoUuA2pcN"}}];/**
  * @license
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT

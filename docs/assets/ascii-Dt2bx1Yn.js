@@ -1,5 +1,0 @@
-<<<<<<<< HEAD:docs/assets/ascii-Dt2bx1Yn.js
-import{j as e,E as s,P as r,H as a,F as i,c as t,R as c}from"./index-au0fzJmp.js";import{A as o}from"./AsciiGallery-DxT3IUGd.js";function d(){return e.jsx(s,{children:e.jsxs("div",{className:"relative",children:[e.jsx(r,{}),e.jsx("div",{className:"fixed top-0 left-0 right-0 z-50",children:e.jsx(a,{currentPage:"ascii"})}),e.jsx("div",{className:"pt-20",children:e.jsx(o,{})}),e.jsx(i,{})]})})}t.createRoot(document.getElementById("root")).render(e.jsx(c.StrictMode,{children:e.jsx(d,{})}));
-========
-import{j as e,E as s,P as r,H as a,F as i,c as t,R as c}from"./index-I8zLkN8Q.js";import{A as o}from"./AsciiGallery-UmSp7DpJ.js";function d(){return e.jsx(s,{children:e.jsxs("div",{className:"relative",children:[e.jsx(r,{}),e.jsx("div",{className:"fixed top-0 left-0 right-0 z-50",children:e.jsx(a,{currentPage:"ascii"})}),e.jsx("div",{className:"pt-20",children:e.jsx(o,{})}),e.jsx(i,{})]})})}t.createRoot(document.getElementById("root")).render(e.jsx(c.StrictMode,{children:e.jsx(d,{})}));
->>>>>>>> ff3aa54 (コミット履歴をGitKraken風のブランチグラフに作り替え):docs/assets/ascii-CDD2px5s.js
