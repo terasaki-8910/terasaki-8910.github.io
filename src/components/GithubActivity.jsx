@@ -204,7 +204,13 @@ export default function GithubActivity() {
   }
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden">
+    // md以上はpin演出の対象なので、他セクション(Hero/Philosophy/3D ASCII)と同じ
+    // min-h-screen + 縦中央寄せにする。以前はセクション自体の高さが中身なり
+    // (475px程度)しか無いままpinしていたため、pin中の残りのビューポート下部
+    // (実測で約550px)が何も表示されないまま長時間残る問題があった
+    // (実機レビューで「余白が大きい」と指摘)。モバイルはpinしない単純な
+    // 横スクロール帯のままなので対象外。
+    <section ref={containerRef} className="relative overflow-hidden md:flex md:min-h-screen md:items-center">
       <div
         ref={trackRef}
         className="flex items-center gap-6 overflow-x-auto px-4 py-16 will-change-transform md:overflow-x-visible md:px-12 md:py-24"
