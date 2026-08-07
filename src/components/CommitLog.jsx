@@ -158,15 +158,30 @@ function computeGraph(commits) {
   for (let i = 0; i < segments.length - 1; i++) {
     const after = laneSnapshotsAfterRow[i]
     const afterColor = laneColorSnapshotsAfterRow[i]
-    // 「この行のdivergeで新規に開いたレーン(toLane)」だけを除外する。
-    // rows[i].lane(この行自身が乗っているレーン)は除外してはいけない——
-    // このコミットが分岐・合流を起こさない限り、そのレーン自身の直進接続を
-    // 描く手段がここ以外に無いため。かつてrows[i].laneを無条件でここに含めていて、
-    // 分岐しない行(履歴の大半)のthrough接続が一切生成されず、グラフの接続線が
-    // 消える/合流部分だけが不自然にうねって見えるバグになっていた
-    // (2026-08-07、実機レビューで発覚。computeGraph()を実データに対して直接
-    // 実行し、分岐の無い行のsegmentsが軒並み空配列になっていることで確認)。
-    const touchedLanes = new Set(segments[i].map((s) => s.toLane))
+    // 「この行で新たに動きがあったレーン」だけを除外する。ここを誤ると
+    // 「宙ぶらりんの線」(ノードに繋がらない線分)が生まれる。除外すべきは:
+    //   - diverge の toLane(新規に開いたレーン。分岐線自身がその行への
+    //     接続を表すので、別途直進線は不要)
+    //   - converge の fromLane(吸収されて閉じる側。合流線自身がその行への
+    //     接続を表すので、別途直進線は不要)
+    // 逆に converge の toLane(合流を受け止める側)は除外してはいけない——
+    // そのレーンは合流線とは別に、自分自身の直進線を継続して持っている
+    // (例: mainが分岐先のコミット行を素通りして、数行下の合流点まで
+    // 一本の線でつながる)。ここをtoLaneまで除外していたため、mainの直進線が
+    // 分岐先の行の手前で途切れ、どのノードにも繋がらない宙ぶらりんの線分が
+    // できていた(2026-08-07、実機レビュー・スクリーンショットで指摘・
+    // computeGraph()を実データに対して直接実行し、マージ直後の行で
+    // 期待される直進segmentが欠落していることを確認)。
+    //
+    // rows[i].lane(この行自身が乗っているレーン)はdiverge/convergeの対象で
+    // ない限り自然にtouchedLanesへ含まれず、直進線が正しく生成される
+    // (これは既に修正済みの別の話——分岐の無い行(履歴の大半)で直進接続が
+    // 消えるバグの修正、2026-08-07)。
+    const touchedLanes = new Set()
+    for (const s of segments[i]) {
+      if (s.type === 'diverge') touchedLanes.add(s.toLane)
+      else if (s.type === 'converge') touchedLanes.add(s.fromLane)
+    }
     after.forEach((waitingFor, idx) => {
       if (waitingFor !== null && !touchedLanes.has(idx)) {
         segments[i].push({ type: 'through', fromLane: idx, toLane: idx, color: LANE_COLORS[afterColor[idx] ?? 0] })
