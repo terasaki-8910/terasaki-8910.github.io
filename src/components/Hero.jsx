@@ -26,34 +26,42 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-32">
-      <div ref={headerRef} className="fixed top-0 left-0 right-0 z-50">
-        <Header currentPage="home" />
-      </div>
+    <>
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-32">
+        <div ref={headerRef} className="fixed top-0 left-0 right-0 z-50">
+          <Header currentPage="home" />
+        </div>
 
-      <div ref={contentRef} className="text-center max-w-4xl mx-auto w-full min-w-0">
-        {/* サイト名。地の色(#F9EC8E)の出典であるAlicemerix「オーバーライド」に由来
-            (index.css参照)。旧「@Override」(Javaのアノテーション由来)は英字単体で
-            検索に埋もれる上、既存の英語ワードそのものだったため改めた。カタカナに
-            したことで実在プログラム構文とは競合しなくなっている。
-            <title>やOGP側には引き続き「冬色」を併記している(index.html)。
-            見た目とtitleタグは別物でよい。 */}
-        <h1
-          className="font-display font-medium text-massive mb-6"
-          style={{ color: 'rgb(250, 160, 160)', WebkitTextStroke: '6px black', paintOrder: 'stroke fill' }}
-        >
-          @オーバーライド
-        </h1>
-        {/* サブタイトルは歌詞のオマージュ。h1の「オーバーライド」を、
-            「半端な関数を書き換える」という具体的な行為として言い換えている。 */}
-        <p className="text-lg md:text-xl text-muted tracking-wide mb-20 leading-relaxed">
-          半端なアプリの関数を
-          <br />
-          少々ここらでオーバーライド
-        </p>
+        <div ref={contentRef} className="text-center max-w-4xl mx-auto w-full min-w-0">
+          {/* サイト名。地の色(#F9EC8E)の出典であるAlicemerix「オーバーライド」に由来
+              (index.css参照)。旧「@Override」(Javaのアノテーション由来)は英字単体で
+              検索に埋もれる上、既存の英語ワードそのものだったため改めた。カタカナに
+              したことで実在プログラム構文とは競合しなくなっている。
+              <title>やOGP側には引き続き「冬色」を併記している(index.html)。
+              見た目とtitleタグは別物でよい。 */}
+          <h1
+            className="font-display font-medium text-massive mb-6"
+            style={{ color: 'rgb(250, 160, 160)', WebkitTextStroke: '6px black', paintOrder: 'stroke fill' }}
+          >
+            @オーバーライド
+          </h1>
+          {/* サブタイトルは歌詞のオマージュ。h1の「オーバーライド」を、
+              「半端な関数を書き換える」という具体的な行為として言い換えている。 */}
+          <p className="text-lg md:text-xl text-muted tracking-wide leading-relaxed">
+            半端なアプリの関数を
+            <br />
+            少々ここらでオーバーライド
+          </p>
+        </div>
+      </section>
 
-        <GithubActivity />
-      </div>
-    </section>
+      {/* GithubActivityは意図的にHero直下の別セクションとして置く(Hero内の
+          contentRefには入れない)。縦スクロール連動で横パンする演出
+          (GSAP ScrollTrigger pin)には専用のスクロール量が要り、Heroの
+          `min-h-screen flex items-center justify-center`(中身を1画面分の
+          高さに収めて中央寄せする箱)に混ぜるとHero自体が異常に縦長になり、
+          中央寄せの前提が崩れるため。 */}
+      <GithubActivity />
+    </>
   )
 }
