@@ -90,6 +90,20 @@
   --gomi-plastic: #B06428;
   --gomi-can: #5E8E3E;
   --gomi-oversized: #7A7A6E;
+
+  /* コミットグラフ(ページ最下部)のブランチレーン色。gomiと同じ「dataviz層」の
+     考え方だが、同じページ内に両方出るためgomiの9色相とは重ならない色相を
+     選んでいる(視覚的な意味の混同を避ける)。5色を超えるレーン数は循環参照
+     (CommitLog.jsx参照)。全色、非テキスト用途として背景比3:1以上を計算検証済み。 */
+  --lane-0: #5B6BC0; /* indigo, vs paper 4.04:1 */
+  --lane-1: #1E8A9E; /* cyan, vs paper 3.36:1 */
+  --lane-2: #7A7A2E; /* olive, vs paper 3.74:1 */
+  --lane-3: #8F5E0A; /* amber, vs paper 4.62:1 */
+  --lane-4: #8E5A7E; /* plum, vs paper 4.45:1 */
+
+  /* コミットグラフの挿入/削除行数バー。gomi/laneと同じdataviz層。 */
+  --diff-insert: #2E7D46; /* vs paper 4.21:1 */
+  --diff-delete: #B23A2E; /* vs paper 4.92:1 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -112,6 +126,15 @@
     --gomi-plastic: #DC9A62;
     --gomi-can: #8CB46A;
     --gomi-oversized: #9A9A8E;
+
+    --lane-0: #8C97DE; /* indigo, vs paper 6.78:1 */
+    --lane-1: #5FC3D6; /* cyan, vs paper 9.16:1 */
+    --lane-2: #B8B860; /* olive, vs paper 8.98:1 */
+    --lane-3: #E0B04C; /* amber, vs paper 9.35:1 */
+    --lane-4: #C48CB8; /* plum, vs paper 6.95:1 */
+
+    --diff-insert: #5FBE7E; /* vs paper 8.17:1 */
+    --diff-delete: #E0776A; /* vs paper 6.26:1 */
   }
 }
 
@@ -137,6 +160,15 @@
   --gomi-plastic: #DC9A62;
   --gomi-can: #8CB46A;
   --gomi-oversized: #9A9A8E;
+
+  --lane-0: #8C97DE;
+  --lane-1: #5FC3D6;
+  --lane-2: #B8B860;
+  --lane-3: #E0B04C;
+  --lane-4: #C48CB8;
+
+  --diff-insert: #5FBE7E;
+  --diff-delete: #E0776A;
 }
 
 :root[data-theme="light"] {
@@ -158,6 +190,15 @@
   --gomi-plastic: #B06428;
   --gomi-can: #5E8E3E;
   --gomi-oversized: #7A7A6E;
+
+  --lane-0: #5B6BC0;
+  --lane-1: #1E8A9E;
+  --lane-2: #7A7A2E;
+  --lane-3: #8F5E0A;
+  --lane-4: #8E5A7E;
+
+  --diff-insert: #2E7D46;
+  --diff-delete: #B23A2E;
 }
 
 @layer base {
