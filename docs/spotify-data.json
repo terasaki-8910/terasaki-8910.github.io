@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-07T12:38:32.502Z",
+  "lastUpdated": "2026-08-08T06:33:15.400Z",
   "tracks": [
+    {
+      "id": "73rdU71fLEd0nW7HENRhKF",
+      "name": "キュートなキューたい",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-08-08T04:01:28.954Z",
+      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
+      "duration": 236000,
+      "previewUrl": ""
+    },
     {
       "id": "6WrytCYNqsPMgtpTpd9p7j",
       "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-04T05:46:10.990Z",
       "spotifyUrl": "https://open.spotify.com/track/3tvFxJH15FZzpncReusLNW",
       "duration": 208695,
-      "previewUrl": ""
-    },
-    {
-      "id": "3TKECbhjCdTLx1UuyUS0ye",
-      "name": "Chosen",
-      "artist": "TheFatRat, Laura Brehm, Anna Yvette",
-      "album": "Chosen",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27331c16beab40e89973c84d81e",
-      "playedAt": "2026-08-04T05:42:50.933Z",
-      "spotifyUrl": "https://open.spotify.com/track/3TKECbhjCdTLx1UuyUS0ye",
-      "duration": 229946,
       "previewUrl": ""
     }
   ],
