@@ -298,23 +298,39 @@
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
     </svg>
     </button>
-    <a
-            href="/spotify/"
-            class="cosmic-header__spotify-link cosmic-header__spotify-link--active"
-            aria-label="Spotify Dashboard"
-          >
-    <div class="cosmic-header__spotify-box">
-    <div class="cosmic-header__spotify-icon">
-    <svg viewBox="0 0 24 24" fill="currentColor" class="spotify-logo">
-    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+    <div class="cosmic-header__menu">
+    <button type="button" id="project-menu-trigger" class="cosmic-header__menu-trigger" aria-haspopup="true" aria-expanded="false" aria-label="プロジェクトメニュー">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="cosmic-header__icon">
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="18" x2="21" y2="18" />
     </svg>
-    </div>
-    <span class="cosmic-header__spotify-text">Spotify Dashboard</span>
-    </div>
+    </button>
+    <div id="project-menu-panel" class="cosmic-header__menu-panel" role="menu" hidden>
+    <a href="/spotify/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--active">
+    <span class="cosmic-header__menu-item-icon">
+    <svg viewBox="0 0 24 24" fill="currentColor" class="spotify-logo">
+    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+    </svg>
+    </span>
+    <span>Spotify Dashboard</span>
+    </a>
+    <a href="/gomi-tsukuba/" role="menuitem" class="cosmic-header__menu-item">
+    <span>Tsukuba Gomi Calendar</span>
+    </a>
+    <a href="/chara-picker/" role="menuitem" class="cosmic-header__menu-item">
+    <span>理想の推しア◯ネイター</span>
+    </a>
+    <a href="#" role="menuitem" class="cosmic-header__menu-item">
+    <span>Gaming Archive</span>
     </a>
     </div>
     </div>
+    </div>
+    </div>
     </header>
+
+
 
 
 
@@ -420,6 +436,34 @@
         document.getElementById('theme-toggle-btn').addEventListener('click', () => {
             const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
             applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        // プロジェクトメニュー(React側のProjectMenu.jsxと同じ考え方の
+        // vanilla JS版。このページはReactの状態を持てないため、開閉は
+        // hidden属性の付け外しで行う。scripts/sync-header.jsの
+        // STATIC_PROJECT_MENU_HTMLと構造を合わせてある)
+        const menuTrigger = document.getElementById('project-menu-trigger');
+        const menuPanel = document.getElementById('project-menu-panel');
+
+        function closeProjectMenu() {
+            menuPanel.hidden = true;
+            menuTrigger.setAttribute('aria-expanded', 'false');
+        }
+
+        menuTrigger.addEventListener('click', () => {
+            const willOpen = menuPanel.hidden;
+            menuPanel.hidden = !willOpen;
+            menuTrigger.setAttribute('aria-expanded', String(willOpen));
+        });
+
+        document.addEventListener('mousedown', (event) => {
+            if (!menuPanel.hidden && !menuTrigger.contains(event.target) && !menuPanel.contains(event.target)) {
+                closeProjectMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeProjectMenu();
         });
 
         // Spotify iFrame用の変数

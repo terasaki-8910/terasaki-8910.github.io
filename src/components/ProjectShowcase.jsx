@@ -4,41 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SpotifyRecentTracks from './SpotifyRecentTracks'
 import HomeGomiPreview from './HomeGomiPreview'
 import HomeCharaOmakase from './HomeCharaOmakase'
-
-const projects = [
-  {
-    id: 2,
-    title: 'Spotify Dashboard',
-    description: '最近聴いた曲',
-    tags: ['Web Audio API', 'React', 'Spotify Integration'],
-    link: '/spotify/',
-    spotify: true,
-  },
-  {
-    id: 4,
-    title: 'Tsukuba Gomi Calendar',
-    description: 'つくば市ごみ収集カレンダー — オープンデータ連携',
-    tags: ['Open Data', 'iCal', 'React'],
-    link: '/gomi-tsukuba/',
-    gomi: true,
-  },
-  {
-    id: 5,
-    title: '理想の推しア◯ネイター',
-    description: '質問への回答からベイズ推定でキャラを推測',
-    tags: ['Bayesian', 'TypeScript', 'React'],
-    link: '/chara-picker/',
-    charaPicker: true,
-  },
-  {
-    id: 3,
-    title: 'Gaming Archive',
-    description: 'お気に入りのゲームコレクション',
-    tags: ['Steam', 'Discord', 'Community'],
-    link: '#',
-    gaming: true,
-  },
-]
+import { projects } from '../data/projects'
 
 export default function ProjectShowcase() {
   const sectionRef = useRef()

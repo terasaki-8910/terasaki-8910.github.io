@@ -140,12 +140,20 @@
   display: inline-block;
 }
 
-/* テーマ切替ボタン */
+/* テーマ切替ボタン。以前はヘッダー内(デスクトップ)/モバイルのみ右下固定と
+   画面幅で挙動が分かれていたが、「右下に移動したい」という指示を受けて
+   常時position:fixedに統一した(2026-08-08)。ヘッダーの通常フローからは
+   完全に外れるため、.cosmic-header__right-group内のどこに置いても見た目は
+   変わらない。 */
 .cosmic-header__theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1001;
   width: 45px;
   height: 45px;
   padding: 0;
@@ -161,38 +169,83 @@
   border-color: var(--header-accent);
 }
 
-/* Spotifyリンクスタイル */
-.cosmic-header__spotify-link {
-  text-decoration: none;
-  transition: border-color 0.2s ease;
+/* プロジェクトメニュー(ProjectMenu.jsx)。以前はSpotifyへの専用リンクが
+   ここにあったが、Spotifyもプロジェクト一覧の1項目として中に入れ、
+   ここは「一覧を開くトリガー」に置き換えた(本人指定、2026-08-08)。
+   トリガー自身はHome/テーマ切替と同じ「中性の枠線を持つ45px角の箱」に揃える。 */
+.cosmic-header__menu {
+  position: relative;
 }
 
-/* 以前はSpotifyブランドの緑で塩られた特別扱いだったが、サイト全体の
-   「アクセントは1色(accent)だけ」という方針に合わせ、他の箱(Home/
-   テーマ切替)と同じ中性の枠線+背景に統一した。ロゴアイコン自体の緑色
-   (.spotify-logoのfill)はブランド認識のため残す。 */
-.cosmic-header__spotify-box {
-  display: flex;
+.cosmic-header__menu-trigger {
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
   box-sizing: border-box;
+  width: 45px;
   height: 45px;
-  padding: 0 1.5rem;
-
+  padding: 0;
   background: var(--header-box-bg);
   border: 1px solid var(--header-box-border);
   border-radius: 4px;
-
+  color: var(--header-text);
+  cursor: pointer;
   transition: border-color 0.2s ease;
 }
 
-.cosmic-header__spotify-box:hover {
+.cosmic-header__menu-trigger:hover,
+.cosmic-header__menu-trigger[aria-expanded="true"] {
   border-color: var(--header-accent);
 }
 
-.cosmic-header__spotify-icon {
-  width: 20px;
-  height: 20px;
+.cosmic-header__menu-panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 1002;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: var(--header-box-bg);
+  border: 1px solid var(--header-box-border);
+  border-radius: 4px;
+  padding: 0.4rem;
+  gap: 0.15rem;
+}
+
+.cosmic-header__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--header-text);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cosmic-header__menu-item:hover {
+  color: var(--header-accent);
+  background: var(--header-accent-dim);
+}
+
+.cosmic-header__menu-item--active {
+  color: var(--header-accent);
+  background: var(--header-accent-dim);
+  pointer-events: none;
+}
+
+/* ロゴアイコン自体の緑色(.spotify-logoのfill)はブランド認識のため残す
+   (以前の単独Spotifyリンクと同じ方針)。 */
+.cosmic-header__menu-item-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,14 +257,6 @@
   fill: #1db954;
 }
 
-.cosmic-header__spotify-text {
-  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--header-text);
-  letter-spacing: 0.03em;
-}
-
 /* レスポンシブ対応(769px〜768px幅の微調整) */
 @media (max-width: 768px) and (min-width: 641px) {
   .cosmic-header__container {
@@ -221,21 +266,15 @@
   .cosmic-header__home-text {
     font-size: 1rem;
   }
-
-  .cosmic-header__spotify-box {
-    padding: 0.6rem 1.2rem;
-  }
-
-  .cosmic-header__spotify-text {
-    font-size: 0.875rem;
-  }
 }
 
 /* モバイル(640px以下): sasukeharaguchi.com型に、単一の横並びバーではなく
-   独立した小さな箱を画面の角に分散配置する。Home=左上、Spotifyアイコン=右上、
-   テーマ切替=右下。Header.jsxのJSX構造(<a>2本)は変更せず、position:fixedで
-   子要素だけを個別に画面角へ逃がす -- scripts/sync-header.jsが<a>のclassNameを
-   正規表現で直接パターンマッチしているため(sync-header.js:57-58)、JSXは触らない。 */
+   独立した小さな箱を画面の角に分散配置する。Home=左上、メニュー=右上、
+   テーマ切替=右下(テーマ切替は2026-08-08以降デスクトップも右下固定なので
+   ここでの再定義は不要になった)。Header.jsxのJSX構造(<a>1本)は変更せず、
+   position:fixedで子要素だけを個別に画面角へ逃がす -- scripts/sync-header.jsが
+   classNameを正規表現で直接パターンマッチしているため(sync-header.js内)、
+   JSXは触らない。 */
 @media (max-width: 640px) {
   .cosmic-header {
     background: none;
@@ -262,7 +301,7 @@
     border-radius: 4px;
   }
 
-  /* Spotifyラベルと同じ理由でモバイルはアイコンのみにする */
+  /* メニューラベルと同じ理由でモバイルはアイコンのみにする */
   .cosmic-header__home-text {
     display: none;
   }
@@ -273,41 +312,20 @@
   }
 
   .cosmic-header__theme-toggle {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 1001;
     width: 44px;
     height: 44px;
   }
 
-  /* 外側の<a>とラッパーdivは position:fixed の子を持つだけの
-     空箱になる。box自体の背景/枠は消して幽霊ボックスを防ぐ。 */
-  .cosmic-header__spotify-box {
-    display: contents;
-  }
-
-  .cosmic-header__spotify-icon {
+  .cosmic-header__menu {
     position: fixed;
     top: 1rem;
     right: 1rem;
     z-index: 1001;
+  }
+
+  .cosmic-header__menu-trigger {
     width: 44px;
     height: 44px;
-    background: var(--header-box-bg);
-    border: 1px solid var(--header-box-border);
-    border-radius: 4px;
-  }
-
-  .spotify-logo {
-    width: 20px;
-    height: 20px;
-  }
-
-  /* アイコンと同じリンク先を指すラベルは冗長なので、モバイルでは非表示にする。
-     アクセシブルネームはHeader.jsxの<a>に付けたaria-labelで担保する。 */
-  .cosmic-header__spotify-text {
-    display: none;
   }
 }
 
@@ -317,13 +335,4 @@
   border-color: var(--header-accent);
   background: var(--header-accent-dim);
   pointer-events: none; /* 現在ページなのでクリック不可 */
-}
-
-.cosmic-header__spotify-link--active {
-  pointer-events: none; /* 現在ページなのでクリック不可 */
-}
-
-.cosmic-header__spotify-link--active .cosmic-header__spotify-box {
-  background: var(--header-accent-dim);
-  border-color: var(--header-accent);
 }
