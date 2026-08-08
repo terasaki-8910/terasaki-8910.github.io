@@ -29,7 +29,7 @@ const STATIC_PROJECT_MENU_HTML = `<div class="cosmic-header__menu">
     <a href="/chara-picker/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
     <span class="cosmic-header__menu-item-prompt">&gt;</span><span>理想の推しア◯ネイター</span>
     </a>
-    <a href="#" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
+    <a href="/gaming-archive/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
     <span class="cosmic-header__menu-item-prompt">&gt;</span><span>Gaming Archive</span>
     </a>
     </div>

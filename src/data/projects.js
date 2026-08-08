@@ -3,8 +3,13 @@
  * ProjectMenu.jsx(ヘッダー右上のメニュー)の両方から参照する単一の情報源。
  *
  * pageKeyはHeader.jsxのcurrentPageプロパティと対応させる(そのページに
- * いる間はメニュー内の自分の項目をactive表示にするため)。まだ専用ページを
- * 持たないプロジェクト(Gaming Archive)はnull。
+ * いる間はメニュー内の自分の項目をactive表示にするため)。専用ページを
+ * 持たないプロジェクトはnull。
+ *
+ * Gaming Archiveはリンク先(URL)だけ用意し、中身はまだ無いため本物の404と
+ * 同じ表示にしてある(gaming-archive/index.html→NotFoundPage。本人指定、
+ * 2026-08-08)。中身が無いページを「現在地」として案内するのは適切でないため
+ * pageKeyはnullのまま。
  */
 export const projects = [
   {
@@ -39,7 +44,7 @@ export const projects = [
     title: 'Gaming Archive',
     description: 'お気に入りのゲームコレクション',
     tags: ['Steam', 'Discord', 'Community'],
-    link: '#',
+    link: '/gaming-archive/',
     gaming: true,
     pageKey: null,
   },

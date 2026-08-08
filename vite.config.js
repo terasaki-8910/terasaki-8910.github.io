@@ -166,6 +166,7 @@ export default defineConfig({
         spotify: resolve(__dirname, 'spotify/index.html'),
         gomiTsukuba: resolve(__dirname, 'gomi-tsukuba/index.html'),
         charaPicker: resolve(__dirname, 'chara-picker/index.html'),
+        gamingArchive: resolve(__dirname, 'gaming-archive/index.html'),
         notfound: resolve(__dirname, '404.html'),
       },
       output: {
