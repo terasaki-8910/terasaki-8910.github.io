@@ -169,12 +169,19 @@
   border-color: var(--header-accent);
 }
 
-/* プロジェクトメニュー(ProjectMenu.jsx)。以前はSpotifyへの専用リンクが
-   ここにあったが、Spotifyもプロジェクト一覧の1項目として中に入れ、
-   ここは「一覧を開くトリガー」に置き換えた(本人指定、2026-08-08)。
-   トリガー自身はHome/テーマ切替と同じ「中性の枠線を持つ45px角の箱」に揃える。 */
+/* プロジェクトメニュー(ProjectMenu.jsx)。「コマンドパレット」演出
+   (本人承認、2026-08-08。破り取ったノート風/カードの山札風と3案並べて
+   選んでもらった)。枠がクイッと開く→コマンド行がタイプされる→一覧が
+   上から順に印字される。閉じる時は下の行から順に消えて、最後に1本の
+   線へ折り畳まれる。ページのライト/ダークテーマには従わず常時ダーク基調の
+   「端末」として固定する(色そのものはこのサイトのaccentトークンを使い、
+   ありがちな緑ネオン端末にはしない)。 */
 .cosmic-header__menu {
   position: relative;
+  --menu-bg: #161616;
+  --menu-border: #333333;
+  --menu-text: #e8e8e8;
+  --menu-text-dim: #999999;
 }
 
 .cosmic-header__menu-trigger {
@@ -198,63 +205,149 @@
   border-color: var(--header-accent);
 }
 
+.cosmic-header__menu-trigger-glyph {
+  font-family: 'Fira Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
 .cosmic-header__menu-panel {
   position: absolute;
   top: calc(100% + 0.5rem);
   right: 0;
   z-index: 1002;
-  min-width: 220px;
+  width: 280px;
+  box-sizing: border-box;
+  background: var(--menu-bg);
+  border: 1px solid var(--menu-border);
+  border-radius: 4px;
+  padding: 0.6rem 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 120ms cubic-bezier(0.22, 1, 0.36, 1), opacity 100ms ease-out;
+}
+
+.cosmic-header__menu-panel--opening,
+.cosmic-header__menu-panel--typing,
+.cosmic-header__menu-panel--open {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.cosmic-header__menu-panel--closing {
+  transform: scaleY(0);
+  opacity: 0;
+  transition: transform 60ms ease-in, opacity 50ms ease-in;
+  transition-delay: var(--collapse-delay, 0ms);
+}
+
+.cosmic-header__menu-cmdline {
+  display: flex;
+  align-items: center;
+  padding: 0 0.9rem 0.5rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--menu-border);
+  font-family: 'Fira Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--menu-text-dim);
+  white-space: pre;
+}
+
+.cosmic-header__menu-cursor {
+  color: var(--header-accent);
+  animation: cosmicMenuCursorBlink 900ms step-end infinite;
+}
+
+@keyframes cosmicMenuCursorBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.cosmic-header__menu-rows {
   display: flex;
   flex-direction: column;
-  background: var(--header-box-bg);
-  border: 1px solid var(--header-box-border);
-  border-radius: 4px;
-  padding: 0.4rem;
-  gap: 0.15rem;
 }
 
 .cosmic-header__menu-item {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 0.75rem;
-  border-radius: 4px;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
   text-decoration: none;
-  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--header-text);
-  letter-spacing: 0.03em;
+  font-family: 'Fira Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  color: var(--menu-text);
   white-space: nowrap;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  opacity: 0;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .cosmic-header__menu-item:hover {
   color: var(--header-accent);
-  background: var(--header-accent-dim);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .cosmic-header__menu-item--active {
   color: var(--header-accent);
-  background: var(--header-accent-dim);
   pointer-events: none;
 }
 
-/* ロゴアイコン自体の緑色(.spotify-logoのfill)はブランド認識のため残す
-   (以前の単独Spotifyリンクと同じ方針)。 */
-.cosmic-header__menu-item-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.cosmic-header__menu-item--pending {
+  opacity: 0;
 }
 
-.spotify-logo {
-  width: 100%;
-  height: 100%;
-  fill: #1db954;
+.cosmic-header__menu-item--enter {
+  animation: cosmicMenuRowEnter 90ms ease-out both;
+}
+
+.cosmic-header__menu-item--exit {
+  animation: cosmicMenuRowExit 60ms ease-in both;
+}
+
+@keyframes cosmicMenuRowEnter {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cosmicMenuRowExit {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-3px); }
+}
+
+.cosmic-header__menu-item-prompt {
+  color: var(--header-accent);
+  flex-shrink: 0;
+}
+
+.cosmic-header__menu-item-note {
+  color: var(--menu-text-dim);
+  margin-left: 0.15rem;
+}
+
+.cosmic-header__menu-item-dot {
+  color: var(--header-accent);
+  margin-left: auto;
+  font-size: 0.6rem;
+}
+
+/* 動きを抑えたい設定では、開閉の演出(枠のスケール・タイプライター・行の
+   段階アニメーション)を全て即時表示にする。ProjectMenu.jsx側もJSで
+   同じ分岐を持つが、CSSの方はJSの分岐漏れに関わらず必ず効く保険。 */
+@media (prefers-reduced-motion: reduce) {
+  .cosmic-header__menu-panel,
+  .cosmic-header__menu-item {
+    transition: none !important;
+    animation: none !important;
+  }
+  .cosmic-header__menu-item--pending,
+  .cosmic-header__menu-item--enter,
+  .cosmic-header__menu-item--exit {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* レスポンシブ対応(769px〜768px幅の微調整) */

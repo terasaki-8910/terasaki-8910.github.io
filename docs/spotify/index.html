@@ -300,35 +300,35 @@
     </button>
     <div class="cosmic-header__menu">
     <button type="button" id="project-menu-trigger" class="cosmic-header__menu-trigger" aria-haspopup="true" aria-expanded="false" aria-label="プロジェクトメニュー">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="cosmic-header__icon">
-    <line x1="3" y1="6" x2="21" y2="6" />
-    <line x1="3" y1="12" x2="21" y2="12" />
-    <line x1="3" y1="18" x2="21" y2="18" />
-    </svg>
+    <span class="cosmic-header__menu-trigger-glyph">&gt;_</span>
     </button>
     <div id="project-menu-panel" class="cosmic-header__menu-panel" role="menu" hidden>
-    <a href="/spotify/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--active">
-    <span class="cosmic-header__menu-item-icon">
-    <svg viewBox="0 0 24 24" fill="currentColor" class="spotify-logo">
-    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
-    </svg>
-    </span>
-    <span>Spotify Dashboard</span>
+    <div class="cosmic-header__menu-cmdline">
+    <span id="project-menu-cmdtext"></span><span class="cosmic-header__menu-cursor" aria-hidden="true">█</span>
+    </div>
+    <div class="cosmic-header__menu-rows" id="project-menu-rows">
+    <a href="/spotify/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--active cosmic-header__menu-item--pending">
+    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>Spotify Dashboard</span><span class="cosmic-header__menu-item-note">♪</span><span class="cosmic-header__menu-item-dot" aria-hidden="true">●</span>
     </a>
-    <a href="/gomi-tsukuba/" role="menuitem" class="cosmic-header__menu-item">
-    <span>Tsukuba Gomi Calendar</span>
+    <a href="/gomi-tsukuba/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
+    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>Tsukuba Gomi Calendar</span>
     </a>
-    <a href="/chara-picker/" role="menuitem" class="cosmic-header__menu-item">
-    <span>理想の推しア◯ネイター</span>
+    <a href="/chara-picker/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
+    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>理想の推しア◯ネイター</span>
     </a>
-    <a href="#" role="menuitem" class="cosmic-header__menu-item">
-    <span>Gaming Archive</span>
+    <a href="#" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
+    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>Gaming Archive</span>
     </a>
+    </div>
     </div>
     </div>
     </div>
     </div>
     </header>
+
+
+
+
 
 
 
@@ -438,22 +438,109 @@
             applyTheme(current === 'dark' ? 'light' : 'dark');
         });
 
-        // プロジェクトメニュー(React側のProjectMenu.jsxと同じ考え方の
-        // vanilla JS版。このページはReactの状態を持てないため、開閉は
-        // hidden属性の付け外しで行う。scripts/sync-header.jsの
-        // STATIC_PROJECT_MENU_HTMLと構造を合わせてある)
+        // プロジェクトメニュー(React側のProjectMenu.jsxの「コマンドパレット」
+        // 演出と同じ考え方のvanilla JS版。定数(タイミング)はProjectMenu.jsxと
+        // 一致させること。このページはReactの状態を持てないため、開く/閉じるの
+        // 段階(枠が開く→タイプ→一覧が印字される/下から消えて畳まれる)を
+        // クラスの付け外しとsetTimeoutで手動再現する。
+        const COMMAND_TEXT = '$ ./menu --list';
+        const TYPE_CHAR_MS = 18;
+        const FRAME_OPEN_MS = 120;
+        const ROW_ENTER_STAGGER_MS = 20;
+        const ROW_EXIT_STAGGER_MS = 15;
+        const ROW_EXIT_DURATION_MS = 60;
+        const COLLAPSE_MS = 60;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         const menuTrigger = document.getElementById('project-menu-trigger');
         const menuPanel = document.getElementById('project-menu-panel');
+        const menuCmdText = document.getElementById('project-menu-cmdtext');
+        const menuRows = Array.from(document.querySelectorAll('#project-menu-rows .cosmic-header__menu-item'));
+
+        let menuTimers = [];
+        function clearMenuTimers() {
+            menuTimers.forEach(clearTimeout);
+            menuTimers = [];
+        }
+        function after(ms, fn) {
+            menuTimers.push(setTimeout(fn, ms));
+        }
+        function setPanelPhase(phase) {
+            menuPanel.className = 'cosmic-header__menu-panel cosmic-header__menu-panel--' + phase;
+        }
+
+        function openProjectMenu() {
+            clearMenuTimers();
+            menuPanel.hidden = false;
+            menuTrigger.setAttribute('aria-expanded', 'true');
+
+            if (reduceMotion) {
+                menuCmdText.textContent = COMMAND_TEXT;
+                setPanelPhase('open');
+                menuRows.forEach((row) => {
+                    row.className = row.className.replace(/cosmic-header__menu-item--(pending|enter|exit)/g, '').trim()
+                        + ' cosmic-header__menu-item--enter';
+                    row.style.animationDelay = '0ms';
+                });
+                return;
+            }
+
+            menuCmdText.textContent = '';
+            setPanelPhase('opening');
+            after(FRAME_OPEN_MS, () => {
+                setPanelPhase('typing');
+                let i = 0;
+                const typeNext = () => {
+                    i += 1;
+                    menuCmdText.textContent = COMMAND_TEXT.slice(0, i);
+                    if (i < COMMAND_TEXT.length) {
+                        after(TYPE_CHAR_MS, typeNext);
+                    } else {
+                        setPanelPhase('open');
+                        menuRows.forEach((row, index) => {
+                            row.className = row.className.replace(/cosmic-header__menu-item--(pending|enter|exit)/g, '').trim()
+                                + ' cosmic-header__menu-item--enter';
+                            row.style.animationDelay = (index * ROW_ENTER_STAGGER_MS) + 'ms';
+                        });
+                    }
+                };
+                after(TYPE_CHAR_MS, typeNext);
+            });
+        }
 
         function closeProjectMenu() {
-            menuPanel.hidden = true;
+            if (menuPanel.hidden) return;
+            clearMenuTimers();
             menuTrigger.setAttribute('aria-expanded', 'false');
+
+            if (reduceMotion) {
+                menuPanel.hidden = true;
+                setPanelPhase('closed');
+                return;
+            }
+
+            setPanelPhase('closing');
+            const rowExitTotal = (menuRows.length - 1) * ROW_EXIT_STAGGER_MS + ROW_EXIT_DURATION_MS;
+            menuPanel.style.setProperty('--collapse-delay', rowExitTotal + 'ms');
+            menuRows.forEach((row, index) => {
+                row.className = row.className.replace(/cosmic-header__menu-item--(pending|enter|exit)/g, '').trim()
+                    + ' cosmic-header__menu-item--exit';
+                row.style.animationDelay = ((menuRows.length - 1 - index) * ROW_EXIT_STAGGER_MS) + 'ms';
+            });
+            after(rowExitTotal + COLLAPSE_MS, () => {
+                menuPanel.hidden = true;
+                setPanelPhase('closed');
+                menuCmdText.textContent = '';
+                menuRows.forEach((row) => {
+                    row.className = row.className.replace(/cosmic-header__menu-item--(pending|enter|exit)/g, '').trim()
+                        + ' cosmic-header__menu-item--pending';
+                });
+            });
         }
 
         menuTrigger.addEventListener('click', () => {
-            const willOpen = menuPanel.hidden;
-            menuPanel.hidden = !willOpen;
-            menuTrigger.setAttribute('aria-expanded', String(willOpen));
+            if (menuPanel.hidden) openProjectMenu();
+            else closeProjectMenu();
         });
 
         document.addEventListener('mousedown', (event) => {
