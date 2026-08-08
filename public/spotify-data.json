@@ -1,6 +1,105 @@
 {
-  "lastUpdated": "2026-08-08T06:33:15.400Z",
+  "lastUpdated": "2026-08-08T18:21:30.052Z",
   "tracks": [
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-08-08T15:44:48.688Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "30MH35NPiE2zKSJY1nFv3N",
+      "name": "キューティーハニー",
+      "artist": "Kumi Koda",
+      "album": "secret",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731242f8dad5ec08d08dd499ef",
+      "playedAt": "2026-08-08T14:16:45.524Z",
+      "spotifyUrl": "https://open.spotify.com/track/30MH35NPiE2zKSJY1nFv3N",
+      "duration": 185633,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-08-08T14:13:39.315Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-08-08T14:10:57.518Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "10Eyo4juZQFthKqlJgGMdp",
+      "name": "怪盗",
+      "artist": "back number",
+      "album": "怪盗",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae51734d04ef431b65a09a9a",
+      "playedAt": "2026-08-08T14:07:19.664Z",
+      "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
+      "duration": 196226,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
+      "name": "春を告げる",
+      "artist": "yama",
+      "album": "春を告げる",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
+      "playedAt": "2026-08-08T14:04:02.994Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
+      "duration": 196497,
+      "previewUrl": ""
+    },
+    {
+      "id": "0CWAQlHsvfqcKJVVz9up2R",
+      "name": "セレナーデ",
+      "artist": "natori",
+      "album": "深海",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27329f649edf51edde6fdf01a09",
+      "playedAt": "2026-08-08T14:00:46.055Z",
+      "spotifyUrl": "https://open.spotify.com/track/0CWAQlHsvfqcKJVVz9up2R",
+      "duration": 219733,
+      "previewUrl": ""
+    },
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-08-08T13:53:59.795Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "407GWcB9QwD3aiX0M7RCFT",
+      "name": "GYB!!",
+      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
+      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
+      "playedAt": "2026-08-08T13:50:30.976Z",
+      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
+      "duration": 218573,
+      "previewUrl": ""
+    },
     {
       "id": "73rdU71fLEd0nW7HENRhKF",
       "name": "キュートなキューたい",
@@ -10,17 +109,6 @@
       "playedAt": "2026-08-08T04:01:28.954Z",
       "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
       "duration": 236000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-08-07T12:03:46.872Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
       "previewUrl": ""
     },
     {
@@ -54,17 +142,6 @@
       "playedAt": "2026-08-07T05:55:37.450Z",
       "spotifyUrl": "https://open.spotify.com/track/4K65wBvHQPmnD6bTdN6BHt",
       "duration": 258714,
-      "previewUrl": ""
-    },
-    {
-      "id": "2le4lZquBURJYS6TcdAZdx",
-      "name": "絶対王者チョコレート",
-      "artist": "ゆらゆらシスターズ",
-      "album": "絶対王者チョコレート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-08-07T05:51:18.210Z",
-      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
-      "duration": 208223,
       "previewUrl": ""
     },
     {
@@ -131,17 +208,6 @@
       "playedAt": "2026-08-06T12:29:24.792Z",
       "spotifyUrl": "https://open.spotify.com/track/4XhXGXQ35rMYw7oSXnNLlk",
       "duration": 214600,
-      "previewUrl": ""
-    },
-    {
-      "id": "0CWAQlHsvfqcKJVVz9up2R",
-      "name": "セレナーデ",
-      "artist": "natori",
-      "album": "深海",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27329f649edf51edde6fdf01a09",
-      "playedAt": "2026-08-06T10:49:05.868Z",
-      "spotifyUrl": "https://open.spotify.com/track/0CWAQlHsvfqcKJVVz9up2R",
-      "duration": 219733,
       "previewUrl": ""
     },
     {
@@ -263,72 +329,6 @@
       "playedAt": "2026-08-04T07:55:33.970Z",
       "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
       "duration": 288363,
-      "previewUrl": ""
-    },
-    {
-      "id": "0zxyK9Ih5rnN485VY73bUp",
-      "name": "Luna say maybe",
-      "artist": "初星学園, 美波, 月村手毬",
-      "album": "Luna say maybe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
-      "playedAt": "2026-08-04T06:54:21.027Z",
-      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
-      "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "5YADi8VnCwx5ahhwNdgQaZ",
-      "name": "How Many Boogie",
-      "artist": "SKRYU, WAZGOGG, Fuma no KTR",
-      "album": "わすれもの",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27301729ef621de4f62bcdd05b9",
-      "playedAt": "2026-08-04T06:17:16.869Z",
-      "spotifyUrl": "https://open.spotify.com/track/5YADi8VnCwx5ahhwNdgQaZ",
-      "duration": 159047,
-      "previewUrl": ""
-    },
-    {
-      "id": "1gHSf9eduupc4MmXPQttkj",
-      "name": "The Storm",
-      "artist": "TheFatRat, Maisy Kay",
-      "album": "The Storm",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ecc70a3f6f6c8228ac08b65e",
-      "playedAt": "2026-08-04T05:56:29.524Z",
-      "spotifyUrl": "https://open.spotify.com/track/1gHSf9eduupc4MmXPQttkj",
-      "duration": 168577,
-      "previewUrl": ""
-    },
-    {
-      "id": "6YzMhlI36vzyDYvhjiVf54",
-      "name": "The Calling",
-      "artist": "TheFatRat, Laura Brehm",
-      "album": "The Calling",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e37b56b30e0d3d6bc73694da",
-      "playedAt": "2026-08-04T05:53:45.979Z",
-      "spotifyUrl": "https://open.spotify.com/track/6YzMhlI36vzyDYvhjiVf54",
-      "duration": 233590,
-      "previewUrl": ""
-    },
-    {
-      "id": "2pCdOvMtxYMyDl54Judrfa",
-      "name": "Threnody",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-04T05:48:01.640Z",
-      "spotifyUrl": "https://open.spotify.com/track/2pCdOvMtxYMyDl54Judrfa",
-      "duration": 115750,
-      "previewUrl": ""
-    },
-    {
-      "id": "3tvFxJH15FZzpncReusLNW",
-      "name": "Solitude",
-      "artist": "TheFatRat, Slaydit",
-      "album": "Solitude",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aaf49393dcc8385880e00c21",
-      "playedAt": "2026-08-04T05:46:10.990Z",
-      "spotifyUrl": "https://open.spotify.com/track/3tvFxJH15FZzpncReusLNW",
-      "duration": 208695,
       "previewUrl": ""
     }
   ],
