@@ -207,13 +207,16 @@
             color: var(--color-muted);
         }
 
-        /* Spotify iFrame Container */
+        /* Spotify iFrame Container。Spotify公式の埋め込み高さは3段階
+           (80=コンパクトバー/152=中間/352=フルプレイヤー+アルバム画像)。
+           以前は380pxでフルプレイヤー相当だったが、場所を取りすぎるとの
+           指摘でコンパクトバー(80px)に変更した(本人指定、2026-08-08)。 */
         #spotify-iframe-container {
             position: fixed;
             bottom: 20px;
             right: 20px;
             width: 300px;
-            height: 380px;
+            height: 80px;
             z-index: 1000;
             display: none;
             border-radius: 12px;
