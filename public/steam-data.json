@@ -1,0 +1,445 @@
+{
+  "lastUpdated": "2026-08-09T03:13:02.301Z",
+  "player": {
+    "personaname": "masa669a",
+    "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
+    "profileUrl": "https://steamcommunity.com/id/modadadadaaaagnsb/"
+  },
+  "ownedGamesCount": 42,
+  "recentlyPlayed": [
+    {
+      "appid": 431730,
+      "name": "Aseprite",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/431730/da61bd2806f69205a97609dcdd4ca27df3baf800.jpg",
+      "playtime2weeksMinutes": 863,
+      "playtimeForeverMinutes": 863
+    }
+  ],
+  "library": [
+    {
+      "appid": 1449850,
+      "name": "Yu-Gi-Oh!  Master Duel",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1449850/d7f2b7e0a0cca27fa1cb2cc60efc4afb7a6203a8.jpg",
+      "playtimeForeverMinutes": 39371
+    },
+    {
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
+      "playtimeForeverMinutes": 7732
+    },
+    {
+      "appid": 489830,
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/489830/0dfe3eed5658f9fbd8b62f8021038c0a4190f21d.jpg",
+      "playtimeForeverMinutes": 4827
+    },
+    {
+      "appid": 1623730,
+      "name": "Palworld",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1623730/f5523077a8f4c923c2e8d8c17794b3319035fa73.jpg",
+      "playtimeForeverMinutes": 2382
+    },
+    {
+      "appid": 431730,
+      "name": "Aseprite",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/431730/da61bd2806f69205a97609dcdd4ca27df3baf800.jpg",
+      "playtimeForeverMinutes": 863
+    },
+    {
+      "appid": 1446780,
+      "name": "MONSTER HUNTER RISE",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1446780/560dd364b52075b783424961a43c01f9b69fde15.jpg",
+      "playtimeForeverMinutes": 424
+    },
+    {
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/431960/72edaed9d748c6cf7397ffb1c83f0b837b9ebd9d.jpg",
+      "playtimeForeverMinutes": 376
+    },
+    {
+      "appid": 1364780,
+      "name": "Street Fighter™ 6",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1364780/d8057ee15238077329f869c1610e257461ab3f76.jpg",
+      "playtimeForeverMinutes": 157
+    },
+    {
+      "appid": 2584990,
+      "name": "Shadowverse: Worlds Beyond",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2584990/c4e197c8e6dd7a1da1913a93178d4000ee22a73d.jpg",
+      "playtimeForeverMinutes": 114
+    },
+    {
+      "appid": 1954420,
+      "name": "Riichi City - Japanese Mahjong",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1954420/eaeced1901a6ee9a83e01a2218cc769430a40e3f.jpg",
+      "playtimeForeverMinutes": 69
+    },
+    {
+      "appid": 1174180,
+      "name": "Red Dead Redemption 2",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1174180/5106abd9c1187a97f23295a0ba9470c94804ec6c.jpg",
+      "playtimeForeverMinutes": 58
+    },
+    {
+      "appid": 4000,
+      "name": "Garry's Mod",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/4000/4a6f25cfa2426445d0d9d6e233408de4d371ce8b.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 40990,
+      "name": "Mafia",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/40990/3c86a0fd4f94a97b6f4ce31b5c31532e2098fe7b.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 49520,
+      "name": "Borderlands 2",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/49520/a3f4945226e69b6196074df4c776e342d3e5a3be.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 227300,
+      "name": "Euro Truck Simulator 2",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/227300/adc18a4fc9adc0330144b76d61cbda68bb2394a0.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 286690,
+      "name": "Metro 2033 Redux",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/286690/353ea01a045c084215bca95519808eaa7319ce0c.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 289130,
+      "name": "ENDLESS Legend™",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/289130/02277be6b9b09671b857948006316057974d7036.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 321270,
+      "name": "UNLOVED",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/321270/209bf1dc3fa504d91b601fb06d2159dee17d72c4.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 346110,
+      "name": "ARK: Survival Evolved",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/346110/fef1799533131c10f538d2dd697bbbd89e663265.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 407530,
+      "name": "ARK: Survival Of The Fittest",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/407530/807c673cddebbfee0700a947a75f4872ad136e9b.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 443910,
+      "name": "TGV Voyages Train Simulator",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/443910/0528f1a6691fcb037f9a799cda9c35f0a3a26a48.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 485450,
+      "name": "Ninja Stealth",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/485450/445001aca721a3601d0f8751321d76145afa55af.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 485510,
+      "name": "Nioh: Complete Edition",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/485510/fd41da946a73390c9b4bf85e8984560b7e85a53b.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 520720,
+      "name": "Dear Esther: Landmark Edition",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/520720/886a70c7c78c240da7daa1de01490b44c9855f89.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 552500,
+      "name": "Warhammer: Vermintide 2",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/552500/a671f2ddf7359beba9702ac097baf6d50cb07202.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 582660,
+      "name": "Black Desert",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/582660/bf5ccace0a692720984827bf042143d0d4b28a42.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 699920,
+      "name": "Despotism 3k",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/699920/be7dca32438ad6df7980047500b0c1a1898fc9fa.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 753660,
+      "name": "AtmaSphere",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/753660/0f3559c8e03858f975a1d2ab7dfb7a06a60d06de.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 990080,
+      "name": "Hogwarts Legacy",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1035510,
+      "name": "Ultimate Zombie Defense",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1035510/19ea5aca745585e84592011e0856661304167466.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1180660,
+      "name": "Tell Me Why",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1180660/6eb40e6f71226ce5bea75601a1ec0f9d6f647dd1.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1222140,
+      "name": "Detroit: Become Human",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1222140/3d9f5bc971d44398aef740c0d8e79a358be2e800.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1245430,
+      "name": "Golden Light",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1245430/4e672c5a15172ee4fb9cb344f927f28a229208c0.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1426210,
+      "name": "It Takes Two",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1426210/6b15f6d81c4fc52056f4928b363b7fac591a945b.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1455900,
+      "name": "Plunder Panic",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1455900/8356fd47e11e23ecd2f3f345e6ee5e864005ef15.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1515950,
+      "name": "Capcom Arcade Stadium",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1515950/2715c826a625a0cac409491c1982a459a71f7349.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1911390,
+      "name": "Knightfall: A Daring Journey",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1911390/8e09cd2255f59c3b079f31525853639fb8ad39e2.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 1948280,
+      "name": "Stacklands",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1948280/23fe385571e311477310e092901af4273e546ad8.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 2060160,
+      "name": "The Farmer Was Replaced",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2060160/c5e5f32afc4cc79cc7a92bf174375367509e2866.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 2071500,
+      "name": "Islands of Insight",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2071500/292b5774c6f5bed57f796635d47d0fde74441b9b.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 2796010,
+      "name": "Party Club",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2796010/a80c96dde162ef5ed25704384b6e312b6b6cddf9.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/3240220/8355a7bbdb704f727bfba80ec56bc7228991338e.jpg",
+      "playtimeForeverMinutes": 0
+    }
+  ],
+  "achievements": [
+    {
+      "appid": 1449850,
+      "gameName": "Yu-Gi-Oh!  Master Duel",
+      "unlocked": 11,
+      "total": 11,
+      "recentUnlocks": [
+        {
+          "name": "Burn It All",
+          "description": "Deal a total of 100K or more damage with card effects in Ranked/Event Duels",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
+          "unlockedAt": "2023-04-24T13:27:12.000Z"
+        },
+        {
+          "name": "Ultra Burst",
+          "description": "Defeat your opponent by dealing more than 4000 damage at a time in a Ranked/Event Duel",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
+          "unlockedAt": "2022-12-23T11:05:16.000Z"
+        },
+        {
+          "name": "Necromancer",
+          "description": "Special Summon 50 or more monsters from the Graveyard in Ranked/Event Duels",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
+          "unlockedAt": "2022-10-01T01:54:15.000Z"
+        }
+      ]
+    },
+    {
+      "appid": 271590,
+      "gameName": "Grand Theft Auto V Legacy",
+      "unlocked": 11,
+      "total": 77,
+      "recentUnlocks": [
+        {
+          "name": "Making Moves",
+          "description": "GTA Online: Reach Rank 50.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/3b90539d5efee60897391b7a758b8be8a601c24b.jpg",
+          "unlockedAt": "2023-05-21T22:56:10.000Z"
+        },
+        {
+          "name": "Run Like The Wind",
+          "description": "GTA Online: Survive for a day with a Bounty on your head.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/8c52075ab6e8b962d7c1f5840cd8ed1cefdd1e6f.jpg",
+          "unlockedAt": "2023-05-15T11:24:33.000Z"
+        },
+        {
+          "name": "Three-Bit Gangster",
+          "description": "GTA Online: Reach Rank 25.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/b95faa54005a9d9d80362d060880fe65fb85d28c.jpg",
+          "unlockedAt": "2023-05-15T07:32:46.000Z"
+        }
+      ]
+    },
+    {
+      "appid": 489830,
+      "gameName": "The Elder Scrolls V: Skyrim Special Edition",
+      "unlocked": 20,
+      "total": 75,
+      "recentUnlocks": [
+        {
+          "name": "Blessed",
+          "description": "Select a Standing Stone blessing",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/3a7e9d9c4f1142fdddbcc6988f23415d72d41ce0.jpg",
+          "unlockedAt": "2025-10-10T12:22:18.000Z"
+        },
+        {
+          "name": "Wanted",
+          "description": "Escape from jail",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/9fa4e8043c60916d3714fa96fa8eb9bd46901c22.jpg",
+          "unlockedAt": "2025-06-17T03:57:02.000Z"
+        },
+        {
+          "name": "Expert",
+          "description": "Reach Level 25",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/2162cee6a1a297e102e6ef7c5e60d936cbcc28a1.jpg",
+          "unlockedAt": "2025-06-17T03:49:35.000Z"
+        }
+      ]
+    },
+    {
+      "appid": 1623730,
+      "gameName": "Palworld",
+      "unlocked": 6,
+      "total": 75,
+      "recentUnlocks": [
+        {
+          "name": "Seasoned Pal Tamer",
+          "description": "Caught 90 kinds of Pals",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
+          "unlockedAt": "2024-02-02T11:36:25.000Z"
+        },
+        {
+          "name": "Hillside Sovereign",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/31f82fc3fe2150c4edb78788d0817c59692866ab.jpg",
+          "unlockedAt": "2024-01-28T06:05:33.000Z"
+        },
+        {
+          "name": "Skilled Pal Tamer",
+          "description": "Caught 50 kinds of Pals",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/2308a9900f12b3cdf8bc7f1229bc4b2488a4fcb3.jpg",
+          "unlockedAt": "2024-01-27T11:11:25.000Z"
+        }
+      ]
+    },
+    {
+      "appid": 1446780,
+      "gameName": "MONSTER HUNTER RISE",
+      "unlocked": 2,
+      "total": 100,
+      "recentUnlocks": [
+        {
+          "name": "Extravagant Cashbox",
+          "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
+          "unlockedAt": "2023-07-11T08:19:25.000Z"
+        },
+        {
+          "name": "Kamura Amulet",
+          "description": "A trinket given to new hunters who have proved themselves capable.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/01c4593add4173fdfdfcf8e50b6e99438c7895e8.jpg",
+          "unlockedAt": "2023-07-11T08:07:02.000Z"
+        }
+      ]
+    },
+    {
+      "appid": 431960,
+      "gameName": "Wallpaper Engine",
+      "unlocked": 1,
+      "total": 17,
+      "recentUnlocks": [
+        {
+          "name": "Trying something new",
+          "description": "Use 10 different wallpapers from the Workshop.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1c2250cab3953159e542b9ff4bd5be9ec75c9f61.jpg",
+          "unlockedAt": "2025-07-20T08:13:17.000Z"
+        }
+      ]
+    },
+    {
+      "appid": 1364780,
+      "gameName": "Street Fighter™ 6",
+      "unlocked": 5,
+      "total": 43,
+      "recentUnlocks": [
+        {
+          "name": "Get Your Game Face On!",
+          "description": "Where's your face, dingus? Get your butt to the avatar creator and sort yourself out! Crying shame we can't fix that attitude of yours while we're at it.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/b2c3883e2cfd25d9477c7681714288cac23d4f76.jpg",
+          "unlockedAt": "2026-03-23T15:27:32.000Z"
+        },
+        {
+          "name": "Leaving the Nest",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/e846657465466eb560951885e9c9547d824d7ac4.jpg",
+          "unlockedAt": "2026-03-23T15:27:32.000Z"
+        },
+        {
+          "name": "My Title, My Life",
+          "description": "Earned any titles for your efforts yet? Me? Pfft. I don't need a title. I'm Jamie freakin' Siu!",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/0ea31f649ed4db04e0869390fc8038e936e40944.jpg",
+          "unlockedAt": "2026-03-23T14:00:56.000Z"
+        }
+      ]
+    },
+    {
+      "appid": 2584990,
+      "gameName": "Shadowverse: Worlds Beyond",
+      "unlocked": 0,
+      "total": 27,
+      "recentUnlocks": []
+    }
+  ]
+}

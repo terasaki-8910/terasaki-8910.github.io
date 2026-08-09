@@ -6,10 +6,9 @@
  * いる間はメニュー内の自分の項目をactive表示にするため)。専用ページを
  * 持たないプロジェクトはnull。
  *
- * Gaming Archiveはリンク先(URL)だけ用意し、中身はまだ無いため本物の404と
- * 同じ表示にしてある(gaming-archive/index.html→NotFoundPage。本人指定、
- * 2026-08-08)。中身が無いページを「現在地」として案内するのは適切でないため
- * pageKeyはnullのまま。
+ * Gaming Archiveは2026-08-09にSteam連携で実装済み(scripts/update-steam.js、
+ * GamingArchivePage.jsx)。Discordはライブ連携せず、Footerの招待リンクのまま
+ * (本人判断、常時起動が要るBot/第三者サービス依存を避けた)。
  */
 export const projects = [
   {
@@ -46,6 +45,6 @@ export const projects = [
     tags: ['Steam', 'Discord', 'Community'],
     link: '/gaming-archive/',
     gaming: true,
-    pageKey: null,
+    pageKey: 'gaming',
   },
 ]

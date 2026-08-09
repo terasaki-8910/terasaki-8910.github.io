@@ -1,0 +1,50 @@
+name: Update Steam Data
+
+on:
+  schedule:
+    # 6時間ごとに実行 (UTC)
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # 手動実行も可能
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/update-steam.yml'
+      - 'scripts/update-steam.js'
+
+jobs:
+  update-steam:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update Steam data
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID: ${{ secrets.STEAM_ID }}
+        run: node scripts/update-steam.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --staged --quiet || git commit -m "🎮 Update Steam data
+
+          🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+          Co-Authored-By: GitHub Action <action@users.noreply.github.com>"
+          git push
