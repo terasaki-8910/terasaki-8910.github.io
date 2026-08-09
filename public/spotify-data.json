@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-08-08T18:21:30.052Z",
+  "lastUpdated": "2026-08-09T00:53:01.458Z",
   "tracks": [
+    {
+      "id": "4H89WUjBaQMIiqcnMSVX1j",
+      "name": "人マニア",
+      "artist": "Sasuke Haraguchi",
+      "album": "人マニア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f381b44dcb194d619a487dc",
+      "playedAt": "2026-08-08T19:14:25.210Z",
+      "spotifyUrl": "https://open.spotify.com/track/4H89WUjBaQMIiqcnMSVX1j",
+      "duration": 127200,
+      "previewUrl": ""
+    },
+    {
+      "id": "2YZa7FpeKe423Wvme0yKNf",
+      "name": "いますぐ輪廻",
+      "artist": "NAKISO",
+      "album": "いますぐ輪廻",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342f821a5480cf2b8248db543",
+      "playedAt": "2026-08-08T19:12:17.697Z",
+      "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
+      "duration": 122482,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ic62hKqeDhZsa9l6YQxzJ",
+      "name": "メズマライザー (feat. 初音ミク&重音テト)",
+      "artist": "32ki, Hatsune Miku, 重音テト",
+      "album": "メズマライザー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321333eb66e3cf9f3818e789f",
+      "playedAt": "2026-08-08T19:10:14.760Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
+      "duration": 156972,
+      "previewUrl": ""
+    },
+    {
+      "id": "6J3pPfXLujwsWQpvR6XMgC",
+      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
+      "artist": "TAK, Hatsune Miku, Kasane Teto",
+      "album": "PPPP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
+      "playedAt": "2026-08-08T19:07:37.318Z",
+      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
+      "duration": 154835,
+      "previewUrl": ""
+    },
+    {
+      "id": "2JPLbjOn0wPCngEot2STUS",
+      "name": "Yonaguni",
+      "artist": "Bad Bunny",
+      "album": "Yonaguni",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27364afd6879102d03460bd3ad9",
+      "playedAt": "2026-08-08T18:56:53.891Z",
+      "spotifyUrl": "https://open.spotify.com/track/2JPLbjOn0wPCngEot2STUS",
+      "duration": 206710,
+      "previewUrl": ""
+    },
+    {
+      "id": "6uosenLUNFZtOIih5T0qfV",
+      "name": "LOVE ATTACK",
+      "artist": "RESCENE",
+      "album": "SCENEDROME",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273831c0d124fc7c7a3ad0618ab",
+      "playedAt": "2026-08-08T18:56:50.080Z",
+      "spotifyUrl": "https://open.spotify.com/track/6uosenLUNFZtOIih5T0qfV",
+      "duration": 181560,
+      "previewUrl": ""
+    },
     {
       "id": "6WrytCYNqsPMgtpTpd9p7j",
       "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
@@ -263,72 +329,6 @@
       "playedAt": "2026-08-05T13:16:29.792Z",
       "spotifyUrl": "https://open.spotify.com/track/4eBAg8eiu2kGCtpjTmTHAf",
       "duration": 212437,
-      "previewUrl": ""
-    },
-    {
-      "id": "7IT4zkiTd5pfYJBLEmaewZ",
-      "name": "ちょっと一息",
-      "artist": "Alisa Okehazama",
-      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
-      "playedAt": "2026-08-05T06:06:01.457Z",
-      "spotifyUrl": "https://open.spotify.com/track/7IT4zkiTd5pfYJBLEmaewZ",
-      "duration": 84500,
-      "previewUrl": ""
-    },
-    {
-      "id": "3F0hvTxaTJV6OsFnRqefXc",
-      "name": "アイデン貞貞メルトダウン",
-      "artist": "えなこ, P丸様｡",
-      "album": "アイデン貞貞メルトダウン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386001206942da71231c86b96",
-      "playedAt": "2026-08-05T05:57:53.638Z",
-      "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
-      "duration": 243880,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XVijjSdl61s9Bx3gIZZPo",
-      "name": "ひめごと*クライシスターズ",
-      "artist": "ONIMAI SISTERS",
-      "album": "ひめごと*クライシスターズ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27384120b34ac33ae705feff386",
-      "playedAt": "2026-08-05T02:48:05.511Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XVijjSdl61s9Bx3gIZZPo",
-      "duration": 214253,
-      "previewUrl": ""
-    },
-    {
-      "id": "1WZGyYe1PDvQ5aaET6qILe",
-      "name": "金星のダンス",
-      "artist": "Nayutalien",
-      "album": "ナユタン星からの物体Z",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273759ef471de167f1d2ca36bd7",
-      "playedAt": "2026-08-04T19:59:42.893Z",
-      "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
-      "duration": 209333,
-      "previewUrl": ""
-    },
-    {
-      "id": "4tjRvHjQu2fK8uEgXtjiTN",
-      "name": "グリズリーに襲われたら♡",
-      "artist": "kamiyado",
-      "album": "グリズリーに襲われたら♡",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
-      "playedAt": "2026-08-04T07:55:38.602Z",
-      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
-      "duration": 246936,
-      "previewUrl": ""
-    },
-    {
-      "id": "2isCWO5dMBDzyLscHVoJIO",
-      "name": "憧れをいっぱい",
-      "artist": "初星学園, 高木龍一, 倉本千奈",
-      "album": "憧れをいっぱい",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349bfe07d57b7183eec39aeb4",
-      "playedAt": "2026-08-04T07:55:33.970Z",
-      "spotifyUrl": "https://open.spotify.com/track/2isCWO5dMBDzyLscHVoJIO",
-      "duration": 288363,
       "previewUrl": ""
     }
   ],
