@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-08-09T00:53:01.458Z",
+  "lastUpdated": "2026-08-10T12:42:59.291Z",
   "tracks": [
+    {
+      "id": "4NaaF28BeO9WzjDrSS71Nz",
+      "name": "ダンスホール",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "ダンスホール",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e552c9dbdf76676de1032ae0",
+      "playedAt": "2026-08-10T09:59:10.977Z",
+      "spotifyUrl": "https://open.spotify.com/track/4NaaF28BeO9WzjDrSS71Nz",
+      "duration": 203149,
+      "previewUrl": ""
+    },
+    {
+      "id": "6J3pPfXLujwsWQpvR6XMgC",
+      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
+      "artist": "TAK, Hatsune Miku, Kasane Teto",
+      "album": "PPPP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
+      "playedAt": "2026-08-10T08:11:05.545Z",
+      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
+      "duration": 154835,
+      "previewUrl": ""
+    },
+    {
+      "id": "0kosUz0jePvjiz4ctmR6wL",
+      "name": "Dai Dai",
+      "artist": "Shakira, Burna Boy",
+      "album": "Dai Dai",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303cadf1b3fe324c1dc710ed4",
+      "playedAt": "2026-08-10T07:00:05.028Z",
+      "spotifyUrl": "https://open.spotify.com/track/0kosUz0jePvjiz4ctmR6wL",
+      "duration": 223448,
+      "previewUrl": ""
+    },
     {
       "id": "4H89WUjBaQMIiqcnMSVX1j",
       "name": "人マニア",
@@ -32,17 +65,6 @@
       "playedAt": "2026-08-08T19:10:14.760Z",
       "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
       "duration": 156972,
-      "previewUrl": ""
-    },
-    {
-      "id": "6J3pPfXLujwsWQpvR6XMgC",
-      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
-      "artist": "TAK, Hatsune Miku, Kasane Teto",
-      "album": "PPPP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
-      "playedAt": "2026-08-08T19:07:37.318Z",
-      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
-      "duration": 154835,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-05T13:26:14.096Z",
       "spotifyUrl": "https://open.spotify.com/track/4rPmTBTX1wobDkGYXKvcGR",
       "duration": 352493,
-      "previewUrl": ""
-    },
-    {
-      "id": "0O3KfIQyO9XqQoJgat9O0N",
-      "name": "ロウワー (feat. 重音テト) - Cover",
-      "artist": "タカオカミズキ, Teto Kasane",
-      "album": "ロウワー (feat. 重音テト) [Cover]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273383091b8495188b1f12a326d",
-      "playedAt": "2026-08-05T13:20:21.072Z",
-      "spotifyUrl": "https://open.spotify.com/track/0O3KfIQyO9XqQoJgat9O0N",
-      "duration": 230000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4eBAg8eiu2kGCtpjTmTHAf",
-      "name": "クライアイ",
-      "artist": "初星学園, GLIM SPANKY, 雨夜 燕",
-      "album": "クライアイ",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7da2915dda046b9399ae18d0c",
-      "playedAt": "2026-08-05T13:16:29.792Z",
-      "spotifyUrl": "https://open.spotify.com/track/4eBAg8eiu2kGCtpjTmTHAf",
-      "duration": 212437,
       "previewUrl": ""
     }
   ],
