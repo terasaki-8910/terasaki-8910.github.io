@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-08-10T12:42:59.291Z",
+  "lastUpdated": "2026-08-10T18:41:13.558Z",
   "tracks": [
+    {
+      "id": "0kosUz0jePvjiz4ctmR6wL",
+      "name": "Dai Dai",
+      "artist": "Shakira, Burna Boy",
+      "album": "Dai Dai",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303cadf1b3fe324c1dc710ed4",
+      "playedAt": "2026-08-10T14:50:13.569Z",
+      "spotifyUrl": "https://open.spotify.com/track/0kosUz0jePvjiz4ctmR6wL",
+      "duration": 223448,
+      "previewUrl": ""
+    },
+    {
+      "id": "7dTW21YAJxnAOiUh7Rtu9S",
+      "name": "怪獣の花唄",
+      "artist": "Vaundy",
+      "album": "strobo",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292ec8115884b7533905dd1a",
+      "playedAt": "2026-08-10T14:44:45.886Z",
+      "spotifyUrl": "https://open.spotify.com/track/7dTW21YAJxnAOiUh7Rtu9S",
+      "duration": 224804,
+      "previewUrl": ""
+    },
     {
       "id": "4NaaF28BeO9WzjDrSS71Nz",
       "name": "ダンスホール",
@@ -21,17 +43,6 @@
       "playedAt": "2026-08-10T08:11:05.545Z",
       "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
       "duration": 154835,
-      "previewUrl": ""
-    },
-    {
-      "id": "0kosUz0jePvjiz4ctmR6wL",
-      "name": "Dai Dai",
-      "artist": "Shakira, Burna Boy",
-      "album": "Dai Dai",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303cadf1b3fe324c1dc710ed4",
-      "playedAt": "2026-08-10T07:00:05.028Z",
-      "spotifyUrl": "https://open.spotify.com/track/0kosUz0jePvjiz4ctmR6wL",
-      "duration": 223448,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-05T13:26:17.104Z",
       "spotifyUrl": "https://open.spotify.com/track/1Y7BxJg7WTkVwtXyQXnqPk",
       "duration": 194953,
-      "previewUrl": ""
-    },
-    {
-      "id": "4rPmTBTX1wobDkGYXKvcGR",
-      "name": "secret base ～君がくれたもの～ (10 years after Ver.)",
-      "artist": "本間芽衣子（CV.茅野愛衣）, 安城鳴子（CV.戸松 遥）, 鶴見知利子（CV.早見沙織）",
-      "album": "secret base ～君がくれたもの～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730267461fc0a66551d454fa22",
-      "playedAt": "2026-08-05T13:26:14.096Z",
-      "spotifyUrl": "https://open.spotify.com/track/4rPmTBTX1wobDkGYXKvcGR",
-      "duration": 352493,
       "previewUrl": ""
     }
   ],
