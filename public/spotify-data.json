@@ -1,13 +1,35 @@
 {
-  "lastUpdated": "2026-08-10T18:41:13.558Z",
+  "lastUpdated": "2026-08-11T00:54:52.080Z",
   "tracks": [
+    {
+      "id": "76oCvJj6LRoed2754GybpH",
+      "name": "mosi mosi?",
+      "artist": "楽音",
+      "album": "mosi mosi?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736252a4d5ae17497ecbcd2c04",
+      "playedAt": "2026-08-10T19:05:07.193Z",
+      "spotifyUrl": "https://open.spotify.com/track/76oCvJj6LRoed2754GybpH",
+      "duration": 163750,
+      "previewUrl": ""
+    },
+    {
+      "id": "1gFVXBVuYlDUIEdwOrN5T8",
+      "name": "ダイダイダイダイダイキライ",
+      "artist": "雨良 Amala",
+      "album": "ダイダイダイダイダイキライ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6c46632736f25e9d86f0a9a",
+      "playedAt": "2026-08-10T19:02:10.904Z",
+      "spotifyUrl": "https://open.spotify.com/track/1gFVXBVuYlDUIEdwOrN5T8",
+      "duration": 156711,
+      "previewUrl": ""
+    },
     {
       "id": "0kosUz0jePvjiz4ctmR6wL",
       "name": "Dai Dai",
       "artist": "Shakira, Burna Boy",
       "album": "Dai Dai",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27303cadf1b3fe324c1dc710ed4",
-      "playedAt": "2026-08-10T14:50:13.569Z",
+      "playedAt": "2026-08-10T18:56:16.753Z",
       "spotifyUrl": "https://open.spotify.com/track/0kosUz0jePvjiz4ctmR6wL",
       "duration": 223448,
       "previewUrl": ""
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-06T12:29:24.792Z",
       "spotifyUrl": "https://open.spotify.com/track/4XhXGXQ35rMYw7oSXnNLlk",
       "duration": 214600,
-      "previewUrl": ""
-    },
-    {
-      "id": "33gJvypliwGReG8DU5XeXz",
-      "name": "お兄ちゃんはおしまい！",
-      "artist": "阿知波大輔",
-      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
-      "playedAt": "2026-08-06T10:05:10.752Z",
-      "spotifyUrl": "https://open.spotify.com/track/33gJvypliwGReG8DU5XeXz",
-      "duration": 196000,
-      "previewUrl": ""
-    },
-    {
-      "id": "1Y7BxJg7WTkVwtXyQXnqPk",
-      "name": "Understand",
-      "artist": "BoyWithUke",
-      "album": "Understand",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b729a1db1e937224846025f71d",
-      "playedAt": "2026-08-05T13:26:17.104Z",
-      "spotifyUrl": "https://open.spotify.com/track/1Y7BxJg7WTkVwtXyQXnqPk",
-      "duration": 194953,
       "previewUrl": ""
     }
   ],
