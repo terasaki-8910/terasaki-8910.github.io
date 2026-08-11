@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-11T00:54:52.080Z",
+  "lastUpdated": "2026-08-11T06:45:45.538Z",
   "tracks": [
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-08-11T06:40:23.048Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
     {
       "id": "76oCvJj6LRoed2754GybpH",
       "name": "mosi mosi?",
@@ -197,17 +208,6 @@
       "playedAt": "2026-08-08T14:00:46.055Z",
       "spotifyUrl": "https://open.spotify.com/track/0CWAQlHsvfqcKJVVz9up2R",
       "duration": 219733,
-      "previewUrl": ""
-    },
-    {
-      "id": "2le4lZquBURJYS6TcdAZdx",
-      "name": "絶対王者チョコレート",
-      "artist": "ゆらゆらシスターズ",
-      "album": "絶対王者チョコレート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-08-08T13:53:59.795Z",
-      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
-      "duration": 208223,
       "previewUrl": ""
     },
     {
