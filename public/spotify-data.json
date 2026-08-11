@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-11T12:39:16.810Z",
+  "lastUpdated": "2026-08-11T18:45:00.574Z",
   "tracks": [
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-08-11T16:15:47.079Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
     {
       "id": "76oCvJj6LRoed2754GybpH",
       "name": "mosi mosi?",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-06T14:26:23.998Z",
       "spotifyUrl": "https://open.spotify.com/track/07CNkPThef2VFCCFh6xrRd",
       "duration": 243226,
-      "previewUrl": ""
-    },
-    {
-      "id": "2f5mdjFr905MKOuP4krySE",
-      "name": "はじめてのスポブラ",
-      "artist": "阿知波大輔",
-      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
-      "playedAt": "2026-08-06T12:32:34.200Z",
-      "spotifyUrl": "https://open.spotify.com/track/2f5mdjFr905MKOuP4krySE",
-      "duration": 103000,
       "previewUrl": ""
     }
   ],
