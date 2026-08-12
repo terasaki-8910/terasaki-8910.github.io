@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-08-11T18:45:00.574Z",
+  "lastUpdated": "2026-08-12T12:42:26.850Z",
   "tracks": [
+    {
+      "id": "5LkWXxDxUTwEVHL0pfKL55",
+      "name": "Pretender",
+      "artist": "OFFICIAL HIGE DANDISM",
+      "album": "Pretender",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27378582014369e64b6596f30ad",
+      "playedAt": "2026-08-12T12:21:00.890Z",
+      "spotifyUrl": "https://open.spotify.com/track/5LkWXxDxUTwEVHL0pfKL55",
+      "duration": 326440,
+      "previewUrl": ""
+    },
+    {
+      "id": "6OC9BOO9qGXQARZGWb8rqy",
+      "name": "Stellar Stellar",
+      "artist": "Hoshimachi Suisei",
+      "album": "Still Still Stellar",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f724e5bdf4ae3e50082c2403",
+      "playedAt": "2026-08-12T11:52:37.752Z",
+      "spotifyUrl": "https://open.spotify.com/track/6OC9BOO9qGXQARZGWb8rqy",
+      "duration": 301453,
+      "previewUrl": ""
+    },
     {
       "id": "7pgo1C8l5AX3pkwktxIklG",
       "name": "Baqeela (feat. seki＊tree) - Long Version",
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-06T14:27:56.924Z",
       "spotifyUrl": "https://open.spotify.com/track/0mv6O3IejpeOgmKhzZ5TLl",
       "duration": 83500,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Nj1Un0tU3RyFZvCsz97Sj",
-      "name": "アイキャッチC",
-      "artist": "阿知波大輔",
-      "album": "TVアニメ『お兄ちゃんはおしまい！』オリジナルサウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27399d997dff81015bdde6320c5",
-      "playedAt": "2026-08-06T14:26:32.819Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Nj1Un0tU3RyFZvCsz97Sj",
-      "duration": 8000,
-      "previewUrl": ""
-    },
-    {
-      "id": "07CNkPThef2VFCCFh6xrRd",
-      "name": "アイデン貞貞メルトダウン - まひろ&みはりver.",
-      "artist": "緒山まひろ(CV:高野麻里佳), 緒山みはり(CV:石原夏織)",
-      "album": "アイデン貞貞メルトダウン (まひろ&みはりver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737cffb2f3d0c8bb253b27adc9",
-      "playedAt": "2026-08-06T14:26:23.998Z",
-      "spotifyUrl": "https://open.spotify.com/track/07CNkPThef2VFCCFh6xrRd",
-      "duration": 243226,
       "previewUrl": ""
     }
   ],
