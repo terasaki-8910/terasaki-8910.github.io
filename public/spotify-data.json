@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-13T18:46:29.371Z",
+  "lastUpdated": "2026-08-14T01:02:26.000Z",
   "tracks": [
+    {
+      "id": "7qiZfU4dY1lWllzX7mPBI3",
+      "name": "Shape of You",
+      "artist": "Ed Sheeran",
+      "album": "÷ (Deluxe)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96",
+      "playedAt": "2026-08-13T18:45:23.872Z",
+      "spotifyUrl": "https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3",
+      "duration": 233712,
+      "previewUrl": ""
+    },
     {
       "id": "60nwK1iMgnFCznF6FiNfts",
       "name": "青春コンプレックス",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-11T12:24:20.315Z",
       "spotifyUrl": "https://open.spotify.com/track/76oCvJj6LRoed2754GybpH",
       "duration": 163750,
-      "previewUrl": ""
-    },
-    {
-      "id": "0kosUz0jePvjiz4ctmR6wL",
-      "name": "Dai Dai",
-      "artist": "Shakira, Burna Boy",
-      "album": "Dai Dai",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303cadf1b3fe324c1dc710ed4",
-      "playedAt": "2026-08-11T07:28:45.679Z",
-      "spotifyUrl": "https://open.spotify.com/track/0kosUz0jePvjiz4ctmR6wL",
-      "duration": 223448,
       "previewUrl": ""
     }
   ],
