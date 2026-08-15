@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-08-15T12:16:30.438Z",
+  "lastUpdated": "2026-08-15T18:13:14.044Z",
   "tracks": [
+    {
+      "id": "6HznFPNdvbxgzm5jJyNlwp",
+      "name": "オーバーライド",
+      "artist": "Yoshida Yasei",
+      "album": "オーバーライド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
+      "playedAt": "2026-08-15T13:31:57.578Z",
+      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "5YADi8VnCwx5ahhwNdgQaZ",
+      "name": "How Many Boogie",
+      "artist": "SKRYU, WAZGOGG, Fuma no KTR",
+      "album": "わすれもの",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27301729ef621de4f62bcdd05b9",
+      "playedAt": "2026-08-15T13:29:38.072Z",
+      "spotifyUrl": "https://open.spotify.com/track/5YADi8VnCwx5ahhwNdgQaZ",
+      "duration": 159047,
+      "previewUrl": ""
+    },
     {
       "id": "6J3pPfXLujwsWQpvR6XMgC",
       "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-14T08:29:06.049Z",
       "spotifyUrl": "https://open.spotify.com/track/42qse0PMulgLteQytiL0Oe",
       "duration": 128119,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-08-14T08:28:19.194Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
-      "previewUrl": ""
-    },
-    {
-      "id": "6qYkcg1U6JpKq0TQW91roa",
-      "name": "Illuminated Night",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-08-14T08:27:14.660Z",
-      "spotifyUrl": "https://open.spotify.com/track/6qYkcg1U6JpKq0TQW91roa",
-      "duration": 122003,
       "previewUrl": ""
     }
   ],
