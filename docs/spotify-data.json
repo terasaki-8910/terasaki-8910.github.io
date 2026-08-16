@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-08-15T18:13:14.044Z",
+  "lastUpdated": "2026-08-16T12:17:12.002Z",
   "tracks": [
+    {
+      "id": "4jau4x37tFawbtNgJCsD95",
+      "name": "キュートなカノジョ",
+      "artist": "syudou",
+      "album": "愛憎",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27332f0a3c5b44a93f09c576ccb",
+      "playedAt": "2026-08-16T10:37:50.920Z",
+      "spotifyUrl": "https://open.spotify.com/track/4jau4x37tFawbtNgJCsD95",
+      "duration": 132333,
+      "previewUrl": ""
+    },
+    {
+      "id": "1WZGyYe1PDvQ5aaET6qILe",
+      "name": "金星のダンス",
+      "artist": "Nayutalien",
+      "album": "ナユタン星からの物体Z",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273759ef471de167f1d2ca36bd7",
+      "playedAt": "2026-08-16T10:35:38.134Z",
+      "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
+      "duration": 209333,
+      "previewUrl": ""
+    },
+    {
+      "id": "6J3pPfXLujwsWQpvR6XMgC",
+      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
+      "artist": "TAK, Hatsune Miku, Kasane Teto",
+      "album": "PPPP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
+      "playedAt": "2026-08-16T10:32:04.432Z",
+      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
+      "duration": 154835,
+      "previewUrl": ""
+    },
+    {
+      "id": "3CisGh5CyKBDnGtjmsszSo",
+      "name": "Butterfly",
+      "artist": "SMiLE.dk",
+      "album": "Smile",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c3c3a7beafa28a0868ca38f",
+      "playedAt": "2026-08-16T10:20:27.837Z",
+      "spotifyUrl": "https://open.spotify.com/track/3CisGh5CyKBDnGtjmsszSo",
+      "duration": 177453,
+      "previewUrl": ""
+    },
+    {
+      "id": "3R8HqhPq2Pqc9lVA1wKBYe",
+      "name": "Night of Knights / Knight of Nights",
+      "artist": "ビートまりお",
+      "album": "東方インストライク",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738fb9d1b0ba72aa59e74a37a8",
+      "playedAt": "2026-08-16T10:16:26.903Z",
+      "spotifyUrl": "https://open.spotify.com/track/3R8HqhPq2Pqc9lVA1wKBYe",
+      "duration": 191500,
+      "previewUrl": ""
+    },
+    {
+      "id": "337siJDcmIq2FSkrbsFiCz",
+      "name": "Bonetrousle",
+      "artist": "Toby Fox",
+      "album": "UNDERTALE Soundtrack",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27384eb923a79ba98269f0a7390",
+      "playedAt": "2026-08-16T10:13:11.900Z",
+      "spotifyUrl": "https://open.spotify.com/track/337siJDcmIq2FSkrbsFiCz",
+      "duration": 57600,
+      "previewUrl": ""
+    },
     {
       "id": "6HznFPNdvbxgzm5jJyNlwp",
       "name": "オーバーライド",
@@ -24,28 +90,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6J3pPfXLujwsWQpvR6XMgC",
-      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
-      "artist": "TAK, Hatsune Miku, Kasane Teto",
-      "album": "PPPP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
-      "playedAt": "2026-08-15T09:40:59.979Z",
-      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
-      "duration": 154835,
-      "previewUrl": ""
-    },
-    {
-      "id": "337siJDcmIq2FSkrbsFiCz",
-      "name": "Bonetrousle",
-      "artist": "Toby Fox",
-      "album": "UNDERTALE Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27384eb923a79ba98269f0a7390",
-      "playedAt": "2026-08-15T09:34:23.869Z",
-      "spotifyUrl": "https://open.spotify.com/track/337siJDcmIq2FSkrbsFiCz",
-      "duration": 57600,
-      "previewUrl": ""
-    },
-    {
       "id": "6HhppXnxMqIKf2IkF6Hxt0",
       "name": "グリーングリーンズ",
       "artist": "星のカービィ ロボボプラネット サウンドチーム",
@@ -54,17 +98,6 @@
       "playedAt": "2026-08-15T09:33:25.822Z",
       "spotifyUrl": "https://open.spotify.com/track/6HhppXnxMqIKf2IkF6Hxt0",
       "duration": 53965,
-      "previewUrl": ""
-    },
-    {
-      "id": "1WZGyYe1PDvQ5aaET6qILe",
-      "name": "金星のダンス",
-      "artist": "Nayutalien",
-      "album": "ナユタン星からの物体Z",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273759ef471de167f1d2ca36bd7",
-      "playedAt": "2026-08-15T09:32:31.410Z",
-      "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
-      "duration": 209333,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-08-14T08:37:13.701Z",
       "spotifyUrl": "https://open.spotify.com/track/70KCi4RQImun0ItOquIhQ6",
       "duration": 218230,
-      "previewUrl": ""
-    },
-    {
-      "id": "1ONOeA8bIBRdCBGIQlPFNG",
-      "name": "Ascendancy",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-14T08:33:45.281Z",
-      "spotifyUrl": "https://open.spotify.com/track/1ONOeA8bIBRdCBGIQlPFNG",
-      "duration": 50500,
-      "previewUrl": ""
-    },
-    {
-      "id": "7MEARbEjVLkIivjNUPGcNo",
-      "name": "Origin",
-      "artist": "TheFatRat",
-      "album": "Warrior Songs",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc85ffa200d277e11d83473c",
-      "playedAt": "2026-08-14T08:33:01.585Z",
-      "spotifyUrl": "https://open.spotify.com/track/7MEARbEjVLkIivjNUPGcNo",
-      "duration": 122500,
-      "previewUrl": ""
-    },
-    {
-      "id": "42qse0PMulgLteQytiL0Oe",
-      "name": "U-n.I",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
-      "playedAt": "2026-08-14T08:29:06.049Z",
-      "spotifyUrl": "https://open.spotify.com/track/42qse0PMulgLteQytiL0Oe",
-      "duration": 128119,
       "previewUrl": ""
     }
   ],
