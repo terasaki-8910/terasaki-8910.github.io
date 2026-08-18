@@ -1,18 +1,32 @@
 {
-  "lastUpdated": "2026-08-09T03:13:02.301Z",
+  "lastUpdated": "2026-08-18T22:37:32.635Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
     "profileUrl": "https://steamcommunity.com/id/modadadadaaaagnsb/"
   },
-  "ownedGamesCount": 42,
+  "ownedGamesCount": 43,
   "recentlyPlayed": [
     {
-      "appid": 431730,
-      "name": "Aseprite",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/431730/da61bd2806f69205a97609dcdd4ca27df3baf800.jpg",
-      "playtime2weeksMinutes": 863,
-      "playtimeForeverMinutes": 863
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
+      "playtime2weeksMinutes": 512,
+      "playtimeForeverMinutes": 8244
+    },
+    {
+      "appid": 2079120,
+      "name": "Warudo",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2079120/a5b7b1bd638cf81799b5f86122831abbbfb5179a.jpg",
+      "playtime2weeksMinutes": 110,
+      "playtimeForeverMinutes": 110
+    },
+    {
+      "appid": 714010,
+      "name": "Aimlabs",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/714010/15347de11efc127539c388e585af9e92d10d5189.jpg",
+      "playtime2weeksMinutes": 29,
+      "playtimeForeverMinutes": 29
     }
   ],
   "library": [
@@ -26,7 +40,7 @@
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
-      "playtimeForeverMinutes": 7732
+      "playtimeForeverMinutes": 8244
     },
     {
       "appid": 489830,
@@ -81,6 +95,12 @@
       "name": "Red Dead Redemption 2",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1174180/5106abd9c1187a97f23295a0ba9470c94804ec6c.jpg",
       "playtimeForeverMinutes": 58
+    },
+    {
+      "appid": 714010,
+      "name": "Aimlabs",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/714010/15347de11efc127539c388e585af9e92d10d5189.jpg",
+      "playtimeForeverMinutes": 29
     },
     {
       "appid": 4000,
@@ -299,26 +319,26 @@
     {
       "appid": 271590,
       "gameName": "Grand Theft Auto V Legacy",
-      "unlocked": 11,
+      "unlocked": 77,
       "total": 77,
       "recentUnlocks": [
         {
-          "name": "Making Moves",
-          "description": "GTA Online: Reach Rank 50.",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/3b90539d5efee60897391b7a758b8be8a601c24b.jpg",
-          "unlockedAt": "2023-05-21T22:56:10.000Z"
+          "name": "A Friendship Resurrected",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/7424038d40678f398eab78553f71d9832d778ff6.jpg",
+          "unlockedAt": "2026-08-15T21:33:57.000Z"
         },
         {
-          "name": "Run Like The Wind",
-          "description": "GTA Online: Survive for a day with a Bounty on your head.",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/8c52075ab6e8b962d7c1f5840cd8ed1cefdd1e6f.jpg",
-          "unlockedAt": "2023-05-15T11:24:33.000Z"
+          "name": "A Fair Day's Pay",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/4ba73dc8669d5e7090c3efa5b677f34f262049d9.jpg",
+          "unlockedAt": "2026-08-15T21:33:57.000Z"
         },
         {
-          "name": "Three-Bit Gangster",
-          "description": "GTA Online: Reach Rank 25.",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/b95faa54005a9d9d80362d060880fe65fb85d28c.jpg",
-          "unlockedAt": "2023-05-15T07:32:46.000Z"
+          "name": "To Live or Die in Los Santos",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/b785bc5590edfb7a40292702b1f96e5c4ec8d7fa.jpg",
+          "unlockedAt": "2026-08-15T21:33:57.000Z"
         }
       ]
     },
