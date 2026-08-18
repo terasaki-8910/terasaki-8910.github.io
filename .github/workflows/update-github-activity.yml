@@ -41,9 +41,26 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff --staged --quiet || git commit -m "📊 Update GitHub activity data
+          if git diff --staged --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "📊 Update GitHub activity data
 
           🤖 Generated with [Claude Code](https://claude.com/claude-code)
 
           Co-Authored-By: GitHub Action <action@users.noreply.github.com>"
-          git push
+          # 他のワークフロー(Spotify/Steam等、同じ間隔で並走しうる)が先に
+          # pushしていた場合に備えてリトライする。単純なgit push一発だと
+          # 非fast-forwardで失敗し、そのままこの回の更新が消えていた
+          # (2026-08-18、Steam連携追加後に実際に発生・再現)。
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "push失敗、pull --rebaseしてリトライ ($i/5)"
+            git pull --rebase origin main
+            sleep $((i * 3))
+          done
+          echo "5回リトライしてもpushできませんでした"
+          exit 1

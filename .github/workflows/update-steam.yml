@@ -2,8 +2,10 @@ name: Update Steam Data
 
 on:
   schedule:
-    # 6時間ごとに実行 (UTC)
-    - cron: '0 */6 * * *'
+    # 6時間ごとに実行 (UTC)。Spotify(0分)と同時に走るとpushが衝突するため
+    # 5分ずらしてある(git push自体もリトライするようにしたので必須ではないが、
+    # 衝突頻度を下げておく)。
+    - cron: '5 */6 * * *'
   workflow_dispatch: # 手動実行も可能
   push:
     branches: [ main ]
@@ -42,9 +44,26 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff --staged --quiet || git commit -m "🎮 Update Steam data
+          if git diff --staged --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "🎮 Update Steam data
 
           🤖 Generated with [Claude Code](https://claude.com/claude-code)
 
           Co-Authored-By: GitHub Action <action@users.noreply.github.com>"
-          git push
+          # 他のワークフロー(Spotify等、同じ間隔で並走しうる)が先にpushして
+          # いた場合に備えてリトライする。単純なgit push一発だと非fast-forward
+          # で失敗し、そのままこの回の更新が消えていた(2026-08-18、実際に
+          # 発生・再現)。
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "push失敗、pull --rebaseしてリトライ ($i/5)"
+            git pull --rebase origin main
+            sleep $((i * 3))
+          done
+          echo "5回リトライしてもpushできませんでした"
+          exit 1
