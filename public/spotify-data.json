@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-08-18T00:36:49.448Z",
+  "lastUpdated": "2026-08-18T12:22:21.253Z",
   "tracks": [
+    {
+      "id": "4TwBwV4Iupv1nfW6ybnMiP",
+      "name": "ダンスロボットダンス",
+      "artist": "Nayutalien",
+      "album": "ナユタン星からの物体Ｙ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363cc1e7ee50ed3854f40c367",
+      "playedAt": "2026-08-18T12:12:47.752Z",
+      "spotifyUrl": "https://open.spotify.com/track/4TwBwV4Iupv1nfW6ybnMiP",
+      "duration": 191052,
+      "previewUrl": ""
+    },
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-08-18T12:09:13.907Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
+    {
+      "id": "5DrHFFvpIJI1RktxXOXhxv",
+      "name": "Colorful Beach",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-08-18T12:06:35.212Z",
+      "spotifyUrl": "https://open.spotify.com/track/5DrHFFvpIJI1RktxXOXhxv",
+      "duration": 124054,
+      "previewUrl": ""
+    },
     {
       "id": "0omQt0YfcdYM6RnA5EVTw2",
       "name": "Virtual Storm - Hard Arrange",
@@ -120,17 +153,6 @@
       "playedAt": "2026-08-17T21:27:32.735Z",
       "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
       "duration": 122482,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-08-17T20:39:22.146Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-14T10:00:05.805Z",
       "spotifyUrl": "https://open.spotify.com/track/30MH35NPiE2zKSJY1nFv3N",
       "duration": 185633,
-      "previewUrl": ""
-    },
-    {
-      "id": "075HUD50Nuea3rNaABIsNZ",
-      "name": "晩餐歌 - Bansanka",
-      "artist": "tuki.",
-      "album": "15",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732d68ffbcaeaa5e6fbe102202",
-      "playedAt": "2026-08-14T09:53:18.611Z",
-      "spotifyUrl": "https://open.spotify.com/track/075HUD50Nuea3rNaABIsNZ",
-      "duration": 217760,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ajpbW6tBpqUI9foCtwlLw",
-      "name": "祝福",
-      "artist": "YOASOBI",
-      "album": "祝福",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5993ff2f059a0a5a7f6270b",
-      "playedAt": "2026-08-14T09:46:41.717Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ajpbW6tBpqUI9foCtwlLw",
-      "duration": 196235,
       "previewUrl": ""
     }
   ],
