@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-08-18T12:22:21.253Z",
+  "lastUpdated": "2026-08-19T12:22:12.853Z",
   "tracks": [
+    {
+      "id": "6J3pPfXLujwsWQpvR6XMgC",
+      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
+      "artist": "TAK, Hatsune Miku, Kasane Teto",
+      "album": "PPPP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
+      "playedAt": "2026-08-19T08:09:42.049Z",
+      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
+      "duration": 154835,
+      "previewUrl": ""
+    },
+    {
+      "id": "46gSk82duJtX3TTA182ruG",
+      "name": "This fffire - New Version",
+      "artist": "Franz Ferdinand",
+      "album": "This fffire",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c4046985c8b4f9478e0af14e",
+      "playedAt": "2026-08-19T07:43:16.538Z",
+      "spotifyUrl": "https://open.spotify.com/track/46gSk82duJtX3TTA182ruG",
+      "duration": 218080,
+      "previewUrl": ""
+    },
+    {
+      "id": "4Cf8NJJf4kvr9Xs488RZyV",
+      "name": "明日の私に幸あれ",
+      "artist": "NANAOAKARI",
+      "album": "フライングベスト2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ab295fd57e340cc52137e9b",
+      "playedAt": "2026-08-19T06:46:43.279Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Cf8NJJf4kvr9Xs488RZyV",
+      "duration": 216226,
+      "previewUrl": ""
+    },
     {
       "id": "4TwBwV4Iupv1nfW6ybnMiP",
       "name": "ダンスロボットダンス",
@@ -167,17 +200,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6J3pPfXLujwsWQpvR6XMgC",
-      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
-      "artist": "TAK, Hatsune Miku, Kasane Teto",
-      "album": "PPPP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
-      "playedAt": "2026-08-17T20:21:19.600Z",
-      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
-      "duration": 154835,
-      "previewUrl": ""
-    },
-    {
       "id": "5lojBXokpBOfuTDly9Bksx",
       "name": "KING",
       "artist": "Kanaria",
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-14T10:12:39.339Z",
       "spotifyUrl": "https://open.spotify.com/track/0kosUz0jePvjiz4ctmR6wL",
       "duration": 223448,
-      "previewUrl": ""
-    },
-    {
-      "id": "0VCJ5YjphljOf1YRcPp08v",
-      "name": "Try Everything",
-      "artist": "Shakira",
-      "album": "Zootopia (Original Motion Picture Soundtrack / Japanese version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273815ddbce7b7574c7f3936e85",
-      "playedAt": "2026-08-14T10:05:06.185Z",
-      "spotifyUrl": "https://open.spotify.com/track/0VCJ5YjphljOf1YRcPp08v",
-      "duration": 196880,
-      "previewUrl": ""
-    },
-    {
-      "id": "30MH35NPiE2zKSJY1nFv3N",
-      "name": "キューティーハニー",
-      "artist": "Kumi Koda",
-      "album": "secret",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731242f8dad5ec08d08dd499ef",
-      "playedAt": "2026-08-14T10:00:05.805Z",
-      "spotifyUrl": "https://open.spotify.com/track/30MH35NPiE2zKSJY1nFv3N",
-      "duration": 185633,
       "previewUrl": ""
     }
   ],
