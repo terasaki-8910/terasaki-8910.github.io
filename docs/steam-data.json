@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-19T01:45:59.407Z",
+  "lastUpdated": "2026-08-19T13:02:35.089Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,8 +11,8 @@
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
-      "playtime2weeksMinutes": 642,
-      "playtimeForeverMinutes": 8374
+      "playtime2weeksMinutes": 829,
+      "playtimeForeverMinutes": 8561
     },
     {
       "appid": 2079120,
@@ -25,8 +25,8 @@
       "appid": 714010,
       "name": "Aimlabs",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/714010/15347de11efc127539c388e585af9e92d10d5189.jpg",
-      "playtime2weeksMinutes": 29,
-      "playtimeForeverMinutes": 29
+      "playtime2weeksMinutes": 39,
+      "playtimeForeverMinutes": 39
     }
   ],
   "library": [
@@ -40,7 +40,7 @@
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
-      "playtimeForeverMinutes": 8374
+      "playtimeForeverMinutes": 8561
     },
     {
       "appid": 489830,
@@ -100,7 +100,7 @@
       "appid": 714010,
       "name": "Aimlabs",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/714010/15347de11efc127539c388e585af9e92d10d5189.jpg",
-      "playtimeForeverMinutes": 29
+      "playtimeForeverMinutes": 39
     },
     {
       "appid": 4000,
