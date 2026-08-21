@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-20T12:24:17.012Z",
+  "lastUpdated": "2026-08-21T06:26:43.104Z",
   "tracks": [
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-08-21T02:51:32.942Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
     {
       "id": "7jgqNMnqAT9FghC1uSYTFF",
       "name": "アイデア",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-19T13:09:57.703Z",
       "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
       "duration": 154835,
-      "previewUrl": ""
-    },
-    {
-      "id": "1WZGyYe1PDvQ5aaET6qILe",
-      "name": "金星のダンス",
-      "artist": "Nayutalien",
-      "album": "ナユタン星からの物体Z",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273759ef471de167f1d2ca36bd7",
-      "playedAt": "2026-08-19T13:06:56.133Z",
-      "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
-      "duration": 209333,
       "previewUrl": ""
     }
   ],
