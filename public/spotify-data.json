@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-21T06:26:43.104Z",
+  "lastUpdated": "2026-08-21T12:24:03.747Z",
   "tracks": [
+    {
+      "id": "3rmo8F54jFF8OgYsqTxm5d",
+      "name": "Bad Habits",
+      "artist": "Ed Sheeran",
+      "album": "=",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc806722f6802a8ea9953c89",
+      "playedAt": "2026-08-21T11:13:18.024Z",
+      "spotifyUrl": "https://open.spotify.com/track/3rmo8F54jFF8OgYsqTxm5d",
+      "duration": 230746,
+      "previewUrl": ""
+    },
     {
       "id": "1YXot2MLAG9sttepCtBRM7",
       "name": "踊り子",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-19T14:38:20.596Z",
       "spotifyUrl": "https://open.spotify.com/track/3LwvhfpgLdWazQYafa7Hgx",
       "duration": 207768,
-      "previewUrl": ""
-    },
-    {
-      "id": "6J3pPfXLujwsWQpvR6XMgC",
-      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
-      "artist": "TAK, Hatsune Miku, Kasane Teto",
-      "album": "PPPP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
-      "playedAt": "2026-08-19T13:09:57.703Z",
-      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
-      "duration": 154835,
       "previewUrl": ""
     }
   ],
