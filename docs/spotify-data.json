@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-08-22T12:17:07.262Z",
+  "lastUpdated": "2026-08-22T18:13:56.610Z",
   "tracks": [
+    {
+      "id": "3M214U0mwSm041GsQR3nrO",
+      "name": "Toxic",
+      "artist": "BoyWithUke",
+      "album": "Serotonin Dreams",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee07023115f822012390d2a0",
+      "playedAt": "2026-08-22T17:53:56.765Z",
+      "spotifyUrl": "https://open.spotify.com/track/3M214U0mwSm041GsQR3nrO",
+      "duration": 168066,
+      "previewUrl": ""
+    },
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-08-22T14:45:35.086Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "1SC5rEoYDGUK4NfG82494W",
+      "name": "MONTERO (Call Me By Your Name)",
+      "artist": "Lil Nas X",
+      "album": "MONTERO",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f27e4bdc58ebe249a6b90da0",
+      "playedAt": "2026-08-22T12:28:54.132Z",
+      "spotifyUrl": "https://open.spotify.com/track/1SC5rEoYDGUK4NfG82494W",
+      "duration": 137704,
+      "previewUrl": ""
+    },
+    {
+      "id": "6fTt0CH2t0mdeB2N9XFG5r",
+      "name": "Panini",
+      "artist": "Lil Nas X",
+      "album": "7",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736239187793c9e492e687db01",
+      "playedAt": "2026-08-22T12:24:55.827Z",
+      "spotifyUrl": "https://open.spotify.com/track/6fTt0CH2t0mdeB2N9XFG5r",
+      "duration": 114893,
+      "previewUrl": ""
+    },
+    {
+      "id": "38T0tPVZHcPZyhtOcCP7pF",
+      "name": "STAR WALKIN' (League of Legends Worlds Anthem)",
+      "artist": "Lil Nas X",
+      "album": "STAR WALKIN' (League of Legends Worlds Anthem)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27304cd9a1664fb4539a55643fe",
+      "playedAt": "2026-08-22T12:23:00.485Z",
+      "spotifyUrl": "https://open.spotify.com/track/38T0tPVZHcPZyhtOcCP7pF",
+      "duration": 210575,
+      "previewUrl": ""
+    },
     {
       "id": "3LWX4IZJox89hxHcnxm3xI",
       "name": "Jackpot",
@@ -274,61 +329,6 @@
       "playedAt": "2026-08-21T18:20:39.268Z",
       "spotifyUrl": "https://open.spotify.com/track/7ugsistwEp0PhP4Ddj9cra",
       "duration": 217866,
-      "previewUrl": ""
-    },
-    {
-      "id": "3rmo8F54jFF8OgYsqTxm5d",
-      "name": "Bad Habits",
-      "artist": "Ed Sheeran",
-      "album": "=",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc806722f6802a8ea9953c89",
-      "playedAt": "2026-08-21T11:13:18.024Z",
-      "spotifyUrl": "https://open.spotify.com/track/3rmo8F54jFF8OgYsqTxm5d",
-      "duration": 230746,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-08-21T02:51:32.942Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
-      "previewUrl": ""
-    },
-    {
-      "id": "7jgqNMnqAT9FghC1uSYTFF",
-      "name": "アイデア",
-      "artist": "Gen Hoshino",
-      "album": "POP VIRUS",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307831685d7f988332899529a",
-      "playedAt": "2026-08-20T12:20:57.302Z",
-      "spotifyUrl": "https://open.spotify.com/track/7jgqNMnqAT9FghC1uSYTFF",
-      "duration": 280666,
-      "previewUrl": ""
-    },
-    {
-      "id": "4BE1OloRc9xwjyqA4wFFuN",
-      "name": "あの夢をなぞって",
-      "artist": "YOASOBI",
-      "album": "あの夢をなぞって",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730f46d80794891bde2dcbf1a8",
-      "playedAt": "2026-08-20T08:20:06.487Z",
-      "spotifyUrl": "https://open.spotify.com/track/4BE1OloRc9xwjyqA4wFFuN",
-      "duration": 242666,
-      "previewUrl": ""
-    },
-    {
-      "id": "5DMEvbg3gUmiR5HIBWdveV",
-      "name": "ノーダウト",
-      "artist": "OFFICIAL HIGE DANDISM",
-      "album": "エスカパレード",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a45b49dea38f0895cbc86705",
-      "playedAt": "2026-08-20T08:16:03.382Z",
-      "spotifyUrl": "https://open.spotify.com/track/5DMEvbg3gUmiR5HIBWdveV",
-      "duration": 202394,
       "previewUrl": ""
     }
   ],
