@@ -1,0 +1,67 @@
+name: Update chara-picker Danbooru images
+
+# /chara-picker/ の代表画像候補を先に引いてJSONへ焼く。
+#
+# ブラウザから直接Danbooru APIを叩けなくなったため(User-Agentで判定される
+# CloudflareのManaged Challenge。詳細は scripts/update-chara-images.mjs 冒頭)、
+# 問い合わせをここへ移している。
+#
+# 週1なのは、Danbooru側の未認証アクセスへの負荷を抑えるため
+# (488キャラ x 1.1秒間隔 = 約9分)。リンク切れの回収はこの頻度で足りる。
+on:
+  schedule:
+    - cron: '0 18 * * 0'   # 毎週日曜 18:00 UTC (月曜 03:00 JST)
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/update-chara-images.yml'
+      - 'scripts/update-chara-images.mjs'
+      # タグ表が変わる = キャラが増減した。画像も引き直す。
+      - 'public/chara-picker/tag-map.json'
+
+jobs:
+  update-chara-images:
+    runs-on: ubuntu-latest
+    # 488リクエストを1.1秒間隔で流すので既定の6時間には収まるが、
+    # Danbooruが詰まったときに長時間占有しないよう明示的に切る。
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 依存パッケージは要らない(Node標準のfetchとfsだけ)。npm install は張らない。
+      - name: Update chara-picker images
+        run: node scripts/update-chara-images.mjs
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "🖼️ Update chara-picker Danbooru images"
+          # 他のワークフロー(Spotify/Steam等)が先にpushしていた場合に備えて
+          # リトライする。単純なgit push一発だと非fast-forwardで失敗し、
+          # その回の更新がそのまま消える(2026-08-18に実際に発生)。
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "push失敗、pull --rebaseしてリトライ ($i/5)"
+            git pull --rebase origin main
+            sleep $((i * 3))
+          done
+          echo "5回リトライしてもpushできませんでした"
+          exit 1

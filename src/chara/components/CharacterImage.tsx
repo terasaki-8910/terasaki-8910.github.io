@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { fetchCharaImage, loadTagMap, type CharaImage } from '../data/danbooru';
+import { fetchCharaImage, type CharaImage } from '../data/danbooru';
 
 /**
- * キャラの代表画像。Danbooruから実行時に1枚引いて直リンクで表示する
- * （取得方針とその理由は data/danbooru.ts 冒頭）。
+ * キャラの代表画像。CIが先に引いておいた候補から1枚選び、Danbooruのcdnへ
+ * 直リンクで表示する（取得方針とその理由は data/danbooru.ts 冒頭）。
  *
  * 画像そのものは同梱していない第三者の著作物なので、必ず絵師名と
  * 一次ソース／投稿ページへの導線を添える。取得できない場合も枠は消さず、
@@ -32,13 +32,7 @@ export function CharacterImage(props: {
 
     (async () => {
       try {
-        const tags = await loadTagMap();
-        const tag = tags[characterId];
-        if (!tag) {
-          if (!cancelled) setState('none');
-          return;
-        }
-        const found = await fetchCharaImage(characterId, tag, controller.signal);
+        const found = await fetchCharaImage(characterId, controller.signal);
         if (cancelled) return;
         setImage(found);
         setState(found ? 'ready' : 'none');
@@ -125,9 +119,11 @@ export function CharacterImage(props: {
 /**
  * 読み込み中の仮マーク。ドット絵モーションに差し替える予定の場所。
  *
- * ここは Danbooru への実際の通信待ち（体感で数百ms）なので、待たせている
- * ことを示すインジケータに意味がある。質問の切り替えに入れていた人工的な
- * 「考え中」とは性質が違う（あちらは待たせる理由が無いので撤去した）。
+ * ここは chara-images.json の取得待ちなので、待たせていることを示す
+ * インジケータに意味がある。Danbooruへ実行時に問い合わせていた頃より短く
+ * （同一オリジンの1ファイル・全キャラ分で1回だけ）、2枚目以降は即座に出る。
+ * 質問の切り替えに入れていた人工的な「考え中」とは性質が違う（あちらは
+ * 待たせる理由が無いので撤去した）。
  * prefers-reduced-motion では動きを止める。
  *
  * export しているのは、トップページのおまかせプレビュー

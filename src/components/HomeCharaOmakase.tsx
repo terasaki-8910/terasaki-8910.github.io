@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { LoadingMark } from '../chara/components/CharacterImage';
-import { fetchCharaImage, loadTagMap, type CharaImage } from '../chara/data/danbooru';
+import { fetchCharaImage, type CharaImage } from '../chara/data/danbooru';
 import { charactersSchema, supplyFileSchema } from '../chara/data/schema';
 import { omakase, type Dataset, type Scored } from '../chara/engine/recommend';
 
@@ -11,11 +11,11 @@ import { omakase, type Dataset, type Scored } from '../chara/engine/recommend';
  * アルバムアート(w-14 h-14)と同じ大きさのサムネイル1枚だけ。
  *
  * characters.json/supply.json はページ読み込み時に即fetchする(本人指定、
- * 「チャンクフェッチしたい」)。likelihoods/questions.runtime/tag-mapは
+ * 「チャンクフェッチしたい」)。likelihoods/questions.runtime/chara-imagesは
  * omakase()に不要なので取らない — 実際に要るのはomakase内部が呼ぶ
  * survivors()の判定に使うcharacters/supplyだけ(engine/recommend.ts参照)。
- * tag-map.json(17KB)はDanbooru画像を引く時だけ`loadTagMap()`が自前で
- * 遅延fetch+キャッシュする(data/danbooru.ts)ので、ここでも呼ぶだけでよい。
+ * chara-images.json(画像候補)はボタンを押した時だけ`fetchCharaImage()`が
+ * 自前で遅延fetch+キャッシュする(data/danbooru.ts)ので、ここでも呼ぶだけでよい。
  */
 
 type LoadState = { status: 'loading' } | { status: 'error' } | { status: 'ready'; dataset: Dataset };
@@ -54,13 +54,7 @@ export default function HomeCharaOmakase() {
     setPicked(result);
     setImage('loading');
     try {
-      const tags = await loadTagMap();
-      const tag = tags[result.character.id];
-      if (!tag) {
-        setImage(null);
-        return;
-      }
-      setImage(await fetchCharaImage(result.character.id, tag));
+      setImage(await fetchCharaImage(result.character.id));
     } catch {
       setImage(null);
     }

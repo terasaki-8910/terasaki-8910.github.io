@@ -98,6 +98,52 @@ CHARA_PICKER_REPO=/path/to/chara_picker npm run sync:chara
 python3 -m venv .venv && .venv/bin/python3 -m pip install fonttools brotli
 ```
 
+## キャラ画像はCIが先に引く（実行時にDanbooruを叩かない）
+
+2026-08-23、DanbooruがAPIにCloudflareのManaged Challengeを掛けた。判定は
+**User-Agentだけ**を見ており、ブラウザのUA（Chrome/Safari/Firefox いずれも）には
+`403 cf-mitigated: challenge` を返す。この403にはCORSヘッダが付かないため、
+ブラウザの `fetch()` はステータスを見る前にCORSエラーで落ちる。リトライでも
+メタタグを削るフォールバックでも回復せず、**全キャラが「画像なし」になっていた**
+（「たまに失敗する」ではなく全滅）。
+
+実測（同一URL・UAだけ変更）:
+
+| User-Agent | 結果 |
+|---|---|
+| Chrome / Safari / Firefox | 403 challenge |
+| `node`（Node標準fetchの既定値） | 403 challenge |
+| 素の `Mozilla/5.0` | 403 challenge |
+| curl既定 / 名乗る独自UA | 200 |
+
+**名乗っているクライアントは通る**ので、問い合わせをCIへ移した。**Node標準fetchの
+既定UAは `node` で弾かれる**点に注意 — スクリプトを書くときは必ずUAを明示する
+（開発元の `scripts/bayes/danbooru-client.mjs` は元から明示していたので、
+データ生成パイプラインはこの件の影響を受けていない）。
+
+画像本体を配信している `cdn.donmai.us` は**ブラウザUAでも200**。直リンク表示と
+絵師名・一次ソースの表記という方針自体は変えていない（変えたのは問い合わせ場所だけ）。
+
+| | 前 | 後 |
+|---|---|---|
+| Danbooruへの問い合わせ | ブラウザから実行時に1キャラ1回 | `scripts/update-chara-images.mjs` が週1でまとめて |
+| ブラウザが読むもの | `tag-map.json` → Danbooru API | `chara-images.json`（1回だけ、全キャラ分） |
+| 1キャラの候補 | 上位40件からランダムに1枚 | 保存済み3枚からランダムに1枚 |
+
+候補を3枚持つのは、「毎回違う絵が出る」実行時fetch時代の挙動を残すため。
+枚数を増やすほど配信するJSONが太る（1キャラ約550B、488体で約260KB）。
+
+リンク切れの自己修復性は実行時fetchの利点だったので、週1の再生成で取り戻す。
+その間に消えた画像は表示側の `onError` が枠へ戻す（`CharacterImage.tsx`）。
+
+`chara-images.json` は**同期対象ではない**（開発元には無い、こちら固有の生成物）。
+ワークフローは `public/` に書いてコミットし、そのpushが `deploy.yml` を起こして
+`docs/` へビルドされる — Spotify/Steamと同じ経路。
+
+`update-chara-images.mjs` は1件も取れなかった場合に**終了コード1で落ちる**。
+Danbooru側の仕様変更をまた踏んだときに、空のJSONを黙ってコミットして
+「画像なし」に戻さないため。
+
 ## ズレ検出はハードフィルタを手写ししない
 
 `loadCharaData.ts` は「推薦対象になりうるのに `likelihoods.json` に居ないキャラ」を
@@ -119,6 +165,7 @@ python3 -m venv .venv && .venv/bin/python3 -m pip install fonttools brotli
 | 2026-08-04 | `bac460c` | 根拠が肯定方向のみになった（従来は「いいえ」で一致した根拠も返しており、UIが`confidence`を無視して描画するため「翼を持たない」が「外見的特徴: 翼」と出ていた）。`profileEntriesFor()`が追加され、回答に関係なくキャラが持つ属性を表示用の優先順位で最大5件返す |
 
 実行時に取得するJSONは合計807KB（gzip 91KB）。GitHub Pagesはgzipで配信する。
+これに加えてキャラ画像を出すときだけ `chara-images.json`（約260KB）を1回取る。
 
 ## 関連ファイル
 
@@ -130,3 +177,6 @@ python3 -m venv .venv && .venv/bin/python3 -m pip install fonttools brotli
 | データ読み込み・検証 | `src/chara/data/loadCharaData.ts` |
 | 画面分岐 | `src/chara/CharaPickerApp.tsx` |
 | ページシェル | `src/CharaPickerPage.jsx` |
+| 画像候補の生成 | `scripts/update-chara-images.mjs` |
+| 画像候補の定期実行 | `.github/workflows/update-chara-images.yml` |
+| 画像の表示側 | `src/chara/data/danbooru.ts` / `src/chara/components/CharacterImage.tsx` |
