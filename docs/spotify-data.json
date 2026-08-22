@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-22T00:36:57.946Z",
+  "lastUpdated": "2026-08-22T12:17:07.262Z",
   "tracks": [
+    {
+      "id": "3LWX4IZJox89hxHcnxm3xI",
+      "name": "Jackpot",
+      "artist": "TheFatRat",
+      "album": "Jackpot",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273803b8459b9487d2860ce6523",
+      "playedAt": "2026-08-22T11:26:50.367Z",
+      "spotifyUrl": "https://open.spotify.com/track/3LWX4IZJox89hxHcnxm3xI",
+      "duration": 195873,
+      "previewUrl": ""
+    },
     {
       "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
       "name": "Butter Building",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-20T08:16:03.382Z",
       "spotifyUrl": "https://open.spotify.com/track/5DMEvbg3gUmiR5HIBWdveV",
       "duration": 202394,
-      "previewUrl": ""
-    },
-    {
-      "id": "6pLoLIevkp7Igy9hDq5ROW",
-      "name": "世界はあなたに笑いかけている",
-      "artist": "Little Glee Monster",
-      "album": "GRADATI∞N",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730956230c5504073cbbc3c303",
-      "playedAt": "2026-08-20T08:12:40.539Z",
-      "spotifyUrl": "https://open.spotify.com/track/6pLoLIevkp7Igy9hDq5ROW",
-      "duration": 232773,
       "previewUrl": ""
     }
   ],
