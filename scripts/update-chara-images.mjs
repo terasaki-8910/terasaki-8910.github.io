@@ -36,7 +36,22 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const TAG_MAP = path.join(ROOT, 'public/chara-picker/tag-map.json');
-const OUT = path.join(ROOT, 'public/chara-picker/chara-images.json');
+
+/*
+ * public/ と docs/ の両方に書く。
+ *
+ * このリポジトリのGitHub Pagesは「Deploy from a branch」で、mainの docs/ を
+ * そのまま配信している(.github/workflows/deploy.yml は実際には使われていない
+ * ——実行履歴に出てくるのは event=dynamic の "pages build and deployment" だけ)。
+ * つまり public/ に書いただけでは、次に誰かが手元で `npm run build` して
+ * コミットするまで本番に一生届かない。scripts/update-spotify.js と
+ * update-steam.js が同じ理由で両方に書いている(「docs/ はビルド成果物だが、
+ * Spotifyデータだけは実行時fetchで読むため」)ので、それに合わせる。
+ */
+const OUTS = [
+  path.join(ROOT, 'public/chara-picker/chara-images.json'),
+  path.join(ROOT, 'docs/chara-picker/chara-images.json'),
+];
 
 const API = 'https://danbooru.donmai.us';
 
@@ -89,7 +104,10 @@ function normalizeSource(source) {
 
 let lastCallAt = null;
 
-async function danbooruGet(tags, limit) {
+/** 一時的な失敗(5xx・429・切断)だけ再試行する。クエリ自体が悪い4xxは即座に投げる。 */
+const RETRYABLE_ATTEMPTS = 3;
+
+async function danbooruGetOnce(tags, limit) {
   if (lastCallAt !== null) {
     const wait = REQUEST_DELAY_MS - (Date.now() - lastCallAt);
     if (wait > 0) await sleep(wait);
@@ -99,12 +117,46 @@ async function danbooruGet(tags, limit) {
   const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
   if (!res.ok) {
     const mitigated = res.headers.get('cf-mitigated');
-    throw new Error(
+    const err = new Error(
       `Danbooru API 失敗 (status=${res.status}${mitigated ? `, cf-mitigated=${mitigated}` : ''}): ${tags}`,
     );
+    // 4xx(429を除く)はクエリ側の問題なので再試行しても同じ。
+    err.retryable = res.status >= 500 || res.status === 429;
+    throw err;
   }
   const json = await res.json();
-  return Array.isArray(json) ? json : [];
+  // 200なのに配列でない = Danbooru側の想定外の応答。これを「絵が無い」と解釈すると
+  // 既存の候補を消してしまうので、失敗として扱い前回分を温存させる。
+  if (!Array.isArray(json)) {
+    const err = new Error(`Danbooru APIが配列以外を返しました: ${tags}`);
+    err.retryable = true;
+    throw err;
+  }
+  return json;
+}
+
+/*
+ * 5xx・429・切断は数回まで指数バックオフで待って引き直す。
+ * 実際に復旧作業中、Danbooruが単発で503を返して処理が止まったことがあるため
+ * (2026-08-23観測)、1回の瞬断でそのキャラだけ古い絵のまま取り残されないようにする。
+ */
+async function danbooruGet(tags, limit) {
+  let lastError;
+  for (let attempt = 1; attempt <= RETRYABLE_ATTEMPTS; attempt += 1) {
+    try {
+      return await danbooruGetOnce(tags, limit);
+    } catch (err) {
+      // fetch自体の例外(切断等)は retryable が未定義なので再試行対象に含める。
+      if (err.retryable === false) throw err;
+      lastError = err;
+      if (attempt < RETRYABLE_ATTEMPTS) {
+        const backoff = 1_000 * 2 ** (attempt - 1);
+        process.stderr.write(`  一時的な失敗、${backoff}ms待って再試行 (${attempt}/${RETRYABLE_ATTEMPTS - 1}): ${err.message}\n`);
+        await sleep(backoff);
+      }
+    }
+  }
+  throw lastError;
 }
 
 const isSolo = (p) => (p.tag_string_general ?? '').split(' ').includes('solo');
@@ -186,7 +238,16 @@ async function main() {
   const tagMap = JSON.parse(readFileSync(TAG_MAP, 'utf8')).tags ?? {};
   // 前回の結果を土台にする。1キャラの取得が転んでも、そのキャラの既存の絵を
   // 消してしまわないため(全消し→「画像なし」が再発するのを防ぐ)。
-  const previous = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')).characters ?? {} : {};
+  // 壊れたJSONで固まらないよう、読めなければ空から作り直す(次の実行で自己回復する)。
+  let previous = {};
+  const prevPath = OUTS.find((p) => existsSync(p));
+  if (prevPath) {
+    try {
+      previous = JSON.parse(readFileSync(prevPath, 'utf8')).characters ?? {};
+    } catch (err) {
+      process.stderr.write(`前回の ${path.basename(prevPath)} が読めないので空から作り直します: ${err.message}\n`);
+    }
+  }
 
   const ids = onlyIds.length > 0 ? onlyIds : Object.keys(tagMap);
   const characters = { ...previous };
@@ -220,20 +281,45 @@ async function main() {
     }
   }
 
+  // 中身が変わっていないなら generatedAt も据え置く。毎回書き換えると
+  // 「変更なし」のはずの週次実行が必ず差分を作り、無意味なコミットが積み上がる。
+  const prevGeneratedAt = (() => {
+    if (!prevPath) return null;
+    try {
+      return JSON.parse(readFileSync(prevPath, 'utf8')).generatedAt ?? null;
+    } catch {
+      return null;
+    }
+  })();
+  const unchanged =
+    prevGeneratedAt !== null && JSON.stringify(previous) === JSON.stringify(characters);
   const out = {
     version: 1,
-    generatedAt: new Date().toISOString(),
+    generatedAt: unchanged ? prevGeneratedAt : new Date().toISOString(),
     characters,
   };
-  writeFileSync(OUT, JSON.stringify(out));
-  const kb = (Buffer.byteLength(JSON.stringify(out)) / 1024).toFixed(1);
+  const body = JSON.stringify(out);
+  for (const dest of OUTS) {
+    if (!existsSync(path.dirname(dest))) {
+      process.stderr.write(`${path.dirname(dest)} が無いのでスキップします\n`);
+      continue;
+    }
+    writeFileSync(dest, body);
+  }
+  const kb = (Buffer.byteLength(body) / 1024).toFixed(1);
   process.stderr.write(
     `\n完了: 取得${ok} / 該当なし${empty} / 失敗${failed} — ${Object.keys(characters).length}キャラ, ${kb}KB\n`,
   );
 
   // 全滅は「Danbooru側の仕様変更をまた踏んだ」サイン。黙って空のJSONを
   // コミットしないよう、ここで落としてワークフローを赤くする。
-  if (ok === 0 && ids.length > 0) {
+  // 対象が0件なのも異常(tag-map.jsonが空/壊れた)なので同じく落とす——
+  // ここを ids.length > 0 で条件付けると、その場合だけガードが無効になる。
+  if (ids.length === 0) {
+    process.stderr.write('取得対象が0件です。tag-map.json を確認してください。\n');
+    process.exit(1);
+  }
+  if (ok === 0) {
     process.stderr.write('1件も取得できませんでした。Danbooru側の変更を疑ってください。\n');
     process.exit(1);
   }

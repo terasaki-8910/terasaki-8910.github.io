@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { fetchCharaImage, type CharaImage } from '../data/danbooru';
+import { fetchCharaImage, nextCharaImage, type CharaImage } from '../data/danbooru';
 
 /**
  * キャラの代表画像。CIが先に引いておいた候補から1枚選び、Danbooruのcdnへ
@@ -9,6 +9,10 @@ import { fetchCharaImage, type CharaImage } from '../data/danbooru';
  * 画像そのものは同梱していない第三者の著作物なので、必ず絵師名と
  * 一次ソース／投稿ページへの導線を添える。取得できない場合も枠は消さず、
  * プレースホルダのまま置く（レイアウトが跳ねないように）。
+ *
+ * 画像の読み込みに失敗したときは、同じキャラの残りの候補へ移る
+ * （data/danbooru.ts の nextCharaImage）。候補を複数持っているのに1枚目が
+ * 死んだだけで「画像なし」に見えるのは、週1の再生成までそのままになるため。
  */
 export function CharacterImage(props: {
   characterId: string;
@@ -20,7 +24,8 @@ export function CharacterImage(props: {
   const [state, setState] = useState<'loading' | 'ready' | 'none'>('loading');
   const [image, setImage] = useState<CharaImage | null>(null);
   // 第三者CDNへの直リンクなので、取得できても表示に失敗することがある
-  // (実際に ERR_CONNECTION_CLOSED を観測)。壊れた画像アイコンを出さずに枠へ戻す。
+  // (実際に ERR_CONNECTION_CLOSED を観測。元投稿が消された場合も同じ)。
+  // 壊れた画像アイコンは出さず、まず残りの候補を試し、尽きたら枠へ戻す。
   const [broken, setBroken] = useState(false);
 
   useEffect(() => {
@@ -83,7 +88,11 @@ export function CharacterImage(props: {
           src={image.imageUrl}
           alt={name}
           loading="lazy"
-          onError={() => setBroken(true)}
+          onError={() => {
+            const fallback = nextCharaImage(characterId);
+            if (fallback) setImage(fallback);
+            else setBroken(true);
+          }}
           className="h-full w-full object-cover"
         />
       </a>

@@ -19,8 +19,8 @@
  *
  * ■ リンク切れ
  *   実行時に引き直さなくなった分、消えた投稿を掴み続けるリスクがある。週1の
- *   再生成でこれを回収し、その間に消えたものは表示側の onError で枠へ戻す
- *   (CharacterImage.tsx)。
+ *   再生成でこれを回収し、その間に消えたものは表示側が残りの候補へ移ることで
+ *   吸収する (nextCharaImage / CharacterImage.tsx)。
  */
 
 /** 配信用の最小表現。意味と、なぜこの形なのかは update-chara-images.mjs の toEntry を見ること。 */
@@ -52,11 +52,24 @@ export type CharaImage = {
 };
 
 /**
- * キャラごとに1度選んだ画像を保持する。同じキャラなら常に同じ絵を返すため、
+ * キャラごとに「どの候補を選んだか」を保持する。同じキャラなら常に同じ絵を返すため、
  * 「この子かな?」で見た絵が「はい」を押した結果画面で別物に変わらない
  * （画面遷移でコンポーネントが再マウントされるので、これが無いと毎回選び直す）。
+ *
+ * 添字ではなく「試した候補の集合」も持つのは、表示に失敗した候補を捨てて
+ * 次の候補へ移れるようにするため（`nextCharaImage`）。
  */
-const imageCache = new Map<string, CharaImage | null>();
+type Pick = { image: CharaImage | null; tried: Set<number> };
+const imageCache = new Map<string, Pick>();
+
+function toImage(e: RawEntry): CharaImage {
+  return {
+    imageUrl: e.i,
+    postUrl: `https://danbooru.donmai.us/posts/${e.p}`,
+    artist: e.a ?? null,
+    sourceUrl: e.s ?? null,
+  };
+}
 
 /**
  * 進行中のfetchを共有する。結果ではなくPromiseを持つことで、複数のキャラ画像が
@@ -65,6 +78,8 @@ const imageCache = new Map<string, CharaImage | null>();
  * セッション中ずっと「画像なし」になる）。
  */
 let manifestPromise: Promise<Manifest> | null = null;
+/** 解決済みのマニフェスト。`nextCharaImage` は同期で呼ばれるのでここから読む。 */
+let manifestCache: Manifest | null = null;
 
 /**
  * 呼び出し側のsignalはここへ渡さない。このPromiseは全呼び出しで共有されるので、
@@ -78,6 +93,10 @@ async function loadManifest(): Promise<Manifest> {
       .then((res) => {
         if (!res.ok) throw new Error(`chara-images.json の取得に失敗しました (HTTP ${res.status})`);
         return res.json() as Promise<Manifest>;
+      })
+      .then((m) => {
+        manifestCache = m;
+        return m;
       })
       .catch((err: unknown) => {
         manifestPromise = null;
@@ -93,7 +112,7 @@ export async function fetchCharaImage(
   signal?: AbortSignal,
 ): Promise<CharaImage | null> {
   const cached = imageCache.get(characterId);
-  if (cached !== undefined) return cached;
+  if (cached !== undefined) return cached.image;
 
   let manifest: Manifest;
   try {
@@ -110,17 +129,34 @@ export async function fetchCharaImage(
 
   const candidates = manifest.characters[characterId] ?? [];
   if (candidates.length === 0) {
-    imageCache.set(characterId, null);
+    imageCache.set(characterId, { image: null, tried: new Set() });
     return null;
   }
 
-  const picked = candidates[Math.floor(Math.random() * candidates.length)];
-  const image: CharaImage = {
-    imageUrl: picked.i,
-    postUrl: `https://danbooru.donmai.us/posts/${picked.p}`,
-    artist: picked.a ?? null,
-    sourceUrl: picked.s ?? null,
-  };
-  imageCache.set(characterId, image);
+  const index = Math.floor(Math.random() * candidates.length);
+  const image = toImage(candidates[index]);
+  imageCache.set(characterId, { image, tried: new Set([index]) });
   return image;
+}
+
+/**
+ * 今表示している候補が読めなかったとき（元投稿が消された等）に、まだ試していない
+ * 候補へ移る。全部試し終えたら null を返し、呼び出し側は「画像なし」枠へ倒す。
+ *
+ * 候補を複数持っているのに1枚目が死んだだけで枠に戻るのは、週1の再生成までの間
+ * ずっと「画像なし」に見えるということなので、ここで引き直す。
+ */
+export function nextCharaImage(characterId: string): CharaImage | null {
+  const cached = imageCache.get(characterId);
+  const candidates = manifestCache?.characters[characterId];
+  if (!cached || !candidates) return null;
+
+  for (let i = 0; i < candidates.length; i += 1) {
+    if (cached.tried.has(i)) continue;
+    cached.tried.add(i);
+    cached.image = toImage(candidates[i]);
+    return cached.image;
+  }
+  cached.image = null;
+  return null;
 }

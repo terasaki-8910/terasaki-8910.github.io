@@ -134,11 +134,24 @@ python3 -m venv .venv && .venv/bin/python3 -m pip install fonttools brotli
 枚数を増やすほど配信するJSONが太る（1キャラ約550B、488体で約260KB）。
 
 リンク切れの自己修復性は実行時fetchの利点だったので、週1の再生成で取り戻す。
-その間に消えた画像は表示側の `onError` が枠へ戻す（`CharacterImage.tsx`）。
+その間に消えた画像は、表示側が**同じキャラの残りの候補へ移る**ことで吸収する
+（`nextCharaImage`）。候補を3枚持っているのに1枚目が死んだだけで「画像なし」に
+見えるのは、次の再生成まで一週間そのままになるということなので、そこで諦めない。
+全部試して尽きたときだけ枠へ倒す。
 
 `chara-images.json` は**同期対象ではない**（開発元には無い、こちら固有の生成物）。
-ワークフローは `public/` に書いてコミットし、そのpushが `deploy.yml` を起こして
-`docs/` へビルドされる — Spotify/Steamと同じ経路。
+
+ワークフローは `public/` と `docs/` の**両方**に書いてコミットする。ここは
+`.github/workflows/deploy.yml` があるので勘違いしやすいが、**このリポジトリの
+GitHub Pagesは「Deploy from a branch」で、mainの `docs/` をそのまま配信している**。
+`gh run list` に出てくるのは event=`dynamic` の "pages build and deployment" だけで、
+`deploy.yml`（Deploy to GitHub Pages）は一度も実行されていない。つまり `public/` に
+書くだけでは、次に誰かが手元で `npm run build` してコミットするまで本番に届かない。
+`scripts/update-spotify.js` と `update-steam.js` が同じ理由で両方に書いている
+（「docs/ はビルド成果物だが、Spotifyデータだけは実行時fetchで読むため」）。
+
+botのpush（`GITHUB_TOKEN`）でもPages側の再ビルドは走る（Steam更新のコミットに対して
+"pages build and deployment" が動いていることを実行履歴で確認済み）。
 
 `update-chara-images.mjs` は1件も取れなかった場合に**終了コード1で落ちる**。
 Danbooru側の仕様変更をまた踏んだときに、空のJSONを黙ってコミットして
@@ -162,6 +175,7 @@ Danbooru側の仕様変更をまた踏んだときに、空のJSONを黙って�
 |---|---|---|
 | 2026-07-31 | `ffa7757` | 移植時の初期取り込み。184体 |
 | 2026-08-02 | `0678951` | 488体（103作品、487体査読済み）。軸を4つ追加（`stature`/`occupation`、`personality`/`hairColor`/`mood`の複数値化）で質問は139問に。「いいえ」後は最低3問・最大6問聞いてから再推測（`bayesShouldReguess`）。`guessing`フェーズが`candidates`（上位5候補）を返すようになった |
+| 2026-08-23 | `9bedace` | 489体（板垣カノエを追加）。併せて開発元のDanbooru投稿サンプルキャッシュを488体分へ復旧した（131体分まで減っており、その状態で尤度を再生成すると無警告で軸のみに劣化する）。Danbooru証拠を持つキャラは187→489体。偏りゲートの閾値も800→1150へ再設定（カノエの偏りではなく、閾値が母集団に対して既に限界だったため。詳細は `tests/engine-bias.test.ts` の2026-08-23追記） |
 | 2026-08-04 | `bac460c` | 根拠が肯定方向のみになった（従来は「いいえ」で一致した根拠も返しており、UIが`confidence`を無視して描画するため「翼を持たない」が「外見的特徴: 翼」と出ていた）。`profileEntriesFor()`が追加され、回答に関係なくキャラが持つ属性を表示用の優先順位で最大5件返す |
 
 実行時に取得するJSONは合計807KB（gzip 91KB）。GitHub Pagesはgzipで配信する。
