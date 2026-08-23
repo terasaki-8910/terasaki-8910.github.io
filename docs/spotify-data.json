@@ -1,6 +1,61 @@
 {
-  "lastUpdated": "2026-08-22T18:13:56.610Z",
+  "lastUpdated": "2026-08-23T00:39:57.954Z",
   "tracks": [
+    {
+      "id": "4fDralhqIxfoDHrnFSE3n0",
+      "name": "エイリアンエイリアン",
+      "artist": "Nayutalien",
+      "album": "ナユタン星からの物体Ｙ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363cc1e7ee50ed3854f40c367",
+      "playedAt": "2026-08-22T19:11:11.843Z",
+      "spotifyUrl": "https://open.spotify.com/track/4fDralhqIxfoDHrnFSE3n0",
+      "duration": 181973,
+      "previewUrl": ""
+    },
+    {
+      "id": "3XJCMkEWhd8xwHx6UGGa7C",
+      "name": "Looping the Rooms",
+      "artist": "rusino, Hatsune Miku",
+      "album": "Looping the Rooms",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27344f4d8e99ee8335a3a0873b0",
+      "playedAt": "2026-08-22T19:08:09.407Z",
+      "spotifyUrl": "https://open.spotify.com/track/3XJCMkEWhd8xwHx6UGGa7C",
+      "duration": 134071,
+      "previewUrl": ""
+    },
+    {
+      "id": "6J3pPfXLujwsWQpvR6XMgC",
+      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
+      "artist": "TAK, Hatsune Miku, Kasane Teto",
+      "album": "PPPP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
+      "playedAt": "2026-08-22T19:05:41.162Z",
+      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
+      "duration": 154835,
+      "previewUrl": ""
+    },
+    {
+      "id": "6u4CeONpeq1KGfnzgINUVw",
+      "name": "Bravely You",
+      "artist": "Lia, VISUAL ARTS / Key",
+      "album": "Bravely You / 灼け落ちない翼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273064f7c3ff272858cf699c74b",
+      "playedAt": "2026-08-22T19:02:34.285Z",
+      "spotifyUrl": "https://open.spotify.com/track/6u4CeONpeq1KGfnzgINUVw",
+      "duration": 328653,
+      "previewUrl": ""
+    },
+    {
+      "id": "2fCwv2ppU5nTRTckomIGsd",
+      "name": "REDRED",
+      "artist": "CORTIS",
+      "album": "REDRED",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27324ace1518851b27e9983f739",
+      "playedAt": "2026-08-22T19:02:31.084Z",
+      "spotifyUrl": "https://open.spotify.com/track/2fCwv2ppU5nTRTckomIGsd",
+      "duration": 163001,
+      "previewUrl": ""
+    },
     {
       "id": "3M214U0mwSm041GsQR3nrO",
       "name": "Toxic",
@@ -274,61 +329,6 @@
       "playedAt": "2026-08-21T18:40:43.958Z",
       "spotifyUrl": "https://open.spotify.com/track/2yozZfRYHP7Elsymghu5t3",
       "duration": 280856,
-      "previewUrl": ""
-    },
-    {
-      "id": "6nYezkgAePhAmnxNTQRsLV",
-      "name": "PAKU",
-      "artist": "asmi",
-      "album": "PAKU",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273185f2c27972171fa2e88bca4",
-      "playedAt": "2026-08-21T18:36:02.654Z",
-      "spotifyUrl": "https://open.spotify.com/track/6nYezkgAePhAmnxNTQRsLV",
-      "duration": 125771,
-      "previewUrl": ""
-    },
-    {
-      "id": "04niDJQ3mzjkwzvid0Otoi",
-      "name": "錠剤",
-      "artist": "TOOBOE",
-      "album": "錠剤",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27323817956ee7db882d88739fd",
-      "playedAt": "2026-08-21T18:33:56.403Z",
-      "spotifyUrl": "https://open.spotify.com/track/04niDJQ3mzjkwzvid0Otoi",
-      "duration": 204800,
-      "previewUrl": ""
-    },
-    {
-      "id": "1X7VQFZ23MgWshmLHYFRsZ",
-      "name": "勝手にシンドバッド",
-      "artist": "サザンオールスターズ",
-      "album": "勝手にシンドバッド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
-      "playedAt": "2026-08-21T18:30:31.158Z",
-      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
-      "duration": 237133,
-      "previewUrl": ""
-    },
-    {
-      "id": "30MH35NPiE2zKSJY1nFv3N",
-      "name": "キューティーハニー",
-      "artist": "Kumi Koda",
-      "album": "secret",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731242f8dad5ec08d08dd499ef",
-      "playedAt": "2026-08-21T18:24:23.624Z",
-      "spotifyUrl": "https://open.spotify.com/track/30MH35NPiE2zKSJY1nFv3N",
-      "duration": 185633,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ugsistwEp0PhP4Ddj9cra",
-      "name": "ハレ晴レユカイ",
-      "artist": "Aya Hirano, 茅原実里, 後藤邑子",
-      "album": "ハレ晴レユカイ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735059bc62aa56de5dc85c3d16",
-      "playedAt": "2026-08-21T18:20:39.268Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ugsistwEp0PhP4Ddj9cra",
-      "duration": 217866,
       "previewUrl": ""
     }
   ],
