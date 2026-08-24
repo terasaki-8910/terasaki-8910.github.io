@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-23T18:40:43.177Z",
+  "lastUpdated": "2026-08-24T18:52:20.887Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -27,6 +27,13 @@
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/714010/15347de11efc127539c388e585af9e92d10d5189.jpg",
       "playtime2weeksMinutes": 61,
       "playtimeForeverMinutes": 61
+    },
+    {
+      "appid": 990080,
+      "name": "Hogwarts Legacy",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
+      "playtime2weeksMinutes": 37,
+      "playtimeForeverMinutes": 37
     },
     {
       "appid": 489830,
@@ -108,6 +115,12 @@
       "name": "Red Dead Redemption 2",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1174180/5106abd9c1187a97f23295a0ba9470c94804ec6c.jpg",
       "playtimeForeverMinutes": 58
+    },
+    {
+      "appid": 990080,
+      "name": "Hogwarts Legacy",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
+      "playtimeForeverMinutes": 37
     },
     {
       "appid": 4000,
@@ -209,12 +222,6 @@
       "appid": 753660,
       "name": "AtmaSphere",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/753660/0f3559c8e03858f975a1d2ab7dfb7a06a60d06de.jpg",
-      "playtimeForeverMinutes": 0
-    },
-    {
-      "appid": 990080,
-      "name": "Hogwarts Legacy",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
       "playtimeForeverMinutes": 0
     },
     {
