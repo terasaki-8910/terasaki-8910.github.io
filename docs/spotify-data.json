@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-08-24T00:38:34.923Z",
+  "lastUpdated": "2026-08-24T06:34:48.971Z",
   "tracks": [
+    {
+      "id": "6gLBmVXHABkxkxdxhL3dc5",
+      "name": "TT",
+      "artist": "TWICE",
+      "album": "TT",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b749928884b92aeffbda21b9a5",
+      "playedAt": "2026-08-24T01:21:15.148Z",
+      "spotifyUrl": "https://open.spotify.com/track/6gLBmVXHABkxkxdxhL3dc5",
+      "duration": 254506,
+      "previewUrl": ""
+    },
+    {
+      "id": "59kkHKD21U2A0zoQwkq2Kd",
+      "name": "MOTTAI",
+      "artist": "P丸様｡",
+      "album": "ラブホリック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733113733bacde7ea70875f976",
+      "playedAt": "2026-08-24T01:16:59.667Z",
+      "spotifyUrl": "https://open.spotify.com/track/59kkHKD21U2A0zoQwkq2Kd",
+      "duration": 161946,
+      "previewUrl": ""
+    },
+    {
+      "id": "1OnJWGEQbfCjUymF6zwfDx",
+      "name": "チューリングラブ",
+      "artist": "NANAOAKARI, Sou",
+      "album": "チューリングラブ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bdda816607b59354aa9063f7",
+      "playedAt": "2026-08-24T01:14:17.199Z",
+      "spotifyUrl": "https://open.spotify.com/track/1OnJWGEQbfCjUymF6zwfDx",
+      "duration": 220300,
+      "previewUrl": ""
+    },
+    {
+      "id": "4PXTz0TbOtqE3cGWImYri3",
+      "name": "うい麦畑でつかまえて",
+      "artist": "しぐれうい",
+      "album": "うい麦畑でつかまえて",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b6c0e611ea1428d09ec78d3",
+      "playedAt": "2026-08-24T01:10:27.784Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PXTz0TbOtqE3cGWImYri3",
+      "duration": 224285,
+      "previewUrl": ""
+    },
+    {
+      "id": "1GBzfoHf4FfustFKKMI5gM",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7b5db07ebb87fd79f87c5979c",
+      "playedAt": "2026-08-24T00:59:11.255Z",
+      "spotifyUrl": "https://open.spotify.com/track/1GBzfoHf4FfustFKKMI5gM",
+      "duration": 229333,
+      "previewUrl": ""
+    },
+    {
+      "id": "2xnogqiUeYu9NvougOFPaB",
+      "name": "Doja",
+      "artist": "Central Cee",
+      "album": "Doja",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7f91beea5c989382d5baa2ae7",
+      "playedAt": "2026-08-24T00:46:30.041Z",
+      "spotifyUrl": "https://open.spotify.com/track/2xnogqiUeYu9NvougOFPaB",
+      "duration": 107328,
+      "previewUrl": ""
+    },
+    {
+      "id": "2EfsUIfFiNtXKw5hqWTWGo",
+      "name": "Vossi Bop",
+      "artist": "Stormzy",
+      "album": "Vossi Bop",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b754e16312ecba942b56f51d64",
+      "playedAt": "2026-08-24T00:40:13.228Z",
+      "spotifyUrl": "https://open.spotify.com/track/2EfsUIfFiNtXKw5hqWTWGo",
+      "duration": 197248,
+      "previewUrl": ""
+    },
     {
       "id": "50nfwKoDiSYg8zOCREWAm5",
       "name": "Shivers",
@@ -252,83 +329,6 @@
       "playedAt": "2026-08-22T19:08:09.407Z",
       "spotifyUrl": "https://open.spotify.com/track/3XJCMkEWhd8xwHx6UGGa7C",
       "duration": 134071,
-      "previewUrl": ""
-    },
-    {
-      "id": "6u4CeONpeq1KGfnzgINUVw",
-      "name": "Bravely You",
-      "artist": "Lia, VISUAL ARTS / Key",
-      "album": "Bravely You / 灼け落ちない翼",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273064f7c3ff272858cf699c74b",
-      "playedAt": "2026-08-22T19:02:34.285Z",
-      "spotifyUrl": "https://open.spotify.com/track/6u4CeONpeq1KGfnzgINUVw",
-      "duration": 328653,
-      "previewUrl": ""
-    },
-    {
-      "id": "2fCwv2ppU5nTRTckomIGsd",
-      "name": "REDRED",
-      "artist": "CORTIS",
-      "album": "REDRED",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27324ace1518851b27e9983f739",
-      "playedAt": "2026-08-22T19:02:31.084Z",
-      "spotifyUrl": "https://open.spotify.com/track/2fCwv2ppU5nTRTckomIGsd",
-      "duration": 163001,
-      "previewUrl": ""
-    },
-    {
-      "id": "3M214U0mwSm041GsQR3nrO",
-      "name": "Toxic",
-      "artist": "BoyWithUke",
-      "album": "Serotonin Dreams",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee07023115f822012390d2a0",
-      "playedAt": "2026-08-22T17:53:56.765Z",
-      "spotifyUrl": "https://open.spotify.com/track/3M214U0mwSm041GsQR3nrO",
-      "duration": 168066,
-      "previewUrl": ""
-    },
-    {
-      "id": "2le4lZquBURJYS6TcdAZdx",
-      "name": "絶対王者チョコレート",
-      "artist": "ゆらゆらシスターズ",
-      "album": "絶対王者チョコレート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-08-22T14:45:35.086Z",
-      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
-      "duration": 208223,
-      "previewUrl": ""
-    },
-    {
-      "id": "1SC5rEoYDGUK4NfG82494W",
-      "name": "MONTERO (Call Me By Your Name)",
-      "artist": "Lil Nas X",
-      "album": "MONTERO",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f27e4bdc58ebe249a6b90da0",
-      "playedAt": "2026-08-22T12:28:54.132Z",
-      "spotifyUrl": "https://open.spotify.com/track/1SC5rEoYDGUK4NfG82494W",
-      "duration": 137704,
-      "previewUrl": ""
-    },
-    {
-      "id": "6fTt0CH2t0mdeB2N9XFG5r",
-      "name": "Panini",
-      "artist": "Lil Nas X",
-      "album": "7",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736239187793c9e492e687db01",
-      "playedAt": "2026-08-22T12:24:55.827Z",
-      "spotifyUrl": "https://open.spotify.com/track/6fTt0CH2t0mdeB2N9XFG5r",
-      "duration": 114893,
-      "previewUrl": ""
-    },
-    {
-      "id": "38T0tPVZHcPZyhtOcCP7pF",
-      "name": "STAR WALKIN' (League of Legends Worlds Anthem)",
-      "artist": "Lil Nas X",
-      "album": "STAR WALKIN' (League of Legends Worlds Anthem)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27304cd9a1664fb4539a55643fe",
-      "playedAt": "2026-08-22T12:23:00.485Z",
-      "spotifyUrl": "https://open.spotify.com/track/38T0tPVZHcPZyhtOcCP7pF",
-      "duration": 210575,
       "previewUrl": ""
     }
   ],
