@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-08-24T06:34:48.971Z",
+  "lastUpdated": "2026-08-25T12:25:27.917Z",
   "tracks": [
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-08-25T09:38:43.215Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "3wyWRt8myEL5o432jUXioi",
+      "name": "君色シグナル",
+      "artist": "Luna Haruna",
+      "album": "Candy Lips",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27365a30a7d8ca9452bcb995f79",
+      "playedAt": "2026-08-25T09:25:36.674Z",
+      "spotifyUrl": "https://open.spotify.com/track/3wyWRt8myEL5o432jUXioi",
+      "duration": 282586,
+      "previewUrl": ""
+    },
+    {
+      "id": "0UBUg8NU4XJtQqzTPs8Pkr",
+      "name": "三原色",
+      "artist": "YOASOBI",
+      "album": "THE BOOK 2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c3625a413a9a79facea38c2",
+      "playedAt": "2026-08-25T09:17:24.451Z",
+      "spotifyUrl": "https://open.spotify.com/track/0UBUg8NU4XJtQqzTPs8Pkr",
+      "duration": 220253,
+      "previewUrl": ""
+    },
+    {
+      "id": "2YZa7FpeKe423Wvme0yKNf",
+      "name": "いますぐ輪廻",
+      "artist": "NAKISO",
+      "album": "いますぐ輪廻",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342f821a5480cf2b8248db543",
+      "playedAt": "2026-08-25T09:13:43.748Z",
+      "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
+      "duration": 122482,
+      "previewUrl": ""
+    },
     {
       "id": "6gLBmVXHABkxkxdxhL3dc5",
       "name": "TT",
@@ -285,50 +329,6 @@
       "playedAt": "2026-08-23T20:54:26.686Z",
       "spotifyUrl": "https://open.spotify.com/track/1gFVXBVuYlDUIEdwOrN5T8",
       "duration": 156711,
-      "previewUrl": ""
-    },
-    {
-      "id": "4H89WUjBaQMIiqcnMSVX1j",
-      "name": "人マニア",
-      "artist": "Sasuke Haraguchi",
-      "album": "人マニア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f381b44dcb194d619a487dc",
-      "playedAt": "2026-08-23T20:51:49.529Z",
-      "spotifyUrl": "https://open.spotify.com/track/4H89WUjBaQMIiqcnMSVX1j",
-      "duration": 127200,
-      "previewUrl": ""
-    },
-    {
-      "id": "6J3pPfXLujwsWQpvR6XMgC",
-      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
-      "artist": "TAK, Hatsune Miku, Kasane Teto",
-      "album": "PPPP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
-      "playedAt": "2026-08-23T20:49:41.854Z",
-      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
-      "duration": 154835,
-      "previewUrl": ""
-    },
-    {
-      "id": "4fDralhqIxfoDHrnFSE3n0",
-      "name": "エイリアンエイリアン",
-      "artist": "Nayutalien",
-      "album": "ナユタン星からの物体Ｙ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363cc1e7ee50ed3854f40c367",
-      "playedAt": "2026-08-22T19:11:11.843Z",
-      "spotifyUrl": "https://open.spotify.com/track/4fDralhqIxfoDHrnFSE3n0",
-      "duration": 181973,
-      "previewUrl": ""
-    },
-    {
-      "id": "3XJCMkEWhd8xwHx6UGGa7C",
-      "name": "Looping the Rooms",
-      "artist": "rusino, Hatsune Miku",
-      "album": "Looping the Rooms",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27344f4d8e99ee8335a3a0873b0",
-      "playedAt": "2026-08-22T19:08:09.407Z",
-      "spotifyUrl": "https://open.spotify.com/track/3XJCMkEWhd8xwHx6UGGa7C",
-      "duration": 134071,
       "previewUrl": ""
     }
   ],
