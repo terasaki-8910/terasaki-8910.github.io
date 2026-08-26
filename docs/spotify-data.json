@@ -1,6 +1,105 @@
 {
-  "lastUpdated": "2026-08-25T12:25:27.917Z",
+  "lastUpdated": "2026-08-26T00:38:41.301Z",
   "tracks": [
+    {
+      "id": "5LtKpKOO0fyGBAbv761JCu",
+      "name": "Sunlight",
+      "artist": "TheFatRat, Phaera",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-08-25T23:42:14.432Z",
+      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
+      "duration": 169952,
+      "previewUrl": ""
+    },
+    {
+      "id": "3LtpKP5abr2qqjunvjlX5i",
+      "name": "Doja",
+      "artist": "Central Cee",
+      "album": "Doja",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27391de4cb28d9066225b55e603",
+      "playedAt": "2026-08-25T22:15:40.965Z",
+      "spotifyUrl": "https://open.spotify.com/track/3LtpKP5abr2qqjunvjlX5i",
+      "duration": 97392,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-08-25T22:13:59.815Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
+      "previewUrl": ""
+    },
+    {
+      "id": "4QPEwDdOMhY7rNS05mTyMR",
+      "name": "Own It (feat. Ed Sheeran & Burna Boy)",
+      "artist": "Stormzy, Burna Boy, Ed Sheeran",
+      "album": "Heavy Is The Head",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303bf634fe9526dfcc79f8526",
+      "playedAt": "2026-08-25T22:10:10.243Z",
+      "spotifyUrl": "https://open.spotify.com/track/4QPEwDdOMhY7rNS05mTyMR",
+      "duration": 216706,
+      "previewUrl": ""
+    },
+    {
+      "id": "3HrHhTWonBqF4mDasi8xvC",
+      "name": "BACKBONE",
+      "artist": "Chase & Status, Stormzy",
+      "album": "BACKBONE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731c7e93001b846b12ae2c7e3b",
+      "playedAt": "2026-08-25T22:04:29.881Z",
+      "spotifyUrl": "https://open.spotify.com/track/3HrHhTWonBqF4mDasi8xvC",
+      "duration": 166448,
+      "previewUrl": ""
+    },
+    {
+      "id": "1c7alUM5wJn6O0rG3Gio7I",
+      "name": "メリッサ",
+      "artist": "PornoGraffitti",
+      "album": "PORNO GRAFFITTI BEST BLUE'S",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342d99967c387a76d54bed01f",
+      "playedAt": "2026-08-25T22:01:53.899Z",
+      "spotifyUrl": "https://open.spotify.com/track/1c7alUM5wJn6O0rG3Gio7I",
+      "duration": 274773,
+      "previewUrl": ""
+    },
+    {
+      "id": "5Gs0yo1002k0e9rcpatJha",
+      "name": "all night",
+      "artist": "phritz, hirihiri, Amane Uyama, Kabanagu",
+      "album": "All Nighter, Vol. 6",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0dc00240d79c533e8db2fdd",
+      "playedAt": "2026-08-25T22:00:46.467Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Gs0yo1002k0e9rcpatJha",
+      "duration": 195993,
+      "previewUrl": ""
+    },
+    {
+      "id": "4oPCfEDVIKnPJ6UPkhJPCa",
+      "name": "酔いどれ知らず",
+      "artist": "Kanaria",
+      "album": "酔いどれ知らず",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739801b6931cc8cfe8a2f2ede3",
+      "playedAt": "2026-08-25T22:00:32.596Z",
+      "spotifyUrl": "https://open.spotify.com/track/4oPCfEDVIKnPJ6UPkhJPCa",
+      "duration": 134869,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-08-25T21:08:38.522Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
     {
       "id": "2le4lZquBURJYS6TcdAZdx",
       "name": "絶対王者チョコレート",
@@ -230,105 +329,6 @@
       "playedAt": "2026-08-23T21:28:26.410Z",
       "spotifyUrl": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY",
       "duration": 169917,
-      "previewUrl": ""
-    },
-    {
-      "id": "53DDMPqgMWNrEeE3NjThKE",
-      "name": "Cupid - Twin Version",
-      "artist": "FIFTY FIFTY",
-      "album": "The Beginning",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eb535219dc875690e09dd8f9",
-      "playedAt": "2026-08-23T21:25:36.028Z",
-      "spotifyUrl": "https://open.spotify.com/track/53DDMPqgMWNrEeE3NjThKE",
-      "duration": 173461,
-      "previewUrl": ""
-    },
-    {
-      "id": "5QDLhrAOJJdNAmCTJ8xMyW",
-      "name": "Dynamite",
-      "artist": "BTS",
-      "album": "BE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c07d5d2fdc02ae252fcd07e5",
-      "playedAt": "2026-08-23T21:22:02.025Z",
-      "spotifyUrl": "https://open.spotify.com/track/5QDLhrAOJJdNAmCTJ8xMyW",
-      "duration": 199053,
-      "previewUrl": ""
-    },
-    {
-      "id": "1kPpge9JDLpcj15qgrPbYX",
-      "name": "Good Time",
-      "artist": "Owl City, Carly Rae Jepsen",
-      "album": "The Midsummer Station",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cf5459850259268f98b07f7a",
-      "playedAt": "2026-08-23T21:18:42.491Z",
-      "spotifyUrl": "https://open.spotify.com/track/1kPpge9JDLpcj15qgrPbYX",
-      "duration": 205933,
-      "previewUrl": ""
-    },
-    {
-      "id": "6AztOaIalPI3efaGIyj3cR",
-      "name": "Wicked Wonderland",
-      "artist": "Tungevaag",
-      "album": "Wicked Wonderland",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733557e02007c20eab25ad1c67",
-      "playedAt": "2026-08-23T21:15:07.218Z",
-      "spotifyUrl": "https://open.spotify.com/track/6AztOaIalPI3efaGIyj3cR",
-      "duration": 217270,
-      "previewUrl": ""
-    },
-    {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-08-23T21:11:37.227Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LtKpKOO0fyGBAbv761JCu",
-      "name": "Sunlight",
-      "artist": "TheFatRat, Phaera",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-08-23T21:07:25.418Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
-      "duration": 169952,
-      "previewUrl": ""
-    },
-    {
-      "id": "63yoRZd5zl6Ah30hfDm97k",
-      "name": "M@GICAL CURE! LOVE SHOT! (feat. Hatsune Miku)",
-      "artist": "SAWTOWNE, Hatsune Miku",
-      "album": "M@GICAL CURE! LOVE SHOT!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2f3d4936b6f398d90949081",
-      "playedAt": "2026-08-23T21:01:01.055Z",
-      "spotifyUrl": "https://open.spotify.com/track/63yoRZd5zl6Ah30hfDm97k",
-      "duration": 201875,
-      "previewUrl": ""
-    },
-    {
-      "id": "1qHn38paFvzaDJmML1rQbV",
-      "name": "うそつきマカロン (feat. 重音テト)",
-      "artist": "暴飲暴食P, Teto Kasane",
-      "album": "うそつきマカロン (feat. 重音テト)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bd3e73c1862b19493a73534d",
-      "playedAt": "2026-08-23T20:57:38.737Z",
-      "spotifyUrl": "https://open.spotify.com/track/1qHn38paFvzaDJmML1rQbV",
-      "duration": 169000,
-      "previewUrl": ""
-    },
-    {
-      "id": "1gFVXBVuYlDUIEdwOrN5T8",
-      "name": "ダイダイダイダイダイキライ",
-      "artist": "雨良 Amala",
-      "album": "ダイダイダイダイダイキライ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6c46632736f25e9d86f0a9a",
-      "playedAt": "2026-08-23T20:54:26.686Z",
-      "spotifyUrl": "https://open.spotify.com/track/1gFVXBVuYlDUIEdwOrN5T8",
-      "duration": 156711,
       "previewUrl": ""
     }
   ],
