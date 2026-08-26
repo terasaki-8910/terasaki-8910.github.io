@@ -3,11 +3,13 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { AsciiHandCursor } from './components/AsciiHandCursor';
 import { loadCharaData } from './data/loadCharaData';
 import { useBayesInterview } from './hooks/useBayesInterview';
+import { useNoticeSeen } from './hooks/useNoticeSeen';
 import { useSessionLog, type SessionLogRecord } from './hooks/useSessionLog';
 import { omakase, type Dataset, type Scored } from './engine/recommend';
 import type { Probe } from './engine/questions';
 import { GuessScreen } from './screens/GuessScreen';
 import { NoGuessScreen } from './screens/NoGuessScreen';
+import { NoticeScreen } from './screens/NoticeScreen';
 import { QuestionScreen } from './screens/QuestionScreen';
 import { ResultScreen } from './screens/ResultScreen';
 
@@ -50,6 +52,7 @@ function useTargetGuard() {
 function BayesFlow({ dataset }: { dataset: Dataset }) {
   const interview = useBayesInterview(dataset);
   const { log } = useSessionLog();
+  const { seen: noticeSeen, markSeen: markNoticeSeen } = useNoticeSeen();
   const [omakaseResult, setOmakaseResult] = useState<Scored | null>(null);
   const { run: guard, reset: resetGuard } = useTargetGuard();
 
@@ -73,6 +76,13 @@ function BayesFlow({ dataset }: { dataset: Dataset }) {
     interview.reset();
     setOmakaseResult(null);
   }, [resetGuard, interview]);
+
+  // 初回のみ、質問より前に注意書きを挟む。最初の質問がどの軸になるかはベイズ選択で
+  // 毎回変わりうる（bayesNextProbe が情報量最大の軸を選ぶため、決め打ちの1問目が無い）
+  // ので、特定の質問の手前ではなく「質問そのものの前」に固定で置く。
+  if (!noticeSeen) {
+    return <NoticeScreen onAcknowledge={markNoticeSeen} />;
+  }
 
   // おまかせは質問・推測ループを経ない独立経路。結果表示中は interview 側の状態
   // （質問の途中経過など）を無視して直接 result 画面へ出す。
