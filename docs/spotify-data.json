@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-08-26T00:38:41.301Z",
+  "lastUpdated": "2026-08-26T06:28:47.863Z",
   "tracks": [
+    {
+      "id": "4Z6zwtZtZ5V2GGb2DL6sXU",
+      "name": "韻波句徒",
+      "artist": "CHEHON",
+      "album": "韻波句徒",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27353b9c24bb39f5690829cc4df",
+      "playedAt": "2026-08-26T03:37:30.881Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Z6zwtZtZ5V2GGb2DL6sXU",
+      "duration": 293266,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-08-26T02:08:31.924Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
     {
       "id": "5LtKpKOO0fyGBAbv761JCu",
       "name": "Sunlight",
@@ -307,28 +329,6 @@
       "playedAt": "2026-08-23T21:34:25.609Z",
       "spotifyUrl": "https://open.spotify.com/track/4L3Vw8hTyqJ1AdyypY4e61",
       "duration": 193400,
-      "previewUrl": ""
-    },
-    {
-      "id": "4TbkhyiZjLS2srPUVez9Fm",
-      "name": "JUMP",
-      "artist": "BLACKPINK",
-      "album": "JUMP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732ff339ba764183dd6684be1c",
-      "playedAt": "2026-08-23T21:31:11.577Z",
-      "spotifyUrl": "https://open.spotify.com/track/4TbkhyiZjLS2srPUVez9Fm",
-      "duration": 164718,
-      "previewUrl": ""
-    },
-    {
-      "id": "5vNRhkKd0yEAg8suGBpjeY",
-      "name": "APT.",
-      "artist": "ROSÉ, Bruno Mars",
-      "album": "APT.",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27346085aa1855bd888abc51a5a",
-      "playedAt": "2026-08-23T21:28:26.410Z",
-      "spotifyUrl": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY",
-      "duration": 169917,
       "previewUrl": ""
     }
   ],
