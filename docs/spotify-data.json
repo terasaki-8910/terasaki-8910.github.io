@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-26T06:28:47.863Z",
+  "lastUpdated": "2026-08-26T12:28:24.729Z",
   "tracks": [
+    {
+      "id": "7H5CsjEafNygkvcm69RevN",
+      "name": "COLD",
+      "artist": "Nemzzz",
+      "album": "RENT'S DUE (DELUXE)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b8e676942612cfdbfb68cd4",
+      "playedAt": "2026-08-26T06:44:33.454Z",
+      "spotifyUrl": "https://open.spotify.com/track/7H5CsjEafNygkvcm69RevN",
+      "duration": 143661,
+      "previewUrl": ""
+    },
     {
       "id": "4Z6zwtZtZ5V2GGb2DL6sXU",
       "name": "韻波句徒",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-23T21:36:29.434Z",
       "spotifyUrl": "https://open.spotify.com/track/0fK7ie6XwGxQTIkpFoWkd1",
       "duration": 123517,
-      "previewUrl": ""
-    },
-    {
-      "id": "4L3Vw8hTyqJ1AdyypY4e61",
-      "name": "Call Me Maybe",
-      "artist": "Carly Rae Jepsen",
-      "album": "Kiss",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735039eac30f931ef39405717b",
-      "playedAt": "2026-08-23T21:34:25.609Z",
-      "spotifyUrl": "https://open.spotify.com/track/4L3Vw8hTyqJ1AdyypY4e61",
-      "duration": 193400,
       "previewUrl": ""
     }
   ],
