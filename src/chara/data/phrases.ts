@@ -29,7 +29,8 @@ export const RESULT_PHRASES: readonly string[] = [
 export const TAGLINE_PHRASES: readonly string[] = [
   'いくつかの質問に答えると、条件に合うキャラを推測します',
   '魔人はなんでもお見通しだ。',
-  'こういうのが好きなんでしょ?',
+  '全部、見えている。',
+  '隠しごとは、通用しない。',
 ];
 
 /** 配列から1つ選ぶ。空配列でも落ちないようにしておく。 */
