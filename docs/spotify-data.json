@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-08-26T12:28:24.729Z",
+  "lastUpdated": "2026-08-26T19:29:02.187Z",
   "tracks": [
+    {
+      "id": "6lcqXYjDSGxx69DurXx0rF",
+      "name": "ループザルーム (feat. 初音ミク)",
+      "artist": "ルシノ, Hatsune Miku",
+      "album": "ループザルーム / ランベントアリア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
+      "playedAt": "2026-08-26T16:07:04.620Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
+      "duration": 134071,
+      "previewUrl": ""
+    },
+    {
+      "id": "3BPnFpAL02Bos8EoTLnO9R",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "KPP BEST",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
+      "playedAt": "2026-08-26T16:04:50.085Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "17OQVshtovwVo2vk6tuzwn",
+      "name": "ライアーダンサー",
+      "artist": "マサラダ",
+      "album": "ライアーダンサー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
+      "playedAt": "2026-08-26T16:01:29.511Z",
+      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
+      "duration": 242459,
+      "previewUrl": ""
+    },
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-08-26T15:57:07.160Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "2xoSrvXdQV8J9nTF2VFtyI",
+      "name": "Brain Power",
+      "artist": "NOMA",
+      "album": "First Flight",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273efe46165c0fbd9920270256d",
+      "playedAt": "2026-08-26T15:51:30.547Z",
+      "spotifyUrl": "https://open.spotify.com/track/2xoSrvXdQV8J9nTF2VFtyI",
+      "duration": 118055,
+      "previewUrl": ""
+    },
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-08-26T15:49:31.902Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-08-26T15:44:58.753Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
     {
       "id": "7H5CsjEafNygkvcm69RevN",
       "name": "COLD",
@@ -21,17 +98,6 @@
       "playedAt": "2026-08-26T03:37:30.881Z",
       "spotifyUrl": "https://open.spotify.com/track/4Z6zwtZtZ5V2GGb2DL6sXU",
       "duration": 293266,
-      "previewUrl": ""
-    },
-    {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-08-26T02:08:31.924Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
       "previewUrl": ""
     },
     {
@@ -263,72 +329,6 @@
       "playedAt": "2026-08-24T00:29:49.509Z",
       "spotifyUrl": "https://open.spotify.com/track/50nfwKoDiSYg8zOCREWAm5",
       "duration": 207853,
-      "previewUrl": ""
-    },
-    {
-      "id": "34gCuhDGsG4bRPIf9bb02f",
-      "name": "Thinking out Loud",
-      "artist": "Ed Sheeran",
-      "album": "x (Deluxe Edition)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27313b3e37318a0c247b550bccd",
-      "playedAt": "2026-08-24T00:25:31.311Z",
-      "spotifyUrl": "https://open.spotify.com/track/34gCuhDGsG4bRPIf9bb02f",
-      "duration": 281560,
-      "previewUrl": ""
-    },
-    {
-      "id": "1WZGyYe1PDvQ5aaET6qILe",
-      "name": "金星のダンス",
-      "artist": "Nayutalien",
-      "album": "ナユタン星からの物体Z",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273759ef471de167f1d2ca36bd7",
-      "playedAt": "2026-08-24T00:05:02.572Z",
-      "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
-      "duration": 209333,
-      "previewUrl": ""
-    },
-    {
-      "id": "2xoSrvXdQV8J9nTF2VFtyI",
-      "name": "Brain Power",
-      "artist": "NOMA",
-      "album": "First Flight",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273efe46165c0fbd9920270256d",
-      "playedAt": "2026-08-23T21:46:14.494Z",
-      "spotifyUrl": "https://open.spotify.com/track/2xoSrvXdQV8J9nTF2VFtyI",
-      "duration": 118055,
-      "previewUrl": ""
-    },
-    {
-      "id": "1aKvZDoLGkNMxoRYgkckZG",
-      "name": "Magnetic",
-      "artist": "ILLIT",
-      "album": "SUPER REAL ME",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f037c5fb9de6c78726cb8e2c",
-      "playedAt": "2026-08-23T21:42:26.177Z",
-      "spotifyUrl": "https://open.spotify.com/track/1aKvZDoLGkNMxoRYgkckZG",
-      "duration": 160688,
-      "previewUrl": ""
-    },
-    {
-      "id": "5r43qanLhUCdBj8HN3fa6B",
-      "name": "Sunshine",
-      "artist": "OneRepublic",
-      "album": "Sunshine",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b248f42fb53c64faf1d748e",
-      "playedAt": "2026-08-23T21:39:13.764Z",
-      "spotifyUrl": "https://open.spotify.com/track/5r43qanLhUCdBj8HN3fa6B",
-      "duration": 163854,
-      "previewUrl": ""
-    },
-    {
-      "id": "0fK7ie6XwGxQTIkpFoWkd1",
-      "name": "like JENNIE",
-      "artist": "JENNIE",
-      "album": "Ruby",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dcf27dec5e479b2e39c4c993",
-      "playedAt": "2026-08-23T21:36:29.434Z",
-      "spotifyUrl": "https://open.spotify.com/track/0fK7ie6XwGxQTIkpFoWkd1",
-      "duration": 123517,
       "previewUrl": ""
     }
   ],
