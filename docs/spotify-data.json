@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-08-28T01:53:16.826Z",
+  "lastUpdated": "2026-08-28T17:51:45.391Z",
   "tracks": [
+    {
+      "id": "0SRKZusotAQh1RfSjqZyTV",
+      "name": "Time Flows Ever Onward",
+      "artist": "Evan Call",
+      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
+      "playedAt": "2026-08-28T04:27:46.680Z",
+      "spotifyUrl": "https://open.spotify.com/track/0SRKZusotAQh1RfSjqZyTV",
+      "duration": 140075,
+      "previewUrl": ""
+    },
+    {
+      "id": "08y2uA28Lzni73iWtAZac4",
+      "name": "ZOLTRAAK \"Frieren 葬送のフリーレン\" - Epic Orchestral",
+      "artist": "AVIAND, Watchme iD",
+      "album": "ZOLTRAAK \"Frieren 葬送のフリーレン\" (Epic Orchestral)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6275892b7b01d758b79e24d",
+      "playedAt": "2026-08-28T04:25:24.325Z",
+      "spotifyUrl": "https://open.spotify.com/track/08y2uA28Lzni73iWtAZac4",
+      "duration": 278776,
+      "previewUrl": ""
+    },
+    {
+      "id": "7rG7wK7UkKRqUaGfWJjFnM",
+      "name": "Overwatch Victory Theme (Epic Fanmade)",
+      "artist": "Lucas Ricciotti",
+      "album": "Overwatch Victory Theme (Epic Fanmade)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27360e66df0bea3e994cfa43137",
+      "playedAt": "2026-08-28T04:20:44.936Z",
+      "spotifyUrl": "https://open.spotify.com/track/7rG7wK7UkKRqUaGfWJjFnM",
+      "duration": 203142,
+      "previewUrl": ""
+    },
+    {
+      "id": "2XuGMnAROucWmjjhcNL6ei",
+      "name": "Main Theme (The Legend of Zelda: Breath of the Wild) メインテーマ（ゼルダの伝説 ブレス オブ ザ ワイルド）",
+      "artist": "maats, Manaka Kataoka, Yasuaki Iwata",
+      "album": "The Legend of Zelda: Breath of the Wild (Original Soundtrack)「ゼルダの伝説 ブレス オブ ザ ワイルド（オリジナル・サウンドトラック）」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349723458157188fb5f18f334",
+      "playedAt": "2026-08-28T04:17:21.342Z",
+      "spotifyUrl": "https://open.spotify.com/track/2XuGMnAROucWmjjhcNL6ei",
+      "duration": 115400,
+      "previewUrl": ""
+    },
+    {
+      "id": "6GdoprvrVSVMX7Cxk7mym0",
+      "name": "Knight's Templar",
+      "artist": "Adriel Fair",
+      "album": "Arms of the Wind",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273139e2b4addb6ccfec01ca360",
+      "playedAt": "2026-08-28T04:15:20.295Z",
+      "spotifyUrl": "https://open.spotify.com/track/6GdoprvrVSVMX7Cxk7mym0",
+      "duration": 94714,
+      "previewUrl": ""
+    },
+    {
+      "id": "5FF8mOgxM7veYg66bo0372",
+      "name": "The Magic Within",
+      "artist": "Evan Call",
+      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b0d854bf50f1a54e78afb2b",
+      "playedAt": "2026-08-28T04:13:45.276Z",
+      "spotifyUrl": "https://open.spotify.com/track/5FF8mOgxM7veYg66bo0372",
+      "duration": 143533,
+      "previewUrl": ""
+    },
+    {
+      "id": "30lXCrnKs5TJJOuSVwiQn1",
+      "name": "Zoltraak",
+      "artist": "Evan Call",
+      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
+      "playedAt": "2026-08-28T04:11:21.323Z",
+      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
+      "duration": 140664,
+      "previewUrl": ""
+    },
     {
       "id": "51Fjme0JiitpyXKuyQiCDo",
       "name": "Lalala",
@@ -252,83 +329,6 @@
       "playedAt": "2026-08-25T09:13:43.748Z",
       "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
       "duration": 122482,
-      "previewUrl": ""
-    },
-    {
-      "id": "6gLBmVXHABkxkxdxhL3dc5",
-      "name": "TT",
-      "artist": "TWICE",
-      "album": "TT",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b749928884b92aeffbda21b9a5",
-      "playedAt": "2026-08-24T01:21:15.148Z",
-      "spotifyUrl": "https://open.spotify.com/track/6gLBmVXHABkxkxdxhL3dc5",
-      "duration": 254506,
-      "previewUrl": ""
-    },
-    {
-      "id": "59kkHKD21U2A0zoQwkq2Kd",
-      "name": "MOTTAI",
-      "artist": "P丸様｡",
-      "album": "ラブホリック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733113733bacde7ea70875f976",
-      "playedAt": "2026-08-24T01:16:59.667Z",
-      "spotifyUrl": "https://open.spotify.com/track/59kkHKD21U2A0zoQwkq2Kd",
-      "duration": 161946,
-      "previewUrl": ""
-    },
-    {
-      "id": "1OnJWGEQbfCjUymF6zwfDx",
-      "name": "チューリングラブ",
-      "artist": "NANAOAKARI, Sou",
-      "album": "チューリングラブ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bdda816607b59354aa9063f7",
-      "playedAt": "2026-08-24T01:14:17.199Z",
-      "spotifyUrl": "https://open.spotify.com/track/1OnJWGEQbfCjUymF6zwfDx",
-      "duration": 220300,
-      "previewUrl": ""
-    },
-    {
-      "id": "4PXTz0TbOtqE3cGWImYri3",
-      "name": "うい麦畑でつかまえて",
-      "artist": "しぐれうい",
-      "album": "うい麦畑でつかまえて",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b6c0e611ea1428d09ec78d3",
-      "playedAt": "2026-08-24T01:10:27.784Z",
-      "spotifyUrl": "https://open.spotify.com/track/4PXTz0TbOtqE3cGWImYri3",
-      "duration": 224285,
-      "previewUrl": ""
-    },
-    {
-      "id": "1GBzfoHf4FfustFKKMI5gM",
-      "name": "Sprinter",
-      "artist": "Dave, Central Cee",
-      "album": "Sprinter",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7b5db07ebb87fd79f87c5979c",
-      "playedAt": "2026-08-24T00:59:11.255Z",
-      "spotifyUrl": "https://open.spotify.com/track/1GBzfoHf4FfustFKKMI5gM",
-      "duration": 229333,
-      "previewUrl": ""
-    },
-    {
-      "id": "2xnogqiUeYu9NvougOFPaB",
-      "name": "Doja",
-      "artist": "Central Cee",
-      "album": "Doja",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b7f91beea5c989382d5baa2ae7",
-      "playedAt": "2026-08-24T00:46:30.041Z",
-      "spotifyUrl": "https://open.spotify.com/track/2xnogqiUeYu9NvougOFPaB",
-      "duration": 107328,
-      "previewUrl": ""
-    },
-    {
-      "id": "2EfsUIfFiNtXKw5hqWTWGo",
-      "name": "Vossi Bop",
-      "artist": "Stormzy",
-      "album": "Vossi Bop",
-      "albumArt": "https://i.scdn.co/image/ab6742d3000053b754e16312ecba942b56f51d64",
-      "playedAt": "2026-08-24T00:40:13.228Z",
-      "spotifyUrl": "https://open.spotify.com/track/2EfsUIfFiNtXKw5hqWTWGo",
-      "duration": 197248,
       "previewUrl": ""
     }
   ],
