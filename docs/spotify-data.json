@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-08-28T17:51:45.391Z",
+  "lastUpdated": "2026-08-29T01:17:25.302Z",
   "tracks": [
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-08-29T00:25:57.690Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "2xoSrvXdQV8J9nTF2VFtyI",
+      "name": "Brain Power",
+      "artist": "NOMA",
+      "album": "First Flight",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273efe46165c0fbd9920270256d",
+      "playedAt": "2026-08-28T22:36:40.818Z",
+      "spotifyUrl": "https://open.spotify.com/track/2xoSrvXdQV8J9nTF2VFtyI",
+      "duration": 118055,
+      "previewUrl": ""
+    },
+    {
+      "id": "5w6J6EVuYcggF1kS7Ynha0",
+      "name": "Judas (\"Gojo vs Sukuna\") - Epic Orchestral Version",
+      "artist": "Atharva Mohite",
+      "album": "Judas (\"Gojo vs Sukuna\") [Epic Orchestral Version]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b61d808c3fffdf6fc82fe334",
+      "playedAt": "2026-08-28T22:32:53.016Z",
+      "spotifyUrl": "https://open.spotify.com/track/5w6J6EVuYcggF1kS7Ynha0",
+      "duration": 214736,
+      "previewUrl": ""
+    },
     {
       "id": "0SRKZusotAQh1RfSjqZyTV",
       "name": "Time Flows Ever Onward",
@@ -90,17 +123,6 @@
       "previewUrl": ""
     },
     {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-08-27T16:15:54.782Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
-      "previewUrl": ""
-    },
-    {
       "id": "3HrHhTWonBqF4mDasi8xvC",
       "name": "BACKBONE",
       "artist": "Chase & Status, Stormzy",
@@ -153,17 +175,6 @@
       "playedAt": "2026-08-26T15:57:07.160Z",
       "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
       "duration": 176960,
-      "previewUrl": ""
-    },
-    {
-      "id": "2xoSrvXdQV8J9nTF2VFtyI",
-      "name": "Brain Power",
-      "artist": "NOMA",
-      "album": "First Flight",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273efe46165c0fbd9920270256d",
-      "playedAt": "2026-08-26T15:51:30.547Z",
-      "spotifyUrl": "https://open.spotify.com/track/2xoSrvXdQV8J9nTF2VFtyI",
-      "duration": 118055,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-25T09:17:24.451Z",
       "spotifyUrl": "https://open.spotify.com/track/0UBUg8NU4XJtQqzTPs8Pkr",
       "duration": 220253,
-      "previewUrl": ""
-    },
-    {
-      "id": "2YZa7FpeKe423Wvme0yKNf",
-      "name": "いますぐ輪廻",
-      "artist": "NAKISO",
-      "album": "いますぐ輪廻",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342f821a5480cf2b8248db543",
-      "playedAt": "2026-08-25T09:13:43.748Z",
-      "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
-      "duration": 122482,
       "previewUrl": ""
     }
   ],
