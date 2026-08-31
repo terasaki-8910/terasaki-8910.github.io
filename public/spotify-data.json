@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-08-31T02:14:41.812Z",
+  "lastUpdated": "2026-08-31T22:10:00.069Z",
   "tracks": [
+    {
+      "id": "5ic62hKqeDhZsa9l6YQxzJ",
+      "name": "メズマライザー (feat. 初音ミク&重音テト)",
+      "artist": "32ki, Hatsune Miku, 重音テト",
+      "album": "メズマライザー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321333eb66e3cf9f3818e789f",
+      "playedAt": "2026-08-31T16:10:34.329Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
+      "duration": 156972,
+      "previewUrl": ""
+    },
     {
       "id": "7ugsistwEp0PhP4Ddj9cra",
       "name": "ハレ晴レユカイ",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-28T04:15:20.295Z",
       "spotifyUrl": "https://open.spotify.com/track/6GdoprvrVSVMX7Cxk7mym0",
       "duration": 94714,
-      "previewUrl": ""
-    },
-    {
-      "id": "5FF8mOgxM7veYg66bo0372",
-      "name": "The Magic Within",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b0d854bf50f1a54e78afb2b",
-      "playedAt": "2026-08-28T04:13:45.276Z",
-      "spotifyUrl": "https://open.spotify.com/track/5FF8mOgxM7veYg66bo0372",
-      "duration": 143533,
       "previewUrl": ""
     }
   ],
