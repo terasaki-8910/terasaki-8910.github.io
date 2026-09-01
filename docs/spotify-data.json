@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-08-31T22:10:00.069Z",
+  "lastUpdated": "2026-09-01T02:33:04.977Z",
   "tracks": [
+    {
+      "id": "7jEpM9sB8FZFkMYmK8rtev",
+      "name": "粛聖!! ロリ神レクイエム☆",
+      "artist": "しぐれうい",
+      "album": "まだ雨はやまない",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e7d1f87062ee4575dbdcc52",
+      "playedAt": "2026-09-01T02:28:46.779Z",
+      "spotifyUrl": "https://open.spotify.com/track/7jEpM9sB8FZFkMYmK8rtev",
+      "duration": 273600,
+      "previewUrl": ""
+    },
+    {
+      "id": "5vNRhkKd0yEAg8suGBpjeY",
+      "name": "APT.",
+      "artist": "ROSÉ, Bruno Mars",
+      "album": "APT.",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27346085aa1855bd888abc51a5a",
+      "playedAt": "2026-09-01T02:24:43.254Z",
+      "spotifyUrl": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY",
+      "duration": 169917,
+      "previewUrl": ""
+    },
+    {
+      "id": "0PWIc3fMjsnfxv2SyQ2lRx",
+      "name": "世界は恋に落ちている",
+      "artist": "CHiCO with HoneyWorks",
+      "album": "世界は恋に落ちている",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273731dda76ba334bd44a043b43",
+      "playedAt": "2026-09-01T01:47:22.433Z",
+      "spotifyUrl": "https://open.spotify.com/track/0PWIc3fMjsnfxv2SyQ2lRx",
+      "duration": 311293,
+      "previewUrl": ""
+    },
+    {
+      "id": "2mOgz38YkByMHtL0PiaQbZ",
+      "name": "Brain Power - Long Version",
+      "artist": "NOMA",
+      "album": "Chronikle",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d77c7feeb6d7ac657fe1cbd2",
+      "playedAt": "2026-09-01T01:34:53.506Z",
+      "spotifyUrl": "https://open.spotify.com/track/2mOgz38YkByMHtL0PiaQbZ",
+      "duration": 367802,
+      "previewUrl": ""
+    },
+    {
+      "id": "3qazo1nDoHIWHg8KHVmujW",
+      "name": "Song Of Storms",
+      "artist": "The Marcus Hedges Trend Orchestra",
+      "album": "Zelda: Link's Ocarina Orchestrated",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aa940b57213e789d913f8546",
+      "playedAt": "2026-09-01T01:21:14.571Z",
+      "spotifyUrl": "https://open.spotify.com/track/3qazo1nDoHIWHg8KHVmujW",
+      "duration": 82940,
+      "previewUrl": ""
+    },
+    {
+      "id": "034jvsVh9m8f2lRMvNeHWv",
+      "name": "Gourmet Race (From \"Kirby Super Star\")",
+      "artist": "Qumu",
+      "album": "Year 7",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734366c48ae7d8dce239c62c47",
+      "playedAt": "2026-09-01T00:29:28.989Z",
+      "spotifyUrl": "https://open.spotify.com/track/034jvsVh9m8f2lRMvNeHWv",
+      "duration": 195510,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-09-01T00:26:12.892Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
     {
       "id": "5ic62hKqeDhZsa9l6YQxzJ",
       "name": "メズマライザー (feat. 初音ミク&重音テト)",
@@ -65,17 +142,6 @@
       "playedAt": "2026-08-30T22:34:13.839Z",
       "spotifyUrl": "https://open.spotify.com/track/4ImjstkvWuxK1eElOJYd6R",
       "duration": 191250,
-      "previewUrl": ""
-    },
-    {
-      "id": "2mOgz38YkByMHtL0PiaQbZ",
-      "name": "Brain Power - Long Version",
-      "artist": "NOMA",
-      "album": "Chronikle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d77c7feeb6d7ac657fe1cbd2",
-      "playedAt": "2026-08-30T22:29:41.315Z",
-      "spotifyUrl": "https://open.spotify.com/track/2mOgz38YkByMHtL0PiaQbZ",
-      "duration": 367802,
       "previewUrl": ""
     },
     {
@@ -233,17 +299,6 @@
       "previewUrl": ""
     },
     {
-      "id": "034jvsVh9m8f2lRMvNeHWv",
-      "name": "Gourmet Race (From \"Kirby Super Star\")",
-      "artist": "Qumu",
-      "album": "Year 7",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734366c48ae7d8dce239c62c47",
-      "playedAt": "2026-08-30T21:02:42.095Z",
-      "spotifyUrl": "https://open.spotify.com/track/034jvsVh9m8f2lRMvNeHWv",
-      "duration": 195510,
-      "previewUrl": ""
-    },
-    {
       "id": "4N3CAZ7qXbPKPWrcXd4gSh",
       "name": "Freakshow",
       "artist": "Dirty Palm, LexBlaze",
@@ -274,61 +329,6 @@
       "playedAt": "2026-08-28T22:32:53.016Z",
       "spotifyUrl": "https://open.spotify.com/track/5w6J6EVuYcggF1kS7Ynha0",
       "duration": 214736,
-      "previewUrl": ""
-    },
-    {
-      "id": "0SRKZusotAQh1RfSjqZyTV",
-      "name": "Time Flows Ever Onward",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
-      "playedAt": "2026-08-28T04:27:46.680Z",
-      "spotifyUrl": "https://open.spotify.com/track/0SRKZusotAQh1RfSjqZyTV",
-      "duration": 140075,
-      "previewUrl": ""
-    },
-    {
-      "id": "08y2uA28Lzni73iWtAZac4",
-      "name": "ZOLTRAAK \"Frieren 葬送のフリーレン\" - Epic Orchestral",
-      "artist": "AVIAND, Watchme iD",
-      "album": "ZOLTRAAK \"Frieren 葬送のフリーレン\" (Epic Orchestral)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6275892b7b01d758b79e24d",
-      "playedAt": "2026-08-28T04:25:24.325Z",
-      "spotifyUrl": "https://open.spotify.com/track/08y2uA28Lzni73iWtAZac4",
-      "duration": 278776,
-      "previewUrl": ""
-    },
-    {
-      "id": "7rG7wK7UkKRqUaGfWJjFnM",
-      "name": "Overwatch Victory Theme (Epic Fanmade)",
-      "artist": "Lucas Ricciotti",
-      "album": "Overwatch Victory Theme (Epic Fanmade)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27360e66df0bea3e994cfa43137",
-      "playedAt": "2026-08-28T04:20:44.936Z",
-      "spotifyUrl": "https://open.spotify.com/track/7rG7wK7UkKRqUaGfWJjFnM",
-      "duration": 203142,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XuGMnAROucWmjjhcNL6ei",
-      "name": "Main Theme (The Legend of Zelda: Breath of the Wild) メインテーマ（ゼルダの伝説 ブレス オブ ザ ワイルド）",
-      "artist": "maats, Manaka Kataoka, Yasuaki Iwata",
-      "album": "The Legend of Zelda: Breath of the Wild (Original Soundtrack)「ゼルダの伝説 ブレス オブ ザ ワイルド（オリジナル・サウンドトラック）」",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27349723458157188fb5f18f334",
-      "playedAt": "2026-08-28T04:17:21.342Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XuGMnAROucWmjjhcNL6ei",
-      "duration": 115400,
-      "previewUrl": ""
-    },
-    {
-      "id": "6GdoprvrVSVMX7Cxk7mym0",
-      "name": "Knight's Templar",
-      "artist": "Adriel Fair",
-      "album": "Arms of the Wind",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273139e2b4addb6ccfec01ca360",
-      "playedAt": "2026-08-28T04:15:20.295Z",
-      "spotifyUrl": "https://open.spotify.com/track/6GdoprvrVSVMX7Cxk7mym0",
-      "duration": 94714,
       "previewUrl": ""
     }
   ],
