@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-09-01T02:33:04.977Z",
+  "lastUpdated": "2026-09-01T10:44:11.692Z",
   "tracks": [
+    {
+      "id": "1chTElozugAFsW2x03IS6d",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "なんだこれくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
+      "playedAt": "2026-09-01T04:19:41.446Z",
+      "spotifyUrl": "https://open.spotify.com/track/1chTElozugAFsW2x03IS6d",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "407GWcB9QwD3aiX0M7RCFT",
+      "name": "GYB!!",
+      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
+      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
+      "playedAt": "2026-09-01T04:16:20.947Z",
+      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
+      "duration": 218573,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-09-01T04:12:41.933Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "5LtKpKOO0fyGBAbv761JCu",
+      "name": "Sunlight",
+      "artist": "TheFatRat, Phaera",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-09-01T03:52:24.428Z",
+      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
+      "duration": 169952,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-09-01T03:23:52.882Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-09-01T02:49:41.499Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-09-01T02:44:26.367Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "5g24szGiFbRVEZQC1luDmW",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
+      "playedAt": "2026-09-01T02:39:13.221Z",
+      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
+      "duration": 250253,
+      "previewUrl": ""
+    },
     {
       "id": "7jEpM9sB8FZFkMYmK8rtev",
       "name": "粛聖!! ロリ神レクイエム☆",
@@ -241,94 +329,6 @@
       "playedAt": "2026-08-30T21:19:46.614Z",
       "spotifyUrl": "https://open.spotify.com/track/0JbGlD1FjnczH63mC2t7An",
       "duration": 132401,
-      "previewUrl": ""
-    },
-    {
-      "id": "7DG6A3XsTxbMC9Fpkh74W3",
-      "name": "Gerudo Valley",
-      "artist": "Super Guitar Bros",
-      "album": "Ocarina of Time",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bb6f8c7b085f5020bc79951",
-      "playedAt": "2026-08-30T21:17:33.683Z",
-      "spotifyUrl": "https://open.spotify.com/track/7DG6A3XsTxbMC9Fpkh74W3",
-      "duration": 123717,
-      "previewUrl": ""
-    },
-    {
-      "id": "4PO8fERDL1d1FQA7uHg8il",
-      "name": "Among Us",
-      "artist": "Sembari +",
-      "album": "Among Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
-      "playedAt": "2026-08-30T21:15:29.441Z",
-      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
-      "duration": 90508,
-      "previewUrl": ""
-    },
-    {
-      "id": "752WJrwNFCg0IRwKvr5RT5",
-      "name": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "artist": "Tudd, GameChops",
-      "album": "The World Revolving (Jevil's Theme) [From \"Deltarune\"]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273263422e910059b59bbdb68d9",
-      "playedAt": "2026-08-30T21:13:58.318Z",
-      "spotifyUrl": "https://open.spotify.com/track/752WJrwNFCg0IRwKvr5RT5",
-      "duration": 237611,
-      "previewUrl": ""
-    },
-    {
-      "id": "3oSxiGDZr2AbJLu2PzAQuY",
-      "name": "Maple Treeway (Mario Kart Wii)",
-      "artist": "The Consouls, PitTan",
-      "album": "Maple Treeway (Mario Kart Wii)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a326d29f92010679662ab31",
-      "playedAt": "2026-08-30T21:10:00.186Z",
-      "spotifyUrl": "https://open.spotify.com/track/3oSxiGDZr2AbJLu2PzAQuY",
-      "duration": 221538,
-      "previewUrl": ""
-    },
-    {
-      "id": "716HpbfSkMkU7TwQsJlhHT",
-      "name": "Sweden",
-      "artist": "C418",
-      "album": "Minecraft - Volume Alpha",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6f6056c9ded5242ca245c56",
-      "playedAt": "2026-08-30T21:06:18.110Z",
-      "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
-      "duration": 215500,
-      "previewUrl": ""
-    },
-    {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-08-29T02:57:47.187Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
-      "previewUrl": ""
-    },
-    {
-      "id": "2xoSrvXdQV8J9nTF2VFtyI",
-      "name": "Brain Power",
-      "artist": "NOMA",
-      "album": "First Flight",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273efe46165c0fbd9920270256d",
-      "playedAt": "2026-08-28T22:36:40.818Z",
-      "spotifyUrl": "https://open.spotify.com/track/2xoSrvXdQV8J9nTF2VFtyI",
-      "duration": 118055,
-      "previewUrl": ""
-    },
-    {
-      "id": "5w6J6EVuYcggF1kS7Ynha0",
-      "name": "Judas (\"Gojo vs Sukuna\") - Epic Orchestral Version",
-      "artist": "Atharva Mohite",
-      "album": "Judas (\"Gojo vs Sukuna\") [Epic Orchestral Version]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b61d808c3fffdf6fc82fe334",
-      "playedAt": "2026-08-28T22:32:53.016Z",
-      "spotifyUrl": "https://open.spotify.com/track/5w6J6EVuYcggF1kS7Ynha0",
-      "duration": 214736,
       "previewUrl": ""
     }
   ],
