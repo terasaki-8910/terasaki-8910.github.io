@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-09-02T01:54:14.394Z",
+  "lastUpdated": "2026-09-02T10:08:54.426Z",
   "tracks": [
+    {
+      "id": "4iYxrnTvYsTtyphOTqTvkh",
+      "name": "Take Me Back To London (Sir Spyro Remix) [feat. Stormzy, Jaykae & Aitch]",
+      "artist": "Ed Sheeran, Jaykae, Aitch, Stormzy, Sir Spyro",
+      "album": "Take Me Back To London (Remix) [feat. Stormzy, Jaykae & Aitch]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f973c4d29e4b8c692996685",
+      "playedAt": "2026-09-02T07:36:08.770Z",
+      "spotifyUrl": "https://open.spotify.com/track/4iYxrnTvYsTtyphOTqTvkh",
+      "duration": 231427,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vDqNzQqEhl7boeRS3Joli",
+      "name": "好きすぎて滅！",
+      "artist": "M!LK",
+      "album": "好きすぎて滅！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
+      "playedAt": "2026-09-02T03:39:25.463Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
+      "duration": 212400,
+      "previewUrl": ""
+    },
+    {
+      "id": "5g24szGiFbRVEZQC1luDmW",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
+      "playedAt": "2026-09-02T03:24:42.965Z",
+      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
+      "duration": 250253,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-09-02T03:17:57.809Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-09-02T03:14:43.512Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "3HUDCgZgaY3ZVWohToy4LJ",
+      "name": "Toca Toca",
+      "artist": "Fly Project",
+      "album": "Toca Toca (Remixes)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27308415ac82c630195babf6a2a",
+      "playedAt": "2026-09-02T03:11:10.088Z",
+      "spotifyUrl": "https://open.spotify.com/track/3HUDCgZgaY3ZVWohToy4LJ",
+      "duration": 165605,
+      "previewUrl": ""
+    },
     {
       "id": "1SC5rEoYDGUK4NfG82494W",
       "name": "MONTERO (Call Me By Your Name)",
@@ -87,28 +153,6 @@
       "playedAt": "2026-09-01T03:23:52.882Z",
       "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
       "duration": 174375,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-09-01T02:44:26.367Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
-      "id": "5g24szGiFbRVEZQC1luDmW",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
-      "playedAt": "2026-09-01T02:39:13.221Z",
-      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
-      "duration": 250253,
       "previewUrl": ""
     },
     {
@@ -285,50 +329,6 @@
       "playedAt": "2026-08-30T21:31:22.356Z",
       "spotifyUrl": "https://open.spotify.com/track/2tAeWToIlB5IRby3kZhMzQ",
       "duration": 164050,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XbryOVSaPXhpre0Yj4MUv",
-      "name": "Squid Sisters (The Fresh Remix)",
-      "artist": "MandoPony",
-      "album": "Songs for Gamers, Vol. 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273860b382cdec10b0565373a4c",
-      "playedAt": "2026-08-30T21:28:37.766Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
-      "duration": 195375,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2026-08-30T21:25:21.868Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "7tBvAWJ1TAyoZzgEuaSbby",
-      "name": "Sheik's Theme",
-      "artist": "Amy Turk",
-      "album": "Sheik's Theme",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27358d8138f3b0a76a17b13e325",
-      "playedAt": "2026-08-30T21:24:07.432Z",
-      "spotifyUrl": "https://open.spotify.com/track/7tBvAWJ1TAyoZzgEuaSbby",
-      "duration": 61145,
-      "previewUrl": ""
-    },
-    {
-      "id": "638PHAOYgcooFRkjjDBadh",
-      "name": "Pokémon Center Jazz",
-      "artist": "The Deku Trio, GameChops, Unplugged",
-      "album": "Pokémon Center Jazz",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273daa28eae6acb923891cc1f83",
-      "playedAt": "2026-08-30T21:23:05.756Z",
-      "spotifyUrl": "https://open.spotify.com/track/638PHAOYgcooFRkjjDBadh",
-      "duration": 198620,
       "previewUrl": ""
     }
   ],
