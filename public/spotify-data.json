@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-02T10:08:54.426Z",
+  "lastUpdated": "2026-09-03T02:00:15.073Z",
   "tracks": [
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-09-02T21:57:57.817Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
     {
       "id": "4iYxrnTvYsTtyphOTqTvkh",
       "name": "Take Me Back To London (Sir Spyro Remix) [feat. Stormzy, Jaykae & Aitch]",
@@ -318,17 +329,6 @@
       "playedAt": "2026-08-30T21:33:17.806Z",
       "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
       "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "2tAeWToIlB5IRby3kZhMzQ",
-      "name": "Song of Storms",
-      "artist": "Super Piano 64, GameChops, Unplugged",
-      "album": "Zelda & Sleep",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1999fc2a0e2bcc1ee1cca75",
-      "playedAt": "2026-08-30T21:31:22.356Z",
-      "spotifyUrl": "https://open.spotify.com/track/2tAeWToIlB5IRby3kZhMzQ",
-      "duration": 164050,
       "previewUrl": ""
     }
   ],
