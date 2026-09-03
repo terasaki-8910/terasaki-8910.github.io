@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-03T10:20:41.674Z",
+  "lastUpdated": "2026-09-03T15:26:45.138Z",
   "tracks": [
+    {
+      "id": "5LtKpKOO0fyGBAbv761JCu",
+      "name": "Sunlight",
+      "artist": "TheFatRat, Phaera",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-09-03T08:33:29.938Z",
+      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
+      "duration": 169952,
+      "previewUrl": ""
+    },
     {
       "id": "6HznFPNdvbxgzm5jJyNlwp",
       "name": "オーバーライド",
@@ -164,17 +175,6 @@
       "playedAt": "2026-09-01T04:12:41.933Z",
       "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
       "duration": 260015,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LtKpKOO0fyGBAbv761JCu",
-      "name": "Sunlight",
-      "artist": "TheFatRat, Phaera",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-09-01T03:52:24.428Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
-      "duration": 169952,
       "previewUrl": ""
     },
     {
