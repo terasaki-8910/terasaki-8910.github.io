@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-02T20:56:32.399Z",
+  "lastUpdated": "2026-09-03T04:10:16.046Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -18,8 +18,8 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 54,
-      "playtimeForeverMinutes": 54
+      "playtime2weeksMinutes": 95,
+      "playtimeForeverMinutes": 95
     },
     {
       "appid": 990080,
@@ -99,6 +99,12 @@
       "playtimeForeverMinutes": 114
     },
     {
+      "appid": 688130,
+      "name": "Pogostuck: Rage With Your Friends",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
+      "playtimeForeverMinutes": 95
+    },
+    {
       "appid": 1954420,
       "name": "Riichi City - Japanese Mahjong",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1954420/eaeced1901a6ee9a83e01a2218cc769430a40e3f.jpg",
@@ -115,12 +121,6 @@
       "name": "Red Dead Redemption 2",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1174180/5106abd9c1187a97f23295a0ba9470c94804ec6c.jpg",
       "playtimeForeverMinutes": 58
-    },
-    {
-      "appid": 688130,
-      "name": "Pogostuck: Rage With Your Friends",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 54
     },
     {
       "appid": 990080,
@@ -480,6 +480,20 @@
       "unlocked": 0,
       "total": 27,
       "recentUnlocks": []
+    },
+    {
+      "appid": 688130,
+      "gameName": "Pogostuck: Rage With Your Friends",
+      "unlocked": 1,
+      "total": 68,
+      "recentUnlocks": [
+        {
+          "name": "A bony start.",
+          "description": "Overcome the bone pit.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/6ccf7d73973dac489561edec3227f3e9016a4885.jpg",
+          "unlockedAt": "2026-08-31T20:12:12.000Z"
+        }
+      ]
     }
   ]
 }
