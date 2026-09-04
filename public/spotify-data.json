@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-09-04T01:59:38.660Z",
+  "lastUpdated": "2026-09-04T10:13:36.051Z",
   "tracks": [
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-09-04T06:17:13.410Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
+      "previewUrl": ""
+    },
+    {
+      "id": "6PSKeBtijEy8OoL9dGDY60",
+      "name": "Funky Road",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-09-04T03:51:24.485Z",
+      "spotifyUrl": "https://open.spotify.com/track/6PSKeBtijEy8OoL9dGDY60",
+      "duration": 130789,
+      "previewUrl": ""
+    },
+    {
+      "id": "6lcqXYjDSGxx69DurXx0rF",
+      "name": "ループザルーム (feat. 初音ミク)",
+      "artist": "ルシノ, Hatsune Miku",
+      "album": "ループザルーム / ランベントアリア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
+      "playedAt": "2026-09-04T03:51:13.350Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
+      "duration": 134071,
+      "previewUrl": ""
+    },
     {
       "id": "1HWp3T9mxQxd4UAPjkAjRE",
       "name": "Fruitful Blossom",
@@ -296,39 +329,6 @@
       "playedAt": "2026-09-02T00:37:05.967Z",
       "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
       "duration": 230766,
-      "previewUrl": ""
-    },
-    {
-      "id": "1chTElozugAFsW2x03IS6d",
-      "name": "キミに100パーセント",
-      "artist": "Kyary Pamyu Pamyu",
-      "album": "なんだこれくしょん",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
-      "playedAt": "2026-09-01T04:19:41.446Z",
-      "spotifyUrl": "https://open.spotify.com/track/1chTElozugAFsW2x03IS6d",
-      "duration": 200253,
-      "previewUrl": ""
-    },
-    {
-      "id": "407GWcB9QwD3aiX0M7RCFT",
-      "name": "GYB!!",
-      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
-      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
-      "playedAt": "2026-09-01T04:16:20.947Z",
-      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
-      "duration": 218573,
-      "previewUrl": ""
-    },
-    {
-      "id": "5XsPjGw1ADBcVU0i7mwNb1",
-      "name": "Campus mode!!",
-      "artist": "初星学園",
-      "album": "Campus mode!!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
-      "playedAt": "2026-09-01T04:12:41.933Z",
-      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
-      "duration": 260015,
       "previewUrl": ""
     }
   ],
