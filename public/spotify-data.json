@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-09-05T01:55:57.231Z",
+  "lastUpdated": "2026-09-05T09:37:34.273Z",
   "tracks": [
+    {
+      "id": "1UtFFEHAuZi4hM3kKKBHF7",
+      "name": "Expo Festa",
+      "artist": "EmoCosine",
+      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
+      "playedAt": "2026-09-05T09:14:54.489Z",
+      "spotifyUrl": "https://open.spotify.com/track/1UtFFEHAuZi4hM3kKKBHF7",
+      "duration": 141262,
+      "previewUrl": ""
+    },
+    {
+      "id": "3FrWEbGpO4IYPcoFeciKGd",
+      "name": "Aoharu - Band Arrange",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-09-05T09:12:39.643Z",
+      "spotifyUrl": "https://open.spotify.com/track/3FrWEbGpO4IYPcoFeciKGd",
+      "duration": 114703,
+      "previewUrl": ""
+    },
+    {
+      "id": "0JGArkIuIDR033vjuTbe0c",
+      "name": "Playful Maniac",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.8　～Dreaming for the Melody of Revolution～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e56f85bdbfefbedc27f9fc32",
+      "playedAt": "2026-09-05T08:49:56.170Z",
+      "spotifyUrl": "https://open.spotify.com/track/0JGArkIuIDR033vjuTbe0c",
+      "duration": 118117,
+      "previewUrl": ""
+    },
+    {
+      "id": "2K77H94nRZpbVUqFfGDxL4",
+      "name": "Rendezvous",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
+      "playedAt": "2026-09-05T08:46:15.688Z",
+      "spotifyUrl": "https://open.spotify.com/track/2K77H94nRZpbVUqFfGDxL4",
+      "duration": 129312,
+      "previewUrl": ""
+    },
+    {
+      "id": "4bcDDVSs9DfRX2Thzjfif4",
+      "name": "Hello to Halo",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.2 Searching for the unknown truth)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737386e3caa3750cf645bd7101",
+      "playedAt": "2026-09-05T08:44:22.691Z",
+      "spotifyUrl": "https://open.spotify.com/track/4bcDDVSs9DfRX2Thzjfif4",
+      "duration": 105190,
+      "previewUrl": ""
+    },
+    {
+      "id": "3EV0R1fzYOSHkDfdBIWQtd",
+      "name": "0k@eri",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
+      "playedAt": "2026-09-05T08:42:48.277Z",
+      "spotifyUrl": "https://open.spotify.com/track/3EV0R1fzYOSHkDfdBIWQtd",
+      "duration": 148699,
+      "previewUrl": ""
+    },
+    {
+      "id": "1g5nDEvyuteIW7nrQHFMsu",
+      "name": "System All Green",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-09-05T08:26:26.841Z",
+      "spotifyUrl": "https://open.spotify.com/track/1g5nDEvyuteIW7nrQHFMsu",
+      "duration": 120025,
+      "previewUrl": ""
+    },
     {
       "id": "0WW9m7YFNr9Qtc4L0hELns",
       "name": "Merry blue",
@@ -252,83 +329,6 @@
       "playedAt": "2026-09-03T05:47:48.380Z",
       "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
       "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "1WZGyYe1PDvQ5aaET6qILe",
-      "name": "金星のダンス",
-      "artist": "Nayutalien",
-      "album": "ナユタン星からの物体Z",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273759ef471de167f1d2ca36bd7",
-      "playedAt": "2026-09-03T05:45:29.364Z",
-      "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
-      "duration": 209333,
-      "previewUrl": ""
-    },
-    {
-      "id": "4kTh1g4WR9n2Rsnm8reLNz",
-      "name": "ハッピーミルフィーユ",
-      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
-      "album": "ハッピーミルフィーユ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
-      "playedAt": "2026-09-02T21:57:57.817Z",
-      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
-      "duration": 195640,
-      "previewUrl": ""
-    },
-    {
-      "id": "4iYxrnTvYsTtyphOTqTvkh",
-      "name": "Take Me Back To London (Sir Spyro Remix) [feat. Stormzy, Jaykae & Aitch]",
-      "artist": "Ed Sheeran, Jaykae, Aitch, Stormzy, Sir Spyro",
-      "album": "Take Me Back To London (Remix) [feat. Stormzy, Jaykae & Aitch]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f973c4d29e4b8c692996685",
-      "playedAt": "2026-09-02T07:36:08.770Z",
-      "spotifyUrl": "https://open.spotify.com/track/4iYxrnTvYsTtyphOTqTvkh",
-      "duration": 231427,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vDqNzQqEhl7boeRS3Joli",
-      "name": "好きすぎて滅！",
-      "artist": "M!LK",
-      "album": "好きすぎて滅！",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273acf878204b7868c5bb871e63",
-      "playedAt": "2026-09-02T03:39:25.463Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vDqNzQqEhl7boeRS3Joli",
-      "duration": 212400,
-      "previewUrl": ""
-    },
-    {
-      "id": "5g24szGiFbRVEZQC1luDmW",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
-      "playedAt": "2026-09-02T03:24:42.965Z",
-      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
-      "duration": 250253,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ozF0VkZiDgXPt4Hwuao4i",
-      "name": "仮装狂騒曲",
-      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
-      "album": "仮装狂騒曲",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
-      "playedAt": "2026-09-02T03:17:57.809Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
-      "duration": 193666,
-      "previewUrl": ""
-    },
-    {
-      "id": "2le4lZquBURJYS6TcdAZdx",
-      "name": "絶対王者チョコレート",
-      "artist": "ゆらゆらシスターズ",
-      "album": "絶対王者チョコレート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-09-02T03:14:43.512Z",
-      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
-      "duration": 208223,
       "previewUrl": ""
     }
   ],
