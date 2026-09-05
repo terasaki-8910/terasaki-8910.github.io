@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-09-04T10:13:36.051Z",
+  "lastUpdated": "2026-09-05T01:55:57.231Z",
   "tracks": [
+    {
+      "id": "0WW9m7YFNr9Qtc4L0hELns",
+      "name": "Merry blue",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.8　～Dreaming for the Melody of Revolution～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e56f85bdbfefbedc27f9fc32",
+      "playedAt": "2026-09-04T21:01:47.072Z",
+      "spotifyUrl": "https://open.spotify.com/track/0WW9m7YFNr9Qtc4L0hELns",
+      "duration": 133317,
+      "previewUrl": ""
+    },
+    {
+      "id": "5nkMGXU1zq7RhhGZlrOyJZ",
+      "name": "SAKURA PUNCH - Hard Arrange",
+      "artist": "Nor",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-09-04T20:59:45.427Z",
+      "spotifyUrl": "https://open.spotify.com/track/5nkMGXU1zq7RhhGZlrOyJZ",
+      "duration": 122086,
+      "previewUrl": ""
+    },
+    {
+      "id": "1BQEp8EiQNCASv5odu5ZMc",
+      "name": "Let me think about it",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
+      "playedAt": "2026-09-04T20:57:46.708Z",
+      "spotifyUrl": "https://open.spotify.com/track/1BQEp8EiQNCASv5odu5ZMc",
+      "duration": 130423,
+      "previewUrl": ""
+    },
+    {
+      "id": "5VwbSmGYLYHL78gvzvDRXx",
+      "name": "Romantic Smile",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.3 ～Reaching for the precious time～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733dd68aedf4cb5b542f624f5a",
+      "playedAt": "2026-09-04T20:55:41.065Z",
+      "spotifyUrl": "https://open.spotify.com/track/5VwbSmGYLYHL78gvzvDRXx",
+      "duration": 133481,
+      "previewUrl": ""
+    },
     {
       "id": "6NYbDTmstd7JSUWl2hVBqR",
       "name": "Sprinter",
@@ -285,50 +329,6 @@
       "playedAt": "2026-09-02T03:14:43.512Z",
       "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
       "duration": 208223,
-      "previewUrl": ""
-    },
-    {
-      "id": "3HUDCgZgaY3ZVWohToy4LJ",
-      "name": "Toca Toca",
-      "artist": "Fly Project",
-      "album": "Toca Toca (Remixes)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27308415ac82c630195babf6a2a",
-      "playedAt": "2026-09-02T03:11:10.088Z",
-      "spotifyUrl": "https://open.spotify.com/track/3HUDCgZgaY3ZVWohToy4LJ",
-      "duration": 165605,
-      "previewUrl": ""
-    },
-    {
-      "id": "1SC5rEoYDGUK4NfG82494W",
-      "name": "MONTERO (Call Me By Your Name)",
-      "artist": "Lil Nas X",
-      "album": "MONTERO",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f27e4bdc58ebe249a6b90da0",
-      "playedAt": "2026-09-02T00:49:21.146Z",
-      "spotifyUrl": "https://open.spotify.com/track/1SC5rEoYDGUK4NfG82494W",
-      "duration": 137704,
-      "previewUrl": ""
-    },
-    {
-      "id": "5vNRhkKd0yEAg8suGBpjeY",
-      "name": "APT.",
-      "artist": "ROSÉ, Bruno Mars",
-      "album": "APT.",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27346085aa1855bd888abc51a5a",
-      "playedAt": "2026-09-02T00:47:02.948Z",
-      "spotifyUrl": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY",
-      "duration": 169917,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-09-02T00:37:05.967Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
       "previewUrl": ""
     }
   ],
