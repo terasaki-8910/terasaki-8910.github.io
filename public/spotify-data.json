@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-09-05T14:11:26.158Z",
+  "lastUpdated": "2026-09-05T19:40:53.738Z",
   "tracks": [
+    {
+      "id": "6J3pPfXLujwsWQpvR6XMgC",
+      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
+      "artist": "TAK, Hatsune Miku, Kasane Teto",
+      "album": "PPPP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
+      "playedAt": "2026-09-05T16:04:02.012Z",
+      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
+      "duration": 154835,
+      "previewUrl": ""
+    },
+    {
+      "id": "3MDuA12HzorT65LovtOMKr",
+      "name": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
+      "artist": "吉本おじさん, 雨衣",
+      "album": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d90202395ea36020727d4919",
+      "playedAt": "2026-09-05T16:01:26.711Z",
+      "spotifyUrl": "https://open.spotify.com/track/3MDuA12HzorT65LovtOMKr",
+      "duration": 184800,
+      "previewUrl": ""
+    },
+    {
+      "id": "5hiSDmqC8ZzNj2hW9M8rkT",
+      "name": "Accelerator",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-09-05T15:57:16.206Z",
+      "spotifyUrl": "https://open.spotify.com/track/5hiSDmqC8ZzNj2hW9M8rkT",
+      "duration": 110921,
+      "previewUrl": ""
+    },
+    {
+      "id": "1iNhNmEwrd2TP4XrV7pQBI",
+      "name": "星座になれたら",
+      "artist": "結束バンド",
+      "album": "結束バンド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273384850c46c22b0685d6def6f",
+      "playedAt": "2026-09-05T15:56:12.087Z",
+      "spotifyUrl": "https://open.spotify.com/track/1iNhNmEwrd2TP4XrV7pQBI",
+      "duration": 258173,
+      "previewUrl": ""
+    },
     {
       "id": "0jpP8AlQLVtaMwA3vQYpYB",
       "name": "青春コンプレックス",
@@ -200,17 +244,6 @@
       "previewUrl": ""
     },
     {
-      "id": "3MDuA12HzorT65LovtOMKr",
-      "name": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
-      "artist": "吉本おじさん, 雨衣",
-      "album": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d90202395ea36020727d4919",
-      "playedAt": "2026-09-05T10:50:06.844Z",
-      "spotifyUrl": "https://open.spotify.com/track/3MDuA12HzorT65LovtOMKr",
-      "duration": 184800,
-      "previewUrl": ""
-    },
-    {
       "id": "76kJA3LUe1uREGjlaOypkL",
       "name": "テレパシ",
       "artist": "DECO*27",
@@ -219,17 +252,6 @@
       "playedAt": "2026-09-05T10:45:31.171Z",
       "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
       "duration": 137746,
-      "previewUrl": ""
-    },
-    {
-      "id": "6J3pPfXLujwsWQpvR6XMgC",
-      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
-      "artist": "TAK, Hatsune Miku, Kasane Teto",
-      "album": "PPPP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
-      "playedAt": "2026-09-05T10:43:12.904Z",
-      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
-      "duration": 154835,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-09-05T08:26:26.841Z",
       "spotifyUrl": "https://open.spotify.com/track/1g5nDEvyuteIW7nrQHFMsu",
       "duration": 120025,
-      "previewUrl": ""
-    },
-    {
-      "id": "0WW9m7YFNr9Qtc4L0hELns",
-      "name": "Merry blue",
-      "artist": "ミツキヨ",
-      "album": "Blue Archive Original Soundtrack (Vol.8　～Dreaming for the Melody of Revolution～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e56f85bdbfefbedc27f9fc32",
-      "playedAt": "2026-09-04T21:01:47.072Z",
-      "spotifyUrl": "https://open.spotify.com/track/0WW9m7YFNr9Qtc4L0hELns",
-      "duration": 133317,
-      "previewUrl": ""
-    },
-    {
-      "id": "5nkMGXU1zq7RhhGZlrOyJZ",
-      "name": "SAKURA PUNCH - Hard Arrange",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.4 ～Aiming for the ideal freedom～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc21c589a9b17c1451f0d79c",
-      "playedAt": "2026-09-04T20:59:45.427Z",
-      "spotifyUrl": "https://open.spotify.com/track/5nkMGXU1zq7RhhGZlrOyJZ",
-      "duration": 122086,
       "previewUrl": ""
     }
   ],
