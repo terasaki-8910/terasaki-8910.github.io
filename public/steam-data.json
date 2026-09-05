@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-05T04:13:56.386Z",
+  "lastUpdated": "2026-09-05T10:28:00.002Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -18,8 +18,8 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 95,
-      "playtimeForeverMinutes": 95
+      "playtime2weeksMinutes": 276,
+      "playtimeForeverMinutes": 276
     },
     {
       "appid": 990080,
@@ -80,6 +80,12 @@
       "playtimeForeverMinutes": 376
     },
     {
+      "appid": 688130,
+      "name": "Pogostuck: Rage With Your Friends",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
+      "playtimeForeverMinutes": 276
+    },
+    {
       "appid": 1364780,
       "name": "Street Fighter™ 6",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1364780/d8057ee15238077329f869c1610e257461ab3f76.jpg",
@@ -90,12 +96,6 @@
       "name": "Shadowverse: Worlds Beyond",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2584990/c4e197c8e6dd7a1da1913a93178d4000ee22a73d.jpg",
       "playtimeForeverMinutes": 114
-    },
-    {
-      "appid": 688130,
-      "name": "Pogostuck: Rage With Your Friends",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 95
     },
     {
       "appid": 1954420,
@@ -442,6 +442,20 @@
       ]
     },
     {
+      "appid": 688130,
+      "gameName": "Pogostuck: Rage With Your Friends",
+      "unlocked": 1,
+      "total": 68,
+      "recentUnlocks": [
+        {
+          "name": "A bony start.",
+          "description": "Overcome the bone pit.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/6ccf7d73973dac489561edec3227f3e9016a4885.jpg",
+          "unlockedAt": "2026-08-31T20:12:12.000Z"
+        }
+      ]
+    },
+    {
       "appid": 1364780,
       "gameName": "Street Fighter™ 6",
       "unlocked": 5,
@@ -473,20 +487,6 @@
       "unlocked": 0,
       "total": 27,
       "recentUnlocks": []
-    },
-    {
-      "appid": 688130,
-      "gameName": "Pogostuck: Rage With Your Friends",
-      "unlocked": 1,
-      "total": 68,
-      "recentUnlocks": [
-        {
-          "name": "A bony start.",
-          "description": "Overcome the bone pit.",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/6ccf7d73973dac489561edec3227f3e9016a4885.jpg",
-          "unlockedAt": "2026-08-31T20:12:12.000Z"
-        }
-      ]
     }
   ]
 }
