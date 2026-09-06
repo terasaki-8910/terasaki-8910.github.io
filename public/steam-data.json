@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-06T10:47:15.209Z",
+  "lastUpdated": "2026-09-06T15:22:39.111Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,14 +11,14 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 891,
-      "playtimeForeverMinutes": 891
+      "playtime2weeksMinutes": 1028,
+      "playtimeForeverMinutes": 1028
     },
     {
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
-      "playtime2weeksMinutes": 235,
+      "playtime2weeksMinutes": 71,
       "playtimeForeverMinutes": 9229
     },
     {
@@ -34,6 +34,13 @@
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/714010/15347de11efc127539c388e585af9e92d10d5189.jpg",
       "playtime2weeksMinutes": 21,
       "playtimeForeverMinutes": 61
+    },
+    {
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/431960/72edaed9d748c6cf7397ffb1c83f0b837b9ebd9d.jpg",
+      "playtime2weeksMinutes": 1,
+      "playtimeForeverMinutes": 376
     }
   ],
   "library": [
@@ -65,7 +72,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 891
+      "playtimeForeverMinutes": 1028
     },
     {
       "appid": 431730,
@@ -456,9 +463,15 @@
     {
       "appid": 431960,
       "gameName": "Wallpaper Engine",
-      "unlocked": 1,
+      "unlocked": 2,
       "total": 17,
       "recentUnlocks": [
+        {
+          "name": "Pest",
+          "description": "Cause 1 fatal error or trigger 128 warnings in the editor.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
+          "unlockedAt": "2026-09-06T13:52:37.000Z"
+        },
         {
           "name": "Trying something new",
           "description": "Use 10 different wallpapers from the Workshop.",
