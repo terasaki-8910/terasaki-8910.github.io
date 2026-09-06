@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-09-06T09:53:01.774Z",
+  "lastUpdated": "2026-09-06T14:35:06.977Z",
   "tracks": [
+    {
+      "id": "23RoR84KodL5HWvUTneQ1w",
+      "name": "(It Goes Like) Nanana - Edit",
+      "artist": "Peggy Gou",
+      "album": "(It Goes Like) Nanana [Edit]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27388d71aadd009fe1a83df88f2",
+      "playedAt": "2026-09-06T10:24:49.518Z",
+      "spotifyUrl": "https://open.spotify.com/track/23RoR84KodL5HWvUTneQ1w",
+      "duration": 231545,
+      "previewUrl": ""
+    },
+    {
+      "id": "5vNRhkKd0yEAg8suGBpjeY",
+      "name": "APT.",
+      "artist": "ROSÉ, Bruno Mars",
+      "album": "APT.",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27346085aa1855bd888abc51a5a",
+      "playedAt": "2026-09-06T10:19:21.139Z",
+      "spotifyUrl": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY",
+      "duration": 169917,
+      "previewUrl": ""
+    },
+    {
+      "id": "1mWdTewIgB3gtBM3TOSFhB",
+      "name": "Butter",
+      "artist": "BTS",
+      "album": "Butter (Hotter, Sweeter, Cooler)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273240447f2da1433d8f4303596",
+      "playedAt": "2026-09-06T10:13:54.633Z",
+      "spotifyUrl": "https://open.spotify.com/track/1mWdTewIgB3gtBM3TOSFhB",
+      "duration": 164441,
+      "previewUrl": ""
+    },
     {
       "id": "6LIpqsMbsfc8I7F0dsFXsv",
       "name": "テトリス",
@@ -296,39 +329,6 @@
       "playedAt": "2026-09-06T02:20:00.734Z",
       "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
       "duration": 209333,
-      "previewUrl": ""
-    },
-    {
-      "id": "6J3pPfXLujwsWQpvR6XMgC",
-      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
-      "artist": "TAK, Hatsune Miku, Kasane Teto",
-      "album": "PPPP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
-      "playedAt": "2026-09-05T16:04:02.012Z",
-      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
-      "duration": 154835,
-      "previewUrl": ""
-    },
-    {
-      "id": "5hiSDmqC8ZzNj2hW9M8rkT",
-      "name": "Accelerator",
-      "artist": "KARUT",
-      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
-      "playedAt": "2026-09-05T15:57:16.206Z",
-      "spotifyUrl": "https://open.spotify.com/track/5hiSDmqC8ZzNj2hW9M8rkT",
-      "duration": 110921,
-      "previewUrl": ""
-    },
-    {
-      "id": "1iNhNmEwrd2TP4XrV7pQBI",
-      "name": "星座になれたら",
-      "artist": "結束バンド",
-      "album": "結束バンド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273384850c46c22b0685d6def6f",
-      "playedAt": "2026-09-05T15:56:12.087Z",
-      "spotifyUrl": "https://open.spotify.com/track/1iNhNmEwrd2TP4XrV7pQBI",
-      "duration": 258173,
       "previewUrl": ""
     }
   ],
