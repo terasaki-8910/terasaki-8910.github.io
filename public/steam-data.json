@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-05T20:15:18.230Z",
+  "lastUpdated": "2026-09-06T04:22:37.915Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,14 +11,14 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 504,
-      "playtimeForeverMinutes": 504
+      "playtime2weeksMinutes": 639,
+      "playtimeForeverMinutes": 639
     },
     {
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
-      "playtime2weeksMinutes": 285,
+      "playtime2weeksMinutes": 235,
       "playtimeForeverMinutes": 9229
     },
     {
@@ -71,7 +71,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 504
+      "playtimeForeverMinutes": 639
     },
     {
       "appid": 1446780,
@@ -410,9 +410,15 @@
     {
       "appid": 688130,
       "gameName": "Pogostuck: Rage With Your Friends",
-      "unlocked": 2,
+      "unlocked": 3,
       "total": 68,
       "recentUnlocks": [
+        {
+          "name": "Max Level",
+          "description": "Unlock all cosmetics.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/8319161f8f508ad23b00477026aa6db74c10fb8d.jpg",
+          "unlockedAt": "2026-09-06T00:28:56.000Z"
+        },
         {
           "name": "Grape Gauntlet",
           "description": "Actually apples.",
