@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-09T10:20:59.415Z",
+  "lastUpdated": "2026-09-09T15:31:25.894Z",
   "tracks": [
+    {
+      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
+      "name": "Without You (feat. Sandro Cavazza)",
+      "artist": "Avicii, Sandro Cavazza",
+      "album": "AVĪCI (01)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
+      "playedAt": "2026-09-09T12:05:42.749Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
+      "duration": 181672,
+      "previewUrl": ""
+    },
     {
       "id": "3B0irDyS69y5eAz15xV2Ee",
       "name": "Wake Me Up",
@@ -318,17 +329,6 @@
       "playedAt": "2026-09-08T11:24:15.709Z",
       "spotifyUrl": "https://open.spotify.com/track/4S3glEK0ZLJPnIIinKpyDI",
       "duration": 246520,
-      "previewUrl": ""
-    },
-    {
-      "id": "2ddvvAWIGyqJjeM0u2o853",
-      "name": "Fantastic future",
-      "artist": "Yukari Tamura",
-      "album": "螺旋の果実",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d03a07279e98d0b8a1928712",
-      "playedAt": "2026-09-08T11:20:09.897Z",
-      "spotifyUrl": "https://open.spotify.com/track/2ddvvAWIGyqJjeM0u2o853",
-      "duration": 255706,
       "previewUrl": ""
     }
   ],
