@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-09-09T02:04:13.612Z",
+  "lastUpdated": "2026-09-09T10:20:59.415Z",
   "tracks": [
+    {
+      "id": "3B0irDyS69y5eAz15xV2Ee",
+      "name": "Wake Me Up",
+      "artist": "Avicii",
+      "album": "True",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273162c5d6dbf1dc3965d1a391a",
+      "playedAt": "2026-09-09T05:21:15.222Z",
+      "spotifyUrl": "https://open.spotify.com/track/3B0irDyS69y5eAz15xV2Ee",
+      "duration": 247426,
+      "previewUrl": ""
+    },
+    {
+      "id": "2P4OICZRVAQcYAV2JReRfj",
+      "name": "Waiting For Love",
+      "artist": "Avicii",
+      "album": "Stories",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735393c5d3cac806092a9bc468",
+      "playedAt": "2026-09-09T05:17:07.387Z",
+      "spotifyUrl": "https://open.spotify.com/track/2P4OICZRVAQcYAV2JReRfj",
+      "duration": 230613,
+      "previewUrl": ""
+    },
+    {
+      "id": "6RSuGXM9GVMdXaI8ifGm8d",
+      "name": "Let's Go",
+      "artist": "JAXSON GAMBLE",
+      "album": "Let's Go",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737e481042c63c9a28b1b543c0",
+      "playedAt": "2026-09-09T05:12:25.883Z",
+      "spotifyUrl": "https://open.spotify.com/track/6RSuGXM9GVMdXaI8ifGm8d",
+      "duration": 127333,
+      "previewUrl": ""
+    },
+    {
+      "id": "6lcqXYjDSGxx69DurXx0rF",
+      "name": "ループザルーム (feat. 初音ミク)",
+      "artist": "ルシノ, Hatsune Miku",
+      "album": "ループザルーム / ランベントアリア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
+      "playedAt": "2026-09-09T05:06:43.535Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
+      "duration": 134071,
+      "previewUrl": ""
+    },
     {
       "id": "6NYbDTmstd7JSUWl2hVBqR",
       "name": "Sprinter",
@@ -285,50 +329,6 @@
       "playedAt": "2026-09-08T11:20:09.897Z",
       "spotifyUrl": "https://open.spotify.com/track/2ddvvAWIGyqJjeM0u2o853",
       "duration": 255706,
-      "previewUrl": ""
-    },
-    {
-      "id": "7aCdXnpn7oPN1sz3i78t7x",
-      "name": "RAIN",
-      "artist": "SEKAI NO OWARI",
-      "album": "Lip",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b87ad729d0b498c14fc8941d",
-      "playedAt": "2026-09-08T11:15:23.310Z",
-      "spotifyUrl": "https://open.spotify.com/track/7aCdXnpn7oPN1sz3i78t7x",
-      "duration": 310293,
-      "previewUrl": ""
-    },
-    {
-      "id": "6CCCn6i6FU1tzzqjTNZtGk",
-      "name": "Clattanoia",
-      "artist": "OxT",
-      "album": "TVアニメ「オーバーロード」オープニングテーマ「Clattanoia」",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f944624d3413404001a0cbb6",
-      "playedAt": "2026-09-08T11:10:24.777Z",
-      "spotifyUrl": "https://open.spotify.com/track/6CCCn6i6FU1tzzqjTNZtGk",
-      "duration": 237880,
-      "previewUrl": ""
-    },
-    {
-      "id": "29YSKt01a9wGNJkPLQG0Kw",
-      "name": "境界の彼方",
-      "artist": "茅原実里",
-      "album": "NEO FANTASIA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f416e4d4186d4086a1fd0258",
-      "playedAt": "2026-09-08T11:06:42.045Z",
-      "spotifyUrl": "https://open.spotify.com/track/29YSKt01a9wGNJkPLQG0Kw",
-      "duration": 292040,
-      "previewUrl": ""
-    },
-    {
-      "id": "6lcqXYjDSGxx69DurXx0rF",
-      "name": "ループザルーム (feat. 初音ミク)",
-      "artist": "ルシノ, Hatsune Miku",
-      "album": "ループザルーム / ランベントアリア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
-      "playedAt": "2026-09-08T07:45:22.421Z",
-      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
-      "duration": 134071,
       "previewUrl": ""
     }
   ],
