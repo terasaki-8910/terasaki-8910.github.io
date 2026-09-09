@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-08T15:37:33.873Z",
+  "lastUpdated": "2026-09-09T02:04:13.612Z",
   "tracks": [
+    {
+      "id": "6NYbDTmstd7JSUWl2hVBqR",
+      "name": "Sprinter",
+      "artist": "Dave, Central Cee",
+      "album": "Sprinter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
+      "playedAt": "2026-09-08T21:59:44.724Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
+      "duration": 229133,
+      "previewUrl": ""
+    },
     {
       "id": "6HznFPNdvbxgzm5jJyNlwp",
       "name": "オーバーライド",
@@ -318,17 +329,6 @@
       "playedAt": "2026-09-08T07:45:22.421Z",
       "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
       "duration": 134071,
-      "previewUrl": ""
-    },
-    {
-      "id": "2S3Hnlvp6vz3phpmLmFkAx",
-      "name": "チルノのパーフェクトさんすう教室",
-      "artist": "IOSYS",
-      "album": "東方氷雪歌集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e5deed39f06395c8c5936656",
-      "playedAt": "2026-09-08T07:43:50.325Z",
-      "spotifyUrl": "https://open.spotify.com/track/2S3Hnlvp6vz3phpmLmFkAx",
-      "duration": 278635,
       "previewUrl": ""
     }
   ],
