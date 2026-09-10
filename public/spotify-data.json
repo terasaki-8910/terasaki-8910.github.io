@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-09-09T15:31:25.894Z",
+  "lastUpdated": "2026-09-10T02:01:08.290Z",
   "tracks": [
+    {
+      "id": "3HUDCgZgaY3ZVWohToy4LJ",
+      "name": "Toca Toca",
+      "artist": "Fly Project",
+      "album": "Toca Toca (Remixes)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27308415ac82c630195babf6a2a",
+      "playedAt": "2026-09-09T22:57:24.435Z",
+      "spotifyUrl": "https://open.spotify.com/track/3HUDCgZgaY3ZVWohToy4LJ",
+      "duration": 165605,
+      "previewUrl": ""
+    },
+    {
+      "id": "53Uy2m8yielFV4bkGBybhZ",
+      "name": "全力☆Summer!",
+      "artist": "angela",
+      "album": "Beyond",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
+      "playedAt": "2026-09-09T13:52:54.309Z",
+      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
+      "duration": 233893,
+      "previewUrl": ""
+    },
     {
       "id": "6Pgkp4qUoTmJIPn7ReaGxL",
       "name": "Without You (feat. Sandro Cavazza)",
@@ -307,28 +329,6 @@
       "playedAt": "2026-09-08T11:31:42.748Z",
       "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
       "duration": 205984,
-      "previewUrl": ""
-    },
-    {
-      "id": "6nvDyXnSzhvFkHgnkPLM3i",
-      "name": "Ψ発見伝！",
-      "artist": "Dempagumi.Inc",
-      "album": "ワレワレハデンパグミインクダ",
-      "albumArt": "https://i.scdn.co/image/f00a7f74db66523068d0596c274f38fff2716856",
-      "playedAt": "2026-09-08T11:28:42.484Z",
-      "spotifyUrl": "https://open.spotify.com/track/6nvDyXnSzhvFkHgnkPLM3i",
-      "duration": 238636,
-      "previewUrl": ""
-    },
-    {
-      "id": "4S3glEK0ZLJPnIIinKpyDI",
-      "name": "Baby Sweet Berry Love",
-      "artist": "Yui Ogura",
-      "album": "Baby Sweet Berry Love (通常盤)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733407fcf3f0e8923ebe2fa24d",
-      "playedAt": "2026-09-08T11:24:15.709Z",
-      "spotifyUrl": "https://open.spotify.com/track/4S3glEK0ZLJPnIIinKpyDI",
-      "duration": 246520,
       "previewUrl": ""
     }
   ],
