@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-10T11:07:43.829Z",
+  "lastUpdated": "2026-09-10T16:17:53.935Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,15 +11,8 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 1756,
-      "playtimeForeverMinutes": 1756
-    },
-    {
-      "appid": 271590,
-      "name": "Grand Theft Auto V Legacy",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
-      "playtime2weeksMinutes": 52,
-      "playtimeForeverMinutes": 9229
+      "playtime2weeksMinutes": 1797,
+      "playtimeForeverMinutes": 1797
     },
     {
       "appid": 431960,
@@ -58,7 +51,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 1756
+      "playtimeForeverMinutes": 1797
     },
     {
       "appid": 431730,
