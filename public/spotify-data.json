@@ -1,6 +1,171 @@
 {
-  "lastUpdated": "2026-09-10T02:01:08.290Z",
+  "lastUpdated": "2026-09-10T10:13:40.301Z",
   "tracks": [
+    {
+      "id": "2P4OICZRVAQcYAV2JReRfj",
+      "name": "Waiting For Love",
+      "artist": "Avicii",
+      "album": "Stories",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735393c5d3cac806092a9bc468",
+      "playedAt": "2026-09-10T05:22:25.778Z",
+      "spotifyUrl": "https://open.spotify.com/track/2P4OICZRVAQcYAV2JReRfj",
+      "duration": 230613,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-09-10T05:18:27.820Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "3Ht2iEekMrHRndj0sC5e2X",
+      "name": "カルマ",
+      "artist": "BUMP OF CHICKEN",
+      "album": "orbital period",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8bf4d447ecc2c7914cb791c",
+      "playedAt": "2026-09-10T05:15:12.519Z",
+      "spotifyUrl": "https://open.spotify.com/track/3Ht2iEekMrHRndj0sC5e2X",
+      "duration": 209973,
+      "previewUrl": ""
+    },
+    {
+      "id": "53Uy2m8yielFV4bkGBybhZ",
+      "name": "全力☆Summer!",
+      "artist": "angela",
+      "album": "Beyond",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
+      "playedAt": "2026-09-10T05:14:58.426Z",
+      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
+      "duration": 233893,
+      "previewUrl": ""
+    },
+    {
+      "id": "4EXGfnQPnDQrtZPUIrveL3",
+      "name": "Perfect-area complete!",
+      "artist": "麻生夏子",
+      "album": "Perfect-area complete!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e64e81c264c18d3982edba10",
+      "playedAt": "2026-09-10T03:50:04.207Z",
+      "spotifyUrl": "https://open.spotify.com/track/4EXGfnQPnDQrtZPUIrveL3",
+      "duration": 243200,
+      "previewUrl": ""
+    },
+    {
+      "id": "2BBIUV8wIBbqc7HXObzdgH",
+      "name": "愛♡スクリ～ム！",
+      "artist": "AiScReam",
+      "album": "愛♡スクリ～ム！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732590b046b72d6ce5d6703ee7",
+      "playedAt": "2026-09-10T03:46:00.466Z",
+      "spotifyUrl": "https://open.spotify.com/track/2BBIUV8wIBbqc7HXObzdgH",
+      "duration": 262106,
+      "previewUrl": ""
+    },
+    {
+      "id": "21FQybaI3NdL8sZjcXdmDZ",
+      "name": "ELECTRICAL COMMUNICATION",
+      "artist": "GANASIA",
+      "album": "ELECTRICAL COMMUNICATION",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b6278a27c56a74d1b22939a",
+      "playedAt": "2026-09-10T03:41:37.830Z",
+      "spotifyUrl": "https://open.spotify.com/track/21FQybaI3NdL8sZjcXdmDZ",
+      "duration": 279366,
+      "previewUrl": ""
+    },
+    {
+      "id": "61PZRoWepD1fWsww0qLqZe",
+      "name": "THE HERO !! ～怒れる拳に火をつけろ～",
+      "artist": "JAM Project",
+      "album": "AREA Z",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b0422a6616b048cb87c8ea26",
+      "playedAt": "2026-09-10T03:36:57.939Z",
+      "spotifyUrl": "https://open.spotify.com/track/61PZRoWepD1fWsww0qLqZe",
+      "duration": 229733,
+      "previewUrl": ""
+    },
+    {
+      "id": "3IIWswUsUI4BnTWYZU2UsN",
+      "name": "未来のミュージアム",
+      "artist": "Perfume",
+      "album": "未来のミュージアム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730941cfa94fd14780ab3c27df",
+      "playedAt": "2026-09-10T03:33:07.665Z",
+      "spotifyUrl": "https://open.spotify.com/track/3IIWswUsUI4BnTWYZU2UsN",
+      "duration": 202933,
+      "previewUrl": ""
+    },
+    {
+      "id": "6nvDyXnSzhvFkHgnkPLM3i",
+      "name": "Ψ発見伝！",
+      "artist": "Dempagumi.Inc",
+      "album": "ワレワレハデンパグミインクダ",
+      "albumArt": "https://i.scdn.co/image/f00a7f74db66523068d0596c274f38fff2716856",
+      "playedAt": "2026-09-10T03:29:44.194Z",
+      "spotifyUrl": "https://open.spotify.com/track/6nvDyXnSzhvFkHgnkPLM3i",
+      "duration": 238636,
+      "previewUrl": ""
+    },
+    {
+      "id": "0D3usrJm2RiAkW9o0kRCyu",
+      "name": "ハナノイロ",
+      "artist": "nano.RIPE",
+      "album": "星の夜の脈の音の",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27356099479086aa15653e66699",
+      "playedAt": "2026-09-10T03:25:45.030Z",
+      "spotifyUrl": "https://open.spotify.com/track/0D3usrJm2RiAkW9o0kRCyu",
+      "duration": 244706,
+      "previewUrl": ""
+    },
+    {
+      "id": "407GWcB9QwD3aiX0M7RCFT",
+      "name": "GYB!!",
+      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
+      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
+      "playedAt": "2026-09-10T03:21:39.783Z",
+      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
+      "duration": 218573,
+      "previewUrl": ""
+    },
+    {
+      "id": "2ddvvAWIGyqJjeM0u2o853",
+      "name": "Fantastic future",
+      "artist": "Yukari Tamura",
+      "album": "螺旋の果実",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d03a07279e98d0b8a1928712",
+      "playedAt": "2026-09-10T03:18:00.674Z",
+      "spotifyUrl": "https://open.spotify.com/track/2ddvvAWIGyqJjeM0u2o853",
+      "duration": 255706,
+      "previewUrl": ""
+    },
+    {
+      "id": "1WZGyYe1PDvQ5aaET6qILe",
+      "name": "金星のダンス",
+      "artist": "Nayutalien",
+      "album": "ナユタン星からの物体Z",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273759ef471de167f1d2ca36bd7",
+      "playedAt": "2026-09-10T03:12:54.229Z",
+      "spotifyUrl": "https://open.spotify.com/track/1WZGyYe1PDvQ5aaET6qILe",
+      "duration": 209333,
+      "previewUrl": ""
+    },
+    {
+      "id": "2CiHVrvqFtoySSKNJ96ttF",
+      "name": "すーぱー☆あふぇくしょん",
+      "artist": "栗林みな実, Miyuki Hashimoto, Faylan, 美郷あき, yozuca*, rino",
+      "album": "すーぱー☆あふぇくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27393c25c3b62f0a5c8aef25663",
+      "playedAt": "2026-09-10T02:43:28.128Z",
+      "spotifyUrl": "https://open.spotify.com/track/2CiHVrvqFtoySSKNJ96ttF",
+      "duration": 211960,
+      "previewUrl": ""
+    },
     {
       "id": "3HUDCgZgaY3ZVWohToy4LJ",
       "name": "Toca Toca",
@@ -10,17 +175,6 @@
       "playedAt": "2026-09-09T22:57:24.435Z",
       "spotifyUrl": "https://open.spotify.com/track/3HUDCgZgaY3ZVWohToy4LJ",
       "duration": 165605,
-      "previewUrl": ""
-    },
-    {
-      "id": "53Uy2m8yielFV4bkGBybhZ",
-      "name": "全力☆Summer!",
-      "artist": "angela",
-      "album": "Beyond",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
-      "playedAt": "2026-09-09T13:52:54.309Z",
-      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
-      "duration": 233893,
       "previewUrl": ""
     },
     {
@@ -43,17 +197,6 @@
       "playedAt": "2026-09-09T05:21:15.222Z",
       "spotifyUrl": "https://open.spotify.com/track/3B0irDyS69y5eAz15xV2Ee",
       "duration": 247426,
-      "previewUrl": ""
-    },
-    {
-      "id": "2P4OICZRVAQcYAV2JReRfj",
-      "name": "Waiting For Love",
-      "artist": "Avicii",
-      "album": "Stories",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735393c5d3cac806092a9bc468",
-      "playedAt": "2026-09-09T05:17:07.387Z",
-      "spotifyUrl": "https://open.spotify.com/track/2P4OICZRVAQcYAV2JReRfj",
-      "duration": 230613,
       "previewUrl": ""
     },
     {
@@ -186,149 +329,6 @@
       "playedAt": "2026-09-08T12:39:07.023Z",
       "spotifyUrl": "https://open.spotify.com/track/3CSy3ua1eqT6M1zHjBzq02",
       "duration": 278333,
-      "previewUrl": ""
-    },
-    {
-      "id": "3aJ2aJz5xL03hpaqdPS7Ah",
-      "name": "only my railgun",
-      "artist": "fripSide",
-      "album": "infinite synthesis",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734e6243b9b0fd0006c031748d",
-      "playedAt": "2026-09-08T12:31:50.667Z",
-      "spotifyUrl": "https://open.spotify.com/track/3aJ2aJz5xL03hpaqdPS7Ah",
-      "duration": 254080,
-      "previewUrl": ""
-    },
-    {
-      "id": "4iids3OzZunRr9a2g6AYFr",
-      "name": "COLORFUL BOX",
-      "artist": "石田燿子",
-      "album": "COLORFUL BOX / Animetic Love Letter",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a8e13218ae730687a16d288",
-      "playedAt": "2026-09-08T12:27:42.519Z",
-      "spotifyUrl": "https://open.spotify.com/track/4iids3OzZunRr9a2g6AYFr",
-      "duration": 239094,
-      "previewUrl": ""
-    },
-    {
-      "id": "1J66QIjAuES6rRNJGnLSJh",
-      "name": "The Everlasting Guilty Crown",
-      "artist": "EGOIST",
-      "album": "Extra terrestrial Biological Entities",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fce3ae50618016f1fcc620f4",
-      "playedAt": "2026-09-08T12:20:39.537Z",
-      "spotifyUrl": "https://open.spotify.com/track/1J66QIjAuES6rRNJGnLSJh",
-      "duration": 326960,
-      "previewUrl": ""
-    },
-    {
-      "id": "4EXGfnQPnDQrtZPUIrveL3",
-      "name": "Perfect-area complete!",
-      "artist": "麻生夏子",
-      "album": "Perfect-area complete!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e64e81c264c18d3982edba10",
-      "playedAt": "2026-09-08T12:12:33.013Z",
-      "spotifyUrl": "https://open.spotify.com/track/4EXGfnQPnDQrtZPUIrveL3",
-      "duration": 243200,
-      "previewUrl": ""
-    },
-    {
-      "id": "4OQq1bcP12GQQXJNupxqfR",
-      "name": "again",
-      "artist": "YUI",
-      "album": "HOLIDAYS IN THE SUN",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fdec3ee19da7cd9b1b02ca9c",
-      "playedAt": "2026-09-08T12:08:27.427Z",
-      "spotifyUrl": "https://open.spotify.com/track/4OQq1bcP12GQQXJNupxqfR",
-      "duration": 254346,
-      "previewUrl": ""
-    },
-    {
-      "id": "6DNcnUEh0bOSZ7uHDclwIS",
-      "name": "ピースサイン - Peace Sign",
-      "artist": "Kenshi Yonezu",
-      "album": "ピースサイン - Peace Sign",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b63f3516605726c0b32218be",
-      "playedAt": "2026-09-08T12:04:19.297Z",
-      "spotifyUrl": "https://open.spotify.com/track/6DNcnUEh0bOSZ7uHDclwIS",
-      "duration": 237289,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WMeDp0t2UJmy21PRKAOzx",
-      "name": "ヒトリゴト",
-      "artist": "ClariS",
-      "album": "ヒトリゴト",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334257c272ad39c28b6562e0f",
-      "playedAt": "2026-09-08T12:00:27.301Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WMeDp0t2UJmy21PRKAOzx",
-      "duration": 235093,
-      "previewUrl": ""
-    },
-    {
-      "id": "0D3usrJm2RiAkW9o0kRCyu",
-      "name": "ハナノイロ",
-      "artist": "nano.RIPE",
-      "album": "星の夜の脈の音の",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27356099479086aa15653e66699",
-      "playedAt": "2026-09-08T11:56:38.609Z",
-      "spotifyUrl": "https://open.spotify.com/track/0D3usrJm2RiAkW9o0kRCyu",
-      "duration": 244706,
-      "previewUrl": ""
-    },
-    {
-      "id": "0AiRpK3u9OeM37Wsdkk8eJ",
-      "name": "創聖のアクエリオン",
-      "artist": "AKINO",
-      "album": "「創聖のアクエリオン」オープニングテーマ　創聖のアクエリオン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273617299c3d50e3181979f0395",
-      "playedAt": "2026-09-08T11:51:32.552Z",
-      "spotifyUrl": "https://open.spotify.com/track/0AiRpK3u9OeM37Wsdkk8eJ",
-      "duration": 283633,
-      "previewUrl": ""
-    },
-    {
-      "id": "4MorYttxU39XKVoRlCopyz",
-      "name": "QUESTION",
-      "artist": "3年E組うた担(渚&茅野&業&磯貝&前原)",
-      "album": "QUESTION",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0f01a5f8f3e0d9a0f857870",
-      "playedAt": "2026-09-08T11:44:07.720Z",
-      "spotifyUrl": "https://open.spotify.com/track/4MorYttxU39XKVoRlCopyz",
-      "duration": 266226,
-      "previewUrl": ""
-    },
-    {
-      "id": "78W4mTLIh4qoLu92W4IQhO",
-      "name": "ライラック",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "ライラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732dad118eff6a430b28a457bd",
-      "playedAt": "2026-09-08T11:39:45.027Z",
-      "spotifyUrl": "https://open.spotify.com/track/78W4mTLIh4qoLu92W4IQhO",
-      "duration": 288200,
-      "previewUrl": ""
-    },
-    {
-      "id": "70F5b3xdEDseBuANiHm02N",
-      "name": "ふ・れ・ん・ど・し・た・い",
-      "artist": "学園生活部",
-      "album": "ふ・れ・ん・ど・し・た・い",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f95272317df8bb1794749178",
-      "playedAt": "2026-09-08T11:35:13.425Z",
-      "spotifyUrl": "https://open.spotify.com/track/70F5b3xdEDseBuANiHm02N",
-      "duration": 218666,
-      "previewUrl": ""
-    },
-    {
-      "id": "4XObDlhGp6sREJoZj2lFv2",
-      "name": "走れSAKAMOTO",
-      "artist": "Vaundy",
-      "album": "走れSAKAMOTO",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
-      "playedAt": "2026-09-08T11:31:42.748Z",
-      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
-      "duration": 205984,
       "previewUrl": ""
     }
   ],
