@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-11T16:21:59.887Z",
+  "lastUpdated": "2026-09-11T20:52:50.571Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,15 +11,15 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 1945,
-      "playtimeForeverMinutes": 1945
+      "playtime2weeksMinutes": 1977,
+      "playtimeForeverMinutes": 1977
     },
     {
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtime2weeksMinutes": 72,
-      "playtimeForeverMinutes": 110
+      "playtime2weeksMinutes": 131,
+      "playtimeForeverMinutes": 168
     },
     {
       "appid": 271590,
@@ -65,7 +65,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 1945
+      "playtimeForeverMinutes": 1977
     },
     {
       "appid": 431730,
@@ -86,6 +86,12 @@
       "playtimeForeverMinutes": 376
     },
     {
+      "appid": 990080,
+      "name": "Hogwarts Legacy",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
+      "playtimeForeverMinutes": 168
+    },
+    {
       "appid": 1364780,
       "name": "Street Fighter™ 6",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1364780/d8057ee15238077329f869c1610e257461ab3f76.jpg",
@@ -96,12 +102,6 @@
       "name": "Shadowverse: Worlds Beyond",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2584990/c4e197c8e6dd7a1da1913a93178d4000ee22a73d.jpg",
       "playtimeForeverMinutes": 114
-    },
-    {
-      "appid": 990080,
-      "name": "Hogwarts Legacy",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtimeForeverMinutes": 110
     },
     {
       "appid": 1954420,
@@ -410,9 +410,15 @@
     {
       "appid": 688130,
       "gameName": "Pogostuck: Rage With Your Friends",
-      "unlocked": 4,
+      "unlocked": 5,
       "total": 68,
       "recentUnlocks": [
+        {
+          "name": "Chunky Fruits",
+          "description": "Reach the Moai pit.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/eb898419cd8a2ca07055fd738d85a49d87dba333.jpg",
+          "unlockedAt": "2026-09-11T16:24:50.000Z"
+        },
         {
           "name": "Super Jump",
           "description": "Jump 50m high.",
@@ -424,12 +430,6 @@
           "description": "Unlock all cosmetics.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/8319161f8f508ad23b00477026aa6db74c10fb8d.jpg",
           "unlockedAt": "2026-09-06T00:28:56.000Z"
-        },
-        {
-          "name": "Grape Gauntlet",
-          "description": "Actually apples.",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/7268902db6125f814e757d116ad9fa011005fd1d.jpg",
-          "unlockedAt": "2026-09-05T12:51:01.000Z"
         }
       ]
     },
@@ -474,6 +474,26 @@
       ]
     },
     {
+      "appid": 990080,
+      "gameName": "Hogwarts Legacy",
+      "unlocked": 2,
+      "total": 45,
+      "recentUnlocks": [
+        {
+          "name": "First Class Student",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/00ed9983fddb95930e090930c9e324089f189fc6.jpg",
+          "unlockedAt": "2026-09-11T17:15:28.000Z"
+        },
+        {
+          "name": "The Sort Who Makes an Entrance",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/f0abf5a97d54b4206b2162f3bac502db8af8df55.jpg",
+          "unlockedAt": "2026-09-11T12:02:55.000Z"
+        }
+      ]
+    },
+    {
       "appid": 1364780,
       "gameName": "Street Fighter™ 6",
       "unlocked": 5,
@@ -498,13 +518,6 @@
           "unlockedAt": "2026-03-23T14:00:56.000Z"
         }
       ]
-    },
-    {
-      "appid": 2584990,
-      "gameName": "Shadowverse: Worlds Beyond",
-      "unlocked": 0,
-      "total": 27,
-      "recentUnlocks": []
     }
   ]
 }
