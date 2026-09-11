@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-09-11T10:11:08.774Z",
+  "lastUpdated": "2026-09-11T15:29:02.410Z",
   "tracks": [
+    {
+      "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
+      "name": "STAY TUNE",
+      "artist": "Suchmos",
+      "album": "THE KIDS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27367d40a85b18ed1694d96e16b",
+      "playedAt": "2026-09-11T13:31:58.368Z",
+      "spotifyUrl": "https://open.spotify.com/track/1KKc8f9ZiKFzOeRJJ3SYn7",
+      "duration": 298746,
+      "previewUrl": ""
+    },
+    {
+      "id": "3gvA4qesNQ2HyBVr34i1q3",
+      "name": "Crow Song",
+      "artist": "marina, VISUAL ARTS / Key",
+      "album": "Crow Song",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c27d4dcda96b4fcd066f898b",
+      "playedAt": "2026-09-11T13:25:39.178Z",
+      "spotifyUrl": "https://open.spotify.com/track/3gvA4qesNQ2HyBVr34i1q3",
+      "duration": 248040,
+      "previewUrl": ""
+    },
+    {
+      "id": "5657i1LbjJ0HhJW23VcOT1",
+      "name": "My Soul, Your Beats!",
+      "artist": "Lia, VISUAL ARTS / Key",
+      "album": "My Soul, Your Beats!/Brave Song",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27362ddd6f5ee9d075ea85af148",
+      "playedAt": "2026-09-11T13:21:12.096Z",
+      "spotifyUrl": "https://open.spotify.com/track/5657i1LbjJ0HhJW23VcOT1",
+      "duration": 275480,
+      "previewUrl": ""
+    },
+    {
+      "id": "2YZa7FpeKe423Wvme0yKNf",
+      "name": "いますぐ輪廻",
+      "artist": "NAKISO",
+      "album": "いますぐ輪廻",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342f821a5480cf2b8248db543",
+      "playedAt": "2026-09-11T13:00:26.438Z",
+      "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
+      "duration": 122482,
+      "previewUrl": ""
+    },
+    {
+      "id": "07rg7ciYLLffOV5Fpe0I2F",
+      "name": "Oshama Scramble!",
+      "artist": "t+pazolite",
+      "album": "maimai ALL PERFECT COLLECTiON 3",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
+      "playedAt": "2026-09-11T12:58:23.423Z",
+      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
+      "duration": 124146,
+      "previewUrl": ""
+    },
+    {
+      "id": "53Uy2m8yielFV4bkGBybhZ",
+      "name": "全力☆Summer!",
+      "artist": "angela",
+      "album": "Beyond",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
+      "playedAt": "2026-09-11T12:56:18.712Z",
+      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
+      "duration": 233893,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-09-11T10:31:16.611Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
     {
       "id": "10Yk9WbT2840l1NK5RWvkq",
       "name": "adrenaline!!!",
@@ -10,17 +87,6 @@
       "playedAt": "2026-09-11T02:53:32.035Z",
       "spotifyUrl": "https://open.spotify.com/track/10Yk9WbT2840l1NK5RWvkq",
       "duration": 274146,
-      "previewUrl": ""
-    },
-    {
-      "id": "53Uy2m8yielFV4bkGBybhZ",
-      "name": "全力☆Summer!",
-      "artist": "angela",
-      "album": "Beyond",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
-      "playedAt": "2026-09-11T02:48:57.275Z",
-      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
-      "duration": 233893,
       "previewUrl": ""
     },
     {
@@ -54,17 +120,6 @@
       "playedAt": "2026-09-10T05:22:25.778Z",
       "spotifyUrl": "https://open.spotify.com/track/2P4OICZRVAQcYAV2JReRfj",
       "duration": 230613,
-      "previewUrl": ""
-    },
-    {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-09-10T05:18:27.820Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
       "previewUrl": ""
     },
     {
@@ -266,17 +321,6 @@
       "previewUrl": ""
     },
     {
-      "id": "07rg7ciYLLffOV5Fpe0I2F",
-      "name": "Oshama Scramble!",
-      "artist": "t+pazolite",
-      "album": "maimai ALL PERFECT COLLECTiON 3",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
-      "playedAt": "2026-09-08T13:08:00.440Z",
-      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
-      "duration": 124146,
-      "previewUrl": ""
-    },
-    {
       "id": "0aB0v4027ukVziUGwVGYpG",
       "name": "tv off (feat. lefty gunplay)",
       "artist": "Kendrick Lamar, Lefty Gunplay",
@@ -285,50 +329,6 @@
       "playedAt": "2026-09-08T13:05:55.764Z",
       "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
       "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "28lzJcFE5mEwL9BkxQ4CrQ",
-      "name": "HOT LIMIT",
-      "artist": "T.M.Revolution",
-      "album": "B☆E☆S☆T",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de9d193c6087fdcdf6b2f98a",
-      "playedAt": "2026-09-08T12:59:58.449Z",
-      "spotifyUrl": "https://open.spotify.com/track/28lzJcFE5mEwL9BkxQ4CrQ",
-      "duration": 220000,
-      "previewUrl": ""
-    },
-    {
-      "id": "7zZUidliw5tFa8TC7yezoO",
-      "name": "ガツガツ!!",
-      "artist": "竹内浩明",
-      "album": "運動会・発表会 ダンス・ソング大入り!～スーパーニンジャ SASUKE ～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e210f3c232223b2428df760f",
-      "playedAt": "2026-09-08T12:56:17.921Z",
-      "spotifyUrl": "https://open.spotify.com/track/7zZUidliw5tFa8TC7yezoO",
-      "duration": 226826,
-      "previewUrl": ""
-    },
-    {
-      "id": "16rOmBznc3xQKAut7Qrq4I",
-      "name": "もってけ!セーラーふく",
-      "artist": "i☆Ris",
-      "album": "§Rainbow TYPE-C",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c0e2801b0c674168b878359e",
-      "playedAt": "2026-09-08T12:51:39.447Z",
-      "spotifyUrl": "https://open.spotify.com/track/16rOmBznc3xQKAut7Qrq4I",
-      "duration": 258613,
-      "previewUrl": ""
-    },
-    {
-      "id": "2jtI8cQPtIiV9u5OXESTPm",
-      "name": "ワンルームシュガーライフ",
-      "artist": "NANAOAKARI",
-      "album": "フライングベスト〜知らないの？巷で噂のダメ天使〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734669f677e8be828652297606",
-      "playedAt": "2026-09-08T12:42:23.244Z",
-      "spotifyUrl": "https://open.spotify.com/track/2jtI8cQPtIiV9u5OXESTPm",
-      "duration": 168000,
       "previewUrl": ""
     }
   ],
