@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-12T04:22:29.450Z",
+  "lastUpdated": "2026-09-12T10:35:57.803Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,15 +11,15 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 1977,
-      "playtimeForeverMinutes": 1977
+      "playtime2weeksMinutes": 2009,
+      "playtimeForeverMinutes": 2009
     },
     {
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtime2weeksMinutes": 161,
-      "playtimeForeverMinutes": 198
+      "playtime2weeksMinutes": 303,
+      "playtimeForeverMinutes": 340
     },
     {
       "appid": 271590,
@@ -65,7 +65,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 1977
+      "playtimeForeverMinutes": 2009
     },
     {
       "appid": 431730,
@@ -89,7 +89,7 @@
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtimeForeverMinutes": 198
+      "playtimeForeverMinutes": 340
     },
     {
       "appid": 1364780,
@@ -476,20 +476,26 @@
     {
       "appid": 990080,
       "gameName": "Hogwarts Legacy",
-      "unlocked": 2,
+      "unlocked": 4,
       "total": 45,
       "recentUnlocks": [
+        {
+          "name": "A Keen Sense of Spell",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
+          "unlockedAt": "2026-09-12T08:21:27.000Z"
+        },
+        {
+          "name": "Troll with the Punches",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/5c9e26c4941ae4fc98c6eaf3c023e3a18dc2df51.jpg",
+          "unlockedAt": "2026-09-12T04:30:37.000Z"
+        },
         {
           "name": "First Class Student",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/00ed9983fddb95930e090930c9e324089f189fc6.jpg",
           "unlockedAt": "2026-09-11T17:15:28.000Z"
-        },
-        {
-          "name": "The Sort Who Makes an Entrance",
-          "description": null,
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/f0abf5a97d54b4206b2162f3bac502db8af8df55.jpg",
-          "unlockedAt": "2026-09-11T12:02:55.000Z"
         }
       ]
     },
