@@ -1,6 +1,105 @@
 {
-  "lastUpdated": "2026-09-11T15:29:02.410Z",
+  "lastUpdated": "2026-09-12T09:45:10.594Z",
   "tracks": [
+    {
+      "id": "6lcqXYjDSGxx69DurXx0rF",
+      "name": "ループザルーム (feat. 初音ミク)",
+      "artist": "ルシノ, Hatsune Miku",
+      "album": "ループザルーム / ランベントアリア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
+      "playedAt": "2026-09-12T05:17:59.244Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
+      "duration": 134071,
+      "previewUrl": ""
+    },
+    {
+      "id": "07rg7ciYLLffOV5Fpe0I2F",
+      "name": "Oshama Scramble!",
+      "artist": "t+pazolite",
+      "album": "maimai ALL PERFECT COLLECTiON 3",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
+      "playedAt": "2026-09-12T05:15:44.700Z",
+      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
+      "duration": 124146,
+      "previewUrl": ""
+    },
+    {
+      "id": "7pgo1C8l5AX3pkwktxIklG",
+      "name": "Baqeela (feat. seki＊tree) - Long Version",
+      "artist": "owl*tree, seki*tree",
+      "album": "pvq",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
+      "playedAt": "2026-09-12T05:13:40.071Z",
+      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
+      "duration": 252923,
+      "previewUrl": ""
+    },
+    {
+      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "name": "Butter Building",
+      "artist": "Xoc",
+      "album": "What's Pink and Sucks?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
+      "playedAt": "2026-09-12T05:09:26.673Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "duration": 98754,
+      "previewUrl": ""
+    },
+    {
+      "id": "3BPnFpAL02Bos8EoTLnO9R",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "KPP BEST",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27381163bea556634f23cde7638",
+      "playedAt": "2026-09-12T05:07:47.414Z",
+      "spotifyUrl": "https://open.spotify.com/track/3BPnFpAL02Bos8EoTLnO9R",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "2P4OICZRVAQcYAV2JReRfj",
+      "name": "Waiting For Love",
+      "artist": "Avicii",
+      "album": "Stories",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735393c5d3cac806092a9bc468",
+      "playedAt": "2026-09-12T02:33:37.887Z",
+      "spotifyUrl": "https://open.spotify.com/track/2P4OICZRVAQcYAV2JReRfj",
+      "duration": 230613,
+      "previewUrl": ""
+    },
+    {
+      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
+      "name": "Without You (feat. Sandro Cavazza)",
+      "artist": "Avicii, Sandro Cavazza",
+      "album": "AVĪCI (01)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
+      "playedAt": "2026-09-12T02:29:46.817Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
+      "duration": 181672,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-09-12T02:26:34.403Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "2UUwBDALzJuThY88Ro2lD2",
+      "name": "フォニイ",
+      "artist": "可不, ツミキ",
+      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
+      "playedAt": "2026-09-12T02:23:35.671Z",
+      "spotifyUrl": "https://open.spotify.com/track/2UUwBDALzJuThY88Ro2lD2",
+      "duration": 189884,
+      "previewUrl": ""
+    },
     {
       "id": "1KKc8f9ZiKFzOeRJJ3SYn7",
       "name": "STAY TUNE",
@@ -46,17 +145,6 @@
       "previewUrl": ""
     },
     {
-      "id": "07rg7ciYLLffOV5Fpe0I2F",
-      "name": "Oshama Scramble!",
-      "artist": "t+pazolite",
-      "album": "maimai ALL PERFECT COLLECTiON 3",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a3a231746feccc15e831883",
-      "playedAt": "2026-09-11T12:58:23.423Z",
-      "spotifyUrl": "https://open.spotify.com/track/07rg7ciYLLffOV5Fpe0I2F",
-      "duration": 124146,
-      "previewUrl": ""
-    },
-    {
       "id": "53Uy2m8yielFV4bkGBybhZ",
       "name": "全力☆Summer!",
       "artist": "angela",
@@ -65,17 +153,6 @@
       "playedAt": "2026-09-11T12:56:18.712Z",
       "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
       "duration": 233893,
-      "previewUrl": ""
-    },
-    {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-09-11T10:31:16.611Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
       "previewUrl": ""
     },
     {
@@ -109,17 +186,6 @@
       "playedAt": "2026-09-11T02:40:47.885Z",
       "spotifyUrl": "https://open.spotify.com/track/3B0irDyS69y5eAz15xV2Ee",
       "duration": 247426,
-      "previewUrl": ""
-    },
-    {
-      "id": "2P4OICZRVAQcYAV2JReRfj",
-      "name": "Waiting For Love",
-      "artist": "Avicii",
-      "album": "Stories",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735393c5d3cac806092a9bc468",
-      "playedAt": "2026-09-10T05:22:25.778Z",
-      "spotifyUrl": "https://open.spotify.com/track/2P4OICZRVAQcYAV2JReRfj",
-      "duration": 230613,
       "previewUrl": ""
     },
     {
@@ -255,17 +321,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
-      "name": "Without You (feat. Sandro Cavazza)",
-      "artist": "Avicii, Sandro Cavazza",
-      "album": "AVĪCI (01)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
-      "playedAt": "2026-09-09T12:05:42.749Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
-      "duration": 181672,
-      "previewUrl": ""
-    },
-    {
       "id": "6RSuGXM9GVMdXaI8ifGm8d",
       "name": "Let's Go",
       "artist": "JAXSON GAMBLE",
@@ -274,61 +329,6 @@
       "playedAt": "2026-09-09T05:12:25.883Z",
       "spotifyUrl": "https://open.spotify.com/track/6RSuGXM9GVMdXaI8ifGm8d",
       "duration": 127333,
-      "previewUrl": ""
-    },
-    {
-      "id": "6lcqXYjDSGxx69DurXx0rF",
-      "name": "ループザルーム (feat. 初音ミク)",
-      "artist": "ルシノ, Hatsune Miku",
-      "album": "ループザルーム / ランベントアリア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e9036a7fbc0a7888ebc70af",
-      "playedAt": "2026-09-09T05:06:43.535Z",
-      "spotifyUrl": "https://open.spotify.com/track/6lcqXYjDSGxx69DurXx0rF",
-      "duration": 134071,
-      "previewUrl": ""
-    },
-    {
-      "id": "6NYbDTmstd7JSUWl2hVBqR",
-      "name": "Sprinter",
-      "artist": "Dave, Central Cee",
-      "album": "Sprinter",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd9f1f94f2f9a10310a3d525",
-      "playedAt": "2026-09-08T21:59:44.724Z",
-      "spotifyUrl": "https://open.spotify.com/track/6NYbDTmstd7JSUWl2hVBqR",
-      "duration": 229133,
-      "previewUrl": ""
-    },
-    {
-      "id": "6HznFPNdvbxgzm5jJyNlwp",
-      "name": "オーバーライド",
-      "artist": "Yoshida Yasei",
-      "album": "オーバーライド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
-      "playedAt": "2026-09-08T13:12:57.024Z",
-      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
-      "duration": 138533,
-      "previewUrl": ""
-    },
-    {
-      "id": "5ic62hKqeDhZsa9l6YQxzJ",
-      "name": "メズマライザー (feat. 初音ミク&重音テト)",
-      "artist": "32ki, Hatsune Miku, 重音テト",
-      "album": "メズマライザー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321333eb66e3cf9f3818e789f",
-      "playedAt": "2026-09-08T13:10:37.951Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
-      "duration": 156972,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2a0a166493a2bde5480a420",
-      "playedAt": "2026-09-08T13:05:55.764Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
       "previewUrl": ""
     }
   ],
