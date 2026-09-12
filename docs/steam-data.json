@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-11T20:52:50.571Z",
+  "lastUpdated": "2026-09-12T04:22:29.450Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -18,8 +18,8 @@
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtime2weeksMinutes": 131,
-      "playtimeForeverMinutes": 168
+      "playtime2weeksMinutes": 161,
+      "playtimeForeverMinutes": 198
     },
     {
       "appid": 271590,
@@ -89,7 +89,7 @@
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtimeForeverMinutes": 168
+      "playtimeForeverMinutes": 198
     },
     {
       "appid": 1364780,
