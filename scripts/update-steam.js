@@ -72,14 +72,30 @@ async function getOwnedGames() {
   return { count: data.response.game_count || games.length, games };
 }
 
+// 実績ごとの「全プレイヤー中の達成率」。この呼び出しだけ失敗しても(集計が
+// 無いゲーム等)実績データ自体は出したいので、ここで握りつぶして空Mapを返す
+// (呼び出し元のPromise.allや外側のtry/catchを巻き込んで実績ごと失わせない)。
+async function getGlobalAchievementPercentages(appid) {
+  try {
+    const data = await steamGet('ISteamUserStats', 'GetGlobalAchievementPercentagesForApp', 'v2', {
+      gameid: appid,
+    });
+    const list = data.achievementpercentages?.achievements || [];
+    return new Map(list.map((a) => [a.name, Math.round(Number(a.percent) * 10) / 10]));
+  } catch {
+    return new Map();
+  }
+}
+
 // 実績はゲームごとに「定義(表示名/説明/アイコン)」と「達成状況」を別々に
 // 取ってマージする必要がある。実績非対応のゲームはエラーになるので個別に
 // try/catchし、1本失敗しても全体を止めない。
 async function getAchievementsForGame(appid, gameName) {
   try {
-    const [schemaData, achData] = await Promise.all([
+    const [schemaData, achData, globalPercentages] = await Promise.all([
       steamGet('ISteamUserStats', 'GetSchemaForGame', 'v2', { appid }),
       steamGet('ISteamUserStats', 'GetPlayerAchievements', 'v1', { steamid: STEAM_ID, appid, l: 'japanese' }),
+      getGlobalAchievementPercentages(appid),
     ]);
 
     const schema = schemaData.game?.availableGameStats?.achievements;
@@ -99,6 +115,7 @@ async function getAchievementsForGame(appid, gameName) {
           description: def?.description || null,
           iconUrl: def?.icon || null,
           unlockedAt: new Date(a.unlocktime * 1000).toISOString(),
+          percent: globalPercentages.get(a.apiname) ?? null,
         };
       });
 

@@ -6,6 +6,12 @@ function formatHours(minutes) {
   return Math.round(minutes / 60)
 }
 
+function achievementTooltip(ach) {
+  const base = ach.description || ach.name
+  if (ach.percent == null) return base
+  return `${base}(全プレイヤーの${ach.percent.toFixed(1)}%が達成)`
+}
+
 export default function GamingArchive() {
   const [state, setState] = useState({ status: 'loading' })
   const [showAllLibrary, setShowAllLibrary] = useState(false)
@@ -139,7 +145,7 @@ export default function GamingArchive() {
                     {game.recentUnlocks.map((ach) => (
                       <div
                         key={ach.name}
-                        title={ach.description || ach.name}
+                        title={achievementTooltip(ach)}
                         className="flex items-center gap-2 border border-line rounded px-2 py-1"
                       >
                         {ach.iconUrl && <img src={ach.iconUrl} alt="" className="w-6 h-6 rounded shrink-0" />}
