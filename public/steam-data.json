@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-13T04:36:09.271Z",
+  "lastUpdated": "2026-09-13T14:18:26.609Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,15 +11,15 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 2045,
-      "playtimeForeverMinutes": 2045
+      "playtime2weeksMinutes": 2079,
+      "playtimeForeverMinutes": 2079
     },
     {
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtime2weeksMinutes": 432,
-      "playtimeForeverMinutes": 469
+      "playtime2weeksMinutes": 503,
+      "playtimeForeverMinutes": 540
     },
     {
       "appid": 271590,
@@ -65,7 +65,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 2045
+      "playtimeForeverMinutes": 2079
     },
     {
       "appid": 431730,
@@ -77,7 +77,7 @@
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtimeForeverMinutes": 469
+      "playtimeForeverMinutes": 540
     },
     {
       "appid": 1446780,
@@ -313,19 +313,22 @@
           "name": "Burn It All",
           "description": "Deal a total of 100K or more damage with card effects in Ranked/Event Duels",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
-          "unlockedAt": "2023-04-24T13:27:12.000Z"
+          "unlockedAt": "2023-04-24T13:27:12.000Z",
+          "percent": 9.6
         },
         {
           "name": "Ultra Burst",
           "description": "Defeat your opponent by dealing more than 4000 damage at a time in a Ranked/Event Duel",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
-          "unlockedAt": "2022-12-23T11:05:16.000Z"
+          "unlockedAt": "2022-12-23T11:05:16.000Z",
+          "percent": 34
         },
         {
           "name": "Necromancer",
           "description": "Special Summon 50 or more monsters from the Graveyard in Ranked/Event Duels",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
-          "unlockedAt": "2022-10-01T01:54:15.000Z"
+          "unlockedAt": "2022-10-01T01:54:15.000Z",
+          "percent": 23.1
         }
       ]
     },
@@ -339,19 +342,22 @@
           "name": "A Friendship Resurrected",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/7424038d40678f398eab78553f71d9832d778ff6.jpg",
-          "unlockedAt": "2026-08-15T21:33:57.000Z"
+          "unlockedAt": "2026-08-15T21:33:57.000Z",
+          "percent": 39.1
         },
         {
           "name": "A Fair Day's Pay",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/4ba73dc8669d5e7090c3efa5b677f34f262049d9.jpg",
-          "unlockedAt": "2026-08-15T21:33:57.000Z"
+          "unlockedAt": "2026-08-15T21:33:57.000Z",
+          "percent": 29
         },
         {
           "name": "To Live or Die in Los Santos",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/b785bc5590edfb7a40292702b1f96e5c4ec8d7fa.jpg",
-          "unlockedAt": "2026-08-15T21:33:57.000Z"
+          "unlockedAt": "2026-08-15T21:33:57.000Z",
+          "percent": 23.9
         }
       ]
     },
@@ -365,19 +371,22 @@
           "name": "Blessed",
           "description": "Select a Standing Stone blessing",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/3a7e9d9c4f1142fdddbcc6988f23415d72d41ce0.jpg",
-          "unlockedAt": "2025-10-10T12:22:18.000Z"
+          "unlockedAt": "2025-10-10T12:22:18.000Z",
+          "percent": 62.3
         },
         {
           "name": "Wanted",
           "description": "Escape from jail",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/9fa4e8043c60916d3714fa96fa8eb9bd46901c22.jpg",
-          "unlockedAt": "2025-06-17T03:57:02.000Z"
+          "unlockedAt": "2025-06-17T03:57:02.000Z",
+          "percent": 8.9
         },
         {
           "name": "Expert",
           "description": "Reach Level 25",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/2162cee6a1a297e102e6ef7c5e60d936cbcc28a1.jpg",
-          "unlockedAt": "2025-06-17T03:49:35.000Z"
+          "unlockedAt": "2025-06-17T03:49:35.000Z",
+          "percent": 28.6
         }
       ]
     },
@@ -391,19 +400,22 @@
           "name": "Seasoned Pal Tamer",
           "description": "Caught 90 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
-          "unlockedAt": "2024-02-02T11:36:25.000Z"
+          "unlockedAt": "2024-02-02T11:36:25.000Z",
+          "percent": 44.8
         },
         {
           "name": "Hillside Sovereign",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/31f82fc3fe2150c4edb78788d0817c59692866ab.jpg",
-          "unlockedAt": "2024-01-28T06:05:33.000Z"
+          "unlockedAt": "2024-01-28T06:05:33.000Z",
+          "percent": 72.8
         },
         {
           "name": "Skilled Pal Tamer",
           "description": "Caught 50 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/2308a9900f12b3cdf8bc7f1229bc4b2488a4fcb3.jpg",
-          "unlockedAt": "2024-01-27T11:11:25.000Z"
+          "unlockedAt": "2024-01-27T11:11:25.000Z",
+          "percent": 62.5
         }
       ]
     },
@@ -417,45 +429,51 @@
           "name": "Chunky Fruits",
           "description": "Reach the Moai pit.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/eb898419cd8a2ca07055fd738d85a49d87dba333.jpg",
-          "unlockedAt": "2026-09-11T16:24:50.000Z"
+          "unlockedAt": "2026-09-11T16:24:50.000Z",
+          "percent": 8.4
         },
         {
           "name": "Super Jump",
           "description": "Jump 50m high.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/c4b0e341d5528bd73c1789b67f61be791c1fb312.jpg",
-          "unlockedAt": "2026-09-06T07:48:02.000Z"
+          "unlockedAt": "2026-09-06T07:48:02.000Z",
+          "percent": 23.7
         },
         {
           "name": "Max Level",
           "description": "Unlock all cosmetics.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/8319161f8f508ad23b00477026aa6db74c10fb8d.jpg",
-          "unlockedAt": "2026-09-06T00:28:56.000Z"
+          "unlockedAt": "2026-09-06T00:28:56.000Z",
+          "percent": 10.9
         }
       ]
     },
     {
       "appid": 990080,
       "gameName": "Hogwarts Legacy",
-      "unlocked": 4,
+      "unlocked": 5,
       "total": 45,
       "recentUnlocks": [
+        {
+          "name": "The Toast of the Town",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/92b36c71d5eed910a58979f776c1d70a93ab117b.jpg",
+          "unlockedAt": "2026-09-13T13:09:22.000Z",
+          "percent": 23.2
+        },
         {
           "name": "A Keen Sense of Spell",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
-          "unlockedAt": "2026-09-12T08:21:27.000Z"
+          "unlockedAt": "2026-09-12T08:21:27.000Z",
+          "percent": 71.8
         },
         {
           "name": "Troll with the Punches",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/5c9e26c4941ae4fc98c6eaf3c023e3a18dc2df51.jpg",
-          "unlockedAt": "2026-09-12T04:30:37.000Z"
-        },
-        {
-          "name": "First Class Student",
-          "description": null,
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/00ed9983fddb95930e090930c9e324089f189fc6.jpg",
-          "unlockedAt": "2026-09-11T17:15:28.000Z"
+          "unlockedAt": "2026-09-12T04:30:37.000Z",
+          "percent": 77.3
         }
       ]
     },
@@ -469,13 +487,15 @@
           "name": "Extravagant Cashbox",
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
-          "unlockedAt": "2023-07-11T08:19:25.000Z"
+          "unlockedAt": "2023-07-11T08:19:25.000Z",
+          "percent": 44
         },
         {
           "name": "Kamura Amulet",
           "description": "A trinket given to new hunters who have proved themselves capable.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/01c4593add4173fdfdfcf8e50b6e99438c7895e8.jpg",
-          "unlockedAt": "2023-07-11T08:07:02.000Z"
+          "unlockedAt": "2023-07-11T08:07:02.000Z",
+          "percent": 87.3
         }
       ]
     },
@@ -489,13 +509,15 @@
           "name": "Pest",
           "description": "Cause 1 fatal error or trigger 128 warnings in the editor.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
-          "unlockedAt": "2026-09-06T13:52:37.000Z"
+          "unlockedAt": "2026-09-06T13:52:37.000Z",
+          "percent": 33.3
         },
         {
           "name": "Trying something new",
           "description": "Use 10 different wallpapers from the Workshop.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1c2250cab3953159e542b9ff4bd5be9ec75c9f61.jpg",
-          "unlockedAt": "2025-07-20T08:13:17.000Z"
+          "unlockedAt": "2025-07-20T08:13:17.000Z",
+          "percent": 83.8
         }
       ]
     },
@@ -509,19 +531,22 @@
           "name": "Get Your Game Face On!",
           "description": "Where's your face, dingus? Get your butt to the avatar creator and sort yourself out! Crying shame we can't fix that attitude of yours while we're at it.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/b2c3883e2cfd25d9477c7681714288cac23d4f76.jpg",
-          "unlockedAt": "2026-03-23T15:27:32.000Z"
+          "unlockedAt": "2026-03-23T15:27:32.000Z",
+          "percent": 81.9
         },
         {
           "name": "Leaving the Nest",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/e846657465466eb560951885e9c9547d824d7ac4.jpg",
-          "unlockedAt": "2026-03-23T15:27:32.000Z"
+          "unlockedAt": "2026-03-23T15:27:32.000Z",
+          "percent": 58.2
         },
         {
           "name": "My Title, My Life",
           "description": "Earned any titles for your efforts yet? Me? Pfft. I don't need a title. I'm Jamie freakin' Siu!",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/0ea31f649ed4db04e0869390fc8038e936e40944.jpg",
-          "unlockedAt": "2026-03-23T14:00:56.000Z"
+          "unlockedAt": "2026-03-23T14:00:56.000Z",
+          "percent": 90.7
         }
       ]
     }
