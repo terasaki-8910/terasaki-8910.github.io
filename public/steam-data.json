@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-13T16:07:10.594Z",
+  "lastUpdated": "2026-09-13T20:40:36.062Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,8 +11,8 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 2109,
-      "playtimeForeverMinutes": 2109
+      "playtime2weeksMinutes": 2151,
+      "playtimeForeverMinutes": 2151
     },
     {
       "appid": 990080,
@@ -65,7 +65,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 2109
+      "playtimeForeverMinutes": 2151
     },
     {
       "appid": 431730,
@@ -422,29 +422,29 @@
     {
       "appid": 688130,
       "gameName": "Pogostuck: Rage With Your Friends",
-      "unlocked": 5,
+      "unlocked": 7,
       "total": 68,
       "recentUnlocks": [
+        {
+          "name": "Map 3 Sightseeing",
+          "description": "Cross the broken bridge.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/d1c8d32d60378a26b44f4b00dd2113d5568d3863.jpg",
+          "unlockedAt": "2026-09-13T16:47:08.000Z",
+          "percent": 9.3
+        },
+        {
+          "name": "Back For More",
+          "description": "Load up map 3 for the first time.",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/8bf5a64bd1b2e59ed7da40117ca86243107b0a52.jpg",
+          "unlockedAt": "2026-09-13T16:46:29.000Z",
+          "percent": 13.1
+        },
         {
           "name": "Chunky Fruits",
           "description": "Reach the Moai pit.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/eb898419cd8a2ca07055fd738d85a49d87dba333.jpg",
           "unlockedAt": "2026-09-11T16:24:50.000Z",
           "percent": 8.4
-        },
-        {
-          "name": "Super Jump",
-          "description": "Jump 50m high.",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/c4b0e341d5528bd73c1789b67f61be791c1fb312.jpg",
-          "unlockedAt": "2026-09-06T07:48:02.000Z",
-          "percent": 23.7
-        },
-        {
-          "name": "Max Level",
-          "description": "Unlock all cosmetics.",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/8319161f8f508ad23b00477026aa6db74c10fb8d.jpg",
-          "unlockedAt": "2026-09-06T00:28:56.000Z",
-          "percent": 10.9
         }
       ]
     },
