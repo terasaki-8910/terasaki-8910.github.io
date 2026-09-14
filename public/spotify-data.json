@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-13T15:16:00.678Z",
+  "lastUpdated": "2026-09-14T02:16:53.846Z",
   "tracks": [
+    {
+      "id": "7v864NfiQlITXITwxPfbKX",
+      "name": "Sudden Onset Disaster",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.7～Harmonizing for the Hearts of Each～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273377d4df85d33929d7bc8ad25",
+      "playedAt": "2026-09-13T19:06:38.262Z",
+      "spotifyUrl": "https://open.spotify.com/track/7v864NfiQlITXITwxPfbKX",
+      "duration": 115776,
+      "previewUrl": ""
+    },
     {
       "id": "7DbeeMHXn3aW6e7NYJWgF2",
       "name": "Wave & Conquer",
@@ -318,17 +329,6 @@
       "playedAt": "2026-09-13T03:48:40.627Z",
       "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
       "duration": 196226,
-      "previewUrl": ""
-    },
-    {
-      "id": "73rdU71fLEd0nW7HENRhKF",
-      "name": "キュートなキューたい",
-      "artist": "CUTIE STREET",
-      "album": "キュートなキューたい / ナイスだね",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
-      "playedAt": "2026-09-13T03:42:27.695Z",
-      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
-      "duration": 236000,
       "previewUrl": ""
     }
   ],
