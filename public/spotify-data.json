@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-09-14T11:11:57.511Z",
+  "lastUpdated": "2026-09-14T17:13:01.548Z",
   "tracks": [
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-09-14T12:05:15.821Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "4PXTz0TbOtqE3cGWImYri3",
+      "name": "うい麦畑でつかまえて",
+      "artist": "しぐれうい",
+      "album": "うい麦畑でつかまえて",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b6c0e611ea1428d09ec78d3",
+      "playedAt": "2026-09-14T11:39:13.144Z",
+      "spotifyUrl": "https://open.spotify.com/track/4PXTz0TbOtqE3cGWImYri3",
+      "duration": 224285,
+      "previewUrl": ""
+    },
     {
       "id": "3MDuA12HzorT65LovtOMKr",
       "name": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
@@ -307,28 +329,6 @@
       "playedAt": "2026-09-13T10:28:52.755Z",
       "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
       "duration": 169952,
-      "previewUrl": ""
-    },
-    {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-09-13T10:26:02.337Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
-      "previewUrl": ""
-    },
-    {
-      "id": "6COWhvoiuzKTBJx1pf2C5V",
-      "name": "He's a Pirate",
-      "artist": "Klaus Badelt",
-      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack/Japan Release Version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273704a8e25baebc0d2f7964ed9",
-      "playedAt": "2026-09-13T10:16:36.236Z",
-      "spotifyUrl": "https://open.spotify.com/track/6COWhvoiuzKTBJx1pf2C5V",
-      "duration": 90426,
       "previewUrl": ""
     }
   ],
