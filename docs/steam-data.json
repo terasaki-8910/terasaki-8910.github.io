@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-15T04:42:53.021Z",
+  "lastUpdated": "2026-09-15T11:35:30.463Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,8 +11,8 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 2286,
-      "playtimeForeverMinutes": 2341
+      "playtime2weeksMinutes": 2337,
+      "playtimeForeverMinutes": 2392
     },
     {
       "appid": 990080,
@@ -56,16 +56,16 @@
       "playtimeForeverMinutes": 4829
     },
     {
+      "appid": 688130,
+      "name": "Pogostuck: Rage With Your Friends",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
+      "playtimeForeverMinutes": 2392
+    },
+    {
       "appid": 1623730,
       "name": "Palworld",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1623730/f5523077a8f4c923c2e8d8c17794b3319035fa73.jpg",
       "playtimeForeverMinutes": 2382
-    },
-    {
-      "appid": 688130,
-      "name": "Pogostuck: Rage With Your Friends",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 2341
     },
     {
       "appid": 431730,
@@ -391,35 +391,6 @@
       ]
     },
     {
-      "appid": 1623730,
-      "gameName": "Palworld",
-      "unlocked": 6,
-      "total": 75,
-      "recentUnlocks": [
-        {
-          "name": "Seasoned Pal Tamer",
-          "description": "Caught 90 kinds of Pals",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
-          "unlockedAt": "2024-02-02T11:36:25.000Z",
-          "percent": 44.8
-        },
-        {
-          "name": "Hillside Sovereign",
-          "description": null,
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/31f82fc3fe2150c4edb78788d0817c59692866ab.jpg",
-          "unlockedAt": "2024-01-28T06:05:33.000Z",
-          "percent": 72.9
-        },
-        {
-          "name": "Skilled Pal Tamer",
-          "description": "Caught 50 kinds of Pals",
-          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/2308a9900f12b3cdf8bc7f1229bc4b2488a4fcb3.jpg",
-          "unlockedAt": "2024-01-27T11:11:25.000Z",
-          "percent": 62.5
-        }
-      ]
-    },
-    {
       "appid": 688130,
       "gameName": "Pogostuck: Rage With Your Friends",
       "unlocked": 7,
@@ -445,6 +416,35 @@
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/eb898419cd8a2ca07055fd738d85a49d87dba333.jpg",
           "unlockedAt": "2026-09-11T16:24:50.000Z",
           "percent": 8.4
+        }
+      ]
+    },
+    {
+      "appid": 1623730,
+      "gameName": "Palworld",
+      "unlocked": 6,
+      "total": 75,
+      "recentUnlocks": [
+        {
+          "name": "Seasoned Pal Tamer",
+          "description": "Caught 90 kinds of Pals",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
+          "unlockedAt": "2024-02-02T11:36:25.000Z",
+          "percent": 44.8
+        },
+        {
+          "name": "Hillside Sovereign",
+          "description": null,
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/31f82fc3fe2150c4edb78788d0817c59692866ab.jpg",
+          "unlockedAt": "2024-01-28T06:05:33.000Z",
+          "percent": 72.8
+        },
+        {
+          "name": "Skilled Pal Tamer",
+          "description": "Caught 50 kinds of Pals",
+          "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/2308a9900f12b3cdf8bc7f1229bc4b2488a4fcb3.jpg",
+          "unlockedAt": "2024-01-27T11:11:25.000Z",
+          "percent": 62.5
         }
       ]
     },
