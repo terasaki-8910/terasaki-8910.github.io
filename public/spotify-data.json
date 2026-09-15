@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-09-14T17:13:01.548Z",
+  "lastUpdated": "2026-09-15T10:39:20.190Z",
   "tracks": [
+    {
+      "id": "7l8CkFFxcbH09wwBzq4XWi",
+      "name": "ZERO!!",
+      "artist": "栗林みな実",
+      "album": "ZERO!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273035cfff33da7425490325c2f",
+      "playedAt": "2026-09-15T10:38:21.766Z",
+      "spotifyUrl": "https://open.spotify.com/track/7l8CkFFxcbH09wwBzq4XWi",
+      "duration": 243826,
+      "previewUrl": ""
+    },
+    {
+      "id": "0XT65K4AnBTrjq9x32aj8v",
+      "name": "プレパレード",
+      "artist": "逢坂大河・櫛枝実乃梨・川嶋亜美(釘宮理恵、堀江由衣、喜多村英梨)",
+      "album": "プレパレード",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306304207870db2dcd3affc47",
+      "playedAt": "2026-09-15T10:34:17.394Z",
+      "spotifyUrl": "https://open.spotify.com/track/0XT65K4AnBTrjq9x32aj8v",
+      "duration": 204840,
+      "previewUrl": ""
+    },
+    {
+      "id": "6vRkYTrWDzzVrZTqBJFR0u",
+      "name": "Catch the Moment",
+      "artist": "LiSA",
+      "album": "LiTTLE DEViL PARADE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738f3dc36ed6737a2f83c723cd",
+      "playedAt": "2026-09-15T10:30:52.014Z",
+      "spotifyUrl": "https://open.spotify.com/track/6vRkYTrWDzzVrZTqBJFR0u",
+      "duration": 282626,
+      "previewUrl": ""
+    },
+    {
+      "id": "3OxCaZnYX1pJA7CwV5rZ9O",
+      "name": "Shangri-La",
+      "artist": "angela",
+      "album": "I/O",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fd7669446ea1f0ffc855021",
+      "playedAt": "2026-09-15T10:26:08.840Z",
+      "spotifyUrl": "https://open.spotify.com/track/3OxCaZnYX1pJA7CwV5rZ9O",
+      "duration": 280200,
+      "previewUrl": ""
+    },
+    {
+      "id": "7onucgU6HHFbtZ9r0jXgmy",
+      "name": "DREAM SOLISTER",
+      "artist": "TRUE",
+      "album": "Joy Heart",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
+      "playedAt": "2026-09-15T10:21:28.078Z",
+      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
+      "duration": 300533,
+      "previewUrl": ""
+    },
+    {
+      "id": "1X7VQFZ23MgWshmLHYFRsZ",
+      "name": "勝手にシンドバッド",
+      "artist": "サザンオールスターズ",
+      "album": "勝手にシンドバッド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
+      "playedAt": "2026-09-15T06:42:10.039Z",
+      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
+      "duration": 237133,
+      "previewUrl": ""
+    },
+    {
+      "id": "5LtKpKOO0fyGBAbv761JCu",
+      "name": "Sunlight",
+      "artist": "TheFatRat, Phaera",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-09-15T06:42:07.419Z",
+      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
+      "duration": 169952,
+      "previewUrl": ""
+    },
     {
       "id": "4N3CAZ7qXbPKPWrcXd4gSh",
       "name": "Freakshow",
@@ -252,83 +329,6 @@
       "playedAt": "2026-09-13T11:07:01.201Z",
       "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
       "duration": 256120,
-      "previewUrl": ""
-    },
-    {
-      "id": "0UBUg8NU4XJtQqzTPs8Pkr",
-      "name": "三原色",
-      "artist": "YOASOBI",
-      "album": "THE BOOK 2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c3625a413a9a79facea38c2",
-      "playedAt": "2026-09-13T10:59:04.438Z",
-      "spotifyUrl": "https://open.spotify.com/track/0UBUg8NU4XJtQqzTPs8Pkr",
-      "duration": 220253,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ajpbW6tBpqUI9foCtwlLw",
-      "name": "祝福",
-      "artist": "YOASOBI",
-      "album": "祝福",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5993ff2f059a0a5a7f6270b",
-      "playedAt": "2026-09-13T10:55:23.721Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ajpbW6tBpqUI9foCtwlLw",
-      "duration": 196235,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YfXeoQ39zL9IWHOTrL8bg",
-      "name": "海馬成長痛",
-      "artist": "ZUTOMAYO",
-      "album": "海馬成長痛",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a840c78ba075f7d36ed1ed5",
-      "playedAt": "2026-09-13T10:52:07.022Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YfXeoQ39zL9IWHOTrL8bg",
-      "duration": 189533,
-      "previewUrl": ""
-    },
-    {
-      "id": "5g24szGiFbRVEZQC1luDmW",
-      "name": "かわいいだけじゃだめですか？",
-      "artist": "CUTIE STREET",
-      "album": "かわいいだけじゃだめですか？",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
-      "playedAt": "2026-09-13T10:46:05.246Z",
-      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
-      "duration": 250253,
-      "previewUrl": ""
-    },
-    {
-      "id": "2le4lZquBURJYS6TcdAZdx",
-      "name": "絶対王者チョコレート",
-      "artist": "ゆらゆらシスターズ",
-      "album": "絶対王者チョコレート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-09-13T10:41:54.528Z",
-      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
-      "duration": 208223,
-      "previewUrl": ""
-    },
-    {
-      "id": "6WrytCYNqsPMgtpTpd9p7j",
-      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
-      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
-      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-09-13T10:38:25.843Z",
-      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
-      "duration": 230766,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LtKpKOO0fyGBAbv761JCu",
-      "name": "Sunlight",
-      "artist": "TheFatRat, Phaera",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-09-13T10:28:52.755Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
-      "duration": 169952,
       "previewUrl": ""
     }
   ],
