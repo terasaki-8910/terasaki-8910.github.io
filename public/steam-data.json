@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-14T21:44:56.979Z",
+  "lastUpdated": "2026-09-15T04:42:53.021Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,8 +11,8 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 2252,
-      "playtimeForeverMinutes": 2281
+      "playtime2weeksMinutes": 2286,
+      "playtimeForeverMinutes": 2341
     },
     {
       "appid": 990080,
@@ -65,7 +65,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtimeForeverMinutes": 2281
+      "playtimeForeverMinutes": 2341
     },
     {
       "appid": 431730,
@@ -408,7 +408,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/31f82fc3fe2150c4edb78788d0817c59692866ab.jpg",
           "unlockedAt": "2024-01-28T06:05:33.000Z",
-          "percent": 72.8
+          "percent": 72.9
         },
         {
           "name": "Skilled Pal Tamer",
