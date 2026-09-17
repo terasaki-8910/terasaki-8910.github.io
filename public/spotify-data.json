@@ -1,13 +1,79 @@
 {
-  "lastUpdated": "2026-09-16T15:44:30.519Z",
+  "lastUpdated": "2026-09-17T02:20:29.101Z",
   "tracks": [
+    {
+      "id": "73rdU71fLEd0nW7HENRhKF",
+      "name": "キュートなキューたい",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-09-17T02:16:39.545Z",
+      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
+      "duration": 236000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-09-17T02:12:43.087Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-09-17T02:08:22.606Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ALvDIJw5smrREM5iXmr6G",
+      "name": "僕らは今のなかで",
+      "artist": "μ's",
+      "album": "μ's Best Album Best Live! Collection Ⅱ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27379acf1f985addaacb25423a2",
+      "playedAt": "2026-09-17T02:05:08.475Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ALvDIJw5smrREM5iXmr6G",
+      "duration": 274505,
+      "previewUrl": ""
+    },
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-09-17T02:00:33.499Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "1K5olFY5qHfUvk2FbbJivc",
+      "name": "GAMERS!",
+      "artist": "tendou karen, hoshinomori tiaki, aguri",
+      "album": "GAMERS!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273447dba73b892d6d3c4a61ea6",
+      "playedAt": "2026-09-17T01:57:05.561Z",
+      "spotifyUrl": "https://open.spotify.com/track/1K5olFY5qHfUvk2FbbJivc",
+      "duration": 202253,
+      "previewUrl": ""
+    },
     {
       "id": "6WrytCYNqsPMgtpTpd9p7j",
       "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
       "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
       "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
-      "playedAt": "2026-09-16T13:47:30.994Z",
+      "playedAt": "2026-09-16T16:54:30.054Z",
       "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
       "duration": 230766,
       "previewUrl": ""
@@ -87,17 +153,6 @@
       "playedAt": "2026-09-16T12:17:18.942Z",
       "spotifyUrl": "https://open.spotify.com/track/0ookCvrhGat2q6uV1R9Kq1",
       "duration": 229677,
-      "previewUrl": ""
-    },
-    {
-      "id": "2le4lZquBURJYS6TcdAZdx",
-      "name": "絶対王者チョコレート",
-      "artist": "ゆらゆらシスターズ",
-      "album": "絶対王者チョコレート",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
-      "playedAt": "2026-09-16T12:13:28.797Z",
-      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
-      "duration": 208223,
       "previewUrl": ""
     },
     {
@@ -274,61 +329,6 @@
       "playedAt": "2026-09-16T10:34:08.671Z",
       "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
       "duration": 215500,
-      "previewUrl": ""
-    },
-    {
-      "id": "7pgo1C8l5AX3pkwktxIklG",
-      "name": "Baqeela (feat. seki＊tree) - Long Version",
-      "artist": "owl*tree, seki*tree",
-      "album": "pvq",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27361fbc71db95784f4b302a071",
-      "playedAt": "2026-09-16T10:30:32.694Z",
-      "spotifyUrl": "https://open.spotify.com/track/7pgo1C8l5AX3pkwktxIklG",
-      "duration": 252923,
-      "previewUrl": ""
-    },
-    {
-      "id": "0JbGlD1FjnczH63mC2t7An",
-      "name": "Escape from the City (From \"Sonic Adventure 2\")",
-      "artist": "Qumu",
-      "album": "Year 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f83a4a752cf4c9345994752",
-      "playedAt": "2026-09-16T10:26:19.307Z",
-      "spotifyUrl": "https://open.spotify.com/track/0JbGlD1FjnczH63mC2t7An",
-      "duration": 132401,
-      "previewUrl": ""
-    },
-    {
-      "id": "638PHAOYgcooFRkjjDBadh",
-      "name": "Pokémon Center Jazz",
-      "artist": "The Deku Trio, GameChops, Unplugged",
-      "album": "Pokémon Center Jazz",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273daa28eae6acb923891cc1f83",
-      "playedAt": "2026-09-16T10:24:06.443Z",
-      "spotifyUrl": "https://open.spotify.com/track/638PHAOYgcooFRkjjDBadh",
-      "duration": 198620,
-      "previewUrl": ""
-    },
-    {
-      "id": "2mOgz38YkByMHtL0PiaQbZ",
-      "name": "Brain Power - Long Version",
-      "artist": "NOMA",
-      "album": "Chronikle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d77c7feeb6d7ac657fe1cbd2",
-      "playedAt": "2026-09-16T10:20:47.264Z",
-      "spotifyUrl": "https://open.spotify.com/track/2mOgz38YkByMHtL0PiaQbZ",
-      "duration": 367802,
-      "previewUrl": ""
-    },
-    {
-      "id": "7tBvAWJ1TAyoZzgEuaSbby",
-      "name": "Sheik's Theme",
-      "artist": "Amy Turk",
-      "album": "Sheik's Theme",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27358d8138f3b0a76a17b13e325",
-      "playedAt": "2026-09-16T10:14:38.998Z",
-      "spotifyUrl": "https://open.spotify.com/track/7tBvAWJ1TAyoZzgEuaSbby",
-      "duration": 61145,
       "previewUrl": ""
     }
   ],
