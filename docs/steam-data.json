@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-16T21:12:53.082Z",
+  "lastUpdated": "2026-09-17T04:42:47.775Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,7 +11,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 2374,
+      "playtime2weeksMinutes": 2346,
       "playtimeForeverMinutes": 2441
     },
     {
@@ -430,7 +430,7 @@
           "description": "Caught 90 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
           "unlockedAt": "2024-02-02T11:36:25.000Z",
-          "percent": 44.9
+          "percent": 44.8
         },
         {
           "name": "Hillside Sovereign",
