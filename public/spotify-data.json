@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-17T10:37:16.233Z",
+  "lastUpdated": "2026-09-17T15:51:08.614Z",
   "tracks": [
+    {
+      "id": "034jvsVh9m8f2lRMvNeHWv",
+      "name": "Gourmet Race (From \"Kirby Super Star\")",
+      "artist": "Qumu",
+      "album": "Year 7",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734366c48ae7d8dce239c62c47",
+      "playedAt": "2026-09-17T13:44:14.205Z",
+      "spotifyUrl": "https://open.spotify.com/track/034jvsVh9m8f2lRMvNeHWv",
+      "duration": 195510,
+      "previewUrl": ""
+    },
     {
       "id": "5Cpo7btae5aI6QtOcVzWwB",
       "name": "Dancin - Krono Remix",
@@ -318,17 +329,6 @@
       "playedAt": "2026-09-16T11:32:24.300Z",
       "spotifyUrl": "https://open.spotify.com/track/0AiRpK3u9OeM37Wsdkk8eJ",
       "duration": 283633,
-      "previewUrl": ""
-    },
-    {
-      "id": "1deyspHwRUXonRoBZ8eSCZ",
-      "name": "おジャ魔女カーニバル!!",
-      "artist": "茜屋 日海夏, 若井 友希, 久保田 未夢",
-      "album": "カバ☆リス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f81796145ddbdccdfdd7c7fd",
-      "playedAt": "2026-09-16T11:27:40.006Z",
-      "spotifyUrl": "https://open.spotify.com/track/1deyspHwRUXonRoBZ8eSCZ",
-      "duration": 213080,
       "previewUrl": ""
     }
   ],
