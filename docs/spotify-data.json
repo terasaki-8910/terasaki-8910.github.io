@@ -1,6 +1,138 @@
 {
-  "lastUpdated": "2026-09-17T02:20:29.101Z",
+  "lastUpdated": "2026-09-17T10:37:16.233Z",
   "tracks": [
+    {
+      "id": "5Cpo7btae5aI6QtOcVzWwB",
+      "name": "Dancin - Krono Remix",
+      "artist": "Aaron Smith, Krono, Luvli",
+      "album": "Dancin (Krono Remix)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737715dbcfe17cf4260d47c311",
+      "playedAt": "2026-09-17T04:22:13.225Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Cpo7btae5aI6QtOcVzWwB",
+      "duration": 198053,
+      "previewUrl": ""
+    },
+    {
+      "id": "0HqZX76SFLDz2aW8aiqi7G",
+      "name": "Bones",
+      "artist": "Imagine Dragons",
+      "album": "Bones",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273813713582dcc508e7d5073c4",
+      "playedAt": "2026-09-17T04:18:41.024Z",
+      "spotifyUrl": "https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G",
+      "duration": 165264,
+      "previewUrl": ""
+    },
+    {
+      "id": "29YSKt01a9wGNJkPLQG0Kw",
+      "name": "境界の彼方",
+      "artist": "茅原実里",
+      "album": "NEO FANTASIA",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f416e4d4186d4086a1fd0258",
+      "playedAt": "2026-09-17T04:07:46.588Z",
+      "spotifyUrl": "https://open.spotify.com/track/29YSKt01a9wGNJkPLQG0Kw",
+      "duration": 292040,
+      "previewUrl": ""
+    },
+    {
+      "id": "1OWkxXIoqLbGCZ5gMYow3x",
+      "name": "最Ψ最好調！",
+      "artist": "Dempagumi.Inc",
+      "album": "最Ψ最好調！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273519a2c600a5fd9cafc45b10b",
+      "playedAt": "2026-09-17T03:22:05.318Z",
+      "spotifyUrl": "https://open.spotify.com/track/1OWkxXIoqLbGCZ5gMYow3x",
+      "duration": 268576,
+      "previewUrl": ""
+    },
+    {
+      "id": "2mOgz38YkByMHtL0PiaQbZ",
+      "name": "Brain Power - Long Version",
+      "artist": "NOMA",
+      "album": "Chronikle",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d77c7feeb6d7ac657fe1cbd2",
+      "playedAt": "2026-09-17T03:00:27.375Z",
+      "spotifyUrl": "https://open.spotify.com/track/2mOgz38YkByMHtL0PiaQbZ",
+      "duration": 367802,
+      "previewUrl": ""
+    },
+    {
+      "id": "3zuOoqvVzxEzXi0D0Ma4SM",
+      "name": "Alpha",
+      "artist": "C418",
+      "album": "Minecraft - Volume Beta",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
+      "playedAt": "2026-09-17T02:54:19.107Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zuOoqvVzxEzXi0D0Ma4SM",
+      "duration": 603000,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FQcELLVZwSvarn27omhgd",
+      "name": "ukigumo",
+      "artist": "Hige Driver",
+      "album": "ヒゲドライバー 10th Anniversary Best",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d06e82e7eb7d17423a307e94",
+      "playedAt": "2026-09-17T02:44:15.645Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FQcELLVZwSvarn27omhgd",
+      "duration": 215053,
+      "previewUrl": ""
+    },
+    {
+      "id": "3gmXqu9iSaCY77y0NpY7dt",
+      "name": "Cynthia: Champion Cynthia (From \"Pokémon Diamond and Pearl\") / Battle! Champion (From \"Pokémon Diamond and Pearl\")",
+      "artist": "Qumu",
+      "album": "Year 3",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f595848a71a4edb4da60395",
+      "playedAt": "2026-09-17T02:40:40.126Z",
+      "spotifyUrl": "https://open.spotify.com/track/3gmXqu9iSaCY77y0NpY7dt",
+      "duration": 192376,
+      "previewUrl": ""
+    },
+    {
+      "id": "1MYyy6zh2ErfJMkiqkCZWJ",
+      "name": "暗く黒く",
+      "artist": "ZUTOMAYO",
+      "album": "ぐされ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27345e670c7e25b4d0c1891d283",
+      "playedAt": "2026-09-17T02:37:14.486Z",
+      "spotifyUrl": "https://open.spotify.com/track/1MYyy6zh2ErfJMkiqkCZWJ",
+      "duration": 249293,
+      "previewUrl": ""
+    },
+    {
+      "id": "7s2O8rpKRgPWhgqiHmmm4v",
+      "name": "春擬き",
+      "artist": "yanaginagi",
+      "album": "Follow My Tracks",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cf4ddc52c24dc4ce1a00163c",
+      "playedAt": "2026-09-17T02:33:04.731Z",
+      "spotifyUrl": "https://open.spotify.com/track/7s2O8rpKRgPWhgqiHmmm4v",
+      "duration": 271091,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
+      "name": "春を告げる",
+      "artist": "yama",
+      "album": "春を告げる",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
+      "playedAt": "2026-09-17T02:28:33.178Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
+      "duration": 196497,
+      "previewUrl": ""
+    },
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2026-09-17T02:21:05.273Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
     {
       "id": "73rdU71fLEd0nW7HENRhKF",
       "name": "キュートなキューたい",
@@ -197,138 +329,6 @@
       "playedAt": "2026-09-16T11:27:40.006Z",
       "spotifyUrl": "https://open.spotify.com/track/1deyspHwRUXonRoBZ8eSCZ",
       "duration": 213080,
-      "previewUrl": ""
-    },
-    {
-      "id": "2g1k9DguVUrZSPIVzcphlQ",
-      "name": "恋は渾沌の隷也",
-      "artist": "Ushirokarahaiyoritai G",
-      "album": "恋は渾沌の隷也",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732f2c2e38759d3898cffd9a61",
-      "playedAt": "2026-09-16T11:11:40.921Z",
-      "spotifyUrl": "https://open.spotify.com/track/2g1k9DguVUrZSPIVzcphlQ",
-      "duration": 238853,
-      "previewUrl": ""
-    },
-    {
-      "id": "1nxHxgGQga4w2WrU1kieOB",
-      "name": "曇天",
-      "artist": "DOES",
-      "album": "The World's Edge",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c54a493405906facf5e4b606",
-      "playedAt": "2026-09-16T11:07:41.604Z",
-      "spotifyUrl": "https://open.spotify.com/track/1nxHxgGQga4w2WrU1kieOB",
-      "duration": 190440,
-      "previewUrl": ""
-    },
-    {
-      "id": "1wstHd1OmAsH1Sy9qcPhrk",
-      "name": "GO! GO! MANIAC",
-      "artist": "Ho - Kago Tea Time",
-      "album": "GO! GO! MANIAC",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d739e80c370060cf622392b",
-      "playedAt": "2026-09-16T11:04:30.711Z",
-      "spotifyUrl": "https://open.spotify.com/track/1wstHd1OmAsH1Sy9qcPhrk",
-      "duration": 251320,
-      "previewUrl": ""
-    },
-    {
-      "id": "7onucgU6HHFbtZ9r0jXgmy",
-      "name": "DREAM SOLISTER",
-      "artist": "TRUE",
-      "album": "Joy Heart",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
-      "playedAt": "2026-09-16T11:00:18.929Z",
-      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
-      "duration": 300533,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XNaPTYDeQcTqAaWoHKMEp",
-      "name": "Analyse",
-      "artist": "Thom Yorke",
-      "album": "The Eraser",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273691b5e122dee32f6dcb7894b",
-      "playedAt": "2026-09-16T10:52:59.949Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XNaPTYDeQcTqAaWoHKMEp",
-      "duration": 242786,
-      "previewUrl": ""
-    },
-    {
-      "id": "4ZN7u9FmQa7Lp1TCafAgsn",
-      "name": "Moog City 2",
-      "artist": "C418",
-      "album": "Minecraft - Volume Beta",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
-      "playedAt": "2026-09-16T10:48:56.689Z",
-      "spotifyUrl": "https://open.spotify.com/track/4ZN7u9FmQa7Lp1TCafAgsn",
-      "duration": 180000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6G8ghzF62TP7CkD1YBsIUT",
-      "name": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "artist": "Qumu",
-      "album": "Outset Island (From \"The Legend of Zelda: The Wind Waker\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cbe4f4c6e21c9857941ee615",
-      "playedAt": "2026-09-16T10:45:56.211Z",
-      "spotifyUrl": "https://open.spotify.com/track/6G8ghzF62TP7CkD1YBsIUT",
-      "duration": 114871,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XbryOVSaPXhpre0Yj4MUv",
-      "name": "Squid Sisters (The Fresh Remix)",
-      "artist": "MandoPony",
-      "album": "Songs for Gamers, Vol. 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273860b382cdec10b0565373a4c",
-      "playedAt": "2026-09-16T10:44:00.874Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
-      "duration": 195375,
-      "previewUrl": ""
-    },
-    {
-      "id": "3qazo1nDoHIWHg8KHVmujW",
-      "name": "Song Of Storms",
-      "artist": "The Marcus Hedges Trend Orchestra",
-      "album": "Zelda: Link's Ocarina Orchestrated",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aa940b57213e789d913f8546",
-      "playedAt": "2026-09-16T10:40:45.042Z",
-      "spotifyUrl": "https://open.spotify.com/track/3qazo1nDoHIWHg8KHVmujW",
-      "duration": 82940,
-      "previewUrl": ""
-    },
-    {
-      "id": "4PO8fERDL1d1FQA7uHg8il",
-      "name": "Among Us",
-      "artist": "Sembari +",
-      "album": "Among Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734814fa62fdae4482b26e2d21",
-      "playedAt": "2026-09-16T10:39:21.638Z",
-      "spotifyUrl": "https://open.spotify.com/track/4PO8fERDL1d1FQA7uHg8il",
-      "duration": 90508,
-      "previewUrl": ""
-    },
-    {
-      "id": "3oSxiGDZr2AbJLu2PzAQuY",
-      "name": "Maple Treeway (Mario Kart Wii)",
-      "artist": "The Consouls, PitTan",
-      "album": "Maple Treeway (Mario Kart Wii)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a326d29f92010679662ab31",
-      "playedAt": "2026-09-16T10:37:50.667Z",
-      "spotifyUrl": "https://open.spotify.com/track/3oSxiGDZr2AbJLu2PzAQuY",
-      "duration": 221538,
-      "previewUrl": ""
-    },
-    {
-      "id": "716HpbfSkMkU7TwQsJlhHT",
-      "name": "Sweden",
-      "artist": "C418",
-      "album": "Minecraft - Volume Alpha",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a6f6056c9ded5242ca245c56",
-      "playedAt": "2026-09-16T10:34:08.671Z",
-      "spotifyUrl": "https://open.spotify.com/track/716HpbfSkMkU7TwQsJlhHT",
-      "duration": 215500,
       "previewUrl": ""
     }
   ],
