@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-18T15:24:43.402Z",
+  "lastUpdated": "2026-09-18T20:07:43.824Z",
   "tracks": [
+    {
+      "id": "00pEXGlxPsGuLm4NqcVJzt",
+      "name": "海色",
+      "artist": "AKINO from bless4",
+      "album": "海色",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738f1a1ab060637d049a1d7b04",
+      "playedAt": "2026-09-18T15:45:55.362Z",
+      "spotifyUrl": "https://open.spotify.com/track/00pEXGlxPsGuLm4NqcVJzt",
+      "duration": 256933,
+      "previewUrl": ""
+    },
     {
       "id": "7ajpbW6tBpqUI9foCtwlLw",
       "name": "祝福",
@@ -318,17 +329,6 @@
       "playedAt": "2026-09-18T06:46:02.584Z",
       "spotifyUrl": "https://open.spotify.com/track/0CWAQlHsvfqcKJVVz9up2R",
       "duration": 219733,
-      "previewUrl": ""
-    },
-    {
-      "id": "034jvsVh9m8f2lRMvNeHWv",
-      "name": "Gourmet Race (From \"Kirby Super Star\")",
-      "artist": "Qumu",
-      "album": "Year 7",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734366c48ae7d8dce239c62c47",
-      "playedAt": "2026-09-17T13:44:14.205Z",
-      "spotifyUrl": "https://open.spotify.com/track/034jvsVh9m8f2lRMvNeHWv",
-      "duration": 195510,
       "previewUrl": ""
     }
   ],
