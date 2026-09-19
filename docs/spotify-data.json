@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-18T20:07:43.824Z",
+  "lastUpdated": "2026-09-19T02:10:07.000Z",
   "tracks": [
+    {
+      "id": "34gCuhDGsG4bRPIf9bb02f",
+      "name": "Thinking out Loud",
+      "artist": "Ed Sheeran",
+      "album": "x (Deluxe Edition)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27313b3e37318a0c247b550bccd",
+      "playedAt": "2026-09-19T02:00:17.536Z",
+      "spotifyUrl": "https://open.spotify.com/track/34gCuhDGsG4bRPIf9bb02f",
+      "duration": 281560,
+      "previewUrl": ""
+    },
     {
       "id": "00pEXGlxPsGuLm4NqcVJzt",
       "name": "海色",
@@ -318,17 +329,6 @@
       "playedAt": "2026-09-18T07:26:35.610Z",
       "spotifyUrl": "https://open.spotify.com/track/45zHzJfSpq7HSnGBub9tTk",
       "duration": 274314,
-      "previewUrl": ""
-    },
-    {
-      "id": "0CWAQlHsvfqcKJVVz9up2R",
-      "name": "セレナーデ",
-      "artist": "natori",
-      "album": "深海",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27329f649edf51edde6fdf01a09",
-      "playedAt": "2026-09-18T06:46:02.584Z",
-      "spotifyUrl": "https://open.spotify.com/track/0CWAQlHsvfqcKJVVz9up2R",
-      "duration": 219733,
       "previewUrl": ""
     }
   ],
