@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-09-20T10:15:48.250Z",
+  "lastUpdated": "2026-09-20T15:03:47.307Z",
   "tracks": [
+    {
+      "id": "7aCdXnpn7oPN1sz3i78t7x",
+      "name": "RAIN",
+      "artist": "SEKAI NO OWARI",
+      "album": "Lip",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b87ad729d0b498c14fc8941d",
+      "playedAt": "2026-09-20T14:48:15.964Z",
+      "spotifyUrl": "https://open.spotify.com/track/7aCdXnpn7oPN1sz3i78t7x",
+      "duration": 310293,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-09-20T14:40:34.671Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "3GGOKTfxgyluPvAFnB30zE",
+      "name": "第ゼロ感",
+      "artist": "10-FEET",
+      "album": "第ゼロ感",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273884fb7177fe576362b1f6089",
+      "playedAt": "2026-09-20T14:38:02.573Z",
+      "spotifyUrl": "https://open.spotify.com/track/3GGOKTfxgyluPvAFnB30zE",
+      "duration": 287991,
+      "previewUrl": ""
+    },
+    {
+      "id": "6FhWelfRDMFZRtFUU6SIdC",
+      "name": "怪獣",
+      "artist": "sakanaction",
+      "album": "怪獣",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733d7f2ac644f635e94a193736",
+      "playedAt": "2026-09-20T14:30:58.372Z",
+      "spotifyUrl": "https://open.spotify.com/track/6FhWelfRDMFZRtFUU6SIdC",
+      "duration": 252722,
+      "previewUrl": ""
+    },
+    {
+      "id": "53Uy2m8yielFV4bkGBybhZ",
+      "name": "全力☆Summer!",
+      "artist": "angela",
+      "album": "Beyond",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
+      "playedAt": "2026-09-20T14:26:42.089Z",
+      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
+      "duration": 233893,
+      "previewUrl": ""
+    },
+    {
+      "id": "6nvDyXnSzhvFkHgnkPLM3i",
+      "name": "Ψ発見伝！",
+      "artist": "Dempagumi.Inc",
+      "album": "ワレワレハデンパグミインクダ",
+      "albumArt": "https://i.scdn.co/image/f00a7f74db66523068d0596c274f38fff2716856",
+      "playedAt": "2026-09-20T14:18:40.703Z",
+      "spotifyUrl": "https://open.spotify.com/track/6nvDyXnSzhvFkHgnkPLM3i",
+      "duration": 238636,
+      "previewUrl": ""
+    },
     {
       "id": "1PGCzcLCqV1yu9M3FmxKlu",
       "name": "ゴールデンタイムラバー",
@@ -263,72 +329,6 @@
       "playedAt": "2026-09-20T03:31:38.078Z",
       "spotifyUrl": "https://open.spotify.com/track/0RBw4ODUQPO4cuAOZtBGga",
       "duration": 140800,
-      "previewUrl": ""
-    },
-    {
-      "id": "4xhsWYTOGcal8zt0J161CU",
-      "name": "Lovin On Me",
-      "artist": "Jack Harlow",
-      "album": "Lovin On Me",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a5390aae0708eefa335b4bf",
-      "playedAt": "2026-09-20T03:29:16.763Z",
-      "spotifyUrl": "https://open.spotify.com/track/4xhsWYTOGcal8zt0J161CU",
-      "duration": 138411,
-      "previewUrl": ""
-    },
-    {
-      "id": "5d01AUplB1QOZY3kPrAuot",
-      "name": "UK Rap",
-      "artist": "Dave, Central Cee",
-      "album": "Split Decision",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27351504c9d0dda1644b2b7d5dd",
-      "playedAt": "2026-09-20T03:26:57.868Z",
-      "spotifyUrl": "https://open.spotify.com/track/5d01AUplB1QOZY3kPrAuot",
-      "duration": 198026,
-      "previewUrl": ""
-    },
-    {
-      "id": "30lXCrnKs5TJJOuSVwiQn1",
-      "name": "Zoltraak",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
-      "playedAt": "2026-09-20T03:23:39.372Z",
-      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
-      "duration": 140664,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2a0a166493a2bde5480a420",
-      "playedAt": "2026-09-20T03:21:18.169Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "6AI3ezQ4o3HUoP6Dhudph3",
-      "name": "Not Like Us",
-      "artist": "Kendrick Lamar",
-      "album": "Not Like Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad",
-      "playedAt": "2026-09-20T03:04:18.809Z",
-      "spotifyUrl": "https://open.spotify.com/track/6AI3ezQ4o3HUoP6Dhudph3",
-      "duration": 274192,
-      "previewUrl": ""
-    },
-    {
-      "id": "3LtpKP5abr2qqjunvjlX5i",
-      "name": "Doja",
-      "artist": "Central Cee",
-      "album": "Doja",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27391de4cb28d9066225b55e603",
-      "playedAt": "2026-09-20T02:59:44.097Z",
-      "spotifyUrl": "https://open.spotify.com/track/3LtpKP5abr2qqjunvjlX5i",
-      "duration": 97392,
       "previewUrl": ""
     }
   ],
