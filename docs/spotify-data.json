@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-09-20T15:03:47.307Z",
+  "lastUpdated": "2026-09-20T19:57:05.731Z",
   "tracks": [
+    {
+      "id": "10Yk9WbT2840l1NK5RWvkq",
+      "name": "adrenaline!!!",
+      "artist": "TrySail",
+      "album": "TAILWIND",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315140c66fb88425e1c914ff4",
+      "playedAt": "2026-09-20T15:12:10.356Z",
+      "spotifyUrl": "https://open.spotify.com/track/10Yk9WbT2840l1NK5RWvkq",
+      "duration": 274146,
+      "previewUrl": ""
+    },
     {
       "id": "7aCdXnpn7oPN1sz3i78t7x",
       "name": "RAIN",
@@ -318,17 +329,6 @@
       "playedAt": "2026-09-20T03:34:15.164Z",
       "spotifyUrl": "https://open.spotify.com/track/3w1WjD2zJqjBjDz5fwqQPJ",
       "duration": 156578,
-      "previewUrl": ""
-    },
-    {
-      "id": "0RBw4ODUQPO4cuAOZtBGga",
-      "name": "Hurts Me",
-      "artist": "Tory Lanez, Trippie Redd, Yoko Gold",
-      "album": "Hurts Me",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731dba361996f5b70c1df2b4ee",
-      "playedAt": "2026-09-20T03:31:38.078Z",
-      "spotifyUrl": "https://open.spotify.com/track/0RBw4ODUQPO4cuAOZtBGga",
-      "duration": 140800,
       "previewUrl": ""
     }
   ],
