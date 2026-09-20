@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T04:43:55.279Z",
+  "lastUpdated": "2026-09-20T11:10:51.708Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,7 +11,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 1802,
+      "playtime2weeksMinutes": 1535,
       "playtimeForeverMinutes": 2441
     },
     {
@@ -386,7 +386,7 @@
           "description": "Reach Level 25",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/2162cee6a1a297e102e6ef7c5e60d936cbcc28a1.jpg",
           "unlockedAt": "2025-06-17T03:49:35.000Z",
-          "percent": 28.6
+          "percent": 28.7
         }
       ]
     },
@@ -430,21 +430,21 @@
           "description": "Caught 90 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
           "unlockedAt": "2024-02-02T11:36:25.000Z",
-          "percent": 44.8
+          "percent": 44.9
         },
         {
           "name": "Hillside Sovereign",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/31f82fc3fe2150c4edb78788d0817c59692866ab.jpg",
           "unlockedAt": "2024-01-28T06:05:33.000Z",
-          "percent": 72.8
+          "percent": 72.9
         },
         {
           "name": "Skilled Pal Tamer",
           "description": "Caught 50 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/2308a9900f12b3cdf8bc7f1229bc4b2488a4fcb3.jpg",
           "unlockedAt": "2024-01-27T11:11:25.000Z",
-          "percent": 62.5
+          "percent": 62.6
         }
       ]
     },
@@ -488,7 +488,7 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 44
+          "percent": 43.9
         },
         {
           "name": "Kamura Amulet",
