@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-09-22T15:55:13.083Z",
+  "lastUpdated": "2026-09-22T20:38:01.070Z",
   "tracks": [
+    {
+      "id": "5OQIvZoUPvfQq02tITKjQZ",
+      "name": "水流のロック",
+      "artist": "Natsuko Nisshoku",
+      "album": "瞼瞼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733944caf1f14939bc14a562ca",
+      "playedAt": "2026-09-22T16:06:21.375Z",
+      "spotifyUrl": "https://open.spotify.com/track/5OQIvZoUPvfQq02tITKjQZ",
+      "duration": 179173,
+      "previewUrl": ""
+    },
+    {
+      "id": "6yv4uty2hl96Wu0RFoYsxO",
+      "name": "かいじゅうのマーチ",
+      "artist": "Kenshi Yonezu",
+      "album": "BOOTLEG",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
+      "playedAt": "2026-09-22T16:03:21.727Z",
+      "spotifyUrl": "https://open.spotify.com/track/6yv4uty2hl96Wu0RFoYsxO",
+      "duration": 295730,
+      "previewUrl": ""
+    },
+    {
+      "id": "59h6J25QnnT8xshPTFLkpe",
+      "name": "あぶく",
+      "artist": "ヨルシカ",
+      "album": "あぶく",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c10f924eae00b377b623516",
+      "playedAt": "2026-09-22T15:58:25.448Z",
+      "spotifyUrl": "https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe",
+      "duration": 234613,
+      "previewUrl": ""
+    },
     {
       "id": "2tlOVDJ3lQsUxz22vPJ4c4",
       "name": "唱",
@@ -296,39 +329,6 @@
       "playedAt": "2026-09-22T10:09:16.459Z",
       "spotifyUrl": "https://open.spotify.com/track/58dxGXavrcagRqA58fNB0Z",
       "duration": 326842,
-      "previewUrl": ""
-    },
-    {
-      "id": "76oCvJj6LRoed2754GybpH",
-      "name": "mosi mosi?",
-      "artist": "楽音",
-      "album": "mosi mosi?",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736252a4d5ae17497ecbcd2c04",
-      "playedAt": "2026-09-22T10:03:49.077Z",
-      "spotifyUrl": "https://open.spotify.com/track/76oCvJj6LRoed2754GybpH",
-      "duration": 163750,
-      "previewUrl": ""
-    },
-    {
-      "id": "0a3587n25Xhw098UeEbeJq",
-      "name": "青と夏",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "青と夏",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273544c990ccc4e0b0a1ad6bb3a",
-      "playedAt": "2026-09-22T10:01:04.789Z",
-      "spotifyUrl": "https://open.spotify.com/track/0a3587n25Xhw098UeEbeJq",
-      "duration": 270506,
-      "previewUrl": ""
-    },
-    {
-      "id": "0wz0NkHqPVAgBtXl3TVFkI",
-      "name": "踊っチャイナ (feat. 初音ミク & 重音テト)",
-      "artist": "Atena, Hatsune Miku, Teto Kasane",
-      "album": "踊っチャイナ (feat. 初音ミク & 重音テト)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734333e3ba1a9eb15a9ffd6542",
-      "playedAt": "2026-09-22T09:56:33.736Z",
-      "spotifyUrl": "https://open.spotify.com/track/0wz0NkHqPVAgBtXl3TVFkI",
-      "duration": 156000,
       "previewUrl": ""
     }
   ],
