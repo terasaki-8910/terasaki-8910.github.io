@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-09-20T19:57:05.731Z",
+  "lastUpdated": "2026-09-22T02:20:28.800Z",
   "tracks": [
+    {
+      "id": "4NaaF28BeO9WzjDrSS71Nz",
+      "name": "ダンスホール",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "ダンスホール",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e552c9dbdf76676de1032ae0",
+      "playedAt": "2026-09-22T00:54:39.440Z",
+      "spotifyUrl": "https://open.spotify.com/track/4NaaF28BeO9WzjDrSS71Nz",
+      "duration": 203149,
+      "previewUrl": ""
+    },
+    {
+      "id": "45zHzJfSpq7HSnGBub9tTk",
+      "name": "Black † White",
+      "artist": "野水いおり",
+      "album": "Hat Trick",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730fa8d44239baa6df5f5b81b5",
+      "playedAt": "2026-09-22T00:51:15.842Z",
+      "spotifyUrl": "https://open.spotify.com/track/45zHzJfSpq7HSnGBub9tTk",
+      "duration": 274314,
+      "previewUrl": ""
+    },
+    {
+      "id": "4FdpXwtpJfRltvFuTcpNL6",
+      "name": "モス",
+      "artist": "sakanaction",
+      "album": "834.194",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bffc3038f2ace41272d9952",
+      "playedAt": "2026-09-22T00:22:53.613Z",
+      "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
+      "duration": 245000,
+      "previewUrl": ""
+    },
     {
       "id": "10Yk9WbT2840l1NK5RWvkq",
       "name": "adrenaline!!!",
@@ -296,39 +329,6 @@
       "playedAt": "2026-09-20T03:43:34.062Z",
       "spotifyUrl": "https://open.spotify.com/track/2Zb7wnGUnNPCas2E0wWSQ5",
       "duration": 219333,
-      "previewUrl": ""
-    },
-    {
-      "id": "5DXKtoZLm31msT7tNGNHLG",
-      "name": "Vossi Bop",
-      "artist": "Stormzy",
-      "album": "Heavy Is The Head",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27303bf634fe9526dfcc79f8526",
-      "playedAt": "2026-09-20T03:39:54.266Z",
-      "spotifyUrl": "https://open.spotify.com/track/5DXKtoZLm31msT7tNGNHLG",
-      "duration": 196266,
-      "previewUrl": ""
-    },
-    {
-      "id": "5HCyWlXZPP0y6Gqq8TgA20",
-      "name": "STAY (with Justin Bieber)",
-      "artist": "The Kid LAROI, Justin Bieber",
-      "album": "STAY (with Justin Bieber)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aed1660585c1e3c9ffb50b6a",
-      "playedAt": "2026-09-20T03:36:37.466Z",
-      "spotifyUrl": "https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20",
-      "duration": 141805,
-      "previewUrl": ""
-    },
-    {
-      "id": "3w1WjD2zJqjBjDz5fwqQPJ",
-      "name": "Tyler Herro",
-      "artist": "Jack Harlow",
-      "album": "Thats What They All Say",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736c97899926c43255b4238dfa",
-      "playedAt": "2026-09-20T03:34:15.164Z",
-      "spotifyUrl": "https://open.spotify.com/track/3w1WjD2zJqjBjDz5fwqQPJ",
-      "duration": 156578,
       "previewUrl": ""
     }
   ],
