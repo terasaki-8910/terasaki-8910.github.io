@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-09-23T02:20:48.775Z",
+  "lastUpdated": "2026-09-23T10:26:31.716Z",
   "tracks": [
+    {
+      "id": "5tcnPaFhcpSLx7ihFwI9DM",
+      "name": "ココロオドル -original version-",
+      "artist": "nobodyknows+",
+      "album": "ココロオドル",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732814571b49ebfdf9935f6e55",
+      "playedAt": "2026-09-23T09:39:41.366Z",
+      "spotifyUrl": "https://open.spotify.com/track/5tcnPaFhcpSLx7ihFwI9DM",
+      "duration": 253533,
+      "previewUrl": ""
+    },
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-09-23T09:35:27.337Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "59hVbgr8rfYkDbHfr8RcGI",
+      "name": "IRIS OUT",
+      "artist": "Kenshi Yonezu",
+      "album": "IRIS OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d1d4e875e2424cdd07f3232",
+      "playedAt": "2026-09-23T09:09:22.461Z",
+      "spotifyUrl": "https://open.spotify.com/track/59hVbgr8rfYkDbHfr8RcGI",
+      "duration": 151573,
+      "previewUrl": ""
+    },
+    {
+      "id": "0a3587n25Xhw098UeEbeJq",
+      "name": "青と夏",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "青と夏",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273544c990ccc4e0b0a1ad6bb3a",
+      "playedAt": "2026-09-23T09:04:36.161Z",
+      "spotifyUrl": "https://open.spotify.com/track/0a3587n25Xhw098UeEbeJq",
+      "duration": 270506,
+      "previewUrl": ""
+    },
+    {
+      "id": "7dvPVoZHsfkZR46CvbiKHT",
+      "name": "MAYDAY",
+      "artist": "TheFatRat, Laura Brehm",
+      "album": "MAYDAY",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d15aa64c7bf2bf8d23a9df40",
+      "playedAt": "2026-09-23T08:59:41.832Z",
+      "spotifyUrl": "https://open.spotify.com/track/7dvPVoZHsfkZR46CvbiKHT",
+      "duration": 247339,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-09-23T02:31:45.104Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "7qiZfU4dY1lWllzX7mPBI3",
+      "name": "Shape of You",
+      "artist": "Ed Sheeran",
+      "album": "÷ (Deluxe)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96",
+      "playedAt": "2026-09-23T02:24:42.708Z",
+      "spotifyUrl": "https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3",
+      "duration": 233712,
+      "previewUrl": ""
+    },
+    {
+      "id": "7kEva2rxsNMn07fyfZMRRn",
+      "name": "Cure For Me",
+      "artist": "AURORA",
+      "album": "Cure For Me",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ba4cc0508ba66eb8f099c9e",
+      "playedAt": "2026-09-23T02:20:48.497Z",
+      "spotifyUrl": "https://open.spotify.com/track/7kEva2rxsNMn07fyfZMRRn",
+      "duration": 201640,
+      "previewUrl": ""
+    },
     {
       "id": "6Pgkp4qUoTmJIPn7ReaGxL",
       "name": "Without You (feat. Sandro Cavazza)",
@@ -241,94 +329,6 @@
       "playedAt": "2026-09-22T15:12:23Z",
       "spotifyUrl": "https://open.spotify.com/track/45YBVp6zMwQZRbUDcPzmMB",
       "duration": 288013,
-      "previewUrl": ""
-    },
-    {
-      "id": "3rWyLf6o3RMbUeK4aafkHd",
-      "name": "p.h. - cover",
-      "artist": "suisoh",
-      "album": "p.h. (cover)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736f4be5c667dfbf2c2781c4c9",
-      "playedAt": "2026-09-22T15:07:34.512Z",
-      "spotifyUrl": "https://open.spotify.com/track/3rWyLf6o3RMbUeK4aafkHd",
-      "duration": 152929,
-      "previewUrl": ""
-    },
-    {
-      "id": "3gHgE02K4p2wHiUZ2RPWpS",
-      "name": "ねぇねぇねぇ。",
-      "artist": "PinocchioP",
-      "album": "ラヴ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e06a68d3033eca4fda57ab45",
-      "playedAt": "2026-09-22T15:05:01.120Z",
-      "spotifyUrl": "https://open.spotify.com/track/3gHgE02K4p2wHiUZ2RPWpS",
-      "duration": 210607,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
-      "name": "春を告げる",
-      "artist": "yama",
-      "album": "春を告げる",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b",
-      "playedAt": "2026-09-22T15:01:30.040Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
-      "duration": 196497,
-      "previewUrl": ""
-    },
-    {
-      "id": "1C1skAeFtnguXNlCYRQoCr",
-      "name": "ブレインロット",
-      "artist": "東京真中",
-      "album": "ブレインロット",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
-      "playedAt": "2026-09-22T14:58:13.072Z",
-      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
-      "duration": 122888,
-      "previewUrl": ""
-    },
-    {
-      "id": "38FcQO2ta2pScW2sriQI2x",
-      "name": "Watch Me",
-      "artist": "天乃リリサ(CV: 前田佳織里), 橘 美花莉(CV: 鬼頭明里)",
-      "album": "Watch Me",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732ec1f3dd232589d74641b437",
-      "playedAt": "2026-09-22T14:56:09.727Z",
-      "spotifyUrl": "https://open.spotify.com/track/38FcQO2ta2pScW2sriQI2x",
-      "duration": 207813,
-      "previewUrl": ""
-    },
-    {
-      "id": "5QF2n0rgEm2whK6hl9gVBP",
-      "name": "どうにかなっちゃいそう！",
-      "artist": "NOMELON NOLEMON",
-      "album": "どうにかなっちゃいそう！",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c342749a822a5d49aa82843",
-      "playedAt": "2026-09-22T14:52:41.442Z",
-      "spotifyUrl": "https://open.spotify.com/track/5QF2n0rgEm2whK6hl9gVBP",
-      "duration": 155245,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zs4EN2bPqsDLk0YtPwus3",
-      "name": "心予報",
-      "artist": "Eve",
-      "album": "心予報",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273731dd7eafee4d6e06d328583",
-      "playedAt": "2026-09-22T14:50:05.723Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zs4EN2bPqsDLk0YtPwus3",
-      "duration": 199995,
-      "previewUrl": ""
-    },
-    {
-      "id": "4haKJXYXZZT5zbR8FHBBur",
-      "name": "Sand Canyon, Stage 1 (From \"Kirby's Dream Land 3\")",
-      "artist": "Arcade Player",
-      "album": "Kirby's Dream Land 3, The Themes",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27354c40ab9f3fce1efb53cc516",
-      "playedAt": "2026-09-22T14:46:19.773Z",
-      "spotifyUrl": "https://open.spotify.com/track/4haKJXYXZZT5zbR8FHBBur",
-      "duration": 148352,
       "previewUrl": ""
     }
   ],
