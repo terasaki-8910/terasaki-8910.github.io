@@ -19,8 +19,10 @@ export function CharacterImage(props: {
   name: string;
   testId: string;
   className?: string;
+  /** 'compact' = 候補一覧の展開行など、幅を絞って表示する箇所向け。既定は 'default'。 */
+  size?: 'default' | 'compact';
 }) {
-  const { characterId, name, testId, className } = props;
+  const { characterId, name, testId, className, size = 'default' } = props;
   const [state, setState] = useState<'loading' | 'ready' | 'none'>('loading');
   const [image, setImage] = useState<CharaImage | null>(null);
   // 第三者CDNへの直リンクなので、取得できても表示に失敗することがある
@@ -52,7 +54,8 @@ export function CharacterImage(props: {
     };
   }, [characterId]);
 
-  const frame = `relative aspect-[3/4] w-full max-w-56 shrink-0 overflow-hidden rounded border border-line ${className ?? ''}`;
+  const widthClass = size === 'compact' ? 'max-w-24' : 'max-w-56';
+  const frame = `relative aspect-[3/4] w-full ${widthClass} shrink-0 overflow-hidden rounded border border-line ${className ?? ''}`;
 
   if (state === 'loading') {
     return (
@@ -75,7 +78,7 @@ export function CharacterImage(props: {
   }
 
   return (
-    <figure data-testid={testId} className="m-0 w-full max-w-56 shrink-0">
+    <figure data-testid={testId} className={`m-0 w-full ${widthClass} shrink-0`}>
       <a
         href={image.postUrl}
         target="_blank"
