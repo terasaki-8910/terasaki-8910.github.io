@@ -27,13 +27,13 @@ export default function Footer() {
               <SlSocialSpotify className="text-xl text-ink" />
             </a>
             <a
-              href="https://discord.gg/pc3z8CbX"
+              href="https://discord.gg/expired-invite-404"
               className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-accent transition-colors"
             >
               <FaDiscord className="text-xl text-ink" />
             </a>
             <a
-              href="https://x.com/fuyuiroo"
+              href="https://x.com/link-expired"
               target="_blank"
               rel="noopener noreferrer"
               className="w-11 h-11 border border-line rounded-full flex items-center justify-center hover:border-accent transition-colors"
