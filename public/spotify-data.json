@@ -1,6 +1,171 @@
 {
-  "lastUpdated": "2026-09-24T10:43:02.928Z",
+  "lastUpdated": "2026-09-24T16:06:22.669Z",
   "tracks": [
+    {
+      "id": "56xCsaFsih5swf7IZXPYzU",
+      "name": "きゅうくらりん",
+      "artist": "いよわ",
+      "album": "きゅうくらりん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e094c1bd11b4dde2cba4d8c7",
+      "playedAt": "2026-09-24T12:55:43.543Z",
+      "spotifyUrl": "https://open.spotify.com/track/56xCsaFsih5swf7IZXPYzU",
+      "duration": 217090,
+      "previewUrl": ""
+    },
+    {
+      "id": "4XObDlhGp6sREJoZj2lFv2",
+      "name": "走れSAKAMOTO",
+      "artist": "Vaundy",
+      "album": "走れSAKAMOTO",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273587319411929ed7998f609b9",
+      "playedAt": "2026-09-24T12:52:05.908Z",
+      "spotifyUrl": "https://open.spotify.com/track/4XObDlhGp6sREJoZj2lFv2",
+      "duration": 205984,
+      "previewUrl": ""
+    },
+    {
+      "id": "153lRbNmhQZVi69kbhmjY8",
+      "name": "ヒッチコック",
+      "artist": "ヨルシカ",
+      "album": "負け犬にアンコールはいらない",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328b535c92629e3c8d20ec242",
+      "playedAt": "2026-09-24T12:48:39.391Z",
+      "spotifyUrl": "https://open.spotify.com/track/153lRbNmhQZVi69kbhmjY8",
+      "duration": 222813,
+      "previewUrl": ""
+    },
+    {
+      "id": "1huqzMaPdQkXuOJaLxrC2s",
+      "name": "すずめ",
+      "artist": "RADWIMPS, Toaka",
+      "album": "すずめ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27348d4eaf595967959fc3be747",
+      "playedAt": "2026-09-24T12:44:56.040Z",
+      "spotifyUrl": "https://open.spotify.com/track/1huqzMaPdQkXuOJaLxrC2s",
+      "duration": 236390,
+      "previewUrl": ""
+    },
+    {
+      "id": "2l44rj2fDZDv6sTgyYMPxL",
+      "name": "モア！ジャンプ！モア！ (feat. 花里みのり&桐谷遥&桃井愛莉&日野森雫&初音ミク)",
+      "artist": "MORE MORE JUMP!",
+      "album": "アイドル新鋭隊/モア！ジャンプ！モア！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733bacabbebe15af046d01faa2",
+      "playedAt": "2026-09-24T12:40:59.099Z",
+      "spotifyUrl": "https://open.spotify.com/track/2l44rj2fDZDv6sTgyYMPxL",
+      "duration": 182125,
+      "previewUrl": ""
+    },
+    {
+      "id": "096KHkONhQm4MQNH35mU22",
+      "name": "鬼ノ宴",
+      "artist": "TOMONARI SORA\t",
+      "album": "鬼ノ宴",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b31680ab85031d2be2a3df6b",
+      "playedAt": "2026-09-24T12:37:56.437Z",
+      "spotifyUrl": "https://open.spotify.com/track/096KHkONhQm4MQNH35mU22",
+      "duration": 175998,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-09-24T12:34:59.907Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "0a3587n25Xhw098UeEbeJq",
+      "name": "青と夏",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "青と夏",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273544c990ccc4e0b0a1ad6bb3a",
+      "playedAt": "2026-09-24T12:30:52.434Z",
+      "spotifyUrl": "https://open.spotify.com/track/0a3587n25Xhw098UeEbeJq",
+      "duration": 270506,
+      "previewUrl": ""
+    },
+    {
+      "id": "4BC7to7tQh5gF7BsuccT60",
+      "name": "バカ通信 (feat. 知声)",
+      "artist": "isonosuke, Chis-A",
+      "album": "バカ通信",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339568c60733dd83ba31b2c4a",
+      "playedAt": "2026-09-24T12:26:21.404Z",
+      "spotifyUrl": "https://open.spotify.com/track/4BC7to7tQh5gF7BsuccT60",
+      "duration": 149000,
+      "previewUrl": ""
+    },
+    {
+      "id": "38XY1ShCSiYwDaV51sFPT9",
+      "name": "マーシャル・マキシマイザー",
+      "artist": "柊マグネタイト, 可不",
+      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
+      "playedAt": "2026-09-24T12:21:18.111Z",
+      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
+      "duration": 163686,
+      "previewUrl": ""
+    },
+    {
+      "id": "1C1skAeFtnguXNlCYRQoCr",
+      "name": "ブレインロット",
+      "artist": "東京真中",
+      "album": "ブレインロット",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
+      "playedAt": "2026-09-24T12:18:33.898Z",
+      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
+      "duration": 122888,
+      "previewUrl": ""
+    },
+    {
+      "id": "1YXot2MLAG9sttepCtBRM7",
+      "name": "踊り子",
+      "artist": "Vaundy",
+      "album": "replica",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
+      "playedAt": "2026-09-24T12:16:30.493Z",
+      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
+      "duration": 229328,
+      "previewUrl": ""
+    },
+    {
+      "id": "3gmn76fCtpDazGMnN0QMHX",
+      "name": "NIGHT DANCER",
+      "artist": "imase",
+      "album": "POP CUBE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734b062591b6a5c15652dd2bb5",
+      "playedAt": "2026-09-24T12:12:40.636Z",
+      "spotifyUrl": "https://open.spotify.com/track/3gmn76fCtpDazGMnN0QMHX",
+      "duration": 210600,
+      "previewUrl": ""
+    },
+    {
+      "id": "3iKJWOQJtENE3kFWMXh8JM",
+      "name": "私以外私じゃないの",
+      "artist": "Gesu No Kiwami Otome",
+      "album": "両成敗",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8a4036d02f2af9b21bdc1f1",
+      "playedAt": "2026-09-24T12:09:09.519Z",
+      "spotifyUrl": "https://open.spotify.com/track/3iKJWOQJtENE3kFWMXh8JM",
+      "duration": 232613,
+      "previewUrl": ""
+    },
+    {
+      "id": "6OC9BOO9qGXQARZGWb8rqy",
+      "name": "Stellar Stellar",
+      "artist": "Hoshimachi Suisei",
+      "album": "Still Still Stellar",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f724e5bdf4ae3e50082c2403",
+      "playedAt": "2026-09-24T12:05:16.370Z",
+      "spotifyUrl": "https://open.spotify.com/track/6OC9BOO9qGXQARZGWb8rqy",
+      "duration": 301453,
+      "previewUrl": ""
+    },
     {
       "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
       "name": "春を告げる",
@@ -10,17 +175,6 @@
       "playedAt": "2026-09-24T09:34:09.514Z",
       "spotifyUrl": "https://open.spotify.com/track/2Gmyw5Vg2X5YW2lM3OC7nD",
       "duration": 196497,
-      "previewUrl": ""
-    },
-    {
-      "id": "6OC9BOO9qGXQARZGWb8rqy",
-      "name": "Stellar Stellar",
-      "artist": "Hoshimachi Suisei",
-      "album": "Still Still Stellar",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f724e5bdf4ae3e50082c2403",
-      "playedAt": "2026-09-24T09:30:52.483Z",
-      "spotifyUrl": "https://open.spotify.com/track/6OC9BOO9qGXQARZGWb8rqy",
-      "duration": 301453,
       "previewUrl": ""
     },
     {
@@ -175,160 +329,6 @@
       "playedAt": "2026-09-24T06:44:11.357Z",
       "spotifyUrl": "https://open.spotify.com/track/1mUBfxiEdsrVhkQCohevey",
       "duration": 197483,
-      "previewUrl": ""
-    },
-    {
-      "id": "0zxyK9Ih5rnN485VY73bUp",
-      "name": "Luna say maybe",
-      "artist": "初星学園, 美波, 月村手毬",
-      "album": "Luna say maybe",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
-      "playedAt": "2026-09-24T06:40:53.408Z",
-      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
-      "duration": 265266,
-      "previewUrl": ""
-    },
-    {
-      "id": "7tGDXCPLpAScEwmqab9YZd",
-      "name": "Walking with you",
-      "artist": "Novelbright",
-      "album": "SKYWALK",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e984d27d0de318dc56f123d4",
-      "playedAt": "2026-09-24T06:36:27.667Z",
-      "spotifyUrl": "https://open.spotify.com/track/7tGDXCPLpAScEwmqab9YZd",
-      "duration": 223186,
-      "previewUrl": ""
-    },
-    {
-      "id": "6megNXGjmim4OitjZnIn9v",
-      "name": "春雷",
-      "artist": "Kenshi Yonezu",
-      "album": "BOOTLEG",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
-      "playedAt": "2026-09-24T06:32:44.019Z",
-      "spotifyUrl": "https://open.spotify.com/track/6megNXGjmim4OitjZnIn9v",
-      "duration": 288887,
-      "previewUrl": ""
-    },
-    {
-      "id": "2hL8ESlWIwfXPHgPaTYTWk",
-      "name": "フィナーレ。",
-      "artist": "eill",
-      "album": "プレロマンス / フィナーレ。",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27346eb5f343959f8f87211553d",
-      "playedAt": "2026-09-24T06:27:54.668Z",
-      "spotifyUrl": "https://open.spotify.com/track/2hL8ESlWIwfXPHgPaTYTWk",
-      "duration": 242367,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lUaEsQVwvNEjaJNcvc1CN",
-      "name": "サウダージ",
-      "artist": "PornoGraffitti",
-      "album": "PORNO GRAFFITTI BEST RED'S",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738770cf0b8d9ddacf4f286688",
-      "playedAt": "2026-09-24T06:23:51.839Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lUaEsQVwvNEjaJNcvc1CN",
-      "duration": 261239,
-      "previewUrl": ""
-    },
-    {
-      "id": "4DzBWi8RyUtxQSMZYuSSqt",
-      "name": "愛にできることはまだあるかい",
-      "artist": "RADWIMPS",
-      "album": "天気の子 (complete version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f995bf0052673398dceb506",
-      "playedAt": "2026-09-24T06:19:30.114Z",
-      "spotifyUrl": "https://open.spotify.com/track/4DzBWi8RyUtxQSMZYuSSqt",
-      "duration": 414373,
-      "previewUrl": ""
-    },
-    {
-      "id": "4n7nwDqrdx3qmJvEACOMrN",
-      "name": "Take Me to the Beach (feat. Ado)",
-      "artist": "Imagine Dragons, Ado",
-      "album": "Take Me to the Beach (feat. Ado)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a11303b900d06348d84337f",
-      "playedAt": "2026-09-24T06:12:35.278Z",
-      "spotifyUrl": "https://open.spotify.com/track/4n7nwDqrdx3qmJvEACOMrN",
-      "duration": 167066,
-      "previewUrl": ""
-    },
-    {
-      "id": "3wJHCry960drNlAUGrJLmz",
-      "name": "ただ君に晴れ",
-      "artist": "ヨルシカ",
-      "album": "負け犬にアンコールはいらない",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328b535c92629e3c8d20ec242",
-      "playedAt": "2026-09-24T06:09:47.747Z",
-      "spotifyUrl": "https://open.spotify.com/track/3wJHCry960drNlAUGrJLmz",
-      "duration": 198971,
-      "previewUrl": ""
-    },
-    {
-      "id": "0yOSOwtkdhydkkgw1oG7H0",
-      "name": "JOINT",
-      "artist": "川田まみ",
-      "album": "SAVIA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d3c6139b3651cb31ebb95f6",
-      "playedAt": "2026-09-24T06:06:12.394Z",
-      "spotifyUrl": "https://open.spotify.com/track/0yOSOwtkdhydkkgw1oG7H0",
-      "duration": 241506,
-      "previewUrl": ""
-    },
-    {
-      "id": "49HOrJ5rkQTRWrOsx0NRka",
-      "name": "Ray Tracer",
-      "artist": "TheFatRat, Sprites",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-09-24T06:06:08.698Z",
-      "spotifyUrl": "https://open.spotify.com/track/49HOrJ5rkQTRWrOsx0NRka",
-      "duration": 229479,
-      "previewUrl": ""
-    },
-    {
-      "id": "6DNcnUEh0bOSZ7uHDclwIS",
-      "name": "ピースサイン - Peace Sign",
-      "artist": "Kenshi Yonezu",
-      "album": "ピースサイン - Peace Sign",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b63f3516605726c0b32218be",
-      "playedAt": "2026-09-24T04:02:57.618Z",
-      "spotifyUrl": "https://open.spotify.com/track/6DNcnUEh0bOSZ7uHDclwIS",
-      "duration": 237289,
-      "previewUrl": ""
-    },
-    {
-      "id": "1HdqMIGjLm8wkL4vWDcFPm",
-      "name": "スパークル",
-      "artist": "RADWIMPS",
-      "album": "人間開花",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731b70a19a834b7f15d33fe523",
-      "playedAt": "2026-09-24T03:58:59.788Z",
-      "spotifyUrl": "https://open.spotify.com/track/1HdqMIGjLm8wkL4vWDcFPm",
-      "duration": 410213,
-      "previewUrl": ""
-    },
-    {
-      "id": "76kJA3LUe1uREGjlaOypkL",
-      "name": "テレパシ",
-      "artist": "DECO*27",
-      "album": "テレパシ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
-      "playedAt": "2026-09-24T03:38:04.636Z",
-      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
-      "duration": 137746,
-      "previewUrl": ""
-    },
-    {
-      "id": "2yozZfRYHP7Elsymghu5t3",
-      "name": "宿命",
-      "artist": "OFFICIAL HIGE DANDISM",
-      "album": "Traveler",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27376f402d83c2a85e5deca60e7",
-      "playedAt": "2026-09-24T03:35:46.358Z",
-      "spotifyUrl": "https://open.spotify.com/track/2yozZfRYHP7Elsymghu5t3",
-      "duration": 280856,
       "previewUrl": ""
     }
   ],
