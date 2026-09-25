@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T17:03:10.616Z",
+  "lastUpdated": "2026-09-25T21:27:32.427Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -18,7 +18,7 @@
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtime2weeksMinutes": 434,
+      "playtime2weeksMinutes": 376,
       "playtimeForeverMinutes": 545
     }
   ],
@@ -394,7 +394,7 @@
           "description": "Cross the broken bridge.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/d1c8d32d60378a26b44f4b00dd2113d5568d3863.jpg",
           "unlockedAt": "2026-09-13T16:47:08.000Z",
-          "percent": 9.3
+          "percent": 9.2
         },
         {
           "name": "Back For More",
@@ -416,7 +416,7 @@
           "description": "Caught 90 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
           "unlockedAt": "2024-02-02T11:36:25.000Z",
-          "percent": 45
+          "percent": 44.9
         },
         {
           "name": "Hillside Sovereign",
@@ -518,7 +518,7 @@
           "description": "Where's your face, dingus? Get your butt to the avatar creator and sort yourself out! Crying shame we can't fix that attitude of yours while we're at it.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/b2c3883e2cfd25d9477c7681714288cac23d4f76.jpg",
           "unlockedAt": "2026-03-23T15:27:32.000Z",
-          "percent": 82
+          "percent": 81.9
         },
         {
           "name": "Leaving the Nest",
