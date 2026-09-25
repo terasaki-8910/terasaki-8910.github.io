@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T11:41:45.547Z",
+  "lastUpdated": "2026-09-25T17:03:10.616Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,22 +11,15 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 935,
+      "playtime2weeksMinutes": 806,
       "playtimeForeverMinutes": 2783
     },
     {
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtime2weeksMinutes": 481,
+      "playtime2weeksMinutes": 434,
       "playtimeForeverMinutes": 545
-    },
-    {
-      "appid": 271590,
-      "name": "Grand Theft Auto V Legacy",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/271590/1e72f87eb927fa1485e68aefaff23c7fd7178251.jpg",
-      "playtime2weeksMinutes": 16,
-      "playtimeForeverMinutes": 9245
     }
   ],
   "library": [
