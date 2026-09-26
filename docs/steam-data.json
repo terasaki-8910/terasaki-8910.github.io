@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-26T04:45:34.296Z",
+  "lastUpdated": "2026-09-26T11:14:58.651Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,14 +11,14 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 806,
+      "playtime2weeksMinutes": 774,
       "playtimeForeverMinutes": 2783
     },
     {
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
-      "playtime2weeksMinutes": 313,
+      "playtime2weeksMinutes": 204,
       "playtimeForeverMinutes": 545
     }
   ],
@@ -394,7 +394,7 @@
           "description": "Cross the broken bridge.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/d1c8d32d60378a26b44f4b00dd2113d5568d3863.jpg",
           "unlockedAt": "2026-09-13T16:47:08.000Z",
-          "percent": 9.2
+          "percent": 9.3
         },
         {
           "name": "Back For More",
