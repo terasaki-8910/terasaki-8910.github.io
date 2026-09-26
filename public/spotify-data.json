@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-09-26T15:20:24.070Z",
+  "lastUpdated": "2026-09-26T20:20:10.922Z",
   "tracks": [
+    {
+      "id": "4iids3OzZunRr9a2g6AYFr",
+      "name": "COLORFUL BOX",
+      "artist": "石田燿子",
+      "album": "COLORFUL BOX / Animetic Love Letter",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a8e13218ae730687a16d288",
+      "playedAt": "2026-09-26T15:40:15.169Z",
+      "spotifyUrl": "https://open.spotify.com/track/4iids3OzZunRr9a2g6AYFr",
+      "duration": 239094,
+      "previewUrl": ""
+    },
+    {
+      "id": "0hjif67e3mBkrPIlRDXHLS",
+      "name": "LEVEL5-judgelight-",
+      "artist": "fripSide",
+      "album": "infinite synthesis",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734e6243b9b0fd0006c031748d",
+      "playedAt": "2026-09-26T15:36:15.533Z",
+      "spotifyUrl": "https://open.spotify.com/track/0hjif67e3mBkrPIlRDXHLS",
+      "duration": 263444,
+      "previewUrl": ""
+    },
+    {
+      "id": "4ejVSv31daoRyDMffmVT3k",
+      "name": "かくしん的☆めたまるふぉ〜ぜっ!",
+      "artist": "土間うまる(CV:田中あいみ)",
+      "album": "かくしん的☆めたまるふぉ〜ぜっ!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dfc9600004dfcf8fc830a325",
+      "playedAt": "2026-09-26T15:31:51.556Z",
+      "spotifyUrl": "https://open.spotify.com/track/4ejVSv31daoRyDMffmVT3k",
+      "duration": 211969,
+      "previewUrl": ""
+    },
+    {
+      "id": "466C6kwoJHLUJ8VHG98hCY",
+      "name": "Roundabout - 2024 Remaster",
+      "artist": "Yes",
+      "album": "Fragile (Super Deluxe)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735b6ff520a41ff9b0f29f701e",
+      "playedAt": "2026-09-26T15:28:19.069Z",
+      "spotifyUrl": "https://open.spotify.com/track/466C6kwoJHLUJ8VHG98hCY",
+      "duration": 516245,
+      "previewUrl": ""
+    },
     {
       "id": "434YBNY61Y9sqBSp7OINBa",
       "name": "君の知らない物語",
@@ -285,50 +329,6 @@
       "playedAt": "2026-09-26T13:25:50.599Z",
       "spotifyUrl": "https://open.spotify.com/track/3txqYlzoDZGLoW8MGll9tQ",
       "duration": 225493,
-      "previewUrl": ""
-    },
-    {
-      "id": "3mhlBIRv87DZeHG3H3gbGu",
-      "name": "ナウシカ・レクイエム",
-      "artist": "Joe Hisaishi",
-      "album": "風の谷のナウシカ サウンドトラック ～はるかな地へ・・・",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731246c1008e83ceded7d4950e",
-      "playedAt": "2026-09-26T10:44:48.875Z",
-      "spotifyUrl": "https://open.spotify.com/track/3mhlBIRv87DZeHG3H3gbGu",
-      "duration": 175000,
-      "previewUrl": ""
-    },
-    {
-      "id": "5VZn5Gsn2ckFJ2bmRo9GPe",
-      "name": "ルパン三世のテーマ - 「ルパン三世のテーマ'78」シングル・ヴァージョン",
-      "artist": "Yuji Ohno, ユー & ザ・エクスプロージョン・バンド",
-      "album": "ルパン三世 オリジナル・サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d84206cdf9b755537f3123c8",
-      "playedAt": "2026-09-26T10:41:53.368Z",
-      "spotifyUrl": "https://open.spotify.com/track/5VZn5Gsn2ckFJ2bmRo9GPe",
-      "duration": 204626,
-      "previewUrl": ""
-    },
-    {
-      "id": "1wdoaja3ueHHvzobn2jE2n",
-      "name": "Why so Serious?",
-      "artist": "Hans Zimmer, James Newton Howard",
-      "album": "The Dark Knight (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ca20352ead0cc8dccdf7951",
-      "playedAt": "2026-09-26T10:38:28.237Z",
-      "spotifyUrl": "https://open.spotify.com/track/1wdoaja3ueHHvzobn2jE2n",
-      "duration": 554026,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Xtsv7BUMrNodQWH2JPOc0",
-      "name": "Caravan",
-      "artist": "John Wasson",
-      "album": "Whiplash (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fce4a71d3973d3bbb12e8d7",
-      "playedAt": "2026-09-26T10:29:13.750Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Xtsv7BUMrNodQWH2JPOc0",
-      "duration": 555000,
       "previewUrl": ""
     }
   ],
