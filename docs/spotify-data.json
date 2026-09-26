@@ -1,6 +1,138 @@
 {
-  "lastUpdated": "2026-09-25T16:06:38.611Z",
+  "lastUpdated": "2026-09-26T02:29:12.534Z",
   "tracks": [
+    {
+      "id": "4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "name": "Butter Building",
+      "artist": "Xoc",
+      "album": "What's Pink and Sucks?",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27343a7afe72734ad88e584961d",
+      "playedAt": "2026-09-26T02:26:13.160Z",
+      "spotifyUrl": "https://open.spotify.com/track/4CVd6MT4Xy1ZK2YbMAPrHZ",
+      "duration": 98754,
+      "previewUrl": ""
+    },
+    {
+      "id": "2xoSrvXdQV8J9nTF2VFtyI",
+      "name": "Brain Power",
+      "artist": "NOMA",
+      "album": "First Flight",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273efe46165c0fbd9920270256d",
+      "playedAt": "2026-09-26T02:24:33.874Z",
+      "spotifyUrl": "https://open.spotify.com/track/2xoSrvXdQV8J9nTF2VFtyI",
+      "duration": 118055,
+      "previewUrl": ""
+    },
+    {
+      "id": "2YZa7FpeKe423Wvme0yKNf",
+      "name": "いますぐ輪廻",
+      "artist": "NAKISO",
+      "album": "いますぐ輪廻",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342f821a5480cf2b8248db543",
+      "playedAt": "2026-09-26T01:59:57.669Z",
+      "spotifyUrl": "https://open.spotify.com/track/2YZa7FpeKe423Wvme0yKNf",
+      "duration": 122482,
+      "previewUrl": ""
+    },
+    {
+      "id": "3MDuA12HzorT65LovtOMKr",
+      "name": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
+      "artist": "吉本おじさん, 雨衣",
+      "album": "お返事まだカナ？おじさん構文！ (feat. 雨衣)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d90202395ea36020727d4919",
+      "playedAt": "2026-09-26T01:57:54.650Z",
+      "spotifyUrl": "https://open.spotify.com/track/3MDuA12HzorT65LovtOMKr",
+      "duration": 184800,
+      "previewUrl": ""
+    },
+    {
+      "id": "0a3587n25Xhw098UeEbeJq",
+      "name": "青と夏",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "青と夏",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273544c990ccc4e0b0a1ad6bb3a",
+      "playedAt": "2026-09-26T01:45:23.025Z",
+      "spotifyUrl": "https://open.spotify.com/track/0a3587n25Xhw098UeEbeJq",
+      "duration": 270506,
+      "previewUrl": ""
+    },
+    {
+      "id": "0wz0NkHqPVAgBtXl3TVFkI",
+      "name": "踊っチャイナ (feat. 初音ミク & 重音テト)",
+      "artist": "Atena, Hatsune Miku, Teto Kasane",
+      "album": "踊っチャイナ (feat. 初音ミク & 重音テト)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734333e3ba1a9eb15a9ffd6542",
+      "playedAt": "2026-09-26T01:40:51.984Z",
+      "spotifyUrl": "https://open.spotify.com/track/0wz0NkHqPVAgBtXl3TVFkI",
+      "duration": 156000,
+      "previewUrl": ""
+    },
+    {
+      "id": "4fdB7D3ie0C6HZLEb8VTHA",
+      "name": "インベーダーインベーダー",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "なんだこれくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
+      "playedAt": "2026-09-26T01:38:15.446Z",
+      "spotifyUrl": "https://open.spotify.com/track/4fdB7D3ie0C6HZLEb8VTHA",
+      "duration": 251742,
+      "previewUrl": ""
+    },
+    {
+      "id": "3zrmJWuIWUmrhhSAZnlOYF",
+      "name": "にんじゃりばんばん",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "なんだこれくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
+      "playedAt": "2026-09-26T01:34:03.153Z",
+      "spotifyUrl": "https://open.spotify.com/track/3zrmJWuIWUmrhhSAZnlOYF",
+      "duration": 266686,
+      "previewUrl": ""
+    },
+    {
+      "id": "4lEk6fyJu7LLPenqL0Raj5",
+      "name": "阿修羅ちゃん",
+      "artist": "Ado",
+      "album": "阿修羅ちゃん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3dea665dd662e399ae6a2f2",
+      "playedAt": "2026-09-26T01:29:35.860Z",
+      "spotifyUrl": "https://open.spotify.com/track/4lEk6fyJu7LLPenqL0Raj5",
+      "duration": 196285,
+      "previewUrl": ""
+    },
+    {
+      "id": "35WLGytCEIVPLBPfhNPhTp",
+      "name": "チョコレイト・ディスコ",
+      "artist": "Perfume",
+      "album": "Perfume The Best \"P Cubed\"",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9e030ba21efad40e926e390",
+      "playedAt": "2026-09-26T01:26:19.037Z",
+      "spotifyUrl": "https://open.spotify.com/track/35WLGytCEIVPLBPfhNPhTp",
+      "duration": 226506,
+      "previewUrl": ""
+    },
+    {
+      "id": "6OC9BOO9qGXQARZGWb8rqy",
+      "name": "Stellar Stellar",
+      "artist": "Hoshimachi Suisei",
+      "album": "Still Still Stellar",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f724e5bdf4ae3e50082c2403",
+      "playedAt": "2026-09-26T01:22:31.998Z",
+      "spotifyUrl": "https://open.spotify.com/track/6OC9BOO9qGXQARZGWb8rqy",
+      "duration": 301453,
+      "previewUrl": ""
+    },
+    {
+      "id": "06XQvnJb53SUYmlWIhUXUi",
+      "name": "怪物",
+      "artist": "YOASOBI",
+      "album": "怪物",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2efc5e5f5922ca1f1b88928",
+      "playedAt": "2026-09-26T00:58:14.923Z",
+      "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
+      "duration": 206000,
+      "previewUrl": ""
+    },
     {
       "id": "7wnOPAiqvIG4dTvEInj0YT",
       "name": "Teenager Forever",
@@ -65,17 +197,6 @@
       "playedAt": "2026-09-25T13:55:12.353Z",
       "spotifyUrl": "https://open.spotify.com/track/4FdpXwtpJfRltvFuTcpNL6",
       "duration": 245000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6OC9BOO9qGXQARZGWb8rqy",
-      "name": "Stellar Stellar",
-      "artist": "Hoshimachi Suisei",
-      "album": "Still Still Stellar",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f724e5bdf4ae3e50082c2403",
-      "playedAt": "2026-09-25T13:51:06.822Z",
-      "spotifyUrl": "https://open.spotify.com/track/6OC9BOO9qGXQARZGWb8rqy",
-      "duration": 301453,
       "previewUrl": ""
     },
     {
@@ -208,127 +329,6 @@
       "playedAt": "2026-09-25T11:44:53.991Z",
       "spotifyUrl": "https://open.spotify.com/track/7ComeQv7Lj3XbEpuY4TyHE",
       "duration": 231493,
-      "previewUrl": ""
-    },
-    {
-      "id": "1YXot2MLAG9sttepCtBRM7",
-      "name": "踊り子",
-      "artist": "Vaundy",
-      "album": "replica",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e0c3a68b9981c2e7b25f9737",
-      "playedAt": "2026-09-25T11:41:01.946Z",
-      "spotifyUrl": "https://open.spotify.com/track/1YXot2MLAG9sttepCtBRM7",
-      "duration": 229328,
-      "previewUrl": ""
-    },
-    {
-      "id": "29YSKt01a9wGNJkPLQG0Kw",
-      "name": "境界の彼方",
-      "artist": "茅原実里",
-      "album": "NEO FANTASIA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f416e4d4186d4086a1fd0258",
-      "playedAt": "2026-09-25T11:36:27.206Z",
-      "spotifyUrl": "https://open.spotify.com/track/29YSKt01a9wGNJkPLQG0Kw",
-      "duration": 292040,
-      "previewUrl": ""
-    },
-    {
-      "id": "17ak2L9hb5BXExDRRZ1owi",
-      "name": "CRAZY NOISY BIZARRE TOWN",
-      "artist": "THE DU",
-      "album": "CRAZY NOISY BIZARRE TOWN",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738bce9414e4ffe90cc7d91363",
-      "playedAt": "2026-09-25T11:31:34.638Z",
-      "spotifyUrl": "https://open.spotify.com/track/17ak2L9hb5BXExDRRZ1owi",
-      "duration": 186720,
-      "previewUrl": ""
-    },
-    {
-      "id": "2EHcM94vAEYFlNXXosOHRp",
-      "name": "狂乱 Hey Kids!!",
-      "artist": "THE ORAL CIGARETTES",
-      "album": "FIXION",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ff25f1a3333297cc123153b",
-      "playedAt": "2026-09-25T11:28:27.379Z",
-      "spotifyUrl": "https://open.spotify.com/track/2EHcM94vAEYFlNXXosOHRp",
-      "duration": 250973,
-      "previewUrl": ""
-    },
-    {
-      "id": "6p0f3TyHZHU5f6TJ7J0i4U",
-      "name": "カーストルーム",
-      "artist": "ZAQ",
-      "album": "カーストルーム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739291732204564f8bd19d2bdf",
-      "playedAt": "2026-09-25T11:24:15.860Z",
-      "spotifyUrl": "https://open.spotify.com/track/6p0f3TyHZHU5f6TJ7J0i4U",
-      "duration": 265173,
-      "previewUrl": ""
-    },
-    {
-      "id": "6CCCn6i6FU1tzzqjTNZtGk",
-      "name": "Clattanoia",
-      "artist": "OxT",
-      "album": "TVアニメ「オーバーロード」オープニングテーマ「Clattanoia」",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f944624d3413404001a0cbb6",
-      "playedAt": "2026-09-25T11:19:50.137Z",
-      "spotifyUrl": "https://open.spotify.com/track/6CCCn6i6FU1tzzqjTNZtGk",
-      "duration": 237880,
-      "previewUrl": ""
-    },
-    {
-      "id": "655c1jo3bhSiKhewPzqdN8",
-      "name": "もうそう☆えくすぷれす",
-      "artist": "物語シリーズ",
-      "album": "歌物語 Special Edition",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e1df8ec8f6466df02ca9864",
-      "playedAt": "2026-09-25T11:15:51.725Z",
-      "spotifyUrl": "https://open.spotify.com/track/655c1jo3bhSiKhewPzqdN8",
-      "duration": 263920,
-      "previewUrl": ""
-    },
-    {
-      "id": "12usPU2WnqgCHAW1EK2dfd",
-      "name": "青のすみか",
-      "artist": "Tatsuya Kitani",
-      "album": "青のすみか",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27387d3383ad8d19ab88aa83a4a",
-      "playedAt": "2026-09-25T11:10:20.414Z",
-      "spotifyUrl": "https://open.spotify.com/track/12usPU2WnqgCHAW1EK2dfd",
-      "duration": 196466,
-      "previewUrl": ""
-    },
-    {
-      "id": "0PWIc3fMjsnfxv2SyQ2lRx",
-      "name": "世界は恋に落ちている",
-      "artist": "CHiCO with HoneyWorks",
-      "album": "世界は恋に落ちている",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273731dda76ba334bd44a043b43",
-      "playedAt": "2026-09-25T11:07:03.405Z",
-      "spotifyUrl": "https://open.spotify.com/track/0PWIc3fMjsnfxv2SyQ2lRx",
-      "duration": 311293,
-      "previewUrl": ""
-    },
-    {
-      "id": "3YxsRgCkaQR9ckhabbz0yz",
-      "name": "太陽曰く燃えよカオス",
-      "artist": "Ushirokarahaiyoritai G",
-      "album": "太陽曰く燃えよカオス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9acf1a281e447d27fb3b52a",
-      "playedAt": "2026-09-25T11:01:51.568Z",
-      "spotifyUrl": "https://open.spotify.com/track/3YxsRgCkaQR9ckhabbz0yz",
-      "duration": 232000,
-      "previewUrl": ""
-    },
-    {
-      "id": "3gbUPOTnqFjXy5bPlEtXFm",
-      "name": "優しさの理由",
-      "artist": "ChouCho",
-      "album": "flyleaf",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e390b0d50610c5d1e7c05e8b",
-      "playedAt": "2026-09-25T10:57:59.035Z",
-      "spotifyUrl": "https://open.spotify.com/track/3gbUPOTnqFjXy5bPlEtXFm",
-      "duration": 254226,
       "previewUrl": ""
     }
   ],
