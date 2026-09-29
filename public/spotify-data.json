@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-09-28T22:44:13.313Z",
+  "lastUpdated": "2026-09-29T03:12:50.227Z",
   "tracks": [
+    {
+      "id": "0AtZkwQcZmhVzQCEJga3ni",
+      "name": "太陽が昇らない世界 - A World Where the Sun Never Rises",
+      "artist": "Aimer",
+      "album": "太陽が昇らない世界 - A World Where the Sun Never Rises",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a0126163d84c4c9edff6e9fd",
+      "playedAt": "2026-09-29T02:55:34.060Z",
+      "spotifyUrl": "https://open.spotify.com/track/0AtZkwQcZmhVzQCEJga3ni",
+      "duration": 170315,
+      "previewUrl": ""
+    },
+    {
+      "id": "0l7wTSNjvl8mqzSoJ51iWA",
+      "name": "The Arrival at Tatooine and the Flag Parade",
+      "artist": "John Williams, London Symphony Orchestra",
+      "album": "Star Wars: The Phantom Menace (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f44f265edd3e82f9f13c6df2",
+      "playedAt": "2026-09-29T02:51:15.549Z",
+      "spotifyUrl": "https://open.spotify.com/track/0l7wTSNjvl8mqzSoJ51iWA",
+      "duration": 243053,
+      "previewUrl": ""
+    },
     {
       "id": "638PHAOYgcooFRkjjDBadh",
       "name": "Pokémon Center Jazz",
@@ -307,28 +329,6 @@
       "playedAt": "2026-09-28T09:05:53.934Z",
       "spotifyUrl": "https://open.spotify.com/track/20ZOXEroazqPVVYyGhbwoZ",
       "duration": 136216,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ASw64KfzSUtChQDfzC906",
-      "name": "脳漿炸裂ガール 2015ver.",
-      "artist": "rerulili",
-      "album": "厨病激発ボーイ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a34d6ee798d20ff79b23cad3",
-      "playedAt": "2026-09-28T09:03:37.186Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ASw64KfzSUtChQDfzC906",
-      "duration": 192440,
-      "previewUrl": ""
-    },
-    {
-      "id": "0m9QPTZzjtqCWY9Jg8poHc",
-      "name": "ヴァンパイア",
-      "artist": "DECO*27",
-      "album": "ヴァンパイア",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738d8d73b427590bc1a6ae8c99",
-      "playedAt": "2026-09-28T09:00:24.230Z",
-      "spotifyUrl": "https://open.spotify.com/track/0m9QPTZzjtqCWY9Jg8poHc",
-      "duration": 178235,
       "previewUrl": ""
     }
   ],
