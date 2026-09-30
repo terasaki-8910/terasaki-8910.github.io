@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-09-29T17:13:51.307Z",
+  "lastUpdated": "2026-09-30T02:55:14.984Z",
   "tracks": [
+    {
+      "id": "08QaHlMPWuO5PUxjl61bXn",
+      "name": "He's a Pirate",
+      "artist": "Klaus Badelt",
+      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27338786c7492ac252797bb2648",
+      "playedAt": "2026-09-30T02:53:11.144Z",
+      "spotifyUrl": "https://open.spotify.com/track/08QaHlMPWuO5PUxjl61bXn",
+      "duration": 90426,
+      "previewUrl": ""
+    },
+    {
+      "id": "0Pq2FCM8C2NphCy4m6UNBx",
+      "name": "A Storm Is Coming",
+      "artist": "Hans Zimmer",
+      "album": "The Dark Knight Rises (Original Motion Picture Soundtrack) [Deluxe Edition]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273203e47c555c8ef1285875d42",
+      "playedAt": "2026-09-30T02:51:40.196Z",
+      "spotifyUrl": "https://open.spotify.com/track/0Pq2FCM8C2NphCy4m6UNBx",
+      "duration": 36914,
+      "previewUrl": ""
+    },
+    {
+      "id": "2IE9mgjkkk7Lfj9wgzz8MT",
+      "name": "Suite New Day - from \"Spider-Man: Brand New Day\" Soundtrack",
+      "artist": "Michael Giacchino",
+      "album": "Spider-Man: Brand New Day (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b4123d5765f3068a788fa30",
+      "playedAt": "2026-09-30T02:51:02.759Z",
+      "spotifyUrl": "https://open.spotify.com/track/2IE9mgjkkk7Lfj9wgzz8MT",
+      "duration": 374066,
+      "previewUrl": ""
+    },
+    {
+      "id": "110uH4IxKOINJBWCy9J23k",
+      "name": "One Piece (1999) - Overtaken",
+      "artist": "Geek Music",
+      "album": "The Anime Collection Volume One",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
+      "playedAt": "2026-09-30T02:35:56.245Z",
+      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
+      "duration": 120212,
+      "previewUrl": ""
+    },
+    {
+      "id": "39uLYYZytVUwcjgeYLI409",
+      "name": "Merry-Go-Round of Life - from 'Howl's Moving Castle'",
+      "artist": "Joe Hisaishi",
+      "album": "FREEDOM PIANO STORIES 4",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27333ea9fb3fd69bca55a015229",
+      "playedAt": "2026-09-30T02:33:55.516Z",
+      "spotifyUrl": "https://open.spotify.com/track/39uLYYZytVUwcjgeYLI409",
+      "duration": 311106,
+      "previewUrl": ""
+    },
+    {
+      "id": "5LChvDjlhPXmp1DhIfejxv",
+      "name": "スラッグ溪谷の朝",
+      "artist": "Joe Hisaishi",
+      "album": "天空の城ラピュタ サウンドトラック ～飛行石の謎～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6bafda9334bda20e2e5e447",
+      "playedAt": "2026-09-30T02:28:47.855Z",
+      "spotifyUrl": "https://open.spotify.com/track/5LChvDjlhPXmp1DhIfejxv",
+      "duration": 184293,
+      "previewUrl": ""
+    },
+    {
+      "id": "2VvAAjMzOKXkJ9t8N9Rbup",
+      "name": "Duel of the Fates (From \"Star Wars: Episode I - The Phantom Menace\")",
+      "artist": "John Williams, Robert Ziegler, Slovak National Symphony Orchestra, Members of the Slovak Philharmonic Choir",
+      "album": "Music From The Star Wars Saga - The Essential Collection",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273851abf5fb53fda9ada173c79",
+      "playedAt": "2026-09-30T02:25:43.029Z",
+      "spotifyUrl": "https://open.spotify.com/track/2VvAAjMzOKXkJ9t8N9Rbup",
+      "duration": 274200,
+      "previewUrl": ""
+    },
+    {
+      "id": "6ATiUNyUXvHbKZ4NOsZUxm",
+      "name": "自己肯定感爆上げ↑↑しゅきしゅきソング",
+      "artist": "初星学園, ヒゲドライバー, 藤田ことね",
+      "album": "自己肯定感爆上げ↑↑しゅきしゅきソング",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af2eb7c6ffe1ecfd037b3fcc",
+      "playedAt": "2026-09-30T02:19:44.976Z",
+      "spotifyUrl": "https://open.spotify.com/track/6ATiUNyUXvHbKZ4NOsZUxm",
+      "duration": 234789,
+      "previewUrl": ""
+    },
     {
       "id": "6WrytCYNqsPMgtpTpd9p7j",
       "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
@@ -145,17 +233,6 @@
       "previewUrl": ""
     },
     {
-      "id": "2VvAAjMzOKXkJ9t8N9Rbup",
-      "name": "Duel of the Fates (From \"Star Wars: Episode I - The Phantom Menace\")",
-      "artist": "John Williams, Robert Ziegler, Slovak National Symphony Orchestra, Members of the Slovak Philharmonic Choir",
-      "album": "Music From The Star Wars Saga - The Essential Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273851abf5fb53fda9ada173c79",
-      "playedAt": "2026-09-29T03:54:45.648Z",
-      "spotifyUrl": "https://open.spotify.com/track/2VvAAjMzOKXkJ9t8N9Rbup",
-      "duration": 274200,
-      "previewUrl": ""
-    },
-    {
       "id": "0AtZkwQcZmhVzQCEJga3ni",
       "name": "太陽が昇らない世界 - A World Where the Sun Never Rises",
       "artist": "Aimer",
@@ -252,83 +329,6 @@
       "playedAt": "2026-09-28T13:11:51.461Z",
       "spotifyUrl": "https://open.spotify.com/track/6xHZtQYgqhKKIFee9J7QsQ",
       "duration": 311720,
-      "previewUrl": ""
-    },
-    {
-      "id": "2XbryOVSaPXhpre0Yj4MUv",
-      "name": "Squid Sisters (The Fresh Remix)",
-      "artist": "MandoPony",
-      "album": "Songs for Gamers, Vol. 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273860b382cdec10b0565373a4c",
-      "playedAt": "2026-09-28T13:06:39.210Z",
-      "spotifyUrl": "https://open.spotify.com/track/2XbryOVSaPXhpre0Yj4MUv",
-      "duration": 195375,
-      "previewUrl": ""
-    },
-    {
-      "id": "7DG6A3XsTxbMC9Fpkh74W3",
-      "name": "Gerudo Valley",
-      "artist": "Super Guitar Bros",
-      "album": "Ocarina of Time",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bb6f8c7b085f5020bc79951",
-      "playedAt": "2026-09-28T13:03:23.304Z",
-      "spotifyUrl": "https://open.spotify.com/track/7DG6A3XsTxbMC9Fpkh74W3",
-      "duration": 123717,
-      "previewUrl": ""
-    },
-    {
-      "id": "3zuOoqvVzxEzXi0D0Ma4SM",
-      "name": "Alpha",
-      "artist": "C418",
-      "album": "Minecraft - Volume Beta",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c918a500a7d16e0cc57bc068",
-      "playedAt": "2026-09-28T13:01:19.064Z",
-      "spotifyUrl": "https://open.spotify.com/track/3zuOoqvVzxEzXi0D0Ma4SM",
-      "duration": 603000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Xfp9BcKrKYmxJPxn68Yb8",
-      "name": "doodle",
-      "artist": "Zachz Winner",
-      "album": "doodle",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363b7d7daed57882f21ae26d0",
-      "playedAt": "2026-09-28T12:51:15.538Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Xfp9BcKrKYmxJPxn68Yb8",
-      "duration": 73918,
-      "previewUrl": ""
-    },
-    {
-      "id": "034jvsVh9m8f2lRMvNeHWv",
-      "name": "Gourmet Race (From \"Kirby Super Star\")",
-      "artist": "Qumu",
-      "album": "Year 7",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734366c48ae7d8dce239c62c47",
-      "playedAt": "2026-09-28T12:50:01.093Z",
-      "spotifyUrl": "https://open.spotify.com/track/034jvsVh9m8f2lRMvNeHWv",
-      "duration": 195510,
-      "previewUrl": ""
-    },
-    {
-      "id": "27n2Ml0MHUSEMJXq1GoCH7",
-      "name": "めいあいへるぷゆー?",
-      "artist": "Stand-Up! Hearts (天音、虹香、舞波和音)",
-      "album": "アニソンMIXラボラトリー ～セカンド レポート～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273861563c40f9cc141786fe84b",
-      "playedAt": "2026-09-28T12:46:45.050Z",
-      "spotifyUrl": "https://open.spotify.com/track/27n2Ml0MHUSEMJXq1GoCH7",
-      "duration": 209733,
-      "previewUrl": ""
-    },
-    {
-      "id": "3Bfv3Wg4HAhNFdVgWSfT0z",
-      "name": "Sailing",
-      "artist": "BE:FIRST",
-      "album": "Sailing",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273011dfed579f1c87f30847290",
-      "playedAt": "2026-09-28T11:06:05.890Z",
-      "spotifyUrl": "https://open.spotify.com/track/3Bfv3Wg4HAhNFdVgWSfT0z",
-      "duration": 186586,
       "previewUrl": ""
     }
   ],
