@@ -1,6 +1,160 @@
 {
-  "lastUpdated": "2026-10-01T03:01:28.263Z",
+  "lastUpdated": "2026-10-01T12:01:11.329Z",
   "tracks": [
+    {
+      "id": "4LlCnZLrF6Ri7bK5gwrpG5",
+      "name": "呪われた海賊たち",
+      "artist": "Antoine Barry",
+      "album": "パイレーツ・オブ・カリビアン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27359bd349ad0b72ea53d9cfcee",
+      "playedAt": "2026-10-01T08:55:58.900Z",
+      "spotifyUrl": "https://open.spotify.com/track/4LlCnZLrF6Ri7bK5gwrpG5",
+      "duration": 94418,
+      "previewUrl": ""
+    },
+    {
+      "id": "08QaHlMPWuO5PUxjl61bXn",
+      "name": "He's a Pirate",
+      "artist": "Klaus Badelt",
+      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27338786c7492ac252797bb2648",
+      "playedAt": "2026-10-01T08:51:39.597Z",
+      "spotifyUrl": "https://open.spotify.com/track/08QaHlMPWuO5PUxjl61bXn",
+      "duration": 90426,
+      "previewUrl": ""
+    },
+    {
+      "id": "2stkLJ0JNcXkIRDNF3ld6c",
+      "name": "You've Got a Friend in Me",
+      "artist": "Randy Newman",
+      "album": "Toy Story (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e26f06f82a65f3ceb6c259c",
+      "playedAt": "2026-10-01T08:50:08.645Z",
+      "spotifyUrl": "https://open.spotify.com/track/2stkLJ0JNcXkIRDNF3ld6c",
+      "duration": 124160,
+      "previewUrl": ""
+    },
+    {
+      "id": "2IE9mgjkkk7Lfj9wgzz8MT",
+      "name": "Suite New Day - from \"Spider-Man: Brand New Day\" Soundtrack",
+      "artist": "Michael Giacchino",
+      "album": "Spider-Man: Brand New Day (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b4123d5765f3068a788fa30",
+      "playedAt": "2026-10-01T08:48:03.950Z",
+      "spotifyUrl": "https://open.spotify.com/track/2IE9mgjkkk7Lfj9wgzz8MT",
+      "duration": 374066,
+      "previewUrl": ""
+    },
+    {
+      "id": "6V53UDIOvJ8QNjRAQmvQQn",
+      "name": "Attack of the Killer Queen",
+      "artist": "Toby Fox, Lena Raine, Marcy Nabors",
+      "album": "DELTARUNE Chapter 2 (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e14fd3669881ed569497a76",
+      "playedAt": "2026-10-01T08:41:08.664Z",
+      "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
+      "duration": 120000,
+      "previewUrl": ""
+    },
+    {
+      "id": "30lXCrnKs5TJJOuSVwiQn1",
+      "name": "Zoltraak",
+      "artist": "Evan Call",
+      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
+      "playedAt": "2026-10-01T08:35:18.300Z",
+      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
+      "duration": 140664,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FpXO7ehznN8Mh3sNfRd1r",
+      "name": "Oblivion",
+      "artist": "TheFatRat, Lola Blanc",
+      "album": "Oblivion",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
+      "playedAt": "2026-10-01T08:30:17.773Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
+      "duration": 211935,
+      "previewUrl": ""
+    },
+    {
+      "id": "1AKIi40li4kyJHQKOuF3Qz",
+      "name": "POSTERITY",
+      "artist": "Ludwig Göransson",
+      "album": "Tenet (Original Motion Picture Soundtrack) [Deluxe Edition]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737358257b7556ef64af569489",
+      "playedAt": "2026-10-01T03:37:58.635Z",
+      "spotifyUrl": "https://open.spotify.com/track/1AKIi40li4kyJHQKOuF3Qz",
+      "duration": 762216,
+      "previewUrl": ""
+    },
+    {
+      "id": "4VnDmjYCZkyeqeb0NIKqdA",
+      "name": "Can You Hear The Music",
+      "artist": "Ludwig Göransson",
+      "album": "Oppenheimer (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af634982d9b15de3c77f7dd9",
+      "playedAt": "2026-10-01T03:21:51.859Z",
+      "spotifyUrl": "https://open.spotify.com/track/4VnDmjYCZkyeqeb0NIKqdA",
+      "duration": 110160,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NJQpFNkDCMaRBogIi9sOI",
+      "name": "Bellbottoms",
+      "artist": "The Jon Spencer Blues Explosion",
+      "album": "Orange",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cda41c43601ec82ed81fd3a",
+      "playedAt": "2026-10-01T03:20:01.169Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NJQpFNkDCMaRBogIi9sOI",
+      "duration": 317986,
+      "previewUrl": ""
+    },
+    {
+      "id": "110uH4IxKOINJBWCy9J23k",
+      "name": "One Piece (1999) - Overtaken",
+      "artist": "Geek Music",
+      "album": "The Anime Collection Volume One",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
+      "playedAt": "2026-10-01T03:14:39.253Z",
+      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
+      "duration": 120212,
+      "previewUrl": ""
+    },
+    {
+      "id": "0Pq2FCM8C2NphCy4m6UNBx",
+      "name": "A Storm Is Coming",
+      "artist": "Hans Zimmer",
+      "album": "The Dark Knight Rises (Original Motion Picture Soundtrack) [Deluxe Edition]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273203e47c555c8ef1285875d42",
+      "playedAt": "2026-10-01T03:12:38.519Z",
+      "spotifyUrl": "https://open.spotify.com/track/0Pq2FCM8C2NphCy4m6UNBx",
+      "duration": 36914,
+      "previewUrl": ""
+    },
+    {
+      "id": "1n8NKQRg8LVHy7oUhUgbFF",
+      "name": "Hedwig's Theme",
+      "artist": "John Williams",
+      "album": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27313f982aa5c43146c3d2c1964",
+      "playedAt": "2026-10-01T03:07:26.513Z",
+      "spotifyUrl": "https://open.spotify.com/track/1n8NKQRg8LVHy7oUhUgbFF",
+      "duration": 309093,
+      "previewUrl": ""
+    },
+    {
+      "id": "2TZbQZXOuR8osP2AK8yYMN",
+      "name": "Theme From Jurassic Park",
+      "artist": "John Williams",
+      "album": "Jurassic Park",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27392f051ce3c585b5c2db21d52",
+      "playedAt": "2026-10-01T03:02:16.889Z",
+      "spotifyUrl": "https://open.spotify.com/track/2TZbQZXOuR8osP2AK8yYMN",
+      "duration": 207426,
+      "previewUrl": ""
+    },
     {
       "id": "5SXsXjVJCWeJuf7FHvgBYR",
       "name": "The Avengers",
@@ -68,6 +222,17 @@
       "previewUrl": ""
     },
     {
+      "id": "5LtKpKOO0fyGBAbv761JCu",
+      "name": "Sunlight",
+      "artist": "TheFatRat, Phaera",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-10-01T02:20:00.427Z",
+      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
+      "duration": 169952,
+      "previewUrl": ""
+    },
+    {
       "id": "4N3CAZ7qXbPKPWrcXd4gSh",
       "name": "Freakshow",
       "artist": "Dirty Palm, LexBlaze",
@@ -76,17 +241,6 @@
       "playedAt": "2026-10-01T00:51:14.330Z",
       "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
       "duration": 174375,
-      "previewUrl": ""
-    },
-    {
-      "id": "6V53UDIOvJ8QNjRAQmvQQn",
-      "name": "Attack of the Killer Queen",
-      "artist": "Toby Fox, Lena Raine, Marcy Nabors",
-      "album": "DELTARUNE Chapter 2 (Original Game Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e14fd3669881ed569497a76",
-      "playedAt": "2026-10-01T00:48:19.489Z",
-      "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
-      "duration": 120000,
       "previewUrl": ""
     },
     {
@@ -175,160 +329,6 @@
       "playedAt": "2026-10-01T00:17:08.486Z",
       "spotifyUrl": "https://open.spotify.com/track/6Ozh9Ok6h4Oi1wUSLtBseN",
       "duration": 159714,
-      "previewUrl": ""
-    },
-    {
-      "id": "5etN0BsaiQlp0D6ltU4BX7",
-      "name": "Liquor & Cigarettes (feat. ArrDee)",
-      "artist": "Chase & Status, Hedex, ArrDee",
-      "album": "2 RUFF, Vol. 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738a7fdf2de701f3ea4cfacfc1",
-      "playedAt": "2026-10-01T00:14:21.189Z",
-      "spotifyUrl": "https://open.spotify.com/track/5etN0BsaiQlp0D6ltU4BX7",
-      "duration": 189986,
-      "previewUrl": ""
-    },
-    {
-      "id": "12Us8e6NFesdkXKf4StU1I",
-      "name": "Me & You",
-      "artist": "Central Cee",
-      "album": "Me & You",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732997fcd35c43a9d44b2c2241",
-      "playedAt": "2026-10-01T00:09:24.012Z",
-      "spotifyUrl": "https://open.spotify.com/track/12Us8e6NFesdkXKf4StU1I",
-      "duration": 187034,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lQ8MOhq6IN2w8EYcFNSUk",
-      "name": "Without Me",
-      "artist": "Eminem",
-      "album": "The Eminem Show",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ca5c90113b30c3c43ffb8f4",
-      "playedAt": "2026-10-01T00:06:16.416Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lQ8MOhq6IN2w8EYcFNSUk",
-      "duration": 290320,
-      "previewUrl": ""
-    },
-    {
-      "id": "0wHFktze2PHC5jDt3B17DC",
-      "name": "First Class",
-      "artist": "Jack Harlow",
-      "album": "Come Home The Kids Miss You",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ba41d0446dee0141062bbe1",
-      "playedAt": "2026-09-30T23:59:02.102Z",
-      "spotifyUrl": "https://open.spotify.com/track/0wHFktze2PHC5jDt3B17DC",
-      "duration": 173947,
-      "previewUrl": ""
-    },
-    {
-      "id": "0afhq8XCExXpqazXczTSve",
-      "name": "Galway Girl",
-      "artist": "Ed Sheeran",
-      "album": "÷ (Deluxe)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96",
-      "playedAt": "2026-09-30T23:56:07.446Z",
-      "spotifyUrl": "https://open.spotify.com/track/0afhq8XCExXpqazXczTSve",
-      "duration": 170826,
-      "previewUrl": ""
-    },
-    {
-      "id": "72v1J97VEDEoAq66SQW0yh",
-      "name": "Entrapreneur",
-      "artist": "Central Cee",
-      "album": "Entrapreneur",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fa75bd991e58a0692a33c5af",
-      "playedAt": "2026-09-30T23:52:52.309Z",
-      "spotifyUrl": "https://open.spotify.com/track/72v1J97VEDEoAq66SQW0yh",
-      "duration": 144253,
-      "previewUrl": ""
-    },
-    {
-      "id": "6AI3ezQ4o3HUoP6Dhudph3",
-      "name": "Not Like Us",
-      "artist": "Kendrick Lamar",
-      "album": "Not Like Us",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad",
-      "playedAt": "2026-09-30T23:49:29.319Z",
-      "spotifyUrl": "https://open.spotify.com/track/6AI3ezQ4o3HUoP6Dhudph3",
-      "duration": 274192,
-      "previewUrl": ""
-    },
-    {
-      "id": "4FAQjmX7e7JJaFE363uj86",
-      "name": "One Up",
-      "artist": "Central Cee",
-      "album": "One Up",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c10afb6b6d3c8feb162338a7",
-      "playedAt": "2026-09-30T23:44:54.605Z",
-      "spotifyUrl": "https://open.spotify.com/track/4FAQjmX7e7JJaFE363uj86",
-      "duration": 160000,
-      "previewUrl": ""
-    },
-    {
-      "id": "5d01AUplB1QOZY3kPrAuot",
-      "name": "UK Rap",
-      "artist": "Dave, Central Cee",
-      "album": "Split Decision",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27351504c9d0dda1644b2b7d5dd",
-      "playedAt": "2026-09-30T23:42:14.191Z",
-      "spotifyUrl": "https://open.spotify.com/track/5d01AUplB1QOZY3kPrAuot",
-      "duration": 198026,
-      "previewUrl": ""
-    },
-    {
-      "id": "7lT3oj3gxE6AJb87ZK8up7",
-      "name": "いらない",
-      "artist": "sakanaction",
-      "album": "いらない",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27377b8e1d157752397bf24f3a8",
-      "playedAt": "2026-09-30T23:24:43.347Z",
-      "spotifyUrl": "https://open.spotify.com/track/7lT3oj3gxE6AJb87ZK8up7",
-      "duration": 226313,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
-      "name": "Without You (feat. Sandro Cavazza)",
-      "artist": "Avicii, Sandro Cavazza",
-      "album": "AVĪCI (01)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
-      "playedAt": "2026-09-30T23:16:28.691Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
-      "duration": 181672,
-      "previewUrl": ""
-    },
-    {
-      "id": "0ct6r3EGTcMLPtrXHDvVjc",
-      "name": "The Nights",
-      "artist": "Avicii",
-      "album": "The Days / Nights",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730ae4f4d42e4a09f3a29f64ad",
-      "playedAt": "2026-09-30T23:10:47.031Z",
-      "spotifyUrl": "https://open.spotify.com/track/0ct6r3EGTcMLPtrXHDvVjc",
-      "duration": 176658,
-      "previewUrl": ""
-    },
-    {
-      "id": "1OrSkn4lXO1cD1NaR7v2IG",
-      "name": "Universal Fanfare",
-      "artist": "The Minions",
-      "album": "Minions (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732491486e0c8c1df2323c2541",
-      "playedAt": "2026-09-30T15:47:38.146Z",
-      "spotifyUrl": "https://open.spotify.com/track/1OrSkn4lXO1cD1NaR7v2IG",
-      "duration": 32417,
-      "previewUrl": ""
-    },
-    {
-      "id": "17OQVshtovwVo2vk6tuzwn",
-      "name": "ライアーダンサー",
-      "artist": "マサラダ",
-      "album": "ライアーダンサー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d7cea1e497fd66b9e525e8",
-      "playedAt": "2026-09-30T15:47:37.756Z",
-      "spotifyUrl": "https://open.spotify.com/track/17OQVshtovwVo2vk6tuzwn",
-      "duration": 242459,
       "previewUrl": ""
     }
   ],
