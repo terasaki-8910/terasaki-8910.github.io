@@ -1,6 +1,138 @@
 {
-  "lastUpdated": "2026-10-02T03:03:53.073Z",
+  "lastUpdated": "2026-10-02T11:32:56.175Z",
   "tracks": [
+    {
+      "id": "68EkhVWIeULhHxcbi1QhzK",
+      "name": "World's Smallest Violin",
+      "artist": "AJR",
+      "album": "OK ORCHESTRA",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739f952acc9b243579f59bfdd3",
+      "playedAt": "2026-10-02T09:14:08.338Z",
+      "spotifyUrl": "https://open.spotify.com/track/68EkhVWIeULhHxcbi1QhzK",
+      "duration": 180742,
+      "previewUrl": ""
+    },
+    {
+      "id": "4q57oGT90FfPHf7vWp32Ho",
+      "name": "Judas",
+      "artist": "Lady Gaga",
+      "album": "Born This Way (Japan Special Edition Version)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d2bc35812c2d7f67d110e48",
+      "playedAt": "2026-10-02T09:06:40.743Z",
+      "spotifyUrl": "https://open.spotify.com/track/4q57oGT90FfPHf7vWp32Ho",
+      "duration": 249066,
+      "previewUrl": ""
+    },
+    {
+      "id": "0SiywuOBRcynK0uKGWdCnn",
+      "name": "Bad Romance",
+      "artist": "Lady Gaga",
+      "album": "The Fame Monster (Deluxe Edition)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735c9890c0456a3719eeecd8aa",
+      "playedAt": "2026-10-02T08:58:58.064Z",
+      "spotifyUrl": "https://open.spotify.com/track/0SiywuOBRcynK0uKGWdCnn",
+      "duration": 294573,
+      "previewUrl": ""
+    },
+    {
+      "id": "6UelLqGlWMcVH1E5c4H7lY",
+      "name": "Watermelon Sugar",
+      "artist": "Harry Styles",
+      "album": "Fine Line",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27325180571abce9472f61bd722",
+      "playedAt": "2026-10-02T08:54:02.979Z",
+      "spotifyUrl": "https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY",
+      "duration": 173991,
+      "previewUrl": ""
+    },
+    {
+      "id": "6V53UDIOvJ8QNjRAQmvQQn",
+      "name": "Attack of the Killer Queen",
+      "artist": "Toby Fox, Lena Raine, Marcy Nabors",
+      "album": "DELTARUNE Chapter 2 (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e14fd3669881ed569497a76",
+      "playedAt": "2026-10-02T08:37:45.884Z",
+      "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
+      "duration": 120000,
+      "previewUrl": ""
+    },
+    {
+      "id": "587i4g5fwUDAdl5xTP7UtW",
+      "name": "Miserlou",
+      "artist": "Dick Dale & His Del-Tones",
+      "album": "Surfer's Choice",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273189c10c705d2967fc0f503f7",
+      "playedAt": "2026-10-02T08:35:47.844Z",
+      "spotifyUrl": "https://open.spotify.com/track/587i4g5fwUDAdl5xTP7UtW",
+      "duration": 137426,
+      "previewUrl": ""
+    },
+    {
+      "id": "23HUlzt20YuALl5Q2gWsKu",
+      "name": "Summer",
+      "artist": "Joe Hisaishi",
+      "album": "菊次郎の夏 (オリジナル・サウンドトラック)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732a0eb03b0b514e69ede808cb",
+      "playedAt": "2026-10-02T04:38:38.667Z",
+      "spotifyUrl": "https://open.spotify.com/track/23HUlzt20YuALl5Q2gWsKu",
+      "duration": 384026,
+      "previewUrl": ""
+    },
+    {
+      "id": "5VZn5Gsn2ckFJ2bmRo9GPe",
+      "name": "ルパン三世のテーマ - 「ルパン三世のテーマ'78」シングル・ヴァージョン",
+      "artist": "Yuji Ohno, ユー & ザ・エクスプロージョン・バンド",
+      "album": "ルパン三世 オリジナル・サウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d84206cdf9b755537f3123c8",
+      "playedAt": "2026-10-02T04:32:14.104Z",
+      "spotifyUrl": "https://open.spotify.com/track/5VZn5Gsn2ckFJ2bmRo9GPe",
+      "duration": 204626,
+      "previewUrl": ""
+    },
+    {
+      "id": "4LlCnZLrF6Ri7bK5gwrpG5",
+      "name": "呪われた海賊たち",
+      "artist": "Antoine Barry",
+      "album": "パイレーツ・オブ・カリビアン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27359bd349ad0b72ea53d9cfcee",
+      "playedAt": "2026-10-02T04:28:10.662Z",
+      "spotifyUrl": "https://open.spotify.com/track/4LlCnZLrF6Ri7bK5gwrpG5",
+      "duration": 94418,
+      "previewUrl": ""
+    },
+    {
+      "id": "08QaHlMPWuO5PUxjl61bXn",
+      "name": "He's a Pirate",
+      "artist": "Klaus Badelt",
+      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27338786c7492ac252797bb2648",
+      "playedAt": "2026-10-02T04:26:35.708Z",
+      "spotifyUrl": "https://open.spotify.com/track/08QaHlMPWuO5PUxjl61bXn",
+      "duration": 90426,
+      "previewUrl": ""
+    },
+    {
+      "id": "1FpXO7ehznN8Mh3sNfRd1r",
+      "name": "Oblivion",
+      "artist": "TheFatRat, Lola Blanc",
+      "album": "Oblivion",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
+      "playedAt": "2026-10-02T04:25:00.136Z",
+      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
+      "duration": 211935,
+      "previewUrl": ""
+    },
+    {
+      "id": "4IXpj0463g2HAjiDaMHLk9",
+      "name": "So Was Red",
+      "artist": "Thomas Newman, Tom Newton",
+      "album": "The Shawshank Redemption",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e710c1f5b228046932790031",
+      "playedAt": "2026-10-02T03:34:31.665Z",
+      "spotifyUrl": "https://open.spotify.com/track/4IXpj0463g2HAjiDaMHLk9",
+      "duration": 164493,
+      "previewUrl": ""
+    },
     {
       "id": "0Ab4eiURISCPq2ig7XPYcN",
       "name": "The Imperial March (Darth Vader's Theme)",
@@ -57,28 +189,6 @@
       "previewUrl": ""
     },
     {
-      "id": "4LlCnZLrF6Ri7bK5gwrpG5",
-      "name": "呪われた海賊たち",
-      "artist": "Antoine Barry",
-      "album": "パイレーツ・オブ・カリビアン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27359bd349ad0b72ea53d9cfcee",
-      "playedAt": "2026-10-01T08:55:58.900Z",
-      "spotifyUrl": "https://open.spotify.com/track/4LlCnZLrF6Ri7bK5gwrpG5",
-      "duration": 94418,
-      "previewUrl": ""
-    },
-    {
-      "id": "08QaHlMPWuO5PUxjl61bXn",
-      "name": "He's a Pirate",
-      "artist": "Klaus Badelt",
-      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27338786c7492ac252797bb2648",
-      "playedAt": "2026-10-01T08:51:39.597Z",
-      "spotifyUrl": "https://open.spotify.com/track/08QaHlMPWuO5PUxjl61bXn",
-      "duration": 90426,
-      "previewUrl": ""
-    },
-    {
       "id": "2stkLJ0JNcXkIRDNF3ld6c",
       "name": "You've Got a Friend in Me",
       "artist": "Randy Newman",
@@ -101,17 +211,6 @@
       "previewUrl": ""
     },
     {
-      "id": "6V53UDIOvJ8QNjRAQmvQQn",
-      "name": "Attack of the Killer Queen",
-      "artist": "Toby Fox, Lena Raine, Marcy Nabors",
-      "album": "DELTARUNE Chapter 2 (Original Game Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e14fd3669881ed569497a76",
-      "playedAt": "2026-10-01T08:41:08.664Z",
-      "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
-      "duration": 120000,
-      "previewUrl": ""
-    },
-    {
       "id": "30lXCrnKs5TJJOuSVwiQn1",
       "name": "Zoltraak",
       "artist": "Evan Call",
@@ -120,17 +219,6 @@
       "playedAt": "2026-10-01T08:35:18.300Z",
       "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
       "duration": 140664,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FpXO7ehznN8Mh3sNfRd1r",
-      "name": "Oblivion",
-      "artist": "TheFatRat, Lola Blanc",
-      "album": "Oblivion",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
-      "playedAt": "2026-10-01T08:30:17.773Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
-      "duration": 211935,
       "previewUrl": ""
     },
     {
@@ -241,94 +329,6 @@
       "playedAt": "2026-10-01T02:48:58.256Z",
       "spotifyUrl": "https://open.spotify.com/track/15X1ksqhe8cY1NlEZMl7X8",
       "duration": 180333,
-      "previewUrl": ""
-    },
-    {
-      "id": "39uLYYZytVUwcjgeYLI409",
-      "name": "Merry-Go-Round of Life - from 'Howl's Moving Castle'",
-      "artist": "Joe Hisaishi",
-      "album": "FREEDOM PIANO STORIES 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27333ea9fb3fd69bca55a015229",
-      "playedAt": "2026-10-01T02:45:57.415Z",
-      "spotifyUrl": "https://open.spotify.com/track/39uLYYZytVUwcjgeYLI409",
-      "duration": 311106,
-      "previewUrl": ""
-    },
-    {
-      "id": "0WjwAv3XSjztqqyD6Gw1CX",
-      "name": "風のとおり道（インストゥルメンタンル）",
-      "artist": "Joe Hisaishi",
-      "album": "となりのトトロ サウンドトラック集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ab4ac35f41f2c8b1e428b0f",
-      "playedAt": "2026-10-01T02:40:45.786Z",
-      "spotifyUrl": "https://open.spotify.com/track/0WjwAv3XSjztqqyD6Gw1CX",
-      "duration": 196760,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tE3p4vIwoqUZLkKF2PNeB",
-      "name": "Interstellar Main Theme (From \"Interstellar\")",
-      "artist": "Geek Music",
-      "album": "Interstellar Main Theme (From \"Interstellar\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f72550703b6302addfc9959",
-      "playedAt": "2026-10-01T02:37:28.509Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tE3p4vIwoqUZLkKF2PNeB",
-      "duration": 243209,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LtKpKOO0fyGBAbv761JCu",
-      "name": "Sunlight",
-      "artist": "TheFatRat, Phaera",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-10-01T02:20:00.427Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
-      "duration": 169952,
-      "previewUrl": ""
-    },
-    {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-10-01T00:51:14.330Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
-      "previewUrl": ""
-    },
-    {
-      "id": "6KFWubocLBhrLs31RpEdR9",
-      "name": "Location (feat. Burna Boy)",
-      "artist": "Dave, Burna Boy",
-      "album": "PSYCHODRAMA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273565f69a950084775df6a4e77",
-      "playedAt": "2026-10-01T00:46:16.016Z",
-      "spotifyUrl": "https://open.spotify.com/track/6KFWubocLBhrLs31RpEdR9",
-      "duration": 241293,
-      "previewUrl": ""
-    },
-    {
-      "id": "0aB0v4027ukVziUGwVGYpG",
-      "name": "tv off (feat. lefty gunplay)",
-      "artist": "Kendrick Lamar, Lefty Gunplay",
-      "album": "GNX",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2a0a166493a2bde5480a420",
-      "playedAt": "2026-10-01T00:40:03.380Z",
-      "spotifyUrl": "https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG",
-      "duration": 220690,
-      "previewUrl": ""
-    },
-    {
-      "id": "5HCyWlXZPP0y6Gqq8TgA20",
-      "name": "STAY (with Justin Bieber)",
-      "artist": "The Kid LAROI, Justin Bieber",
-      "album": "STAY (with Justin Bieber)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aed1660585c1e3c9ffb50b6a",
-      "playedAt": "2026-10-01T00:36:12.839Z",
-      "spotifyUrl": "https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20",
-      "duration": 141805,
       "previewUrl": ""
     }
   ],
