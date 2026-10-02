@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02T12:22:06.914Z",
+  "lastUpdated": "2026-10-02T22:05:49.761Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -365,7 +365,7 @@
           "description": "Reach Level 25",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/2162cee6a1a297e102e6ef7c5e60d936cbcc28a1.jpg",
           "unlockedAt": "2025-06-17T03:49:35.000Z",
-          "percent": 28.7
+          "percent": 28.6
         }
       ]
     },
@@ -380,7 +380,7 @@
           "description": "Anvil nightmares.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/688130/4c931ce4f52b3b8d9400c86b36b851498d2dca63.jpg",
           "unlockedAt": "2026-09-22T15:33:18.000Z",
-          "percent": 5.9
+          "percent": 6
         },
         {
           "name": "Map 3 Sightseeing",
@@ -438,14 +438,14 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/92b36c71d5eed910a58979f776c1d70a93ab117b.jpg",
           "unlockedAt": "2026-09-13T13:09:22.000Z",
-          "percent": 23.2
+          "percent": 23.1
         },
         {
           "name": "A Keen Sense of Spell",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
           "unlockedAt": "2026-09-12T08:21:27.000Z",
-          "percent": 71.8
+          "percent": 71.7
         },
         {
           "name": "Troll with the Punches",
@@ -467,14 +467,14 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 43.9
+          "percent": 43.8
         },
         {
           "name": "Kamura Amulet",
           "description": "A trinket given to new hunters who have proved themselves capable.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/01c4593add4173fdfdfcf8e50b6e99438c7895e8.jpg",
           "unlockedAt": "2023-07-11T08:07:02.000Z",
-          "percent": 87.3
+          "percent": 87.2
         }
       ]
     },
@@ -518,14 +518,14 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/e846657465466eb560951885e9c9547d824d7ac4.jpg",
           "unlockedAt": "2026-03-23T15:27:32.000Z",
-          "percent": 58.2
+          "percent": 58.1
         },
         {
           "name": "My Title, My Life",
           "description": "Earned any titles for your efforts yet? Me? Pfft. I don't need a title. I'm Jamie freakin' Siu!",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/0ea31f649ed4db04e0869390fc8038e936e40944.jpg",
           "unlockedAt": "2026-03-23T14:00:56.000Z",
-          "percent": 90.7
+          "percent": 90.6
         }
       ]
     }
