@@ -1,6 +1,127 @@
 {
-  "lastUpdated": "2026-10-02T11:32:56.175Z",
+  "lastUpdated": "2026-10-02T17:00:23.289Z",
   "tracks": [
+    {
+      "id": "5r7egnfTIQjaKSGREhIky9",
+      "name": "Formula 1 Theme",
+      "artist": "Brian Tyler",
+      "album": "Formula 1 Theme",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273873a7854fcfe9fbf1ea1923d",
+      "playedAt": "2026-10-02T13:29:46.437Z",
+      "spotifyUrl": "https://open.spotify.com/track/5r7egnfTIQjaKSGREhIky9",
+      "duration": 194351,
+      "previewUrl": ""
+    },
+    {
+      "id": "5pG8H6NpMISSR6fHfq701c",
+      "name": "Columbia Pictures - Cover Version",
+      "artist": "Cinescore",
+      "album": "The Film Studio Fanfare Collection",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
+      "playedAt": "2026-10-02T13:26:31.558Z",
+      "spotifyUrl": "https://open.spotify.com/track/5pG8H6NpMISSR6fHfq701c",
+      "duration": 24273,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vHEbPUFdhGmH0kMA0J39X",
+      "name": "Warner Bros. - Cover Version",
+      "artist": "Cinescore",
+      "album": "The Film Studio Fanfare Collection",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
+      "playedAt": "2026-10-02T13:26:06.747Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vHEbPUFdhGmH0kMA0J39X",
+      "duration": 17327,
+      "previewUrl": ""
+    },
+    {
+      "id": "4WNU8rNjMnp3NbrUF80aqT",
+      "name": "Walt Disney Pictures - Cover Version",
+      "artist": "Cinescore",
+      "album": "The Film Studio Fanfare Collection",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
+      "playedAt": "2026-10-02T13:25:48.897Z",
+      "spotifyUrl": "https://open.spotify.com/track/4WNU8rNjMnp3NbrUF80aqT",
+      "duration": 34289,
+      "previewUrl": ""
+    },
+    {
+      "id": "6ko9w38zHQYMC9zEtdU6vT",
+      "name": "Universal Studios Fanfare",
+      "artist": "Geek Music",
+      "album": "Universal Studios Fanfare",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735440552cf89e9ae5e354bf18",
+      "playedAt": "2026-10-02T13:25:14.080Z",
+      "spotifyUrl": "https://open.spotify.com/track/6ko9w38zHQYMC9zEtdU6vT",
+      "duration": 22880,
+      "previewUrl": ""
+    },
+    {
+      "id": "1OrSkn4lXO1cD1NaR7v2IG",
+      "name": "Universal Fanfare",
+      "artist": "The Minions",
+      "album": "Minions (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732491486e0c8c1df2323c2541",
+      "playedAt": "2026-10-02T13:24:50.659Z",
+      "spotifyUrl": "https://open.spotify.com/track/1OrSkn4lXO1cD1NaR7v2IG",
+      "duration": 32417,
+      "previewUrl": ""
+    },
+    {
+      "id": "4Z9n913mHKPWbsD0n5gEwF",
+      "name": "20th Century Fox Fanfare",
+      "artist": "Geek Music",
+      "album": "20th Century Fox Fanfare",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b850000d705e1d77408e60ec",
+      "playedAt": "2026-10-02T13:24:17.720Z",
+      "spotifyUrl": "https://open.spotify.com/track/4Z9n913mHKPWbsD0n5gEwF",
+      "duration": 58189,
+      "previewUrl": ""
+    },
+    {
+      "id": "7Dh47mPzcB9Yn55RoL6Iqw",
+      "name": "Man of Steel - Flight",
+      "artist": "Mathias Fritsche",
+      "album": "Man of Steel - Flight",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eef8becc0c2e721bd0b2cb06",
+      "playedAt": "2026-10-02T13:23:19.007Z",
+      "spotifyUrl": "https://open.spotify.com/track/7Dh47mPzcB9Yn55RoL6Iqw",
+      "duration": 282000,
+      "previewUrl": ""
+    },
+    {
+      "id": "00Y9r5SfbDdEjJhNg7laQr",
+      "name": "Top Gun Anthem - From \"Top Gun\" Original Soundtrack",
+      "artist": "Harold Faltermeyer, Steve Stevens",
+      "album": "Top Gun - Motion Picture Soundtrack (Special Expanded Edition)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8f8d696810d68ce774e3a2f",
+      "playedAt": "2026-10-02T13:18:36.482Z",
+      "spotifyUrl": "https://open.spotify.com/track/00Y9r5SfbDdEjJhNg7laQr",
+      "duration": 253333,
+      "previewUrl": ""
+    },
+    {
+      "id": "2Xtsv7BUMrNodQWH2JPOc0",
+      "name": "Caravan",
+      "artist": "John Wasson",
+      "album": "Whiplash (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fce4a71d3973d3bbb12e8d7",
+      "playedAt": "2026-10-02T13:14:22.608Z",
+      "spotifyUrl": "https://open.spotify.com/track/2Xtsv7BUMrNodQWH2JPOc0",
+      "duration": 555000,
+      "previewUrl": ""
+    },
+    {
+      "id": "0PH3OkM1QnIyb44VhFVbca",
+      "name": "BATTLE WITHOUT HONOR OR HUMANITY",
+      "artist": "HOTEI",
+      "album": "エレクトリック・サムライ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738068e6b8fdaefa1f2a1543ea",
+      "playedAt": "2026-10-02T13:05:07.083Z",
+      "spotifyUrl": "https://open.spotify.com/track/0PH3OkM1QnIyb44VhFVbca",
+      "duration": 149520,
+      "previewUrl": ""
+    },
     {
       "id": "68EkhVWIeULhHxcbi1QhzK",
       "name": "World's Smallest Violin",
@@ -208,127 +329,6 @@
       "playedAt": "2026-10-01T08:48:03.950Z",
       "spotifyUrl": "https://open.spotify.com/track/2IE9mgjkkk7Lfj9wgzz8MT",
       "duration": 374066,
-      "previewUrl": ""
-    },
-    {
-      "id": "30lXCrnKs5TJJOuSVwiQn1",
-      "name": "Zoltraak",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
-      "playedAt": "2026-10-01T08:35:18.300Z",
-      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
-      "duration": 140664,
-      "previewUrl": ""
-    },
-    {
-      "id": "1AKIi40li4kyJHQKOuF3Qz",
-      "name": "POSTERITY",
-      "artist": "Ludwig Göransson",
-      "album": "Tenet (Original Motion Picture Soundtrack) [Deluxe Edition]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737358257b7556ef64af569489",
-      "playedAt": "2026-10-01T03:37:58.635Z",
-      "spotifyUrl": "https://open.spotify.com/track/1AKIi40li4kyJHQKOuF3Qz",
-      "duration": 762216,
-      "previewUrl": ""
-    },
-    {
-      "id": "4VnDmjYCZkyeqeb0NIKqdA",
-      "name": "Can You Hear The Music",
-      "artist": "Ludwig Göransson",
-      "album": "Oppenheimer (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af634982d9b15de3c77f7dd9",
-      "playedAt": "2026-10-01T03:21:51.859Z",
-      "spotifyUrl": "https://open.spotify.com/track/4VnDmjYCZkyeqeb0NIKqdA",
-      "duration": 110160,
-      "previewUrl": ""
-    },
-    {
-      "id": "6NJQpFNkDCMaRBogIi9sOI",
-      "name": "Bellbottoms",
-      "artist": "The Jon Spencer Blues Explosion",
-      "album": "Orange",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cda41c43601ec82ed81fd3a",
-      "playedAt": "2026-10-01T03:20:01.169Z",
-      "spotifyUrl": "https://open.spotify.com/track/6NJQpFNkDCMaRBogIi9sOI",
-      "duration": 317986,
-      "previewUrl": ""
-    },
-    {
-      "id": "110uH4IxKOINJBWCy9J23k",
-      "name": "One Piece (1999) - Overtaken",
-      "artist": "Geek Music",
-      "album": "The Anime Collection Volume One",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
-      "playedAt": "2026-10-01T03:14:39.253Z",
-      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
-      "duration": 120212,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Pq2FCM8C2NphCy4m6UNBx",
-      "name": "A Storm Is Coming",
-      "artist": "Hans Zimmer",
-      "album": "The Dark Knight Rises (Original Motion Picture Soundtrack) [Deluxe Edition]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273203e47c555c8ef1285875d42",
-      "playedAt": "2026-10-01T03:12:38.519Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Pq2FCM8C2NphCy4m6UNBx",
-      "duration": 36914,
-      "previewUrl": ""
-    },
-    {
-      "id": "1n8NKQRg8LVHy7oUhUgbFF",
-      "name": "Hedwig's Theme",
-      "artist": "John Williams",
-      "album": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27313f982aa5c43146c3d2c1964",
-      "playedAt": "2026-10-01T03:07:26.513Z",
-      "spotifyUrl": "https://open.spotify.com/track/1n8NKQRg8LVHy7oUhUgbFF",
-      "duration": 309093,
-      "previewUrl": ""
-    },
-    {
-      "id": "2TZbQZXOuR8osP2AK8yYMN",
-      "name": "Theme From Jurassic Park",
-      "artist": "John Williams",
-      "album": "Jurassic Park",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27392f051ce3c585b5c2db21d52",
-      "playedAt": "2026-10-01T03:02:16.889Z",
-      "spotifyUrl": "https://open.spotify.com/track/2TZbQZXOuR8osP2AK8yYMN",
-      "duration": 207426,
-      "previewUrl": ""
-    },
-    {
-      "id": "5SXsXjVJCWeJuf7FHvgBYR",
-      "name": "The Avengers",
-      "artist": "Alan Silvestri",
-      "album": "The Avengers (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b0b9aaf0ef903add8f96ff6e",
-      "playedAt": "2026-10-01T02:58:40.606Z",
-      "spotifyUrl": "https://open.spotify.com/track/5SXsXjVJCWeJuf7FHvgBYR",
-      "duration": 123360,
-      "previewUrl": ""
-    },
-    {
-      "id": "6RxsExIM2y163Iy1Qst36S",
-      "name": "あの夏へ",
-      "artist": "Joe Hisaishi",
-      "album": "千と千尋の神隠し サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27326174e356765f36b1ba996be",
-      "playedAt": "2026-10-01T02:56:36.728Z",
-      "spotifyUrl": "https://open.spotify.com/track/6RxsExIM2y163Iy1Qst36S",
-      "duration": 189800,
-      "previewUrl": ""
-    },
-    {
-      "id": "15X1ksqhe8cY1NlEZMl7X8",
-      "name": "海の見える街",
-      "artist": "Joe Hisaishi",
-      "album": "魔女の宅急便 サントラ音楽集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273559ab67b95bf2a8c19fd151e",
-      "playedAt": "2026-10-01T02:48:58.256Z",
-      "spotifyUrl": "https://open.spotify.com/track/15X1ksqhe8cY1NlEZMl7X8",
-      "duration": 180333,
       "previewUrl": ""
     }
   ],
