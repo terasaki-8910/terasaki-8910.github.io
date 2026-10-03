@@ -28,25 +28,21 @@ function App() {
 
     lenisRef.current = lenis
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-
-    // Connect Lenis with GSAP ScrollTrigger
+    // Lenisの更新はgsap.tickerだけで回す。以前は自前のrequestAnimationFrame
+    // ループからも呼んでいて、1フレームにlenis.rafが2回走っていた。
+    // gsap.tickerに寄せると、ScrollTriggerと同じタイミングで更新される。
     lenis.on('scroll', ScrollTrigger.update)
 
-    gsap.ticker.add((time) => {
+    const update = (time) => {
       lenis.raf(time * 1000)
-    })
-
+    }
+    gsap.ticker.add(update)
     gsap.ticker.lagSmoothing(0)
 
     return () => {
+      // remove()には追加したのと同じ関数を渡さないと外れない
+      gsap.ticker.remove(update)
       lenis.destroy()
-      gsap.ticker.remove()
     }
   }, [])
 
