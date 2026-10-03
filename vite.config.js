@@ -19,7 +19,7 @@ function truncate(message) {
   return `${message.slice(0, MESSAGE_MAX_LENGTH - 1)}…`
 }
 
-// `git log --numstat --pretty=format:'COMMIT %H'` の出力を
+// `git log --numstat --pretty=format:"COMMIT %H"` の出力を
 // { fullHash: {insertions, deletions} } に集計する。
 // バイナリファイル(フォント等)はnumstatが "-\t-\tpath" を返すため除外する。
 // docs/ はビルド成果物(src/の再構築でしかない)なので変更量の集計対象外にする
@@ -69,7 +69,9 @@ function getCommitLog() {
       { encoding: 'utf-8', maxBuffer: 20 * 1024 * 1024 }
     )
     const statsRaw = execSync(
-      `git log -n ${COMMIT_LOG_FULL * 2} --numstat --pretty=format:'COMMIT %H'`,
+      // ダブルクォートにする(Windowsのcmd.exeはシングルクォートを引用符として
+      // 扱わず、git logが失敗してコミットログ全体が空になる)。
+      `git log -n ${COMMIT_LOG_FULL * 2} --numstat --pretty=format:"COMMIT %H"`,
       { encoding: 'utf-8', maxBuffer: 20 * 1024 * 1024 }
     )
     const statsByHash = parseNumstat(statsRaw)
