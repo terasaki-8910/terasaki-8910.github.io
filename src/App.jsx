@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from '@studio-freight/lenis'
 
 import Hero from './components/Hero'
-import AsciiGallery from './components/AsciiGallery'
 import Philosophy from './components/Philosophy'
 import ProjectShowcase from './components/ProjectShowcase'
 import Profile from './components/Profile'
@@ -60,7 +59,6 @@ function App() {
         {/* 自己紹介・経歴は先に見せる(Philosophyの直後)。作品紹介より
             人となりを先に置く方針。 */}
         <Profile />
-        <AsciiGallery limit={2} linkToFull />
         <ProjectShowcase />
         <CommitLog />
         <Footer />

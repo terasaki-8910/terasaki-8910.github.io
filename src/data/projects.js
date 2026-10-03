@@ -11,6 +11,18 @@
  * (本人判断、常時起動が要るBot/第三者サービス依存を避けた)。
  */
 export const projects = [
+  // 3D ASCIIはトップの独立セクションから、この一覧の1項目に移した。
+  // 専用ページ(/ascii/)は項目のリンク先として残している。
+  // ascii: true の項目は、ProjectShowcase.jsx が項目内にビューアを出す。
+  {
+    id: 6,
+    title: '3D ASCII',
+    description: '3Dモデルを文字に置き換えたproject',
+    tags: ['three.js', 'Canvas', 'React'],
+    link: '/ascii/',
+    ascii: true,
+    pageKey: 'ascii',
+  },
   {
     id: 2,
     title: 'Spotify Dashboard',

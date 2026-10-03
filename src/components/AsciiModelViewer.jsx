@@ -15,7 +15,17 @@ function getEffectiveTheme() {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
-export default function AsciiModelViewer({ modelUrl, name, credit, href, id }) {
+// frameClassName: 枠の高さ。未指定なら専用ページ用の大きさ。
+// showName: falseならモデル名の見出しを出さない(Projectsの項目内で使う)。
+export default function AsciiModelViewer({
+  modelUrl,
+  name,
+  credit,
+  href,
+  id,
+  showName = true,
+  frameClassName = 'h-[420px] md:h-[520px]',
+}) {
   const containerRef = useRef(null)
   const canvasRef = useRef(null)
   const [failed, setFailed] = useState(false)
@@ -178,15 +188,16 @@ export default function AsciiModelViewer({ modelUrl, name, credit, href, id }) {
 
   return (
     <div id={id} className="scroll-mt-24">
-      {href ? (
-        <a href={href} className="block text-2xl font-display text-ink hover:text-accent transition-colors mb-3">
-          {name}
-        </a>
-      ) : (
-        <h3 className="text-2xl font-display text-ink mb-3">{name}</h3>
-      )}
-      {/* このdivの高さ(h-[420px] md:h-[520px])が枠のサイズ。変更したい場合はここを編集する */}
-      <div ref={containerRef} className="w-full h-[420px] md:h-[520px]">
+      {showName &&
+        (href ? (
+          <a href={href} className="block text-2xl font-display text-ink hover:text-accent transition-colors mb-3">
+            {name}
+          </a>
+        ) : (
+          <h3 className="text-2xl font-display text-ink mb-3">{name}</h3>
+        ))}
+      {/* 枠のサイズはframeClassName(既定: h-[420px] md:h-[520px])で決まる */}
+      <div ref={containerRef} className={`w-full ${frameClassName}`}>
         <canvas ref={canvasRef} className="block" />
       </div>
       {credit && (
