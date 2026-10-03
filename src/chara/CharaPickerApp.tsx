@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import { AsciiHandCursor } from './components/AsciiHandCursor';
 import { loadCharaData } from './data/loadCharaData';
 import { useBayesInterview } from './hooks/useBayesInterview';
 import { useNoticeSeen } from './hooks/useNoticeSeen';
@@ -181,9 +180,5 @@ export default function CharaPickerApp() {
     );
   }
 
-  return (
-    <AsciiHandCursor>
-      <BayesFlow dataset={dataset} />
-    </AsciiHandCursor>
-  );
+  return <BayesFlow dataset={dataset} />;
 }
