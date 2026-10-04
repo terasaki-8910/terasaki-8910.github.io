@@ -120,7 +120,7 @@ function ActivityBlock({ day }) {
 
 function LoadingSkeleton() {
   return (
-    <div className="flex items-center gap-6 overflow-x-hidden px-4 py-12 md:px-12">
+    <div className="bk-content flex items-center gap-6 overflow-x-hidden px-4 py-12 md:px-12">
       {Array.from({ length: 10 }).map((_, i) => (
         <div
           key={i}
@@ -206,7 +206,7 @@ export default function GithubActivity() {
 
   if (error || !data || !data.days || data.days.length === 0) {
     return (
-      <div className="py-12 text-center font-mono text-sm text-muted">activity data unavailable</div>
+      <div className="bk-content py-12 text-center font-mono text-sm text-muted">activity data unavailable</div>
     )
   }
 
@@ -217,7 +217,7 @@ export default function GithubActivity() {
     // (実測で約550px)が何も表示されないまま長時間残る問題があった
     // (実機レビューで「余白が大きい」と指摘)。モバイルはpinしない単純な
     // 横スクロール帯のままなので対象外。
-    <section ref={containerRef} className="relative overflow-hidden md:flex md:min-h-screen md:items-center">
+    <section ref={containerRef} className="bk-content relative overflow-hidden md:flex md:min-h-screen md:items-center">
       <div
         ref={trackRef}
         className="flex items-center gap-6 overflow-x-auto px-4 py-16 will-change-transform md:overflow-x-visible md:px-12 md:py-24"
