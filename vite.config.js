@@ -207,6 +207,7 @@ export default defineConfig({
         movies: resolve(__dirname, 'movies/index.html'),
         dramas: resolve(__dirname, 'dramas/index.html'),
         anime: resolve(__dirname, 'anime/index.html'),
+        career: resolve(__dirname, 'career/index.html'),
         notfound: resolve(__dirname, '404.html'),
       },
       output: {

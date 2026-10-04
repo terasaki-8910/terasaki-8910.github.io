@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- 就活用のページ(decisions タスク 5)。いつもライトで開くため data-theme="light" を固定で書く。
+     最初の一色(src/fx/blockFx.js と head の差し込みスクリプト)も、この指定を見て白になる。 -->
+<html lang="ja" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 本体からはリンクせず、検索結果にも出さない。サイトマップにも載せない -->
+    <meta name="robots" content="noindex" />
+    <title>Career | 日野岡雅人</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+    <link rel="shortcut icon" href="/icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+
+    <!-- いつもライトで開くので、ブラウザの枠の色もライトだけ -->
+    <meta name="theme-color" content="#F9EC8E">
+
+    <!-- 初回ペイントの地の色(CSS の読み込みを待たずに、本体と同じ黄色にする) -->
+    <style>
+      html { background-color: #F9EC8E; }
+    </style>
+
+    <!-- テーマ切り替えボタンの見た目(本体と共通) -->
+    <link rel="stylesheet" href="/header-styles.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/career-main.jsx"></script>
+  </body>
+</html>
