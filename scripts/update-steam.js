@@ -28,8 +28,8 @@ async function steamGet(interfaceName, method, version, params) {
   return res.json();
 }
 
-// プレイヤー情報。realname/位置情報(loccountrycode等)はPIIなので取得しても
-// 出力には含めない(就活用ページで本名を伏せる方針と矛盾するため、2026-08-09本人確認)。
+// プレイヤー情報。realname/位置情報(loccountrycode等)は個人情報なので、取得しても
+// 出力(公開される steam-data.json)には含めない(2026-08-09本人確認)。
 async function getPlayerSummary() {
   console.log('👤 プレイヤー情報を取得中...');
   const data = await steamGet('ISteamUser', 'GetPlayerSummaries', 'v2', { steamids: STEAM_ID });
