@@ -5,7 +5,7 @@ import { SlSocialSpotify } from "react-icons/sl";
 export default function Footer() {
   return (
     <footer className="px-8 py-20 border-t border-line">
-      <div className="max-w-7xl mx-auto">
+      <div className="bk-content max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-display text-ink mb-2 whitespace-nowrap">@オーバーライド</h3>

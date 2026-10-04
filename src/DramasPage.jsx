@@ -13,7 +13,7 @@ export default function DramasPage() {
           <Header currentPage="dramas" />
         </div>
         <div className="pt-28 px-4 md:px-8 pb-24">
-          <div className="max-w-3xl mx-auto">
+          <div className="bk-content max-w-3xl mx-auto">
             <h1 className="text-massive font-medium font-display text-ink mb-2">観たドラマ</h1>
             <p className="text-muted mb-10">星評価とジャンル別の集計つき</p>
             <WatchedList dataFile="dramas.json" emptyMessage="まだ記録がありません。" />

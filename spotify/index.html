@@ -80,9 +80,26 @@
             --color-line: rgba(0, 0, 0, 0.12);
         }
 
+        /* 地の色は html に塗る(body に塗ると背景のマス目が隠れる。src/index.css と同じ理由) */
+        html {
+            background: var(--color-paper);
+        }
+
+        /* 中身のある所の背景(src/index.css の .bk-content と同じ。2026-10-04 本人指定の案 B) */
+        :root {
+            --bk-content-fill: color-mix(in srgb, var(--color-paper) 82%, transparent);
+        }
+        @supports not (color: color-mix(in srgb, red 50%, transparent)) {
+            :root {
+                --bk-content-fill: var(--color-paper);
+            }
+        }
+        .bk-content {
+            background-color: var(--bk-content-fill);
+        }
+
         body {
             font-family: 'Zen Kurenaido', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--color-paper);
             min-height: 100vh;
             color: var(--color-ink);
             overflow-x: hidden;
@@ -395,7 +412,7 @@
 
 
 
-    <div class="container">
+    <div class="container bk-content">
 
         <div class="header">
             <h1 class="title">最近再生した曲</h1>

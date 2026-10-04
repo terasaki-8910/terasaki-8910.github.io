@@ -17,7 +17,7 @@ export default function CharaPickerPage() {
           <Header currentPage="chara" />
         </div>
         <div className="pt-28 px-4 md:px-8 pb-24">
-          <div className="max-w-2xl mx-auto">
+          <div className="bk-content max-w-2xl mx-auto">
             <h1 className="text-massive font-medium font-display text-ink mb-2">
               理想の推しア◯ネイター
             </h1>

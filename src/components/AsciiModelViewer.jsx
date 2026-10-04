@@ -196,8 +196,9 @@ export default function AsciiModelViewer({
         ) : (
           <h3 className="text-2xl font-display text-ink mb-3">{name}</h3>
         ))}
-      {/* 枠のサイズはframeClassName(既定: h-[420px] md:h-[520px])で決まる */}
-      <div ref={containerRef} className={`w-full ${frameClassName}`}>
+      {/* 枠のサイズはframeClassName(既定: h-[420px] md:h-[520px])で決まる。
+          背景のマス目が文字と重ならないよう、枠の中は地の色で塗る */}
+      <div ref={containerRef} className={`w-full bg-paper ${frameClassName}`}>
         <canvas ref={canvasRef} className="block" />
       </div>
       {credit && (

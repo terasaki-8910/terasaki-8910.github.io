@@ -49,7 +49,7 @@ export default function Philosophy() {
       ref={sectionRef}
       className="min-h-screen flex items-center justify-center px-8 py-32"
     >
-      <div className="max-w-5xl">
+      <div className="bk-content max-w-5xl">
         <h2 className="text-massive font-medium font-display text-ink mb-16">
           Fuyuiro's Portfolio
         </h2>
