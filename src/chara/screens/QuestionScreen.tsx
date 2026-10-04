@@ -13,6 +13,14 @@ const TESTID_BY_CONFIDENCE: Record<Confidence, string> = {
 };
 
 /**
+ * ボタンに出す文言。開発元と共有の CONFIDENCE_LABEL（engine/questions.ts。同期対象なので
+ * こちらでは編集しない）のうち、unknown だけこのサイトでは「わからない」と出す。
+ * 案内画面の「答えにくい質問は『わからない』で構いません」と揃えるため（2026-10-04、本人指定）。
+ * 回答の意味と重み（0 = 推定を更新しない）は変えない。
+ */
+const ANSWER_LABEL: Record<Confidence, string> = { ...CONFIDENCE_LABEL, unknown: 'わからない' };
+
+/**
  * 1プローブ1画面・回答は常に5段階。「都度1問答えたら即座に次へ進む」一発アクション
  * 方式のため、選択永続状態や `aria-checked` は持たない（5つとも常に等価な操作ボタン）。
  */
@@ -48,7 +56,7 @@ export function QuestionScreen(props: {
             onClick={() => onAnswer(confidence)}
             className={`${OUTLINE_BUTTON} text-left`}
           >
-            {CONFIDENCE_LABEL[confidence]}
+            {ANSWER_LABEL[confidence]}
           </button>
         ))}
       </div>
