@@ -41,7 +41,7 @@ const VENV_PYTHON = path.join(ROOT, '.venv/bin/python3');
 const PYTHON = fs.existsSync(VENV_PYTHON) ? VENV_PYTHON : 'python3';
 
 /** ソースを走査して日本語文字を拾う対象。 */
-const SOURCE_GLOB_DIRS = ['src', 'index.html', 'ascii', 'spotify', 'gomi-tsukuba', 'chara-picker', '404.html'];
+const SOURCE_GLOB_DIRS = ['src', 'index.html', 'ascii', 'spotify', 'gomi-tsukuba', 'chara-picker', 'career', '404.html'];
 
 /**
  * データ(JSON)由来の表示文字。ソース走査に載らないのでここで明示する。
