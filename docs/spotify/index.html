@@ -478,6 +478,9 @@
         let spotifyController = null;
         let currentPlayingTrack = null;
         let iframeApiReady = false;
+        // 埋め込みが今再生中か(playback_update で知る)。止まっているときに pause() を呼ぶと、
+        // 埋め込みの中で「Cannot perform operation; no list was loaded.」のエラーになる
+        let spotifyIsPlaying = false;
 
         window.onSpotifyIframeApiReady = (IFrameAPI) => {
             iframeApiReady = true;
@@ -492,6 +495,9 @@
 
             const callback = (EmbedController) => {
                 spotifyController = EmbedController;
+                EmbedController.addListener('playback_update', (e) => {
+                    spotifyIsPlaying = Boolean(e && e.data && e.data.isPaused === false);
+                });
             };
 
             IFrameAPI.createController(element, options, callback);
@@ -503,9 +509,7 @@
 
         document.getElementById('spotify-iframe-close').addEventListener('click', () => {
             hideSpotifyIframe();
-            if (spotifyController) {
-                spotifyController.pause();
-            }
+            pauseIfPlaying();
             currentPlayingTrack = null;
             document.querySelectorAll('.track-card').forEach(card => updatePlayButton(card, false));
         });
@@ -528,7 +532,7 @@
         function playPreview(trackElement, track) {
             if (currentPlayingTrack === track.id) {
                 if (spotifyController) {
-                    spotifyController.pause();
+                    pauseIfPlaying();
                     hideSpotifyIframe();
                 }
                 currentPlayingTrack = null;
@@ -550,6 +554,8 @@
                 // setTimeoutを挟むと(特にSafari/iOSで)クリック起点のユーザー操作
                 // 由来という扱いが切れ、自動再生ポリシーに引っかかりやすくなるため、
                 // loadUriのコールバック内で即座にplay()を呼ぶ
+                // 別の曲を読み込むと、それまでの再生は終わる
+                spotifyIsPlaying = false;
                 spotifyController.loadUri(trackUri, () => {
                     spotifyController.play();
                     currentPlayingTrack = track.id;
@@ -558,6 +564,13 @@
 
             } catch (error) {
                 openInSpotify(track);
+            }
+        }
+
+        // 再生中のときだけ止める
+        function pauseIfPlaying() {
+            if (spotifyController && spotifyIsPlaying) {
+                spotifyController.pause();
             }
         }
 
