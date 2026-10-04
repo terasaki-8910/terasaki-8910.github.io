@@ -309,9 +309,9 @@
   }
 }
 
-/* スマホでは、角のボタンを指で押しやすい大きさ(44px)にそろえる */
+/* スマホでは、角のボタンを指で押しやすい大きさ(44px)にそろえる
+   (テーマ切り替えのボタンは、下の --theme-toggle-size で同じ 44px になる) */
 @media (max-width: 640px) {
-  .cosmic-header__theme-toggle,
   .cosmic-header__menu-trigger {
     width: 44px;
     height: 44px;
@@ -326,7 +326,19 @@
    画面幅で挙動が分かれていたが、「右下に移動したい」という指示を受けて
    常時position:fixedに統一した(2026-08-08)。ヘッダーの通常フローからは
    完全に外れるため、.cosmic-header__right-group内のどこに置いても見た目は
-   変わらない。 */
+   変わらない。
+   大きさは --theme-toggle-size で決める。以前はスマホの 44px の指定がこのルールより前にあり、
+   後ろの 45px に負けてスマホでも 45px のままだった(2026-10-04 に気づいて直した)。
+   Spotify ページは、プレイヤーの位置とページ下の余白をこの値から決めている(spotify/index.html)。 */
+:root {
+  --theme-toggle-size: 45px;
+}
+@media (max-width: 640px) {
+  :root {
+    --theme-toggle-size: 44px;
+  }
+}
+
 .cosmic-header__theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -336,8 +348,8 @@
   bottom: 1rem;
   right: 1rem;
   z-index: 1001;
-  width: 45px;
-  height: 45px;
+  width: var(--theme-toggle-size);
+  height: var(--theme-toggle-size);
   padding: 0;
   background: var(--header-box-bg);
   border: 1px solid var(--header-box-border);
