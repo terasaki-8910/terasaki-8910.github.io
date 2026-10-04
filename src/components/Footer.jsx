@@ -46,6 +46,17 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-line text-center text-muted text-sm">
           <p>© 2025 terasaki-8910.github.io | Built with React &amp; GSAP</p>
           <p className="mt-2">アイコン: 若狭フユ（イラスト: Yasson / 吉田夜世）</p>
+          {/* ヘッダーのメニューの魔人のランプ(Game Icons)は CC BY 3.0 なので、作者名とライセンスを書く */}
+          <p className="mt-2">
+            Magic lamp icon by Lorc (
+            <a href="https://game-icons.net" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-accent">
+              https://game-icons.net
+            </a>
+            ),{' '}
+            <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-accent">
+              CC BY 3.0
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -62,37 +62,51 @@
   display: block;
 }
 
-/* ヘッダーのベーススタイル。すりガラス(backdrop-filter)は、サイト本体から
-   既に一掃した「AI感のある装飾」の最後の生き残りだったため撤去し、
-   他セクションと同じ不透明な地の色に統一した。 */
+
+/* メニュー(マス目)の色。開いた行のマスは、ライトは白、ダークは白っぽい薄いピンク
+   (2026-10-04 本人指定。アイコンはどちらも濃い色)。
+   ボタンの記号(2×2 のマス)の左上は、ライトは白、ダークはピンクで塗る(decisions のヘッダー)。 */
+:root {
+  --menu-cell-on: #FFFFFF;
+  --menu-cell-ink: rgba(26, 26, 26, 0.9);
+  --menu-glyph-fill: #FFFFFF;
+  --menu-ink-on-accent: #1A1A1A;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --menu-cell-on: #F2C4C4;
+    --menu-cell-ink: #1A1A1A;
+    --menu-glyph-fill: #FAA0A0;
+  }
+}
+:root[data-theme="dark"] {
+  --menu-cell-on: #F2C4C4;
+  --menu-cell-ink: #1A1A1A;
+  --menu-glyph-fill: #FAA0A0;
+}
+:root[data-theme="light"] {
+  --menu-cell-on: #FFFFFF;
+  --menu-cell-ink: rgba(26, 26, 26, 0.9);
+  --menu-glyph-fill: #FFFFFF;
+}
+
+/* ヘッダーには帯(地の色と下線)を付けない。背景のマスを画面の上まで見せるため、
+   画面の幅に関係なく、左上にロゴ、右上にメニューのボタン、右下にテーマ切り替えだけを置く。
+   スクロールした本文がボタンの後ろを通ることは、本人に伝えたうえで決めた(decisions のヘッダー)。 */
 .cosmic-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-
-  background: var(--header-bg);
-
-  border-bottom: 1px solid var(--header-border);
-
-  padding: 1rem 0;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .cosmic-header__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  padding: 0;
 }
 
+/* 右側グループは中身を画面の角へ置くだけの空箱 */
 .cosmic-header__right-group {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  display: contents;
 }
 
 .cosmic-header__icon {
@@ -101,43 +115,211 @@
   flex-shrink: 0;
 }
 
-.cosmic-header__home-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  object-fit: cover;
+/* 左上のロゴ。トップの題字「@オーバーライド」と同じクラフト明朝・同じ配色(ピンクの字に黒い縁)。
+   縁の太さは題字と同じ比率(題字は最大 6rem で縁 6px なので、文字の大きさの 1/16)。
+   代わりの書体は使わない: 専用の名前で読み込み、読み込むまでは字を出さない(font-display: block)。 */
+@font-face {
+  font-family: 'Craft Mincho Logo';
+  src: url('/fonts/craft-mincho.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
 }
 
-/* Homeリンクスタイル。テーマ切替・Spotifyと同じ「中性の枠線を持つ箱」に
-   揃え、他の要素とバラバラだった見た目を統一している。 */
-.cosmic-header__home-link {
+.cosmic-header__logo {
+  --logo-size: 28px;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: var(--header-text);
-  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 1.125rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  position: relative;
-  box-sizing: border-box;
   height: 45px;
+  font-family: 'Craft Mincho Logo';
+  font-size: var(--logo-size);
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #FAA0A0;
+  -webkit-text-stroke: calc(var(--logo-size) / 16) #000;
+  paint-order: stroke fill;
+}
+
+.cosmic-header__logo:focus-visible {
+  outline: 2px solid var(--header-accent);
+  outline-offset: 4px;
+}
+
+/* トップでは大きな題字と重なるので出さない */
+.cosmic-header__logo--hidden {
+  display: none;
+}
+
+/* 右上のメニュー(ProjectMenu.jsx / src/fx/projectMenu.js / src/data/projectMenuMarkup.js)。
+   背景のマス目と同じ部品の見た目: 1行は 40px、左端の 40px のマスにアイコン、右に項目名。
+   枠はサイトのテーマに合わせる(ライトは黄色の地、ダークは黒の地に細い線)。 */
+.cosmic-header__menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+}
+
+.cosmic-header__menu-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  padding: 0;
   background: var(--header-box-bg);
   border: 1px solid var(--header-box-border);
   border-radius: 4px;
-  transition: border-color 0.2s ease, color 0.2s ease;
-  padding: 0 1rem;
+  color: var(--header-text);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
 }
 
-.cosmic-header__home-link:hover {
-  color: var(--header-accent);
+.cosmic-header__menu-trigger:hover,
+.cosmic-header__menu-trigger[aria-expanded="true"] {
   border-color: var(--header-accent);
 }
 
-.cosmic-header__home-text {
-  position: relative;
-  display: inline-block;
+.cosmic-header__menu-trigger:focus-visible {
+  outline: 2px solid var(--header-accent);
+  outline-offset: 2px;
+}
+
+/* ボタンの記号: 2×2 のマス(左上だけ塗る) */
+.cosmic-header__menu-glyph {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+}
+
+.cosmic-header__menu-glyph-fill {
+  fill: var(--menu-glyph-fill);
+  stroke: none;
+}
+
+.cosmic-header__menu-panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 1002;
+  width: 264px;
+  box-sizing: border-box;
+  background: var(--header-bg);
+  border: 1px solid var(--header-box-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cosmic-header__menu-panel[hidden] {
+  display: none;
+}
+
+.cosmic-header__menu-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  text-decoration: none;
+  color: var(--header-text);
+  font-family: 'Zen Kurenaido', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.cosmic-header__menu-item:focus-visible {
+  outline: 2px solid var(--header-accent);
+  outline-offset: -2px;
+}
+
+/* 左端の 40px のマス。開くと上の行から順に白く(ダークは白っぽい薄いピンクに)なる */
+.cosmic-header__menu-cell {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  color: var(--menu-cell-ink);
+  background: transparent;
+  transition: background-color 220ms ease-out;
+}
+
+.cosmic-header__menu-cell svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 項目名は、マスより少し遅れて出る */
+.cosmic-header__menu-label {
+  padding: 0 0.9rem 0 0.75rem;
+  opacity: 0;
+  transition: opacity 160ms ease-out;
+}
+
+.cosmic-header__menu-panel[data-phase="open"] .cosmic-header__menu-cell {
+  background: var(--menu-cell-on);
+  transition-delay: calc(var(--i) * 60ms);
+}
+
+.cosmic-header__menu-panel[data-phase="open"] .cosmic-header__menu-label {
+  opacity: 1;
+  transition-delay: calc(var(--i) * 60ms + 120ms);
+}
+
+/* 閉じるときは、下の行から順にマスが元に戻る(項目名も同じ順で消える) */
+.cosmic-header__menu-panel[data-phase="closing"] .cosmic-header__menu-cell {
+  transition-delay: calc((var(--n) - 1 - var(--i)) * 45ms);
+}
+
+.cosmic-header__menu-panel[data-phase="closing"] .cosmic-header__menu-label {
+  transition-delay: calc((var(--n) - 1 - var(--i)) * 45ms);
+}
+
+/* カーソルを乗せた行と、今いるページの行は、マスをピンクにする(アイコンは濃い色で読めるように) */
+.cosmic-header__menu-panel[data-phase="open"] a.cosmic-header__menu-item:hover .cosmic-header__menu-cell,
+.cosmic-header__menu-panel[data-phase="open"] a.cosmic-header__menu-item:focus-visible .cosmic-header__menu-cell {
+  background: var(--header-accent);
+  color: var(--menu-ink-on-accent);
+  transition-delay: 0ms;
+  transition-duration: 120ms;
+}
+
+.cosmic-header__menu-panel[data-phase="open"] .cosmic-header__menu-item--current .cosmic-header__menu-cell {
+  background: var(--header-accent);
+  color: var(--menu-ink-on-accent);
+}
+
+/* 今いるページの行は押せない */
+.cosmic-header__menu-item--current {
+  cursor: default;
+}
+
+/* 端末で動きを減らす設定なら、動きなしで開閉する(src/fx/projectMenu.js も同じ分岐を持つ) */
+@media (prefers-reduced-motion: reduce) {
+  .cosmic-header__menu-cell,
+  .cosmic-header__menu-label {
+    transition: none !important;
+  }
+}
+
+/* スマホでは、角のボタンを指で押しやすい大きさ(44px)にそろえる */
+@media (max-width: 640px) {
+  .cosmic-header__theme-toggle,
+  .cosmic-header__menu-trigger {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cosmic-header__logo {
+    height: 44px;
+  }
 }
 
 /* テーマ切替ボタン。以前はヘッダー内(デスクトップ)/モバイルのみ右下固定と
@@ -167,265 +349,4 @@
 
 .cosmic-header__theme-toggle:hover {
   border-color: var(--header-accent);
-}
-
-/* プロジェクトメニュー(ProjectMenu.jsx)。「コマンドパレット」演出
-   (本人承認、2026-08-08。破り取ったノート風/カードの山札風と3案並べて
-   選んでもらった)。枠がクイッと開く→コマンド行がタイプされる→一覧が
-   上から順に印字される。閉じる時は下の行から順に消えて、最後に1本の
-   線へ折り畳まれる。ページのライト/ダークテーマには従わず常時ダーク基調の
-   「端末」として固定する(色そのものはこのサイトのaccentトークンを使い、
-   ありがちな緑ネオン端末にはしない)。 */
-.cosmic-header__menu {
-  position: relative;
-  --menu-bg: #161616;
-  --menu-border: #333333;
-  --menu-text: #e8e8e8;
-  --menu-text-dim: #999999;
-}
-
-.cosmic-header__menu-trigger {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 45px;
-  height: 45px;
-  padding: 0;
-  background: var(--header-box-bg);
-  border: 1px solid var(--header-box-border);
-  border-radius: 4px;
-  color: var(--header-text);
-  cursor: pointer;
-  transition: border-color 0.2s ease;
-}
-
-.cosmic-header__menu-trigger:hover,
-.cosmic-header__menu-trigger[aria-expanded="true"] {
-  border-color: var(--header-accent);
-}
-
-.cosmic-header__menu-trigger-glyph {
-  font-family: 'Fira Mono', 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-.cosmic-header__menu-panel {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
-  z-index: 1002;
-  width: 280px;
-  box-sizing: border-box;
-  background: var(--menu-bg);
-  border: 1px solid var(--menu-border);
-  border-radius: 4px;
-  padding: 0.6rem 0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  transform-origin: top;
-  transform: scaleY(0);
-  opacity: 0;
-  transition: transform 120ms cubic-bezier(0.22, 1, 0.36, 1), opacity 100ms ease-out;
-}
-
-.cosmic-header__menu-panel--opening,
-.cosmic-header__menu-panel--typing,
-.cosmic-header__menu-panel--open {
-  transform: scaleY(1);
-  opacity: 1;
-}
-
-.cosmic-header__menu-panel--closing {
-  transform: scaleY(0);
-  opacity: 0;
-  transition: transform 60ms ease-in, opacity 50ms ease-in;
-  transition-delay: var(--collapse-delay, 0ms);
-}
-
-.cosmic-header__menu-cmdline {
-  display: flex;
-  align-items: center;
-  padding: 0 0.9rem 0.5rem;
-  margin-bottom: 0.4rem;
-  border-bottom: 1px solid var(--menu-border);
-  font-family: 'Fira Mono', 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 0.78rem;
-  color: var(--menu-text-dim);
-  white-space: pre;
-}
-
-.cosmic-header__menu-cursor {
-  color: var(--header-accent);
-  animation: cosmicMenuCursorBlink 900ms step-end infinite;
-}
-
-@keyframes cosmicMenuCursorBlink {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0; }
-}
-
-.cosmic-header__menu-rows {
-  display: flex;
-  flex-direction: column;
-}
-
-.cosmic-header__menu-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.9rem;
-  text-decoration: none;
-  font-family: 'Fira Mono', 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 0.82rem;
-  color: var(--menu-text);
-  white-space: nowrap;
-  opacity: 0;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-
-.cosmic-header__menu-item:hover {
-  color: var(--header-accent);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.cosmic-header__menu-item--active {
-  color: var(--header-accent);
-  pointer-events: none;
-}
-
-.cosmic-header__menu-item--pending {
-  opacity: 0;
-}
-
-.cosmic-header__menu-item--enter {
-  animation: cosmicMenuRowEnter 90ms ease-out both;
-}
-
-.cosmic-header__menu-item--exit {
-  animation: cosmicMenuRowExit 60ms ease-in both;
-}
-
-@keyframes cosmicMenuRowEnter {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes cosmicMenuRowExit {
-  from { opacity: 1; transform: translateY(0); }
-  to { opacity: 0; transform: translateY(-3px); }
-}
-
-.cosmic-header__menu-item-prompt {
-  color: var(--header-accent);
-  flex-shrink: 0;
-}
-
-.cosmic-header__menu-item-note {
-  color: var(--menu-text-dim);
-  margin-left: 0.15rem;
-}
-
-.cosmic-header__menu-item-dot {
-  color: var(--header-accent);
-  margin-left: auto;
-  font-size: 0.6rem;
-}
-
-/* 動きを抑えたい設定では、開閉の演出(枠のスケール・タイプライター・行の
-   段階アニメーション)を全て即時表示にする。ProjectMenu.jsx側もJSで
-   同じ分岐を持つが、CSSの方はJSの分岐漏れに関わらず必ず効く保険。 */
-@media (prefers-reduced-motion: reduce) {
-  .cosmic-header__menu-panel,
-  .cosmic-header__menu-item {
-    transition: none !important;
-    animation: none !important;
-  }
-  .cosmic-header__menu-item--pending,
-  .cosmic-header__menu-item--enter,
-  .cosmic-header__menu-item--exit {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-/* レスポンシブ対応(769px〜768px幅の微調整) */
-@media (max-width: 768px) and (min-width: 641px) {
-  .cosmic-header__container {
-    padding: 0 1rem;
-  }
-
-  .cosmic-header__home-text {
-    font-size: 1rem;
-  }
-}
-
-/* モバイル(640px以下): sasukeharaguchi.com型に、単一の横並びバーではなく
-   独立した小さな箱を画面の角に分散配置する。Home=左上、メニュー=右上、
-   テーマ切替=右下(テーマ切替は2026-08-08以降デスクトップも右下固定なので
-   ここでの再定義は不要になった)。Header.jsxのJSX構造(<a>1本)は変更せず、
-   position:fixedで子要素だけを個別に画面角へ逃がす -- scripts/sync-header.jsが
-   classNameを正規表現で直接パターンマッチしているため(sync-header.js内)、
-   JSXは触らない。 */
-@media (max-width: 640px) {
-  .cosmic-header {
-    background: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-bottom: none;
-    padding: 0;
-  }
-
-  .cosmic-header__container {
-    padding: 0;
-    display: block;
-  }
-
-  .cosmic-header__home-link {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1001;
-    min-height: 44px;
-    min-width: 44px;
-    background: var(--header-box-bg);
-    border: 1px solid var(--header-box-border);
-    border-radius: 4px;
-  }
-
-  /* メニューラベルと同じ理由でモバイルはアイコンのみにする */
-  .cosmic-header__home-text {
-    display: none;
-  }
-
-  /* 右側グループも中身だけ角へ逃がすための空箱にする */
-  .cosmic-header__right-group {
-    display: contents;
-  }
-
-  .cosmic-header__theme-toggle {
-    width: 44px;
-    height: 44px;
-  }
-
-  .cosmic-header__menu {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1001;
-  }
-
-  .cosmic-header__menu-trigger {
-    width: 44px;
-    height: 44px;
-  }
-}
-
-/* アクティブ状態のスタイル */
-.cosmic-header__home-link--active {
-  color: var(--header-accent);
-  border-color: var(--header-accent);
-  background: var(--header-accent-dim);
-  pointer-events: none; /* 現在ページなのでクリック不可 */
 }

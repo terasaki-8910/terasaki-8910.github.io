@@ -1,43 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { projects } from '../src/data/projects.js';
+import { renderProjectMenu } from '../src/data/projectMenuMarkup.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
- * ProjectMenu.jsx(React)の静的HTML版。spotify/index.htmlはReactの状態を
- * 持てないため、開閉はvanilla JS(このファイル末尾のscriptタグ内、
- * #project-menu-trigger/#project-menu-panel)で再現する。
- * src/data/projects.js の一覧を変更したらここも手動で合わせること。
+ * ProjectMenu.jsx(React)の静的HTML版。React のページと同じ関数
+ * (src/data/projectMenuMarkup.js)で、src/data/projects.js から作る。開閉の動きも
+ * React のページと同じ src/fx/projectMenu.js を、spotify/index.html の
+ * <script type="module" src="/src/fx/projectMenuStatic.js"> が読み込む。
+ * 静的ページは currentPage='spotify' 固定(Spotify の行が「今いるページ」になる)。
  */
-const STATIC_PROJECT_MENU_HTML = `<div class="cosmic-header__menu">
-    <button type="button" id="project-menu-trigger" class="cosmic-header__menu-trigger" aria-haspopup="true" aria-expanded="false" aria-label="プロジェクトメニュー">
-    <span class="cosmic-header__menu-trigger-glyph">&gt;_</span>
-    </button>
-    <div id="project-menu-panel" class="cosmic-header__menu-panel" role="menu" hidden>
-    <div class="cosmic-header__menu-cmdline">
-    <span id="project-menu-cmdtext"></span><span class="cosmic-header__menu-cursor" aria-hidden="true">█</span>
-    </div>
-    <div class="cosmic-header__menu-rows" id="project-menu-rows">
-    <a href="/ascii/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
-    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>3D ASCII</span>
-    </a>
-    <a href="/spotify/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--active cosmic-header__menu-item--pending">
-    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>Spotify Dashboard</span><span class="cosmic-header__menu-item-note">♪</span><span class="cosmic-header__menu-item-dot" aria-hidden="true">●</span>
-    </a>
-    <a href="/gomi-tsukuba/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
-    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>Tsukuba Gomi Calendar</span>
-    </a>
-    <a href="/chara-picker/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
-    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>理想の推しア◯ネイター</span>
-    </a>
-    <a href="/gaming-archive/" role="menuitem" class="cosmic-header__menu-item cosmic-header__menu-item--pending">
-    <span class="cosmic-header__menu-item-prompt">&gt;</span><span>Gaming Archive</span>
-    </a>
-    </div>
-    </div>
-    </div>`;
+const STATIC_PROJECT_MENU_HTML = `<div class="cosmic-header__menu">${renderProjectMenu(projects, 'spotify')}</div>`;
 
 /**
  * ヘッダーコンポーネントを自動同期するスクリプト
@@ -88,21 +65,14 @@ class HeaderSyncer {
 
     // Spotifyページ用のHTMLを直接構築（currentPage='spotify'固定）
     // テンプレートリテラル内の条件分岐を解決
-    jsx = jsx.replace(/className=\{`cosmic-header__home-link \${currentPage === 'home' \? 'cosmic-header__home-link--active' : ''}`\}/g, 'class="cosmic-header__home-link"');
+    // 左上のロゴ: Spotify ページはトップではないので、常に出す
+    jsx = jsx.replace(/className=\{`cosmic-header__logo \${currentPage === 'home' \? 'cosmic-header__logo--hidden' : ''}`\}/g, 'class="cosmic-header__logo"');
 
     // target属性を処理
     jsx = jsx.replace(/target=\{currentPage === 'spotify' \? '_self' : '_blank'\}/g, 'target="_self"');
 
-    // <ProjectMenu currentPage={currentPage} /> はReactコンポーネント。
-    // 下の汎用「{...}を消す」置換にそのままかけると壊れたタグ
-    // (<ProjectMenu  />、ブラウザは未知要素として無視するだけで何も
-    // 表示されない)が出力されてしまう。spotify/index.htmlはReactの状態を
-    // 持てない静的ページなので、開閉挙動はvanilla JS側で別途実装している
-    // (このファイル末尾のscriptタグ、#project-menu-trigger/#project-menu-panel)。
-    // ここではそのvanilla JSが操作する対象と同じ構造の静的マークアップに
-    // 置き換える(currentPage='spotify'固定なのでSpotify項目をactive表示に
-    // 決め打ちする)。src/data/projects.js の内容を変更したら、この
-    // STATIC_PROJECT_MENU_HTML も手動で追従させること(自動生成ではない)。
+    // <ProjectMenu currentPage={currentPage} /> はReactコンポーネント。下の汎用「{...}を消す」
+    // 置換にそのままかけると壊れたタグになるので、同じマークアップの静的HTMLに置き換える。
     jsx = jsx.replace(/<ProjectMenu[^/]*\/>/, STATIC_PROJECT_MENU_HTML);
 
     // className → class
