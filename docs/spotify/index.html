@@ -124,10 +124,12 @@
             overflow-x: hidden;
         }
 
+        /* 下の余白は、一番下の行(アイコンの表記)が右下のテーマ切り替えのボタンに
+           隠れない分だけとる(ボタンの下 1rem + ボタン + すき間 1rem) */
         .container {
             max-width: 720px;
             margin: 0 auto;
-            padding: 100px 2rem 4rem;
+            padding: 100px 2rem calc(1rem + var(--theme-toggle-size, 45px) + 1rem);
         }
 
         .header {
@@ -246,11 +248,13 @@
         /* Spotify iFrame Container。Spotify公式の埋め込み高さは3段階
            (80=コンパクトバー/152=中間/352=フルプレイヤー+アルバム画像)。
            以前は380pxでフルプレイヤー相当だったが、場所を取りすぎるとの
-           指摘でコンパクトバー(80px)に変更した(本人指定、2026-08-08)。 */
+           指摘でコンパクトバー(80px)に変更した(本人指定、2026-08-08)。
+           右下に固定したテーマ切り替えのボタンと重なっていたので、ボタンの 8px 左に、
+           下をそろえて出す(2026-10-04 本人選択)。ボタンの大きさは Header.css の --theme-toggle-size。 */
         #spotify-iframe-container {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 1rem;
+            right: calc(1rem + var(--theme-toggle-size, 45px) + 8px);
             width: 300px;
             height: 80px;
             z-index: 1000;
@@ -295,7 +299,7 @@
 
         @media (max-width: 768px) {
             .container {
-                padding: 80px 1.5rem 3rem;
+                padding: 80px 1.5rem calc(1rem + var(--theme-toggle-size, 45px) + 1rem);
             }
 
             .title {
@@ -343,6 +347,8 @@
     </div>
     </div>
     </header>
+
+
 
 
 
