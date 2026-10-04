@@ -206,11 +206,14 @@
     @apply antialiased;
   }
 
+  /* 地の色は body ではなく html に塗る。body に不透明な背景があると、その下(z-index:-1)
+     に置いた背景のマス目(src/fx/blockFx.js)が隠れるため。見た目は変わらない。 */
   body {
-    @apply bg-paper text-ink overflow-x-hidden font-sans;
+    @apply text-ink overflow-x-hidden font-sans;
   }
 
   html {
+    @apply bg-paper;
     scroll-behavior: auto;
   }
 
@@ -218,4 +221,20 @@
     outline: 2px solid theme('colors.accent');
     outline-offset: 2px;
   }
+}
+
+/* 中身のある所の背景(背景のマス目と組み合わせる。2026-10-04 本人指定の案 B)。
+   中身の箱(.bk-content)に地の色を 82% の濃さでかぶせ、後ろのマスをうっすら残す。
+   左右の端は src/fx/blockFx.js が 40px の線にそろえる(box-shadow で同じ色を広げる)。 */
+:root {
+  --bk-content-fill: color-mix(in srgb, var(--color-paper) 82%, transparent);
+}
+@supports not (color: color-mix(in srgb, red 50%, transparent)) {
+  /* color-mix に未対応のブラウザでは、地の色で塗る(後ろのマスは見えなくなる) */
+  :root {
+    --bk-content-fill: var(--color-paper);
+  }
+}
+.bk-content {
+  background-color: var(--bk-content-fill);
 }

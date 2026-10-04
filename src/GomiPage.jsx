@@ -13,7 +13,7 @@ export default function GomiPage() {
           <Header currentPage="gomi" />
         </div>
         <div className="pt-28 px-4 md:px-8 pb-24">
-          <div className="max-w-6xl mx-auto">
+          <div className="bk-content max-w-6xl mx-auto">
             <h1 className="text-massive font-medium font-display text-ink mb-2">
               ごみ収集カレンダー
             </h1>

@@ -312,7 +312,7 @@ export default function CommitLog() {
           メッセージ+変更量バーの5列は3xl(768px)だと典型的な内容でも横スクロールが
           要る幅になってしまうため、デスクトップでは収まりやすい4xlへ広げる。
           390px等の狭い画面では引き続きoverflow-x-autoが効く。 */}
-      <div className="max-w-4xl mx-auto">
+      <div className="bk-content max-w-4xl mx-auto">
         <h2 className="text-lg font-display text-ink mb-4">更新履歴</h2>
 
         <div className="overflow-x-auto">

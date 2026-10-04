@@ -32,7 +32,7 @@ export default function Hero() {
           <Header currentPage="home" />
         </div>
 
-        <div ref={contentRef} className="text-center max-w-4xl mx-auto w-full min-w-0">
+        <div ref={contentRef} className="bk-content text-center max-w-4xl mx-auto w-full min-w-0">
           {/* サイト名。地の色(#F9EC8E)の出典であるAlicemerix「オーバーライド」に由来
               (index.css参照)。旧「@Override」(Javaのアノテーション由来)は英字単体で
               検索に埋もれる上、既存の英語ワードそのものだったため改めた。カタカナに

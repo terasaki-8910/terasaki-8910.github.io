@@ -11,7 +11,7 @@ export default function AsciiGallery({ limit, linkToFull = false }) {
 
   return (
     <section className="px-8 py-32">
-      <div className="max-w-4xl mx-auto">
+      <div className="bk-content max-w-4xl mx-auto">
         <h2 className="text-massive font-medium font-display text-ink mb-12">
           {linkToFull ? (
             <a href="/ascii/" className="hover:text-accent transition-colors">

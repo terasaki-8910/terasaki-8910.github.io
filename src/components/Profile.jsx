@@ -73,7 +73,7 @@ export default function Profile() {
 
   return (
     <section ref={sectionRef} className="px-8 py-32">
-      <div className="max-w-5xl mx-auto">
+      <div className="bk-content max-w-5xl mx-auto">
         <h2 className="text-massive font-medium font-display text-ink mb-20">Journey</h2>
 
         {/* PC(md以上)は左の列に「自己紹介 → 学歴・経歴」、右の列に My Skills を置く。

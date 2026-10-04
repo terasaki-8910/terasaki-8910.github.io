@@ -33,7 +33,7 @@ export default function ProjectShowcase() {
 
   return (
     <section ref={sectionRef} className="px-8 py-32">
-      <div className="max-w-4xl mx-auto">
+      <div className="bk-content max-w-4xl mx-auto">
         <h2 className="text-massive font-medium font-display text-ink mb-20">Projects</h2>
 
         <div className="border-t border-line">

@@ -13,7 +13,7 @@ export default function GamingArchivePage() {
           <Header currentPage="gaming" />
         </div>
         <div className="pt-28 px-4 md:px-8 pb-24">
-          <div className="max-w-4xl mx-auto">
+          <div className="bk-content max-w-4xl mx-auto">
             <h1 className="text-massive font-medium font-display text-ink mb-2">Gaming Archive</h1>
             <p className="text-muted mb-10">お気に入りのゲームコレクション — Steam連携</p>
             <GamingArchive />
