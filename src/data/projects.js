@@ -2,6 +2,8 @@
  * プロジェクト一覧。ProjectShowcase.jsx(トップページのカード表示)と
  * ProjectMenu.jsx(ヘッダー右上のメニュー)の両方から参照する単一の情報源。
  *
+ * icon はヘッダーのメニューの行に出すアイコン(src/data/menuIcons.js のキー)。
+ *
  * pageKeyはHeader.jsxのcurrentPageプロパティと対応させる(そのページに
  * いる間はメニュー内の自分の項目をactive表示にするため)。専用ページを
  * 持たないプロジェクトはnull。
@@ -22,6 +24,7 @@ export const projects = [
     link: '/ascii/',
     ascii: true,
     pageKey: 'ascii',
+    icon: 'palette',
   },
   {
     id: 2,
@@ -31,6 +34,7 @@ export const projects = [
     link: '/spotify/',
     spotify: true,
     pageKey: 'spotify',
+    icon: 'musicNotes',
   },
   {
     id: 4,
@@ -40,6 +44,7 @@ export const projects = [
     link: '/gomi-tsukuba/',
     gomi: true,
     pageKey: 'gomi',
+    icon: 'trash',
   },
   {
     id: 5,
@@ -49,6 +54,7 @@ export const projects = [
     link: '/chara-picker/',
     charaPicker: true,
     pageKey: 'chara',
+    icon: 'magicLamp',
   },
   {
     id: 3,
@@ -58,5 +64,6 @@ export const projects = [
     link: '/gaming-archive/',
     gaming: true,
     pageKey: 'gaming',
+    icon: 'gameController',
   },
 ]

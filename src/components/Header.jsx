@@ -27,13 +27,12 @@ const Header = ({ currentPage = 'home' }) => {
   return (
     <header className="cosmic-header">
       <div className="cosmic-header__container">
-        {/* 左側: Homeリンク */}
+        {/* 左上: トップの題字の小さなロゴ。押すとトップへ。トップでは大きな題字と重なるので出さない */}
         <a
           href="/"
-          className={`cosmic-header__home-link ${currentPage === 'home' ? 'cosmic-header__home-link--active' : ''}`}
+          className={`cosmic-header__logo ${currentPage === 'home' ? 'cosmic-header__logo--hidden' : ''}`}
         >
-          <img src="/icons/home-avatar.png" alt="" className="cosmic-header__icon cosmic-header__home-icon" />
-          <span className="cosmic-header__home-text">Home</span>
+          @オーバーライド
         </a>
 
         {/* 右側: テーマ切替「CSS側で右下に固定」とプロジェクトメニュー */}
