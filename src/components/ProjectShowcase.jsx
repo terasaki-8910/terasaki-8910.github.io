@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SpotifyRecentTracks from './SpotifyRecentTracks'
 import HomeGomiPreview from './HomeGomiPreview'
 import HomeCharaOmakase from './HomeCharaOmakase'
+import AsciiModelViewer from './AsciiModelViewer'
+import { ASCII_MODELS } from '../data/asciiModels'
 import { projects } from '../data/projects'
 
 export default function ProjectShowcase() {
@@ -58,6 +60,20 @@ export default function ProjectShowcase() {
                 )}
               </a>
 
+              {project.ascii && ASCII_MODELS[0] && (
+                <div className="mt-6">
+                  {/* 一覧の中では低めの枠にし、モデル名の見出しは出さない
+                      (項目のタイトルと重なるため)。クレジットはCC BY 3.0の
+                      利用条件なので残す。 */}
+                  <AsciiModelViewer
+                    modelUrl={ASCII_MODELS[0].modelUrl}
+                    name={ASCII_MODELS[0].name}
+                    credit={ASCII_MODELS[0].credit}
+                    showName={false}
+                    frameClassName="h-[200px] md:h-[260px]"
+                  />
+                </div>
+              )}
               {project.spotify && (
                 <div className="mt-6">
                   <SpotifyRecentTracks limit={3} />

@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from '@studio-freight/lenis'
 
 import Hero from './components/Hero'
-import AsciiGallery from './components/AsciiGallery'
 import Philosophy from './components/Philosophy'
 import ProjectShowcase from './components/ProjectShowcase'
 import Profile from './components/Profile'
@@ -29,25 +28,21 @@ function App() {
 
     lenisRef.current = lenis
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-
-    // Connect Lenis with GSAP ScrollTrigger
+    // Lenisの更新はgsap.tickerだけで回す。以前は自前のrequestAnimationFrame
+    // ループからも呼んでいて、1フレームにlenis.rafが2回走っていた。
+    // gsap.tickerに寄せると、ScrollTriggerと同じタイミングで更新される。
     lenis.on('scroll', ScrollTrigger.update)
 
-    gsap.ticker.add((time) => {
+    const update = (time) => {
       lenis.raf(time * 1000)
-    })
-
+    }
+    gsap.ticker.add(update)
     gsap.ticker.lagSmoothing(0)
 
     return () => {
+      // remove()には追加したのと同じ関数を渡さないと外れない
+      gsap.ticker.remove(update)
       lenis.destroy()
-      gsap.ticker.remove()
     }
   }, [])
 
@@ -60,7 +55,6 @@ function App() {
         {/* 自己紹介・経歴は先に見せる(Philosophyの直後)。作品紹介より
             人となりを先に置く方針。 */}
         <Profile />
-        <AsciiGallery limit={2} linkToFull />
         <ProjectShowcase />
         <CommitLog />
         <Footer />
