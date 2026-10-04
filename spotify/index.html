@@ -573,6 +573,12 @@
                 : '<path d="M8 5v14l11-7z"/>';
         }
 
+        // 曲名などを HTML に入れる前に、意味を持つ文字を置き換える
+        // (曲名の「'」や「<」「&」で、マークアップが途中で切れないように)
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+        }
+
         function formatTime(ms) {
             const minutes = Math.floor(ms / 60000);
             const seconds = Math.floor((ms % 60000) / 1000);
@@ -609,10 +615,13 @@
                 return;
             }
 
-            wrapper.innerHTML = data.tracks.map(track => `
-                <button type="button" class="track-card" data-track='${JSON.stringify(track)}'>
+            // 曲のデータは HTML の属性に書かず、何番目の曲かだけを持たせる。以前は JSON を
+            // 一重引用符の属性に入れていたため、曲名に「'」があると属性が途中で切れ、
+            // 押したときの JSON.parse が失敗していた(例: Hedwig's Theme)。
+            wrapper.innerHTML = data.tracks.map((track, index) => `
+                <button type="button" class="track-card" data-index="${index}">
                     <div class="album-art-container">
-                        <img src="${track.albumArt}" alt="${track.name}" class="album-art"
+                        <img src="${escapeHtml(track.albumArt)}" alt="${escapeHtml(track.name)}" class="album-art"
                              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2256%22 height=%2256%22%3E%3Crect width=%2256%22 height=%2256%22 fill=%22%23E6E6E6%22/%3E%3C/svg%3E'">
                         <div class="play-button">
                             <svg class="play-icon" viewBox="0 0 24 24">
@@ -621,8 +630,8 @@
                         </div>
                     </div>
                     <div class="track-info">
-                        <div class="track-name">${track.name}</div>
-                        <div class="track-artist">${track.artist} — ${track.album}</div>
+                        <div class="track-name">${escapeHtml(track.name)}</div>
+                        <div class="track-artist">${escapeHtml(track.artist)} — ${escapeHtml(track.album)}</div>
                     </div>
                     <div class="track-meta">
                         <div>${formatTime(track.duration)}</div>
@@ -633,7 +642,7 @@
 
             document.querySelectorAll('.track-card').forEach(card => {
                 card.addEventListener('click', function () {
-                    const trackData = JSON.parse(this.dataset.track);
+                    const trackData = data.tracks[Number(this.dataset.index)];
                     playPreview(this, trackData);
                 });
             });
