@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <style>html.bk-cover::before{content:"";position:fixed;inset:0;z-index:2147483647;background:var(--bk-cover,#fff)}</style>
+  <script>(function(){try{var d=document.documentElement;if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var t=d.getAttribute('data-theme');if(t!=='dark'&&t!=='light'){try{t=localStorage.getItem('theme')}catch(e){}}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}d.style.setProperty('--bk-cover',t==='dark'?'#121212':'#FFFFFF');d.classList.add('bk-cover');setTimeout(function(){d.classList.remove('bk-cover')},3000)}catch(e){}})();</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Spotify Dashboard - @オーバーライド（冬色のポートフォリオ）">
@@ -80,9 +83,26 @@
             --color-line: rgba(0, 0, 0, 0.12);
         }
 
+        /* 地の色は html に塗る(body に塗ると背景のマス目が隠れる。src/index.css と同じ理由) */
+        html {
+            background: var(--color-paper);
+        }
+
+        /* 中身のある所の背景(src/index.css の .bk-content と同じ。2026-10-04 本人指定の案 B) */
+        :root {
+            --bk-content-fill: color-mix(in srgb, var(--color-paper) 82%, transparent);
+        }
+        @supports not (color: color-mix(in srgb, red 50%, transparent)) {
+            :root {
+                --bk-content-fill: var(--color-paper);
+            }
+        }
+        .bk-content {
+            background-color: var(--bk-content-fill);
+        }
+
         body {
             font-family: 'Zen Kurenaido', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--color-paper);
             min-height: 100vh;
             color: var(--color-ink);
             overflow-x: hidden;
@@ -267,6 +287,7 @@
             }
         }
     </style>
+  <script type="module" crossorigin src="/assets/blockFx-D4xxhXkY.js"></script>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -396,7 +417,7 @@
 
 
 
-    <div class="container">
+    <div class="container bk-content">
 
         <div class="header">
             <h1 class="title">最近再生した曲</h1>
