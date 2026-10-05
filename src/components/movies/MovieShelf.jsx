@@ -267,6 +267,8 @@ export default function MovieShelf() {
   const closeDetail = useCallback(() => setDetail(null), [])
   // タップやクリックで付いたフォーカスでは開かない(開くのはクリックの側。キーボードで移ったときだけフォーカスで開く)
   const pointerRef = useRef(false)
+  // ホイールで本棚を動かしている間は、カーソルの下を通る背を開かない
+  const wheelingRef = useRef(false)
   const canHover = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: hover)').matches
 
   useEffect(() => {
@@ -290,6 +292,76 @@ export default function MovieShelf() {
   )
   const keyOf = (m) => `${m.type}:${m.trakt}`
   const opened = shown.find((m) => keyOf(m) === openId) || null
+  const hasShelf = Boolean(data) && view === 'shelf' && shown.length > 0
+
+  // 本棚の上でホイールを縦に回したら、本棚を横に動かす(2026-10-05 本人指定)。端まで来たら、
+  // そこから先はページの縦のスクロールに戻す(本棚の上でページが止まったままにならないように)。
+  // 横の動き(トラックパッドの横スワイプ・Shift+ホイール)と、Ctrl+ホイールの拡大は今までどおり。
+  // 動いている間は背を閉じたままにし(開くと幅が変わって動きがぶれる)、止まったらカーソルの下の背を開く。
+  useEffect(() => {
+    const el = shelfRef.current
+    if (!hasShelf || !el) return undefined
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    let target = null
+    // 今の位置は小数のまま持つ(scrollLeft は整数に丸められ、少しずつ足すと端の数 px で止まってしまう)
+    let current = 0
+    let frame = 0
+    let settle = 0
+    let cursor = null
+    const openUnderCursor = () => {
+      wheelingRef.current = false
+      const spine = cursor && document.elementFromPoint(cursor.x, cursor.y)?.closest('.mv-spine')
+      if (spine && el.contains(spine)) setOpenId(spine.dataset.key)
+    }
+    const settleSoon = () => {
+      clearTimeout(settle)
+      settle = setTimeout(openUnderCursor, 120)
+    }
+    const step = () => {
+      const diff = target - current
+      if (Math.abs(diff) < 0.5) {
+        el.scrollLeft = target
+        target = null
+        frame = 0
+        settleSoon()
+        return
+      }
+      current += diff * 0.22
+      el.scrollLeft = current
+      frame = requestAnimationFrame(step)
+    }
+    const onWheel = (event) => {
+      if (event.ctrlKey || Math.abs(event.deltaX) >= Math.abs(event.deltaY)) return
+      const unit = event.deltaMode === 1 ? 40 : event.deltaMode === 2 ? el.clientWidth : 1
+      const dy = event.deltaY * unit
+      const max = el.scrollWidth - el.clientWidth
+      const from = target ?? el.scrollLeft
+      if ((dy < 0 && from <= 0) || (dy > 0 && from >= max - 1)) return
+      event.preventDefault()
+      clearTimeout(settle)
+      if (!wheelingRef.current) {
+        wheelingRef.current = true
+        setOpenId(null)
+      }
+      cursor = { x: event.clientX, y: event.clientY }
+      target = Math.max(0, Math.min(max, from + dy))
+      if (reduceMotion) {
+        el.scrollLeft = target
+        target = null
+        settleSoon()
+      } else if (!frame) {
+        current = el.scrollLeft
+        frame = requestAnimationFrame(step)
+      }
+    }
+    el.addEventListener('wheel', onWheel, { passive: false })
+    return () => {
+      el.removeEventListener('wheel', onWheel)
+      cancelAnimationFrame(frame)
+      clearTimeout(settle)
+      wheelingRef.current = false
+    }
+  }, [hasShelf])
 
   const switchList = (next) => {
     setList(next)
@@ -366,7 +438,8 @@ export default function MovieShelf() {
                     type="button"
                     className={`mv-spine${isOpen ? ' is-open' : ''}`}
                     aria-label={`${titleOf(m)}（${m.year ?? '年不明'}）`}
-                    onMouseEnter={() => canHover && setOpenId(key)}
+                    data-key={key}
+                    onMouseEnter={() => canHover && !wheelingRef.current && setOpenId(key)}
                     onMouseLeave={() => canHover && setOpenId((current) => (current === key ? null : current))}
                     onPointerDown={() => {
                       pointerRef.current = true
