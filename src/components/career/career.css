@@ -1,26 +1,38 @@
 /* /career/ だけで使う部品 */
 
-/* 専門用語: 点線の下線と小さなアイコン。押せることが分かるように、カーソルは help */
-.term { position: relative; }
+/* 専門用語: 点線の下線と小さなアイコン。英語の語も文の中で折り返す */
 .term__word {
-  font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: help;
+  cursor: help; border-radius: 2px;
   text-decoration: underline dotted; text-decoration-color: var(--color-muted);
   text-decoration-thickness: 1px; text-underline-offset: 0.25em;
 }
-.term__word:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; border-radius: 2px; }
+.term__word:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }
 .term__icon { display: inline-block; width: 0.75em; height: 0.75em; margin-left: 0.1em; vertical-align: 0.4em; color: var(--color-muted); }
+/* 吹き出しは語の終わり(アイコンの下)に付ける。幅0の箱を基準にして、右端をそろえる */
+.term__pin { position: relative; display: inline-block; width: 0; height: 1em; vertical-align: baseline; }
 /* 吹き出しは文字と地の色を入れ替えて、本文と見分ける */
 .term__note {
-  position: absolute; left: 0; top: calc(100% + 6px); z-index: 30; display: block;
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; display: block;
   width: max-content; max-width: min(20rem, calc(100vw - 24px));
   padding: 10px 12px; border-radius: 3px; background: var(--color-ink); color: var(--color-paper);
-  font-size: 14px; line-height: 1.6; text-align: left; white-space: normal;
+  font-size: 14px; line-height: 1.6; text-align: left; white-space: normal; overflow-wrap: anywhere;
   box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
 }
 
-/* プロジェクトの画面のスクショ。縦横比を先に決めて、読み込みでずれないようにする */
-.work-shot { display: block; margin-top: 1rem; max-width: 100%; height: auto; border-radius: 3px; }
-.work-shot--framed { border: 1px solid var(--color-line); }
+/* プロジェクトの画面のスクショ。どれも同じ高さにそろえ、幅は画像の縦横比に任せる。
+   見せ方は3案(data-frame)。見本では /career/?frame=block|mat|soft で切り替えられる */
+.works { --shot-h: 180px; --shot-mat: rgb(255 255 255 / 0.55); }
+:root[data-theme='dark'] .works { --shot-mat: rgb(255 255 255 / 0.06); }
+@media (max-width: 639px) { .works { --shot-h: 140px; } }
+.work-shot { display: inline-block; margin-top: 1rem; line-height: 0; }
+.work-shot img { display: block; height: var(--shot-h); width: auto; max-width: 100%; object-fit: contain; }
+/* A: ブロックの影。黒い枠とピンクのずらした影(ぼかさない)。ロゴ(ピンクに黒の縁)と背景のマスに合わせる */
+.works[data-frame='block'] .work-shot { padding: 8px; background: var(--shot-mat); border: 1.5px solid var(--color-ink); border-radius: 3px; box-shadow: 6px 6px 0 rgb(var(--color-accent)); }
+/* B: 台紙。うすい白の台に細い線の枠。影は付けない */
+.works[data-frame='mat'] .work-shot { padding: 10px; background: var(--shot-mat); border: 1px solid var(--color-line); border-radius: 4px; }
+/* C: やわらかい影。枠を付けず、画面の下にぼかした影だけを落とす */
+.works[data-frame='soft'] .work-shot img { border-radius: 6px; box-shadow: 0 10px 24px rgb(0 0 0 / 0.18), 0 2px 6px rgb(0 0 0 / 0.08); }
 
 /* 名前の読み仮名 */
-.name-ruby rt { font-size: 0.22em; letter-spacing: 0.1em; color: var(--color-muted); font-family: inherit; }
+.name-ruby { ruby-align: center; }
+.name-ruby rt { font-size: 0.24em; letter-spacing: 0.06em; color: var(--color-ink); font-family: inherit; }

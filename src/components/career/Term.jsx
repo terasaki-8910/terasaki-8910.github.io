@@ -7,7 +7,9 @@ const canHover = () => typeof window !== 'undefined' && window.matchMedia && win
 /**
  * 専門用語。点線の下線と小さなアイコンを付け、短い説明を吹き出しで出す。
  * マウスを乗せる・押す(タップ)・キーボードで移る、のどれでも開く。押すと開いたままになり、
- * もう一度押す・Esc・外側を押すと閉じる。吹き出しは画面の端からはみ出さないように横にずらす。
+ * もう一度押す・Esc・外側を押すと閉じる。
+ * 語は span(role="button")にして、英語の語も文の中でふつうに折り返せるようにする(button だと折り返さない)。
+ * 吹き出しは語の終わり(アイコンの下)に付け、画面の端からはみ出す分だけ横にずらす。
  */
 export default function Term({ children, note }) {
   const [open, setOpen] = useState(false)
@@ -21,6 +23,10 @@ export default function Term({ children, note }) {
   const close = () => {
     pinnedRef.current = false
     setOpen(false)
+  }
+  const toggle = () => {
+    pinnedRef.current = !pinnedRef.current
+    setOpen(pinnedRef.current || hoverRef.current)
   }
 
   useEffect(() => {
@@ -46,9 +52,8 @@ export default function Term({ children, note }) {
       return
     }
     const r = noteRef.current.getBoundingClientRect()
-    const right = window.innerWidth - 12
-    if (r.right > right) setShift(right - r.right)
-    else if (r.left < 12) setShift(12 - r.left)
+    if (r.left < 12) setShift(12 - r.left)
+    else if (r.right > window.innerWidth - 12) setShift(window.innerWidth - 12 - r.right)
   }, [open])
 
   return (
@@ -65,8 +70,9 @@ export default function Term({ children, note }) {
         if (!pinnedRef.current) setOpen(false)
       }}
     >
-      <button
-        type="button"
+      <span
+        role="button"
+        tabIndex={0}
         className="term__word"
         aria-expanded={open}
         aria-describedby={open ? id : undefined}
@@ -74,25 +80,31 @@ export default function Term({ children, note }) {
         onBlur={() => {
           if (!hoverRef.current && !pinnedRef.current) setOpen(false)
         }}
-        onClick={() => {
-          pinnedRef.current = !pinnedRef.current
-          setOpen(pinnedRef.current || hoverRef.current)
+        onClick={toggle}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault()
+            toggle()
+          }
         }}
       >
         {children}
         <PiInfoBold className="term__icon" aria-hidden="true" />
-      </button>
-      {open && (
-        <span ref={noteRef} id={id} role="tooltip" className="term__note" style={shift ? { transform: `translateX(${shift}px)` } : undefined}>
-          {note}
-        </span>
-      )}
+      </span>
+      <span className="term__pin">
+        {open && (
+          <span ref={noteRef} id={id} role="tooltip" className="term__note" style={shift ? { transform: `translateX(${shift}px)` } : undefined}>
+            {note}
+          </span>
+        )}
+      </span>
     </span>
   )
 }
 
 /**
- * 文の中の専門用語を、ページで最初に出たところだけ Term にする。seen はページ全体で1つ(描画のたびに作る)。
+ * 文の中の専門用語を、seen に入っていない語の最初の1か所だけ Term にする。
+ * seen を見出し(節)ごとに作れば「見出しごとに最初の1か所」になる。
  */
 export function annotate(text, seen) {
   const parts = []
