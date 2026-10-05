@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-05T14:24:20.343Z",
+  "lastUpdated": "2026-10-05T23:58:41.145Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,7 +11,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 319,
+      "playtime2weeksMinutes": 277,
       "playtimeForeverMinutes": 2783
     }
   ],
@@ -474,21 +474,21 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/92b36c71d5eed910a58979f776c1d70a93ab117b.jpg",
           "unlockedAt": "2026-09-13T13:09:22.000Z",
-          "percent": 23.2
+          "percent": 23.1
         },
         {
           "name": "A Keen Sense of Spell",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
           "unlockedAt": "2026-09-12T08:21:27.000Z",
-          "percent": 71.8
+          "percent": 71.7
         },
         {
           "name": "Troll with the Punches",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/5c9e26c4941ae4fc98c6eaf3c023e3a18dc2df51.jpg",
           "unlockedAt": "2026-09-12T04:30:37.000Z",
-          "percent": 77.3
+          "percent": 77.2
         }
       ]
     },
@@ -503,14 +503,14 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 43.4
+          "percent": 43.5
         },
         {
           "name": "Kamura Amulet",
           "description": "A trinket given to new hunters who have proved themselves capable.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/01c4593add4173fdfdfcf8e50b6e99438c7895e8.jpg",
           "unlockedAt": "2023-07-11T08:07:02.000Z",
-          "percent": 87
+          "percent": 87.1
         }
       ]
     },
@@ -547,7 +547,7 @@
           "description": "Where's your face, dingus? Get your butt to the avatar creator and sort yourself out! Crying shame we can't fix that attitude of yours while we're at it.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/b2c3883e2cfd25d9477c7681714288cac23d4f76.jpg",
           "unlockedAt": "2026-03-23T15:27:32.000Z",
-          "percent": 81.9
+          "percent": 81.8
         },
         {
           "name": "Leaving the Nest",
