@@ -145,25 +145,32 @@ function charaSessionLogDevPlugin() {
 }
 
 // https://vitejs.dev/config/
+// ---- テーマ ---------------------------------------------------------------------------
+// いつもライトで開く(2026-10-05 本人指定。OSの設定がダークでも)。右下のボタンで選んだときだけ
+// 覚え(localStorage の theme-picked)、次に開いたときもそのテーマで開く。以前の theme は、
+// ボタンを押さなくても開くたびに保存していたので読まない。
+// 最初の描画より前に html の data-theme を決める。career のように html に書いてあるページはそのまま。
+const THEME_HEAD_JS =
+  "(function(){var d=document.documentElement;if(d.getAttribute('data-theme'))return;" +
+  "var t=null;try{t=localStorage.getItem('theme-picked')}catch(e){}" +
+  "d.setAttribute('data-theme',t==='dark'?'dark':'light')})();"
+
 // ---- ブロックの演出(src/fx/blockFx.js) ------------------------------------------------
 // ページを開いた直後から、JSの読み込みを待たずに画面を一色で覆うためのCSSとスクリプト。
-// 色はテーマで決まる(ライトは白、ダークは黒)。テーマは blockFx.js と同じ順で決める
-// (html の data-theme → localStorage の theme → OSの設定)。
+// 色はテーマで決まる(ライトは白、ダークは黒)。テーマは、上のスクリプトが先に決めた html の data-theme。
 // 動きを減らす設定の端末では覆わない。万一JSが読み込めなくても3秒で覆いを外す。
 const BLOCK_FX_HEAD_CSS =
   'html.bk-cover::before{content:"";position:fixed;inset:0;z-index:2147483647;background:var(--bk-cover,#fff)}'
 const BLOCK_FX_HEAD_JS =
   "(function(){try{var d=document.documentElement;" +
   "if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;" +
-  "var t=d.getAttribute('data-theme');" +
-  "if(t!=='dark'&&t!=='light'){try{t=localStorage.getItem('theme')}catch(e){}}" +
-  "if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}" +
+  "var t=d.getAttribute('data-theme')==='dark'?'dark':'light';" +
   "d.style.setProperty('--bk-cover',t==='dark'?'#121212':'#FFFFFF');" +
   "d.classList.add('bk-cover');" +
   "setTimeout(function(){d.classList.remove('bk-cover')},3000)}catch(e){}})();"
 
-// 全ページ(rollupOptions.input のHTMLすべて)の head の先頭に上の2つを、body の末尾に
-// blockFx.js を差し込む。order:'pre' にすると、差し込んだ module script もビルドの対象になる。
+// 全ページ(rollupOptions.input のHTMLすべて)の head の先頭にテーマと覆いの3つを(この順で)、
+// body の末尾に blockFx.js を差し込む。order:'pre' にすると、差し込んだ module script もビルドの対象になる。
 function blockFxPlugin() {
   return {
     name: 'block-fx',
@@ -171,6 +178,7 @@ function blockFxPlugin() {
       order: 'pre',
       handler() {
         return [
+          { tag: 'script', children: THEME_HEAD_JS, injectTo: 'head-prepend' },
           { tag: 'style', children: BLOCK_FX_HEAD_CSS, injectTo: 'head-prepend' },
           { tag: 'script', children: BLOCK_FX_HEAD_JS, injectTo: 'head-prepend' },
           { tag: 'script', attrs: { type: 'module', src: '/src/fx/blockFx.js' }, injectTo: 'body' },

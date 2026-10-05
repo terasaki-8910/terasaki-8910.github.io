@@ -6,8 +6,7 @@
     <meta name="description" content="Spotify Dashboard - @オーバーライド（冬色のポートフォリオ）">
     <title>Spotify Dashboard | @オーバーライド</title>
     <link rel="canonical" href="https://terasaki-8910.github.io/spotify/">
-    <meta name="theme-color" content="#F9EC8E" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#F9EC8E">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
@@ -54,15 +53,6 @@
             --color-line: rgba(0, 0, 0, 0.12);
         }
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --color-paper: #121212;
-                --color-surface: #1D1D1D;
-                --color-ink: #EDEDED;
-                --color-muted: #8F8F8F;
-                --color-line: rgba(255, 255, 255, 0.12);
-            }
-        }
 
         :root[data-theme="dark"] {
             --color-paper: #121212;
@@ -370,24 +360,16 @@
     <!-- Spotify iFrame API -->
     <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
     <script>
-        // テーマ切り替え(React側のHeader.jsxと同じ考え方: localStorage優先、
-        // なければprefers-color-schemeに従う)
-        function getInitialTheme() {
-            const saved = window.localStorage.getItem('theme');
-            if (saved === 'light' || saved === 'dark') return saved;
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-
-        function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            window.localStorage.setItem('theme', theme);
-        }
-
-        applyTheme(getInitialTheme());
-
+        // テーマ切り替え(React側のHeader.jsxと同じ考え方: いつもライトで開き、ボタンで選んだときだけ
+        // 覚えて次もそのテーマで開く。data-theme は head のスクリプトが先に決めている)
         document.getElementById('theme-toggle-btn').addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-            applyTheme(current === 'dark' ? 'light' : 'dark');
+            const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            try {
+                window.localStorage.setItem('theme-picked', next);
+            } catch (e) {
+                // 保存できない環境では、このページの間だけ切り替わる
+            }
         });
 
         // Spotify iFrame用の変数

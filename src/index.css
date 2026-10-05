@@ -106,40 +106,9 @@
   --diff-delete: #B23A2E; /* vs paper 4.92:1 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-paper: #121212;
-    --color-surface: #1D1D1D;
-    --color-ink: #EDEDED;
-    --color-muted: #8F8F8F;
-    --color-line: rgba(255, 255, 255, 0.12);
 
-    --color-accent: 250 160 160; /* #FAA0A0 = Heroタイトルと同色。vs paper 9.46:1 */
-    --color-on-accent: 26 26 26; /* vs accent 8.79:1 */
-
-    --gomi-burnable: #E07A66;
-    --gomi-bin: #AC8CD4;
-    --gomi-spray: #D488AC;
-    --gomi-pet: #66BCAC;
-    --gomi-nonburnable: #7AA5DC;
-    --gomi-paper: #B09578;
-    --gomi-plastic: #DC9A62;
-    --gomi-can: #8CB46A;
-    --gomi-oversized: #9A9A8E;
-
-    --lane-0: #8C97DE; /* indigo, vs paper 6.78:1 */
-    --lane-1: #5FC3D6; /* cyan, vs paper 9.16:1 */
-    --lane-2: #B8B860; /* olive, vs paper 8.98:1 */
-    --lane-3: #E0B04C; /* amber, vs paper 9.35:1 */
-    --lane-4: #C48CB8; /* plum, vs paper 6.95:1 */
-
-    --diff-insert: #5FBE7E; /* vs paper 8.17:1 */
-    --diff-delete: #E0776A; /* vs paper 6.26:1 */
-  }
-}
-
-/* ヘッダーのテーマ切替ボタン(data-theme属性)が、OSのprefers-color-schemeより
-   優先する。ヘッダー用の変数はHeader.css側で独立定義しているので、
+/* ダークは、ヘッダーのテーマ切替ボタン(data-theme属性)で選んだときだけ。OSの設定は見ず、
+   いつもライトで開く(2026-10-05 本人指定)。ヘッダー用の変数はHeader.css側で独立定義しているので、
    ここではサイト本体(index.css管轄)側の変数だけ上書きする。 */
 :root[data-theme="dark"] {
   --color-paper: #121212;

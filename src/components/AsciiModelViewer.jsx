@@ -10,9 +10,7 @@ const LIGHT_COLOR = '#000000'
 // テーマ連動の文字色。#B2FFFFはライト背景(#F9EC8E)だとコントラスト比が
 // 低くほぼ見えないため、ライトモードのときだけ純黒にする。
 function getEffectiveTheme() {
-  const attr = document.documentElement.getAttribute('data-theme')
-  if (attr === 'dark' || attr === 'light') return attr
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
 }
 
 // frameClassName: 枠の高さ。未指定なら専用ページ用の大きさ。
