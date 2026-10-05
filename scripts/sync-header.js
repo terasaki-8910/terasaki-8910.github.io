@@ -66,7 +66,7 @@ class HeaderSyncer {
     // Spotifyページ用のHTMLを直接構築（currentPage='spotify'固定）
     // テンプレートリテラル内の条件分岐を解決
     // 左上のロゴ: Spotify ページはトップではないので、常に出す
-    jsx = jsx.replace(/className=\{`cosmic-header__logo \${currentPage === 'home' \? 'cosmic-header__logo--hidden' : ''}`\}/g, 'class="cosmic-header__logo"');
+    jsx = jsx.replace(/className=\{`cosmic-header__logo \${logoHidden \? 'cosmic-header__logo--hidden' : ''}`\}/g, 'class="cosmic-header__logo"');
 
     // target属性を処理
     jsx = jsx.replace(/target=\{currentPage === 'spotify' \? '_self' : '_blank'\}/g, 'target="_self"');
