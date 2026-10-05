@@ -66,4 +66,14 @@ export const projects = [
     pageKey: 'gaming',
     icon: 'gameController',
   },
+  // 2026-10-05 追加。名前とアイコンは仮(確認シートで決める)
+  {
+    id: 7,
+    title: 'Movie Shelf',
+    description: 'Trakt に記録した映画（観た・評価・観たい）',
+    tags: ['Trakt', 'TMDB', 'React'],
+    link: '/movies/',
+    pageKey: 'movies',
+    icon: 'filmSlate',
+  },
 ]
