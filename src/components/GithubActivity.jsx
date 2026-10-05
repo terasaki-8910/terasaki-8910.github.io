@@ -172,6 +172,10 @@ export default function GithubActivity() {
   // PC で帯が止まった(pin した)ときの案内。「ずっと止まる」と言われたため、最後までスクロールするよう
   // 1度だけ出す。1度出したら、次からは出さない(localStorage)。2026-10-05 本人指定
   const [hint, setHint] = useState(false)
+  // 帯が止まっている間だけ出すスキップのボタン。▲(上へドラッグ)で帯の最初へ、▼(下へドラッグ)で最後へ飛ぶ
+  const [pinned, setPinned] = useState(false)
+  const triggerRef = useRef(null)
+  const dragRef = useRef(null)
 
   // 縦スクロール→横パンはデスクトップのみ。モバイルはoverflow-x-autoの
   // 素直な横スクロール帯にフォールバックする(本人指定、pin演出は複雑になり
@@ -202,6 +206,7 @@ export default function GithubActivity() {
           pin: true,
           invalidateOnRefresh: true,
           onToggle: (self) => {
+            setPinned(self.isActive)
             if (!self.isActive) {
               setHint(false)
               return
@@ -220,10 +225,35 @@ export default function GithubActivity() {
           },
         },
       })
+      triggerRef.current = ScrollTrigger.getAll().find((st) => st.trigger === container) || null
     }, container)
 
     return () => ctx.revert()
   }, [days.length])
+
+  // 帯の最初(dir < 0)か最後(dir > 0)へ飛ぶ。スクロールは App.jsx の Lenis に頼む
+  function skip(dir) {
+    const st = triggerRef.current
+    if (!st) return
+    const y = dir < 0 ? st.start : st.end + 2
+    setHint(false)
+    window.dispatchEvent(new CustomEvent('site:scroll-to', { detail: { y } }))
+  }
+
+  function handleSkipPointerDown(event) {
+    dragRef.current = { y: event.clientY, moved: false }
+    event.currentTarget.setPointerCapture?.(event.pointerId)
+  }
+
+  function handleSkipPointerUp(event, fallbackDir) {
+    const drag = dragRef.current
+    dragRef.current = null
+    if (!drag) return
+    const dy = event.clientY - drag.y
+    // 20px 以上動かしたらドラッグ。上なら最初へ、下なら最後へ。動かさなければ、押した側(▲か▼)へ
+    if (Math.abs(dy) >= 20) skip(dy < 0 ? -1 : 1)
+    else skip(fallbackDir)
+  }
 
   if (loading) return <LoadingSkeleton />
 
@@ -252,9 +282,30 @@ export default function GithubActivity() {
       {hint && (
         <div
           role="status"
-          className="pointer-events-none absolute bottom-16 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-ink px-5 py-2 text-sm text-paper shadow-lg"
+          className="gh-hint pointer-events-none absolute bottom-[188px] left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-5 py-2 text-sm shadow-lg"
         >
           → 最後までスクロールしてください
+        </div>
+      )}
+      {pinned && (
+        <div className="gh-skip absolute bottom-8 left-1/2 -translate-x-1/2" role="group" aria-label="帯をスキップ">
+          <button
+            type="button"
+            aria-label="帯の最初へ(上へドラッグしても同じ)"
+            onPointerDown={handleSkipPointerDown}
+            onPointerUp={(e) => handleSkipPointerUp(e, -1)}
+          >
+            ▲
+          </button>
+          <span aria-hidden="true">スキップ</span>
+          <button
+            type="button"
+            aria-label="帯の最後へ(下へドラッグしても同じ)"
+            onPointerDown={handleSkipPointerDown}
+            onPointerUp={(e) => handleSkipPointerUp(e, 1)}
+          >
+            ▼
+          </button>
         </div>
       )}
       <div className="pointer-events-none absolute bottom-4 left-4 font-mono text-xs text-muted md:bottom-6 md:left-12">

@@ -238,3 +238,48 @@
 .bk-content {
   background-color: var(--bk-content-fill);
 }
+
+/* GitHub の帯の案内とスキップ(GithubActivity.jsx)。テーマによらず、黄色の地に黒い字(2026-10-05 本人指定) */
+:root {
+  --color-hint-bg: #F9EC8E;
+  --color-hint-ink: #1A1A1A;
+}
+.gh-hint {
+  background: var(--color-hint-bg);
+  color: var(--color-hint-ink);
+}
+.gh-skip {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--color-hint-bg);
+  color: var(--color-hint-ink);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  touch-action: none;
+  user-select: none;
+}
+.gh-skip span {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+  padding: 2px 0;
+}
+.gh-skip button {
+  width: 36px;
+  height: 32px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+  cursor: grab;
+}
+.gh-skip button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+.gh-skip button:focus-visible {
+  outline: 2px solid var(--color-hint-ink);
+  outline-offset: 1px;
+}

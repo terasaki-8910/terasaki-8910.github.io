@@ -36,6 +36,9 @@ function App() {
     // 左上のロゴ(Header.jsx)を押したら、読み込み直さずに一番上へ戻る
     const scrollToTop = () => lenis.scrollTo(0)
     window.addEventListener('site:scroll-top', scrollToTop)
+    // GitHub の帯のスキップ(GithubActivity.jsx)。指定の位置へ、短めに送る
+    const scrollToY = (event) => lenis.scrollTo(event.detail.y, { duration: 0.8 })
+    window.addEventListener('site:scroll-to', scrollToY)
 
     const update = (time) => {
       lenis.raf(time * 1000)
@@ -47,6 +50,7 @@ function App() {
       // remove()には追加したのと同じ関数を渡さないと外れない
       gsap.ticker.remove(update)
       window.removeEventListener('site:scroll-top', scrollToTop)
+      window.removeEventListener('site:scroll-to', scrollToY)
       lenis.destroy()
     }
   }, [])
