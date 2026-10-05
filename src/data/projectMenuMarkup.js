@@ -1,7 +1,7 @@
 import { MENU_ICONS } from './menuIcons.js'
 
 /**
- * ヘッダー右上のメニューの中身(ボタンと一覧)の HTML。
+ * ヘッダー右上のメニューの中身(ボタンと一覧)の HTML。項目名は menuTitle があればそれ、なければ title。
  * React のページ(ProjectMenu.jsx)と静的な Spotify ページ(scripts/sync-header.js)が
  * 同じこの関数で同じマークアップを作り、開閉は src/fx/projectMenu.js が受け持つ。
  * DOM に触らない純粋な関数なので、Node(sync-header.js)からも読める。
@@ -31,7 +31,7 @@ export function renderProjectMenu(projects, currentPage) {
     .map((project, i) => {
       const inner =
         `<span class="cosmic-header__menu-cell">${iconSvg(project.icon)}</span>` +
-        `<span class="cosmic-header__menu-label">${escapeHtml(project.title)}</span>`
+        `<span class="cosmic-header__menu-label">${escapeHtml(project.menuTitle || project.title)}</span>`
       const order = `style="--i:${i};--n:${n}"`
       if (project.pageKey && project.pageKey === currentPage) {
         return `<span class="cosmic-header__menu-item cosmic-header__menu-item--current" role="menuitem" aria-current="page" aria-disabled="true" ${order}>${inner}</span>`

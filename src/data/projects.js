@@ -70,6 +70,8 @@ export const projects = [
   {
     id: 7,
     title: '映画・アニメ・ドラマの視聴履歴',
+    // メニューでは長くて見切れるので短くする(2026-10-05 本人指定)。トップの一覧とページの題はそのまま
+    menuTitle: '映画などの視聴履歴',
     description: 'Trakt に記録した作品（観た・評価・観たい）',
     tags: ['Trakt', 'TMDB', 'React'],
     link: '/movies/',
