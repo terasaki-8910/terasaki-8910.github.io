@@ -20,7 +20,10 @@ const Header = ({ currentPage = 'home' }) => {
     if (!title || !('IntersectionObserver' in window)) return undefined
     const observer = new IntersectionObserver(([entry]) => setHeroGone(!entry.isIntersecting))
     observer.observe(title)
-    return () => observer.disconnect()
+    // ここで return の直後に丸括弧を書かない(scripts/sync-header.js が、画面の部分と取り違える)
+    return function stopObserving() {
+      observer.disconnect()
+    }
   }, [currentPage])
 
   const logoHidden = currentPage === 'home' && !heroGone
