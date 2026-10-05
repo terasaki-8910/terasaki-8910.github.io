@@ -197,8 +197,9 @@ export default function AsciiModelViewer({
           <h3 className="text-2xl font-display text-ink mb-3">{name}</h3>
         ))}
       {/* 枠のサイズはframeClassName(既定: h-[420px] md:h-[520px])で決まる。
-          背景のマス目が文字と重ならないよう、枠の中は地の色で塗る */}
-      <div ref={containerRef} className={`w-full bg-paper ${frameClassName}`}>
+          枠は塗らない。地の色で塗ると、背景のマスの上に別の四角が浮いて見えるため(2026-10-05 本人指定)。
+          後ろのマスは、中身の箱(.bk-content)の中なので src/fx/blockFx.js が薄く描く */}
+      <div ref={containerRef} className={`w-full ${frameClassName}`}>
         <canvas ref={canvasRef} className="block" />
       </div>
       {credit && (

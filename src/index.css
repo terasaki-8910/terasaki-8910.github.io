@@ -223,18 +223,9 @@
   }
 }
 
-/* 中身のある所の背景(背景のマス目と組み合わせる。2026-10-04 本人指定の案 B)。
-   中身の箱(.bk-content)に地の色を 82% の濃さでかぶせ、後ろのマスをうっすら残す。
-   左右の端は src/fx/blockFx.js が 40px の線にそろえる(box-shadow で同じ色を広げる)。 */
-:root {
-  --bk-content-fill: color-mix(in srgb, var(--color-paper) 82%, transparent);
-}
-@supports not (color: color-mix(in srgb, red 50%, transparent)) {
-  /* color-mix に未対応のブラウザでは、地の色で塗る(後ろのマスは見えなくなる) */
-  :root {
-    --bk-content-fill: var(--color-paper);
-  }
-}
+/* 中身のある所(.bk-content)。2026-10-05 から、箱を地の色で塗るのをやめた(マスの上に別の四角が
+   浮いて見えるため)。箱に重なる背景のマスと、そのまわり1マスは、src/fx/blockFx.js が薄く描く。
+   このクラスは、その目印として残している。 */
 .bk-content {
-  background-color: var(--bk-content-fill);
+  background-color: transparent;
 }

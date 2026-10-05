@@ -85,17 +85,10 @@
             background: var(--color-paper);
         }
 
-        /* 中身のある所の背景(src/index.css の .bk-content と同じ。2026-10-04 本人指定の案 B) */
-        :root {
-            --bk-content-fill: color-mix(in srgb, var(--color-paper) 82%, transparent);
-        }
-        @supports not (color: color-mix(in srgb, red 50%, transparent)) {
-            :root {
-                --bk-content-fill: var(--color-paper);
-            }
-        }
+        /* 中身のある所(src/index.css の .bk-content と同じ)。箱は塗らず、重なる背景のマスを
+           src/fx/blockFx.js が薄く描く(2026-10-05 本人指定) */
         .bk-content {
-            background-color: var(--bk-content-fill);
+            background-color: transparent;
         }
 
         .icon-credit {
