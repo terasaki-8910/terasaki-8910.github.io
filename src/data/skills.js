@@ -33,7 +33,8 @@ export const skills = [
     group: 'main',
     careerOrder: 3,
     text: '研究室サーバの管理・運用。Dockerで動くGitLab を複数のメジャーバージョンにわたって段階的にアップグレードし、SSL 証明書の更新。自宅でもサーバを管理している。',
-    careerText: '研究室サーバの管理・運用を担当。Docker で動く GitLab を、17系から19系までメジャーバージョンを順に上げ、SSL 証明書も更新した。自宅でもサーバを管理している。',
+    // 下書き(確認シート15回目)。確かめていない版の数字は出さない
+    careerText: '研究室サーバで、Docker で動く GitLab の更新と SSL 証明書の更新をした。自宅でもサーバを管理している。',
   },
   {
     name: 'React',
