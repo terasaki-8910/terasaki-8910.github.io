@@ -1,18 +1,37 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import './movieShelf.css'
 
 /**
- * Trakt に入れた映画の一覧(/movies/)。データは scripts/update-trakt.mjs が毎日作る
- * public/trakt/movies.json。決めたこと(確認シート10回目):
- * - 観た・評価・観たいを、Trakt にそって出す(R10-2)
+ * Trakt に入れた映画・アニメ・ドラマの視聴履歴(/movies/)。データは scripts/update-trakt.mjs が毎日作る
+ * public/trakt/movies.json。決めたこと:
+ * - 観た・評価・観たいを、Trakt にそって出す(確認シート R10-2)
  * - 1つのページで「本棚／一覧」を切り替える。最初は本棚(R10-3)。一覧はポスターの格子(R10-4)
- * - 本棚の背はポスターを縦に切り、題名を帯に載せる(R10-5 の B。ビデオテープ風は見本を作って決め直す)
- * - 背に合わせると表紙が出て、下に題名・原題・年。押すと詳しい画面(R10-6)
+ * - 本棚の背はポスターを縦に切り、題名を帯に載せる(R10-5 の B)
+ * - 背に合わせると表紙が出て、下に題名・原題・年。押すと詳しい画面(R10-6)。カーソルが外れたら閉じる
  * - ポスターは TMDb から直接読み込む(R10-7)
+ * - 映画・アニメ・ドラマで絞れる。観たは 時系列順(既定)・評価順・視聴順、観たいは 追加順(既定)・時系列順
  */
 
 const IMG = 'https://image.tmdb.org/t/p/'
 const STAR = 'M10 1.6l2.5 5.4 5.9.7-4.4 4 1.2 5.8L10 14.6l-5.2 2.9 1.2-5.8-4.4-4 5.9-.7z'
+const KINDS = [
+  ['all', 'すべて'],
+  ['movie', '映画'],
+  ['anime', 'アニメ'],
+  ['drama', 'ドラマ'],
+]
+const SORTS = {
+  watched: [
+    ['released', '時系列順'],
+    ['rating', '評価順'],
+    ['watched', '視聴順'],
+  ],
+  watchlist: [
+    ['added', '追加順'],
+    ['released', '時系列順'],
+  ],
+}
+const RATING_NOTE = '星の数は、わたしの主観による評価です。'
 
 function Stars({ rating }) {
   if (!rating) return null
@@ -34,11 +53,31 @@ function Stars({ rating }) {
 const titleOf = (m) => m.details?.title || m.traktTitle
 const originalOf = (m) => m.details?.originalTitle || m.traktTitle
 const decadeOf = (m) => (m.year ? Math.floor(m.year / 10) * 10 : null)
+const kindLabel = (m) => ({ movie: '映画', anime: 'アニメ', drama: 'ドラマ' })[m.kind] || ''
+const traktUrl = (m) => `https://trakt.tv/${m.type === 'show' ? 'shows' : 'movies'}/${m.slug}`
+const tmdbUrl = (m) => `https://www.themoviedb.org/${m.type === 'show' ? 'tv' : 'movie'}/${m.tmdb}`
 
 function formatDate(value) {
   if (!value) return null
   const d = new Date(value)
   return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`
+}
+
+/** 並べ替え。視聴順は、観た日が入っているものを新しい順に、残りは Trakt に記録した順(新しい順) */
+function sortItems(items, sort) {
+  const list = [...items]
+  const byReleased = (a, b) => (a.released ?? '9999').localeCompare(b.released ?? '9999')
+  if (sort === 'rating') return list.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0) || byReleased(b, a))
+  if (sort === 'watched') {
+    return list.sort((a, b) => {
+      if (a.lastWatchedAt && b.lastWatchedAt) return b.lastWatchedAt.localeCompare(a.lastWatchedAt)
+      if (a.lastWatchedAt) return -1
+      if (b.lastWatchedAt) return 1
+      return (b.recordedOrder ?? 0) - (a.recordedOrder ?? 0)
+    })
+  }
+  if (sort === 'added') return list.sort((a, b) => (b.listedAt ?? '').localeCompare(a.listedAt ?? ''))
+  return list.sort(byReleased)
 }
 
 function Detail({ movie, onClose }) {
@@ -48,11 +87,22 @@ function Detail({ movie, onClose }) {
       if (e.key === 'Escape') onClose()
     }
     document.addEventListener('keydown', onKey)
-    closeRef.current?.focus()
-    return () => document.removeEventListener('keydown', onKey)
+    closeRef.current?.focus({ preventScroll: true })
+    // 開いている間は、後ろのページをスクロールさせない
+    const root = document.documentElement
+    const prev = root.style.overflow
+    root.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      root.style.overflow = prev
+    }
   }, [onClose])
   const d = movie.details || {}
-  const meta = [originalOf(movie) !== titleOf(movie) ? originalOf(movie) : null, movie.year, ...(d.genres || []), d.runtime ? `${d.runtime}分` : null].filter(Boolean)
+  const length =
+    movie.type === 'show'
+      ? [d.seasons ? `${d.seasons}シーズン` : null, d.episodes ? `全${d.episodes}話` : null, d.runtime ? `1話 ${d.runtime}分` : null]
+      : [d.runtime ? `${d.runtime}分` : null]
+  const meta = [originalOf(movie) !== titleOf(movie) ? originalOf(movie) : null, movie.year, kindLabel(movie), ...(d.genres || []), ...length].filter(Boolean)
   return (
     <div className="mv-detail" role="dialog" aria-modal="true" aria-label={titleOf(movie)} onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="mv-detail__panel">
@@ -64,11 +114,19 @@ function Detail({ movie, onClose }) {
             <h2 className="mv-detail__title font-display">{titleOf(movie)}</h2>
             <p className="mv-detail__meta">{meta.join(' / ')}</p>
             {movie.rating ? (
-              <p className="mv-detail__rating">
-                <Stars rating={movie.rating} /> <span>{movie.rating}/10</span>
+              <div className="mv-detail__rating">
+                <p>
+                  <Stars rating={movie.rating} /> <span>{movie.rating}/10</span>
+                </p>
+                <p className="mv-detail__note">{RATING_NOTE}</p>
+              </div>
+            ) : null}
+            {movie.lastWatchedAt ? (
+              <p className="mv-detail__meta">
+                観た日 {formatDate(movie.lastWatchedAt)}
+                {movie.type === 'movie' && movie.plays > 1 ? `（${movie.plays}回）` : ''}
               </p>
             ) : null}
-            {movie.lastWatchedAt ? <p className="mv-detail__meta">観た日 {formatDate(movie.lastWatchedAt)}{movie.plays > 1 ? `（${movie.plays}回）` : ''}</p> : null}
             {movie.listedAt ? <p className="mv-detail__meta">観たいに入れた日 {formatDate(movie.listedAt)}</p> : null}
             {d.overview ? (
               <p className="mv-detail__overview">
@@ -77,11 +135,11 @@ function Detail({ movie, onClose }) {
               </p>
             ) : null}
             <p className="mv-detail__links">
-              <a href={`https://trakt.tv/movies/${movie.slug}`} target="_blank" rel="noopener noreferrer">
+              <a href={traktUrl(movie)} target="_blank" rel="noopener noreferrer">
                 Trakt
               </a>
               {movie.tmdb ? (
-                <a href={`https://www.themoviedb.org/movie/${movie.tmdb}`} target="_blank" rel="noopener noreferrer">
+                <a href={tmdbUrl(movie)} target="_blank" rel="noopener noreferrer">
                   TMDB
                 </a>
               ) : null}
@@ -90,6 +148,25 @@ function Detail({ movie, onClose }) {
           {d.poster ? <img className="mv-detail__poster" src={`${IMG}w500${d.poster}`} alt="" /> : null}
         </div>
       </div>
+      {/* スマホは、長いあらすじでも見失わないよう、画面の下の真ん中に丸い × を置く */}
+      <button type="button" className="mv-detail__close-round" aria-label="閉じる" onClick={onClose}>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </div>
+  )
+}
+
+function Segmented({ label, options, value, onChange, counts }) {
+  return (
+    <div className="mv-seg" role="group" aria-label={label}>
+      {options.map(([key, text]) => (
+        <button key={key} type="button" aria-pressed={value === key} onClick={() => onChange(key)}>
+          {text}
+          {counts ? <span className="mv-count">{counts[key]}</span> : null}
+        </button>
+      ))}
     </div>
   )
 }
@@ -98,11 +175,15 @@ export default function MovieShelf() {
   const [data, setData] = useState(null)
   const [error, setError] = useState(false)
   const [list, setList] = useState('watched')
+  const [kind, setKind] = useState('all')
+  const [sort, setSort] = useState('released')
   const [view, setView] = useState('shelf')
   const [decade, setDecade] = useState('all')
   const [openId, setOpenId] = useState(null)
   const [detail, setDetail] = useState(null)
   const shelfRef = useRef(null)
+  // 詳しい画面を閉じる関数は作り直さない(Detail の後ろのスクロール止めとフォーカスを、開いた1回だけにする)
+  const closeDetail = useCallback(() => setDetail(null), [])
   // タップやクリックで付いたフォーカスでは開かない(開くのはクリックの側。キーボードで移ったときだけフォーカスで開く)
   const pointerRef = useRef(false)
   const canHover = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: hover)').matches
@@ -114,13 +195,29 @@ export default function MovieShelf() {
       .catch(() => setError(true))
   }, [])
 
-  const items = useMemo(() => (data ? data[list] || [] : []), [data, list])
-  const decades = useMemo(() => [...new Set(items.map(decadeOf).filter(Boolean))].sort((a, b) => a - b), [items])
-  const shown = items.filter((m) => decade === 'all' || decadeOf(m) === Number(decade))
-  const opened = shown.find((m) => m.trakt === openId) || null
+  const listItems = useMemo(() => (data ? data[list] || [] : []), [data, list])
+  const kindCounts = useMemo(() => {
+    const c = { all: listItems.length, movie: 0, anime: 0, drama: 0 }
+    for (const m of listItems) c[m.kind] = (c[m.kind] ?? 0) + 1
+    return c
+  }, [listItems])
+  const ofKind = useMemo(() => listItems.filter((m) => kind === 'all' || m.kind === kind), [listItems, kind])
+  const decades = useMemo(() => [...new Set(ofKind.map(decadeOf).filter(Boolean))].sort((a, b) => a - b), [ofKind])
+  const shown = useMemo(
+    () => sortItems(ofKind.filter((m) => decade === 'all' || decadeOf(m) === Number(decade)), sort),
+    [ofKind, decade, sort],
+  )
+  const keyOf = (m) => `${m.type}:${m.trakt}`
+  const opened = shown.find((m) => keyOf(m) === openId) || null
 
   const switchList = (next) => {
     setList(next)
+    setSort(SORTS[next][0][0])
+    setDecade('all')
+    setOpenId(null)
+  }
+  const switchKind = (next) => {
+    setKind(next)
     setDecade('all')
     setOpenId(null)
   }
@@ -135,22 +232,29 @@ export default function MovieShelf() {
   return (
     <div className="mv">
       <div className="mv-bar">
-        <div className="mv-seg" role="group" aria-label="一覧の種類">
-          <button type="button" aria-pressed={list === 'watched'} onClick={() => switchList('watched')}>
-            観た <span className="mv-count">{data.watched.length}</span>
-          </button>
-          <button type="button" aria-pressed={list === 'watchlist'} onClick={() => switchList('watchlist')}>
-            観たい <span className="mv-count">{data.watchlist.length}</span>
-          </button>
-        </div>
-        <div className="mv-seg" role="group" aria-label="見せ方">
-          <button type="button" aria-pressed={view === 'shelf'} onClick={() => setView('shelf')}>
-            本棚
-          </button>
-          <button type="button" aria-pressed={view === 'grid'} onClick={() => setView('grid')}>
-            一覧
-          </button>
-        </div>
+        <Segmented
+          label="一覧の種類"
+          options={[
+            ['watched', '観た'],
+            ['watchlist', '観たい'],
+          ]}
+          value={list}
+          onChange={switchList}
+          counts={{ watched: data.watched.length, watchlist: data.watchlist.length }}
+        />
+        <Segmented
+          label="見せ方"
+          options={[
+            ['shelf', '本棚'],
+            ['grid', '一覧'],
+          ]}
+          value={view}
+          onChange={setView}
+        />
+      </div>
+      <div className="mv-bar">
+        <Segmented label="種類" options={KINDS} value={kind} onChange={switchKind} counts={kindCounts} />
+        <Segmented label="並び" options={SORTS[list]} value={sort} onChange={setSort} />
       </div>
       {decades.length > 1 && (
         <div className="mv-tabs" role="group" aria-label="年代">
@@ -164,8 +268,11 @@ export default function MovieShelf() {
           ))}
         </div>
       )}
+      {list === 'watched' && sort === 'rating' ? <p className="mv-note">{RATING_NOTE}</p> : null}
 
-      {view === 'shelf' ? (
+      {shown.length === 0 ? (
+        <p className="text-muted">この条件に当てはまる作品はありません。</p>
+      ) : view === 'shelf' ? (
         <div className="mv-stage">
           <div className="mv-shelf-wrap">
             <button type="button" className="mv-arrow mv-arrow--prev" aria-label="前へ" onClick={() => scrollShelf(-1)}>
@@ -173,25 +280,27 @@ export default function MovieShelf() {
             </button>
             <div className="mv-shelf" ref={shelfRef}>
               {shown.map((m) => {
-                const isOpen = m.trakt === openId
+                const key = keyOf(m)
+                const isOpen = key === openId
                 const poster = m.details?.poster
                 return (
                   <button
-                    key={m.trakt}
+                    key={key}
                     type="button"
                     className={`mv-spine${isOpen ? ' is-open' : ''}`}
                     aria-label={`${titleOf(m)}（${m.year ?? '年不明'}）`}
-                    onMouseEnter={() => canHover && setOpenId(m.trakt)}
+                    onMouseEnter={() => canHover && setOpenId(key)}
+                    onMouseLeave={() => canHover && setOpenId((current) => (current === key ? null : current))}
                     onPointerDown={() => {
                       pointerRef.current = true
                     }}
                     onFocus={() => {
-                      if (!pointerRef.current) setOpenId(m.trakt)
+                      if (!pointerRef.current) setOpenId(key)
                     }}
                     onClick={() => {
                       pointerRef.current = false
                       if (isOpen) setDetail(m)
-                      else setOpenId(m.trakt)
+                      else setOpenId(key)
                     }}
                   >
                     <span className="mv-spine__art" style={poster ? { backgroundImage: `url(${IMG}w342${poster})` } : undefined} />
@@ -215,7 +324,7 @@ export default function MovieShelf() {
                 <p className="mv-caption__title font-display">{titleOf(opened)}</p>
                 <p className="mv-caption__meta">
                   {originalOf(opened) !== titleOf(opened) ? `${originalOf(opened)} / ` : ''}
-                  {opened.year}
+                  {opened.year} / {kindLabel(opened)}
                 </p>
                 <Stars rating={opened.rating} />
               </>
@@ -227,7 +336,7 @@ export default function MovieShelf() {
       ) : (
         <ul className="mv-grid">
           {shown.map((m) => (
-            <li key={m.trakt}>
+            <li key={keyOf(m)}>
               <button type="button" className="mv-card" onClick={() => setDetail(m)}>
                 {m.details?.poster ? (
                   <img src={`${IMG}w342${m.details.poster}`} alt="" loading="lazy" />
@@ -250,7 +359,7 @@ export default function MovieShelf() {
         。題名・ポスター・あらすじ：<a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a>
         。This product uses the TMDB API but is not endorsed or certified by TMDB.
       </p>
-      {detail && <Detail movie={detail} onClose={() => setDetail(null)} />}
+      {detail && <Detail movie={detail} onClose={closeDetail} />}
     </div>
   )
 }

@@ -63,6 +63,7 @@
 .mv-caption__title { font-size: clamp(20px, 3vw, 26px); line-height: 1.3; }
 .mv-caption__meta { font-family: 'Fira Mono', ui-monospace, monospace; font-size: 13px; color: var(--color-muted); }
 .mv-caption__hint { font-size: 14px; color: var(--color-muted); }
+.mv-note { font-size: 13px; color: var(--color-muted); }
 
 /* 一覧(ポスターの格子) */
 .mv-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 20px 14px; }
@@ -84,6 +85,7 @@
 .mv-detail__panel {
   position: relative; width: min(920px, 100%); max-height: calc(100vh - 32px); overflow: auto; border-radius: 8px;
   background: var(--color-paper); color: var(--color-ink); padding: 48px 28px 28px;
+  overscroll-behavior: contain; /* 中を最後までスクロールしても、後ろのページへ伝えない */
 }
 .mv-detail__close {
   position: absolute; top: 12px; right: 12px; font: inherit; font-size: 14px; color: var(--color-ink); background: transparent;
@@ -93,12 +95,17 @@
 .mv-detail__text { display: grid; gap: 10px; }
 .mv-detail__title { font-size: clamp(26px, 4vw, 40px); line-height: 1.2; }
 .mv-detail__meta { font-family: 'Fira Mono', ui-monospace, monospace; font-size: 13px; color: var(--color-muted); }
-.mv-detail__rating { display: flex; gap: 8px; align-items: center; font-family: 'Fira Mono', ui-monospace, monospace; font-size: 13px; }
+.mv-detail__rating { display: grid; gap: 2px; }
+.mv-detail__rating p:first-child { display: flex; gap: 8px; align-items: center; font-family: 'Fira Mono', ui-monospace, monospace; font-size: 13px; }
 .mv-detail__overview { font-size: 15px; line-height: 1.9; max-width: 60ch; }
 .mv-detail__note { display: block; font-size: 12px; color: var(--color-muted); margin-top: 4px; }
 .mv-detail__links { display: flex; gap: 16px; font-size: 14px; }
 .mv-detail__links a { color: var(--color-ink); text-underline-offset: 3px; }
 .mv-detail__poster { width: 100%; border-radius: 4px; display: block; }
+
+/* スマホだけ: 画面の下の真ん中の丸い × */
+.mv-detail__close-round { display: none; }
+.mv-detail__close-round svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
 
 .mv-credit { font-size: 12px; color: var(--color-muted); line-height: 1.8; }
 .mv-credit a { color: inherit; text-underline-offset: 2px; }
@@ -109,7 +116,16 @@
   .mv-spine__band { top: 26px; bottom: 26px; }
   .mv-arrow { display: none; }
   .mv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .mv-detail__panel { padding: 52px 18px 20px; }
+  /* 上の「閉じる」の代わりに、下の真ん中の丸い × を出す。本文の最後(Trakt・TMDB)が × に隠れないよう、下に余白をとる */
+  .mv-detail { align-items: start; }
+  .mv-detail__panel { padding: 20px 18px 96px; max-height: calc(100vh - 32px); }
+  .mv-detail__close { display: none; }
+  .mv-detail__close-round {
+    display: grid; place-items: center; position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 61;
+    width: 52px; height: 52px; border-radius: 50%; padding: 0; cursor: pointer;
+    background: var(--color-ink); color: var(--color-paper); border: 2px solid var(--color-paper);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
   .mv-detail__body { grid-template-columns: 1fr; }
   .mv-detail__poster { max-width: 240px; order: -1; }
 }
