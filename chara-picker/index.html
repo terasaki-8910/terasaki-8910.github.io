@@ -14,8 +14,7 @@
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#F9EC8E" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#F9EC8E">
 
     <!-- Open Graph (SNSシェア用) -->
     <meta property="og:title" content="理想の推しア◯ネイター">
@@ -39,9 +38,7 @@
          (CSSバンドルの読み込みを待たずに本サイトと同じ地の色にする)。 -->
     <style>
       html { background-color: #F9EC8E; }
-      @media (prefers-color-scheme: dark) {
-        html { background-color: #121212; }
-      }
+      html[data-theme="dark"] { background-color: #121212; }
     </style>
 
     <!-- seo-fallback-contentを常に非表示にする(index.htmlと同じ方式)。 -->

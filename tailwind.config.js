@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // CSS変数経由(index.cssの:rootと@media (prefers-color-scheme: dark)で
+        // CSS変数経由(index.cssの:rootと:root[data-theme="dark"]で
         // 値を定義)。ライト/ダーク切り替えで全コンポーネントの配色が自動追従する。
         'paper': 'var(--color-paper)',
         'surface': 'var(--color-surface)',

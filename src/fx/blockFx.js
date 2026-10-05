@@ -30,17 +30,9 @@ function prefersReducedMotion() {
   return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)
 }
 
-// headの差し込みスクリプトと同じ順で決める: data-theme → localStorage → OSの設定
+// テーマは html の data-theme で決まる(head のスクリプトが最初の描画より前に決める。OSの設定は見ない)
 function currentTheme() {
-  const attr = root.getAttribute('data-theme')
-  if (attr === 'dark' || attr === 'light') return attr
-  try {
-    const saved = window.localStorage.getItem('theme')
-    if (saved === 'dark' || saved === 'light') return saved
-  } catch {
-    // localStorage が使えない環境では OS の設定に従う
-  }
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
 }
 
 // ---- マスの配置 -------------------------------------------------------------
@@ -371,10 +363,6 @@ function init() {
     if (covered) fillCover()
   }
   new MutationObserver(redrawForTheme).observe(root, { attributes: true, attributeFilter: ['data-theme'] })
-  if (window.matchMedia) {
-    const media = window.matchMedia('(prefers-color-scheme: dark)')
-    if (media.addEventListener) media.addEventListener('change', redrawForTheme)
-  }
 }
 
 if (document.body) init()

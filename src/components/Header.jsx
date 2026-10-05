@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react'
 import ProjectMenu from './ProjectMenu'
 
+// いつもライトで開く(2026-10-05 本人指定。OSの設定がダークでも)。html の data-theme は
+// head のスクリプト(vite.config.js)が先に決めている。切り替えはタブを開いている間だけ覚える。
 function getInitialTheme() {
-  const saved = window.localStorage.getItem('theme')
-  if (saved === 'light' || saved === 'dark') return saved
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
 }
 
 const Header = ({ currentPage = 'home' }) => {
@@ -27,7 +27,11 @@ const Header = ({ currentPage = 'home' }) => {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    window.localStorage.setItem('theme', theme)
+    try {
+      window.sessionStorage.setItem('theme', theme)
+    } catch {
+      // 保存できない環境では、このページの間だけ切り替わる
+    }
   }, [theme])
 
   // sync-header.jsのreturn抽出は非貪欲マッチで最初の")"で止まるため、
