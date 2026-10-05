@@ -1,0 +1,61 @@
+name: Update Trakt Movies
+
+# Trakt の「観た・評価・観たい」を取り、/movies/ のページが読む JSON を作り直す
+# (scripts/update-trakt.mjs)。毎日1回。Trakt の API アプリは30日使われないと自動で消えるので、
+# 毎日の取得はそれを防ぐ役目もある。
+on:
+  schedule:
+    - cron: '30 19 * * *' # 毎日 19:30 UTC (翌 04:30 JST)
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/update-trakt.yml'
+      - 'scripts/update-trakt.mjs'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update Trakt movies
+        env:
+          TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: node scripts/update-trakt.mjs
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/trakt docs/trakt
+          if git diff --staged --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "🎬 Update Trakt movies"
+          # ほかの自動更新が先に push していたときに備えてリトライする(update-spotify.yml と同じ)
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "push失敗、pull --rebaseしてリトライ ($i/5)"
+            git pull --rebase origin main
+            sleep $((i * 3))
+          done
+          echo "5回リトライしてもpushできませんでした"
+          exit 1
