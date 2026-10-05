@@ -281,6 +281,20 @@ async function main() {
     }
   }
 
+  // tag-map から消えた id(例: 重複で外した fate-jeanne)は、一覧からも消す。前回の結果を土台にしているので、
+  // 消さないと残り続ける。一部の id だけを取り直したとき(引数あり)は、ほかの id を判断できないので消さない。
+  // 2026-10-05 本人指定(開発元の確認シート R3-6)。
+  let pruned = 0;
+  if (onlyIds.length === 0) {
+    for (const id of Object.keys(characters)) {
+      if (!(id in tagMap)) {
+        delete characters[id];
+        pruned += 1;
+      }
+    }
+    if (pruned > 0) process.stderr.write(`tag-map に無い ${pruned} 件を一覧から外しました\n`);
+  }
+
   // 中身が変わっていないなら generatedAt も据え置く。毎回書き換えると
   // 「変更なし」のはずの週次実行が必ず差分を作り、無意味なコミットが積み上がる。
   const prevGeneratedAt = (() => {
