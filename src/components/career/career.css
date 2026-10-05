@@ -1,0 +1,26 @@
+/* /career/ だけで使う部品 */
+
+/* 専門用語: 点線の下線と小さなアイコン。押せることが分かるように、カーソルは help */
+.term { position: relative; }
+.term__word {
+  font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: help;
+  text-decoration: underline dotted; text-decoration-color: var(--color-muted);
+  text-decoration-thickness: 1px; text-underline-offset: 0.25em;
+}
+.term__word:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; border-radius: 2px; }
+.term__icon { display: inline-block; width: 0.75em; height: 0.75em; margin-left: 0.1em; vertical-align: 0.4em; color: var(--color-muted); }
+/* 吹き出しは文字と地の色を入れ替えて、本文と見分ける */
+.term__note {
+  position: absolute; left: 0; top: calc(100% + 6px); z-index: 30; display: block;
+  width: max-content; max-width: min(20rem, calc(100vw - 24px));
+  padding: 10px 12px; border-radius: 3px; background: var(--color-ink); color: var(--color-paper);
+  font-size: 14px; line-height: 1.6; text-align: left; white-space: normal;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
+}
+
+/* プロジェクトの画面のスクショ。縦横比を先に決めて、読み込みでずれないようにする */
+.work-shot { display: block; margin-top: 1rem; max-width: 100%; height: auto; border-radius: 3px; }
+.work-shot--framed { border: 1px solid var(--color-line); }
+
+/* 名前の読み仮名 */
+.name-ruby rt { font-size: 0.22em; letter-spacing: 0.1em; color: var(--color-muted); font-family: inherit; }
