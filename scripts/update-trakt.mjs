@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 /**
- * Trakt に入れた映画(観た・評価・観たい)を取り、TMDb で日本語の題名・ポスター・あらすじを足して
- * public/trakt/movies.json(と docs/trakt/movies.json)に書く。/movies/ のページはこれを読む。
+ * Trakt に入れた映画・ドラマ・アニメ(観た・評価・観たい)を取り、TMDb で日本語の題名・ポスター・
+ * あらすじを足して public/trakt/movies.json(と docs/trakt/movies.json)に書く。/movies/ のページはこれを読む。
  *
  * ■ 取り方
  *   - Trakt は Client ID だけで読む。プロフィールが公開なので、観た・評価・観たいの取得は
  *     OAuth が要らない(公式の説明で「OAuth Optional」)。ヘッダーは公式の Required Headers のとおり。
+ *   - ドラマとアニメは Trakt の「番組(show)」。アニメかどうかは Trakt のジャンル anime で分ける
+ *     (映画にもアニメがある)。
  *   - ポスターは TMDb の画像を直接読み込む(複製しない。確認シート R10-7)。Trakt の画像は
  *     直リンクが禁止されているので使わない。
- *   - TMDb の詳細は、前回の JSON にある映画は使い回し、新しく入った映画の分だけ取る。
+ *   - TMDb の詳細は、前回の JSON にあるものは使い回し、新しく入った作品の分だけ取る。
  *
  * ■ 使い方
  *   node scripts/update-trakt.mjs
@@ -86,26 +88,44 @@ async function tmdb(endpoint, language) {
   throw new Error(`TMDb ${endpoint}: 429 が続いた`)
 }
 
-/** TMDb から、日本語の題名・ポスター・ジャンル・上映時間・あらすじを取る。日本語のあらすじが無ければ英語 */
-async function tmdbDetails(tmdbId) {
-  const ja = await tmdb(`/movie/${tmdbId}`, 'ja-JP')
+/**
+ * TMDb から、日本語の題名・ポスター・ジャンル・上映時間・あらすじを取る。日本語のあらすじが無ければ英語。
+ * type は 'movie' か 'show'(TMDb では tv)。
+ */
+async function tmdbDetails(type, tmdbId) {
+  const kind = type === 'show' ? 'tv' : 'movie'
+  const ja = await tmdb(`/${kind}/${tmdbId}`, 'ja-JP')
   if (!ja) return null
   let overview = ja.overview || ''
   let overviewLang = 'ja'
   if (!overview) {
-    const en = await tmdb(`/movie/${tmdbId}`, 'en-US')
+    const en = await tmdb(`/${kind}/${tmdbId}`, 'en-US')
     overview = (en && en.overview) || ''
     overviewLang = 'en'
   }
-  return {
-    title: ja.title || null,
-    originalTitle: ja.original_title || null,
+  const common = {
     poster: ja.poster_path || null,
     genres: (ja.genres || []).map((g) => g.name),
-    runtime: ja.runtime || null,
-    releaseDate: ja.release_date || null,
     overview,
     overviewLang,
+  }
+  if (kind === 'tv') {
+    return {
+      ...common,
+      title: ja.name || null,
+      originalTitle: ja.original_name || null,
+      runtime: (ja.episode_run_time && ja.episode_run_time[0]) || null,
+      releaseDate: ja.first_air_date || null,
+      seasons: ja.number_of_seasons || null,
+      episodes: ja.number_of_episodes || null,
+    }
+  }
+  return {
+    ...common,
+    title: ja.title || null,
+    originalTitle: ja.original_title || null,
+    runtime: ja.runtime || null,
+    releaseDate: ja.release_date || null,
   }
 }
 
@@ -125,6 +145,7 @@ async function mapLimit(items, limit, fn) {
 }
 
 const knownDate = (value) => (value && !value.startsWith(UNKNOWN_DATE) ? value : null)
+const dateOnly = (value) => (value ? String(value).slice(0, 10) : null)
 
 function readPrevious() {
   try {
@@ -134,73 +155,114 @@ function readPrevious() {
   }
 }
 
+/** Trakt の項目から、映画か番組かと、その中身を取り出す */
+function unwrap(item) {
+  if (item.movie) return { type: 'movie', media: item.movie }
+  return { type: 'show', media: item.show }
+}
+
+/** 映画・ドラマ・アニメのどれか。アニメは Trakt のジャンル anime で決める(映画にもある) */
+function kindOf(type, media) {
+  if ((media.genres || []).includes('anime')) return 'anime'
+  return type === 'show' ? 'drama' : 'movie'
+}
+
 async function main() {
-  const [watched, ratings, watchlist] = await Promise.all([
-    traktAll(`/users/${USER}/watched/movies`),
-    traktAll(`/users/${USER}/ratings/movies`),
-    traktAll(`/users/${USER}/watchlist/movies/added`),
+  const [watchedMovies, watchedShows, ratingMovies, ratingShows, listMovies, listShows, historyMovies] = await Promise.all([
+    traktAll(`/users/${USER}/watched/movies?extended=full`),
+    traktAll(`/users/${USER}/watched/shows?extended=full,noseasons`),
+    traktAll(`/users/${USER}/ratings/movies?extended=full`),
+    traktAll(`/users/${USER}/ratings/shows?extended=full`),
+    traktAll(`/users/${USER}/watchlist/movies/added?extended=full`),
+    traktAll(`/users/${USER}/watchlist/shows/added?extended=full`),
+    traktAll(`/users/${USER}/history/movies`),
   ])
-  console.log(`📥 Trakt(${USER}): 観た ${watched.length} / 評価 ${ratings.length} / 観たい ${watchlist.length}`)
+  console.log(
+    `📥 Trakt(${USER}): 観た 映画 ${watchedMovies.length}・番組 ${watchedShows.length} / 評価 ${ratingMovies.length + ratingShows.length} / 観たい ${listMovies.length + listShows.length}`,
+  )
 
-  const ratingByTrakt = new Map(ratings.map((r) => [r.movie.ids.trakt, { rating: r.rating, ratedAt: r.rated_at }]))
+  const keyOf = (type, media) => `${type}:${media.ids.trakt}`
+  const ratingByKey = new Map(
+    [...ratingMovies, ...ratingShows].map((r) => {
+      const { type, media } = unwrap(r)
+      return [keyOf(type, media), { rating: r.rating, ratedAt: r.rated_at }]
+    }),
+  )
+  // 視聴順の代わり: 観た日が入っていない映画は、Trakt に記録した順(履歴の id が大きいほど後)を使う
+  const recordedById = new Map()
+  for (const h of historyMovies) {
+    const key = keyOf('movie', h.movie)
+    recordedById.set(key, Math.max(recordedById.get(key) ?? 0, h.id))
+  }
 
-  // 観た映画。評価だけがあって「観た」になっていない映画も、観たものとして並べる
+  // 観たもの。評価だけがあって「観た」になっていないものも、観たものとして並べる
   const watchedMap = new Map()
-  for (const w of watched) {
-    watchedMap.set(w.movie.ids.trakt, { movie: w.movie, plays: w.plays || 1, lastWatchedAt: knownDate(w.last_watched_at) })
+  for (const w of [...watchedMovies, ...watchedShows]) {
+    const { type, media } = unwrap(w)
+    watchedMap.set(keyOf(type, media), { type, media, plays: w.plays || 1, lastWatchedAt: knownDate(w.last_watched_at) })
   }
-  for (const r of ratings) {
-    if (!watchedMap.has(r.movie.ids.trakt)) watchedMap.set(r.movie.ids.trakt, { movie: r.movie, plays: 0, lastWatchedAt: null })
+  for (const r of [...ratingMovies, ...ratingShows]) {
+    const { type, media } = unwrap(r)
+    const key = keyOf(type, media)
+    if (!watchedMap.has(key)) watchedMap.set(key, { type, media, plays: 0, lastWatchedAt: null })
   }
+  const watchlist = [...listMovies, ...listShows].map((w) => ({ ...unwrap(w), listedAt: w.listed_at ?? null }))
 
+  // TMDb の詳細は前回分を使い回す(キーは type:tmdb。前回の版は映画だけで type が無い)
   const previous = readPrevious()
   const cache = new Map()
   for (const list of [previous?.watched ?? [], previous?.watchlist ?? []]) {
-    for (const m of list) if (m.tmdb && m.details) cache.set(m.tmdb, m.details)
+    for (const m of list) if (m.tmdb && m.details) cache.set(`${m.type ?? 'movie'}:${m.tmdb}`, m.details)
   }
 
-  const allTmdb = [...new Set([...watchedMap.values(), ...watchlist].map((x) => x.movie.ids.tmdb).filter(Boolean))]
-  const missing = allTmdb.filter((id) => !cache.has(id))
+  const wanted = new Map()
+  for (const { type, media } of [...watchedMap.values(), ...watchlist]) {
+    if (media.ids.tmdb) wanted.set(`${type}:${media.ids.tmdb}`, { type, tmdb: media.ids.tmdb })
+  }
+  const missing = [...wanted.entries()].filter(([key]) => !cache.has(key))
   let fetched = 0
-  await mapLimit(missing, 6, async (id) => {
+  await mapLimit(missing, 6, async ([key, { type, tmdb: id }]) => {
     try {
-      const details = await tmdbDetails(id)
+      const details = await tmdbDetails(type, id)
       if (details) {
-        cache.set(id, details)
+        cache.set(key, details)
         fetched += 1
       }
     } catch (err) {
-      console.warn(`⚠️  TMDb ${id}: ${err.message}`)
+      console.warn(`⚠️  TMDb ${key}: ${err.message}`)
     }
   })
-  console.log(`🎞️  TMDb: 新しく ${fetched} 本 / 前回から ${allTmdb.length - missing.length} 本`)
+  console.log(`🎞️  TMDb: 新しく ${fetched} 本 / 前回から ${wanted.size - missing.length} 本`)
 
-  const base = (movie) => ({
-    trakt: movie.ids.trakt,
-    tmdb: movie.ids.tmdb ?? null,
-    slug: movie.ids.slug,
-    year: movie.year ?? null,
-    traktTitle: movie.title,
-    details: (movie.ids.tmdb && cache.get(movie.ids.tmdb)) || null,
-  })
+  const base = (type, media) => {
+    const details = (media.ids.tmdb && cache.get(`${type}:${media.ids.tmdb}`)) || null
+    return {
+      type,
+      kind: kindOf(type, media),
+      trakt: media.ids.trakt,
+      tmdb: media.ids.tmdb ?? null,
+      slug: media.ids.slug,
+      year: media.year ?? null,
+      // 時系列順に使う日付。TMDb の初公開日(年とそろう)を先に使う。Trakt の released は
+      // アメリカでの公開日のことがあり、映画祭で先に出た映画で年とずれる(例: Unfriended)
+      released: details?.releaseDate || dateOnly(type === 'show' ? media.first_aired : media.released),
+      traktTitle: media.title,
+      details,
+    }
+  }
 
-  const watchedOut = [...watchedMap.values()].map(({ movie, plays, lastWatchedAt }) => ({
-    ...base(movie),
-    plays,
-    lastWatchedAt,
-    ...(ratingByTrakt.get(movie.ids.trakt) ?? { rating: null, ratedAt: null }),
-  }))
-  // 観た日の新しい順。日付の無い記録はその後ろに、公開年の新しい順
-  watchedOut.sort((a, b) => {
-    if (a.lastWatchedAt && b.lastWatchedAt) return b.lastWatchedAt.localeCompare(a.lastWatchedAt)
-    if (a.lastWatchedAt) return -1
-    if (b.lastWatchedAt) return 1
-    return (b.year ?? 0) - (a.year ?? 0)
-  })
-
-  const watchlistOut = watchlist
-    .map((w) => ({ ...base(w.movie), listedAt: w.listed_at ?? null, rating: null }))
-    .sort((a, b) => (b.listedAt ?? '').localeCompare(a.listedAt ?? ''))
+  // 並びはページで選ぶ。ここでは差分が安定するよう、公開日の古い順にしておく
+  const byReleased = (a, b) => (a.released ?? '9999').localeCompare(b.released ?? '9999') || a.trakt - b.trakt
+  const watchedOut = [...watchedMap.entries()]
+    .map(([key, { type, media, plays, lastWatchedAt }]) => ({
+      ...base(type, media),
+      plays,
+      lastWatchedAt,
+      recordedOrder: recordedById.get(key) ?? null,
+      ...(ratingByKey.get(key) ?? { rating: null, ratedAt: null }),
+    }))
+    .sort(byReleased)
+  const watchlistOut = watchlist.map(({ type, media, listedAt }) => ({ ...base(type, media), listedAt, rating: null })).sort(byReleased)
 
   const body = { user: USER, watched: watchedOut, watchlist: watchlistOut }
   // 中身が変わっていなければ generatedAt も据え置く(毎日の空コミットを避ける)
@@ -213,7 +275,10 @@ async function main() {
     fs.mkdirSync(path.dirname(out), { recursive: true })
     fs.writeFileSync(out, json)
   }
-  console.log(`✅ ${unchanged ? '変化なし' : '書き出し'}: 観た ${watchedOut.length} 本・観たい ${watchlistOut.length} 本`)
+  const count = (list, kind) => list.filter((m) => m.kind === kind).length
+  console.log(
+    `✅ ${unchanged ? '変化なし' : '書き出し'}: 観た ${watchedOut.length}（映画 ${count(watchedOut, 'movie')}・アニメ ${count(watchedOut, 'anime')}・ドラマ ${count(watchedOut, 'drama')}）・観たい ${watchlistOut.length}`,
+  )
 }
 
 main().catch((err) => fail(err.message))
