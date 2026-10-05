@@ -1,9 +1,13 @@
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 
-import { skills } from '../data/skills'
+import { skills as allSkills } from '../data/skills'
 import { research } from '../data/research'
-import { timeline } from '../data/timeline'
+import { timeline as allTimeline } from '../data/timeline'
+
+// onTop: false の項目は /career/ だけに出す
+const skills = allSkills.filter((item) => item.onTop !== false)
+const timeline = allTimeline.filter((item) => item.onTop !== false)
 
 const intro = [
   { label: 'HN', value: '冬色' },
