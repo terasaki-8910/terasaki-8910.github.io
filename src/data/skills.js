@@ -2,8 +2,8 @@
 // period は表示用の文字列で、空なら表示しない(トップだけで使う)。
 // text はトップに出す文面。careerText があれば /career/ ではそちらを出す
 // (/career/ の文面は確認シート14回目で本人に直してもらっている途中の下書き。決まるまでトップは今の文面のまま)。
-// group: /career/ での分け方。main = 説明を厚く書ける主な技術(careerOrder の順。研究に近いものから)、
-// other = 「その他」。level で温度感を分ける(OTHER_LEVELS)。onTop: false はトップには出さない。
+// group: 分け方(トップも /career/ と同じ。確認シート14回目 R14-7)。main = 説明を厚く書ける主な技術
+// (careerOrder の順。研究に近いものから)、other = 「その他」。level で温度感を分ける(OTHER_LEVELS)。
 export const skills = [
   {
     name: 'GitHub',
@@ -41,7 +41,8 @@ export const skills = [
     group: 'other',
     level: 'some',
     note: 'このサイト',
-    text: 'This site',
+    // 確認シート14回目 R14-8 で決まった文面
+    text: 'このサイトを React で作っています',
   },
   {
     name: 'Ruby on Rails',
@@ -51,8 +52,8 @@ export const skills = [
     note: 'TA',
     text: 'Webアプリ作成実験のTAで学生たちに基本的なアプリの作成方法とエラーの対処法を教えた。',
   },
-  { name: 'C#', group: 'other', level: 'touched', onTop: false },
-  { name: 'C++', group: 'other', level: 'touched', onTop: false },
+  { name: 'C#', group: 'other', level: 'touched' },
+  { name: 'C++', group: 'other', level: 'touched' },
 ]
 
 // /career/ の「その他」の温度感(下書き。友人の「使ったことがある」と「まあまあ触った」で分ける案)

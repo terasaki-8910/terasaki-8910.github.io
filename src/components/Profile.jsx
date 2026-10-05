@@ -1,13 +1,19 @@
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 
-import { skills as allSkills } from '../data/skills'
+import { skills as allSkills, OTHER_LEVELS } from '../data/skills'
 import { research } from '../data/research'
 import { timeline as allTimeline } from '../data/timeline'
 
 // onTop: false の項目は /career/ だけに出す
 const skills = allSkills.filter((item) => item.onTop !== false)
 const timeline = allTimeline.filter((item) => item.onTop !== false)
+// 技術スタックは /career/ と同じ並べ方(主な技術と、温度感ごとの「その他」。期間は出さない。確認シート14回目 R14-7)
+const mainSkills = skills.filter((skill) => skill.group === 'main').sort((a, b) => a.careerOrder - b.careerOrder)
+const otherLevels = OTHER_LEVELS.map((level) => ({
+  ...level,
+  items: skills.filter((skill) => skill.group === 'other' && skill.level === level.id),
+})).filter((level) => level.items.length > 0)
 
 const intro = [
   { label: 'HN', value: '冬色' },
@@ -85,19 +91,29 @@ export default function Profile() {
 
           <div className="mt-4 md:mt-0 md:col-start-2 md:row-start-1 md:row-span-3">
             <h3 className="text-2xl font-display text-ink mb-6">技術スタック</h3>
-            <div className="space-y-6">
-              {skills.map((skill, index) => (
-                <div
-                  key={skill.name}
-                  ref={(el) => (listItemsRef.current[index] = el)}
-                  className="relative pl-6 border-l border-line"
-                >
-                  {skill.period && <div className="text-sm font-mono text-accent">{skill.period}</div>}
-                  <h4 className="text-xl font-display text-ink mt-2">{skill.name}</h4>
+            <div className="border-t border-line">
+              {mainSkills.map((skill, index) => (
+                <div key={skill.name} ref={(el) => (listItemsRef.current[index] = el)} className="border-b border-line py-4">
+                  <h4 className="text-xl font-display text-ink">{skill.name}</h4>
                   <p className="text-muted leading-relaxed mt-1">{skill.text}</p>
                 </div>
               ))}
             </div>
+            {otherLevels.length > 0 && (
+              <div ref={(el) => (listItemsRef.current[mainSkills.length] = el)} className="mt-8">
+                <h4 className="text-xl font-display text-ink">その他</h4>
+                <dl className="mt-3 space-y-2">
+                  {otherLevels.map((level) => (
+                    <div key={level.id}>
+                      <dt className="text-sm text-muted">{level.label}</dt>
+                      <dd className="text-ink">
+                        {level.items.map((skill) => `${skill.name}${skill.note ? `（${skill.note}）` : ''}`).join('、')}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
           </div>
 
           <div className="md:col-start-1 md:row-start-2 md:mt-16">
@@ -125,7 +141,7 @@ export default function Profile() {
             {research.talks.map((talk, index) => (
               <div
                 key={talk.title}
-                ref={(el) => (listItemsRef.current[skills.length + index] = el)}
+                ref={(el) => (listItemsRef.current[mainSkills.length + 1 + index] = el)}
                 className="relative pl-6 border-l border-line"
               >
                 <div className="text-sm font-mono text-accent">{talk.date}</div>

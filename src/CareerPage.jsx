@@ -173,7 +173,7 @@ export default function CareerPage() {
             <p className="text-lg text-ink leading-relaxed">{annotate(INTRO, seenIntro)}</p>
             <div className="space-y-6 mt-10">
               {timeline.map((item) => (
-                <Entry key={item.year} label={item.careerYear || item.year} title={item.title}>
+                <Entry key={item.year} label={item.year} title={item.title}>
                   <p className="text-ink leading-relaxed mt-1">{annotate(item.description, seenIntro)}</p>
                 </Entry>
               ))}
