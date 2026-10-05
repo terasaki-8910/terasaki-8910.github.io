@@ -18,20 +18,47 @@
   font-size: 14px; line-height: 1.6; text-align: left; white-space: normal; overflow-wrap: anywhere;
   box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
 }
+.term__note::before { content: ''; position: absolute; left: 0; right: 0; top: -10px; height: 10px; }
+.term__link { display: block; margin-top: 4px; color: var(--color-paper); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.term__link:focus-visible { outline: 2px solid var(--color-paper); outline-offset: 2px; }
 
 /* プロジェクトの画面のスクショ。どれも同じ高さにそろえ、幅は画像の縦横比に任せる。
-   見せ方は3案(data-frame)。見本では /career/?frame=block|mat|soft で切り替えられる */
+   見せ方は A(ブロックの影)に決めた(確認シート15回目 R15-1)。黒い枠とピンクのずらした影(ぼかさない)で、
+   ロゴ(ピンクに黒の縁)と背景のマスに合わせる。押すと大きく出す(R15-2。カーソルは虫眼鏡)。
+   並べ方は2案(data-layout)。stack = 題の下に横に並べる、side = PC では右の列に縦に積み、左に説明を置く。
+   見本では /career/?layout=side で切り替えられる(決まったら1つにする) */
 .works { --shot-h: 180px; --shot-mat: rgb(255 255 255 / 0.55); }
 :root[data-theme='dark'] .works { --shot-mat: rgb(255 255 255 / 0.06); }
 @media (max-width: 639px) { .works { --shot-h: 140px; } }
-.work-shot { display: inline-block; margin-top: 1rem; line-height: 0; }
+.work-shots { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 1rem; }
+.work-shot {
+  display: inline-block; line-height: 0; cursor: zoom-in; font: inherit; color: inherit;
+  padding: 8px; background: var(--shot-mat); border: 1.5px solid var(--color-ink); border-radius: 3px;
+  box-shadow: 6px 6px 0 rgb(var(--color-accent));
+}
+.work-shot:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 4px; }
 .work-shot img { display: block; height: var(--shot-h); width: auto; max-width: 100%; object-fit: contain; }
-/* A: ブロックの影。黒い枠とピンクのずらした影(ぼかさない)。ロゴ(ピンクに黒の縁)と背景のマスに合わせる */
-.works[data-frame='block'] .work-shot { padding: 8px; background: var(--shot-mat); border: 1.5px solid var(--color-ink); border-radius: 3px; box-shadow: 6px 6px 0 rgb(var(--color-accent)); }
-/* B: 台紙。うすい白の台に細い線の枠。影は付けない */
-.works[data-frame='mat'] .work-shot { padding: 10px; background: var(--shot-mat); border: 1px solid var(--color-line); border-radius: 4px; }
-/* C: やわらかい影。枠を付けず、画面の下にぼかした影だけを落とす */
-.works[data-frame='soft'] .work-shot img { border-radius: 6px; box-shadow: 0 10px 24px rgb(0 0 0 / 0.18), 0 2px 6px rgb(0 0 0 / 0.08); }
+@media (min-width: 768px) {
+  .works[data-layout='side'] { --shot-h: 150px; }
+  .works[data-layout='side'] .work { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 28px; }
+  .works[data-layout='side'] .work__head { grid-column: 1 / -1; }
+  .works[data-layout='side'] .work-shots { grid-column: 2; grid-row: 2; flex-direction: column; align-items: flex-end; align-self: start; margin-top: 1rem; }
+  .works[data-layout='side'] .work__facts { grid-column: 1; grid-row: 2; }
+}
+
+/* 画像を大きく見る(外側・Esc・× で閉じる) */
+.shot-viewer {
+  position: fixed; inset: 0; z-index: 100; display: grid; place-items: center;
+  padding: calc(64px + env(safe-area-inset-top, 0px)) 16px calc(24px + env(safe-area-inset-bottom, 0px));
+  background: rgb(0 0 0 / 0.72); cursor: zoom-out;
+}
+.shot-viewer img { max-width: min(1280px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 4px; cursor: default; box-shadow: 0 12px 40px rgb(0 0 0 / 0.4); }
+.shot-viewer__close {
+  position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); right: 12px; width: 44px; height: 44px;
+  display: grid; place-items: center; border-radius: 50%; cursor: pointer; font-size: 22px; line-height: 1;
+  background: var(--color-paper); color: var(--color-ink); border: 1.5px solid var(--color-ink);
+}
+.shot-viewer__close:focus-visible { outline: 2px solid var(--color-paper); outline-offset: 2px; }
 
 /* 名前の読み仮名 */
 .name-ruby { ruby-align: center; }

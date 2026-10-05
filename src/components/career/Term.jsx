@@ -11,7 +11,7 @@ const canHover = () => typeof window !== 'undefined' && window.matchMedia && win
  * 語は span(role="button")にして、英語の語も文の中でふつうに折り返せるようにする(button だと折り返さない)。
  * 吹き出しは語の終わり(アイコンの下)に付け、画面の端からはみ出す分だけ横にずらす。
  */
-export default function Term({ children, note }) {
+export default function Term({ children, note, link }) {
   const [open, setOpen] = useState(false)
   const [shift, setShift] = useState(0)
   const id = useId()
@@ -19,6 +19,8 @@ export default function Term({ children, note }) {
   const noteRef = useRef(null)
   const hoverRef = useRef(false)
   const pinnedRef = useRef(false)
+  // マウスが語から吹き出しへ移る間に閉じないよう、閉じるのを少し待つ
+  const leaveTimer = useRef(0)
 
   const close = () => {
     pinnedRef.current = false
@@ -62,12 +64,16 @@ export default function Term({ children, note }) {
       className="term"
       onMouseEnter={() => {
         if (!canHover()) return
+        window.clearTimeout(leaveTimer.current)
         hoverRef.current = true
         setOpen(true)
       }}
       onMouseLeave={() => {
         hoverRef.current = false
-        if (!pinnedRef.current) setOpen(false)
+        window.clearTimeout(leaveTimer.current)
+        leaveTimer.current = window.setTimeout(() => {
+          if (!pinnedRef.current && !hoverRef.current) setOpen(false)
+        }, 150)
       }}
     >
       <span
@@ -95,6 +101,11 @@ export default function Term({ children, note }) {
         {open && (
           <span ref={noteRef} id={id} role="tooltip" className="term__note" style={shift ? { transform: `translateX(${shift}px)` } : undefined}>
             {note}
+            {link && (
+              <a className="term__link" href={link} target="_blank" rel="noopener noreferrer">
+                {new URL(link).host}
+              </a>
+            )}
           </span>
         )}
       </span>
@@ -121,7 +132,7 @@ export function annotate(text, seen) {
     if (!best) break
     parts.push(rest.slice(0, best.at))
     parts.push(
-      <Term key={best.entry.id} note={best.entry.note}>
+      <Term key={best.entry.id} note={best.entry.note} link={best.entry.link}>
         {best.word}
       </Term>,
     )

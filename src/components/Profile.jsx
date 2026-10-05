@@ -95,7 +95,7 @@ export default function Profile() {
               {mainSkills.map((skill, index) => (
                 <div key={skill.name} ref={(el) => (listItemsRef.current[index] = el)} className="border-b border-line py-4">
                   <h4 className="text-xl font-display text-ink">{skill.name}</h4>
-                  <p className="text-muted leading-relaxed mt-1">{skill.text}</p>
+                  <p className="text-ink leading-relaxed mt-1">{skill.text}</p>
                 </div>
               ))}
             </div>
@@ -123,11 +123,11 @@ export default function Profile() {
                 <div
                   key={item.year}
                   ref={(el) => (itemsRef.current[index] = el)}
-                  className="relative pl-6 border-l border-line"
+                  className="relative pl-6 border-l-2 border-accent"
                 >
-                  <div className="text-sm font-mono text-accent">{item.year}</div>
+                  <div className="text-sm font-mono text-ink">{item.year}</div>
                   <h4 className="text-xl font-display text-ink mt-2">{item.title}</h4>
-                  <p className="text-muted leading-relaxed mt-1">{item.description}</p>
+                  <p className="text-ink leading-relaxed mt-1">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -142,11 +142,11 @@ export default function Profile() {
               <div
                 key={talk.title}
                 ref={(el) => (listItemsRef.current[mainSkills.length + 1 + index] = el)}
-                className="relative pl-6 border-l border-line"
+                className="relative pl-6 border-l-2 border-accent"
               >
-                <div className="text-sm font-mono text-accent">{talk.date}</div>
+                <div className="text-sm font-mono text-ink">{talk.date}</div>
                 <h4 className="text-xl font-display text-ink mt-2">{talk.title}</h4>
-                <p className="text-muted leading-relaxed mt-1">
+                <p className="text-sm text-ink leading-relaxed mt-2">
                   {talk.authors} ／ {talk.venue}
                 </p>
               </div>

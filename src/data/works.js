@@ -1,6 +1,7 @@
 // /career/ の Works。文言は decisions(タスク 5「Works の文言」)のとおり。
 // points は decisions の「工夫」を「／」で区切ったもの(ページでは1つずつ別の行にする)。
-// shot: 実際に動いている画面のスクショ(public/career/works/)。ページではどれも同じ高さにそろえる。
+// shots: 実際に動いている画面のスクショ(public/career/works/)。何枚でも置ける。ページではどれも同じ高さにそろえ、
+// 押すと full を大きく出す(確認シート15回目 R15-2)。
 // このサイトは画面を載せても意味が無いので、画像なし(確認シート14回目)。
 // background(作った経緯)と learned(学び)は本人が書く。空なら行を出さない。
 // role の書き方(Claude Code を使ったこと)は下書き(確認シート14回目)。
@@ -22,7 +23,8 @@ export const works = [
     repo: 'happydeck',
     summary: '複数のマシンで動いている Claude Code のセッションを、1つの画面で見て操作するデスクトップアプリ（Happy 経由）',
     role: '個人で設計・実装（Claude Code を使用）',
-    shot: { src: '/career/works/happydeck.webp', width: 640, height: 400, alt: 'happydeck の画面（モックデータで、複数のマシンのセッションを並べたところ）' },
+    // 1つのセッションを大きく出した画面(確認シート14回目 R14-33)
+    shots: [{ src: '/career/works/happydeck.webp', full: '/career/works/happydeck-full.webp', width: 640, height: 400, alt: 'happydeck の画面（モックデータで、1つのセッションを大きく出したところ）' }],
     background: '',
     learned: '',
     tech: 'TypeScript, React 19, Vite, Tauri v2, Zod, Vitest, GitHub Actions',
@@ -36,7 +38,7 @@ export const works = [
     repo: 'voice-transcript',
     summary: 'Groq の Whisper API で音声を文字起こしする、CLI とデスクトップアプリ',
     role: '個人で設計・実装（Claude Code を使用）',
-    shot: { src: '/career/works/voice-transcript.webp', width: 601, height: 400, alt: 'voice-transcript の履歴の画面' },
+    shots: [{ src: '/career/works/voice-transcript.webp', full: '/career/works/voice-transcript-full.webp', width: 601, height: 400, alt: 'voice-transcript の履歴の画面' }],
     background: '',
     learned: '',
     tech: 'TypeScript, React 19, Vite, Tauri v2, PostgreSQL, Drizzle ORM, ffmpeg, Vitest',
@@ -50,7 +52,7 @@ export const works = [
     repo: 'claude-usage-tray',
     summary: 'Claude の使用量（5時間のセッション枠と週の枠）を、タスクトレイとメニューバーに常に表示するデスクトップアプリ',
     role: '個人で設計・実装・配布（Windows / macOS。Claude Code を使用）',
-    shot: { src: '/career/works/claude-usage-tray.webp', width: 304, height: 367, alt: 'UsageTray のポップアップ（使用量の表示）' },
+    shots: [{ src: '/career/works/claude-usage-tray.webp', full: '/career/works/claude-usage-tray-full.webp', width: 304, height: 367, alt: 'UsageTray のポップアップ（使用量の表示）' }],
     background: '',
     learned: '',
     tech: 'TypeScript, Electron, electron-vite, Preact, node-pty, Vitest, GitHub Actions',

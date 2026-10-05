@@ -57,6 +57,19 @@
   font-display: swap;
 }
 
+/* 「奢」だけ Klee One(Google Fonts, SIL OFL)の字を使う。Zen Kurenaido の「奢」は下の「者」が
+   詰まって崩れて見えるため(推しア◯ネイターの「華奢」。2026-10-06 本人指定)。
+   同じ名前で unicode-range を絞った面を後に書くと、その字ではこちらが先に使われる。
+   1字だけのサブセット: python3 -m fontTools.subset KleeOne-Regular.ttf --unicodes=U+5962 --flavor=woff2 */
+@font-face {
+  font-family: 'Zen Kurenaido';
+  src: url('/fonts/kasha-klee-one.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+5962;
+}
+
 :root {
   /* Alicemerix「Override」ジャケットの背景色(R249 G236 B142)。
      mutedはこの背景に対してWCAG AA(4.5:1)をわずかに割り込むため

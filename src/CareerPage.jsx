@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import ProjectMenu from './components/ProjectMenu'
 import { annotate } from './components/career/Term'
 import './components/career/career.css'
@@ -77,11 +77,12 @@ function Section({ title, children }) {
   )
 }
 
-// トップの学歴・経歴と同じ部品(ピンクの等幅の期間、見出し、説明、左の縦線)
+// トップの学歴・経歴と同じ部品(等幅の期間、見出し、説明、左の縦線)。
+// 期間の文字は黒、縦線はピンク(確認シート15回目 R15-7。ピンクの文字は黄色の地で読みにくいため)
 function Entry({ label, title, children }) {
   return (
-    <div className="relative pl-6 border-l border-line">
-      {label && <div className="text-sm font-mono text-accent">{label}</div>}
+    <div className="relative pl-6 border-l-2 border-accent">
+      {label && <div className="text-sm font-mono text-ink">{label}</div>}
       <h3 className="text-xl font-display text-ink mt-2">{title}</h3>
       {children}
     </div>
@@ -109,11 +110,42 @@ function WorkFact({ term, children }) {
   )
 }
 
-// プロジェクトの画像の見せ方(3案の見本)。/career/?frame=mat のように切り替えて見比べる。決まったら1つにする
-const FRAMES = ['block', 'mat', 'soft']
-function frameFromUrl() {
-  const asked = new URLSearchParams(window.location.search).get('frame')
-  return FRAMES.includes(asked) ? asked : FRAMES[0]
+// プロジェクトの画像の並べ方(2案の見本)。/career/?layout=side で切り替えて見比べる。決まったら1つにする
+const LAYOUTS = ['stack', 'side']
+function layoutFromUrl() {
+  const asked = new URLSearchParams(window.location.search).get('layout')
+  return LAYOUTS.includes(asked) ? asked : LAYOUTS[0]
+}
+
+// 画像を大きく見る。外側・Esc・× で閉じ、閉じたら押した画像にフォーカスを戻す。開いている間は後ろをスクロールしない
+function ShotViewer({ shot, onClose }) {
+  const closeRef = useRef(null)
+  useEffect(() => {
+    if (!shot) return undefined
+    const before = document.activeElement
+    const html = document.documentElement
+    const overflow = html.style.overflow
+    html.style.overflow = 'hidden'
+    closeRef.current?.focus()
+    const onKey = (event) => {
+      if (event.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      html.style.overflow = overflow
+      before?.focus?.()
+    }
+  }, [shot, onClose])
+  if (!shot) return null
+  return (
+    <div className="shot-viewer" role="dialog" aria-modal="true" aria-label={shot.alt} onClick={onClose}>
+      <img src={shot.full || shot.src} alt={shot.alt} onClick={(event) => event.stopPropagation()} />
+      <button ref={closeRef} type="button" className="shot-viewer__close" aria-label="閉じる" onClick={onClose}>
+        ×
+      </button>
+    </div>
+  )
 }
 
 export default function CareerPage() {
@@ -126,7 +158,9 @@ export default function CareerPage() {
     ...level,
     items: skills.filter((skill) => skill.group === 'other' && skill.level === level.id),
   })).filter((level) => level.items.length > 0)
-  const frame = frameFromUrl()
+  const layout = layoutFromUrl()
+  const [viewing, setViewing] = useState(null)
+  const closeViewer = useCallback(() => setViewing(null), [])
   return (
     <>
       <div className="fixed top-0 left-0 right-0 z-50">
@@ -180,7 +214,7 @@ export default function CareerPage() {
             </div>
           </Section>
 
-          <Section title="研究">
+          <Section title="取り組んでいる研究">
             <p className="text-lg text-ink leading-relaxed">{annotate(research.summary, seenResearch)}</p>
             <div className="space-y-6 mt-10">
               {research.talks.map((talk) => (
@@ -227,9 +261,10 @@ export default function CareerPage() {
           </Section>
 
           <Section title="プロジェクト">
-            <div className="works space-y-12" data-frame={frame}>
+            <div className="works space-y-12" data-layout={layout}>
               {works.map((work) => (
-                <article key={work.repo} className="relative pl-6 border-l border-line">
+                <article key={work.repo} className="work relative pl-6 border-l border-line">
+                  <div className="work__head">
                   <h3 className="text-xl font-display text-ink">
                     <a
                       href={GITHUB + work.repo}
@@ -241,12 +276,17 @@ export default function CareerPage() {
                     </a>
                   </h3>
                   <p className="mt-1 text-xs font-mono text-muted">github.com/terasaki-8910/{work.repo}</p>
-                  {work.shot && (
-                    <div className="work-shot">
-                      <img src={work.shot.src} width={work.shot.width} height={work.shot.height} alt={work.shot.alt} loading="lazy" decoding="async" />
+                  </div>
+                  {work.shots?.length > 0 && (
+                    <div className="work-shots">
+                      {work.shots.map((shot) => (
+                        <button key={shot.src} type="button" className="work-shot" aria-label={`${shot.alt}を大きく見る`} onClick={() => setViewing(shot)}>
+                          <img src={shot.src} width={shot.width} height={shot.height} alt={shot.alt} loading="lazy" decoding="async" />
+                        </button>
+                      ))}
                     </div>
                   )}
-                  <dl className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-[6.5em_minmax(0,1fr)]">
+                  <dl className="work__facts mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-[6.5em_minmax(0,1fr)]">
                     <WorkFact term="概要">{work.summary}</WorkFact>
                     {work.background && <WorkFact term="作った経緯">{work.background}</WorkFact>}
                     <WorkFact term="担当">{work.role}</WorkFact>
@@ -275,6 +315,7 @@ export default function CareerPage() {
           )}
         </div>
       </main>
+      <ShotViewer shot={viewing} onClose={closeViewer} />
     </>
   )
 }

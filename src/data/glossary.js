@@ -1,6 +1,6 @@
 // /career/ の専門用語の説明(吹き出し)。words のどれかが本文に出たら、ページで最初の1か所だけに付ける。
 // 長い語から先に探す(「Linked Open Data」が先に当たれば、後の「LOD」には付けない)。
-// 説明は下書き(確認シート14回目で本人に確かめる)。
+// 説明は下書き(確認シート16回目で本人に確かめる)。link があれば、説明の下にリンクを出す。
 export const glossary = [
   {
     id: 'lod',
@@ -21,5 +21,11 @@ export const glossary = [
     id: 'relaxation',
     words: ['クエリ緩和'],
     note: '結果が0件になった問い合わせの条件を少しずつゆるめて、答えが返るようにする手法。',
+  },
+  {
+    id: 'mdlab',
+    words: ['メタデータ研究室'],
+    note: '所属している研究室。',
+    link: 'https://mdlab.slis.tsukuba.ac.jp/',
   },
 ]
