@@ -33,6 +33,10 @@ function App() {
     // gsap.tickerに寄せると、ScrollTriggerと同じタイミングで更新される。
     lenis.on('scroll', ScrollTrigger.update)
 
+    // 左上のロゴ(Header.jsx)を押したら、読み込み直さずに一番上へ戻る
+    const scrollToTop = () => lenis.scrollTo(0)
+    window.addEventListener('site:scroll-top', scrollToTop)
+
     const update = (time) => {
       lenis.raf(time * 1000)
     }
@@ -42,6 +46,7 @@ function App() {
     return () => {
       // remove()には追加したのと同じ関数を渡さないと外れない
       gsap.ticker.remove(update)
+      window.removeEventListener('site:scroll-top', scrollToTop)
       lenis.destroy()
     }
   }, [])
