@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+// PC で帯が止まったときの「最後までスクロール」の案内を、もう出したか
+const HINT_SEEN_KEY = 'gh-scroll-hint-seen'
+
 const GITHUB_PROFILE_URL = 'https://github.com/terasaki-8910'
 
 /**
@@ -166,6 +169,9 @@ export default function GithubActivity() {
   }, [])
 
   const days = data?.days ? pickAndScaleDays(data.days) : []
+  // PC で帯が止まった(pin した)ときの案内。「ずっと止まる」と言われたため、最後までスクロールするよう
+  // 1度だけ出す。1度出したら、次からは出さない(localStorage)。2026-10-05 本人指定
+  const [hint, setHint] = useState(false)
 
   // 縦スクロール→横パンはデスクトップのみ。モバイルはoverflow-x-autoの
   // 素直な横スクロール帯にフォールバックする(本人指定、pin演出は複雑になり
@@ -195,6 +201,23 @@ export default function GithubActivity() {
           scrub: 1,
           pin: true,
           invalidateOnRefresh: true,
+          onToggle: (self) => {
+            if (!self.isActive) {
+              setHint(false)
+              return
+            }
+            try {
+              if (window.localStorage.getItem(HINT_SEEN_KEY)) return
+              window.localStorage.setItem(HINT_SEEN_KEY, '1')
+            } catch {
+              // 保存できない環境でも、この回は出す
+            }
+            setHint(true)
+          },
+          // 少し進んだら消す(横に流れはじめたことが分かれば十分)
+          onUpdate: (self) => {
+            if (self.progress > 0.2) setHint(false)
+          },
         },
       })
     }, container)
@@ -226,6 +249,14 @@ export default function GithubActivity() {
           <ActivityBlock key={day.date} day={day} />
         ))}
       </div>
+      {hint && (
+        <div
+          role="status"
+          className="pointer-events-none absolute bottom-16 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-ink px-5 py-2 text-sm text-paper shadow-lg"
+        >
+          → 最後までスクロールしてください
+        </div>
+      )}
       <div className="pointer-events-none absolute bottom-4 left-4 font-mono text-xs text-muted md:bottom-6 md:left-12">
         {data.totalContributions} contributions · @{data.login}
       </div>
