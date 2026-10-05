@@ -3,8 +3,8 @@
 // ページを開いた直後の「覆った状態」は、各HTMLのheadに差し込むCSSとスクリプト
 // (vite.config.js の BLOCK_FX_HEAD_*)が出す。JSの読み込みを待たずに効かせるため。
 //
-// マスの配置は tiles に持っている。将来、白いマスに重音テトのASCIIを映すときは、
-// この配置(どのマスが白か、どの濃さか)をそのまま使える。
+// マスの配置は cellValue(列, 行) で、ページ上の位置から決まる。将来、白いマスに重音テトのASCIIを
+// 映すときは、この配置(どのマスが白か、どの濃さか)をそのまま使える。
 
 const CELL = 40 // マスの大きさ(px)。背景とページ移動で共通
 const DENSITY = 0.3 // 色付きのマスの割合
@@ -44,36 +44,73 @@ function currentTheme() {
 }
 
 // ---- マスの配置 -------------------------------------------------------------
-// -1 は地のままのマス、0〜1 は色付きのマスの濃さの元(テーマごとの範囲に当てはめて使う)。
-// 画面が広がったときは足りない分だけ足し、既にあるマスは作り直さない
-// (スマホでアドレスバーが出入りしても模様が変わらないように)。
-let cols = 0
-let rows = 0
-let tiles = new Float32Array(0)
+// マスはページ上の位置(列・行)から決まる。スクロールするとマスも一緒に動く(2026-10-05 本人指定。
+// それまでは画面に固定で、中身だけが上を流れていた)。開くたびに模様が変わるよう、種は開いたときに決める。
+const SEED = Math.floor(Math.random() * 4294967296) >>> 0
 
-function ensureGrid(width, height) {
-  const needCols = Math.ceil(width / CELL)
-  const needRows = Math.ceil(height / CELL)
-  if (needCols <= cols && needRows <= rows) return
-  const nextCols = Math.max(needCols, cols)
-  const nextRows = Math.max(needRows, rows)
-  const next = new Float32Array(nextCols * nextRows)
-  for (let y = 0; y < nextRows; y++) {
-    for (let x = 0; x < nextCols; x++) {
-      next[y * nextCols + x] =
-        x < cols && y < rows ? tiles[y * cols + x] : Math.random() < DENSITY ? Math.random() : -1
-    }
-  }
-  cols = nextCols
-  rows = nextRows
-  tiles = next
+function mix(h) {
+  h = Math.imul(h ^ (h >>> 16), 0x85ebca6b) >>> 0
+  h = Math.imul(h ^ (h >>> 13), 0xc2b2ae35) >>> 0
+  return (h ^ (h >>> 16)) >>> 0
 }
 
-function alphaAt(index, theme) {
-  const v = tiles[index]
+// -1 は地のままのマス、0〜1 は色付きのマスの濃さの元(テーマごとの範囲に当てはめて使う)
+function cellValue(col, row) {
+  const h = mix((Math.imul(col + 1, 0x27d4eb2d) ^ Math.imul(row + 1, 0x165667b1) ^ SEED) >>> 0)
+  if (h / 4294967296 >= DENSITY) return -1
+  return mix(h ^ 0x9e3779b9) / 4294967296
+}
+
+// ---- 中身の箱とマスの濃さ -----------------------------------------------------
+// 中身の箱(.bk-content)に重なるマスは、文字が読めるようにうっすら見える程度まで薄くし、
+// 箱のまわり1マスはその間の濃さにして、段差をなだらかにする(2026-10-05 本人指定)。
+// 以前は箱を地の色で塗っていたが、マスの上に別の四角が浮いて見えるのでやめた。
+const FADE = {
+  light: { inside: 0.22, ring: 0.55 },
+  dark: { inside: 0.45, ring: 0.72 },
+}
+
+// 画面に見えている中身の箱の位置(画面の座標)
+function contentRects(height) {
+  const rects = []
+  for (const box of document.querySelectorAll('.bk-content')) {
+    const r = box.getBoundingClientRect()
+    if (r.width && r.height && r.bottom > -CELL && r.top < height + CELL) rects.push(r)
+  }
+  return rects
+}
+
+// 2 = 箱に重なる、1 = 箱のまわり1マス、0 = それ以外。x, y はマスの左上(画面の座標)
+function levelOf(x, y, rects) {
+  let level = 0
+  for (const r of rects) {
+    if (x < r.right && x + CELL > r.left && y < r.bottom && y + CELL > r.top) return 2
+    if (x < r.right + CELL && x + CELL > r.left - CELL && y < r.bottom + CELL && y + CELL > r.top - CELL) level = 1
+  }
+  return level
+}
+
+// 実際に描く濃さ
+function cellAlpha(col, row, x, y, rects, theme) {
+  const v = cellValue(col, row)
   if (v < 0) return 0
   const t = THEMES[theme]
-  return t.lo + v * (t.hi - t.lo)
+  const level = levelOf(x, y, rects)
+  const fade = level === 2 ? FADE[theme].inside : level === 1 ? FADE[theme].ring : 1
+  return (t.lo + v * (t.hi - t.lo)) * fade
+}
+
+// 画面の格子: いちばん上の行の番号と、その行のずれ(スクロールの端数)
+function gridAt(width, height) {
+  const scrollY = window.scrollY || 0
+  const firstRow = Math.floor(scrollY / CELL)
+  const offY = firstRow * CELL - scrollY
+  return {
+    firstRow,
+    offY,
+    cols: Math.ceil(width / CELL),
+    rows: Math.ceil((height - offY) / CELL) + 1,
+  }
 }
 
 function fitCanvas(canvas, width, height) {
@@ -91,7 +128,7 @@ function fitCanvas(canvas, width, height) {
 
 // ---- 背景 -----------------------------------------------------------------
 // 地の色は html の背景(bg-paper)のまま。このcanvasは色付きのマスだけを描く。
-// 読み込み後は動かさないので、描くのは開いたとき・大きさが変わったとき・テーマが変わったときだけ。
+// canvas は画面に固定し、スクロールに合わせて、ページ上の位置のマスを描き直す。
 const bg = document.createElement('canvas')
 bg.setAttribute('aria-hidden', 'true')
 // canvas は置き換え要素なので、left/right だけでは横に伸びない。幅と高さを明示する。
@@ -103,37 +140,33 @@ function drawBackground() {
   const width = bg.clientWidth
   const height = bg.clientHeight
   if (!width || !height) return
-  ensureGrid(width, height)
   const ctx = fitCanvas(bg, width, height)
   const theme = currentTheme()
+  const grid = gridAt(width, height)
+  const rects = contentRects(height)
   ctx.clearRect(0, 0, width, height)
   ctx.fillStyle = THEMES[theme].tile
-  const visibleCols = Math.ceil(width / CELL)
-  const visibleRows = Math.ceil(height / CELL)
-  for (let y = 0; y < visibleRows; y++) {
-    for (let x = 0; x < visibleCols; x++) {
-      const a = alphaAt(y * cols + x, theme)
+  for (let j = 0; j < grid.rows; j++) {
+    const y = grid.offY + j * CELL
+    for (let i = 0; i < grid.cols; i++) {
+      const a = cellAlpha(i, grid.firstRow + j, i * CELL, y, rects, theme)
       if (a <= 0) continue
       ctx.globalAlpha = a
-      ctx.fillRect(x * CELL, y * CELL, CELL, CELL)
+      ctx.fillRect(i * CELL, y, CELL, CELL)
     }
   }
   ctx.globalAlpha = 1
 }
 
-// ---- 中身の箱の端 -----------------------------------------------------------
-// 中身のある所(.bk-content を付けた箱)は、地の色を薄くかぶせて後ろのマスを目立たなくしている
-// (src/index.css の .bk-content。2026-10-04 本人指定の案 B)。箱の左右の端が 40px の線とずれると、
-// 端でマスが細く切れて見えるので、塗りを box-shadow で線まで広げる。箱の左右の位置は画面の幅で
-// しか変わらないので、開いたとき(覆っている間)と大きさが変わったときにだけ計算する。
-function snapContentEdges() {
-  for (const box of document.querySelectorAll('.bk-content')) {
-    const r = box.getBoundingClientRect()
-    if (!r.width) continue
-    const left = r.left - Math.floor(r.left / CELL) * CELL
-    const right = Math.ceil(r.right / CELL) * CELL - r.right
-    box.style.boxShadow = `-${left}px 0 0 0 var(--bk-content-fill), ${right}px 0 0 0 var(--bk-content-fill)`
-  }
+// スクロールや中身の大きさが変わったら、次のフレームで1回だけ描き直す
+let drawQueued = false
+function scheduleDraw() {
+  if (drawQueued) return
+  drawQueued = true
+  requestAnimationFrame(() => {
+    drawQueued = false
+    drawBackground()
+  })
 }
 
 // ---- 覆い(ページ移動) -------------------------------------------------------
@@ -162,12 +195,11 @@ function hideCover() {
   cover.style.display = 'none'
 }
 
-// 目標の色(ライトは白、ダークは黒)にどれだけ近いか。
+// 目標の色(ライトは白、ダークは黒)にどれだけ近いか。背景に描いている濃さで決める。
 // ライトは白いマスほど近い。ダークは地の黒のマスがいちばん近く、ピンクが薄いほど近い。
-function closeness(index, theme) {
-  const a = alphaAt(index, theme)
-  if (theme === 'light') return a
-  return tiles[index] < 0 ? 1 : 1 - a
+function closeness(alpha, theme) {
+  const hi = THEMES[theme].hi
+  return theme === 'light' ? alpha / hi : 1 - alpha / hi
 }
 
 // dir='in': 目標の色に近いマスから順に、目標の色で覆っていく(最後は一色)。
@@ -176,18 +208,21 @@ function animate(dir) {
   return new Promise((resolve) => {
     const width = window.innerWidth
     const height = window.innerHeight
-    ensureGrid(width, height)
     const ctx = fitCanvas(cover, width, height)
     const theme = currentTheme()
     const color = THEMES[theme].target
-    const visibleCols = Math.ceil(width / CELL)
-    const visibleRows = Math.ceil(height / CELL)
-    const n = visibleCols * visibleRows
+    // 背景と同じ格子(スクロールの端数のずれも同じ)で覆う
+    const grid = gridAt(width, height)
+    const rects = contentRects(height)
+    const visibleCols = grid.cols
+    const n = visibleCols * grid.rows
     const key = new Float32Array(n)
     const order = new Array(n)
     for (let i = 0; i < n; i++) {
-      const g = Math.floor(i / visibleCols) * cols + (i % visibleCols)
-      key[i] = closeness(g, theme) + Math.random() * 0.02 // 同じ近さのマスは少しだけ順番をばらす
+      const cx = i % visibleCols
+      const cy = Math.floor(i / visibleCols)
+      const alpha = cellAlpha(cx, grid.firstRow + cy, cx * CELL, grid.offY + cy * CELL, rects, theme)
+      key[i] = closeness(alpha, theme) + Math.random() * 0.02 // 同じ近さのマスは少しだけ順番をばらす
       order[i] = i
     }
     order.sort((p, q) => (dir === 'in' ? key[q] - key[p] : key[p] - key[q]))
@@ -208,7 +243,7 @@ function animate(dir) {
         const alpha = dir === 'in' ? eased : 1 - eased
         if (alpha <= 0) continue
         ctx.globalAlpha = alpha
-        ctx.fillRect((i % visibleCols) * CELL, Math.floor(i / visibleCols) * CELL, CELL, CELL)
+        ctx.fillRect((i % visibleCols) * CELL, grid.offY + Math.floor(i / visibleCols) * CELL, CELL, CELL)
       }
       ctx.globalAlpha = 1
       if (t < SPREAD + DUR) {
@@ -325,22 +360,27 @@ function init() {
   document.body.appendChild(cover)
   drawBackground()
 
+  // スクロールに合わせて、ページ上の位置のマスを描き直す。中身が読み込まれて箱の大きさや位置が
+  // 変わったときも描き直す(箱に重なるマスを薄くするため)
+  window.addEventListener('scroll', scheduleDraw, { passive: true })
+  if (window.ResizeObserver) new ResizeObserver(scheduleDraw).observe(document.body)
+
   // 開いた直後は head の CSS が画面を一色で覆っている。同じ色を canvas に描いてから
-  // CSS の覆いを外し、読み込みを待ってマスで開く。中身の箱の端は、中身が並んでから(覆っている間に)そろえる。
+  // CSS の覆いを外し、読み込みを待ってマスで開く。中身が並んでから(覆っている間に)背景を描き直す。
   if (root.classList.contains('bk-cover')) {
     fillCover()
     covered = true
     root.classList.remove('bk-cover')
     whenReady(cameCovered() ? 0 : MIN_COVER)
       .then(() => {
-        snapContentEdges()
+        drawBackground()
         return animate('out')
       })
       .then(() => {
         covered = false
       })
   } else {
-    whenReady().then(snapContentEdges)
+    whenReady().then(drawBackground)
   }
 
   document.addEventListener('click', onClick)
@@ -359,7 +399,6 @@ function init() {
   window.addEventListener('resize', () => {
     window.clearTimeout(resizeTimer)
     resizeTimer = window.setTimeout(() => {
-      snapContentEdges()
       drawBackground()
       if (covered) fillCover()
     }, 150)
