@@ -34,7 +34,7 @@ export default function ProjectShowcase() {
   return (
     <section ref={sectionRef} className="px-8 py-32">
       <div className="bk-content max-w-4xl mx-auto">
-        <h2 className="text-massive font-medium font-display text-ink mb-20">Projects</h2>
+        <h2 className="text-massive font-medium font-display text-ink mb-20">プロジェクト</h2>
 
         <div className="border-t border-line">
           {projects.map((project, index) => (
@@ -47,7 +47,7 @@ export default function ProjectShowcase() {
                 <h3 className="text-2xl font-display text-ink group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted text-lg mt-3">{project.description}</p>
+                {project.description && <p className="text-muted text-lg mt-3">{project.description}</p>}
 
                 <div className="flex flex-wrap gap-x-4 gap-y-1 mt-4 text-xs font-mono text-muted">
                   {project.tags.map((tag) => (

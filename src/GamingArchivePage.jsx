@@ -14,8 +14,8 @@ export default function GamingArchivePage() {
         </div>
         <div className="pt-28 px-4 md:px-8 pb-24">
           <div className="bk-content max-w-4xl mx-auto">
-            <h1 className="text-massive font-medium font-display text-ink mb-2">Gaming Archive</h1>
-            <p className="text-muted mb-10">お気に入りのゲームコレクション — Steam連携</p>
+            <h1 className="text-massive font-medium font-display text-ink mb-2">遊んだゲームコレクション</h1>
+            <p className="text-muted mb-10">Steam連携</p>
             <GamingArchive />
           </div>
         </div>
