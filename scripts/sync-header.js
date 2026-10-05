@@ -43,6 +43,10 @@ class HeaderSyncer {
       }
 
       let jsxStructure = returnMatch[1];
+      // 中身が空なら、画面の部分ではない「return (」に当たっている(例: return () => ...)。黙って止まらず知らせる
+      if (!jsxStructure.trim().startsWith('<')) {
+        throw new Error('Header.jsx の最初の「return (」が画面の部分ではありません。ほかの場所で「return (」と書かないこと');
+      }
 
       // JSXをHTMLに変換
       let htmlStructure = this.convertJsxToHtml(jsxStructure);
@@ -137,11 +141,12 @@ class HeaderSyncer {
 
       const afterHeader = afterHeaderMatch.substring(headerEndMatch.index + headerEndMatch[0].length);
 
-      // 新しいヘッダーHTMLを構築
+      // 新しいヘッダーHTMLを構築。ヘッダーの後ろの空の行は1つにそろえる
+      // (以前は '\n\n' を足すだけで、走らせるたびに空の行が増えていた)
       const updatedContent = beforeHeader +
         '<!-- ヘッダー -->\n    ' +
         newHeaderHtml + '\n\n' +
-        afterHeader;
+        afterHeader.replace(/^(\s*\n)+/, '');
 
       fs.writeFileSync(this.spotifyHtmlPath, updatedContent);
       console.log('✅ spotify_recent.htmlのヘッダーを更新しました');
@@ -208,6 +213,12 @@ class HeaderSyncer {
 
 // スクリプト実行
 const syncer = new HeaderSyncer();
-syncer.sync().catch(console.error);
+// 途中で止まったら、失敗として終わる(以前は CSS だけ写して黙って終わっていた)
+syncer.sync().then((ok) => {
+  if (!ok) process.exitCode = 1;
+}).catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
 
 export default HeaderSyncer;
