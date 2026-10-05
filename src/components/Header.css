@@ -144,6 +144,7 @@
   color: #FAA0A0;
   -webkit-text-stroke: calc(var(--logo-size) / 16) #000;
   paint-order: stroke fill;
+  transition: opacity 200ms ease, visibility 200ms ease;
 }
 
 .cosmic-header__logo:focus-visible {
@@ -152,8 +153,11 @@
 }
 
 /* トップでは大きな題字と重なるので出さない */
+/* トップで大きな題字が見えている間は隠す。外れたら、ふわっと出す */
 .cosmic-header__logo--hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* 右上のメニュー(ProjectMenu.jsx / src/fx/projectMenu.js / src/data/projectMenuMarkup.js)。
