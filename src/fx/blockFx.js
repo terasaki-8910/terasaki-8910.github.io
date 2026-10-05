@@ -10,8 +10,12 @@ const CELL = 40 // マスの大きさ(px)。背景とページ移動で共通
 const DENSITY = 0.3 // 色付きのマスの割合
 const SPREAD = 620 // 全マスの変化の開始をずらす幅(ms)
 const DUR = 220 // 1マスが変化しきるまでの時間(ms)
-const MIN_COVER = 400 // ページを開いてから覆いを外すまでの最短(ms)
+const MIN_COVER = 400 // ページを直接開いたとき、覆いを外すまでの最短(ms)
 const MAX_COVER = 2500 // 読み込みが遅くても、この時間で覆いを外す(ms)
+// 前のページで埋め終わってから移ったことを、次のページに伝える印(sessionStorage)。
+// そのときは画面がもう一色で覆われているので、次のページは MIN_COVER を待たずに開く(2026-10-05 本人指定)。
+const COVERED_NAV_KEY = 'bk-covered-nav'
+const COVERED_NAV_MAX_AGE = 10000 // これより古い印は、移動とは関係ないものとして捨てる(ms)
 
 const THEMES = {
   // ライト: 黄色の地に白いマス。移動のときは白一色に近づける
@@ -230,8 +234,8 @@ function nextFrames(count) {
   })
 }
 
-// 中身の表示と本文フォントの読み込みを待つ。ページを開いてから最短0.4秒、最長2.5秒。
-function whenReady() {
+// 中身の表示と本文フォントの読み込みを待つ。ページを開いてから最短 minCover、最長2.5秒。
+function whenReady(minCover = MIN_COVER) {
   const dom =
     document.readyState === 'loading'
       ? new Promise((resolve) => document.addEventListener('DOMContentLoaded', resolve, { once: true }))
@@ -239,7 +243,41 @@ function whenReady() {
   const fonts = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()
   const loaded = Promise.all([dom, fonts]).then(() => nextFrames(2))
   const limit = wait(MAX_COVER - performance.now())
-  return Promise.race([loaded, limit]).then(() => wait(MIN_COVER - performance.now()))
+  return Promise.race([loaded, limit]).then(() => wait(minCover - performance.now()))
+}
+
+// 前のページで埋め終わってから移ってきたか(印は一度読んだら消す)
+function cameCovered() {
+  try {
+    const at = Number(window.sessionStorage.getItem(COVERED_NAV_KEY))
+    window.sessionStorage.removeItem(COVERED_NAV_KEY)
+    return at > 0 && Date.now() - at < COVERED_NAV_MAX_AGE
+  } catch {
+    return false
+  }
+}
+
+// 埋めている間に、次のページの HTML と、それが読む JS・CSS を取っておく。
+// 取れたものはブラウザのキャッシュに入り、移ったあとの読み込みがそこから速く済む。
+// 失敗しても移動はそのまま進める(移ったあとに普通に読み込むだけ)。
+function prefetch(url) {
+  try {
+    fetch(url.href, { credentials: 'same-origin' })
+      .then((res) => (res.ok ? res.text() : ''))
+      .then((text) => {
+        if (!text) return
+        const doc = new DOMParser().parseFromString(text, 'text/html')
+        const refs = new Set()
+        doc.querySelectorAll('script[type="module"][src], link[rel="modulepreload"][href], link[rel="stylesheet"][href]').forEach((el) => {
+          const ref = new URL(el.getAttribute('src') || el.getAttribute('href'), url.href)
+          if (ref.origin === window.location.origin) refs.add(ref.href)
+        })
+        refs.forEach((ref) => fetch(ref, { credentials: 'same-origin' }).catch(() => {}))
+      })
+      .catch(() => {})
+  } catch {
+    // fetch や DOMParser が無い環境では、先に取らずに移る
+  }
 }
 
 // 演出を出さないリンク: 別タブ・ダウンロード・外部・同じページ内の # へのリンク
@@ -269,8 +307,15 @@ function onClick(event) {
   event.preventDefault()
   if (busy) return
   busy = true
+  // 埋め始めると同時に、次のページを読み込み始める。先に読み込めても、埋め終わってから移る(2026-10-05 本人指定)
+  prefetch(url)
   animate('in').then(() => {
     covered = true
+    try {
+      window.sessionStorage.setItem(COVERED_NAV_KEY, String(Date.now()))
+    } catch {
+      // 保存できなければ、次のページは直接開いたときと同じく最短 MIN_COVER を待つだけ
+    }
     window.location.assign(url.href)
   })
 }
@@ -286,7 +331,7 @@ function init() {
     fillCover()
     covered = true
     root.classList.remove('bk-cover')
-    whenReady()
+    whenReady(cameCovered() ? 0 : MIN_COVER)
       .then(() => {
         snapContentEdges()
         return animate('out')
