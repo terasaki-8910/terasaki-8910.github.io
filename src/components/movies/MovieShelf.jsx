@@ -395,6 +395,7 @@ export default function MovieShelf() {
               →
             </button>
           </div>
+          {/* 開いた背の題名など。何も開いていないときは空(高さは保ち、開いても下がずれない) */}
           <div className="mv-caption" aria-live="polite">
             {opened ? (
               <>
@@ -405,9 +406,7 @@ export default function MovieShelf() {
                 </p>
                 <Stars rating={opened.rating} />
               </>
-            ) : (
-              <p className="mv-caption__hint">{canHover ? '背にカーソルを合わせると開きます。押すと詳しく見られます。' : '背を押すと開きます。もう一度押すと詳しく見られます。'}</p>
-            )}
+            ) : null}
           </div>
         </div>
       ) : (

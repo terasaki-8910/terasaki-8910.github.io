@@ -91,7 +91,6 @@
 .mv-caption { min-height: 84px; display: grid; gap: 4px; justify-items: center; text-align: center; }
 .mv-caption__title { font-size: clamp(20px, 3vw, 26px); line-height: 1.3; }
 .mv-caption__meta { font-family: 'Fira Mono', ui-monospace, monospace; font-size: 13px; color: var(--color-muted); }
-.mv-caption__hint { font-size: 14px; color: var(--color-muted); }
 .mv-note { font-size: 13px; color: var(--color-muted); }
 
 /* 一覧(ポスターの格子) */

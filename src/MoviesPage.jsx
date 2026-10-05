@@ -16,8 +16,8 @@ export default function MoviesPage() {
         </div>
         <div className="pt-28 px-4 md:px-8 pb-24">
           <div className="bk-content max-w-6xl mx-auto">
-            <h1 className="text-massive font-medium font-display text-ink mb-2">映画・アニメ・ドラマの視聴履歴</h1>
-            <p className="text-muted mb-10">Trakt に記録した作品。観た・評価・観たい</p>
+            {/* 題の下の説明と、本棚の使い方の説明は置かない(見れば分かる。2026-10-05 本人指定) */}
+            <h1 className="text-massive font-medium font-display text-ink mb-10">映画・アニメ・ドラマの視聴履歴</h1>
             <MovieShelf />
           </div>
         </div>
