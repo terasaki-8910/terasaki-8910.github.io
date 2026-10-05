@@ -105,7 +105,7 @@ export default function CareerPage() {
       <main className="px-6 md:px-8 pt-28 pb-32">
         <div className="bk-content max-w-3xl mx-auto">
           <header>
-            <p className="text-sm tracking-[0.12em] text-muted">経歴書</p>
+            <p className="text-sm tracking-[0.12em] text-muted">プロフィール</p>
             <h1 className="mt-4 text-5xl md:text-6xl font-display text-ink">{NAME}</h1>
             <p className="mt-8 text-lg text-ink">{AFFILIATION}</p>
             <p className="mt-2">
