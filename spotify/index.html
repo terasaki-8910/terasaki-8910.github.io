@@ -441,26 +441,16 @@
     <!-- Spotify iFrame API -->
     <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
     <script>
-        // テーマ切り替え(React側のHeader.jsxと同じ考え方: いつもライトで開き、切り替えたら
-        // タブを開いている間だけ覚える。data-theme は head のスクリプトが先に決めている)
-        function getInitialTheme() {
-            return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-        }
-
-        function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
+        // テーマ切り替え(React側のHeader.jsxと同じ考え方: いつもライトで開き、ボタンで選んだときだけ
+        // 覚えて次もそのテーマで開く。data-theme は head のスクリプトが先に決めている)
+        document.getElementById('theme-toggle-btn').addEventListener('click', () => {
+            const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
             try {
-                window.sessionStorage.setItem('theme', theme);
+                window.localStorage.setItem('theme-picked', next);
             } catch (e) {
                 // 保存できない環境では、このページの間だけ切り替わる
             }
-        }
-
-        applyTheme(getInitialTheme());
-
-        document.getElementById('theme-toggle-btn').addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-            applyTheme(current === 'dark' ? 'light' : 'dark');
         });
 
         // Spotify iFrame用の変数

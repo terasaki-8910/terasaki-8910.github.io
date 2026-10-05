@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import ProjectMenu from './ProjectMenu'
 
 // いつもライトで開く(2026-10-05 本人指定。OSの設定がダークでも)。html の data-theme は
-// head のスクリプト(vite.config.js)が先に決めている。切り替えはタブを開いている間だけ覚える。
+// head のスクリプト(vite.config.js)が先に決めている。ボタンで選んだときだけ覚え、次もそのテーマで開く。
 function getInitialTheme() {
   return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
 }
@@ -27,18 +27,20 @@ const Header = ({ currentPage = 'home' }) => {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    try {
-      window.sessionStorage.setItem('theme', theme)
-    } catch {
-      // 保存できない環境では、このページの間だけ切り替わる
-    }
   }, [theme])
 
   // sync-header.jsのreturn抽出は非貪欲マッチで最初の")"で止まるため、
   // JSX内に丸括弧を含む式(即時関数呼び出し等)を書かない。ハンドラは
   // ここで名前付き関数として定義し、JSX側は括弧なしの参照のみにする。
   function handleThemeToggle() {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    const next = theme === 'dark' ? 'light' : 'dark'
+    setTheme(next)
+    // ボタンで選んだときだけ覚える(開いただけでは保存しない)
+    try {
+      window.localStorage.setItem('theme-picked', next)
+    } catch {
+      // 保存できない環境では、このページの間だけ切り替わる
+    }
   }
 
   // トップでロゴを押したら、読み込み直さずに一番上へ戻る(App.jsx が Lenis で戻す)

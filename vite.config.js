@@ -146,12 +146,13 @@ function charaSessionLogDevPlugin() {
 
 // https://vitejs.dev/config/
 // ---- テーマ ---------------------------------------------------------------------------
-// いつもライトで開く(2026-10-05 本人指定。OSの設定がダークでも)。右下のボタンで切り替えたら、
-// そのタブを開いている間だけ覚え(sessionStorage)、ページを移っても続く。
+// いつもライトで開く(2026-10-05 本人指定。OSの設定がダークでも)。右下のボタンで選んだときだけ
+// 覚え(localStorage の theme-picked)、次に開いたときもそのテーマで開く。以前の theme は、
+// ボタンを押さなくても開くたびに保存していたので読まない。
 // 最初の描画より前に html の data-theme を決める。career のように html に書いてあるページはそのまま。
 const THEME_HEAD_JS =
   "(function(){var d=document.documentElement;if(d.getAttribute('data-theme'))return;" +
-  "var t=null;try{t=sessionStorage.getItem('theme')}catch(e){}" +
+  "var t=null;try{t=localStorage.getItem('theme-picked')}catch(e){}" +
   "d.setAttribute('data-theme',t==='dark'?'dark':'light')})();"
 
 // ---- ブロックの演出(src/fx/blockFx.js) ------------------------------------------------
