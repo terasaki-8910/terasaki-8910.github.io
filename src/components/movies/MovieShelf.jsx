@@ -1,4 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import {
+  PiBooksBold,
+  PiCaretDownBold,
+  PiCheckBold,
+  PiEyeBold,
+  PiEyeClosedBold,
+  PiFunnelSimpleBold,
+  PiSortAscendingBold,
+  PiSquaresFourBold,
+} from 'react-icons/pi'
 import './movieShelf.css'
 
 /**
@@ -10,6 +20,9 @@ import './movieShelf.css'
  * - 背に合わせると表紙が出て、下に題名・原題・年。押すと詳しい画面(R10-6)。カーソルが外れたら閉じる
  * - ポスターは TMDb から直接読み込む(R10-7)
  * - 映画・アニメ・ドラマで絞れる。観たは 時系列順(既定)・評価順・視聴順、観たいは 追加順(既定)・時系列順
+ * - 時系列順は新しい順。アニメ映画は「映画」と「アニメ」の両方に出す(確認シート R11-2・R11-3)
+ * - 操作はアイコンにする(R11-1): 観た／観たいは目のアイコン1つで切り替え、本棚／一覧は2つのアイコン、
+ *   絞り込みと並びはアイコンから開く一覧(ヘッダーのメニューと同じ、マスと項目名の並び)
  */
 
 const IMG = 'https://image.tmdb.org/t/p/'
@@ -32,6 +45,15 @@ const SORTS = {
   ],
 }
 const RATING_NOTE = '星の数は、わたしの主観による評価です。'
+const LIST_NAMES = { watched: '観た映画リスト', watchlist: 'ウォッチリスト' }
+
+/** 種類で絞る。アニメ映画は「映画」にも「アニメ」にも入る */
+function matchesKind(m, kind) {
+  if (kind === 'all') return true
+  if (kind === 'movie') return m.type === 'movie'
+  if (kind === 'anime') return m.kind === 'anime'
+  return m.type === 'show' && m.kind !== 'anime'
+}
 
 function Stars({ rating }) {
   if (!rating) return null
@@ -77,7 +99,8 @@ function sortItems(items, sort) {
     })
   }
   if (sort === 'added') return list.sort((a, b) => (b.listedAt ?? '').localeCompare(a.listedAt ?? ''))
-  return list.sort(byReleased)
+  // 時系列順は新しい順(最初に新しい作品を見せる。R11-2)
+  return list.sort((a, b) => byReleased(b, a))
 }
 
 function Detail({ movie, onClose }) {
@@ -158,15 +181,73 @@ function Detail({ movie, onClose }) {
   )
 }
 
-function Segmented({ label, options, value, onChange, counts }) {
+/** アイコンだけのボタン。カーソルを合わせると説明が出る(data-tip、movieShelf.css) */
+function IconButton({ tip, pressed, onClick, children }) {
   return (
-    <div className="mv-seg" role="group" aria-label={label}>
-      {options.map(([key, text]) => (
-        <button key={key} type="button" aria-pressed={value === key} onClick={() => onChange(key)}>
-          {text}
-          {counts ? <span className="mv-count">{counts[key]}</span> : null}
-        </button>
-      ))}
+    <button type="button" className="mv-icon" data-tip={tip} aria-label={tip} aria-pressed={pressed} onClick={onClick}>
+      {children}
+    </button>
+  )
+}
+
+/** アイコンから開く一覧(絞り込み・並び)。ヘッダーのメニューと同じく、マスと項目名を並べ、選んでいるマスは塗る */
+function PickMenu({ tip, icon, options, value, onChange, counts }) {
+  const [open, setOpen] = useState(false)
+  const rootRef = useRef(null)
+  useEffect(() => {
+    if (!open) return undefined
+    const onDown = (e) => {
+      if (rootRef.current && !rootRef.current.contains(e.target)) setOpen(false)
+    }
+    const onKey = (e) => {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    document.addEventListener('pointerdown', onDown)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('pointerdown', onDown)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [open])
+  const current = options.find(([key]) => key === value)
+  return (
+    <div className="mv-pick" ref={rootRef}>
+      <button
+        type="button"
+        className="mv-pick__trigger"
+        data-tip={tip}
+        aria-label={`${tip}：${current ? current[1] : ''}`}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
+        {icon}
+        <span>{current ? current[1] : ''}</span>
+        <PiCaretDownBold className="mv-pick__caret" aria-hidden="true" />
+      </button>
+      {open && (
+        <div className="mv-pick__panel" role="menu" aria-label={tip}>
+          {options.map(([key, text]) => (
+            <button
+              key={key}
+              type="button"
+              role="menuitemradio"
+              aria-checked={value === key}
+              className="mv-pick__item"
+              onClick={() => {
+                onChange(key)
+                setOpen(false)
+              }}
+            >
+              <span className="mv-pick__cell" aria-hidden="true">
+                {value === key ? <PiCheckBold /> : null}
+              </span>
+              <span className="mv-pick__label">{text}</span>
+              {counts ? <span className="mv-count">{counts[key]}</span> : null}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
@@ -197,11 +278,11 @@ export default function MovieShelf() {
 
   const listItems = useMemo(() => (data ? data[list] || [] : []), [data, list])
   const kindCounts = useMemo(() => {
-    const c = { all: listItems.length, movie: 0, anime: 0, drama: 0 }
-    for (const m of listItems) c[m.kind] = (c[m.kind] ?? 0) + 1
+    const c = {}
+    for (const [key] of KINDS) c[key] = listItems.filter((m) => matchesKind(m, key)).length
     return c
   }, [listItems])
-  const ofKind = useMemo(() => listItems.filter((m) => kind === 'all' || m.kind === kind), [listItems, kind])
+  const ofKind = useMemo(() => listItems.filter((m) => matchesKind(m, kind)), [listItems, kind])
   const decades = useMemo(() => [...new Set(ofKind.map(decadeOf).filter(Boolean))].sort((a, b) => a - b), [ofKind])
   const shown = useMemo(
     () => sortItems(ofKind.filter((m) => decade === 'all' || decadeOf(m) === Number(decade)), sort),
@@ -232,30 +313,30 @@ export default function MovieShelf() {
   return (
     <div className="mv">
       <div className="mv-bar">
-        <Segmented
-          label="一覧の種類"
-          options={[
-            ['watched', '観た'],
-            ['watchlist', '観たい'],
-          ]}
-          value={list}
-          onChange={switchList}
-          counts={{ watched: data.watched.length, watchlist: data.watchlist.length }}
-        />
-        <Segmented
-          label="見せ方"
-          options={[
-            ['shelf', '本棚'],
-            ['grid', '一覧'],
-          ]}
-          value={view}
-          onChange={setView}
-        />
+        <div className="mv-tools">
+          {/* 観た／観たい: 目のアイコン1つ。押すと切り替わる。開いた目 = 観た、閉じた目 = まだ観ていない(ウォッチリスト) */}
+          <IconButton
+            tip={`${LIST_NAMES[list]}（押すと${list === 'watched' ? LIST_NAMES.watchlist : LIST_NAMES.watched}）`}
+            onClick={() => switchList(list === 'watched' ? 'watchlist' : 'watched')}
+          >
+            {list === 'watched' ? <PiEyeBold /> : <PiEyeClosedBold />}
+          </IconButton>
+          <PickMenu tip="絞り込み" icon={<PiFunnelSimpleBold aria-hidden="true" />} options={KINDS} value={kind} onChange={switchKind} counts={kindCounts} />
+          <PickMenu tip="並び替え" icon={<PiSortAscendingBold aria-hidden="true" />} options={SORTS[list]} value={sort} onChange={setSort} />
+        </div>
+        <div className="mv-tools" role="group" aria-label="見せ方">
+          <IconButton tip="本棚" pressed={view === 'shelf'} onClick={() => setView('shelf')}>
+            <PiBooksBold />
+          </IconButton>
+          <IconButton tip="一覧" pressed={view === 'grid'} onClick={() => setView('grid')}>
+            <PiSquaresFourBold />
+          </IconButton>
+        </div>
       </div>
-      <div className="mv-bar">
-        <Segmented label="種類" options={KINDS} value={kind} onChange={switchKind} counts={kindCounts} />
-        <Segmented label="並び" options={SORTS[list]} value={sort} onChange={setSort} />
-      </div>
+      <p className="mv-heading">
+        {LIST_NAMES[list]}
+        <span className="mv-count">{shown.length}</span>
+      </p>
       {decades.length > 1 && (
         <div className="mv-tabs" role="group" aria-label="年代">
           <button type="button" aria-pressed={decade === 'all'} onClick={() => setDecade('all')}>

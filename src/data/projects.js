@@ -66,7 +66,7 @@ export const projects = [
     pageKey: 'gaming',
     icon: 'gameController',
   },
-  // 2026-10-05 追加。アイコンは仮(確認シートで決める)
+  // 2026-10-05 追加。アイコンはポップコーン(確認シート R11-4)
   {
     id: 7,
     title: '映画・アニメ・ドラマの視聴履歴',
@@ -74,6 +74,6 @@ export const projects = [
     tags: ['Trakt', 'TMDB', 'React'],
     link: '/movies/',
     pageKey: 'movies',
-    icon: 'filmSlate',
+    icon: 'popcorn',
   },
 ]
