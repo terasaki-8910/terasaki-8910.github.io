@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import ProjectMenu from './components/ProjectMenu'
 
 import { skills } from './data/skills'
 import { research } from './data/research'
@@ -8,8 +9,9 @@ import { works } from './data/works'
 /**
  * /career/ 就活用の1ページの経歴書(decisions タスク 5)。
  * 本体からはリンクせず、URL を直接渡して見てもらう(career/index.html に noindex)。
- * 本体の色と書体はそのまま使い、GSAP・Lenis・大きな題字・ヘッダーは使わない。
- * Research・Skills・学歴・経歴は、トップの Journey と同じデータを読む。
+ * 本体の色と書体はそのまま使い、GSAP・Lenis・大きな題字は使わない。
+ * 左上のロゴと右上のメニューは本体と同じものを置く(このサイトの一部だと分かるように。2026-10-05 本人指定)。
+ * 研究・技術スタック・学歴・経歴は、トップの自己紹介と同じデータを読む。学歴・経歴は自己紹介の中に置く。
  */
 const NAME = '日野岡雅人'
 const AFFILIATION = '筑波大学大学院 情報学学位プログラム 博士前期課程'
@@ -87,10 +89,23 @@ function WorkFact({ term, children }) {
 export default function CareerPage() {
   return (
     <>
-      <main className="px-6 md:px-8 pt-24 pb-32">
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <header className="cosmic-header">
+          <div className="cosmic-header__container">
+            <a href="/" className="cosmic-header__logo">
+              @オーバーライド
+            </a>
+            <div className="cosmic-header__right-group">
+              <ThemeToggle />
+              <ProjectMenu currentPage="career" />
+            </div>
+          </div>
+        </header>
+      </div>
+      <main className="px-6 md:px-8 pt-28 pb-32">
         <div className="bk-content max-w-3xl mx-auto">
           <header>
-            <p className="font-mono text-sm tracking-[0.12em] text-muted">Career</p>
+            <p className="text-sm tracking-[0.12em] text-muted">プロフィール</p>
             <h1 className="mt-4 text-5xl md:text-6xl font-display text-ink">{NAME}</h1>
             <p className="mt-8 text-lg text-ink">{AFFILIATION}</p>
             <p className="mt-2">
@@ -105,9 +120,16 @@ export default function CareerPage() {
 
           <Section title="自己紹介">
             <p className="text-lg text-ink leading-relaxed">{INTRO}</p>
+            <div className="space-y-6 mt-10">
+              {timeline.map((item) => (
+                <Entry key={item.year} label={item.year} title={item.title}>
+                  <p className="text-muted leading-relaxed mt-1">{item.description}</p>
+                </Entry>
+              ))}
+            </div>
           </Section>
 
-          <Section title="Research">
+          <Section title="研究">
             <p className="text-lg text-ink leading-relaxed">{research.summary}</p>
             <div className="space-y-6 mt-10">
               {research.talks.map((talk) => (
@@ -120,7 +142,7 @@ export default function CareerPage() {
             </div>
           </Section>
 
-          <Section title="Skills">
+          <Section title="技術スタック">
             <div className="space-y-6">
               {skills.map((skill) => (
                 <Entry key={skill.name} label={skill.period} title={skill.name}>
@@ -130,7 +152,7 @@ export default function CareerPage() {
             </div>
           </Section>
 
-          <Section title="Works">
+          <Section title="プロジェクト">
             <div className="space-y-12">
               {works.map((work) => (
                 <article key={work.repo} className="relative pl-6 border-l border-line">
@@ -162,18 +184,8 @@ export default function CareerPage() {
             </div>
           </Section>
 
-          <Section title="学歴・経歴">
-            <div className="space-y-6">
-              {timeline.map((item) => (
-                <Entry key={item.year} label={item.year} title={item.title}>
-                  <p className="text-muted leading-relaxed mt-1">{item.description}</p>
-                </Entry>
-              ))}
-            </div>
-          </Section>
         </div>
       </main>
-      <ThemeToggle />
     </>
   )
 }

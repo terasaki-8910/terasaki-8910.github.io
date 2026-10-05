@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="bk-content max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-display text-ink mb-2 whitespace-nowrap">@オーバーライド</h3>
-            <p className="text-muted text-lg">Site Projects Collection</p>
+            {/* 下の説明(以前の Site Projects Collection)は、言い換えずに外した(2026-10-05 本人指定) */}
+            <h3 className="text-2xl font-display text-ink whitespace-nowrap">@オーバーライド</h3>
           </div>
           <div className="flex gap-4">
             <a
