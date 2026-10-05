@@ -40,6 +40,7 @@ export default function Hero() {
               <title>やOGP側には引き続き「冬色」を併記している(index.html)。
               見た目とtitleタグは別物でよい。 */}
           <h1
+            data-hero-title
             className="font-display font-medium text-massive mb-6"
             style={{ color: 'rgb(250, 160, 160)', WebkitTextStroke: '6px black', paintOrder: 'stroke fill' }}
           >

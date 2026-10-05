@@ -11,6 +11,19 @@ function getInitialTheme() {
 
 const Header = ({ currentPage = 'home' }) => {
   const [theme, setTheme] = useState(getInitialTheme)
+  // トップでは、大きな題字(Hero の data-hero-title)が画面から外れたら、左上のロゴを出す(2026-10-05 本人指定)
+  const [heroGone, setHeroGone] = useState(false)
+
+  useEffect(() => {
+    if (currentPage !== 'home') return undefined
+    const title = document.querySelector('[data-hero-title]')
+    if (!title || !('IntersectionObserver' in window)) return undefined
+    const observer = new IntersectionObserver(([entry]) => setHeroGone(!entry.isIntersecting))
+    observer.observe(title)
+    return () => observer.disconnect()
+  }, [currentPage])
+
+  const logoHidden = currentPage === 'home' && !heroGone
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -24,13 +37,22 @@ const Header = ({ currentPage = 'home' }) => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
+  // トップでロゴを押したら、読み込み直さずに一番上へ戻る(App.jsx が Lenis で戻す)
+  function handleLogoClick(event) {
+    if (currentPage !== 'home') return
+    event.preventDefault()
+    window.dispatchEvent(new CustomEvent('site:scroll-top'))
+  }
+
   return (
     <header className="cosmic-header">
       <div className="cosmic-header__container">
-        {/* 左上: トップの題字の小さなロゴ。押すとトップへ。トップでは大きな題字と重なるので出さない */}
+        {/* 左上: トップの題字の小さなロゴ。押すとトップへ。トップでは、大きな題字が見えている間は出さず、
+            外れたら出す。トップで押したときは読み込み直さずに一番上へ戻る */}
         <a
           href="/"
-          className={`cosmic-header__logo ${currentPage === 'home' ? 'cosmic-header__logo--hidden' : ''}`}
+          className={`cosmic-header__logo ${logoHidden ? 'cosmic-header__logo--hidden' : ''}`}
+          onClick={handleLogoClick}
         >
           @オーバーライド
         </a>
