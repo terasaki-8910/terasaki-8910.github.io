@@ -39,7 +39,6 @@
 .mv-pick__item:hover .mv-pick__cell { border-color: rgb(var(--color-accent)); }
 .mv-pick__item[aria-checked='true'] .mv-pick__cell { background: rgb(var(--color-accent)); border-color: rgb(var(--color-accent)); color: rgb(var(--color-on-accent)); }
 .mv-pick__item:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 1px; }
-.mv-heading { display: flex; gap: 8px; align-items: baseline; font-size: 15px; }
 .mv-count { font-family: 'Fira Mono', ui-monospace, monospace; font-size: 12px; color: var(--color-muted); }
 .mv-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .mv-tabs button {

@@ -333,10 +333,6 @@ export default function MovieShelf() {
           </IconButton>
         </div>
       </div>
-      <p className="mv-heading">
-        {LIST_NAMES[list]}
-        <span className="mv-count">{shown.length}</span>
-      </p>
       {decades.length > 1 && (
         <div className="mv-tabs" role="group" aria-label="年代">
           <button type="button" aria-pressed={decade === 'all'} onClick={() => setDecade('all')}>
