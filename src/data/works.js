@@ -22,6 +22,7 @@ export const works = [
     repo: 'happydeck',
     summary: '複数のマシンで動いている Claude Code のセッションを、1つの画面で見て操作するデスクトップアプリ（Happy 経由）',
     role: '個人で設計・実装（Claude Code を使用）',
+    shot: { src: '/career/works/happydeck.webp', width: 1200, height: 750, alt: 'happydeck の画面（モックデータで、複数のマシンのセッションを並べたところ）', framed: true },
     background: '',
     learned: '',
     tech: 'TypeScript, React 19, Vite, Tauri v2, Zod, Vitest, GitHub Actions',
