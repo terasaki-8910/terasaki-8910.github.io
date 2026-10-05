@@ -8,7 +8,7 @@
  * いる間はメニュー内の自分の項目をactive表示にするため)。専用ページを
  * 持たないプロジェクトはnull。
  *
- * Gaming Archiveは2026-08-09にSteam連携で実装済み(scripts/update-steam.js、
+ * 遊んだゲームコレクション(旧 Gaming Archive)は2026-08-09にSteam連携で実装済み(scripts/update-steam.js、
  * GamingArchivePage.jsx)。Discordはライブ連携せず、Footerの招待リンクのまま
  * (本人判断、常時起動が要るBot/第三者サービス依存を避けた)。
  */
@@ -28,7 +28,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'Spotify Dashboard',
+    title: 'Spotifyダッシュボード',
     description: '最近聴いた曲',
     tags: ['Web Audio API', 'React', 'Spotify Integration'],
     link: '/spotify/',
@@ -38,8 +38,8 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Tsukuba Gomi Calendar',
-    description: 'つくば市ごみ収集カレンダー — オープンデータ連携',
+    title: 'つくばごみ収集カレンダー',
+    description: 'オープンデータ連携',
     tags: ['Open Data', 'iCal', 'React'],
     link: '/gomi-tsukuba/',
     gomi: true,
@@ -58,19 +58,19 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'Gaming Archive',
-    description: 'お気に入りのゲームコレクション',
+    title: '遊んだゲームコレクション',
+    description: '',
     tags: ['Steam', 'Discord', 'Community'],
     link: '/gaming-archive/',
     gaming: true,
     pageKey: 'gaming',
     icon: 'gameController',
   },
-  // 2026-10-05 追加。名前とアイコンは仮(確認シートで決める)
+  // 2026-10-05 追加。アイコンは仮(確認シートで決める)
   {
     id: 7,
-    title: 'Movie Shelf',
-    description: 'Trakt に記録した映画（観た・評価・観たい）',
+    title: '映画・アニメ・ドラマの視聴履歴',
+    description: 'Trakt に記録した作品（観た・評価・観たい）',
     tags: ['Trakt', 'TMDB', 'React'],
     link: '/movies/',
     pageKey: 'movies',
