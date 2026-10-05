@@ -1,6 +1,116 @@
 {
-  "lastUpdated": "2026-10-04T11:29:29.882Z",
+  "lastUpdated": "2026-10-05T02:57:03.296Z",
   "tracks": [
+    {
+      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
+      "name": "Without You (feat. Sandro Cavazza)",
+      "artist": "Avicii, Sandro Cavazza",
+      "album": "AVĪCI (01)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
+      "playedAt": "2026-10-05T01:10:13.318Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
+      "duration": 181672,
+      "previewUrl": ""
+    },
+    {
+      "id": "4q57oGT90FfPHf7vWp32Ho",
+      "name": "Judas",
+      "artist": "Lady Gaga",
+      "album": "Born This Way (Japan Special Edition Version)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d2bc35812c2d7f67d110e48",
+      "playedAt": "2026-10-05T01:04:31.852Z",
+      "spotifyUrl": "https://open.spotify.com/track/4q57oGT90FfPHf7vWp32Ho",
+      "duration": 249066,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vHEbPUFdhGmH0kMA0J39X",
+      "name": "Warner Bros. - Cover Version",
+      "artist": "Cinescore",
+      "album": "The Film Studio Fanfare Collection",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
+      "playedAt": "2026-10-05T00:13:14.511Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vHEbPUFdhGmH0kMA0J39X",
+      "duration": 17327,
+      "previewUrl": ""
+    },
+    {
+      "id": "30lXCrnKs5TJJOuSVwiQn1",
+      "name": "Zoltraak",
+      "artist": "Evan Call",
+      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
+      "playedAt": "2026-10-04T23:59:56.928Z",
+      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
+      "duration": 140664,
+      "previewUrl": ""
+    },
+    {
+      "id": "5SXsXjVJCWeJuf7FHvgBYR",
+      "name": "The Avengers",
+      "artist": "Alan Silvestri",
+      "album": "The Avengers (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b0b9aaf0ef903add8f96ff6e",
+      "playedAt": "2026-10-04T23:57:35.722Z",
+      "spotifyUrl": "https://open.spotify.com/track/5SXsXjVJCWeJuf7FHvgBYR",
+      "duration": 123360,
+      "previewUrl": ""
+    },
+    {
+      "id": "110uH4IxKOINJBWCy9J23k",
+      "name": "One Piece (1999) - Overtaken",
+      "artist": "Geek Music",
+      "album": "The Anime Collection Volume One",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
+      "playedAt": "2026-10-04T23:55:31.734Z",
+      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
+      "duration": 120212,
+      "previewUrl": ""
+    },
+    {
+      "id": "23HUlzt20YuALl5Q2gWsKu",
+      "name": "Summer",
+      "artist": "Joe Hisaishi",
+      "album": "菊次郎の夏 (オリジナル・サウンドトラック)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732a0eb03b0b514e69ede808cb",
+      "playedAt": "2026-10-04T23:53:30.973Z",
+      "spotifyUrl": "https://open.spotify.com/track/23HUlzt20YuALl5Q2gWsKu",
+      "duration": 384026,
+      "previewUrl": ""
+    },
+    {
+      "id": "2VvAAjMzOKXkJ9t8N9Rbup",
+      "name": "Duel of the Fates (From \"Star Wars: Episode I - The Phantom Menace\")",
+      "artist": "John Williams, Robert Ziegler, Slovak National Symphony Orchestra, Members of the Slovak Philharmonic Choir",
+      "album": "Music From The Star Wars Saga - The Essential Collection",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273851abf5fb53fda9ada173c79",
+      "playedAt": "2026-10-04T23:47:06.341Z",
+      "spotifyUrl": "https://open.spotify.com/track/2VvAAjMzOKXkJ9t8N9Rbup",
+      "duration": 274200,
+      "previewUrl": ""
+    },
+    {
+      "id": "5VZn5Gsn2ckFJ2bmRo9GPe",
+      "name": "ルパン三世のテーマ - 「ルパン三世のテーマ'78」シングル・ヴァージョン",
+      "artist": "Yuji Ohno, ユー & ザ・エクスプロージョン・バンド",
+      "album": "ルパン三世 オリジナル・サウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d84206cdf9b755537f3123c8",
+      "playedAt": "2026-10-04T23:42:31.609Z",
+      "spotifyUrl": "https://open.spotify.com/track/5VZn5Gsn2ckFJ2bmRo9GPe",
+      "duration": 204626,
+      "previewUrl": ""
+    },
+    {
+      "id": "0WjwAv3XSjztqqyD6Gw1CX",
+      "name": "風のとおり道（インストゥルメンタンル）",
+      "artist": "Joe Hisaishi",
+      "album": "となりのトトロ サウンドトラック集",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ab4ac35f41f2c8b1e428b0f",
+      "playedAt": "2026-10-04T23:36:38.262Z",
+      "spotifyUrl": "https://open.spotify.com/track/0WjwAv3XSjztqqyD6Gw1CX",
+      "duration": 196760,
+      "previewUrl": ""
+    },
     {
       "id": "2soMoQzD2HlsVmys7Se3Pq",
       "name": "The Mandalorian and Grogu",
@@ -10,17 +120,6 @@
       "playedAt": "2026-10-04T11:10:28.898Z",
       "spotifyUrl": "https://open.spotify.com/track/2soMoQzD2HlsVmys7Se3Pq",
       "duration": 187221,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
-      "name": "Without You (feat. Sandro Cavazza)",
-      "artist": "Avicii, Sandro Cavazza",
-      "album": "AVĪCI (01)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
-      "playedAt": "2026-10-04T10:52:18.778Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
-      "duration": 181672,
       "previewUrl": ""
     },
     {
@@ -76,17 +175,6 @@
       "playedAt": "2026-10-04T07:49:05.331Z",
       "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
       "duration": 120000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4q57oGT90FfPHf7vWp32Ho",
-      "name": "Judas",
-      "artist": "Lady Gaga",
-      "album": "Born This Way (Japan Special Edition Version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d2bc35812c2d7f67d110e48",
-      "playedAt": "2026-10-04T07:39:29.977Z",
-      "spotifyUrl": "https://open.spotify.com/track/4q57oGT90FfPHf7vWp32Ho",
-      "duration": 249066,
       "previewUrl": ""
     },
     {
@@ -241,94 +329,6 @@
       "playedAt": "2026-10-04T03:34:37.968Z",
       "spotifyUrl": "https://open.spotify.com/track/4sTZ6LbQSvNkswfij22TYI",
       "duration": 187321,
-      "previewUrl": ""
-    },
-    {
-      "id": "1C1skAeFtnguXNlCYRQoCr",
-      "name": "ブレインロット",
-      "artist": "東京真中",
-      "album": "ブレインロット",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b473edd75d43dfd41d68b2d7",
-      "playedAt": "2026-10-03T06:11:33.804Z",
-      "spotifyUrl": "https://open.spotify.com/track/1C1skAeFtnguXNlCYRQoCr",
-      "duration": 122888,
-      "previewUrl": ""
-    },
-    {
-      "id": "1n8NKQRg8LVHy7oUhUgbFF",
-      "name": "Hedwig's Theme",
-      "artist": "John Williams",
-      "album": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27313f982aa5c43146c3d2c1964",
-      "playedAt": "2026-10-03T05:49:13.610Z",
-      "spotifyUrl": "https://open.spotify.com/track/1n8NKQRg8LVHy7oUhUgbFF",
-      "duration": 309093,
-      "previewUrl": ""
-    },
-    {
-      "id": "5XsPjGw1ADBcVU0i7mwNb1",
-      "name": "Campus mode!!",
-      "artist": "初星学園",
-      "album": "Campus mode!!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
-      "playedAt": "2026-10-03T05:49:00.679Z",
-      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
-      "duration": 260015,
-      "previewUrl": ""
-    },
-    {
-      "id": "6ko9w38zHQYMC9zEtdU6vT",
-      "name": "Universal Studios Fanfare",
-      "artist": "Geek Music",
-      "album": "Universal Studios Fanfare",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735440552cf89e9ae5e354bf18",
-      "playedAt": "2026-10-03T05:46:50.771Z",
-      "spotifyUrl": "https://open.spotify.com/track/6ko9w38zHQYMC9zEtdU6vT",
-      "duration": 22880,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Ab4eiURISCPq2ig7XPYcN",
-      "name": "The Imperial March (Darth Vader's Theme)",
-      "artist": "John Williams, London Symphony Orchestra",
-      "album": "Star Wars: The Empire Strikes Back (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315f47ee015397b51b2330600",
-      "playedAt": "2026-10-03T05:46:27.364Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Ab4eiURISCPq2ig7XPYcN",
-      "duration": 179573,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LoV3sIPEFQj7wdY2YiwF1",
-      "name": "Blood Bag - Extended Version",
-      "artist": "Junkie XL",
-      "album": "Mad Max: Fury Road (Original Motion Picture Soundtrack) [Deluxe Version]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27372c2f7f1612b97d7e2825c8b",
-      "playedAt": "2026-10-03T05:43:27.270Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LoV3sIPEFQj7wdY2YiwF1",
-      "duration": 219500,
-      "previewUrl": ""
-    },
-    {
-      "id": "39uLYYZytVUwcjgeYLI409",
-      "name": "Merry-Go-Round of Life - from 'Howl's Moving Castle'",
-      "artist": "Joe Hisaishi",
-      "album": "FREEDOM PIANO STORIES 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27333ea9fb3fd69bca55a015229",
-      "playedAt": "2026-10-03T05:39:47.250Z",
-      "spotifyUrl": "https://open.spotify.com/track/39uLYYZytVUwcjgeYLI409",
-      "duration": 311106,
-      "previewUrl": ""
-    },
-    {
-      "id": "0YGPxxFKlNde0V2nSq6FJi",
-      "name": "The Throne Room and End Title (From \"Star Wars\")",
-      "artist": "John Williams, Charles Gerhardt, National Philharmonic Orchestra",
-      "album": "Star Wars & Return of the Jedi",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27380f0183e95d1ab70eec8702c",
-      "playedAt": "2026-10-03T05:34:35.625Z",
-      "spotifyUrl": "https://open.spotify.com/track/0YGPxxFKlNde0V2nSq6FJi",
-      "duration": 483293,
       "previewUrl": ""
     }
   ],
