@@ -26,7 +26,8 @@ export default {
       fontFamily: {
         'sans': ['"Zen Kurenaido"', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
         'display': ['"Craft Mincho"', '"Hiragino Mincho ProN"', '"Yu Mincho"', 'serif'],
-        'mono': ['"Fira Mono"', '"SF Mono"', 'Menlo', 'Consolas', 'monospace'],
+        // Fira Mono はラテン文字だけなので、日本語はゴシックに落ちないよう Zen Kurenaido で出す
+        'mono': ['"Fira Mono"', '"Zen Kurenaido"', '"SF Mono"', 'Menlo', 'Consolas', 'monospace'],
       },
       fontSize: {
         'hero': ['clamp(3rem, 15vw, 12rem)', { lineHeight: '0.9', letterSpacing: '-0.04em' }],

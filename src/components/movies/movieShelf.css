@@ -39,10 +39,10 @@
 .mv-pick__item:hover .mv-pick__cell { border-color: rgb(var(--color-accent)); }
 .mv-pick__item[aria-checked='true'] .mv-pick__cell { background: rgb(var(--color-accent)); border-color: rgb(var(--color-accent)); color: rgb(var(--color-on-accent)); }
 .mv-pick__item:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 1px; }
-.mv-count { font-family: 'Fira Mono', ui-monospace, monospace; font-size: 12px; color: var(--color-muted); }
+.mv-count { font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace; font-size: 12px; color: var(--color-muted); }
 .mv-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .mv-tabs button {
-  font-family: 'Fira Mono', ui-monospace, monospace; font-size: 12px; color: var(--color-ink);
+  font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace; font-size: 12px; color: var(--color-ink);
   background: transparent; border: 1px solid var(--color-line); border-radius: 3px; padding: 2px 8px; cursor: pointer;
 }
 .mv-tabs button[aria-pressed='true'] { background: var(--color-ink); color: var(--color-paper); border-color: var(--color-ink); }
@@ -90,7 +90,7 @@
 .mv-arrow--next { right: -12px; }
 .mv-caption { min-height: 84px; display: grid; gap: 4px; justify-items: center; text-align: center; }
 .mv-caption__title { font-size: clamp(20px, 3vw, 26px); line-height: 1.3; }
-.mv-caption__meta { font-family: 'Fira Mono', ui-monospace, monospace; font-size: 13px; color: var(--color-muted); }
+.mv-caption__meta { font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace; font-size: 13px; color: var(--color-muted); }
 .mv-note { font-size: 13px; color: var(--color-muted); }
 
 /* 一覧(ポスターの格子) */
@@ -99,7 +99,7 @@
 .mv-card img, .mv-card__noimg { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 3px; display: block; background: var(--color-surface); }
 .mv-card__noimg { display: grid; place-items: center; padding: 8px; font-size: 13px; }
 .mv-card__title { font-size: 14px; line-height: 1.5; }
-.mv-card__meta { display: flex; gap: 8px; align-items: center; font-family: 'Fira Mono', ui-monospace, monospace; font-size: 12px; color: var(--color-muted); }
+.mv-card__meta { display: flex; gap: 8px; align-items: center; font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace; font-size: 12px; color: var(--color-muted); }
 .mv-card:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }
 .mv-card:hover img { filter: brightness(1.05); }
 
@@ -122,9 +122,9 @@
 .mv-detail__body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 28px; align-items: start; }
 .mv-detail__text { display: grid; gap: 10px; }
 .mv-detail__title { font-size: clamp(26px, 4vw, 40px); line-height: 1.2; }
-.mv-detail__meta { font-family: 'Fira Mono', ui-monospace, monospace; font-size: 13px; color: var(--color-muted); }
+.mv-detail__meta { font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace; font-size: 13px; color: var(--color-muted); }
 .mv-detail__rating { display: grid; gap: 2px; }
-.mv-detail__rating p:first-child { display: flex; gap: 8px; align-items: center; font-family: 'Fira Mono', ui-monospace, monospace; font-size: 13px; }
+.mv-detail__rating p:first-child { display: flex; gap: 8px; align-items: center; font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace; font-size: 13px; }
 .mv-detail__overview { font-size: 15px; line-height: 1.9; max-width: 60ch; }
 .mv-detail__note { display: block; font-size: 12px; color: var(--color-muted); margin-top: 4px; }
 .mv-detail__links { display: flex; gap: 16px; font-size: 14px; }
