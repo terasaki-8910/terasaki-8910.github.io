@@ -469,8 +469,13 @@
 
         // Spotify iFrame用の変数
         let spotifyController = null;
+        // 埋め込みに読み込んだ曲の id
         let currentPlayingTrack = null;
         let iframeApiReady = false;
+        // 押した曲の読み込みが終わったら再生するための印(曲の id)
+        let pendingPlayTrack = null;
+        // いま一覧に出している曲(5分ごとに描き直すので、▶ の印を付け直すのに使う)
+        let latestTracks = [];
         // 埋め込みが今再生中か(playback_update で知る)。止まっているときに pause() を呼ぶと、
         // 埋め込みの中で「Cannot perform operation; no list was loaded.」のエラーになる
         let spotifyIsPlaying = false;
@@ -488,8 +493,18 @@
 
             const callback = (EmbedController) => {
                 spotifyController = EmbedController;
+                // 押した曲は、読み込みが終わったら再生する(2026-10-05 本人指定)。loadUri には
+                // 終わりを知らせるコールバックが無く(引数は uri, preferVideo, startAt)、読み込みが
+                // 終わると ready が届く。ready はクリックそのものではないので、iPhone の Safari などでは
+                // 自動再生として止められることがある(本人承知)。
+                EmbedController.addListener('ready', () => {
+                    if (!pendingPlayTrack) return;
+                    pendingPlayTrack = null;
+                    EmbedController.play();
+                });
                 EmbedController.addListener('playback_update', (e) => {
                     spotifyIsPlaying = Boolean(e && e.data && e.data.isPaused === false);
+                    updatePlayButtons();
                 });
             };
 
@@ -504,7 +519,8 @@
             hideSpotifyIframe();
             pauseIfPlaying();
             currentPlayingTrack = null;
-            document.querySelectorAll('.track-card').forEach(card => updatePlayButton(card, false));
+            pendingPlayTrack = null;
+            updatePlayButtons();
         });
 
         async function loadSpotifyData() {
@@ -523,17 +539,19 @@
         }
 
         function playPreview(trackElement, track) {
-            if (currentPlayingTrack === track.id) {
-                if (spotifyController) {
-                    pauseIfPlaying();
+            // 同じ曲をもう一度押したら、再生中なら止めて閉じ、止まっていれば続きから再生する
+            if (currentPlayingTrack === track.id && spotifyController) {
+                if (spotifyIsPlaying) {
+                    spotifyController.pause();
                     hideSpotifyIframe();
+                    currentPlayingTrack = null;
+                } else {
+                    showSpotifyIframe();
+                    spotifyController.play();
                 }
-                currentPlayingTrack = null;
-                updatePlayButton(trackElement, false);
+                updatePlayButtons();
                 return;
             }
-
-            document.querySelectorAll('.track-card').forEach(card => updatePlayButton(card, false));
 
             if (!iframeApiReady || !spotifyController) {
                 openInSpotify(track);
@@ -543,17 +561,12 @@
             try {
                 const trackUri = `spotify:track:${track.id}`;
                 showSpotifyIframe();
-
-                // setTimeoutを挟むと(特にSafari/iOSで)クリック起点のユーザー操作
-                // 由来という扱いが切れ、自動再生ポリシーに引っかかりやすくなるため、
-                // loadUriのコールバック内で即座にplay()を呼ぶ
-                // 別の曲を読み込むと、それまでの再生は終わる
+                // 別の曲を読み込むと、それまでの再生は終わる。再生は ready が届いてから
                 spotifyIsPlaying = false;
-                spotifyController.loadUri(trackUri, () => {
-                    spotifyController.play();
-                    currentPlayingTrack = track.id;
-                    updatePlayButton(trackElement, true);
-                });
+                currentPlayingTrack = track.id;
+                pendingPlayTrack = track.id;
+                spotifyController.loadUri(trackUri);
+                updatePlayButtons();
 
             } catch (error) {
                 openInSpotify(track);
@@ -565,6 +578,14 @@
             if (spotifyController && spotifyIsPlaying) {
                 spotifyController.pause();
             }
+        }
+
+        // 曲の ▶ の印を、実際に再生している曲だけ ❚❚ にする
+        function updatePlayButtons() {
+            document.querySelectorAll('.track-card').forEach((card) => {
+                const track = latestTracks[Number(card.dataset.index)];
+                updatePlayButton(card, Boolean(track && spotifyIsPlaying && track.id === currentPlayingTrack));
+            });
         }
 
         function showSpotifyIframe() {
@@ -659,12 +680,14 @@
                 </button>
             `).join('');
 
+            latestTracks = data.tracks;
             document.querySelectorAll('.track-card').forEach(card => {
                 card.addEventListener('click', function () {
                     const trackData = data.tracks[Number(this.dataset.index)];
                     playPreview(this, trackData);
                 });
             });
+            updatePlayButtons();
 
             if (data.lastUpdated) {
                 const updatedDate = new Date(data.lastUpdated);
