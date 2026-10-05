@@ -1,17 +1,17 @@
 {
-  "lastUpdated": "2026-10-04T21:14:16.777Z",
+  "lastUpdated": "2026-10-05T05:23:14.533Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
     "profileUrl": "https://steamcommunity.com/id/modadadadaaaagnsb/"
   },
-  "ownedGamesCount": 44,
+  "ownedGamesCount": 50,
   "recentlyPlayed": [
     {
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 342,
+      "playtime2weeksMinutes": 331,
       "playtimeForeverMinutes": 2783
     }
   ],
@@ -107,6 +107,24 @@
       "playtimeForeverMinutes": 0
     },
     {
+      "appid": 6850,
+      "name": "Hitman 2: Silent Assassin",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/6850/4c6b98ac952877ebfb890721624ae79276cf8358.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 6860,
+      "name": "Hitman: Blood Money",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/6860/c8f46248ca288cf332f170a954ffafff2c122131.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 6900,
+      "name": "Hitman: Codename 47",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/6900/e70bdfd4711b79b67d7e7f7cb0fda9bef539254a.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
       "appid": 40990,
       "name": "Mafia",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/40990/3c86a0fd4f94a97b6f4ce31b5c31532e2098fe7b.jpg",
@@ -119,9 +137,27 @@
       "playtimeForeverMinutes": 0
     },
     {
+      "appid": 203140,
+      "name": "Hitman: Absolution",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/203140/fe5e36ac1548793eb48b6b25b701b37d86fb94a3.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 205930,
+      "name": "Hitman: Sniper Challenge",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/205930/756d0ca797b4c8a1340dd73bf49b0bb0656a1802.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
       "appid": 227300,
       "name": "Euro Truck Simulator 2",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/227300/adc18a4fc9adc0330144b76d61cbda68bb2394a0.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 247430,
+      "name": "Hitman: Contracts",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/247430/d8babb26255685ba5de55aa78eb6c7a267b33bac.jpg",
       "playtimeForeverMinutes": 0
     },
     {
@@ -351,7 +387,7 @@
           "description": "Select a Standing Stone blessing",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/3a7e9d9c4f1142fdddbcc6988f23415d72d41ce0.jpg",
           "unlockedAt": "2025-10-10T12:22:18.000Z",
-          "percent": 62.2
+          "percent": 62.3
         },
         {
           "name": "Wanted",
@@ -365,7 +401,7 @@
           "description": "Reach Level 25",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/2162cee6a1a297e102e6ef7c5e60d936cbcc28a1.jpg",
           "unlockedAt": "2025-06-17T03:49:35.000Z",
-          "percent": 28.5
+          "percent": 28.7
         }
       ]
     },
