@@ -1,7 +1,6 @@
 /* テーマトークン(このファイルはTailwind非経由・静的ページにも単体で
    読み込まれるため、index.cssのCSS変数とは独立して自前で持つ)。
-   優先順位: prefers-color-scheme(OS既定) < [data-theme](明示トグル)。
-   静的ページ側でdata-themeを切り替えるJSは別途必要(既知のギャップ)。 */
+   ダークは [data-theme="dark"] のときだけ(OSの設定は見ない。いつもライトで開く)。 */
 :root {
   --header-bg: #F9EC8E;
   --header-border: rgba(0, 0, 0, 0.12);
@@ -14,17 +13,6 @@
   --header-accent-dim: rgba(250, 160, 160, 0.14);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --header-bg: #121212;
-    --header-border: rgba(255, 255, 255, 0.12);
-    --header-text: rgba(237, 237, 237, 0.9);
-    --header-box-bg: #121212;
-    --header-box-border: rgba(255, 255, 255, 0.12);
-    --header-accent: #FAA0A0;
-    --header-accent-dim: rgba(250, 160, 160, 0.14);
-  }
-}
 
 :root[data-theme="dark"] {
   --header-bg: #121212;
@@ -71,13 +59,6 @@
   --menu-cell-ink: rgba(26, 26, 26, 0.9);
   --menu-glyph-fill: #FFFFFF;
   --menu-ink-on-accent: #1A1A1A;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --menu-cell-on: #F2C4C4;
-    --menu-cell-ink: #1A1A1A;
-    --menu-glyph-fill: #FAA0A0;
-  }
 }
 :root[data-theme="dark"] {
   --menu-cell-on: #F2C4C4;

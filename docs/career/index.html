@@ -3,8 +3,9 @@
      最初の一色(src/fx/blockFx.js と head の差し込みスクリプト)も、この指定を見て白になる。 -->
 <html lang="ja" data-theme="light">
   <head>
+    <script>(function(){var d=document.documentElement;if(d.getAttribute('data-theme'))return;var t=null;try{t=localStorage.getItem('theme-picked')}catch(e){}d.setAttribute('data-theme',t==='dark'?'dark':'light')})();</script>
     <style>html.bk-cover::before{content:"";position:fixed;inset:0;z-index:2147483647;background:var(--bk-cover,#fff)}</style>
-    <script>(function(){try{var d=document.documentElement;if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var t=d.getAttribute('data-theme');if(t!=='dark'&&t!=='light'){try{t=localStorage.getItem('theme')}catch(e){}}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}d.style.setProperty('--bk-cover',t==='dark'?'#121212':'#FFFFFF');d.classList.add('bk-cover');setTimeout(function(){d.classList.remove('bk-cover')},3000)}catch(e){}})();</script>
+    <script>(function(){try{var d=document.documentElement;if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var t=d.getAttribute('data-theme')==='dark'?'dark':'light';d.style.setProperty('--bk-cover',t==='dark'?'#121212':'#FFFFFF');d.classList.add('bk-cover');setTimeout(function(){d.classList.remove('bk-cover')},3000)}catch(e){}})();</script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,11 +29,11 @@
 
     <!-- テーマ切り替えボタンの見た目(本体と共通) -->
     <link rel="stylesheet" href="/header-styles.css">
-    <script type="module" crossorigin src="/assets/career-DGPxFjnb.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/blockFx-D-X9Sq1n.js">
-    <link rel="modulepreload" crossorigin href="/assets/index-Djk4ReWH.js">
+    <script type="module" crossorigin src="/assets/career-D3y680fi.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/blockFx-B-pr8Zfi.js">
+    <link rel="modulepreload" crossorigin href="/assets/index-NdPXzBH5.js">
     <link rel="modulepreload" crossorigin href="/assets/timeline-D45kmim2.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-BcyI_tlW.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-CqlzJZcB.css">
   </head>
   <body>
     <div id="root"></div>

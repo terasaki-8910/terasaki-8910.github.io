@@ -1,383 +1,1653 @@
 {
-  "generatedAt": "2026-10-05T05:52:55.848Z",
+  "generatedAt": "2026-10-05T09:39:37.114Z",
   "user": "masatoT",
   "watched": [
     {
-      "trakt": 531178,
-      "tmdb": 687163,
-      "slug": "project-hail-mary-2026",
-      "year": 2026,
-      "traktTitle": "Project Hail Mary",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 6864,
+      "tmdb": 11841,
+      "slug": "the-36th-chamber-of-shaolin-1978",
+      "year": 1978,
+      "released": "1978-02-02",
+      "traktTitle": "The 36th Chamber of Shaolin",
       "details": {
-        "title": "プロジェクト・ヘイル・メアリー",
-        "originalTitle": "Project Hail Mary",
-        "poster": "/laVssxUceGPReVeLM6GVVDwXBF3.jpg",
+        "title": "少林寺三十六房",
+        "originalTitle": "少林三十六房",
+        "poster": "/Ah7Rs9lPIBlfHok1WDDrvtsEvZ5.jpg",
         "genres": [
-          "サイエンスフィクション",
+          "アクション",
           "アドベンチャー"
         ],
-        "runtime": 157,
-        "releaseDate": "2026-03-15",
-        "overview": "未知の原因によって太陽エネルギーが奪われる異常事態が発生。このままでは地球の気温は低下し、全生命は滅亡する。 この絶望的な危機を救う鍵が、11.9光年先の宇宙にあると突き止めた人類は、 一縷の望みをかけて宇宙船を建造。中学校の科学教師グレースを送り込む。 彼は知識を武器に、“イチかバチか”のミッション＜プロジェクト・ヘイル・メアリー＞に立ち向かうことになる。  宇宙の果て、極限の孤独のなかで、グレースが出会ったのは、同じく母星を救うためにひとり奮闘する異星人ロッキーだった。 姿形、言葉も違う二人が、科学を共通言語に挑む、宇宙最大の難題。 やがて育まれる種族を超えた友情の先で、二人が辿り着いた答えとは ――。",
+        "runtime": 116,
+        "releaseDate": "1978-02-02",
+        "overview": "アクションスター、リュー・チャーフィの代表的作品。少林寺出身の伝説的達人・劉裕徳をモデルに描かれるカンフー映画で、三十六番目の房の創設を志す主人公の成長を描く。\r 17世紀の中頃の中国。明朝を倒し、中国全土を制圧しようと企んでいる清王朝の将軍ティエン・タは、横暴きわまりなく、民衆を苦しめていた。その頃、明の復興運動が盛り上がり、正義感に燃える若者リュー・ユテを中心人物とした地下組織が結成されていた。野心に燃えたリューは、仲間たちと清の暴政に対する抵抗運動に励むが、その運動が発覚し、父が殺されてしまう。悲しみに沈むリューは、武道を習得するため少林寺へと旅立つ。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
-      "rating": 10,
-      "ratedAt": "2026-10-05T01:35:15.000Z"
+      "recordedOrder": 14495528329,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:51:29.000Z"
     },
     {
-      "trakt": 870815,
-      "tmdb": 1083381,
-      "slug": "backrooms-2026",
-      "year": 2026,
-      "traktTitle": "Backrooms",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 9,
+      "tmdb": 13,
+      "slug": "forrest-gump-1994",
+      "year": 1994,
+      "released": "1994-06-23",
+      "traktTitle": "Forrest Gump",
       "details": {
-        "title": "バックルームズ",
-        "originalTitle": "Backrooms",
-        "poster": "/z52Eabu4xm5I8ksqdKOSylo5wWL.jpg",
+        "title": "フォレスト・ガンプ／一期一会",
+        "originalTitle": "Forrest Gump",
+        "poster": "/98LQsdCFEP9ubfhDI8YOB72AkOm.jpg",
+        "genres": [
+          "コメディ",
+          "ドラマ",
+          "ロマンス"
+        ],
+        "runtime": 142,
+        "releaseDate": "1994-06-23",
+        "overview": "1940年代、アラバマ州で生まれたフォレスト・ガンプは、知能指数こそ人に劣るが、母親にたっぷりの愛情を注がれて育ち、優しいハートと走る能力は誰にも負けない男性に成長していく。そんなフォレストは、ただひとり彼に理解を示してくれた幼なじみの女性ジェニーの愛を信じる一方、ベトナムの戦場に出征するなど、1950年代に始まるアメリカの歴史の大きな動きの中で、図らずも波瀾万丈の半生を送ることになる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495385406,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:51:44.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 234,
+      "tmdb": 278,
+      "slug": "the-shawshank-redemption-1994",
+      "year": 1994,
+      "released": "1994-09-23",
+      "traktTitle": "The Shawshank Redemption",
+      "details": {
+        "title": "ショーシャンクの空に",
+        "originalTitle": "The Shawshank Redemption",
+        "poster": "/xQY1yhixcSSfKRhdlhzwN8Mra6q.jpg",
+        "genres": [
+          "ドラマ",
+          "犯罪"
+        ],
+        "runtime": 143,
+        "releaseDate": "1994-09-23",
+        "overview": "妻とその愛人を射殺したかどでショーシャンク刑務所送りとなった銀行家アンディ。初めは戸惑っていたが、やがて彼は自ら持つ不思議な魅力ですさんだ受刑者達の心を掴んでゆく。そして20年の歳月が流れた時、彼は冤罪を晴らす重要な証拠をつかむ。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495433052,
+      "rating": 10,
+      "ratedAt": "2026-10-05T02:17:29.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 383,
+      "tmdb": 489,
+      "slug": "good-will-hunting-1997",
+      "year": 1997,
+      "released": "1997-12-05",
+      "traktTitle": "Good Will Hunting",
+      "details": {
+        "title": "グッド・ウィル・ハンティング／旅立ち",
+        "originalTitle": "Good Will Hunting",
+        "poster": "/vZ2KGsE9kDSZSuBqooh5wBK7EAK.jpg",
+        "genres": [
+          "ドラマ"
+        ],
+        "runtime": 127,
+        "releaseDate": "1997-12-05",
+        "overview": "深い心の傷を負った天才青年と、同じく失意の中にいた精神分析医がお互いにあらたな旅立ちを自覚して成長してゆく姿を描く感動のヒューマン・ドラマ。ボストンに住む青年ウィルは、幼い頃から天才ゆえに周囲から孤立していた。だが、彼の才能に気付いた数学教授のランボーは、ウィルに精神分析医のショーンを紹介する。ウィルはショーンにしだいに心を開いてゆくが、彼の才能に気付いた政府機関や大企業が接近してくる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495425099,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:12:51.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 481,
+      "tmdb": 603,
+      "slug": "the-matrix-1999",
+      "year": 1999,
+      "released": "1999-03-31",
+      "traktTitle": "The Matrix",
+      "details": {
+        "title": "マトリックス",
+        "originalTitle": "The Matrix",
+        "poster": "/tlSn7UnfH2LxrBRwfTLs3JSYOTO.jpg",
+        "genres": [
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "runtime": 136,
+        "releaseDate": "1999-03-31",
+        "overview": "トーマス・アンダーソンは、大手ソフトウェア会社に勤めるプログラマである。しかし彼には天才ハッカー、ネオというもう一つの顔があった。ある日、彼はとある人物から連絡を受け、警察に追われる。そして彼から衝撃的な世界の真実を告げられた。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495447689,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:21:34.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 590,
+      "tmdb": 745,
+      "slug": "the-sixth-sense-1999",
+      "year": 1999,
+      "released": "1999-08-06",
+      "traktTitle": "The Sixth Sense",
+      "details": {
+        "title": "シックス・センス",
+        "originalTitle": "The Sixth Sense",
+        "poster": "/j51HIDQTvaanZLBctsK5Z1PsqI6.jpg",
+        "genres": [
+          "謎",
+          "スリラー",
+          "ドラマ"
+        ],
+        "runtime": 107,
+        "releaseDate": "1999-08-06",
+        "overview": "高名な精神科医のマルコムは、かつて担当していた患者の凶弾に倒れてしまう。リハビリを果たした彼は、複雑な症状を抱えた少年･コールの治療に取り掛かる事に。コールは常人には無い特殊な“第6感”、死者を見る事ができる能力を持っていた｡コールを治療しながら、彼によって自らの心も癒されていくマルコム。そして彼には予想も付かない真実が待ち受けていた･･･｡",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495388068,
+      "rating": 9,
+      "ratedAt": "2026-10-05T01:53:22.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 390,
+      "tmdb": 497,
+      "slug": "the-green-mile-1999",
+      "year": 1999,
+      "released": "1999-12-10",
+      "traktTitle": "The Green Mile",
+      "details": {
+        "title": "グリーンマイル",
+        "originalTitle": "The Green Mile",
+        "poster": "/7ynN9QXuYOoT8hLGqB5PVDznWN7.jpg",
+        "genres": [
+          "ファンタジー",
+          "ドラマ",
+          "犯罪"
+        ],
+        "runtime": 189,
+        "releaseDate": "1999-12-10",
+        "overview": "大恐慌中の1935年。コールドマウンテン刑務所にあり、処刑室に続く通路があせた緑色であるため、“グリーンマイル”と呼ばれる死刑囚専用棟に殺人犯コーフィが収監される。だが、幼女惨殺の罪状とは裏腹に、コーフィは素晴らしい力を持っていた。彼は看守長ポールの重度の尿路感染症を治癒し、残忍な看守パーシーに踏み殺されたネズミをよみがえらせる。奇跡を目の当たりにしたポールはコーフィが本当に殺人犯なのか疑いだす。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495433810,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:17:42.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 4149,
+      "tmdb": 8358,
+      "slug": "cast-away-2000",
+      "year": 2000,
+      "released": "2000-12-22",
+      "traktTitle": "Cast Away",
+      "details": {
+        "title": "キャスト・アウェイ",
+        "originalTitle": "Cast Away",
+        "poster": "/j2huPjMfafubpbH2ZJb2ji6EVU9.jpg",
+        "genres": [
+          "アドベンチャー",
+          "ドラマ"
+        ],
+        "runtime": 143,
+        "releaseDate": "2000-12-22",
+        "overview": "チャックはフェデックスに勤めるシステム・エンジニア。ある日、彼の乗った飛行機が太平洋上で墜落。奇跡的に一命は取り留めたものの、彼が流れ着いた先は誰もいない無人島だった。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495382132,
+      "rating": 10,
+      "ratedAt": "2026-10-05T01:49:52.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 6800,
+      "tmdb": 11770,
+      "slug": "shaolin-soccer-2001",
+      "year": 2001,
+      "released": "2001-07-05",
+      "traktTitle": "Shaolin Soccer",
+      "details": {
+        "title": "少林サッカー",
+        "originalTitle": "少林足球",
+        "poster": "/4PX03q04itGzk3A1ZNf3anaiBnd.jpg",
+        "genres": [
+          "アクション",
+          "コメディ"
+        ],
+        "runtime": 113,
+        "releaseDate": "2001-07-05",
+        "overview": "“黄金の右”と呼ばれるサッカー選手ファンは、チームメイトのハンが持ちかけた八百長試合に荷担したことがきっかけで自慢の脚を折られてしまった。夢半ばで諦めざるを得なかったファン。それから20年、ファンは、いまやサッカー界の首領として君臨するハンの雑用係にまで落ちぶれていた。そんなある日、ファンは街で不思議な青年シンと出会う。少林拳を信奉する彼は、くず拾いをしながら道行く人に少林拳を説いて回っていた。ファンはふとしたことからシンの超人的な脚力を見抜き、自らがなし得なかった夢をシンに託すべく、彼にサッカーを教え込むのだった。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495525834,
+      "rating": 10,
+      "ratedAt": "2026-10-05T02:50:17.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 358,
+      "tmdb": 453,
+      "slug": "a-beautiful-mind-2001",
+      "year": 2001,
+      "released": "2001-12-14",
+      "traktTitle": "A Beautiful Mind",
+      "details": {
+        "title": "ビューティフル・マインド",
+        "originalTitle": "A Beautiful Mind",
+        "poster": "/uhekyaBXxGMSu832lDzIoYnoqhm.jpg",
+        "genres": [
+          "ドラマ",
+          "ロマンス"
+        ],
+        "runtime": 135,
+        "releaseDate": "2001-12-14",
+        "overview": "1947年9月、プリンストン大学院の数学科に入学を果たしたジョン・ナッシュ。ひとり研究に没頭するナッシュは次第にクラスメートからも好奇の目で見られるようになる。しかし、ナッシュはついに画期的な「ゲーム理論」を発見する。やがてウィーラー研究所に採用されるが、米ソ冷戦下、彼の類い希な頭脳が暗号解読という極秘任務に利用され、次第に大きなプレッシャーに追いつめられていく…。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495413049,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:03:49.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 516,
+      "tmdb": 640,
+      "slug": "catch-me-if-you-can-2002",
+      "year": 2002,
+      "released": "2002-12-16",
+      "traktTitle": "Catch Me If You Can",
+      "details": {
+        "title": "キャッチ・ミー・イフ・ユー・キャン",
+        "originalTitle": "Catch Me If You Can",
+        "poster": "/5tkvmwwkuRc53Q0PyPsfpSgMF7c.jpg",
+        "genres": [
+          "ドラマ",
+          "犯罪"
+        ],
+        "runtime": 141,
+        "releaseDate": "2002-12-16",
+        "overview": "高校生のフランクは尊敬する父が母と離婚すると聞き、ショックで衝動的に家を飛び出してしまう。そして、生活のため偽造小切手の詐欺を始めるようになる。最初はなかなかうまくいかなかったが、大手航空会社のパイロットに成りすますと誰もがもののみごとに騙された。これに味をしめたフランクは小切手の偽造を繰り返し巨額の資金を手に入れるのだったが…。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495384826,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:51:28.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 18,
+      "tmdb": 22,
+      "slug": "pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003",
+      "year": 2003,
+      "released": "2003-07-09",
+      "traktTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "details": {
+        "title": "パイレーツ・オブ・カリビアン／呪われた海賊たち",
+        "originalTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "poster": "/b1O7VcW4a2RJHWjqWmDCVB6RJE7.jpg",
+        "genres": [
+          "アドベンチャー",
+          "ファンタジー",
+          "アクション"
+        ],
+        "runtime": 143,
+        "releaseDate": "2003-07-09",
+        "overview": "17世紀、海賊たちが大海原を荒らしまわっていた遥かなる時代。カリブ海の港町ポートロイヤル。美しい総督の娘エリザベスはかつて海上で助けた少年ウィルが身につけていた黄金のメダルを手に入れ、今も密かに保管していた。そんなある日、突然ブラックパール号に乗ったキャプテン・バルボッサ率いる冷酷な海賊たちが町に現われ、エリザベスがさらわれてしまう。海賊の目的は、彼女がその時身につけていた例のメダルだった。一方、鍛冶屋で働く逞しい若者へと成長したウィルは、幽閉されていた元ブラックパール号船長で一匹狼の海賊ジャック・スパロウと手を組み、エリザベスの救出に向かうのだが…。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495352533,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:40:13.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 492,
+      "tmdb": 616,
+      "slug": "the-last-samurai-2003",
+      "year": 2003,
+      "released": "2003-12-05",
+      "traktTitle": "The Last Samurai",
+      "details": {
+        "title": "ラスト・サムライ",
+        "originalTitle": "The Last Samurai",
+        "poster": "/AmpClkuAA66BfsNJVZrqZwDHqWk.jpg",
+        "genres": [
+          "ドラマ",
+          "アクション",
+          "戦争"
+        ],
+        "runtime": 154,
+        "releaseDate": "2003-12-05",
+        "overview": "南北戦争時代のアメリカ。北軍の士官として参軍したネイサン・オールグレン大尉は南軍やインディアンと戦いの中、無関係のインディアン部族を攻撃し、子供たちを撃ち、良心の呵責に悩まされ酒浸りになる。日本の実業家の大村はバグリー大佐を介し軍隊の教授職として雇いに来ていた。当時の日本は明治維新で近代国家建設のために急速な近代的軍備増強が必要だった。多額の報酬に魅せられたオールグレンは、僚友ガントとともに日本に渡り、軍隊訓練を指揮する。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495732465,
+      "rating": 7,
+      "ratedAt": "2026-10-05T04:28:46.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 228,
+      "tmdb": 272,
+      "slug": "batman-begins-2005",
+      "year": 2005,
+      "released": "2005-06-10",
+      "traktTitle": "Batman Begins",
+      "details": {
+        "title": "バットマン ビギンズ",
+        "originalTitle": "Batman Begins",
+        "poster": "/mpdTFukLMNAALO2j0yfViyoI2TF.jpg",
+        "genres": [
+          "ドラマ",
+          "犯罪",
+          "アクション"
+        ],
+        "runtime": 140,
+        "releaseDate": "2005-06-10",
+        "overview": "大富豪の家庭に育ったブルース・ウェインは少年時代、井戸で遭遇したコウモリの大群に圧倒的な衝撃を受け、またさらには彼の両親が目の前で殺されて大きなショックを抱え込む。やがて父の遺した企業を受け継いだブルースだったが、強いトラウマと親の仇への復讐心は消えず、犯罪者の心理を知るため自ら罪人となる。そんな彼はある日、デュガードという男と運命的な出会いを果たし、不正と闘うことを決意。そして彼の薦めにより、ヒマラヤの奥地に潜む“影の同盟”なる自警団のもとで心身を鍛え、心の闇を解放する。こうして彼は、ゴッサム・シティへと舞い戻って来る。街は悪の組織と暴力がはびこり、腐敗が進んでいた。自らの使命に確信を持ったブルースは、全身黒いコスチュームを身に纏ったバットマンとなり、巨悪と対峙する道を選ぶのだった。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495350106,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:37:48.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 42651,
+      "tmdb": 42877,
+      "slug": "akagi",
+      "year": 2005,
+      "released": "2005-10-05",
+      "traktTitle": "Akagi",
+      "details": {
+        "poster": "/iX1iBjoniNVZurfE6vcYWZ15Q5F.jpg",
+        "genres": [
+          "アニメーション",
+          "ドラマ"
+        ],
+        "overview": "昭和三十三年。ある嵐の夜、一つの伝説が始まろうとしていた。「闇麻雀」をしていた南郷は己の命運を賭け、麻雀を知らない素人同然の少年にヤクザ相手の「闇麻雀」を自分の代わりにさせた。その少年の名前は、赤木しげる。彼こそが、後に「裏の麻雀界」を震撼させることになる「伝説の代打ち・赤木しげる」であった…。",
+        "overviewLang": "ja",
+        "title": "闘牌伝説アカギ～闇に舞い降りた天才～",
+        "originalTitle": "闘牌伝説アカギ～闇に舞い降りた天才～",
+        "runtime": 24,
+        "releaseDate": "2005-10-05",
+        "seasons": 1,
+        "episodes": 26
+      },
+      "plays": 26,
+      "lastWatchedAt": null,
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:28:05.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 31,
+      "tmdb": 58,
+      "slug": "pirates-of-the-caribbean-dead-man-s-chest-2006",
+      "year": 2006,
+      "released": "2006-07-06",
+      "traktTitle": "Pirates of the Caribbean: Dead Man's Chest",
+      "details": {
+        "title": "パイレーツ・オブ・カリビアン／デッドマンズ・チェスト",
+        "originalTitle": "Pirates of the Caribbean: Dead Man's Chest",
+        "poster": "/f7vNhN3I1pNwibvQy4SjoOoajVn.jpg",
+        "genres": [
+          "アドベンチャー",
+          "ファンタジー",
+          "アクション"
+        ],
+        "runtime": 151,
+        "releaseDate": "2006-07-06",
+        "overview": "呪われた海賊バルボッサとの壮絶な闘いを乗り越え、再びブラックパール号の船長となったジャック・スパロウ。しかし彼は、海賊なら誰もが恐れる幽霊船フライング・ダッチマン号の船長デイヴィ・ジョーンズにもうじき魂を奪われようとしていた。13年前にブラックパール号を手に入れるためジョーンズと“血の契約”を交わしており、その契約の刻限が迫っていたのだ。それでもジャックはその事態を打開するべく、命運を握るある鍵の行方を追い始める。一方、結婚式を挙げようとしていた鍛冶屋の青年ウィルと総督の娘エリザベスは、ジャックを逃がした罪で投獄されるハメに。やがて、２人は再びジャックに会わなければならない宿命となり、それぞれ彼のもとへ向かうのだが…。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495352923,
+      "rating": 7,
+      "ratedAt": "2026-10-05T01:40:36.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 871,
+      "tmdb": 1255,
+      "slug": "the-host-2006",
+      "year": 2006,
+      "released": "2006-07-27",
+      "traktTitle": "The Host",
+      "details": {
+        "title": "グエムル -漢江の怪物-",
+        "originalTitle": "괴물",
+        "poster": "/7A2jQZxMGjwZcfy9fQC1BV5ntoD.jpg",
         "genres": [
           "ホラー",
+          "ドラマ",
+          "サイエンスフィクション"
+        ],
+        "runtime": 120,
+        "releaseDate": "2006-07-27",
+        "overview": "ソウルを流れる大河の漢江に、謎の怪物“グエムル”が現れ、次々と人を襲う。河川敷で売店を営むパク家の長男カンドゥの中学生の娘、ヒョンソも怪物にさらわれてしまう。カンドゥは妹ナムジュらとともに病院に隔離されていたが、携帯電話に娘からの連絡が入ったことから一家で脱出を試みるが……。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495557744,
+      "rating": 7,
+      "ratedAt": "2026-10-05T03:03:06.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 952,
+      "tmdb": 1422,
+      "slug": "the-departed-2006",
+      "year": 2006,
+      "released": "2006-10-04",
+      "traktTitle": "The Departed",
+      "details": {
+        "title": "ディパーテッド",
+        "originalTitle": "The Departed",
+        "poster": "/xrDdcrK2iYkiskR9UpCd29MIRPo.jpg",
+        "genres": [
+          "ドラマ",
+          "スリラー",
+          "犯罪"
+        ],
+        "runtime": 151,
+        "releaseDate": "2006-10-04",
+        "overview": "香港映画『インファナル・アフェア』をマーティン・スコセッシがボストンに舞台を変えハリウッドでリメイクしたアクションサスペンス。レオナルド・ディカプリオとマット・デイモンが主人公の警察官とマフィアをそれぞれ熱演。名優ジャック・ニコルソンがマフィアのボス役で脇を固める。犯罪者の一族に生まれたビリー(レオナルド・ディカプリオ)は、自らの生い立ちと決別するため警察官を志し、優秀な成績で警察学校を卒業。しかし、警察に入るなり、彼はマフィアへの潜入捜査を命じられる。一方、マフィアのボス、コステロ(ジャック・ニコルソン)にかわいがられて育ったコリン(マット・デイモン)は、内通者となるためコステロの指示で警察官になる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495387129,
+      "rating": 9,
+      "ratedAt": "2026-10-05T01:52:40.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 851,
+      "tmdb": 1124,
+      "slug": "the-prestige-2006",
+      "year": 2006,
+      "released": "2006-10-19",
+      "traktTitle": "The Prestige",
+      "details": {
+        "title": "プレステージ",
+        "originalTitle": "The Prestige",
+        "poster": "/z3loPJk9ZnIw37PQOnLTsMy8mpY.jpg",
+        "genres": [
+          "ドラマ",
           "謎",
           "サイエンスフィクション"
         ],
-        "runtime": 111,
-        "releaseDate": "2026-05-27",
-        "overview": "舞台は、都市伝説とされていた空間“Backrooms”。「ある日突然 “現実世界の裏側”へ墜ちてしまったら…？」どこまでも続く黄色い壁紙の部屋、終わりのない廊下。不自然な間取りと、意味を失い床に埋まった設置物。  わずかに現実からズレている――そんな出口のない“リミナルスペース”で、観客は“最高密度の不安と恐怖”を体験する。",
+        "runtime": 130,
+        "releaseDate": "2006-10-19",
+        "overview": "ライバルとして競い合う2人の天才マジシャン、アンジャーとボーデン。ある日、水槽脱出に失敗したアンジャーが溺死し、ボーデンは殺人罪で逮捕されて……。伏線だらけの衝撃サスペンス。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T02:00:11.000Z"
+      "recordedOrder": 14495350225,
+      "rating": 10,
+      "ratedAt": "2026-10-05T01:37:55.000Z"
     },
     {
-      "trakt": 993003,
-      "tmdb": 1228710,
-      "slug": "the-mandalorian-and-grogu-2026",
-      "year": 2026,
-      "traktTitle": "The Mandalorian and Grogu",
+      "type": "show",
+      "kind": "drama",
+      "trakt": 1388,
+      "tmdb": 1396,
+      "slug": "breaking-bad",
+      "year": 2008,
+      "released": "2008-01-20",
+      "traktTitle": "Breaking Bad",
       "details": {
-        "title": "スター・ウォーズ／マンダロリアン・アンド・グローグー",
-        "originalTitle": "The Mandalorian and Grogu",
-        "poster": "/6JC12YUAIKHr8vYiA8XroIsjv1Z.jpg",
+        "poster": "/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg",
+        "genres": [
+          "ドラマ",
+          "犯罪"
+        ],
+        "overview": "家族に金を残したい―。ガンで余命宣告された冴えない高校の化学教師が、元教え子と組みドラッグ精製と売買に手を染める。",
+        "overviewLang": "ja",
+        "title": "ブレイキング・バッド",
+        "originalTitle": "Breaking Bad",
+        "runtime": null,
+        "releaseDate": "2008-01-20",
+        "seasons": 5,
+        "episodes": 62
+      },
+      "plays": 20,
+      "lastWatchedAt": "2026-10-05T01:45:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:45:22.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 1157,
+      "tmdb": 1726,
+      "slug": "iron-man-2008",
+      "year": 2008,
+      "released": "2008-04-30",
+      "traktTitle": "Iron Man",
+      "details": {
+        "title": "アイアンマン",
+        "originalTitle": "Iron Man",
+        "poster": "/gZnH9qyt45WblCc9tEKlEXVjSKA.jpg",
         "genres": [
           "アクション",
-          "アドベンチャー",
-          "サイエンスフィクション"
+          "サイエンスフィクション",
+          "アドベンチャー"
         ],
-        "runtime": 132,
-        "releaseDate": "2026-05-20",
-        "overview": "帝国が崩壊し、無法地帯と化した銀河に生きる、どんな仕事も完璧に遂行する孤高の賞金稼ぎマンダロリアンと、強大なフォースを秘めた存在グローグー。帝国の復活を狙う新たな戦争を阻止する最後の希望は、父子を超えた絆で結ばれたこの二人に託された…。",
+        "runtime": 125,
+        "releaseDate": "2008-04-30",
+        "overview": "億万長者で発明家の軍需産業会社社長トニー・スタークは、視察に訪れた軍のキャンプでテロリストの奇襲に遭い、胸を負傷してしまう。やがて自分の会社の兵器がテロリストに悪用されている衝撃の事実を知ったトニーは、自ら戦闘用のスーツを作り、“アイアンマン”となってテロリストに闘いを挑む。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495354053,
       "rating": 9,
-      "ratedAt": "2026-10-05T01:58:27.000Z"
+      "ratedAt": "2026-10-05T01:40:59.000Z"
     },
     {
-      "trakt": 1071058,
-      "tmdb": 1311031,
-      "slug": "demon-slayer-kimetsu-no-yaiba-infinity-castle-2025",
-      "year": 2025,
-      "traktTitle": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 120,
+      "tmdb": 155,
+      "slug": "the-dark-knight-2008",
+      "year": 2008,
+      "released": "2008-07-16",
+      "traktTitle": "The Dark Knight",
       "details": {
-        "title": "劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来",
-        "originalTitle": "劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来",
-        "poster": "/qjyWDOYokheTTWLMzwJAuvSJeYg.jpg",
-        "genres": [
-          "アニメーション",
-          "アクション",
-          "ファンタジー"
-        ],
-        "runtime": 155,
-        "releaseDate": "2025-07-18",
-        "overview": "鬼となった妹・禰󠄀豆子を人間に戻すため鬼狩りの組織《鬼殺隊》に入った竈門炭治郎。入隊後、仲間である我妻善逸、嘴平伊之助と共に様々な鬼と戦い、成長しながら友情や絆を深めていく。そして炭治郎は《鬼殺隊》最高位の剣士である《柱》と共に戦い、「無限列車」では炎柱・煉󠄁獄杏寿郎、「遊郭」では音柱・宇髄天元、「刀鍛冶の里」では、霞柱・時透無一郎、恋柱・甘露寺蜜璃と共に激闘を繰り広げていった。その後、来たる鬼との決戦に備えて、隊士たちと共に《柱》による合同強化訓練《柱稽古》に挑んでいる最中、《鬼殺隊》の本部である産屋敷邸に現れた鬼舞辻󠄀無惨。お館様の危機に駆けつけた《柱》たちと炭治郎であったが、無惨の手によって謎の空間へと落とされてしまう。炭治郎たちが落下した先、それは鬼の根城≪無限城≫―”鬼殺隊”と”鬼”の最終決戦の火蓋が切って落とされる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:02:34.000Z"
-    },
-    {
-      "trakt": 395672,
-      "tmdb": 533535,
-      "slug": "deadpool-wolverine-2024",
-      "year": 2024,
-      "traktTitle": "Deadpool & Wolverine",
-      "details": {
-        "title": "デッドプール＆ウルヴァリン",
-        "originalTitle": "Deadpool & Wolverine",
-        "poster": "/3kQ7wDhrAd02fEwSBGQ1ZtCJDze.jpg",
-        "genres": [
-          "アクション",
-          "コメディ",
-          "サイエンスフィクション"
-        ],
-        "runtime": 128,
-        "releaseDate": "2024-07-24",
-        "overview": "普通のヒーローに飽きてない？戦う動機は超個人的、破天荒でなんでもアリの“クソ無責任ヒーロー”デッドプールに世界の命運は託された！？ヒーローになんて興味はないけど、大切なファミリーの大ピンチなら頑張っちゃう！予測不可能なミッションのカギを握るのは…よりにもよって“あの爪野郎”。クソ真面目で“キレるとヤバい最恐アウトロー”ウルヴァリンに助けを求めるが…。  全く異なる個性のR指定ヒーロー２人が暴れまわる、過激なアクション・エンターテイメント！",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:13:10.000Z"
-    },
-    {
-      "trakt": 448646,
-      "tmdb": 603692,
-      "slug": "john-wick-chapter-4-2023",
-      "year": 2023,
-      "traktTitle": "John Wick: Chapter 4",
-      "details": {
-        "title": "ジョン・ウィック：コンセクエンス",
-        "originalTitle": "John Wick: Chapter 4",
-        "poster": "/gFvq6c5EDxqJtGdjCpEvt8uh1I2.jpg",
+        "title": "ダークナイト",
+        "originalTitle": "The Dark Knight",
+        "poster": "/nftQJb9550PtYFXhmTs7XiN0QhR.jpg",
         "genres": [
           "アクション",
           "スリラー",
           "犯罪"
         ],
-        "runtime": 170,
-        "releaseDate": "2023-03-21",
-        "overview": "ジョン・ウィックはバワリー・キングと地下に身を潜め主席連合に復讐する方法を見つけ出す。しかし、彼は自由を手にする前に世界中に強力な同盟を持つ殺し屋と対決しなければならない。そして、それは古い友人を敵に変える力を持つ勢力との新たな敵との戦いをも意味するのである。",
+        "runtime": 152,
+        "releaseDate": "2008-07-16",
+        "overview": "悪のはびこるゴッサム・シティーを舞台に、ジム警部補やハービー・デント地方検事の協力のもと、バットマンは街で起こる犯罪撲滅の成果を上げつつあった。だが、ジョーカーと名乗る謎の犯罪者の台頭により、街は再び混乱と狂気に包まれていく。最強の敵を前に、バットマンはあらゆるハイテク技術を駆使しながら、信じるものすべてと戦わざるを得なくなっていく。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495350311,
       "rating": 9,
-      "ratedAt": "2026-10-05T02:20:42.000Z"
+      "ratedAt": "2026-10-05T01:38:03.000Z"
     },
     {
-      "trakt": 698292,
-      "tmdb": 872585,
-      "slug": "oppenheimer-2023",
-      "year": 2023,
-      "traktTitle": "Oppenheimer",
+      "type": "show",
+      "kind": "drama",
+      "trakt": 5882,
+      "tmdb": 5920,
+      "slug": "the-mentalist",
+      "year": 2008,
+      "released": "2008-09-23",
+      "traktTitle": "The Mentalist",
       "details": {
-        "title": "オッペンハイマー",
-        "originalTitle": "Oppenheimer",
-        "poster": "/stEuHtfsjd7MYJcVzuAjVyvsXcj.jpg",
+        "poster": "/yPqF6ds81yczMXOqXf5YTwUj2VH.jpg",
+        "genres": [
+          "犯罪",
+          "ドラマ",
+          "謎"
+        ],
+        "overview": "カリフォルニア州捜査局（通称・CBI）の犯罪コンサルタント、パトリック・ジェーン。元詐欺師で以前は自身を霊能者(サイキック)と偽り活躍していた。妻と娘を殺した宿敵レッド・ジョンを追うため、CBIのコンサルタントとなり、人間心理を巧みに操る観察眼と推理力を持つ「メンタリスト」として型破りな捜査で犯人を追う。",
+        "overviewLang": "ja",
+        "title": "THE MENTALIST メンタリストの捜査ファイル",
+        "originalTitle": "The Mentalist",
+        "runtime": null,
+        "releaseDate": "2008-09-23",
+        "seasons": 7,
+        "episodes": 151
+      },
+      "plays": 23,
+      "lastWatchedAt": "2026-10-05T02:59:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:59:49.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 2857,
+      "tmdb": 4922,
+      "slug": "the-curious-case-of-benjamin-button-2008",
+      "year": 2008,
+      "released": "2008-12-25",
+      "traktTitle": "The Curious Case of Benjamin Button",
+      "details": {
+        "title": "ベンジャミン・バトン 数奇な人生",
+        "originalTitle": "The Curious Case of Benjamin Button",
+        "poster": "/ifFPuPqRxY0PFjEJVoGlJXLbOxx.jpg",
+        "genres": [
+          "ドラマ",
+          "ファンタジー",
+          "ロマンス"
+        ],
+        "runtime": 166,
+        "releaseDate": "2008-12-25",
+        "overview": "80代の男性として誕生し、そこから徐々に若返っていく運命のもとに生まれた男ベンジャミン・バトン。時間の流れを止められず、誰とも違う数奇な人生を歩まなくてはならない彼は、愛する人との出会いと別れを経験し、人生の喜びや死の悲しみを知りながら、時間を刻んでいくが……。＜F・スコット・フィッツジェラルドの短編小説をデヴィッド・フィンチャーが映画化した感動巨編。第一次世界大戦時から21世紀に至るまでのニューオリンズを舞台に、80代で生まれ、徐々に若返っていく男の数奇な運命が描かれる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495488370,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:32:50.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 61994,
+      "tmdb": 29884,
+      "slug": "saki",
+      "year": 2009,
+      "released": "2009-04-06",
+      "traktTitle": "Saki",
+      "details": {
+        "poster": "/80to1jK0MAsX1Bjn6heAXtg0r7t.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "ドラマ"
+        ],
+        "overview": "宮永咲(みやながさき)は高校一年生。奇跡的な麻雀を打ってのける(毎局プラスマイナスゼロで和了(あが)ることができる)美少女。原村和(はらむらのどか)の天才的な打ち方に感化され麻雀部に入部することを決意する。二人の天才美少女が全国大会の頂点を目指す。",
+        "overviewLang": "ja",
+        "title": "咲-Saki-",
+        "originalTitle": "咲-Saki-",
+        "runtime": 25,
+        "releaseDate": "2009-04-06",
+        "seasons": 2,
+        "episodes": 38
+      },
+      "plays": 25,
+      "lastWatchedAt": "2026-10-05T02:00:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:00:57.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 13853,
+      "tmdb": 22804,
+      "slug": "saw-vi-2009",
+      "year": 2009,
+      "released": "2009-10-22",
+      "traktTitle": "Saw VI",
+      "details": {
+        "title": "ソウ6",
+        "originalTitle": "Saw VI",
+        "poster": "/v7QKzzn9kaDyFZe7y0fFNnlwdAD.jpg",
+        "genres": [
+          "ホラー",
+          "スリラー"
+        ],
+        "runtime": 90,
+        "releaseDate": "2009-10-22",
+        "overview": "指紋から、ジグソウの後継者はFBI捜査官ストラムではないかと言われ、後継者へ引き継がれてきたジクソウの事件は終わったかに見えた。しかし、ストラムの上司だったFBI捜査官エリクソンは、疑問を抱き、ホフマン刑事に近づく。一方、ジグソウの元妻ジルは、亡き夫から残された遺言と遺品をどう扱うか考えていた。しかし、彼女の決心もようやく固まった。折から新しいゲームが始まった。このゲームのモニターを最前列で見ているのは、いったい誰なのだろうか？",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495391606,
+      "rating": 5,
+      "ratedAt": "2026-10-05T01:54:26.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 5355,
+      "tmdb": 10138,
+      "slug": "iron-man-2-2010",
+      "year": 2010,
+      "released": "2010-04-28",
+      "traktTitle": "Iron Man 2",
+      "details": {
+        "title": "アイアンマン2",
+        "originalTitle": "Iron Man 2",
+        "poster": "/mj12FOks34aSc7CXL8BpEFHXgrI.jpg",
+        "genres": [
+          "アドベンチャー",
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "runtime": 124,
+        "releaseDate": "2010-04-28",
+        "overview": "パワード・スーツ受け渡しの国家命令を拒否した科学者兼経営者のトニー・スターク。ある日、トニーの前にウィップラッシュなるアイアンマンと互角のパワーを持つ敵が現れたことから、トニーは再びパワード・スーツに身を包みアイアンマンとして立ち上がる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495361566,
+      "rating": 7,
+      "ratedAt": "2026-10-05T01:44:10.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 16662,
+      "tmdb": 27205,
+      "slug": "inception-2010",
+      "year": 2010,
+      "released": "2010-07-15",
+      "traktTitle": "Inception",
+      "details": {
+        "title": "インセプション",
+        "originalTitle": "Inception",
+        "poster": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
+        "genres": [
+          "アクション",
+          "サイエンスフィクション",
+          "アドベンチャー"
+        ],
+        "runtime": 148,
+        "releaseDate": "2010-07-15",
+        "overview": "他人の夢に潜入してアイデアを盗み出す企業スパイのコブは国際指名手配犯であるが、それと同時に妻モルを殺した容疑もかけられていた。そんな彼に日本人男性サイトーからある依頼が。それはこれまでのように思考を盗み出すのではなく、標的にした人物の潜在意識に、あるアイデアを移植する“インセプション”という仕事だった。コブはサイトーを含むスペシャリスト6人を集め、標的の男性ロバートの夢に潜入しようとする。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495350460,
+      "rating": 10,
+      "ratedAt": "2026-10-05T01:38:15.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 24279,
+      "tmdb": 37799,
+      "slug": "the-social-network-2010",
+      "year": 2010,
+      "released": "2010-10-01",
+      "traktTitle": "The Social Network",
+      "details": {
+        "title": "ソーシャル・ネットワーク",
+        "originalTitle": "The Social Network",
+        "poster": "/xx3U2ZdZCnNsoPD2I19tyhFUdl7.jpg",
+        "genres": [
+          "ドラマ"
+        ],
+        "runtime": 121,
+        "releaseDate": "2010-10-01",
+        "overview": "2003年、ハーバード大学の学生マーク・ザッカーバーグは、学内で友人を増やすためのサイトを親友のエドゥアルド・サヴェリンと共に立ち上げる。サイトは瞬く間に学生たちの間に広がり、ナップスター創設者ショーン・パーカーとの出会いを経て、社会現象を巻き起こすほど巨大に成長していく。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495533689,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:54:21.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 5408,
+      "tmdb": 10195,
+      "slug": "thor-2011",
+      "year": 2011,
+      "released": "2011-04-21",
+      "traktTitle": "Thor",
+      "details": {
+        "title": "マイティ・ソー",
+        "originalTitle": "Thor",
+        "poster": "/2xUDJQs4kGKeLszy9E9nD19DCLA.jpg",
+        "genres": [
+          "アドベンチャー",
+          "ファンタジー",
+          "アクション"
+        ],
+        "runtime": 115,
+        "releaseDate": "2011-04-21",
+        "overview": "神の世界では最強の戦士といわれていたものの、横暴でごう慢な性格が災いとなり、地球へ追放されてしまったソー。神の世界での力を失ってしまったソーに凶悪な敵たちが次々と襲い掛かり、ソーは地球でも戦いの日々を送ることになる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495354585,
+      "rating": 6,
+      "ratedAt": "2026-10-05T01:41:26.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 1170,
+      "tmdb": 1771,
+      "slug": "captain-america-the-first-avenger-2011",
+      "year": 2011,
+      "released": "2011-07-22",
+      "traktTitle": "Captain America: The First Avenger",
+      "details": {
+        "title": "キャプテン・アメリカ／ザ・ファースト・アベンジャー",
+        "originalTitle": "Captain America: The First Avenger",
+        "poster": "/2YEbVbf4pSRv0o5T47V2typraZu.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "runtime": 124,
+        "releaseDate": "2011-07-22",
+        "overview": "第二次世界大戦の最中、人一倍愛国心に燃えるスティーブ・ロジャースは兵士に志願し国の為に尽くしたかったが背も低く虚弱な体から兵士として認められず悶々としていた。ある日知り合った戦略科学予備軍の科学者であるエイブラハム・アースキン博士にその愛国心と強く正しい心を認められスーパーソルジャー計画の候補として実験被験者として選ばれ、超人血清を打たれスティーブは屈強なほぼ不死身の超人として生まれ変わる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495358929,
+      "rating": 7,
+      "ratedAt": "2026-10-05T01:41:57.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 43154,
+      "tmdb": 60308,
+      "slug": "moneyball-2011",
+      "year": 2011,
+      "released": "2011-09-23",
+      "traktTitle": "Moneyball",
+      "details": {
+        "title": "マネーボール",
+        "originalTitle": "Moneyball",
+        "poster": "/opL1BO6pOPefMd3Jhjp20yN3nLC.jpg",
+        "genres": [
+          "ドラマ"
+        ],
+        "runtime": 133,
+        "releaseDate": "2011-09-23",
+        "overview": "元プロ野球選手で短気な性格のビリー・ビーンは、アスレチックスのゼネラルマネージャーに就任する。チームはワールド・チャンピオンになるには程遠い状態で、優秀な選手は雇えない貧乏球団だった。あるとき、ピーター・ブランドというデータ分析にたけた人物との出会いをきっかけに、「マネーボール理論」を作り上げる。しかし、「マネーボール理論」に対し選手や監督からは反発を受けてしまい……。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495488506,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:32:59.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 34073,
+      "tmdb": 49026,
+      "slug": "the-dark-knight-rises-2012",
+      "year": 2012,
+      "released": "2012-07-17",
+      "traktTitle": "The Dark Knight Rises",
+      "details": {
+        "title": "ダークナイト・ライジング",
+        "originalTitle": "The Dark Knight Rises",
+        "poster": "/sJTxiMt4slbmTnQoV5UyA2HlYx4.jpg",
+        "genres": [
+          "アクション",
+          "犯罪",
+          "ドラマ",
+          "スリラー"
+        ],
+        "runtime": 164,
+        "releaseDate": "2012-07-17",
+        "overview": "８年前、ゴッサム・シティの希望のためバットマンは町を去り、その正体であるブルース・ウェインは今も隠遁生活を送る。新たに作られたデント法のもと、平和になったゴッサム・シティだが、そこへ凶暴な悪党ベインとその一味が現われ大混乱となる。ベインは実は同じ師匠を持つ、ブルースの兄弟子だった。執事アルフレッドに去られ、ベインの陰謀で財産を失いながらも、ブルースは再びバットマンとなってベインに立ち向かう。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495350637,
+      "rating": 7,
+      "ratedAt": "2026-10-05T01:38:22.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 55753,
+      "tmdb": 75612,
+      "slug": "oblivion-2013",
+      "year": 2013,
+      "released": "2013-04-10",
+      "traktTitle": "Oblivion",
+      "details": {
+        "title": "オブリビオン",
+        "originalTitle": "Oblivion",
+        "poster": "/8HFin8fcPADSah7dKdbiiCk7tlr.jpg",
+        "genres": [
+          "アクション",
+          "サイエンスフィクション",
+          "アドベンチャー",
+          "謎"
+        ],
+        "runtime": 124,
+        "releaseDate": "2013-04-10",
+        "overview": "西暦2077年。60年前に起きた異星人スカヴからの侵略を食い止めたものの、核兵器によって荒廃してしまった地球。人類の大半は、土星の衛星であるタイタンへの移住を余儀なくされていた。ある日、ジャックは地上パトロールの途中で墜落した宇宙船を発見。その残骸から謎の女性ジュリア・ルサコーヴァ（オルガ・キュリレンコ）を助け出す。目覚めた彼女は何故か会った事も無いジャックの名前を口にする。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495523029,
+      "rating": 6,
+      "ratedAt": "2026-10-05T02:49:22.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 55786,
+      "tmdb": 75656,
+      "slug": "now-you-see-me-2013",
+      "year": 2013,
+      "released": "2013-05-29",
+      "traktTitle": "Now You See Me",
+      "details": {
+        "title": "グランド・イリュージョン",
+        "originalTitle": "Now You See Me",
+        "poster": "/tkelhaIMJfKKBhqZyDHGATnQK8F.jpg",
+        "genres": [
+          "スリラー",
+          "犯罪"
+        ],
+        "runtime": 116,
+        "releaseDate": "2013-05-29",
+        "overview": "マジシャンとして一流の腕を持つアトラスは、フォー・ホースメンというスーパーイリュージョニストグループを束ねていた。彼らはマジックショーの中で、ラスベガスから一歩も動くことなく、パリにある銀行から金を奪ってみせた。この件を受けて、次の計画を彼らが実行する前に食い止めようとFBI特別捜査官のディランが捜査を始める。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495531548,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:52:57.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 53002,
+      "tmdb": 72190,
+      "slug": "world-war-z-2013",
+      "year": 2013,
+      "released": "2013-06-19",
+      "traktTitle": "World War Z",
+      "details": {
+        "title": "ワールド・ウォーＺ",
+        "originalTitle": "World War Z",
+        "poster": "/zvArfRDqnXHLbf1PGczGC4t26a2.jpg",
+        "genres": [
+          "アクション",
+          "ホラー",
+          "サイエンスフィクション"
+        ],
+        "runtime": 116,
+        "releaseDate": "2013-06-19",
+        "overview": "フィラデルフィアに住む元国連職員ジェリー・レインは、妻と長女レイチェルと次女コニーを学校に送るため自動車に乗っていたが、いつもとは様子の違う交通渋滞にはまってしまう。人間を狂暴化させる謎の疫病が世界各地で流行し始めており、フィラデルフィアの街はゾンビの大群に襲われていた。ジェリーは街を離れるが、携帯電話へ国連事務次長ティエリーから連絡が入り、現場への復帰を要請される。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495488641,
+      "rating": 10,
+      "ratedAt": "2026-10-05T02:33:09.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 34093,
+      "tmdb": 49047,
+      "slug": "gravity-2013",
+      "year": 2013,
+      "released": "2013-10-03",
+      "traktTitle": "Gravity",
+      "details": {
+        "title": "ゼロ・グラビティ",
+        "originalTitle": "Gravity",
+        "poster": "/sNCXdnxARkInt8F87moQruXeBKc.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "スリラー",
+          "ドラマ"
+        ],
+        "runtime": 91,
+        "releaseDate": "2013-10-03",
+        "overview": "地表から600キロメートルも離れた宇宙で、ミッションを遂行していたメディカルエンジニアのライアン・ストーン博士とベテラン宇宙飛行士マット・コワルスキー。すると、スペースシャトルが大破するという想定外の事故が発生し、二人は一本のロープでつながれたまま漆黒の無重力空間へと放り出される。地球に戻る交通手段であったスペースシャトルを失い、残された酸素も2時間分しかない絶望的な状況で、彼らは懸命に生還する方法を探っていく。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495549165,
+      "rating": 6,
+      "ratedAt": "2026-10-05T03:00:46.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 76438,
+      "tmdb": 107846,
+      "slug": "escape-plan-2013",
+      "year": 2013,
+      "released": "2013-10-09",
+      "traktTitle": "Escape Plan",
+      "details": {
+        "title": "大脱出",
+        "originalTitle": "Escape Plan",
+        "poster": "/vNM0dD523JDPtePo9qVFMMwtNkV.jpg",
+        "genres": [
+          "アクション",
+          "スリラー"
+        ],
+        "runtime": 116,
+        "releaseDate": "2013-10-09",
+        "overview": "レイ・ブレスリンは刑務所の盲点を突いて合法の下で脱獄を試みる、伝説的なセキュリティ・コンサルタント。そんな彼に一人の女性が世界で最も難解な刑務所の脱獄を高額な報酬で依頼される。年齢的にも引退資金稼ぎに仕事を引き受けた彼は、突如拉致され身分を剥奪されたまま脱獄不可能と言われている刑務所、通称『墓場』に収監されてしまう。屈強な囚人たちを圧倒するほどの看守たちの暴力と監視により、一人で脱獄することは愚か、囚人や看守たちに追い詰められたブレスリンは、突如近寄って来た囚人、ロットマイヤーに助けられながら、二人で史上最大の大脱獄を試みようと決意する…。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495521754,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:49:05.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 75735,
+      "tmdb": 106646,
+      "slug": "the-wolf-of-wall-street-2013",
+      "year": 2013,
+      "released": "2013-12-25",
+      "traktTitle": "The Wolf of Wall Street",
+      "details": {
+        "title": "ウルフ・オブ・ウォールストリート",
+        "originalTitle": "The Wolf of Wall Street",
+        "poster": "/d96QhbXHXDcL6Xrdn49eO98wQwU.jpg",
+        "genres": [
+          "犯罪",
+          "ドラマ",
+          "コメディ"
+        ],
+        "runtime": 179,
+        "releaseDate": "2013-12-25",
+        "overview": "学歴や人脈もないまま、22歳でウォール街の投資銀行で働きだしたジョーダン・ベルフォート。巧みな話術で人々の心を瞬く間につかみ、斬新なアイデアを次々と繰り出しては業績を上げ、猛烈なスピードで成り上がっていく。そして26歳で証券会社を設立し、約49億円もの年収を得るまでに。富と名声を一気に手に入れ、ウォール街のウルフという異名で呼ばれるようになった彼は、浪費の限りを尽くして世間の話題を集めていく。しかし、その先には思いがけない転落が待ち受けていた。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495386983,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:52:33.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 92230,
+      "tmdb": 137113,
+      "slug": "edge-of-tomorrow-2014",
+      "year": 2014,
+      "released": "2014-05-27",
+      "traktTitle": "Edge of Tomorrow",
+      "details": {
+        "title": "オール・ユー・ニード・イズ・キル",
+        "originalTitle": "Edge of Tomorrow",
+        "poster": "/Aa1AYE0zDMAbUFdPTDA18YH52dd.jpg",
+        "genres": [
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "runtime": 113,
+        "releaseDate": "2014-05-27",
+        "overview": "近未来の地球。侵略者の激しい攻撃に、人類の軍事力ではもはや太刀打ちできなくなっていた。対侵略者の任務に就いたウィリアム・ケイジ少佐は、戦闘によって亡くなる。しかし、タイムループの世界にとらわれ、戦闘と死を繰り返す。そんな中、特殊部隊の軍人リタ・ヴラタスキと出会ったケイジは、彼女と一緒に何度も戦闘と死を繰り返しながら戦闘技術を向上させる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495522557,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:49:13.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 175333,
+      "tmdb": 277685,
+      "slug": "unfriended-2014",
+      "year": 2014,
+      "released": "2014-06-18",
+      "traktTitle": "Unfriended",
+      "details": {
+        "title": "アンフレンデッド",
+        "originalTitle": "Unfriended",
+        "poster": "/8byPxREr3BqBNyyij5WHVSOVtYk.jpg",
+        "genres": [
+          "ホラー",
+          "謎"
+        ],
+        "runtime": 83,
+        "releaseDate": "2014-06-18",
+        "overview": "While video chatting one night, six high school friends receive a Skype message from a classmate who killed herself exactly one year ago. At first they think it's a prank, but when the girl starts revealing the friends' darkest secrets, they realize they are dealing with something out of this world, something that wants them dead.",
+        "overviewLang": "en"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495394473,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:55:43.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 149047,
+      "tmdb": 244786,
+      "slug": "whiplash-2014",
+      "year": 2014,
+      "released": "2014-10-10",
+      "traktTitle": "Whiplash",
+      "details": {
+        "title": "セッション",
+        "originalTitle": "Whiplash",
+        "poster": "/vsYauBicR2q3qEyHEtjn5KJrNVa.jpg",
+        "genres": [
+          "ドラマ",
+          "音楽",
+          "スリラー"
+        ],
+        "runtime": 107,
+        "releaseDate": "2014-10-10",
+        "overview": "名門音楽学校へと入学し、世界に通用するジャズドラマーになろうと決意するニーマン。そんな彼を待ち受けていたのは、鬼教師として名をはせるフレッチャーだった。ひたすら罵声を浴びせ、完璧な演奏を引き出すためには暴力をも辞さない彼におののきながらも、その指導に必死に食らい付いていくニーマン。だが、フレッチャーのレッスンは次第に狂気じみたものへと変化していく。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495396953,
+      "rating": 9,
+      "ratedAt": "2026-10-05T01:57:07.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 149640,
+      "tmdb": 245891,
+      "slug": "john-wick-2014",
+      "year": 2014,
+      "released": "2014-10-16",
+      "traktTitle": "John Wick",
+      "details": {
+        "title": "ジョン・ウィック",
+        "originalTitle": "John Wick",
+        "poster": "/k9kcEpXcQKEYiqKkpYS6wEasUK2.jpg",
+        "genres": [
+          "アクション",
+          "スリラー"
+        ],
+        "runtime": 101,
+        "releaseDate": "2014-10-16",
+        "overview": "伝説的な暗殺者として裏社会にその名をとどろかせるも、殺しの仕事から手を引いたジョン・ウィック。暴力から遠く慣れた毎日に安らぎを覚えていた彼だったが、それをロシアン・マフィアによって奪われる。怒りと憎しみに支配された彼は、封印していた殺しのスキルをよみがえらせ、ロシアン・マフィアへのリベンジを果たすことを決意する。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495438813,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:19:09.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 121489,
+      "tmdb": 194662,
+      "slug": "birdman-or-the-unexpected-virtue-of-ignorance-2014",
+      "year": 2014,
+      "released": "2014-10-17",
+      "traktTitle": "Birdman or (The Unexpected Virtue of Ignorance)",
+      "details": {
+        "title": "バードマン あるいは（無知がもたらす予期せぬ奇跡）",
+        "originalTitle": "Birdman or (The Unexpected Virtue of Ignorance)",
+        "poster": "/dtJqCt271m4Ze8ActGWCvxVPXIw.jpg",
+        "genres": [
+          "ドラマ",
+          "コメディ"
+        ],
+        "runtime": 120,
+        "releaseDate": "2014-10-17",
+        "overview": "かつてヒーロー映画「バードマン」で一世を風靡した俳優リーガン・トムソンは、落ちぶれた今、自分が脚色を手掛けた舞台「愛について語るときに我々の語ること」に再起を懸けていた。しかし、降板した俳優の代役としてやって来たマイク・シャイナーの才能がリーガンを追い込む。さらに娘サムとの不仲に苦しみ、リーガンは舞台の役柄に自分自身を投影し始める。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495396704,
+      "rating": 4,
+      "ratedAt": "2026-10-05T01:56:55.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 102156,
+      "tmdb": 157336,
+      "slug": "interstellar-2014",
+      "year": 2014,
+      "released": "2014-11-05",
+      "traktTitle": "Interstellar",
+      "details": {
+        "title": "インターステラー",
+        "originalTitle": "Interstellar",
+        "poster": "/auQjFBfCWSL6DpQhWVCZ6wFtDm6.jpg",
+        "genres": [
+          "アドベンチャー",
+          "ドラマ",
+          "サイエンスフィクション"
+        ],
+        "runtime": 169,
+        "releaseDate": "2014-11-05",
+        "overview": "近未来の地球では植物の枯死、異常気象により人類は滅亡の危機に立たされていた。元宇宙飛行士クーパーは、義父と15歳の息子トム、10歳の娘マーフとともにトウモロコシ農場を営んでいる。マーフは自分の部屋の本棚から本がひとりでに落ちる現象を幽霊のせいだと信じていたが、ある日クーパーはそれが何者かによるメッセージではないかと気が付く。クーパーとマーフはメッセージを解読し、それが指し示している秘密施設にたどり着くが、最高機密に触れたとして身柄を拘束される。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495348168,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:36:18.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 128888,
+      "tmdb": 207703,
+      "slug": "kingsman-the-secret-service-2015",
+      "year": 2015,
+      "released": "2015-01-24",
+      "traktTitle": "Kingsman: The Secret Service",
+      "details": {
+        "title": "キングスマン",
+        "originalTitle": "Kingsman: The Secret Service",
+        "poster": "/zOFh0vCsCqUlGBTfdsJt4CFdRR3.jpg",
+        "genres": [
+          "犯罪",
+          "コメディ",
+          "アクション"
+        ],
+        "runtime": 129,
+        "releaseDate": "2015-01-24",
+        "overview": "ロンドン、サヴィル・ロウの高級テーラー「キングスマン」は、どこの国にも所属せず秘密裏の活動を行い、数々の難事件・テロリズムを解決する、スパイの本拠地であった。  かつての「キングスマン」候補生の息子であり元海兵隊員のエグジーは義父率いるギャングとの諍いの中逮捕され、17年前に父の死後「キングスマン」の勲章（メダル）を手渡しにきた工作員のハリーと出会う。エグジーはハリーの薦めにより父と同様に「キングスマン」の選考試験に参加し、他の候補生たちとともに過酷な試練を経験することになる。  一方、ハリーは仲間の死に関わった一連の事件にリッチモンド・ヴァレンタインというアメリカ人実業家が絡んでいることを知る。ヴァレンタインを調べていくうちに判明したのは、人類の存亡を揺るがす巨大な陰謀であった。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495530328,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:52:27.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 183371,
+      "tmdb": 286217,
+      "slug": "the-martian-2015",
+      "year": 2015,
+      "released": "2015-09-30",
+      "traktTitle": "The Martian",
+      "details": {
+        "title": "オデッセイ",
+        "originalTitle": "The Martian",
+        "poster": "/zb8ExBIjEbXDfjmXoFQHXVIaf2v.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "ドラマ",
+          "アドベンチャー"
+        ],
+        "runtime": 141,
+        "releaseDate": "2015-09-30",
+        "overview": "火星の有人探査計画「アレス3」は、猛烈な砂嵐のせいでやむなく中止を余儀なくされるが、撤収作業中、クルーの一員である植物学者のワトニーが、不慮の事故で吹き飛ばされ、行方不明に。状況から彼の生存の可能性は絶望視される中、残りのメンバーたちはワトニーの捜索を断念して、火星を後にする。ところがなんと、ワトニーは奇跡的に生き延びていた。しかし、次の火星探査まではあと4年。果たして気になる彼の運命や、いかに？",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495347924,
+      "rating": 9,
+      "ratedAt": "2026-10-05T01:35:57.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 179334,
+      "tmdb": 281957,
+      "slug": "the-revenant-2015",
+      "year": 2015,
+      "released": "2015-12-25",
+      "traktTitle": "The Revenant",
+      "details": {
+        "title": "レヴェナント：蘇えりし者",
+        "originalTitle": "The Revenant",
+        "poster": "/ytb49OlYaipA2ncsolRRMJQIC23.jpg",
+        "genres": [
+          "西洋",
+          "ドラマ",
+          "アドベンチャー"
+        ],
+        "runtime": 156,
+        "releaseDate": "2015-12-25",
+        "overview": "アメリカ西部の原野、ハンターのヒュー・グラスは狩猟の最中に熊の襲撃を受けて瀕死の重傷を負うが、同行していた仲間のジョン・フィッツジェラルドに置き去りにされてしまう。かろうじて死のふちから生還したグラスは、自分を見捨てたフィッツジェラルドにリベンジを果たすべく、大自然の猛威に立ち向かいながらおよそ300キロに及ぶ過酷な道のりを突き進んでいく。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495386803,
+      "rating": 6,
+      "ratedAt": "2026-10-05T01:52:24.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 222432,
+      "tmdb": 353326,
+      "slug": "the-man-who-knew-infinity-2016",
+      "year": 2016,
+      "released": "2016-04-08",
+      "traktTitle": "The Man Who Knew Infinity",
+      "details": {
+        "title": "奇蹟がくれた数式",
+        "originalTitle": "The Man Who Knew Infinity",
+        "poster": "/xZoaovU8YASj8SlNqJx5ND9HVoJ.jpg",
         "genres": [
           "ドラマ",
           "履歴"
         ],
-        "runtime": 180,
-        "releaseDate": "2023-07-19",
-        "overview": "第2次世界大戦中、才能にあふれた物理学者のロバート・オッペンハイマーは、核開発を急ぐ米政府のマンハッタン計画において、原爆開発プロジェクトの委員長に任命される。しかし、実験で原爆の威力を目の当たりにし、さらにはそれが実戦で投下され、恐るべき大量破壊兵器を生み出したことに衝撃を受けたオッペンハイマーは、戦後、さらなる威力をもった水素爆弾の開発に反対するようになるが……。",
+        "runtime": 108,
+        "releaseDate": "2016-04-08",
+        "overview": "1914年のイギリス。数学者としてケンブリッジ大学で生徒を教えているG・H・ハーディは、インドから届いた手紙に記されていた驚異的な発見に夢中になる。差出人であるラマヌジャンを大学に招き絆を育んでいくハーディだったが、ほかの教授たちは学歴もなく社会的階級も低いとして彼を拒絶する。偏見や差別にさらされた末に重い病を患ってしまうラマヌジャン。そんな彼に代わって、ハーディは数式の証明しようと立ち上がる。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T01:38:39.000Z"
+      "recordedOrder": 14495414956,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:04:46.000Z"
     },
     {
-      "trakt": 787984,
-      "tmdb": 980489,
-      "slug": "gran-turismo-2023",
-      "year": 2023,
-      "traktTitle": "Gran Turismo",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 188631,
+      "tmdb": 291805,
+      "slug": "now-you-see-me-2-2016",
+      "year": 2016,
+      "released": "2016-06-02",
+      "traktTitle": "Now You See Me 2",
       "details": {
-        "title": "グランツーリスモ",
-        "originalTitle": "Gran Turismo",
-        "poster": "/uIK1HAeTGbpqJMT4UV8ADYCwhAb.jpg",
+        "title": "グランド・イリュージョン 見破られたトリック",
+        "originalTitle": "Now You See Me 2",
+        "poster": "/6L2xFHz3yu76oMEuArmj8E59oX4.jpg",
         "genres": [
-          "アドベンチャー",
+          "犯罪",
+          "スリラー"
+        ],
+        "runtime": 129,
+        "releaseDate": "2016-06-02",
+        "overview": "姿をくらましたアトラスら“フォー・ホースメン”のイリュージョニストたちは1年後、再集結する。目的は巨大IT企業、オクタ社が個人情報売買の不正を行なっている事実を暴露すること。しかし、天才エンジニアのウォルターに阻止され、彼らは逃亡を余儀なくされる。ウォルターによってマカオに連れてこられたアトラスたちは、世界中のあらゆるシステムにアクセス可能となるチップの強奪を強要されてしまうが……。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495531782,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:53:06.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 239425,
+      "tmdb": 396535,
+      "slug": "train-to-busan-2016",
+      "year": 2016,
+      "released": "2016-07-20",
+      "traktTitle": "Train to Busan",
+      "details": {
+        "title": "新感染 ファイナル・エクスプレス",
+        "originalTitle": "부산행",
+        "poster": "/lyGWApAtjqfbbsnOGhUpXHbbEp7.jpg",
+        "genres": [
+          "アクション",
+          "ホラー",
+          "スリラー",
+          "アドベンチャー"
+        ],
+        "runtime": 118,
+        "releaseDate": "2016-07-20",
+        "overview": "『釜山行き』は、正体不明のウイルスが韓国全土に拡散して緊急警報が発令された中、汚染されずに残ったたったひとつの安全都市“釜山（プサン）”を目指して釜山行きの列車に乗り込んだ人々が、生き残るために熾烈な死闘を繰り広げるパニック大作。人間の欲が招く災いと、それぞれが生き延びるために選択した方法から暴かれる人間の本性を描く。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495554676,
+      "rating": 7,
+      "ratedAt": "2026-10-05T03:02:12.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 241110,
+      "tmdb": 363676,
+      "slug": "sully-2016",
+      "year": 2016,
+      "released": "2016-09-07",
+      "traktTitle": "Sully",
+      "details": {
+        "title": "ハドソン川の奇跡",
+        "originalTitle": "Sully",
+        "poster": "/3Yiq8M6a0SzyNHFgMVMHwgbSZO0.jpg",
+        "genres": [
           "ドラマ",
+          "履歴"
+        ],
+        "runtime": 96,
+        "releaseDate": "2016-09-07",
+        "overview": "2009年1月15日、真冬のニューヨークで、安全第一がモットーのベテラン操縦士サレンバーガー機長は、いつものように操縦席へ向かう。飛行機は無事に離陸したものの、マンハッタンの上空わずか850メートルという低空地点で急にエンジンが停止してしまう。このまま墜落すれば、乗客はおろか、ニューヨーク市民にも甚大な被害が及ぶ状況で彼が下した決断は、ハドソン川への着水だった。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495567298,
+      "rating": 8,
+      "ratedAt": "2026-10-05T03:08:59.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 181311,
+      "tmdb": 284052,
+      "slug": "doctor-strange-2016",
+      "year": 2016,
+      "released": "2016-10-25",
+      "traktTitle": "Doctor Strange",
+      "details": {
+        "title": "ドクター・ストレンジ",
+        "originalTitle": "Doctor Strange",
+        "poster": "/u3IVExJVyFEiBW4xtIjQhWFuO38.jpg",
+        "genres": [
+          "ファンタジー",
+          "アドベンチャー",
           "アクション"
         ],
-        "runtime": 135,
-        "releaseDate": "2023-08-09",
-        "overview": "世界的大ヒットのドライビングゲーム「グランツーリスモ」のプレイに夢中なヤン。父親からは「レーサーにでもなるつもりか、現実を見ろ」とあきれられる日々。そんなヤンにビッグチャンスが訪れる。世界中から集められた「グランツーリスモ」のトッププレイヤーたちを、本物の国際カーレースに出場するプロレーサーとして育成するため、競い合わせて選抜するプログラム「GTアカデミー」だ。プレイヤーの並外れた才能と可能性を信じて「GTアカデミー」を立ち上げたひとりの男と、ゲーマーなんかが通用する甘い世界ではないと思いながらも指導を引き受ける元レーサー、そしてバーチャルなゲームの世界では百戦錬磨のトッププレイヤーたちがそこに集結。彼らが直面する、想像を絶するトレーニングやアクシデントの数々。不可能な夢へ向かって、それぞれの希望や友情、そして葛藤と挫折が交錯する中で、いよいよ運命のデビュー戦の日を迎える―。",
+        "runtime": 115,
+        "releaseDate": "2016-10-25",
+        "overview": "天才的な技術を誇るが傲慢な性格だけが欠点の神経外科医スティーブン・ストレンジは、不慮の事故で両手の機能を失い、築いてきたキャリアの全てが崩壊する。手の治療と失われた人生を取り戻すため、あらゆる手段を模索するストレンジは、やがて神秘に満ちた魔術の力へとたどり着く。魔術の修行に励むストレンジは、強大な敵との戦いに巻き込まれていき、医師として相手を傷つけることに苦悩し、外科医に戻るか最強の魔術師として戦う道に進むかの選択を迫られる。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495532976,
+      "rating": 8,
+      "ratedAt": "2026-10-05T02:53:46.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 210803,
+      "tmdb": 329865,
+      "slug": "arrival-2016",
+      "year": 2016,
+      "released": "2016-11-10",
+      "traktTitle": "Arrival",
+      "details": {
+        "title": "メッセージ",
+        "originalTitle": "Arrival",
+        "poster": "/liqvkTykQ81YbuVnmuxtnotk5CT.jpg",
+        "genres": [
+          "ドラマ",
+          "サイエンスフィクション",
+          "謎"
+        ],
+        "runtime": 116,
+        "releaseDate": "2016-11-10",
+        "overview": "巨大な球体型宇宙船が、突如地球に降り立つ。世界中が不安と混乱に包まれる中、言語学者のルイーズは宇宙船に乗ってきた者たちの言語を解読するよう軍から依頼される。彼らが使う文字を懸命に読み解いていくと、彼女は時間をさかのぼるような不思議な感覚に陥る。やがて言語をめぐるさまざまな謎が解け、彼らが地球を訪れた思いも寄らない理由と、人類に向けられたメッセージが判明する。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495548850,
       "rating": 7,
-      "ratedAt": "2026-10-05T02:34:22.000Z"
+      "ratedAt": "2026-10-05T03:00:36.000Z"
     },
     {
-      "trakt": 297485,
-      "tmdb": 361743,
-      "slug": "top-gun-maverick-2022",
-      "year": 2022,
-      "traktTitle": "Top Gun: Maverick",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 205127,
+      "tmdb": 324552,
+      "slug": "john-wick-chapter-2-2017",
+      "year": 2017,
+      "released": "2017-02-08",
+      "traktTitle": "John Wick: Chapter 2",
       "details": {
-        "title": "トップガン マーヴェリック",
-        "originalTitle": "Top Gun: Maverick",
-        "poster": "/qw19Vqa16HlmKyxCADncAlb0SWg.jpg",
-        "genres": [
-          "アクション",
-          "ドラマ"
-        ],
-        "runtime": 131,
-        "releaseDate": "2022-05-21",
-        "overview": "マーヴェリック(トム・クルーズ)は、かつて自身も厳しい訓練に挑んだアメリカ海軍パイロットのエリート養成学校、通称「トップガン」に教官として戻ってくる。父親と親友を空で失った過去を持つ彼の型破りな指導に、訓練生たちは反発する。彼らの中には、かつてマーヴェリックの相棒だったグースの息子ルースター(マイルズ・テラー)もいた。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:49:28.000Z"
-    },
-    {
-      "trakt": 561702,
-      "tmdb": 718930,
-      "slug": "bullet-train-2022",
-      "year": 2022,
-      "traktTitle": "Bullet Train",
-      "details": {
-        "title": "ブレット・トレイン",
-        "originalTitle": "Bullet Train",
-        "poster": "/8jlA8J0l5YiYtIwjg2KoKGB58Dt.jpg",
-        "genres": [
-          "アクション",
-          "コメディ",
-          "スリラー"
-        ],
-        "runtime": 126,
-        "releaseDate": "2022-07-20",
-        "overview": "あるブリーフケースを盗むよう謎の女性から指令を受け、東京発京都行の高速列車に乗り込んだ殺し屋・レディバグ。ブリーフケースを奪って降りるだけの簡単な任務のはずだったが、疾走する車内で次々に殺し屋たちと遭遇してしまう。襲い掛かってくる彼らと訳も分からぬまま死闘を繰り広げる中、次第に殺し屋たちとの過去の因縁が浮かび上がってくる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 6,
-      "ratedAt": "2026-10-05T02:34:06.000Z"
-    },
-    {
-      "trakt": 429396,
-      "tmdb": 579974,
-      "slug": "rrr-2022",
-      "year": 2022,
-      "traktTitle": "RRR",
-      "details": {
-        "title": "RRR",
-        "originalTitle": "రౌద్రం రణం రుధిరం",
-        "poster": "/1dGapGFlyGepGfBbpKTfEImdiWN.jpg",
-        "genres": [
-          "アクション",
-          "履歴",
-          "ドラマ"
-        ],
-        "runtime": 187,
-        "releaseDate": "2022-03-24",
-        "overview": "舞台は1920年、英国植民地時代のインド。英国軍にさらわれた幼い少女を救うため、立ち上がるビーム。大義のため英国政府の警察となるラーマ。熱い思いを胸に秘めた男たちが運命に導かれて出会い、唯一無二の親友となる。しかし、ある事件をきっかけに究極の選択を迫られることに。彼らが選ぶのは、友情か？使命か？",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T04:29:27.000Z"
-    },
-    {
-      "trakt": 324048,
-      "tmdb": 476669,
-      "slug": "the-king-s-man-2021",
-      "year": 2021,
-      "traktTitle": "The King's Man",
-      "details": {
-        "title": "キングスマン：ファースト・エージェント",
-        "originalTitle": "The King's Man",
-        "poster": "/36JC4KbbCUlIYxCl2TeTkrjOShd.jpg",
-        "genres": [
-          "アクション",
-          "アドベンチャー",
-          "スリラー"
-        ],
-        "runtime": 131,
-        "releaseDate": "2021-12-22",
-        "overview": "始まりも、超過激　世界大戦を止めろ！超過激なファースト・ミッション始動！！表の顔は、高貴なる英国紳士。裏の顔は、世界最強のスパイ組織“キングスマン”。国家に属さないこの秘密結社の最初の任務は、世界大戦を終わらせることだった…！──1914年。世界大戦を密かに操る謎の狂団に、英国貴族のオックスフォード公と息子コンラッドが立ち向かう。人類破滅へのタイムリミットが迫る中、彼らは仲間たちと共に戦争を止めることができるのか？歴史の裏に隠されたキングスマン誕生秘話を描く、超過激スパイ・アクションシリーズ第3弾。最も過激なファースト・ミッションが始まる！",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 6,
-      "ratedAt": "2026-10-05T02:52:44.000Z"
-    },
-    {
-      "trakt": 427989,
-      "tmdb": 577922,
-      "slug": "tenet-2020",
-      "year": 2020,
-      "traktTitle": "Tenet",
-      "details": {
-        "title": "TENET テネット",
-        "originalTitle": "Tenet",
-        "poster": "/azzqSt3XPpRRIYyh0WT6rs2BCe7.jpg",
-        "genres": [
-          "アクション",
-          "スリラー",
-          "サイエンスフィクション"
-        ],
-        "runtime": 150,
-        "releaseDate": "2020-08-22",
-        "overview": "満席の観客で賑わうウクライナのオペラハウスで、テロ事件が勃発。罪もない人々の大量虐殺を阻止するべく、特殊部隊が館内に突入する。部隊に参加していた名もなき男（ジョン・デヴィッド・ワシントン）は、仲間を救うため身代わりとなって捕えられ、毒薬を飲んでしまう…しかし、その薬は何故か鎮痛剤にすり替えられていた。昏睡状態から目覚めた名もなき男は、フェイと名乗る男から“あるミッション”を命じられる。それは、未来からやってきた敵と戦い、世界を救うというもの。未来では、“時間の逆行”と呼ばれる装置が開発され、人や物が過去へと移動できるようになっていた。\r ミッションのキーワードは＜TENET（テネット）＞。「その言葉の使い方次第で、未来が決まる」。謎のキーワード、TENET（テネット）を使い、第三次世界大戦を防ぐのだ。突然、巨大な任務に巻き込まれた名もなき男。彼は任務を遂行する事ができるのか？",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T01:38:34.000Z"
-    },
-    {
-      "trakt": 304278,
-      "tmdb": 458156,
-      "slug": "john-wick-chapter-3-parabellum-2019",
-      "year": 2019,
-      "traktTitle": "John Wick: Chapter 3 - Parabellum",
-      "details": {
-        "title": "ジョン・ウィック：パラベラム",
-        "originalTitle": "John Wick: Chapter 3 - Parabellum",
-        "poster": "/cFh2fGdZ2HEkDNSVJBFjkqOlxwl.jpg",
+        "title": "ジョン・ウィック：チャプター2",
+        "originalTitle": "John Wick: Chapter 2",
+        "poster": "/sU2ZUsTp7OOKm5Kbaey5hVl9tGU.jpg",
         "genres": [
           "アクション",
           "スリラー",
           "犯罪"
         ],
-        "runtime": 131,
-        "releaseDate": "2019-05-15",
-        "overview": "前作で怒りのあまりに、一流殺し屋が集う「コンチネンタルホテル」の掟である「ホテル内で殺しはおこなってはいけない」を破ってしまったジョン。聖域から追放された彼を待っていたのは、組織による粛清の包囲網だった。刺客たちがさまざまな殺しのスキルを駆使し、賞金首となったジョンに襲いかかる。傷だらけとなったジョンは、かつて「血の契約」を交わしたソフィアに協力を求め、カサブランカへと飛ぶ。",
+        "runtime": 122,
+        "releaseDate": "2017-02-08",
+        "overview": "リベンジから5日後、伝説の殺し屋ジョン・ウィックはイタリアンマフィアのサンティーノから新たな殺人を依頼される。殺し屋稼業から足を洗い静かな生活を望むジョンは断るが、サンティーノによって思い出深い家をバズーカ砲で木っ端みじんにされてしまう。さらにサンティーノに7億円の懸賞金をかけられ、世界中の殺し屋のターゲットとなる。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495440092,
       "rating": 8,
-      "ratedAt": "2026-10-05T02:20:28.000Z"
+      "ratedAt": "2026-10-05T02:19:24.000Z"
     },
     {
-      "trakt": 216715,
-      "tmdb": 335983,
-      "slug": "venom-2018",
-      "year": 2018,
-      "traktTitle": "Venom",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 219867,
+      "tmdb": 339403,
+      "slug": "baby-driver-2017",
+      "year": 2017,
+      "released": "2017-06-28",
+      "traktTitle": "Baby Driver",
       "details": {
-        "title": "ヴェノム",
-        "originalTitle": "Venom",
-        "poster": "/oCB5jiWP91b7F8HM5LZY9S8uQjW.jpg",
+        "title": "ベイビー・ドライバー",
+        "originalTitle": "Baby Driver",
+        "poster": "/2eRnectb1BBLQG5ls1gXFyeEaRL.jpg",
         "genres": [
-          "サイエンスフィクション",
+          "アクション",
+          "犯罪"
+        ],
+        "runtime": 113,
+        "releaseDate": "2017-06-28",
+        "overview": "ベイビーは、その天才的なドライビング・センスを買われ、闇組織の運転手として銀行、現金輸送車を襲ったメンバーの逃亡を手助けすることを仕事としていた。彼は、子供の頃の交通事故が原因で耳鳴りに悩まされ続けていたが、音楽を聴くと耳鳴りがかき消され、ドライビング・テクニックがさらに覚醒し誰も止めることも追いつくこともできない、イカれたドライバーへと変貌するのだった。組織のボスで作戦担当のドク、すぐにブチ切れ銃をブッ放すバッツ、凶暴すぎる夫婦、バディとダーリン。彼らとの仕事にスリルを覚え、才能を活かしてきたが、恋人デボラの存在を組織に嗅ぎつけられたことから、合衆国郵便局の襲撃を最後の仕事に、このクレイジーな環境から抜け出す決意をする。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495435547,
+      "rating": 7,
+      "ratedAt": "2026-10-05T02:18:12.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 223444,
+      "tmdb": 343668,
+      "slug": "kingsman-the-golden-circle-2017",
+      "year": 2017,
+      "released": "2017-09-20",
+      "traktTitle": "Kingsman: The Golden Circle",
+      "details": {
+        "title": "キングスマン：ゴールデン・サークル",
+        "originalTitle": "Kingsman: The Golden Circle",
+        "poster": "/deAY5v340Q5EMDfHP7lwmyJEd0T.jpg",
+        "genres": [
+          "犯罪",
+          "コメディ",
           "アクション"
         ],
-        "runtime": 112,
-        "releaseDate": "2018-09-28",
-        "overview": "敏腕記者エディ・ブロックは、人体実験で死者をだしているという＜ライフ財団＞の真相を追う中、シンビオートと呼ばれる地球外生命体を発見し接触してしまう。この意思を持った生命体との接触により、エディの体は寄生され一体化し、ヴェノムとなる。ヴェノムはそのグロテスクな体で容赦なく人を襲って喰らう。エディは自分自身をコントロールできなくなる危機感を覚える一方、少しずつその力に魅了されていく。",
+        "runtime": 141,
+        "releaseDate": "2017-09-20",
+        "overview": "表の顔は、ロンドンの高級テーラー。その実態はスマートにスーツを着こなし、人知れず世界を守る最強のスパイ機関：キングスマン。しかし、謎の敵の攻撃により基地は壊滅。残された２人、一流エージェントに成長したエグジーと、メカ担当のマーリンは、アメリカの同盟機関：ステイツマンと合流する。しかし彼らは、表ではウイスキーの蒸留所を経営するコテコテにアメリカンなチームだった。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495530594,
       "rating": 7,
-      "ratedAt": "2026-10-05T03:11:59.000Z"
+      "ratedAt": "2026-10-05T02:52:33.000Z"
     },
     {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 286243,
       "tmdb": 440471,
       "slug": "escape-plan-2-hades-2018",
       "year": 2018,
+      "released": "2018-06-05",
       "traktTitle": "Escape Plan 2: Hades",
       "details": {
         "title": "大脱出2",
@@ -397,1455 +1667,633 @@
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495521246,
       "rating": 6,
       "ratedAt": "2026-10-05T02:48:57.000Z"
     },
     {
-      "trakt": 205127,
-      "tmdb": 324552,
-      "slug": "john-wick-chapter-2-2017",
-      "year": 2017,
-      "traktTitle": "John Wick: Chapter 2",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 216715,
+      "tmdb": 335983,
+      "slug": "venom-2018",
+      "year": 2018,
+      "released": "2018-09-28",
+      "traktTitle": "Venom",
       "details": {
-        "title": "ジョン・ウィック：チャプター2",
-        "originalTitle": "John Wick: Chapter 2",
-        "poster": "/sU2ZUsTp7OOKm5Kbaey5hVl9tGU.jpg",
+        "title": "ヴェノム",
+        "originalTitle": "Venom",
+        "poster": "/oCB5jiWP91b7F8HM5LZY9S8uQjW.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "アクション"
+        ],
+        "runtime": 112,
+        "releaseDate": "2018-09-28",
+        "overview": "敏腕記者エディ・ブロックは、人体実験で死者をだしているという＜ライフ財団＞の真相を追う中、シンビオートと呼ばれる地球外生命体を発見し接触してしまう。この意思を持った生命体との接触により、エディの体は寄生され一体化し、ヴェノムとなる。ヴェノムはそのグロテスクな体で容赦なく人を襲って喰らう。エディは自分自身をコントロールできなくなる危機感を覚える一方、少しずつその力に魅了されていく。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495573638,
+      "rating": 7,
+      "ratedAt": "2026-10-05T03:11:59.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 304278,
+      "tmdb": 458156,
+      "slug": "john-wick-chapter-3-parabellum-2019",
+      "year": 2019,
+      "released": "2019-05-15",
+      "traktTitle": "John Wick: Chapter 3 - Parabellum",
+      "details": {
+        "title": "ジョン・ウィック：パラベラム",
+        "originalTitle": "John Wick: Chapter 3 - Parabellum",
+        "poster": "/cFh2fGdZ2HEkDNSVJBFjkqOlxwl.jpg",
         "genres": [
           "アクション",
           "スリラー",
           "犯罪"
         ],
-        "runtime": 122,
-        "releaseDate": "2017-02-08",
-        "overview": "リベンジから5日後、伝説の殺し屋ジョン・ウィックはイタリアンマフィアのサンティーノから新たな殺人を依頼される。殺し屋稼業から足を洗い静かな生活を望むジョンは断るが、サンティーノによって思い出深い家をバズーカ砲で木っ端みじんにされてしまう。さらにサンティーノに7億円の懸賞金をかけられ、世界中の殺し屋のターゲットとなる。",
+        "runtime": 131,
+        "releaseDate": "2019-05-15",
+        "overview": "前作で怒りのあまりに、一流殺し屋が集う「コンチネンタルホテル」の掟である「ホテル内で殺しはおこなってはいけない」を破ってしまったジョン。聖域から追放された彼を待っていたのは、組織による粛清の包囲網だった。刺客たちがさまざまな殺しのスキルを駆使し、賞金首となったジョンに襲いかかる。傷だらけとなったジョンは、かつて「血の契約」を交わしたソフィアに協力を求め、カサブランカへと飛ぶ。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495443962,
       "rating": 8,
-      "ratedAt": "2026-10-05T02:19:24.000Z"
+      "ratedAt": "2026-10-05T02:20:28.000Z"
     },
     {
-      "trakt": 219867,
-      "tmdb": 339403,
-      "slug": "baby-driver-2017",
-      "year": 2017,
-      "traktTitle": "Baby Driver",
+      "type": "show",
+      "kind": "drama",
+      "trakt": 139960,
+      "tmdb": 76479,
+      "slug": "the-boys-2019",
+      "year": 2019,
+      "released": "2019-07-25",
+      "traktTitle": "The Boys",
       "details": {
-        "title": "ベイビー・ドライバー",
-        "originalTitle": "Baby Driver",
-        "poster": "/2eRnectb1BBLQG5ls1gXFyeEaRL.jpg",
+        "poster": "/vgBK0oQUPalwibrp0Ddy1zPgWHB.jpg",
+        "genres": [
+          "Sci-Fi & Fantasy",
+          "Action & Adventure"
+        ],
+        "overview": "欲と名声にとりつかれたスーパーヒーローたち。非公式に「ザ・ボーイズ」と呼ばれるグループが腐敗したスーパーヒーローたちを倒そうとする。特殊能力を持たない彼らは根性と信念で悪しきヒーローに立ち向かう。",
+        "overviewLang": "ja",
+        "title": "ザ・ボーイズ",
+        "originalTitle": "The Boys",
+        "runtime": null,
+        "releaseDate": "2019-07-25",
+        "seasons": 5,
+        "episodes": 40
+      },
+      "plays": 40,
+      "lastWatchedAt": null,
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-10-05T01:39:39.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 427989,
+      "tmdb": 577922,
+      "slug": "tenet-2020",
+      "year": 2020,
+      "released": "2020-08-22",
+      "traktTitle": "Tenet",
+      "details": {
+        "title": "TENET テネット",
+        "originalTitle": "Tenet",
+        "poster": "/azzqSt3XPpRRIYyh0WT6rs2BCe7.jpg",
         "genres": [
           "アクション",
+          "スリラー",
+          "サイエンスフィクション"
+        ],
+        "runtime": 150,
+        "releaseDate": "2020-08-22",
+        "overview": "満席の観客で賑わうウクライナのオペラハウスで、テロ事件が勃発。罪もない人々の大量虐殺を阻止するべく、特殊部隊が館内に突入する。部隊に参加していた名もなき男（ジョン・デヴィッド・ワシントン）は、仲間を救うため身代わりとなって捕えられ、毒薬を飲んでしまう…しかし、その薬は何故か鎮痛剤にすり替えられていた。昏睡状態から目覚めた名もなき男は、フェイと名乗る男から“あるミッション”を命じられる。それは、未来からやってきた敵と戦い、世界を救うというもの。未来では、“時間の逆行”と呼ばれる装置が開発され、人や物が過去へと移動できるようになっていた。\r ミッションのキーワードは＜TENET（テネット）＞。「その言葉の使い方次第で、未来が決まる」。謎のキーワード、TENET（テネット）を使い、第三次世界大戦を防ぐのだ。突然、巨大な任務に巻き込まれた名もなき男。彼は任務を遂行する事ができるのか？",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495350778,
+      "rating": 7,
+      "ratedAt": "2026-10-05T01:38:34.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 324048,
+      "tmdb": 476669,
+      "slug": "the-king-s-man-2021",
+      "year": 2021,
+      "released": "2021-12-22",
+      "traktTitle": "The King's Man",
+      "details": {
+        "title": "キングスマン：ファースト・エージェント",
+        "originalTitle": "The King's Man",
+        "poster": "/36JC4KbbCUlIYxCl2TeTkrjOShd.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "スリラー"
+        ],
+        "runtime": 131,
+        "releaseDate": "2021-12-22",
+        "overview": "始まりも、超過激　世界大戦を止めろ！超過激なファースト・ミッション始動！！表の顔は、高貴なる英国紳士。裏の顔は、世界最強のスパイ組織“キングスマン”。国家に属さないこの秘密結社の最初の任務は、世界大戦を終わらせることだった…！──1914年。世界大戦を密かに操る謎の狂団に、英国貴族のオックスフォード公と息子コンラッドが立ち向かう。人類破滅へのタイムリミットが迫る中、彼らは仲間たちと共に戦争を止めることができるのか？歴史の裏に隠されたキングスマン誕生秘話を描く、超過激スパイ・アクションシリーズ第3弾。最も過激なファースト・ミッションが始まる！",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495530866,
+      "rating": 6,
+      "ratedAt": "2026-10-05T02:52:44.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 429396,
+      "tmdb": 579974,
+      "slug": "rrr-2022",
+      "year": 2022,
+      "released": "2022-03-24",
+      "traktTitle": "RRR",
+      "details": {
+        "title": "RRR",
+        "originalTitle": "రౌద్రం రణం రుధిరం",
+        "poster": "/1dGapGFlyGepGfBbpKTfEImdiWN.jpg",
+        "genres": [
+          "アクション",
+          "履歴",
+          "ドラマ"
+        ],
+        "runtime": 187,
+        "releaseDate": "2022-03-24",
+        "overview": "舞台は1920年、英国植民地時代のインド。英国軍にさらわれた幼い少女を救うため、立ち上がるビーム。大義のため英国政府の警察となるラーマ。熱い思いを胸に秘めた男たちが運命に導かれて出会い、唯一無二の親友となる。しかし、ある事件をきっかけに究極の選択を迫られることに。彼らが選ぶのは、友情か？使命か？",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495733312,
+      "rating": 9,
+      "ratedAt": "2026-10-05T04:29:27.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 297485,
+      "tmdb": 361743,
+      "slug": "top-gun-maverick-2022",
+      "year": 2022,
+      "released": "2022-05-21",
+      "traktTitle": "Top Gun: Maverick",
+      "details": {
+        "title": "トップガン マーヴェリック",
+        "originalTitle": "Top Gun: Maverick",
+        "poster": "/qw19Vqa16HlmKyxCADncAlb0SWg.jpg",
+        "genres": [
+          "アクション",
+          "ドラマ"
+        ],
+        "runtime": 131,
+        "releaseDate": "2022-05-21",
+        "overview": "マーヴェリック(トム・クルーズ)は、かつて自身も厳しい訓練に挑んだアメリカ海軍パイロットのエリート養成学校、通称「トップガン」に教官として戻ってくる。父親と親友を空で失った過去を持つ彼の型破りな指導に、訓練生たちは反発する。彼らの中には、かつてマーヴェリックの相棒だったグースの息子ルースター(マイルズ・テラー)もいた。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495523800,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:49:28.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 561702,
+      "tmdb": 718930,
+      "slug": "bullet-train-2022",
+      "year": 2022,
+      "released": "2022-07-20",
+      "traktTitle": "Bullet Train",
+      "details": {
+        "title": "ブレット・トレイン",
+        "originalTitle": "Bullet Train",
+        "poster": "/8jlA8J0l5YiYtIwjg2KoKGB58Dt.jpg",
+        "genres": [
+          "アクション",
+          "コメディ",
+          "スリラー"
+        ],
+        "runtime": 126,
+        "releaseDate": "2022-07-20",
+        "overview": "あるブリーフケースを盗むよう謎の女性から指令を受け、東京発京都行の高速列車に乗り込んだ殺し屋・レディバグ。ブリーフケースを奪って降りるだけの簡単な任務のはずだったが、疾走する車内で次々に殺し屋たちと遭遇してしまう。襲い掛かってくる彼らと訳も分からぬまま死闘を繰り広げる中、次第に殺し屋たちとの過去の因縁が浮かび上がってくる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495492976,
+      "rating": 6,
+      "ratedAt": "2026-10-05T02:34:06.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 163705,
+      "tmdb": 105248,
+      "slug": "cyberpunk-edgerunners",
+      "year": 2022,
+      "released": "2022-09-13",
+      "traktTitle": "Cyberpunk: Edgerunners",
+      "details": {
+        "poster": "/rNkilVmALgaIb4SenfbaecRStDD.jpg",
+        "genres": [
+          "アニメーション",
+          "Action & Adventure",
+          "Sci-Fi & Fantasy",
           "犯罪"
         ],
-        "runtime": 113,
-        "releaseDate": "2017-06-28",
-        "overview": "ベイビーは、その天才的なドライビング・センスを買われ、闇組織の運転手として銀行、現金輸送車を襲ったメンバーの逃亡を手助けすることを仕事としていた。彼は、子供の頃の交通事故が原因で耳鳴りに悩まされ続けていたが、音楽を聴くと耳鳴りがかき消され、ドライビング・テクニックがさらに覚醒し誰も止めることも追いつくこともできない、イカれたドライバーへと変貌するのだった。組織のボスで作戦担当のドク、すぐにブチ切れ銃をブッ放すバッツ、凶暴すぎる夫婦、バディとダーリン。彼らとの仕事にスリルを覚え、才能を活かしてきたが、恋人デボラの存在を組織に嗅ぎつけられたことから、合衆国郵便局の襲撃を最後の仕事に、このクレイジーな環境から抜け出す決意をする。",
-        "overviewLang": "ja"
+        "overview": "ナイトシティ、ここは不正にまみれた大企業の関係者と、サイバーウェアで肉体を改造した者たちが幅を利かせる未来の街。それ以外の人間が成功するためには、自らの力ではい上がるしか道はない。",
+        "overviewLang": "ja",
+        "title": "Cyberpunk: Edgerunners",
+        "originalTitle": "Cyberpunk: Edgerunners",
+        "runtime": null,
+        "releaseDate": "2022-09-13",
+        "seasons": 2,
+        "episodes": 20
       },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T02:18:12.000Z"
+      "plays": 9,
+      "lastWatchedAt": "2026-10-05T02:25:00.000Z",
+      "recordedOrder": null,
+      "rating": 10,
+      "ratedAt": "2026-10-05T02:26:02.000Z"
     },
     {
-      "trakt": 223444,
-      "tmdb": 343668,
-      "slug": "kingsman-the-golden-circle-2017",
-      "year": 2017,
-      "traktTitle": "Kingsman: The Golden Circle",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 448646,
+      "tmdb": 603692,
+      "slug": "john-wick-chapter-4-2023",
+      "year": 2023,
+      "released": "2023-03-21",
+      "traktTitle": "John Wick: Chapter 4",
       "details": {
-        "title": "キングスマン：ゴールデン・サークル",
-        "originalTitle": "Kingsman: The Golden Circle",
-        "poster": "/deAY5v340Q5EMDfHP7lwmyJEd0T.jpg",
+        "title": "ジョン・ウィック：コンセクエンス",
+        "originalTitle": "John Wick: Chapter 4",
+        "poster": "/gFvq6c5EDxqJtGdjCpEvt8uh1I2.jpg",
         "genres": [
-          "犯罪",
-          "コメディ",
-          "アクション"
+          "アクション",
+          "スリラー",
+          "犯罪"
         ],
-        "runtime": 141,
-        "releaseDate": "2017-09-20",
-        "overview": "表の顔は、ロンドンの高級テーラー。その実態はスマートにスーツを着こなし、人知れず世界を守る最強のスパイ機関：キングスマン。しかし、謎の敵の攻撃により基地は壊滅。残された２人、一流エージェントに成長したエグジーと、メカ担当のマーリンは、アメリカの同盟機関：ステイツマンと合流する。しかし彼らは、表ではウイスキーの蒸留所を経営するコテコテにアメリカンなチームだった。",
+        "runtime": 170,
+        "releaseDate": "2023-03-21",
+        "overview": "ジョン・ウィックはバワリー・キングと地下に身を潜め主席連合に復讐する方法を見つけ出す。しかし、彼は自由を手にする前に世界中に強力な同盟を持つ殺し屋と対決しなければならない。そして、それは古い友人を敵に変える力を持つ勢力との新たな敵との戦いをも意味するのである。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T02:52:33.000Z"
+      "recordedOrder": 14495445076,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:20:42.000Z"
     },
     {
-      "trakt": 241110,
-      "tmdb": 363676,
-      "slug": "sully-2016",
-      "year": 2016,
-      "traktTitle": "Sully",
+      "type": "show",
+      "kind": "drama",
+      "trakt": 203615,
+      "tmdb": 210269,
+      "slug": "sanctuary-2023",
+      "year": 2023,
+      "released": "2023-05-04",
+      "traktTitle": "Sanctuary",
       "details": {
-        "title": "ハドソン川の奇跡",
-        "originalTitle": "Sully",
-        "poster": "/3Yiq8M6a0SzyNHFgMVMHwgbSZO0.jpg",
+        "poster": "/s99QEFuN5WwDC5Gygr2oeiJyHxg.jpg",
+        "genres": [
+          "ドラマ"
+        ],
+        "overview": "世界的な知名度を誇り、1500年以上日本の伝統文化として、また神事として、神秘のベールに包まれている大相撲。その戦いが行われる土俵は、まさに”サンクチュアリ”（聖域）。これは、崖っぷちに追いやられた一人の無軌道な若者が、金・女・名声、その全てが土俵に埋まっていると信じ、力士へと上り詰めていく男の物語。",
+        "overviewLang": "ja",
+        "title": "サンクチュアリ -聖域-",
+        "originalTitle": "サンクチュアリ -聖域-",
+        "runtime": null,
+        "releaseDate": "2023-05-04",
+        "seasons": 1,
+        "episodes": 8
+      },
+      "plays": 8,
+      "lastWatchedAt": null,
+      "recordedOrder": null,
+      "rating": 9,
+      "ratedAt": "2026-10-05T01:46:19.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "drama",
+      "trakt": 203065,
+      "tmdb": 218038,
+      "slug": "vivant",
+      "year": 2023,
+      "released": "2023-07-16",
+      "traktTitle": "Vivant",
+      "details": {
+        "poster": "/31iHlDe30pudzLfPaAg20H5gJmE.jpg",
+        "genres": [
+          "ドラマ",
+          "犯罪"
+        ],
+        "overview": "丸菱商事に勤める乃木憂助（堺雅人）は、誤送金された１３０億円を取り戻すべく、送金先であるバルカ共和国へ向かった。その後、乃木は誤送金の犯人だと疑われ、１３０億円を取り戻さなければ懲戒解雇の危機に…！そんな中、バルカで爆発に巻き込まれた乃木は、爆破犯に間違えられ、バルカ警察に追われる羽目となる。現地で出会った公安警察の野崎守（阿部寛）と医師の柚木薫（二階堂ふみ）と共に、乃木はバルカを脱出するために奔走する…。果たして乃木は、１３０億円を取り戻すことができるのか？そして、鍵を握る「VIVANT」とは一体何なのか？",
+        "overviewLang": "ja",
+        "title": "VIVANT",
+        "originalTitle": "VIVANT",
+        "runtime": null,
+        "releaseDate": "2023-07-16",
+        "seasons": 3,
+        "episodes": 25
+      },
+      "plays": 10,
+      "lastWatchedAt": "2026-10-05T00:38:00.000Z",
+      "recordedOrder": null,
+      "rating": 9,
+      "ratedAt": "2026-10-05T01:46:00.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 698292,
+      "tmdb": 872585,
+      "slug": "oppenheimer-2023",
+      "year": 2023,
+      "released": "2023-07-19",
+      "traktTitle": "Oppenheimer",
+      "details": {
+        "title": "オッペンハイマー",
+        "originalTitle": "Oppenheimer",
+        "poster": "/stEuHtfsjd7MYJcVzuAjVyvsXcj.jpg",
         "genres": [
           "ドラマ",
           "履歴"
         ],
-        "runtime": 96,
-        "releaseDate": "2016-09-07",
-        "overview": "2009年1月15日、真冬のニューヨークで、安全第一がモットーのベテラン操縦士サレンバーガー機長は、いつものように操縦席へ向かう。飛行機は無事に離陸したものの、マンハッタンの上空わずか850メートルという低空地点で急にエンジンが停止してしまう。このまま墜落すれば、乗客はおろか、ニューヨーク市民にも甚大な被害が及ぶ状況で彼が下した決断は、ハドソン川への着水だった。",
+        "runtime": 180,
+        "releaseDate": "2023-07-19",
+        "overview": "第2次世界大戦中、才能にあふれた物理学者のロバート・オッペンハイマーは、核開発を急ぐ米政府のマンハッタン計画において、原爆開発プロジェクトの委員長に任命される。しかし、実験で原爆の威力を目の当たりにし、さらにはそれが実戦で投下され、恐るべき大量破壊兵器を生み出したことに衝撃を受けたオッペンハイマーは、戦後、さらなる威力をもった水素爆弾の開発に反対するようになるが……。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T03:08:59.000Z"
-    },
-    {
-      "trakt": 239425,
-      "tmdb": 396535,
-      "slug": "train-to-busan-2016",
-      "year": 2016,
-      "traktTitle": "Train to Busan",
-      "details": {
-        "title": "新感染 ファイナル・エクスプレス",
-        "originalTitle": "부산행",
-        "poster": "/lyGWApAtjqfbbsnOGhUpXHbbEp7.jpg",
-        "genres": [
-          "アクション",
-          "ホラー",
-          "スリラー",
-          "アドベンチャー"
-        ],
-        "runtime": 118,
-        "releaseDate": "2016-07-20",
-        "overview": "『釜山行き』は、正体不明のウイルスが韓国全土に拡散して緊急警報が発令された中、汚染されずに残ったたったひとつの安全都市“釜山（プサン）”を目指して釜山行きの列車に乗り込んだ人々が、生き残るために熾烈な死闘を繰り広げるパニック大作。人間の欲が招く災いと、それぞれが生き延びるために選択した方法から暴かれる人間の本性を描く。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T03:02:12.000Z"
-    },
-    {
-      "trakt": 188631,
-      "tmdb": 291805,
-      "slug": "now-you-see-me-2-2016",
-      "year": 2016,
-      "traktTitle": "Now You See Me 2",
-      "details": {
-        "title": "グランド・イリュージョン 見破られたトリック",
-        "originalTitle": "Now You See Me 2",
-        "poster": "/6L2xFHz3yu76oMEuArmj8E59oX4.jpg",
-        "genres": [
-          "犯罪",
-          "スリラー"
-        ],
-        "runtime": 129,
-        "releaseDate": "2016-06-02",
-        "overview": "姿をくらましたアトラスら“フォー・ホースメン”のイリュージョニストたちは1年後、再集結する。目的は巨大IT企業、オクタ社が個人情報売買の不正を行なっている事実を暴露すること。しかし、天才エンジニアのウォルターに阻止され、彼らは逃亡を余儀なくされる。ウォルターによってマカオに連れてこられたアトラスたちは、世界中のあらゆるシステムにアクセス可能となるチップの強奪を強要されてしまうが……。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
+      "recordedOrder": 14495350816,
       "rating": 9,
-      "ratedAt": "2026-10-05T02:53:06.000Z"
+      "ratedAt": "2026-10-05T01:38:39.000Z"
     },
     {
-      "trakt": 210803,
-      "tmdb": 329865,
-      "slug": "arrival-2016",
-      "year": 2016,
-      "traktTitle": "Arrival",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 787984,
+      "tmdb": 980489,
+      "slug": "gran-turismo-2023",
+      "year": 2023,
+      "released": "2023-08-09",
+      "traktTitle": "Gran Turismo",
       "details": {
-        "title": "メッセージ",
-        "originalTitle": "Arrival",
-        "poster": "/liqvkTykQ81YbuVnmuxtnotk5CT.jpg",
+        "title": "グランツーリスモ",
+        "originalTitle": "Gran Turismo",
+        "poster": "/uIK1HAeTGbpqJMT4UV8ADYCwhAb.jpg",
         "genres": [
-          "ドラマ",
-          "サイエンスフィクション",
-          "謎"
-        ],
-        "runtime": 116,
-        "releaseDate": "2016-11-10",
-        "overview": "巨大な球体型宇宙船が、突如地球に降り立つ。世界中が不安と混乱に包まれる中、言語学者のルイーズは宇宙船に乗ってきた者たちの言語を解読するよう軍から依頼される。彼らが使う文字を懸命に読み解いていくと、彼女は時間をさかのぼるような不思議な感覚に陥る。やがて言語をめぐるさまざまな謎が解け、彼らが地球を訪れた思いも寄らない理由と、人類に向けられたメッセージが判明する。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T03:00:36.000Z"
-    },
-    {
-      "trakt": 222432,
-      "tmdb": 353326,
-      "slug": "the-man-who-knew-infinity-2016",
-      "year": 2016,
-      "traktTitle": "The Man Who Knew Infinity",
-      "details": {
-        "title": "奇蹟がくれた数式",
-        "originalTitle": "The Man Who Knew Infinity",
-        "poster": "/xZoaovU8YASj8SlNqJx5ND9HVoJ.jpg",
-        "genres": [
-          "ドラマ",
-          "履歴"
-        ],
-        "runtime": 108,
-        "releaseDate": "2016-04-08",
-        "overview": "1914年のイギリス。数学者としてケンブリッジ大学で生徒を教えているG・H・ハーディは、インドから届いた手紙に記されていた驚異的な発見に夢中になる。差出人であるラマヌジャンを大学に招き絆を育んでいくハーディだったが、ほかの教授たちは学歴もなく社会的階級も低いとして彼を拒絶する。偏見や差別にさらされた末に重い病を患ってしまうラマヌジャン。そんな彼に代わって、ハーディは数式の証明しようと立ち上がる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T02:04:46.000Z"
-    },
-    {
-      "trakt": 181311,
-      "tmdb": 284052,
-      "slug": "doctor-strange-2016",
-      "year": 2016,
-      "traktTitle": "Doctor Strange",
-      "details": {
-        "title": "ドクター・ストレンジ",
-        "originalTitle": "Doctor Strange",
-        "poster": "/u3IVExJVyFEiBW4xtIjQhWFuO38.jpg",
-        "genres": [
-          "ファンタジー",
           "アドベンチャー",
+          "ドラマ",
           "アクション"
-        ],
-        "runtime": 115,
-        "releaseDate": "2016-10-25",
-        "overview": "天才的な技術を誇るが傲慢な性格だけが欠点の神経外科医スティーブン・ストレンジは、不慮の事故で両手の機能を失い、築いてきたキャリアの全てが崩壊する。手の治療と失われた人生を取り戻すため、あらゆる手段を模索するストレンジは、やがて神秘に満ちた魔術の力へとたどり着く。魔術の修行に励むストレンジは、強大な敵との戦いに巻き込まれていき、医師として相手を傷つけることに苦悩し、外科医に戻るか最強の魔術師として戦う道に進むかの選択を迫られる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T02:53:46.000Z"
-    },
-    {
-      "trakt": 183371,
-      "tmdb": 286217,
-      "slug": "the-martian-2015",
-      "year": 2015,
-      "traktTitle": "The Martian",
-      "details": {
-        "title": "オデッセイ",
-        "originalTitle": "The Martian",
-        "poster": "/zb8ExBIjEbXDfjmXoFQHXVIaf2v.jpg",
-        "genres": [
-          "サイエンスフィクション",
-          "ドラマ",
-          "アドベンチャー"
-        ],
-        "runtime": 141,
-        "releaseDate": "2015-09-30",
-        "overview": "火星の有人探査計画「アレス3」は、猛烈な砂嵐のせいでやむなく中止を余儀なくされるが、撤収作業中、クルーの一員である植物学者のワトニーが、不慮の事故で吹き飛ばされ、行方不明に。状況から彼の生存の可能性は絶望視される中、残りのメンバーたちはワトニーの捜索を断念して、火星を後にする。ところがなんと、ワトニーは奇跡的に生き延びていた。しかし、次の火星探査まではあと4年。果たして気になる彼の運命や、いかに？",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T01:35:57.000Z"
-    },
-    {
-      "trakt": 128888,
-      "tmdb": 207703,
-      "slug": "kingsman-the-secret-service-2015",
-      "year": 2015,
-      "traktTitle": "Kingsman: The Secret Service",
-      "details": {
-        "title": "キングスマン",
-        "originalTitle": "Kingsman: The Secret Service",
-        "poster": "/zOFh0vCsCqUlGBTfdsJt4CFdRR3.jpg",
-        "genres": [
-          "犯罪",
-          "コメディ",
-          "アクション"
-        ],
-        "runtime": 129,
-        "releaseDate": "2015-01-24",
-        "overview": "ロンドン、サヴィル・ロウの高級テーラー「キングスマン」は、どこの国にも所属せず秘密裏の活動を行い、数々の難事件・テロリズムを解決する、スパイの本拠地であった。  かつての「キングスマン」候補生の息子であり元海兵隊員のエグジーは義父率いるギャングとの諍いの中逮捕され、17年前に父の死後「キングスマン」の勲章（メダル）を手渡しにきた工作員のハリーと出会う。エグジーはハリーの薦めにより父と同様に「キングスマン」の選考試験に参加し、他の候補生たちとともに過酷な試練を経験することになる。  一方、ハリーは仲間の死に関わった一連の事件にリッチモンド・ヴァレンタインというアメリカ人実業家が絡んでいることを知る。ヴァレンタインを調べていくうちに判明したのは、人類の存亡を揺るがす巨大な陰謀であった。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:52:27.000Z"
-    },
-    {
-      "trakt": 179334,
-      "tmdb": 281957,
-      "slug": "the-revenant-2015",
-      "year": 2015,
-      "traktTitle": "The Revenant",
-      "details": {
-        "title": "レヴェナント：蘇えりし者",
-        "originalTitle": "The Revenant",
-        "poster": "/ytb49OlYaipA2ncsolRRMJQIC23.jpg",
-        "genres": [
-          "西洋",
-          "ドラマ",
-          "アドベンチャー"
-        ],
-        "runtime": 156,
-        "releaseDate": "2015-12-25",
-        "overview": "アメリカ西部の原野、ハンターのヒュー・グラスは狩猟の最中に熊の襲撃を受けて瀕死の重傷を負うが、同行していた仲間のジョン・フィッツジェラルドに置き去りにされてしまう。かろうじて死のふちから生還したグラスは、自分を見捨てたフィッツジェラルドにリベンジを果たすべく、大自然の猛威に立ち向かいながらおよそ300キロに及ぶ過酷な道のりを突き進んでいく。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 6,
-      "ratedAt": "2026-10-05T01:52:24.000Z"
-    },
-    {
-      "trakt": 102156,
-      "tmdb": 157336,
-      "slug": "interstellar-2014",
-      "year": 2014,
-      "traktTitle": "Interstellar",
-      "details": {
-        "title": "インターステラー",
-        "originalTitle": "Interstellar",
-        "poster": "/auQjFBfCWSL6DpQhWVCZ6wFtDm6.jpg",
-        "genres": [
-          "アドベンチャー",
-          "ドラマ",
-          "サイエンスフィクション"
-        ],
-        "runtime": 169,
-        "releaseDate": "2014-11-05",
-        "overview": "近未来の地球では植物の枯死、異常気象により人類は滅亡の危機に立たされていた。元宇宙飛行士クーパーは、義父と15歳の息子トム、10歳の娘マーフとともにトウモロコシ農場を営んでいる。マーフは自分の部屋の本棚から本がひとりでに落ちる現象を幽霊のせいだと信じていたが、ある日クーパーはそれが何者かによるメッセージではないかと気が付く。クーパーとマーフはメッセージを解読し、それが指し示している秘密施設にたどり着くが、最高機密に触れたとして身柄を拘束される。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T01:36:18.000Z"
-    },
-    {
-      "trakt": 121489,
-      "tmdb": 194662,
-      "slug": "birdman-or-the-unexpected-virtue-of-ignorance-2014",
-      "year": 2014,
-      "traktTitle": "Birdman or (The Unexpected Virtue of Ignorance)",
-      "details": {
-        "title": "バードマン あるいは（無知がもたらす予期せぬ奇跡）",
-        "originalTitle": "Birdman or (The Unexpected Virtue of Ignorance)",
-        "poster": "/dtJqCt271m4Ze8ActGWCvxVPXIw.jpg",
-        "genres": [
-          "ドラマ",
-          "コメディ"
-        ],
-        "runtime": 120,
-        "releaseDate": "2014-10-17",
-        "overview": "かつてヒーロー映画「バードマン」で一世を風靡した俳優リーガン・トムソンは、落ちぶれた今、自分が脚色を手掛けた舞台「愛について語るときに我々の語ること」に再起を懸けていた。しかし、降板した俳優の代役としてやって来たマイク・シャイナーの才能がリーガンを追い込む。さらに娘サムとの不仲に苦しみ、リーガンは舞台の役柄に自分自身を投影し始める。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 4,
-      "ratedAt": "2026-10-05T01:56:55.000Z"
-    },
-    {
-      "trakt": 149047,
-      "tmdb": 244786,
-      "slug": "whiplash-2014",
-      "year": 2014,
-      "traktTitle": "Whiplash",
-      "details": {
-        "title": "セッション",
-        "originalTitle": "Whiplash",
-        "poster": "/vsYauBicR2q3qEyHEtjn5KJrNVa.jpg",
-        "genres": [
-          "ドラマ",
-          "音楽",
-          "スリラー"
-        ],
-        "runtime": 107,
-        "releaseDate": "2014-10-10",
-        "overview": "名門音楽学校へと入学し、世界に通用するジャズドラマーになろうと決意するニーマン。そんな彼を待ち受けていたのは、鬼教師として名をはせるフレッチャーだった。ひたすら罵声を浴びせ、完璧な演奏を引き出すためには暴力をも辞さない彼におののきながらも、その指導に必死に食らい付いていくニーマン。だが、フレッチャーのレッスンは次第に狂気じみたものへと変化していく。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T01:57:07.000Z"
-    },
-    {
-      "trakt": 149640,
-      "tmdb": 245891,
-      "slug": "john-wick-2014",
-      "year": 2014,
-      "traktTitle": "John Wick",
-      "details": {
-        "title": "ジョン・ウィック",
-        "originalTitle": "John Wick",
-        "poster": "/k9kcEpXcQKEYiqKkpYS6wEasUK2.jpg",
-        "genres": [
-          "アクション",
-          "スリラー"
-        ],
-        "runtime": 101,
-        "releaseDate": "2014-10-16",
-        "overview": "伝説的な暗殺者として裏社会にその名をとどろかせるも、殺しの仕事から手を引いたジョン・ウィック。暴力から遠く慣れた毎日に安らぎを覚えていた彼だったが、それをロシアン・マフィアによって奪われる。怒りと憎しみに支配された彼は、封印していた殺しのスキルをよみがえらせ、ロシアン・マフィアへのリベンジを果たすことを決意する。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:19:09.000Z"
-    },
-    {
-      "trakt": 175333,
-      "tmdb": 277685,
-      "slug": "unfriended-2014",
-      "year": 2014,
-      "traktTitle": "Unfriended",
-      "details": {
-        "title": "アンフレンデッド",
-        "originalTitle": "Unfriended",
-        "poster": "/8byPxREr3BqBNyyij5WHVSOVtYk.jpg",
-        "genres": [
-          "ホラー",
-          "謎"
-        ],
-        "runtime": 83,
-        "releaseDate": "2014-06-18",
-        "overview": "While video chatting one night, six high school friends receive a Skype message from a classmate who killed herself exactly one year ago. At first they think it's a prank, but when the girl starts revealing the friends' darkest secrets, they realize they are dealing with something out of this world, something that wants them dead.",
-        "overviewLang": "en"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T01:55:43.000Z"
-    },
-    {
-      "trakt": 92230,
-      "tmdb": 137113,
-      "slug": "edge-of-tomorrow-2014",
-      "year": 2014,
-      "traktTitle": "Edge of Tomorrow",
-      "details": {
-        "title": "オール・ユー・ニード・イズ・キル",
-        "originalTitle": "Edge of Tomorrow",
-        "poster": "/Aa1AYE0zDMAbUFdPTDA18YH52dd.jpg",
-        "genres": [
-          "アクション",
-          "サイエンスフィクション"
-        ],
-        "runtime": 113,
-        "releaseDate": "2014-05-27",
-        "overview": "近未来の地球。侵略者の激しい攻撃に、人類の軍事力ではもはや太刀打ちできなくなっていた。対侵略者の任務に就いたウィリアム・ケイジ少佐は、戦闘によって亡くなる。しかし、タイムループの世界にとらわれ、戦闘と死を繰り返す。そんな中、特殊部隊の軍人リタ・ヴラタスキと出会ったケイジは、彼女と一緒に何度も戦闘と死を繰り返しながら戦闘技術を向上させる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T02:49:13.000Z"
-    },
-    {
-      "trakt": 34093,
-      "tmdb": 49047,
-      "slug": "gravity-2013",
-      "year": 2013,
-      "traktTitle": "Gravity",
-      "details": {
-        "title": "ゼロ・グラビティ",
-        "originalTitle": "Gravity",
-        "poster": "/sNCXdnxARkInt8F87moQruXeBKc.jpg",
-        "genres": [
-          "サイエンスフィクション",
-          "スリラー",
-          "ドラマ"
-        ],
-        "runtime": 91,
-        "releaseDate": "2013-10-03",
-        "overview": "地表から600キロメートルも離れた宇宙で、ミッションを遂行していたメディカルエンジニアのライアン・ストーン博士とベテラン宇宙飛行士マット・コワルスキー。すると、スペースシャトルが大破するという想定外の事故が発生し、二人は一本のロープでつながれたまま漆黒の無重力空間へと放り出される。地球に戻る交通手段であったスペースシャトルを失い、残された酸素も2時間分しかない絶望的な状況で、彼らは懸命に生還する方法を探っていく。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 6,
-      "ratedAt": "2026-10-05T03:00:46.000Z"
-    },
-    {
-      "trakt": 53002,
-      "tmdb": 72190,
-      "slug": "world-war-z-2013",
-      "year": 2013,
-      "traktTitle": "World War Z",
-      "details": {
-        "title": "ワールド・ウォーＺ",
-        "originalTitle": "World War Z",
-        "poster": "/zvArfRDqnXHLbf1PGczGC4t26a2.jpg",
-        "genres": [
-          "アクション",
-          "ホラー",
-          "サイエンスフィクション"
-        ],
-        "runtime": 116,
-        "releaseDate": "2013-06-19",
-        "overview": "フィラデルフィアに住む元国連職員ジェリー・レインは、妻と長女レイチェルと次女コニーを学校に送るため自動車に乗っていたが、いつもとは様子の違う交通渋滞にはまってしまう。人間を狂暴化させる謎の疫病が世界各地で流行し始めており、フィラデルフィアの街はゾンビの大群に襲われていた。ジェリーは街を離れるが、携帯電話へ国連事務次長ティエリーから連絡が入り、現場への復帰を要請される。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 10,
-      "ratedAt": "2026-10-05T02:33:09.000Z"
-    },
-    {
-      "trakt": 55753,
-      "tmdb": 75612,
-      "slug": "oblivion-2013",
-      "year": 2013,
-      "traktTitle": "Oblivion",
-      "details": {
-        "title": "オブリビオン",
-        "originalTitle": "Oblivion",
-        "poster": "/8HFin8fcPADSah7dKdbiiCk7tlr.jpg",
-        "genres": [
-          "アクション",
-          "サイエンスフィクション",
-          "アドベンチャー",
-          "謎"
-        ],
-        "runtime": 124,
-        "releaseDate": "2013-04-10",
-        "overview": "西暦2077年。60年前に起きた異星人スカヴからの侵略を食い止めたものの、核兵器によって荒廃してしまった地球。人類の大半は、土星の衛星であるタイタンへの移住を余儀なくされていた。ある日、ジャックは地上パトロールの途中で墜落した宇宙船を発見。その残骸から謎の女性ジュリア・ルサコーヴァ（オルガ・キュリレンコ）を助け出す。目覚めた彼女は何故か会った事も無いジャックの名前を口にする。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 6,
-      "ratedAt": "2026-10-05T02:49:22.000Z"
-    },
-    {
-      "trakt": 55786,
-      "tmdb": 75656,
-      "slug": "now-you-see-me-2013",
-      "year": 2013,
-      "traktTitle": "Now You See Me",
-      "details": {
-        "title": "グランド・イリュージョン",
-        "originalTitle": "Now You See Me",
-        "poster": "/tkelhaIMJfKKBhqZyDHGATnQK8F.jpg",
-        "genres": [
-          "スリラー",
-          "犯罪"
-        ],
-        "runtime": 116,
-        "releaseDate": "2013-05-29",
-        "overview": "マジシャンとして一流の腕を持つアトラスは、フォー・ホースメンというスーパーイリュージョニストグループを束ねていた。彼らはマジックショーの中で、ラスベガスから一歩も動くことなく、パリにある銀行から金を奪ってみせた。この件を受けて、次の計画を彼らが実行する前に食い止めようとFBI特別捜査官のディランが捜査を始める。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T02:52:57.000Z"
-    },
-    {
-      "trakt": 75735,
-      "tmdb": 106646,
-      "slug": "the-wolf-of-wall-street-2013",
-      "year": 2013,
-      "traktTitle": "The Wolf of Wall Street",
-      "details": {
-        "title": "ウルフ・オブ・ウォールストリート",
-        "originalTitle": "The Wolf of Wall Street",
-        "poster": "/d96QhbXHXDcL6Xrdn49eO98wQwU.jpg",
-        "genres": [
-          "犯罪",
-          "ドラマ",
-          "コメディ"
-        ],
-        "runtime": 179,
-        "releaseDate": "2013-12-25",
-        "overview": "学歴や人脈もないまま、22歳でウォール街の投資銀行で働きだしたジョーダン・ベルフォート。巧みな話術で人々の心を瞬く間につかみ、斬新なアイデアを次々と繰り出しては業績を上げ、猛烈なスピードで成り上がっていく。そして26歳で証券会社を設立し、約49億円もの年収を得るまでに。富と名声を一気に手に入れ、ウォール街のウルフという異名で呼ばれるようになった彼は、浪費の限りを尽くして世間の話題を集めていく。しかし、その先には思いがけない転落が待ち受けていた。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T01:52:33.000Z"
-    },
-    {
-      "trakt": 76438,
-      "tmdb": 107846,
-      "slug": "escape-plan-2013",
-      "year": 2013,
-      "traktTitle": "Escape Plan",
-      "details": {
-        "title": "大脱出",
-        "originalTitle": "Escape Plan",
-        "poster": "/vNM0dD523JDPtePo9qVFMMwtNkV.jpg",
-        "genres": [
-          "アクション",
-          "スリラー"
-        ],
-        "runtime": 116,
-        "releaseDate": "2013-10-09",
-        "overview": "レイ・ブレスリンは刑務所の盲点を突いて合法の下で脱獄を試みる、伝説的なセキュリティ・コンサルタント。そんな彼に一人の女性が世界で最も難解な刑務所の脱獄を高額な報酬で依頼される。年齢的にも引退資金稼ぎに仕事を引き受けた彼は、突如拉致され身分を剥奪されたまま脱獄不可能と言われている刑務所、通称『墓場』に収監されてしまう。屈強な囚人たちを圧倒するほどの看守たちの暴力と監視により、一人で脱獄することは愚か、囚人や看守たちに追い詰められたブレスリンは、突如近寄って来た囚人、ロットマイヤーに助けられながら、二人で史上最大の大脱獄を試みようと決意する…。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:49:05.000Z"
-    },
-    {
-      "trakt": 34073,
-      "tmdb": 49026,
-      "slug": "the-dark-knight-rises-2012",
-      "year": 2012,
-      "traktTitle": "The Dark Knight Rises",
-      "details": {
-        "title": "ダークナイト・ライジング",
-        "originalTitle": "The Dark Knight Rises",
-        "poster": "/sJTxiMt4slbmTnQoV5UyA2HlYx4.jpg",
-        "genres": [
-          "アクション",
-          "犯罪",
-          "ドラマ",
-          "スリラー"
-        ],
-        "runtime": 164,
-        "releaseDate": "2012-07-17",
-        "overview": "８年前、ゴッサム・シティの希望のためバットマンは町を去り、その正体であるブルース・ウェインは今も隠遁生活を送る。新たに作られたデント法のもと、平和になったゴッサム・シティだが、そこへ凶暴な悪党ベインとその一味が現われ大混乱となる。ベインは実は同じ師匠を持つ、ブルースの兄弟子だった。執事アルフレッドに去られ、ベインの陰謀で財産を失いながらも、ブルースは再びバットマンとなってベインに立ち向かう。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T01:38:22.000Z"
-    },
-    {
-      "trakt": 1170,
-      "tmdb": 1771,
-      "slug": "captain-america-the-first-avenger-2011",
-      "year": 2011,
-      "traktTitle": "Captain America: The First Avenger",
-      "details": {
-        "title": "キャプテン・アメリカ／ザ・ファースト・アベンジャー",
-        "originalTitle": "Captain America: The First Avenger",
-        "poster": "/2YEbVbf4pSRv0o5T47V2typraZu.jpg",
-        "genres": [
-          "アクション",
-          "アドベンチャー",
-          "サイエンスフィクション"
-        ],
-        "runtime": 124,
-        "releaseDate": "2011-07-22",
-        "overview": "第二次世界大戦の最中、人一倍愛国心に燃えるスティーブ・ロジャースは兵士に志願し国の為に尽くしたかったが背も低く虚弱な体から兵士として認められず悶々としていた。ある日知り合った戦略科学予備軍の科学者であるエイブラハム・アースキン博士にその愛国心と強く正しい心を認められスーパーソルジャー計画の候補として実験被験者として選ばれ、超人血清を打たれスティーブは屈強なほぼ不死身の超人として生まれ変わる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T01:41:57.000Z"
-    },
-    {
-      "trakt": 5408,
-      "tmdb": 10195,
-      "slug": "thor-2011",
-      "year": 2011,
-      "traktTitle": "Thor",
-      "details": {
-        "title": "マイティ・ソー",
-        "originalTitle": "Thor",
-        "poster": "/2xUDJQs4kGKeLszy9E9nD19DCLA.jpg",
-        "genres": [
-          "アドベンチャー",
-          "ファンタジー",
-          "アクション"
-        ],
-        "runtime": 115,
-        "releaseDate": "2011-04-21",
-        "overview": "神の世界では最強の戦士といわれていたものの、横暴でごう慢な性格が災いとなり、地球へ追放されてしまったソー。神の世界での力を失ってしまったソーに凶悪な敵たちが次々と襲い掛かり、ソーは地球でも戦いの日々を送ることになる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 6,
-      "ratedAt": "2026-10-05T01:41:26.000Z"
-    },
-    {
-      "trakt": 43154,
-      "tmdb": 60308,
-      "slug": "moneyball-2011",
-      "year": 2011,
-      "traktTitle": "Moneyball",
-      "details": {
-        "title": "マネーボール",
-        "originalTitle": "Moneyball",
-        "poster": "/opL1BO6pOPefMd3Jhjp20yN3nLC.jpg",
-        "genres": [
-          "ドラマ"
-        ],
-        "runtime": 133,
-        "releaseDate": "2011-09-23",
-        "overview": "元プロ野球選手で短気な性格のビリー・ビーンは、アスレチックスのゼネラルマネージャーに就任する。チームはワールド・チャンピオンになるには程遠い状態で、優秀な選手は雇えない貧乏球団だった。あるとき、ピーター・ブランドというデータ分析にたけた人物との出会いをきっかけに、「マネーボール理論」を作り上げる。しかし、「マネーボール理論」に対し選手や監督からは反発を受けてしまい……。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:32:59.000Z"
-    },
-    {
-      "trakt": 16662,
-      "tmdb": 27205,
-      "slug": "inception-2010",
-      "year": 2010,
-      "traktTitle": "Inception",
-      "details": {
-        "title": "インセプション",
-        "originalTitle": "Inception",
-        "poster": "/qzb0slJerd5bQgJxteJ5oAmfp09.jpg",
-        "genres": [
-          "アクション",
-          "サイエンスフィクション",
-          "アドベンチャー"
-        ],
-        "runtime": 148,
-        "releaseDate": "2010-07-15",
-        "overview": "他人の夢に潜入してアイデアを盗み出す企業スパイのコブは国際指名手配犯であるが、それと同時に妻モルを殺した容疑もかけられていた。そんな彼に日本人男性サイトーからある依頼が。それはこれまでのように思考を盗み出すのではなく、標的にした人物の潜在意識に、あるアイデアを移植する“インセプション”という仕事だった。コブはサイトーを含むスペシャリスト6人を集め、標的の男性ロバートの夢に潜入しようとする。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 10,
-      "ratedAt": "2026-10-05T01:38:15.000Z"
-    },
-    {
-      "trakt": 24279,
-      "tmdb": 37799,
-      "slug": "the-social-network-2010",
-      "year": 2010,
-      "traktTitle": "The Social Network",
-      "details": {
-        "title": "ソーシャル・ネットワーク",
-        "originalTitle": "The Social Network",
-        "poster": "/xx3U2ZdZCnNsoPD2I19tyhFUdl7.jpg",
-        "genres": [
-          "ドラマ"
-        ],
-        "runtime": 121,
-        "releaseDate": "2010-10-01",
-        "overview": "2003年、ハーバード大学の学生マーク・ザッカーバーグは、学内で友人を増やすためのサイトを親友のエドゥアルド・サヴェリンと共に立ち上げる。サイトは瞬く間に学生たちの間に広がり、ナップスター創設者ショーン・パーカーとの出会いを経て、社会現象を巻き起こすほど巨大に成長していく。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T02:54:21.000Z"
-    },
-    {
-      "trakt": 5355,
-      "tmdb": 10138,
-      "slug": "iron-man-2-2010",
-      "year": 2010,
-      "traktTitle": "Iron Man 2",
-      "details": {
-        "title": "アイアンマン2",
-        "originalTitle": "Iron Man 2",
-        "poster": "/mj12FOks34aSc7CXL8BpEFHXgrI.jpg",
-        "genres": [
-          "アドベンチャー",
-          "アクション",
-          "サイエンスフィクション"
-        ],
-        "runtime": 124,
-        "releaseDate": "2010-04-28",
-        "overview": "パワード・スーツ受け渡しの国家命令を拒否した科学者兼経営者のトニー・スターク。ある日、トニーの前にウィップラッシュなるアイアンマンと互角のパワーを持つ敵が現れたことから、トニーは再びパワード・スーツに身を包みアイアンマンとして立ち上がる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T01:44:10.000Z"
-    },
-    {
-      "trakt": 13853,
-      "tmdb": 22804,
-      "slug": "saw-vi-2009",
-      "year": 2009,
-      "traktTitle": "Saw VI",
-      "details": {
-        "title": "ソウ6",
-        "originalTitle": "Saw VI",
-        "poster": "/v7QKzzn9kaDyFZe7y0fFNnlwdAD.jpg",
-        "genres": [
-          "ホラー",
-          "スリラー"
-        ],
-        "runtime": 90,
-        "releaseDate": "2009-10-22",
-        "overview": "指紋から、ジグソウの後継者はFBI捜査官ストラムではないかと言われ、後継者へ引き継がれてきたジクソウの事件は終わったかに見えた。しかし、ストラムの上司だったFBI捜査官エリクソンは、疑問を抱き、ホフマン刑事に近づく。一方、ジグソウの元妻ジルは、亡き夫から残された遺言と遺品をどう扱うか考えていた。しかし、彼女の決心もようやく固まった。折から新しいゲームが始まった。このゲームのモニターを最前列で見ているのは、いったい誰なのだろうか？",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 5,
-      "ratedAt": "2026-10-05T01:54:26.000Z"
-    },
-    {
-      "trakt": 120,
-      "tmdb": 155,
-      "slug": "the-dark-knight-2008",
-      "year": 2008,
-      "traktTitle": "The Dark Knight",
-      "details": {
-        "title": "ダークナイト",
-        "originalTitle": "The Dark Knight",
-        "poster": "/nftQJb9550PtYFXhmTs7XiN0QhR.jpg",
-        "genres": [
-          "アクション",
-          "スリラー",
-          "犯罪"
-        ],
-        "runtime": 152,
-        "releaseDate": "2008-07-16",
-        "overview": "悪のはびこるゴッサム・シティーを舞台に、ジム警部補やハービー・デント地方検事の協力のもと、バットマンは街で起こる犯罪撲滅の成果を上げつつあった。だが、ジョーカーと名乗る謎の犯罪者の台頭により、街は再び混乱と狂気に包まれていく。最強の敵を前に、バットマンはあらゆるハイテク技術を駆使しながら、信じるものすべてと戦わざるを得なくなっていく。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T01:38:03.000Z"
-    },
-    {
-      "trakt": 1157,
-      "tmdb": 1726,
-      "slug": "iron-man-2008",
-      "year": 2008,
-      "traktTitle": "Iron Man",
-      "details": {
-        "title": "アイアンマン",
-        "originalTitle": "Iron Man",
-        "poster": "/gZnH9qyt45WblCc9tEKlEXVjSKA.jpg",
-        "genres": [
-          "アクション",
-          "サイエンスフィクション",
-          "アドベンチャー"
-        ],
-        "runtime": 125,
-        "releaseDate": "2008-04-30",
-        "overview": "億万長者で発明家の軍需産業会社社長トニー・スタークは、視察に訪れた軍のキャンプでテロリストの奇襲に遭い、胸を負傷してしまう。やがて自分の会社の兵器がテロリストに悪用されている衝撃の事実を知ったトニーは、自ら戦闘用のスーツを作り、“アイアンマン”となってテロリストに闘いを挑む。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T01:40:59.000Z"
-    },
-    {
-      "trakt": 2857,
-      "tmdb": 4922,
-      "slug": "the-curious-case-of-benjamin-button-2008",
-      "year": 2008,
-      "traktTitle": "The Curious Case of Benjamin Button",
-      "details": {
-        "title": "ベンジャミン・バトン 数奇な人生",
-        "originalTitle": "The Curious Case of Benjamin Button",
-        "poster": "/ifFPuPqRxY0PFjEJVoGlJXLbOxx.jpg",
-        "genres": [
-          "ドラマ",
-          "ファンタジー",
-          "ロマンス"
-        ],
-        "runtime": 166,
-        "releaseDate": "2008-12-25",
-        "overview": "80代の男性として誕生し、そこから徐々に若返っていく運命のもとに生まれた男ベンジャミン・バトン。時間の流れを止められず、誰とも違う数奇な人生を歩まなくてはならない彼は、愛する人との出会いと別れを経験し、人生の喜びや死の悲しみを知りながら、時間を刻んでいくが……。＜F・スコット・フィッツジェラルドの短編小説をデヴィッド・フィンチャーが映画化した感動巨編。第一次世界大戦時から21世紀に至るまでのニューオリンズを舞台に、80代で生まれ、徐々に若返っていく男の数奇な運命が描かれる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:32:50.000Z"
-    },
-    {
-      "trakt": 31,
-      "tmdb": 58,
-      "slug": "pirates-of-the-caribbean-dead-man-s-chest-2006",
-      "year": 2006,
-      "traktTitle": "Pirates of the Caribbean: Dead Man's Chest",
-      "details": {
-        "title": "パイレーツ・オブ・カリビアン／デッドマンズ・チェスト",
-        "originalTitle": "Pirates of the Caribbean: Dead Man's Chest",
-        "poster": "/f7vNhN3I1pNwibvQy4SjoOoajVn.jpg",
-        "genres": [
-          "アドベンチャー",
-          "ファンタジー",
-          "アクション"
-        ],
-        "runtime": 151,
-        "releaseDate": "2006-07-06",
-        "overview": "呪われた海賊バルボッサとの壮絶な闘いを乗り越え、再びブラックパール号の船長となったジャック・スパロウ。しかし彼は、海賊なら誰もが恐れる幽霊船フライング・ダッチマン号の船長デイヴィ・ジョーンズにもうじき魂を奪われようとしていた。13年前にブラックパール号を手に入れるためジョーンズと“血の契約”を交わしており、その契約の刻限が迫っていたのだ。それでもジャックはその事態を打開するべく、命運を握るある鍵の行方を追い始める。一方、結婚式を挙げようとしていた鍛冶屋の青年ウィルと総督の娘エリザベスは、ジャックを逃がした罪で投獄されるハメに。やがて、２人は再びジャックに会わなければならない宿命となり、それぞれ彼のもとへ向かうのだが…。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T01:40:36.000Z"
-    },
-    {
-      "trakt": 851,
-      "tmdb": 1124,
-      "slug": "the-prestige-2006",
-      "year": 2006,
-      "traktTitle": "The Prestige",
-      "details": {
-        "title": "プレステージ",
-        "originalTitle": "The Prestige",
-        "poster": "/z3loPJk9ZnIw37PQOnLTsMy8mpY.jpg",
-        "genres": [
-          "ドラマ",
-          "謎",
-          "サイエンスフィクション"
-        ],
-        "runtime": 130,
-        "releaseDate": "2006-10-19",
-        "overview": "ライバルとして競い合う2人の天才マジシャン、アンジャーとボーデン。ある日、水槽脱出に失敗したアンジャーが溺死し、ボーデンは殺人罪で逮捕されて……。伏線だらけの衝撃サスペンス。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 10,
-      "ratedAt": "2026-10-05T01:37:55.000Z"
-    },
-    {
-      "trakt": 871,
-      "tmdb": 1255,
-      "slug": "the-host-2006",
-      "year": 2006,
-      "traktTitle": "The Host",
-      "details": {
-        "title": "グエムル -漢江の怪物-",
-        "originalTitle": "괴물",
-        "poster": "/7A2jQZxMGjwZcfy9fQC1BV5ntoD.jpg",
-        "genres": [
-          "ホラー",
-          "ドラマ",
-          "サイエンスフィクション"
-        ],
-        "runtime": 120,
-        "releaseDate": "2006-07-27",
-        "overview": "ソウルを流れる大河の漢江に、謎の怪物“グエムル”が現れ、次々と人を襲う。河川敷で売店を営むパク家の長男カンドゥの中学生の娘、ヒョンソも怪物にさらわれてしまう。カンドゥは妹ナムジュらとともに病院に隔離されていたが、携帯電話に娘からの連絡が入ったことから一家で脱出を試みるが……。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T03:03:06.000Z"
-    },
-    {
-      "trakt": 952,
-      "tmdb": 1422,
-      "slug": "the-departed-2006",
-      "year": 2006,
-      "traktTitle": "The Departed",
-      "details": {
-        "title": "ディパーテッド",
-        "originalTitle": "The Departed",
-        "poster": "/xrDdcrK2iYkiskR9UpCd29MIRPo.jpg",
-        "genres": [
-          "ドラマ",
-          "スリラー",
-          "犯罪"
-        ],
-        "runtime": 151,
-        "releaseDate": "2006-10-04",
-        "overview": "香港映画『インファナル・アフェア』をマーティン・スコセッシがボストンに舞台を変えハリウッドでリメイクしたアクションサスペンス。レオナルド・ディカプリオとマット・デイモンが主人公の警察官とマフィアをそれぞれ熱演。名優ジャック・ニコルソンがマフィアのボス役で脇を固める。犯罪者の一族に生まれたビリー(レオナルド・ディカプリオ)は、自らの生い立ちと決別するため警察官を志し、優秀な成績で警察学校を卒業。しかし、警察に入るなり、彼はマフィアへの潜入捜査を命じられる。一方、マフィアのボス、コステロ(ジャック・ニコルソン)にかわいがられて育ったコリン(マット・デイモン)は、内通者となるためコステロの指示で警察官になる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T01:52:40.000Z"
-    },
-    {
-      "trakt": 228,
-      "tmdb": 272,
-      "slug": "batman-begins-2005",
-      "year": 2005,
-      "traktTitle": "Batman Begins",
-      "details": {
-        "title": "バットマン ビギンズ",
-        "originalTitle": "Batman Begins",
-        "poster": "/mpdTFukLMNAALO2j0yfViyoI2TF.jpg",
-        "genres": [
-          "ドラマ",
-          "犯罪",
-          "アクション"
-        ],
-        "runtime": 140,
-        "releaseDate": "2005-06-10",
-        "overview": "大富豪の家庭に育ったブルース・ウェインは少年時代、井戸で遭遇したコウモリの大群に圧倒的な衝撃を受け、またさらには彼の両親が目の前で殺されて大きなショックを抱え込む。やがて父の遺した企業を受け継いだブルースだったが、強いトラウマと親の仇への復讐心は消えず、犯罪者の心理を知るため自ら罪人となる。そんな彼はある日、デュガードという男と運命的な出会いを果たし、不正と闘うことを決意。そして彼の薦めにより、ヒマラヤの奥地に潜む“影の同盟”なる自警団のもとで心身を鍛え、心の闇を解放する。こうして彼は、ゴッサム・シティへと舞い戻って来る。街は悪の組織と暴力がはびこり、腐敗が進んでいた。自らの使命に確信を持ったブルースは、全身黒いコスチュームを身に纏ったバットマンとなり、巨悪と対峙する道を選ぶのだった。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T01:37:48.000Z"
-    },
-    {
-      "trakt": 18,
-      "tmdb": 22,
-      "slug": "pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003",
-      "year": 2003,
-      "traktTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
-      "details": {
-        "title": "パイレーツ・オブ・カリビアン／呪われた海賊たち",
-        "originalTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
-        "poster": "/b1O7VcW4a2RJHWjqWmDCVB6RJE7.jpg",
-        "genres": [
-          "アドベンチャー",
-          "ファンタジー",
-          "アクション"
-        ],
-        "runtime": 143,
-        "releaseDate": "2003-07-09",
-        "overview": "17世紀、海賊たちが大海原を荒らしまわっていた遥かなる時代。カリブ海の港町ポートロイヤル。美しい総督の娘エリザベスはかつて海上で助けた少年ウィルが身につけていた黄金のメダルを手に入れ、今も密かに保管していた。そんなある日、突然ブラックパール号に乗ったキャプテン・バルボッサ率いる冷酷な海賊たちが町に現われ、エリザベスがさらわれてしまう。海賊の目的は、彼女がその時身につけていた例のメダルだった。一方、鍛冶屋で働く逞しい若者へと成長したウィルは、幽閉されていた元ブラックパール号船長で一匹狼の海賊ジャック・スパロウと手を組み、エリザベスの救出に向かうのだが…。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T01:40:13.000Z"
-    },
-    {
-      "trakt": 492,
-      "tmdb": 616,
-      "slug": "the-last-samurai-2003",
-      "year": 2003,
-      "traktTitle": "The Last Samurai",
-      "details": {
-        "title": "ラスト・サムライ",
-        "originalTitle": "The Last Samurai",
-        "poster": "/AmpClkuAA66BfsNJVZrqZwDHqWk.jpg",
-        "genres": [
-          "ドラマ",
-          "アクション",
-          "戦争"
-        ],
-        "runtime": 154,
-        "releaseDate": "2003-12-05",
-        "overview": "南北戦争時代のアメリカ。北軍の士官として参軍したネイサン・オールグレン大尉は南軍やインディアンと戦いの中、無関係のインディアン部族を攻撃し、子供たちを撃ち、良心の呵責に悩まされ酒浸りになる。日本の実業家の大村はバグリー大佐を介し軍隊の教授職として雇いに来ていた。当時の日本は明治維新で近代国家建設のために急速な近代的軍備増強が必要だった。多額の報酬に魅せられたオールグレンは、僚友ガントとともに日本に渡り、軍隊訓練を指揮する。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 7,
-      "ratedAt": "2026-10-05T04:28:46.000Z"
-    },
-    {
-      "trakt": 516,
-      "tmdb": 640,
-      "slug": "catch-me-if-you-can-2002",
-      "year": 2002,
-      "traktTitle": "Catch Me If You Can",
-      "details": {
-        "title": "キャッチ・ミー・イフ・ユー・キャン",
-        "originalTitle": "Catch Me If You Can",
-        "poster": "/5tkvmwwkuRc53Q0PyPsfpSgMF7c.jpg",
-        "genres": [
-          "ドラマ",
-          "犯罪"
-        ],
-        "runtime": 141,
-        "releaseDate": "2002-12-16",
-        "overview": "高校生のフランクは尊敬する父が母と離婚すると聞き、ショックで衝動的に家を飛び出してしまう。そして、生活のため偽造小切手の詐欺を始めるようになる。最初はなかなかうまくいかなかったが、大手航空会社のパイロットに成りすますと誰もがもののみごとに騙された。これに味をしめたフランクは小切手の偽造を繰り返し巨額の資金を手に入れるのだったが…。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T01:51:28.000Z"
-    },
-    {
-      "trakt": 358,
-      "tmdb": 453,
-      "slug": "a-beautiful-mind-2001",
-      "year": 2001,
-      "traktTitle": "A Beautiful Mind",
-      "details": {
-        "title": "ビューティフル・マインド",
-        "originalTitle": "A Beautiful Mind",
-        "poster": "/uhekyaBXxGMSu832lDzIoYnoqhm.jpg",
-        "genres": [
-          "ドラマ",
-          "ロマンス"
         ],
         "runtime": 135,
-        "releaseDate": "2001-12-14",
-        "overview": "1947年9月、プリンストン大学院の数学科に入学を果たしたジョン・ナッシュ。ひとり研究に没頭するナッシュは次第にクラスメートからも好奇の目で見られるようになる。しかし、ナッシュはついに画期的な「ゲーム理論」を発見する。やがてウィーラー研究所に採用されるが、米ソ冷戦下、彼の類い希な頭脳が暗号解読という極秘任務に利用され、次第に大きなプレッシャーに追いつめられていく…。",
+        "releaseDate": "2023-08-09",
+        "overview": "世界的大ヒットのドライビングゲーム「グランツーリスモ」のプレイに夢中なヤン。父親からは「レーサーにでもなるつもりか、現実を見ろ」とあきれられる日々。そんなヤンにビッグチャンスが訪れる。世界中から集められた「グランツーリスモ」のトッププレイヤーたちを、本物の国際カーレースに出場するプロレーサーとして育成するため、競い合わせて選抜するプログラム「GTアカデミー」だ。プレイヤーの並外れた才能と可能性を信じて「GTアカデミー」を立ち上げたひとりの男と、ゲーマーなんかが通用する甘い世界ではないと思いながらも指導を引き受ける元レーサー、そしてバーチャルなゲームの世界では百戦錬磨のトッププレイヤーたちがそこに集結。彼らが直面する、想像を絶するトレーニングやアクシデントの数々。不可能な夢へ向かって、それぞれの希望や友情、そして葛藤と挫折が交錯する中で、いよいよ運命のデビュー戦の日を迎える―。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:03:49.000Z"
+      "recordedOrder": 14495495339,
+      "rating": 7,
+      "ratedAt": "2026-10-05T02:34:22.000Z"
     },
     {
-      "trakt": 6800,
-      "tmdb": 11770,
-      "slug": "shaolin-soccer-2001",
-      "year": 2001,
-      "traktTitle": "Shaolin Soccer",
+      "type": "show",
+      "kind": "drama",
+      "trakt": 184618,
+      "tmdb": 111110,
+      "slug": "one-piece-2023",
+      "year": 2023,
+      "released": "2023-08-31",
+      "traktTitle": "ONE PIECE",
       "details": {
-        "title": "少林サッカー",
-        "originalTitle": "少林足球",
-        "poster": "/4PX03q04itGzk3A1ZNf3anaiBnd.jpg",
+        "poster": "/cs9fgKfkJRqItLu0eoKmMwWTZtH.jpg",
         "genres": [
-          "アクション",
-          "コメディ"
+          "Action & Adventure",
+          "Sci-Fi & Fantasy"
         ],
-        "runtime": 113,
-        "releaseDate": "2001-07-05",
-        "overview": "“黄金の右”と呼ばれるサッカー選手ファンは、チームメイトのハンが持ちかけた八百長試合に荷担したことがきっかけで自慢の脚を折られてしまった。夢半ばで諦めざるを得なかったファン。それから20年、ファンは、いまやサッカー界の首領として君臨するハンの雑用係にまで落ちぶれていた。そんなある日、ファンは街で不思議な青年シンと出会う。少林拳を信奉する彼は、くず拾いをしながら道行く人に少林拳を説いて回っていた。ファンはふとしたことからシンの超人的な脚力を見抜き、自らがなし得なかった夢をシンに託すべく、彼にサッカーを教え込むのだった。",
-        "overviewLang": "ja"
+        "overview": "麦わらの一味とともにいざ、大海原へ! 若き海賊モンキー・D・ルフィは、ひとつなぎの大秘宝を求めて冒険の旅へとこぎ出していく。国民的人気マンガを実写化。",
+        "overviewLang": "ja",
+        "title": "ONE PIECE",
+        "originalTitle": "ONE PIECE",
+        "runtime": null,
+        "releaseDate": "2023-08-31",
+        "seasons": 3,
+        "episodes": 17
       },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 10,
-      "ratedAt": "2026-10-05T02:50:17.000Z"
+      "plays": 8,
+      "lastWatchedAt": "2023-08-31T07:00:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-10-05T07:57:17.000Z"
     },
     {
-      "trakt": 4149,
-      "tmdb": 8358,
-      "slug": "cast-away-2000",
-      "year": 2000,
-      "traktTitle": "Cast Away",
+      "type": "show",
+      "kind": "drama",
+      "trakt": 169972,
+      "tmdb": 108545,
+      "slug": "3-body-problem",
+      "year": 2024,
+      "released": "2024-03-21",
+      "traktTitle": "3 Body Problem",
       "details": {
-        "title": "キャスト・アウェイ",
-        "originalTitle": "Cast Away",
-        "poster": "/j2huPjMfafubpbH2ZJb2ji6EVU9.jpg",
+        "poster": "/hiw50kwkwyrtBPxiSgb9owdJ4du.jpg",
         "genres": [
-          "アドベンチャー",
+          "Sci-Fi & Fantasy",
+          "謎",
           "ドラマ"
         ],
-        "runtime": 143,
-        "releaseDate": "2000-12-22",
-        "overview": "チャックはフェデックスに勤めるシステム・エンジニア。ある日、彼の乗った飛行機が太平洋上で墜落。奇跡的に一命は取り留めたものの、彼が流れ着いた先は誰もいない無人島だった。",
-        "overviewLang": "ja"
+        "overview": "才能豊かな5人の友が、天地を揺るがす恐るべき事実を発見。時空をまたぐ壮大なスケールで、科学の法則が解明され、人類存亡の危機が明らかになっていく。",
+        "overviewLang": "ja",
+        "title": "三体",
+        "originalTitle": "3 Body Problem",
+        "runtime": null,
+        "releaseDate": "2024-03-21",
+        "seasons": 1,
+        "episodes": 8
       },
-      "plays": 1,
+      "plays": 8,
       "lastWatchedAt": null,
+      "recordedOrder": null,
       "rating": 10,
-      "ratedAt": "2026-10-05T01:49:52.000Z"
+      "ratedAt": "2026-10-05T02:27:19.000Z"
     },
     {
-      "trakt": 481,
-      "tmdb": 603,
-      "slug": "the-matrix-1999",
-      "year": 1999,
-      "traktTitle": "The Matrix",
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 395672,
+      "tmdb": 533535,
+      "slug": "deadpool-wolverine-2024",
+      "year": 2024,
+      "released": "2024-07-24",
+      "traktTitle": "Deadpool & Wolverine",
       "details": {
-        "title": "マトリックス",
-        "originalTitle": "The Matrix",
-        "poster": "/tlSn7UnfH2LxrBRwfTLs3JSYOTO.jpg",
+        "title": "デッドプール＆ウルヴァリン",
+        "originalTitle": "Deadpool & Wolverine",
+        "poster": "/3kQ7wDhrAd02fEwSBGQ1ZtCJDze.jpg",
         "genres": [
           "アクション",
+          "コメディ",
           "サイエンスフィクション"
         ],
-        "runtime": 136,
-        "releaseDate": "1999-03-31",
-        "overview": "トーマス・アンダーソンは、大手ソフトウェア会社に勤めるプログラマである。しかし彼には天才ハッカー、ネオというもう一つの顔があった。ある日、彼はとある人物から連絡を受け、警察に追われる。そして彼から衝撃的な世界の真実を告げられた。",
+        "runtime": 128,
+        "releaseDate": "2024-07-24",
+        "overview": "普通のヒーローに飽きてない？戦う動機は超個人的、破天荒でなんでもアリの“クソ無責任ヒーロー”デッドプールに世界の命運は託された！？ヒーローになんて興味はないけど、大切なファミリーの大ピンチなら頑張っちゃう！予測不可能なミッションのカギを握るのは…よりにもよって“あの爪野郎”。クソ真面目で“キレるとヤバい最恐アウトロー”ウルヴァリンに助けを求めるが…。  全く異なる個性のR指定ヒーロー２人が暴れまわる、過激なアクション・エンターテイメント！",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495425449,
       "rating": 9,
-      "ratedAt": "2026-10-05T02:21:34.000Z"
+      "ratedAt": "2026-10-05T02:13:10.000Z"
     },
     {
-      "trakt": 590,
-      "tmdb": 745,
-      "slug": "the-sixth-sense-1999",
-      "year": 1999,
-      "traktTitle": "The Sixth Sense",
+      "type": "movie",
+      "kind": "anime",
+      "trakt": 1071058,
+      "tmdb": 1311031,
+      "slug": "demon-slayer-kimetsu-no-yaiba-infinity-castle-2025",
+      "year": 2025,
+      "released": "2025-07-18",
+      "traktTitle": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
       "details": {
-        "title": "シックス・センス",
-        "originalTitle": "The Sixth Sense",
-        "poster": "/j51HIDQTvaanZLBctsK5Z1PsqI6.jpg",
+        "title": "劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来",
+        "originalTitle": "劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来",
+        "poster": "/qjyWDOYokheTTWLMzwJAuvSJeYg.jpg",
         "genres": [
-          "謎",
-          "スリラー",
-          "ドラマ"
-        ],
-        "runtime": 107,
-        "releaseDate": "1999-08-06",
-        "overview": "高名な精神科医のマルコムは、かつて担当していた患者の凶弾に倒れてしまう。リハビリを果たした彼は、複雑な症状を抱えた少年･コールの治療に取り掛かる事に。コールは常人には無い特殊な“第6感”、死者を見る事ができる能力を持っていた｡コールを治療しながら、彼によって自らの心も癒されていくマルコム。そして彼には予想も付かない真実が待ち受けていた･･･｡",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T01:53:22.000Z"
-    },
-    {
-      "trakt": 390,
-      "tmdb": 497,
-      "slug": "the-green-mile-1999",
-      "year": 1999,
-      "traktTitle": "The Green Mile",
-      "details": {
-        "title": "グリーンマイル",
-        "originalTitle": "The Green Mile",
-        "poster": "/7ynN9QXuYOoT8hLGqB5PVDznWN7.jpg",
-        "genres": [
-          "ファンタジー",
-          "ドラマ",
-          "犯罪"
-        ],
-        "runtime": 189,
-        "releaseDate": "1999-12-10",
-        "overview": "大恐慌中の1935年。コールドマウンテン刑務所にあり、処刑室に続く通路があせた緑色であるため、“グリーンマイル”と呼ばれる死刑囚専用棟に殺人犯コーフィが収監される。だが、幼女惨殺の罪状とは裏腹に、コーフィは素晴らしい力を持っていた。彼は看守長ポールの重度の尿路感染症を治癒し、残忍な看守パーシーに踏み殺されたネズミをよみがえらせる。奇跡を目の当たりにしたポールはコーフィが本当に殺人犯なのか疑いだす。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 9,
-      "ratedAt": "2026-10-05T02:17:42.000Z"
-    },
-    {
-      "trakt": 383,
-      "tmdb": 489,
-      "slug": "good-will-hunting-1997",
-      "year": 1997,
-      "traktTitle": "Good Will Hunting",
-      "details": {
-        "title": "グッド・ウィル・ハンティング／旅立ち",
-        "originalTitle": "Good Will Hunting",
-        "poster": "/vZ2KGsE9kDSZSuBqooh5wBK7EAK.jpg",
-        "genres": [
-          "ドラマ"
-        ],
-        "runtime": 127,
-        "releaseDate": "1997-12-05",
-        "overview": "深い心の傷を負った天才青年と、同じく失意の中にいた精神分析医がお互いにあらたな旅立ちを自覚して成長してゆく姿を描く感動のヒューマン・ドラマ。ボストンに住む青年ウィルは、幼い頃から天才ゆえに周囲から孤立していた。だが、彼の才能に気付いた数学教授のランボーは、ウィルに精神分析医のショーンを紹介する。ウィルはショーンにしだいに心を開いてゆくが、彼の才能に気付いた政府機関や大企業が接近してくる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T02:12:51.000Z"
-    },
-    {
-      "trakt": 234,
-      "tmdb": 278,
-      "slug": "the-shawshank-redemption-1994",
-      "year": 1994,
-      "traktTitle": "The Shawshank Redemption",
-      "details": {
-        "title": "ショーシャンクの空に",
-        "originalTitle": "The Shawshank Redemption",
-        "poster": "/xQY1yhixcSSfKRhdlhzwN8Mra6q.jpg",
-        "genres": [
-          "ドラマ",
-          "犯罪"
-        ],
-        "runtime": 143,
-        "releaseDate": "1994-09-23",
-        "overview": "妻とその愛人を射殺したかどでショーシャンク刑務所送りとなった銀行家アンディ。初めは戸惑っていたが、やがて彼は自ら持つ不思議な魅力ですさんだ受刑者達の心を掴んでゆく。そして20年の歳月が流れた時、彼は冤罪を晴らす重要な証拠をつかむ。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 10,
-      "ratedAt": "2026-10-05T02:17:29.000Z"
-    },
-    {
-      "trakt": 9,
-      "tmdb": 13,
-      "slug": "forrest-gump-1994",
-      "year": 1994,
-      "traktTitle": "Forrest Gump",
-      "details": {
-        "title": "フォレスト・ガンプ／一期一会",
-        "originalTitle": "Forrest Gump",
-        "poster": "/98LQsdCFEP9ubfhDI8YOB72AkOm.jpg",
-        "genres": [
-          "コメディ",
-          "ドラマ",
-          "ロマンス"
-        ],
-        "runtime": 142,
-        "releaseDate": "1994-06-23",
-        "overview": "1940年代、アラバマ州で生まれたフォレスト・ガンプは、知能指数こそ人に劣るが、母親にたっぷりの愛情を注がれて育ち、優しいハートと走る能力は誰にも負けない男性に成長していく。そんなフォレストは、ただひとり彼に理解を示してくれた幼なじみの女性ジェニーの愛を信じる一方、ベトナムの戦場に出征するなど、1950年代に始まるアメリカの歴史の大きな動きの中で、図らずも波瀾万丈の半生を送ることになる。",
-        "overviewLang": "ja"
-      },
-      "plays": 1,
-      "lastWatchedAt": null,
-      "rating": 8,
-      "ratedAt": "2026-10-05T01:51:44.000Z"
-    },
-    {
-      "trakt": 6864,
-      "tmdb": 11841,
-      "slug": "the-36th-chamber-of-shaolin-1978",
-      "year": 1978,
-      "traktTitle": "The 36th Chamber of Shaolin",
-      "details": {
-        "title": "少林寺三十六房",
-        "originalTitle": "少林三十六房",
-        "poster": "/Ah7Rs9lPIBlfHok1WDDrvtsEvZ5.jpg",
-        "genres": [
+          "アニメーション",
           "アクション",
+          "ファンタジー"
+        ],
+        "runtime": 155,
+        "releaseDate": "2025-07-18",
+        "overview": "鬼となった妹・禰󠄀豆子を人間に戻すため鬼狩りの組織《鬼殺隊》に入った竈門炭治郎。入隊後、仲間である我妻善逸、嘴平伊之助と共に様々な鬼と戦い、成長しながら友情や絆を深めていく。そして炭治郎は《鬼殺隊》最高位の剣士である《柱》と共に戦い、「無限列車」では炎柱・煉󠄁獄杏寿郎、「遊郭」では音柱・宇髄天元、「刀鍛冶の里」では、霞柱・時透無一郎、恋柱・甘露寺蜜璃と共に激闘を繰り広げていった。その後、来たる鬼との決戦に備えて、隊士たちと共に《柱》による合同強化訓練《柱稽古》に挑んでいる最中、《鬼殺隊》の本部である産屋敷邸に現れた鬼舞辻󠄀無惨。お館様の危機に駆けつけた《柱》たちと炭治郎であったが、無惨の手によって謎の空間へと落とされてしまう。炭治郎たちが落下した先、それは鬼の根城≪無限城≫―”鬼殺隊”と”鬼”の最終決戦の火蓋が切って落とされる。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495408260,
+      "rating": 9,
+      "ratedAt": "2026-10-05T02:02:34.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 531178,
+      "tmdb": 687163,
+      "slug": "project-hail-mary-2026",
+      "year": 2026,
+      "released": "2026-03-15",
+      "traktTitle": "Project Hail Mary",
+      "details": {
+        "title": "プロジェクト・ヘイル・メアリー",
+        "originalTitle": "Project Hail Mary",
+        "poster": "/laVssxUceGPReVeLM6GVVDwXBF3.jpg",
+        "genres": [
+          "サイエンスフィクション",
           "アドベンチャー"
         ],
-        "runtime": 116,
-        "releaseDate": "1978-02-02",
-        "overview": "アクションスター、リュー・チャーフィの代表的作品。少林寺出身の伝説的達人・劉裕徳をモデルに描かれるカンフー映画で、三十六番目の房の創設を志す主人公の成長を描く。\r 17世紀の中頃の中国。明朝を倒し、中国全土を制圧しようと企んでいる清王朝の将軍ティエン・タは、横暴きわまりなく、民衆を苦しめていた。その頃、明の復興運動が盛り上がり、正義感に燃える若者リュー・ユテを中心人物とした地下組織が結成されていた。野心に燃えたリューは、仲間たちと清の暴政に対する抵抗運動に励むが、その運動が発覚し、父が殺されてしまう。悲しみに沈むリューは、武道を習得するため少林寺へと旅立つ。",
+        "runtime": 157,
+        "releaseDate": "2026-03-15",
+        "overview": "未知の原因によって太陽エネルギーが奪われる異常事態が発生。このままでは地球の気温は低下し、全生命は滅亡する。 この絶望的な危機を救う鍵が、11.9光年先の宇宙にあると突き止めた人類は、 一縷の望みをかけて宇宙船を建造。中学校の科学教師グレースを送り込む。 彼は知識を武器に、“イチかバチか”のミッション＜プロジェクト・ヘイル・メアリー＞に立ち向かうことになる。  宇宙の果て、極限の孤独のなかで、グレースが出会ったのは、同じく母星を救うためにひとり奮闘する異星人ロッキーだった。 姿形、言葉も違う二人が、科学を共通言語に挑む、宇宙最大の難題。 やがて育まれる種族を超えた友情の先で、二人が辿り着いた答えとは ――。",
         "overviewLang": "ja"
       },
       "plays": 1,
       "lastWatchedAt": null,
+      "recordedOrder": 14495346279,
+      "rating": 10,
+      "ratedAt": "2026-10-05T01:35:15.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 993003,
+      "tmdb": 1228710,
+      "slug": "the-mandalorian-and-grogu-2026",
+      "year": 2026,
+      "released": "2026-05-20",
+      "traktTitle": "The Mandalorian and Grogu",
+      "details": {
+        "title": "スター・ウォーズ／マンダロリアン・アンド・グローグー",
+        "originalTitle": "The Mandalorian and Grogu",
+        "poster": "/6JC12YUAIKHr8vYiA8XroIsjv1Z.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "runtime": 132,
+        "releaseDate": "2026-05-20",
+        "overview": "帝国が崩壊し、無法地帯と化した銀河に生きる、どんな仕事も完璧に遂行する孤高の賞金稼ぎマンダロリアンと、強大なフォースを秘めた存在グローグー。帝国の復活を狙う新たな戦争を阻止する最後の希望は、父子を超えた絆で結ばれたこの二人に託された…。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495398719,
       "rating": 9,
-      "ratedAt": "2026-10-05T02:51:29.000Z"
+      "ratedAt": "2026-10-05T01:58:27.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 870815,
+      "tmdb": 1083381,
+      "slug": "backrooms-2026",
+      "year": 2026,
+      "released": "2026-05-27",
+      "traktTitle": "Backrooms",
+      "details": {
+        "title": "バックルームズ",
+        "originalTitle": "Backrooms",
+        "poster": "/z52Eabu4xm5I8ksqdKOSylo5wWL.jpg",
+        "genres": [
+          "ホラー",
+          "謎",
+          "サイエンスフィクション"
+        ],
+        "runtime": 111,
+        "releaseDate": "2026-05-27",
+        "overview": "舞台は、都市伝説とされていた空間“Backrooms”。「ある日突然 “現実世界の裏側”へ墜ちてしまったら…？」どこまでも続く黄色い壁紙の部屋、終わりのない廊下。不自然な間取りと、意味を失い床に埋まった設置物。  わずかに現実からズレている――そんな出口のない“リミナルスペース”で、観客は“最高密度の不安と恐怖”を体験する。",
+        "overviewLang": "ja"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14495401046,
+      "rating": 7,
+      "ratedAt": "2026-10-05T02:00:11.000Z"
     }
   ],
   "watchlist": [
     {
-      "trakt": 751145,
-      "tmdb": 936075,
-      "slug": "michael-2026",
-      "year": 2026,
-      "traktTitle": "Michael",
-      "details": {
-        "title": "Michael／マイケル",
-        "originalTitle": "Michael",
-        "poster": "/A23qVaLfdpfQlJ9VS1vvP5m5UfS.jpg",
-        "genres": [
-          "音楽",
-          "ドラマ"
-        ],
-        "runtime": 136,
-        "releaseDate": "2026-04-22",
-        "overview": "圧倒的な歌唱力と革新的なダンスパフォーマンスで、アーティストの枠を超え、全世界的なアイコンとなった“キング・オブ・ポップ”＝マイケル・ジャクソン。彼は幼いころから兄弟と共に歌い続けていた。製鉄所で働く父・ジョセフは野心家で、「人生は勝つか負けるかだ」と言い放ち、息子たちに厳しいレッスンを課し、兄弟グループ“ジャクソン５”としてデビューさせた。彼らをみた聴衆は誰しもマイケルの圧倒的な歌声に酔いしれた。評判は広まり、ステージからステージへ人気は急上昇、モータウン・レコードと契約し、スターダムを駆け上がっていく。しかし、喝采の裏で彼はまだ一人の少年だった。孤独と重圧の中、唯一無条件の愛で支え続けたのが母・キャサリンだった。やがて青年となったマイケルに運命の出会いが訪れる。音楽史にその名を刻む名プロデューサー、クインシー・ジョーンズ。彼との出会いによってマイケルはグループの枠を超え、ソロアーティストとして前人未踏の音楽的創造性を爆発させていく。『オフ・ザ・ウォール』『スリラー』、歴史的メガヒットアルバムと名曲の数々を生み出し、全世界の寵児となっていくマイケル。しかし、その栄光の裏には、早熟の天才ゆえの孤独感、強権的な父親の呪縛、家族への愛と自分の中に溢れるビジョンとの間で葛藤する一人の人間の姿があった… そして今、音楽史を塗り替える存在——“キング・オブ・ポップ”伝説誕生の瞬間へ。",
-        "overviewLang": "ja"
-      },
-      "listedAt": "2026-10-05T03:10:49.000Z",
-      "rating": null
-    },
-    {
-      "trakt": 905132,
-      "tmdb": 969681,
-      "slug": "spider-man-brand-new-day-2026",
-      "year": 2026,
-      "traktTitle": "Spider-Man: Brand New Day",
-      "details": {
-        "title": "スパイダーマン：ブランド・ニュー・デイ",
-        "originalTitle": "Spider-Man: Brand New Day",
-        "poster": "/hvbs76wGMZYqJSvaRps5jDzHUhN.jpg",
-        "genres": [
-          "サイエンスフィクション",
-          "アクション",
-          "アドベンチャー"
-        ],
-        "runtime": 145,
-        "releaseDate": "2026-07-29",
-        "overview": "愛する人たちを守るために、彼らの記憶から自らの存在を消すという決断をした『スパイダーマン：ノー・ウェイ・ホーム』の出来事から４年。大人になったピーター・パーカーはスパイダーマンとして、ニューヨークの人々を守り、彼らを脅かす犯罪と戦う日々に全力を尽くしていた。そんななか、人々の期待を背負う彼の体に驚くべき身体的変異が起こり始める。同時に、街では姿なき不可解な犯罪が頻発。“親愛なる隣人”に、かつて直面したことのない大きな脅威が迫る──。",
-        "overviewLang": "ja"
-      },
-      "listedAt": "2026-10-05T03:04:51.000Z",
-      "rating": null
-    },
-    {
-      "trakt": 287071,
-      "tmdb": 438631,
-      "slug": "dune-2021",
-      "year": 2021,
-      "traktTitle": "Dune",
-      "details": {
-        "title": "DUNE／デューン 砂の惑星",
-        "originalTitle": "Dune",
-        "poster": "/8dPdQus8I1e9TBdAy0lDMT2hazr.jpg",
-        "genres": [
-          "サイエンスフィクション",
-          "アドベンチャー"
-        ],
-        "runtime": 155,
-        "releaseDate": "2021-09-15",
-        "overview": "アトレイデス家の後継者、ポール。彼には”未来が視える”能力があった。  宇宙帝国の皇帝からの命令で、その惑星を制する者が全宇宙を制すると言われる、  過酷な《砂の惑星デューン》へと移住するが、それは罠だった…。  そこで宇宙支配を狙う宿敵ハルコンネン家の壮絶な戦いが勃発！！  父を殺され、巨大なサンドワームが襲い来るその惑星で、全宇宙のために立ち上がるー",
-        "overviewLang": "ja"
-      },
-      "listedAt": "2026-10-05T03:01:11.000Z",
-      "rating": null
-    },
-    {
-      "trakt": 42897,
-      "tmdb": 59967,
-      "slug": "looper-2012",
-      "year": 2012,
-      "traktTitle": "Looper",
-      "details": {
-        "title": "LOOPER／ルーパー",
-        "originalTitle": "Looper",
-        "poster": "/rPqDpuu2teEqdtjFQoykzQeKCne.jpg",
-        "genres": [
-          "アクション",
-          "スリラー",
-          "サイエンスフィクション"
-        ],
-        "runtime": 118,
-        "releaseDate": "2012-09-26",
-        "overview": "ジョーは組織も認める腕利きのルーパー（処刑人）。仕事は2074年から2044年に送られてくる標的を、指定された時間に指定された場所で待ち、殺して遺体を処分すること。新たな指令が入り、ジョーは約束の場所でいつものように銃を構えて待つが、目の前に現われたのは、自分に酷似した中年の男。驚愕と混乱で引き金を引くことをためらった現在のジョーの隙をつき、未来のジョーは逃走する。",
-        "overviewLang": "ja"
-      },
-      "listedAt": "2026-10-05T03:00:59.000Z",
-      "rating": null
-    },
-    {
-      "trakt": 474180,
-      "tmdb": 634649,
-      "slug": "spider-man-no-way-home-2021",
-      "year": 2021,
-      "traktTitle": "Spider-Man: No Way Home",
-      "details": {
-        "title": "スパイダーマン：ノー・ウェイ・ホーム",
-        "originalTitle": "Spider-Man: No Way Home",
-        "poster": "/j2vwjzuofol93OcSn8xAHJiTEoz.jpg",
-        "genres": [
-          "アクション",
-          "アドベンチャー",
-          "サイエンスフィクション"
-        ],
-        "runtime": 148,
-        "releaseDate": "2021-12-15",
-        "overview": "倒した敵の暴露により、世間から悪評を受けるスパイダーマン。自分の正体が知られていない世界に戻りたいと思うようになった彼は、友人のドクター・ストレンジに助けを求める。やがて魔法の力で、彼は違う世界線で2つの人生を同時に歩み始める",
-        "overviewLang": "ja"
-      },
-      "listedAt": "2026-10-05T03:00:54.000Z",
-      "rating": null
-    },
-    {
-      "trakt": 729817,
-      "tmdb": 911430,
-      "slug": "f1-2025",
-      "year": 2025,
-      "traktTitle": "F1",
-      "details": {
-        "title": "F1／エフワン",
-        "originalTitle": "F1",
-        "poster": "/mtgRgRG4k8ULNbqUrm9fHAOs1KW.jpg",
-        "genres": [
-          "アクション",
-          "ドラマ"
-        ],
-        "runtime": 156,
-        "releaseDate": "2025-06-25",
-        "overview": "引退していたレース界のレジェンド、ソニー・ヘイズが現役に呼び戻され、低迷するＦ１チームを率いて、若き天才ドライバーを指導しながら、再び栄光をつかむチャンスを追い求める。",
-        "overviewLang": "ja"
-      },
-      "listedAt": "2026-10-05T02:33:12.000Z",
-      "rating": null
-    },
-    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 630,
       "tmdb": 787,
       "slug": "mr-mrs-smith-2005",
       "year": 2005,
+      "released": "2005-06-07",
       "traktTitle": "Mr. & Mrs. Smith",
       "details": {
         "title": "Mr.&Mrs. スミス",
@@ -1866,10 +2314,167 @@
       "rating": null
     },
     {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 42897,
+      "tmdb": 59967,
+      "slug": "looper-2012",
+      "year": 2012,
+      "released": "2012-09-26",
+      "traktTitle": "Looper",
+      "details": {
+        "title": "LOOPER／ルーパー",
+        "originalTitle": "Looper",
+        "poster": "/rPqDpuu2teEqdtjFQoykzQeKCne.jpg",
+        "genres": [
+          "アクション",
+          "スリラー",
+          "サイエンスフィクション"
+        ],
+        "runtime": 118,
+        "releaseDate": "2012-09-26",
+        "overview": "ジョーは組織も認める腕利きのルーパー（処刑人）。仕事は2074年から2044年に送られてくる標的を、指定された時間に指定された場所で待ち、殺して遺体を処分すること。新たな指令が入り、ジョーは約束の場所でいつものように銃を構えて待つが、目の前に現われたのは、自分に酷似した中年の男。驚愕と混乱で引き金を引くことをためらった現在のジョーの隙をつき、未来のジョーは逃走する。",
+        "overviewLang": "ja"
+      },
+      "listedAt": "2026-10-05T03:00:59.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 287071,
+      "tmdb": 438631,
+      "slug": "dune-2021",
+      "year": 2021,
+      "released": "2021-09-15",
+      "traktTitle": "Dune",
+      "details": {
+        "title": "DUNE／デューン 砂の惑星",
+        "originalTitle": "Dune",
+        "poster": "/8dPdQus8I1e9TBdAy0lDMT2hazr.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "アドベンチャー"
+        ],
+        "runtime": 155,
+        "releaseDate": "2021-09-15",
+        "overview": "アトレイデス家の後継者、ポール。彼には”未来が視える”能力があった。  宇宙帝国の皇帝からの命令で、その惑星を制する者が全宇宙を制すると言われる、  過酷な《砂の惑星デューン》へと移住するが、それは罠だった…。  そこで宇宙支配を狙う宿敵ハルコンネン家の壮絶な戦いが勃発！！  父を殺され、巨大なサンドワームが襲い来るその惑星で、全宇宙のために立ち上がるー",
+        "overviewLang": "ja"
+      },
+      "listedAt": "2026-10-05T03:01:11.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 474180,
+      "tmdb": 634649,
+      "slug": "spider-man-no-way-home-2021",
+      "year": 2021,
+      "released": "2021-12-15",
+      "traktTitle": "Spider-Man: No Way Home",
+      "details": {
+        "title": "スパイダーマン：ノー・ウェイ・ホーム",
+        "originalTitle": "Spider-Man: No Way Home",
+        "poster": "/j2vwjzuofol93OcSn8xAHJiTEoz.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "runtime": 148,
+        "releaseDate": "2021-12-15",
+        "overview": "倒した敵の暴露により、世間から悪評を受けるスパイダーマン。自分の正体が知られていない世界に戻りたいと思うようになった彼は、友人のドクター・ストレンジに助けを求める。やがて魔法の力で、彼は違う世界線で2つの人生を同時に歩み始める",
+        "overviewLang": "ja"
+      },
+      "listedAt": "2026-10-05T03:00:54.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "drama",
+      "trakt": 180770,
+      "tmdb": 125988,
+      "slug": "silo",
+      "year": 2023,
+      "released": "2023-05-04",
+      "traktTitle": "Silo",
+      "details": {
+        "poster": "/fewWamvhpdBwgSJdaQ1iTjYCSmd.jpg",
+        "genres": [
+          "Sci-Fi & Fantasy",
+          "ドラマ"
+        ],
+        "overview": "有毒物質が蔓延する荒廃した未来。何千人もの人間が地下深くに広がる巨大なサイロで暮らしている。保安官が基本的な規則を破り、住民たちが謎の死を遂げる中、機械工のジュリエットはサイロの驚くべき秘密と真実を解き明かしていく。",
+        "overviewLang": "ja",
+        "title": "サイロ",
+        "originalTitle": "Silo",
+        "runtime": null,
+        "releaseDate": "2023-05-04",
+        "seasons": 4,
+        "episodes": 31
+      },
+      "listedAt": "2026-10-05T03:04:46.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 729817,
+      "tmdb": 911430,
+      "slug": "f1-2025",
+      "year": 2025,
+      "released": "2025-06-25",
+      "traktTitle": "F1",
+      "details": {
+        "title": "F1／エフワン",
+        "originalTitle": "F1",
+        "poster": "/mtgRgRG4k8ULNbqUrm9fHAOs1KW.jpg",
+        "genres": [
+          "アクション",
+          "ドラマ"
+        ],
+        "runtime": 156,
+        "releaseDate": "2025-06-25",
+        "overview": "引退していたレース界のレジェンド、ソニー・ヘイズが現役に呼び戻され、低迷するＦ１チームを率いて、若き天才ドライバーを指導しながら、再び栄光をつかむチャンスを追い求める。",
+        "overviewLang": "ja"
+      },
+      "listedAt": "2026-10-05T02:33:12.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 751145,
+      "tmdb": 936075,
+      "slug": "michael-2026",
+      "year": 2026,
+      "released": "2026-04-22",
+      "traktTitle": "Michael",
+      "details": {
+        "title": "Michael／マイケル",
+        "originalTitle": "Michael",
+        "poster": "/A23qVaLfdpfQlJ9VS1vvP5m5UfS.jpg",
+        "genres": [
+          "音楽",
+          "ドラマ"
+        ],
+        "runtime": 136,
+        "releaseDate": "2026-04-22",
+        "overview": "圧倒的な歌唱力と革新的なダンスパフォーマンスで、アーティストの枠を超え、全世界的なアイコンとなった“キング・オブ・ポップ”＝マイケル・ジャクソン。彼は幼いころから兄弟と共に歌い続けていた。製鉄所で働く父・ジョセフは野心家で、「人生は勝つか負けるかだ」と言い放ち、息子たちに厳しいレッスンを課し、兄弟グループ“ジャクソン５”としてデビューさせた。彼らをみた聴衆は誰しもマイケルの圧倒的な歌声に酔いしれた。評判は広まり、ステージからステージへ人気は急上昇、モータウン・レコードと契約し、スターダムを駆け上がっていく。しかし、喝采の裏で彼はまだ一人の少年だった。孤独と重圧の中、唯一無条件の愛で支え続けたのが母・キャサリンだった。やがて青年となったマイケルに運命の出会いが訪れる。音楽史にその名を刻む名プロデューサー、クインシー・ジョーンズ。彼との出会いによってマイケルはグループの枠を超え、ソロアーティストとして前人未踏の音楽的創造性を爆発させていく。『オフ・ザ・ウォール』『スリラー』、歴史的メガヒットアルバムと名曲の数々を生み出し、全世界の寵児となっていくマイケル。しかし、その栄光の裏には、早熟の天才ゆえの孤独感、強権的な父親の呪縛、家族への愛と自分の中に溢れるビジョンとの間で葛藤する一人の人間の姿があった… そして今、音楽史を塗り替える存在——“キング・オブ・ポップ”伝説誕生の瞬間へ。",
+        "overviewLang": "ja"
+      },
+      "listedAt": "2026-10-05T03:10:49.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 1117351,
       "tmdb": 1368337,
       "slug": "the-odyssey-2026",
       "year": 2026,
+      "released": "2026-07-15",
       "traktTitle": "The Odyssey",
       "details": {
         "title": "オデュッセイア",
@@ -1886,6 +2491,32 @@
         "overviewLang": "ja"
       },
       "listedAt": "2026-10-05T01:34:05.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 905132,
+      "tmdb": 969681,
+      "slug": "spider-man-brand-new-day-2026",
+      "year": 2026,
+      "released": "2026-07-29",
+      "traktTitle": "Spider-Man: Brand New Day",
+      "details": {
+        "title": "スパイダーマン：ブランド・ニュー・デイ",
+        "originalTitle": "Spider-Man: Brand New Day",
+        "poster": "/hvbs76wGMZYqJSvaRps5jDzHUhN.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "アクション",
+          "アドベンチャー"
+        ],
+        "runtime": 145,
+        "releaseDate": "2026-07-29",
+        "overview": "愛する人たちを守るために、彼らの記憶から自らの存在を消すという決断をした『スパイダーマン：ノー・ウェイ・ホーム』の出来事から４年。大人になったピーター・パーカーはスパイダーマンとして、ニューヨークの人々を守り、彼らを脅かす犯罪と戦う日々に全力を尽くしていた。そんななか、人々の期待を背負う彼の体に驚くべき身体的変異が起こり始める。同時に、街では姿なき不可解な犯罪が頻発。“親愛なる隣人”に、かつて直面したことのない大きな脅威が迫る──。",
+        "overviewLang": "ja"
+      },
+      "listedAt": "2026-10-05T03:04:51.000Z",
       "rating": null
     }
   ]
