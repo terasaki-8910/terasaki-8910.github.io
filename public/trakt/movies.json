@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T09:39:37.114Z",
+  "generatedAt": "2026-10-06T00:55:29.464Z",
   "user": "masatoT",
   "watched": [
     {
@@ -546,6 +546,35 @@
       "ratedAt": "2026-10-05T01:37:55.000Z"
     },
     {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 1237,
+      "tmdb": 1858,
+      "slug": "transformers-2007",
+      "year": 2007,
+      "released": "2007-06-27",
+      "traktTitle": "Transformers",
+      "details": {
+        "poster": "/2mB0Xxs6czud68Go99oMb8wPONg.jpg",
+        "genres": [
+          "アドベンチャー",
+          "サイエンスフィクション",
+          "アクション"
+        ],
+        "overview": "2003年、火星にビークル2号探知機を打ち上げるが、火星に到着後NASAとの交信が途絶えてしまう。その後、アメリカ、パリ、東京、さらにはアメリカ大統領の乗るエアフォース・ワンの機内など、世界中の至るところで同時期に奇妙な現象が起きる。人間たちは、それが地球上のあらゆるテクノロジーをスキャンする知能を持つ“金属生命体”のしわざだとは知らなかった。",
+        "overviewLang": "ja",
+        "title": "トランスフォーマー",
+        "originalTitle": "Transformers",
+        "runtime": 144,
+        "releaseDate": "2007-06-27"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2025-03-26T23:33:00.000Z",
+      "recordedOrder": 14496708142,
+      "rating": 8,
+      "ratedAt": "2026-10-05T13:30:24.000Z"
+    },
+    {
       "type": "show",
       "kind": "drama",
       "trakt": 1388,
@@ -925,6 +954,35 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 34516,
+      "tmdb": 49530,
+      "slug": "in-time-2011",
+      "year": 2011,
+      "released": "2011-10-27",
+      "traktTitle": "In Time",
+      "details": {
+        "poster": "/hfaZWEqshdwcIAzeusHTpMWz0fw.jpg",
+        "genres": [
+          "アクション",
+          "スリラー",
+          "サイエンスフィクション"
+        ],
+        "overview": "科学の進化により老化を克服した近未来、そこでは‘時間’が‘通貨’となり世界を支配していた。人間の成長は25歳で止まり、余命（時間）は労働により稼がなければならなかった。そして街は‘タイムゾーン’という境界線により、貧困層が住む〈スラム・ゾーン〉と〈富裕ゾーン〉に明確に分けられ、その行き来は禁止されていた。ある日、ある男から100年の時間をもらったことで殺人容疑をかけられた貧困層の青年ウィルは、スラムゾーンに別れを告げ、富裕ゾーンに逃げ込む。",
+        "overviewLang": "ja",
+        "title": "TIME／タイム",
+        "originalTitle": "In Time",
+        "runtime": 109,
+        "releaseDate": "2011-10-27"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2024-06-21T17:46:00.000Z",
+      "recordedOrder": 14496709013,
+      "rating": 9,
+      "ratedAt": "2026-10-05T13:31:21.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 34073,
       "tmdb": 49026,
       "slug": "the-dark-knight-rises-2012",
@@ -951,6 +1009,37 @@
       "recordedOrder": 14495350637,
       "rating": 7,
       "ratedAt": "2026-10-05T01:38:22.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 45537,
+      "tmdb": 45790,
+      "slug": "jojo-s-bizarre-adventure",
+      "year": 2012,
+      "released": "2012-10-06",
+      "traktTitle": "JoJo's Bizarre Adventure",
+      "details": {
+        "poster": "/2Sc0veFPh9CcHMtNqMyiQqIW9ZF.jpg",
+        "genres": [
+          "アニメーション",
+          "Action & Adventure",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "ジョースター一族と、邪悪な吸血鬼と化したディオやその後継者たちが、1世紀以上に亘って繰り広げる戦いを描く大河群像劇である。単独の人物を主人公としておらず、主人公が変わるごとに「第○部（○部分に数字）」と部数が進み、作品のサブタイトルも変わる形式を採用している。主人公が変わるだけでなく、作品の舞台やジャンルも各部ごとに変化している。現在までにPart1からPart8までの8部が発表されている。",
+        "overviewLang": "ja",
+        "title": "ジョジョの奇妙な冒険",
+        "originalTitle": "ジョジョの奇妙な冒険",
+        "runtime": 24,
+        "releaseDate": "2012-10-06",
+        "seasons": 6,
+        "episodes": 202
+      },
+      "plays": 152,
+      "lastWatchedAt": "2026-10-05T13:35:00.000Z",
+      "recordedOrder": null,
+      "rating": 10,
+      "ratedAt": "2026-10-05T13:36:30.000Z"
     },
     {
       "type": "movie",
@@ -1009,6 +1098,35 @@
       "recordedOrder": 14495531548,
       "rating": 8,
       "ratedAt": "2026-10-05T02:52:57.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 34507,
+      "tmdb": 49521,
+      "slug": "man-of-steel-2013",
+      "year": 2013,
+      "released": "2013-06-12",
+      "traktTitle": "Man of Steel",
+      "details": {
+        "poster": "/lxVtydKhaoRFcDlZbdapObWMErY.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "ジョー・エルは、滅びる寸前の惑星クリプトンから生まれたばかりの息子を宇宙船に乗せて地球へと送り出す。その後クラークは、偶然宇宙船を発見した父と母に大事に育てられる。そして成長した彼は、クリプトン星の生き残りのゾッド将軍と対峙することになる。",
+        "overviewLang": "ja",
+        "title": "マン・オブ・スティール",
+        "originalTitle": "Man of Steel",
+        "runtime": 143,
+        "releaseDate": "2013-06-12"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-05T13:27:00.000Z",
+      "recordedOrder": 14496706137,
+      "rating": 7,
+      "ratedAt": "2026-10-05T13:27:54.000Z"
     },
     {
       "type": "movie",
@@ -2316,6 +2434,31 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 10655,
+      "tmdb": 17431,
+      "slug": "moon-2009",
+      "year": 2009,
+      "released": "2009-06-12",
+      "traktTitle": "Moon",
+      "details": {
+        "poster": "/wYMhgp2h0N3BMQiiq8zHSNikBot.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "ドラマ"
+        ],
+        "overview": "サムは地球で必要なエネルギー源を採掘するため、3年間で月にたった一人で滞在する仕事に就く。地球との直接通信は許されず、話し相手は1台の人工知能コンピュータだけの環境だったが、任務終了まで2週間を残すある日、サムは自分と同じ顔をした人間に遭遇する。",
+        "overviewLang": "ja",
+        "title": "月に囚われた男",
+        "originalTitle": "Moon",
+        "runtime": 97,
+        "releaseDate": "2009-06-12"
+      },
+      "listedAt": "2026-10-05T13:31:58.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 42897,
       "tmdb": 59967,
       "slug": "looper-2012",
@@ -2337,6 +2480,61 @@
         "overviewLang": "ja"
       },
       "listedAt": "2026-10-05T03:00:59.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 43623,
+      "tmdb": 43865,
+      "slug": "psycho-pass",
+      "year": 2012,
+      "released": "2012-10-12",
+      "traktTitle": "Psycho-Pass",
+      "details": {
+        "poster": "/aX6S3P8xiz9nJwXjaka5e9kT6f4.jpg",
+        "genres": [
+          "アニメーション",
+          "犯罪",
+          "Sci-Fi & Fantasy",
+          "Action & Adventure"
+        ],
+        "overview": "舞台は、人間のあらゆる心理状態や性格傾向の計測を可能とし、それを数値化する機能を持つ「シビュラシステム」が導入された西暦2112年の日本。人々はこの値を通称「PSYCHO-PASS」と呼び習わし、有害なストレスから解放された「理想的な人生」を送るため、その数値を指標として生きていた。その中でも、犯罪に関しての数値は「犯罪係数」として計測され、たとえ罪を犯していない者でも、規定値を超えれば「潜在犯」として裁かれていた。そのような監視社会においても発生する犯罪を抑圧するため、厚生省管轄の警察組織「公安局」の刑事は、シビュラシステムと有機的に接続されている特殊拳銃「ドミネーター」を用いて、治安維持活動を行っていた。本作品は、このような時代背景の中で働く公安局刑事課一係所属メンバーたちの活動と葛藤を描く",
+        "overviewLang": "ja",
+        "title": "PSYCHO-PASS サイコパス",
+        "originalTitle": "PSYCHO-PASS サイコパス",
+        "runtime": 28,
+        "releaseDate": "2012-10-12",
+        "seasons": 3,
+        "episodes": 41
+      },
+      "listedAt": "2026-10-05T13:33:20.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 123707,
+      "tmdb": 198184,
+      "slug": "chappie-2015",
+      "year": 2015,
+      "released": "2015-03-04",
+      "traktTitle": "Chappie",
+      "details": {
+        "poster": "/mWuPB8b5k6BxMXvmJTaOvPp99ZF.jpg",
+        "genres": [
+          "犯罪",
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "overview": "2016年、南アフリカ。ディオンは、世界初の自身で感じ、考え、成長することができる人工知能搭載ロボットのチャッピーを開発する。しかし、世界でも有数の危険地帯ヨハネスブルクに巣食うストリートギャングにチャッピーと一緒に誘拐されてしまう。起動したばかりで子供のように純粋なチャッピーは、ストリートギャングのメンバーたちと接し、彼らから生き抜くためのスキルを学んでいくがバッテリー残量が5日分しかない。",
+        "overviewLang": "ja",
+        "title": "チャッピー",
+        "originalTitle": "Chappie",
+        "runtime": 120,
+        "releaseDate": "2015-03-04"
+      },
+      "listedAt": "2026-10-05T13:33:59.000Z",
       "rating": null
     },
     {
