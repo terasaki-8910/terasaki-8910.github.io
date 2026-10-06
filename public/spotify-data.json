@@ -1,6 +1,116 @@
 {
-  "lastUpdated": "2026-10-05T12:58:25.006Z",
+  "lastUpdated": "2026-10-06T03:46:34.510Z",
   "tracks": [
+    {
+      "id": "53Uy2m8yielFV4bkGBybhZ",
+      "name": "全力☆Summer!",
+      "artist": "angela",
+      "album": "Beyond",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
+      "playedAt": "2026-10-06T02:01:57.668Z",
+      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
+      "duration": 233893,
+      "previewUrl": ""
+    },
+    {
+      "id": "343P4NOfSrRoWq3l9hNfZl",
+      "name": "Sparkling Daydream",
+      "artist": "ZAQ",
+      "album": "NOISY Lab.",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27373d6f1bb38a4581030995c34",
+      "playedAt": "2026-10-06T00:52:02.406Z",
+      "spotifyUrl": "https://open.spotify.com/track/343P4NOfSrRoWq3l9hNfZl",
+      "duration": 249773,
+      "previewUrl": ""
+    },
+    {
+      "id": "2eTFeq3uicvq8wzG00JMQx",
+      "name": "銀河鉄道999",
+      "artist": "Godiego",
+      "album": "銀河鉄道999",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b338c1027de8dd7c79614876",
+      "playedAt": "2026-10-06T00:47:49.605Z",
+      "spotifyUrl": "https://open.spotify.com/track/2eTFeq3uicvq8wzG00JMQx",
+      "duration": 209373,
+      "previewUrl": ""
+    },
+    {
+      "id": "1J66QIjAuES6rRNJGnLSJh",
+      "name": "The Everlasting Guilty Crown",
+      "artist": "EGOIST",
+      "album": "Extra terrestrial Biological Entities",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fce3ae50618016f1fcc620f4",
+      "playedAt": "2026-10-06T00:43:48.879Z",
+      "spotifyUrl": "https://open.spotify.com/track/1J66QIjAuES6rRNJGnLSJh",
+      "duration": 326960,
+      "previewUrl": ""
+    },
+    {
+      "id": "3F0hvTxaTJV6OsFnRqefXc",
+      "name": "アイデン貞貞メルトダウン",
+      "artist": "えなこ, P丸様｡",
+      "album": "アイデン貞貞メルトダウン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386001206942da71231c86b96",
+      "playedAt": "2026-10-06T00:38:21.458Z",
+      "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
+      "duration": 243880,
+      "previewUrl": ""
+    },
+    {
+      "id": "0PWIc3fMjsnfxv2SyQ2lRx",
+      "name": "世界は恋に落ちている",
+      "artist": "CHiCO with HoneyWorks",
+      "album": "世界は恋に落ちている",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273731dda76ba334bd44a043b43",
+      "playedAt": "2026-10-06T00:34:17.125Z",
+      "spotifyUrl": "https://open.spotify.com/track/0PWIc3fMjsnfxv2SyQ2lRx",
+      "duration": 311293,
+      "previewUrl": ""
+    },
+    {
+      "id": "66DAA9F0AFPpDvezYunqm3",
+      "name": "ゴールデンタイムラバー",
+      "artist": "Sukima Switch",
+      "album": "ゴールデンタイムラバー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27353cdee3f51c9562dd7e4210f",
+      "playedAt": "2026-10-06T00:29:05.477Z",
+      "spotifyUrl": "https://open.spotify.com/track/66DAA9F0AFPpDvezYunqm3",
+      "duration": 340800,
+      "previewUrl": ""
+    },
+    {
+      "id": "3gbUPOTnqFjXy5bPlEtXFm",
+      "name": "優しさの理由",
+      "artist": "ChouCho",
+      "album": "flyleaf",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e390b0d50610c5d1e7c05e8b",
+      "playedAt": "2026-10-06T00:23:24.016Z",
+      "spotifyUrl": "https://open.spotify.com/track/3gbUPOTnqFjXy5bPlEtXFm",
+      "duration": 254226,
+      "previewUrl": ""
+    },
+    {
+      "id": "2LjozKhOvVNAsir4E4WnKK",
+      "name": "ハレ晴レユカイ",
+      "artist": "Aya Hirano, 茅原実里, 後藤邑子",
+      "album": "涼宮ハルヒの記憶",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27300b115712159698f127831f8",
+      "playedAt": "2026-10-06T00:19:09.281Z",
+      "spotifyUrl": "https://open.spotify.com/track/2LjozKhOvVNAsir4E4WnKK",
+      "duration": 217866,
+      "previewUrl": ""
+    },
+    {
+      "id": "0hjif67e3mBkrPIlRDXHLS",
+      "name": "LEVEL5-judgelight-",
+      "artist": "fripSide",
+      "album": "infinite synthesis",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734e6243b9b0fd0006c031748d",
+      "playedAt": "2026-10-06T00:15:30.931Z",
+      "spotifyUrl": "https://open.spotify.com/track/0hjif67e3mBkrPIlRDXHLS",
+      "duration": 263444,
+      "previewUrl": ""
+    },
     {
       "id": "0aB0v4027ukVziUGwVGYpG",
       "name": "tv off (feat. lefty gunplay)",
@@ -219,116 +329,6 @@
       "playedAt": "2026-10-05T07:59:05.996Z",
       "spotifyUrl": "https://open.spotify.com/track/2TZbQZXOuR8osP2AK8yYMN",
       "duration": 207426,
-      "previewUrl": ""
-    },
-    {
-      "id": "5EbGCyliRgdpX00MtNOPvT",
-      "name": "Back to the Future",
-      "artist": "Alan Silvestri, Cincinnati Pops Orchestra, Erich Kunzel",
-      "album": "Star Tracks II",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b671103145207b745ba0ad01",
-      "playedAt": "2026-10-05T07:55:38.036Z",
-      "spotifyUrl": "https://open.spotify.com/track/5EbGCyliRgdpX00MtNOPvT",
-      "duration": 199733,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vHEbPUFdhGmH0kMA0J39X",
-      "name": "Warner Bros. - Cover Version",
-      "artist": "Cinescore",
-      "album": "The Film Studio Fanfare Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
-      "playedAt": "2026-10-05T07:52:10.801Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vHEbPUFdhGmH0kMA0J39X",
-      "duration": 17327,
-      "previewUrl": ""
-    },
-    {
-      "id": "4q57oGT90FfPHf7vWp32Ho",
-      "name": "Judas",
-      "artist": "Lady Gaga",
-      "album": "Born This Way (Japan Special Edition Version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d2bc35812c2d7f67d110e48",
-      "playedAt": "2026-10-05T03:26:43.626Z",
-      "spotifyUrl": "https://open.spotify.com/track/4q57oGT90FfPHf7vWp32Ho",
-      "duration": 249066,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
-      "name": "Without You (feat. Sandro Cavazza)",
-      "artist": "Avicii, Sandro Cavazza",
-      "album": "AVĪCI (01)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
-      "playedAt": "2026-10-05T01:10:13.318Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
-      "duration": 181672,
-      "previewUrl": ""
-    },
-    {
-      "id": "30lXCrnKs5TJJOuSVwiQn1",
-      "name": "Zoltraak",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
-      "playedAt": "2026-10-04T23:59:56.928Z",
-      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
-      "duration": 140664,
-      "previewUrl": ""
-    },
-    {
-      "id": "5SXsXjVJCWeJuf7FHvgBYR",
-      "name": "The Avengers",
-      "artist": "Alan Silvestri",
-      "album": "The Avengers (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b0b9aaf0ef903add8f96ff6e",
-      "playedAt": "2026-10-04T23:57:35.722Z",
-      "spotifyUrl": "https://open.spotify.com/track/5SXsXjVJCWeJuf7FHvgBYR",
-      "duration": 123360,
-      "previewUrl": ""
-    },
-    {
-      "id": "110uH4IxKOINJBWCy9J23k",
-      "name": "One Piece (1999) - Overtaken",
-      "artist": "Geek Music",
-      "album": "The Anime Collection Volume One",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
-      "playedAt": "2026-10-04T23:55:31.734Z",
-      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
-      "duration": 120212,
-      "previewUrl": ""
-    },
-    {
-      "id": "23HUlzt20YuALl5Q2gWsKu",
-      "name": "Summer",
-      "artist": "Joe Hisaishi",
-      "album": "菊次郎の夏 (オリジナル・サウンドトラック)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732a0eb03b0b514e69ede808cb",
-      "playedAt": "2026-10-04T23:53:30.973Z",
-      "spotifyUrl": "https://open.spotify.com/track/23HUlzt20YuALl5Q2gWsKu",
-      "duration": 384026,
-      "previewUrl": ""
-    },
-    {
-      "id": "2VvAAjMzOKXkJ9t8N9Rbup",
-      "name": "Duel of the Fates (From \"Star Wars: Episode I - The Phantom Menace\")",
-      "artist": "John Williams, Robert Ziegler, Slovak National Symphony Orchestra, Members of the Slovak Philharmonic Choir",
-      "album": "Music From The Star Wars Saga - The Essential Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273851abf5fb53fda9ada173c79",
-      "playedAt": "2026-10-04T23:47:06.341Z",
-      "spotifyUrl": "https://open.spotify.com/track/2VvAAjMzOKXkJ9t8N9Rbup",
-      "duration": 274200,
-      "previewUrl": ""
-    },
-    {
-      "id": "5VZn5Gsn2ckFJ2bmRo9GPe",
-      "name": "ルパン三世のテーマ - 「ルパン三世のテーマ'78」シングル・ヴァージョン",
-      "artist": "Yuji Ohno, ユー & ザ・エクスプロージョン・バンド",
-      "album": "ルパン三世 オリジナル・サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d84206cdf9b755537f3123c8",
-      "playedAt": "2026-10-04T23:42:31.609Z",
-      "spotifyUrl": "https://open.spotify.com/track/5VZn5Gsn2ckFJ2bmRo9GPe",
-      "duration": 204626,
       "previewUrl": ""
     }
   ],
