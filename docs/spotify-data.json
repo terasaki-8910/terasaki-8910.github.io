@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-10-06T03:46:34.510Z",
+  "lastUpdated": "2026-10-06T12:23:36.885Z",
   "tracks": [
+    {
+      "id": "06XQvnJb53SUYmlWIhUXUi",
+      "name": "怪物",
+      "artist": "YOASOBI",
+      "album": "怪物",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2efc5e5f5922ca1f1b88928",
+      "playedAt": "2026-10-06T11:11:36.436Z",
+      "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
+      "duration": 206000,
+      "previewUrl": ""
+    },
+    {
+      "id": "4NaaF28BeO9WzjDrSS71Nz",
+      "name": "ダンスホール",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "ダンスホール",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e552c9dbdf76676de1032ae0",
+      "playedAt": "2026-10-06T11:08:09.892Z",
+      "spotifyUrl": "https://open.spotify.com/track/4NaaF28BeO9WzjDrSS71Nz",
+      "duration": 203149,
+      "previewUrl": ""
+    },
+    {
+      "id": "5Olqp0fKkKQtu73jTtnPzC",
+      "name": "ウェカピポ",
+      "artist": "SOUL'd OUT",
+      "album": "SOUL'd OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273288fac96cc3e1e55d31143c6",
+      "playedAt": "2026-10-06T11:04:46.211Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Olqp0fKkKQtu73jTtnPzC",
+      "duration": 250760,
+      "previewUrl": ""
+    },
+    {
+      "id": "1OGT9heGpvsbtQptyM98FB",
+      "name": "Dragon Soul",
+      "artist": "Takayoshi Tanimoto",
+      "album": "Career along",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27371d21ece7ed6184d6e887c15",
+      "playedAt": "2026-10-06T08:06:53.378Z",
+      "spotifyUrl": "https://open.spotify.com/track/1OGT9heGpvsbtQptyM98FB",
+      "duration": 266413,
+      "previewUrl": ""
+    },
     {
       "id": "53Uy2m8yielFV4bkGBybhZ",
       "name": "全力☆Summer!",
@@ -145,17 +189,6 @@
       "previewUrl": ""
     },
     {
-      "id": "5Olqp0fKkKQtu73jTtnPzC",
-      "name": "ウェカピポ",
-      "artist": "SOUL'd OUT",
-      "album": "SOUL'd OUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273288fac96cc3e1e55d31143c6",
-      "playedAt": "2026-10-05T10:18:20.942Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Olqp0fKkKQtu73jTtnPzC",
-      "duration": 250760,
-      "previewUrl": ""
-    },
-    {
       "id": "2stkLJ0JNcXkIRDNF3ld6c",
       "name": "You've Got a Friend in Me",
       "artist": "Randy Newman",
@@ -296,39 +329,6 @@
       "playedAt": "2026-10-05T08:04:44.972Z",
       "spotifyUrl": "https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G",
       "duration": 165264,
-      "previewUrl": ""
-    },
-    {
-      "id": "1sMagdJx1dkLn9p5j3lf9k",
-      "name": "空中散歩",
-      "artist": "Joe Hisaishi",
-      "album": "ハウルの動く城 サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315e2471f4af3fe85e339b5d6",
-      "playedAt": "2026-10-05T08:02:13.658Z",
-      "spotifyUrl": "https://open.spotify.com/track/1sMagdJx1dkLn9p5j3lf9k",
-      "duration": 134800,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FL7eUG80aeUeyMO2N4btN",
-      "name": "Mission: Impossible Theme",
-      "artist": "Michael Giacchino",
-      "album": "Mission: Impossible III (Music From The Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b85f6d3142ef01d48b94480e",
-      "playedAt": "2026-10-05T07:59:58.325Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FL7eUG80aeUeyMO2N4btN",
-      "duration": 51800,
-      "previewUrl": ""
-    },
-    {
-      "id": "2TZbQZXOuR8osP2AK8yYMN",
-      "name": "Theme From Jurassic Park",
-      "artist": "John Williams",
-      "album": "Jurassic Park",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27392f051ce3c585b5c2db21d52",
-      "playedAt": "2026-10-05T07:59:05.996Z",
-      "spotifyUrl": "https://open.spotify.com/track/2TZbQZXOuR8osP2AK8yYMN",
-      "duration": 207426,
       "previewUrl": ""
     }
   ],
