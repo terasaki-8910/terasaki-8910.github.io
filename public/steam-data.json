@@ -1,20 +1,12 @@
 {
-  "lastUpdated": "2026-10-07T05:42:11.949Z",
+  "lastUpdated": "2026-10-07T13:10:15.320Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
     "profileUrl": "https://steamcommunity.com/id/modadadadaaaagnsb/"
   },
   "ownedGamesCount": 50,
-  "recentlyPlayed": [
-    {
-      "appid": 688130,
-      "name": "Pogostuck: Rage With Your Friends",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 26,
-      "playtimeForeverMinutes": 2783
-    }
-  ],
+  "recentlyPlayed": [],
   "library": [
     {
       "appid": 1449850,
@@ -358,7 +350,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/7424038d40678f398eab78553f71d9832d778ff6.jpg",
           "unlockedAt": "2026-08-15T21:33:57.000Z",
-          "percent": 39.1
+          "percent": 39
         },
         {
           "name": "A Fair Day's Pay",
@@ -503,14 +495,14 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 43.2
+          "percent": 43.5
         },
         {
           "name": "Kamura Amulet",
           "description": "A trinket given to new hunters who have proved themselves capable.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/01c4593add4173fdfdfcf8e50b6e99438c7895e8.jpg",
           "unlockedAt": "2023-07-11T08:07:02.000Z",
-          "percent": 87
+          "percent": 87.1
         }
       ]
     },
@@ -525,7 +517,7 @@
           "description": "Cause 1 fatal error or trigger 128 warnings in the editor.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
           "unlockedAt": "2026-09-06T13:52:37.000Z",
-          "percent": 33.3
+          "percent": 33.2
         },
         {
           "name": "Trying something new",
@@ -547,7 +539,7 @@
           "description": "Where's your face, dingus? Get your butt to the avatar creator and sort yourself out! Crying shame we can't fix that attitude of yours while we're at it.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/b2c3883e2cfd25d9477c7681714288cac23d4f76.jpg",
           "unlockedAt": "2026-03-23T15:27:32.000Z",
-          "percent": 81.9
+          "percent": 81.8
         },
         {
           "name": "Leaving the Nest",
