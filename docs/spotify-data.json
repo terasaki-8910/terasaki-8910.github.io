@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-10-06T12:23:36.885Z",
+  "lastUpdated": "2026-10-07T03:14:13.263Z",
   "tracks": [
+    {
+      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
+      "name": "Without You (feat. Sandro Cavazza)",
+      "artist": "Avicii, Sandro Cavazza",
+      "album": "AVĪCI (01)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
+      "playedAt": "2026-10-07T02:58:20.580Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
+      "duration": 181672,
+      "previewUrl": ""
+    },
+    {
+      "id": "5LtKpKOO0fyGBAbv761JCu",
+      "name": "Sunlight",
+      "artist": "TheFatRat, Phaera",
+      "album": "Unity - 10th Anniversary Compilation",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
+      "playedAt": "2026-10-07T02:50:13.248Z",
+      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
+      "duration": 169952,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-10-07T00:28:13.169Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "6V53UDIOvJ8QNjRAQmvQQn",
+      "name": "Attack of the Killer Queen",
+      "artist": "Toby Fox, Lena Raine, Marcy Nabors",
+      "album": "DELTARUNE Chapter 2 (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e14fd3669881ed569497a76",
+      "playedAt": "2026-10-07T00:25:18.332Z",
+      "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
+      "duration": 120000,
+      "previewUrl": ""
+    },
+    {
+      "id": "6qB3lZIfnDC8TE2245NDtO",
+      "name": "夜の踊り子",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-10-07T00:14:37.570Z",
+      "spotifyUrl": "https://open.spotify.com/track/6qB3lZIfnDC8TE2245NDtO",
+      "duration": 302920,
+      "previewUrl": ""
+    },
+    {
+      "id": "5Olqp0fKkKQtu73jTtnPzC",
+      "name": "ウェカピポ",
+      "artist": "SOUL'd OUT",
+      "album": "SOUL'd OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273288fac96cc3e1e55d31143c6",
+      "playedAt": "2026-10-07T00:13:47.386Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Olqp0fKkKQtu73jTtnPzC",
+      "duration": 250760,
+      "previewUrl": ""
+    },
     {
       "id": "06XQvnJb53SUYmlWIhUXUi",
       "name": "怪物",
@@ -21,17 +87,6 @@
       "playedAt": "2026-10-06T11:08:09.892Z",
       "spotifyUrl": "https://open.spotify.com/track/4NaaF28BeO9WzjDrSS71Nz",
       "duration": 203149,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Olqp0fKkKQtu73jTtnPzC",
-      "name": "ウェカピポ",
-      "artist": "SOUL'd OUT",
-      "album": "SOUL'd OUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273288fac96cc3e1e55d31143c6",
-      "playedAt": "2026-10-06T11:04:46.211Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Olqp0fKkKQtu73jTtnPzC",
-      "duration": 250760,
       "previewUrl": ""
     },
     {
@@ -274,61 +329,6 @@
       "playedAt": "2026-10-05T08:13:57.505Z",
       "spotifyUrl": "https://open.spotify.com/track/0WjwAv3XSjztqqyD6Gw1CX",
       "duration": 196760,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Z9n913mHKPWbsD0n5gEwF",
-      "name": "20th Century Fox Fanfare",
-      "artist": "Geek Music",
-      "album": "20th Century Fox Fanfare",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b850000d705e1d77408e60ec",
-      "playedAt": "2026-10-05T08:10:40.219Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Z9n913mHKPWbsD0n5gEwF",
-      "duration": 58189,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LoV3sIPEFQj7wdY2YiwF1",
-      "name": "Blood Bag - Extended Version",
-      "artist": "Junkie XL",
-      "album": "Mad Max: Fury Road (Original Motion Picture Soundtrack) [Deluxe Version]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27372c2f7f1612b97d7e2825c8b",
-      "playedAt": "2026-10-05T08:09:41.505Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LoV3sIPEFQj7wdY2YiwF1",
-      "duration": 219500,
-      "previewUrl": ""
-    },
-    {
-      "id": "1OrSkn4lXO1cD1NaR7v2IG",
-      "name": "Universal Fanfare",
-      "artist": "The Minions",
-      "album": "Minions (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732491486e0c8c1df2323c2541",
-      "playedAt": "2026-10-05T08:06:01.486Z",
-      "spotifyUrl": "https://open.spotify.com/track/1OrSkn4lXO1cD1NaR7v2IG",
-      "duration": 32417,
-      "previewUrl": ""
-    },
-    {
-      "id": "5r7egnfTIQjaKSGREhIky9",
-      "name": "Formula 1 Theme",
-      "artist": "Brian Tyler",
-      "album": "Formula 1 Theme",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273873a7854fcfe9fbf1ea1923d",
-      "playedAt": "2026-10-05T08:05:28.549Z",
-      "spotifyUrl": "https://open.spotify.com/track/5r7egnfTIQjaKSGREhIky9",
-      "duration": 194351,
-      "previewUrl": ""
-    },
-    {
-      "id": "0HqZX76SFLDz2aW8aiqi7G",
-      "name": "Bones",
-      "artist": "Imagine Dragons",
-      "album": "Bones",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273813713582dcc508e7d5073c4",
-      "playedAt": "2026-10-05T08:04:44.972Z",
-      "spotifyUrl": "https://open.spotify.com/track/0HqZX76SFLDz2aW8aiqi7G",
-      "duration": 165264,
       "previewUrl": ""
     }
   ],
