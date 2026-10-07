@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T00:55:29.464Z",
+  "generatedAt": "2026-10-07T23:42:36.186Z",
   "user": "masatoT",
   "watched": [
     {
@@ -174,6 +174,34 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 432,
+      "tmdb": 550,
+      "slug": "fight-club-1999",
+      "year": 1999,
+      "released": "1999-10-15",
+      "traktTitle": "Fight Club",
+      "details": {
+        "poster": "/7rNgfppzQsU7Gl6yV3eFxsXOga0.jpg",
+        "genres": [
+          "ドラマ",
+          "スリラー"
+        ],
+        "overview": "心の中に問題を抱えるエグゼクティブ青年ジャックはタイラーと名乗る男と知り合う。ふとしたことからタイラーとジャックが殴り合いを始めると、そこには多くの見物人が。その後、タイラーは酒場の地下でファイト・クラブなる拳闘の秘密集会を仕切ることに。たくさんの男たちがスリルを求めて集まるようになるが、やがてそのクラブは恐るべきテロ集団へと変貌していく……。「セブン」のコンビ、ブラピとフィンチャー監督が再び組んだ衝撃作。",
+        "overviewLang": "ja",
+        "title": "ファイト・クラブ",
+        "originalTitle": "Fight Club",
+        "runtime": 139,
+        "releaseDate": "1999-10-15"
+      },
+      "plays": 1,
+      "lastWatchedAt": "1999-10-15T00:00:00.000Z",
+      "recordedOrder": 14507590175,
+      "rating": 10,
+      "ratedAt": "2026-10-07T14:05:28.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 390,
       "tmdb": 497,
       "slug": "the-green-mile-1999",
@@ -283,6 +311,34 @@
       "recordedOrder": 14495413049,
       "rating": 9,
       "ratedAt": "2026-10-05T02:03:49.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 438,
+      "tmdb": 557,
+      "slug": "spider-man-2002",
+      "year": 2002,
+      "released": "2002-05-01",
+      "traktTitle": "Spider-Man",
+      "details": {
+        "poster": "/vOjMTThfmTUxGzI7i6aIUOt5QNC.jpg",
+        "genres": [
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "overview": "幼くして両親を亡くし、伯父夫婦のもとで大切に育てられたピーター。高校3年生となった彼は、6歳の頃からずっと思いつづけている隣家のメリー・ジェーンに未だに打ち明けることができないちょっと冴えない高校生。ある日ピーターは親友のハリーから彼の父親ノーマン・オズボーンを紹介される。ノーマンは巨大軍需企業オズコープ社の経営者にして天才科学者。ノーマンはピーターの科学の才能を高く評価、彼に目を掛けるようになる。そんなピーターは、大学の研究所を見学した際、遺伝子組み換えでスーパースパイダーとなったクモに刺されてしまう。その瞬間、ピーターの身体に異変が起こり始める。",
+        "overviewLang": "ja",
+        "title": "スパイダーマン",
+        "originalTitle": "Spider-Man",
+        "runtime": 121,
+        "releaseDate": "2002-05-01"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-07T16:31:00.000Z",
+      "recordedOrder": 14507881347,
+      "rating": 8,
+      "ratedAt": "2026-10-07T16:31:27.000Z"
     },
     {
       "type": "movie",
@@ -2407,6 +2463,31 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 612,
+      "tmdb": 769,
+      "slug": "goodfellas-1990",
+      "year": 1990,
+      "released": "1990-09-12",
+      "traktTitle": "GoodFellas",
+      "details": {
+        "poster": "/lDZVNtgfayjjw9bmh1g1PgVtgDO.jpg",
+        "genres": [
+          "ドラマ",
+          "犯罪"
+        ],
+        "overview": "ヘンリー・ヒル、1943年ブルックリン生まれ。大物ギャング、ポーリーのアジトで育った彼は、物心ついた頃からマフィアに憧れていた。やがて念願の\"グッドフェローズ\"の仲間となり、\"強奪\"専門のジミー、野心旺盛なチンピラ、トミーと共に犯罪に犯罪を重ねていく。が、麻薬に手を出したことから育ての親、ポーリーに見放され、さらにジミーたちが起こした600万ドル強奪事件を追うCIAの捜査の手もヘンリーに迫る。",
+        "overviewLang": "ja",
+        "title": "グッドフェローズ",
+        "originalTitle": "GoodFellas",
+        "runtime": 145,
+        "releaseDate": "1990-09-12"
+      },
+      "listedAt": "2026-10-07T16:32:33.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 630,
       "tmdb": 787,
       "slug": "mr-mrs-smith-2005",
@@ -2540,6 +2621,165 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 71938,
+      "tmdb": 99861,
+      "slug": "avengers-age-of-ultron-2015",
+      "year": 2015,
+      "released": "2015-04-22",
+      "traktTitle": "Avengers: Age of Ultron",
+      "details": {
+        "poster": "/jSaRZoFY8gAioBO9nMnSGA3mjl6.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "アイアンマンことトニー・スタークが完成させた人工知能“ウルトロン”の暴走に端を発する、ヒーローたちによる愛する者たちを救うための戦いをダイナミックに描く。人類の危機的状況を何度も打破してきたアイアンマンことトニー・スタークは、平和維持システムとしての人工知能“ウルトロン”を誕生させる。人類を脅威から守るために完成させたウルトロンであったが、平和を脅かす唯一の存在は人類だと結論付け、抹消しようとする。監督は、前作でもメガホンを取ったジョス・ウェドン。",
+        "overviewLang": "ja",
+        "title": "アベンジャーズ／エイジ・オブ・ウルトロン",
+        "originalTitle": "Avengers: Age of Ultron",
+        "runtime": 142,
+        "releaseDate": "2015-04-22"
+      },
+      "listedAt": "2026-10-07T13:42:01.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 169105,
+      "tmdb": 271110,
+      "slug": "captain-america-civil-war-2016",
+      "year": 2016,
+      "released": "2016-04-27",
+      "traktTitle": "Captain America: Civil War",
+      "details": {
+        "poster": "/qCZnPrC5NGjnO7uTqCD5JkCBALQ.jpg",
+        "genres": [
+          "アドベンチャー",
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "overview": "アベンジャーズのリーダーとなった、キャプテン・アメリカ。しかし、彼らが世界各地で繰り広げた戦いが甚大な被害を及ぼしたことが問題になる。さらに、それを回避するためにアベンジャーズは国際的政府組織の管理下に置かれ、活動を制限されることに。アイアンマンことトニー・スタークはこの処置に賛成するが、自発的に平和を守るべきだと考えるキャプテン・アメリカはそんな彼に反発。二人のにらみ合いが激化していく中、世界を震撼させるテロ事件が起きてしまう。",
+        "overviewLang": "ja",
+        "title": "シビル・ウォー／キャプテン・アメリカ",
+        "originalTitle": "Captain America: Civil War",
+        "runtime": 148,
+        "releaseDate": "2016-04-27"
+      },
+      "listedAt": "2026-10-07T13:35:04.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 181312,
+      "tmdb": 284053,
+      "slug": "thor-ragnarok-2017",
+      "year": 2017,
+      "released": "2017-10-02",
+      "traktTitle": "Thor: Ragnarok",
+      "details": {
+        "poster": "/22v9TpnY5doZg6muPKZTaHVmKmi.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "コメディ",
+          "サイエンスフィクション"
+        ],
+        "overview": "アベンジャーズの一員ソーの前に死の女神・ヘラが現れた。復讐と野望に燃えるヘラは、ソーの故郷へ攻撃をはじめる。故郷を奪われたソーは、この最強の敵を倒すため盟友ハルク、宿敵ロキらと型破りのチーム“リベンジャーズ”を組み極限バトルに挑む。 そこには、ソーの運命を変える秘密が隠されていた。",
+        "overviewLang": "ja",
+        "title": "マイティ・ソー バトルロイヤル",
+        "originalTitle": "Thor: Ragnarok",
+        "runtime": 131,
+        "releaseDate": "2017-10-02"
+      },
+      "listedAt": "2026-10-07T16:09:50.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 191797,
+      "tmdb": 299536,
+      "slug": "avengers-infinity-war-2018",
+      "year": 2018,
+      "released": "2018-04-25",
+      "traktTitle": "Avengers: Infinity War",
+      "details": {
+        "poster": "/4szrEPRLfw1iqk30tWywoL1uEqG.jpg",
+        "genres": [
+          "アドベンチャー",
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "overview": "宇宙において最凶・最悪の存在であるサノスが、自身の野望の実現に向けて立ち上がる。それは宇宙で生きている者の半分を葬り去り、“バランスの取れた宇宙”を実現するというもの。サノスはそのために、6つそろえればその野望を叶えることができる“インフィニティ・ストーン”を集め始める。サノスはまず、ソーとハルクが乗ったアスガルドの宇宙船を襲い、やがてドクター・ストレンジらがいる地球のニューヨークにも襲い掛かる。",
+        "overviewLang": "ja",
+        "title": "アベンジャーズ／インフィニティ・ウォー",
+        "originalTitle": "Avengers: Infinity War",
+        "runtime": 150,
+        "releaseDate": "2018-04-25"
+      },
+      "listedAt": "2026-10-07T13:41:50.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 191798,
+      "tmdb": 299534,
+      "slug": "avengers-endgame-2019",
+      "year": 2019,
+      "released": "2019-04-24",
+      "traktTitle": "Avengers: Endgame",
+      "details": {
+        "poster": "/uNWEDJzeH8VLHrs2iHkosYp2Y6W.jpg",
+        "genres": [
+          "アドベンチャー",
+          "サイエンスフィクション",
+          "アクション"
+        ],
+        "overview": "破格のメガヒットによって映画史を塗り替え続ける「アベンジャーズ」シリーズが、この春ついに完結。最凶最悪の敵\"サノス\"によって、人類の半分が消し去られ、最強チーム\"アベンジャーズ\"も崩壊してしまった。はたして失われた35億の人々と仲間を取り戻す方法はあるのか？ 大逆転へのわずかな希望を信じて再び集結したアイアンマン、キャプテン・アメリカ、ソーたちに残されたのは、最強の絆だけ──。\"今はここにいない\"仲間のために、最後にして最大の逆襲が始まる！",
+        "overviewLang": "ja",
+        "title": "アベンジャーズ／エンドゲーム",
+        "originalTitle": "Avengers: Endgame",
+        "runtime": 182,
+        "releaseDate": "2019-04-24"
+      },
+      "listedAt": "2026-10-07T13:42:14.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "drama",
+      "trakt": 146518,
+      "tmdb": 85271,
+      "slug": "wandavision",
+      "year": 2021,
+      "released": "2021-01-15",
+      "traktTitle": "WandaVision",
+      "details": {
+        "poster": "/lHe9I52U22xxWEa1b9Yb4CJBzwp.jpg",
+        "genres": [
+          "Sci-Fi & Fantasy",
+          "謎",
+          "ドラマ"
+        ],
+        "overview": "郊外で理想的な生活を送る超人カップルは、何かがおかしいと感じる。",
+        "overviewLang": "ja",
+        "title": "ワンダヴィジョン",
+        "originalTitle": "WandaVision",
+        "runtime": null,
+        "releaseDate": "2021-01-15",
+        "seasons": 1,
+        "episodes": 9
+      },
+      "listedAt": "2026-10-07T16:30:37.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 287071,
       "tmdb": 438631,
       "slug": "dune-2021",
@@ -2565,27 +2805,27 @@
     {
       "type": "movie",
       "kind": "movie",
-      "trakt": 474180,
-      "tmdb": 634649,
-      "slug": "spider-man-no-way-home-2021",
-      "year": 2021,
-      "released": "2021-12-15",
-      "traktTitle": "Spider-Man: No Way Home",
+      "trakt": 299910,
+      "tmdb": 453395,
+      "slug": "doctor-strange-in-the-multiverse-of-madness-2022",
+      "year": 2022,
+      "released": "2022-05-04",
+      "traktTitle": "Doctor Strange in the Multiverse of Madness",
       "details": {
-        "title": "スパイダーマン：ノー・ウェイ・ホーム",
-        "originalTitle": "Spider-Man: No Way Home",
-        "poster": "/j2vwjzuofol93OcSn8xAHJiTEoz.jpg",
+        "poster": "/uIBieATCKY8fnnCnDYoIffUMqP5.jpg",
         "genres": [
+          "ファンタジー",
           "アクション",
-          "アドベンチャー",
-          "サイエンスフィクション"
+          "アドベンチャー"
         ],
-        "runtime": 148,
-        "releaseDate": "2021-12-15",
-        "overview": "倒した敵の暴露により、世間から悪評を受けるスパイダーマン。自分の正体が知られていない世界に戻りたいと思うようになった彼は、友人のドクター・ストレンジに助けを求める。やがて魔法の力で、彼は違う世界線で2つの人生を同時に歩み始める",
-        "overviewLang": "ja"
+        "overview": "何もかもが変わりつつある世界を元に戻すため、ストレンジはかつてアベンジャーズを脅かすほど強大な力を見せたスカーレット・ウィッチことワンダに助けを求める。 しかし、もはや彼らの力だけではどうすることもできない恐るべき脅威が人類、そして全宇宙に迫っていた。 さらに驚くべきことに、その宇宙最大の脅威はドクター・ストレンジと全く同じ姿をしていて…。",
+        "overviewLang": "ja",
+        "title": "ドクター・ストレンジ/マルチバース・オブ・マッドネス",
+        "originalTitle": "Doctor Strange in the Multiverse of Madness",
+        "runtime": 126,
+        "releaseDate": "2022-05-04"
       },
-      "listedAt": "2026-10-05T03:00:54.000Z",
+      "listedAt": "2026-10-07T16:09:12.000Z",
       "rating": null
     },
     {
@@ -2715,6 +2955,33 @@
         "overviewLang": "ja"
       },
       "listedAt": "2026-10-05T03:04:51.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "drama",
+      "trakt": 199379,
+      "tmdb": 213375,
+      "slug": "visionquest",
+      "year": 2026,
+      "released": "2026-10-14",
+      "traktTitle": "VisionQuest",
+      "details": {
+        "poster": "/WGyAyBPncfuu8MZhLY9RtfZPM0.jpg",
+        "genres": [
+          "Sci-Fi & Fantasy",
+          "ドラマ"
+        ],
+        "overview": "再起動され、自分を兵器として利用しようとする者たちから逃れたヴィジョンは、身を隠して暮らしていた。自らの存在意義を見いだそうと、プログラムに組み込まれたＡＩ人格たちと対話を重ねる日々だが、ＡＩ人格の中には悪名高きウルトロンもいる。しかしそんな内省の日々はヴィジョンの首に懸賞金がかけられたことで終わりを告げ、ヴィジョンは自分の息子の生まれ変わりかもしれない謎の少年トーマス・シェパードとの逃亡生活を余儀なくされる。",
+        "overviewLang": "ja",
+        "title": "ヴィジョンクエスト",
+        "originalTitle": "VisionQuest",
+        "runtime": null,
+        "releaseDate": "2026-10-14",
+        "seasons": 1,
+        "episodes": 8
+      },
+      "listedAt": "2026-10-07T16:30:39.000Z",
       "rating": null
     }
   ]
