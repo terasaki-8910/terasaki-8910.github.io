@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-06T18:16:53.643Z",
+  "lastUpdated": "2026-10-07T05:42:11.949Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,7 +11,7 @@
       "appid": 688130,
       "name": "Pogostuck: Rage With Your Friends",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/688130/aec827f78ff4a1ad2c88b73473debb475c130494.jpg",
-      "playtime2weeksMinutes": 61,
+      "playtime2weeksMinutes": 26,
       "playtimeForeverMinutes": 2783
     }
   ],
@@ -503,7 +503,7 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 43.3
+          "percent": 43.2
         },
         {
           "name": "Kamura Amulet",
@@ -525,14 +525,14 @@
           "description": "Cause 1 fatal error or trigger 128 warnings in the editor.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
           "unlockedAt": "2026-09-06T13:52:37.000Z",
-          "percent": 33.2
+          "percent": 33.3
         },
         {
           "name": "Trying something new",
           "description": "Use 10 different wallpapers from the Workshop.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1c2250cab3953159e542b9ff4bd5be9ec75c9f61.jpg",
           "unlockedAt": "2025-07-20T08:13:17.000Z",
-          "percent": 83.7
+          "percent": 83.8
         }
       ]
     },
