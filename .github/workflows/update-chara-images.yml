@@ -25,7 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     # 488リクエストを1.1秒間隔で流すので既定の6時間には収まるが、
     # Danbooruが詰まったときに長時間占有しないよう明示的に切る。
-    timeout-minutes: 30
+    # 1008体に増えて全員の取り直しが約19分(487体で9分15秒)になったので、余裕を持たせる
+    timeout-minutes: 45
     permissions:
       contents: write
 
