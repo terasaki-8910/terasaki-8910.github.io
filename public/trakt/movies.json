@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T23:42:36.186Z",
+  "generatedAt": "2026-10-08T23:52:21.733Z",
   "user": "masatoT",
   "watched": [
     {
@@ -425,6 +425,35 @@
       "recordedOrder": 14495732465,
       "rating": 7,
       "ratedAt": "2026-10-05T04:28:46.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 439,
+      "tmdb": 558,
+      "slug": "spider-man-2-2004",
+      "year": 2004,
+      "released": "2004-06-25",
+      "traktTitle": "Spider-Man 2",
+      "details": {
+        "poster": "/i2iuWp4G5MGYdlhKqCsDQOm73o7.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "ニューヨーク。高校生ピーターはクモのようなパワーを持つ正義のヒーロー、スパイダーマンでもあるが、恋人グウェンの亡き父親と交わした“彼女を危険に巻き込まないよう別れる”という約束を果たせずに悩む。そのころ町では孤独な男性マックスが勝手に自分がスパイダーマンのパートナーだと思い込む一方、ピーターの旧友ハリーの父親が総帥を務める巨大企業“オズコープ”がなぜかずっとピーターを監視していた事実が分かる。",
+        "overviewLang": "ja",
+        "title": "スパイダーマン2",
+        "originalTitle": "Spider-Man 2",
+        "runtime": 127,
+        "releaseDate": "2004-06-25"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-08T06:47:00.000Z",
+      "recordedOrder": 14510659511,
+      "rating": 2,
+      "ratedAt": "2026-10-08T06:47:23.000Z"
     },
     {
       "type": "movie",
