@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-09T13:05:03.655Z",
+  "lastUpdated": "2026-10-09T22:32:55.704Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,8 +11,8 @@
       "appid": 2717220,
       "name": "雀魂 -じゃんたま-",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtime2weeksMinutes": 30,
-      "playtimeForeverMinutes": 30
+      "playtime2weeksMinutes": 149,
+      "playtimeForeverMinutes": 149
     },
     {
       "appid": 688130,
@@ -91,6 +91,12 @@
       "playtimeForeverMinutes": 157
     },
     {
+      "appid": 2717220,
+      "name": "Mahjong Soul",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
+      "playtimeForeverMinutes": 149
+    },
+    {
       "appid": 2584990,
       "name": "Shadowverse: Worlds Beyond",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2584990/c4e197c8e6dd7a1da1913a93178d4000ee22a73d.jpg",
@@ -113,12 +119,6 @@
       "name": "Red Dead Redemption 2",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1174180/5106abd9c1187a97f23295a0ba9470c94804ec6c.jpg",
       "playtimeForeverMinutes": 58
-    },
-    {
-      "appid": 2717220,
-      "name": "Mahjong Soul",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtimeForeverMinutes": 30
     },
     {
       "appid": 4000,
@@ -378,7 +378,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/7424038d40678f398eab78553f71d9832d778ff6.jpg",
           "unlockedAt": "2026-08-15T21:33:57.000Z",
-          "percent": 39.1
+          "percent": 39
         },
         {
           "name": "A Fair Day's Pay",
@@ -407,7 +407,7 @@
           "description": "Select a Standing Stone blessing",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/3a7e9d9c4f1142fdddbcc6988f23415d72d41ce0.jpg",
           "unlockedAt": "2025-10-10T12:22:18.000Z",
-          "percent": 62.2
+          "percent": 62.1
         },
         {
           "name": "Wanted",
@@ -421,7 +421,7 @@
           "description": "Reach Level 25",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/2162cee6a1a297e102e6ef7c5e60d936cbcc28a1.jpg",
           "unlockedAt": "2025-06-17T03:49:35.000Z",
-          "percent": 28.5
+          "percent": 28.4
         }
       ]
     },
@@ -479,7 +479,7 @@
           "description": "Caught 50 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/2308a9900f12b3cdf8bc7f1229bc4b2488a4fcb3.jpg",
           "unlockedAt": "2024-01-27T11:11:25.000Z",
-          "percent": 62.6
+          "percent": 62.5
         }
       ]
     },
@@ -501,14 +501,14 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
           "unlockedAt": "2026-09-12T08:21:27.000Z",
-          "percent": 71.7
+          "percent": 71.6
         },
         {
           "name": "Troll with the Punches",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/5c9e26c4941ae4fc98c6eaf3c023e3a18dc2df51.jpg",
           "unlockedAt": "2026-09-12T04:30:37.000Z",
-          "percent": 77.2
+          "percent": 77.1
         }
       ]
     },
@@ -523,14 +523,14 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 43.1
+          "percent": 43.2
         },
         {
           "name": "Kamura Amulet",
           "description": "A trinket given to new hunters who have proved themselves capable.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/01c4593add4173fdfdfcf8e50b6e99438c7895e8.jpg",
           "unlockedAt": "2023-07-11T08:07:02.000Z",
-          "percent": 86.9
+          "percent": 87
         }
       ]
     },
@@ -545,14 +545,14 @@
           "description": "Cause 1 fatal error or trigger 128 warnings in the editor.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
           "unlockedAt": "2026-09-06T13:52:37.000Z",
-          "percent": 33.3
+          "percent": 33.2
         },
         {
           "name": "Trying something new",
           "description": "Use 10 different wallpapers from the Workshop.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1c2250cab3953159e542b9ff4bd5be9ec75c9f61.jpg",
           "unlockedAt": "2025-07-20T08:13:17.000Z",
-          "percent": 83.8
+          "percent": 83.7
         }
       ]
     },
@@ -567,21 +567,21 @@
           "description": "Where's your face, dingus? Get your butt to the avatar creator and sort yourself out! Crying shame we can't fix that attitude of yours while we're at it.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/b2c3883e2cfd25d9477c7681714288cac23d4f76.jpg",
           "unlockedAt": "2026-03-23T15:27:32.000Z",
-          "percent": 81.9
+          "percent": 81.8
         },
         {
           "name": "Leaving the Nest",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/e846657465466eb560951885e9c9547d824d7ac4.jpg",
           "unlockedAt": "2026-03-23T15:27:32.000Z",
-          "percent": 58
+          "percent": 57.8
         },
         {
           "name": "My Title, My Life",
           "description": "Earned any titles for your efforts yet? Me? Pfft. I don't need a title. I'm Jamie freakin' Siu!",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1364780/0ea31f649ed4db04e0869390fc8038e936e40944.jpg",
           "unlockedAt": "2026-03-23T14:00:56.000Z",
-          "percent": 90.6
+          "percent": 90.5
         }
       ]
     }
