@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-10-09T12:15:24.080Z",
+  "lastUpdated": "2026-10-09T21:59:23.238Z",
   "tracks": [
+    {
+      "id": "0U6lmEhmRVptZAX7HrauqG",
+      "name": "Main Title",
+      "artist": "Danny Elfman",
+      "album": "Spider-Man (Original Motion Picture Score)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ab23e9dba2647c40e6b5feb5",
+      "playedAt": "2026-10-09T16:59:34.375Z",
+      "spotifyUrl": "https://open.spotify.com/track/0U6lmEhmRVptZAX7HrauqG",
+      "duration": 209906,
+      "previewUrl": ""
+    },
+    {
+      "id": "2LjozKhOvVNAsir4E4WnKK",
+      "name": "ハレ晴レユカイ",
+      "artist": "Aya Hirano, 茅原実里, 後藤邑子",
+      "album": "涼宮ハルヒの記憶",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27300b115712159698f127831f8",
+      "playedAt": "2026-10-09T12:23:44.014Z",
+      "spotifyUrl": "https://open.spotify.com/track/2LjozKhOvVNAsir4E4WnKK",
+      "duration": 217866,
+      "previewUrl": ""
+    },
+    {
+      "id": "1489XasC9uGNxGr3rXkLnX",
+      "name": "courage",
+      "artist": "Haruka Tomatsu",
+      "album": "courage",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321a782fcb80bca6f74c9bf24",
+      "playedAt": "2026-10-09T12:20:05.596Z",
+      "spotifyUrl": "https://open.spotify.com/track/1489XasC9uGNxGr3rXkLnX",
+      "duration": 253120,
+      "previewUrl": ""
+    },
+    {
+      "id": "61PZRoWepD1fWsww0qLqZe",
+      "name": "THE HERO !! ～怒れる拳に火をつけろ～",
+      "artist": "JAM Project",
+      "album": "AREA Z",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b0422a6616b048cb87c8ea26",
+      "playedAt": "2026-10-09T12:15:51.928Z",
+      "spotifyUrl": "https://open.spotify.com/track/61PZRoWepD1fWsww0qLqZe",
+      "duration": 229733,
+      "previewUrl": ""
+    },
     {
       "id": "6lpkzNkXnPgSkEOANO7nsD",
       "name": "Hacking to the Gate",
@@ -285,50 +329,6 @@
       "playedAt": "2026-10-09T01:26:50.180Z",
       "spotifyUrl": "https://open.spotify.com/track/5LChvDjlhPXmp1DhIfejxv",
       "duration": 184293,
-      "previewUrl": ""
-    },
-    {
-      "id": "2soMoQzD2HlsVmys7Se3Pq",
-      "name": "The Mandalorian and Grogu",
-      "artist": "Ludwig Göransson",
-      "album": "Star Wars: The Mandalorian and Grogu (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee087fe0797e9ac1b880a1c6",
-      "playedAt": "2026-10-09T01:23:45.424Z",
-      "spotifyUrl": "https://open.spotify.com/track/2soMoQzD2HlsVmys7Se3Pq",
-      "duration": 187221,
-      "previewUrl": ""
-    },
-    {
-      "id": "7Dh47mPzcB9Yn55RoL6Iqw",
-      "name": "Man of Steel - Flight",
-      "artist": "Mathias Fritsche",
-      "album": "Man of Steel - Flight",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eef8becc0c2e721bd0b2cb06",
-      "playedAt": "2026-10-09T01:14:33.966Z",
-      "spotifyUrl": "https://open.spotify.com/track/7Dh47mPzcB9Yn55RoL6Iqw",
-      "duration": 282000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4VnDmjYCZkyeqeb0NIKqdA",
-      "name": "Can You Hear The Music",
-      "artist": "Ludwig Göransson",
-      "album": "Oppenheimer (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af634982d9b15de3c77f7dd9",
-      "playedAt": "2026-10-09T01:10:59.820Z",
-      "spotifyUrl": "https://open.spotify.com/track/4VnDmjYCZkyeqeb0NIKqdA",
-      "duration": 110160,
-      "previewUrl": ""
-    },
-    {
-      "id": "1sMagdJx1dkLn9p5j3lf9k",
-      "name": "空中散歩",
-      "artist": "Joe Hisaishi",
-      "album": "ハウルの動く城 サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315e2471f4af3fe85e339b5d6",
-      "playedAt": "2026-10-09T01:08:20.351Z",
-      "spotifyUrl": "https://open.spotify.com/track/1sMagdJx1dkLn9p5j3lf9k",
-      "duration": 134800,
       "previewUrl": ""
     }
   ],
