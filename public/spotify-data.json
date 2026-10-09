@@ -1,15 +1,136 @@
 {
-  "lastUpdated": "2026-10-08T12:26:14.827Z",
+  "lastUpdated": "2026-10-09T03:35:12.745Z",
   "tracks": [
+    {
+      "id": "6LoV3sIPEFQj7wdY2YiwF1",
+      "name": "Blood Bag - Extended Version",
+      "artist": "Junkie XL",
+      "album": "Mad Max: Fury Road (Original Motion Picture Soundtrack) [Deluxe Version]",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27372c2f7f1612b97d7e2825c8b",
+      "playedAt": "2026-10-09T02:12:20.855Z",
+      "spotifyUrl": "https://open.spotify.com/track/6LoV3sIPEFQj7wdY2YiwF1",
+      "duration": 219500,
+      "previewUrl": ""
+    },
+    {
+      "id": "110uH4IxKOINJBWCy9J23k",
+      "name": "One Piece (1999) - Overtaken",
+      "artist": "Geek Music",
+      "album": "The Anime Collection Volume One",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
+      "playedAt": "2026-10-09T02:08:40.879Z",
+      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
+      "duration": 120212,
+      "previewUrl": ""
+    },
+    {
+      "id": "5pG8H6NpMISSR6fHfq701c",
+      "name": "Columbia Pictures - Cover Version",
+      "artist": "Cinescore",
+      "album": "The Film Studio Fanfare Collection",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
+      "playedAt": "2026-10-09T02:06:40.206Z",
+      "spotifyUrl": "https://open.spotify.com/track/5pG8H6NpMISSR6fHfq701c",
+      "duration": 24273,
+      "previewUrl": ""
+    },
+    {
+      "id": "587i4g5fwUDAdl5xTP7UtW",
+      "name": "Miserlou",
+      "artist": "Dick Dale & His Del-Tones",
+      "album": "Surfer's Choice",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273189c10c705d2967fc0f503f7",
+      "playedAt": "2026-10-09T02:06:15.462Z",
+      "spotifyUrl": "https://open.spotify.com/track/587i4g5fwUDAdl5xTP7UtW",
+      "duration": 137426,
+      "previewUrl": ""
+    },
+    {
+      "id": "1OrSkn4lXO1cD1NaR7v2IG",
+      "name": "Universal Fanfare",
+      "artist": "The Minions",
+      "album": "Minions (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732491486e0c8c1df2323c2541",
+      "playedAt": "2026-10-09T01:29:53.051Z",
+      "spotifyUrl": "https://open.spotify.com/track/1OrSkn4lXO1cD1NaR7v2IG",
+      "duration": 32417,
+      "previewUrl": ""
+    },
+    {
+      "id": "0PH3OkM1QnIyb44VhFVbca",
+      "name": "BATTLE WITHOUT HONOR OR HUMANITY",
+      "artist": "HOTEI",
+      "album": "エレクトリック・サムライ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738068e6b8fdaefa1f2a1543ea",
+      "playedAt": "2026-10-09T01:29:20.164Z",
+      "spotifyUrl": "https://open.spotify.com/track/0PH3OkM1QnIyb44VhFVbca",
+      "duration": 149520,
+      "previewUrl": ""
+    },
     {
       "id": "5LChvDjlhPXmp1DhIfejxv",
       "name": "スラッグ溪谷の朝",
       "artist": "Joe Hisaishi",
       "album": "天空の城ラピュタ サウンドトラック ～飛行石の謎～",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6bafda9334bda20e2e5e447",
-      "playedAt": "2026-10-08T11:09:48.608Z",
+      "playedAt": "2026-10-09T01:26:50.180Z",
       "spotifyUrl": "https://open.spotify.com/track/5LChvDjlhPXmp1DhIfejxv",
       "duration": 184293,
+      "previewUrl": ""
+    },
+    {
+      "id": "2soMoQzD2HlsVmys7Se3Pq",
+      "name": "The Mandalorian and Grogu",
+      "artist": "Ludwig Göransson",
+      "album": "Star Wars: The Mandalorian and Grogu (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee087fe0797e9ac1b880a1c6",
+      "playedAt": "2026-10-09T01:23:45.424Z",
+      "spotifyUrl": "https://open.spotify.com/track/2soMoQzD2HlsVmys7Se3Pq",
+      "duration": 187221,
+      "previewUrl": ""
+    },
+    {
+      "id": "7Dh47mPzcB9Yn55RoL6Iqw",
+      "name": "Man of Steel - Flight",
+      "artist": "Mathias Fritsche",
+      "album": "Man of Steel - Flight",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eef8becc0c2e721bd0b2cb06",
+      "playedAt": "2026-10-09T01:14:33.966Z",
+      "spotifyUrl": "https://open.spotify.com/track/7Dh47mPzcB9Yn55RoL6Iqw",
+      "duration": 282000,
+      "previewUrl": ""
+    },
+    {
+      "id": "4VnDmjYCZkyeqeb0NIKqdA",
+      "name": "Can You Hear The Music",
+      "artist": "Ludwig Göransson",
+      "album": "Oppenheimer (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af634982d9b15de3c77f7dd9",
+      "playedAt": "2026-10-09T01:10:59.820Z",
+      "spotifyUrl": "https://open.spotify.com/track/4VnDmjYCZkyeqeb0NIKqdA",
+      "duration": 110160,
+      "previewUrl": ""
+    },
+    {
+      "id": "1sMagdJx1dkLn9p5j3lf9k",
+      "name": "空中散歩",
+      "artist": "Joe Hisaishi",
+      "album": "ハウルの動く城 サウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315e2471f4af3fe85e339b5d6",
+      "playedAt": "2026-10-09T01:08:20.351Z",
+      "spotifyUrl": "https://open.spotify.com/track/1sMagdJx1dkLn9p5j3lf9k",
+      "duration": 134800,
+      "previewUrl": ""
+    },
+    {
+      "id": "0U6lmEhmRVptZAX7HrauqG",
+      "name": "Main Title",
+      "artist": "Danny Elfman",
+      "album": "Spider-Man (Original Motion Picture Score)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ab23e9dba2647c40e6b5feb5",
+      "playedAt": "2026-10-09T01:07:43.097Z",
+      "spotifyUrl": "https://open.spotify.com/track/0U6lmEhmRVptZAX7HrauqG",
+      "duration": 209906,
       "previewUrl": ""
     },
     {
@@ -24,39 +145,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7Dh47mPzcB9Yn55RoL6Iqw",
-      "name": "Man of Steel - Flight",
-      "artist": "Mathias Fritsche",
-      "album": "Man of Steel - Flight",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eef8becc0c2e721bd0b2cb06",
-      "playedAt": "2026-10-08T10:03:24.496Z",
-      "spotifyUrl": "https://open.spotify.com/track/7Dh47mPzcB9Yn55RoL6Iqw",
-      "duration": 282000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2soMoQzD2HlsVmys7Se3Pq",
-      "name": "The Mandalorian and Grogu",
-      "artist": "Ludwig Göransson",
-      "album": "Star Wars: The Mandalorian and Grogu (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee087fe0797e9ac1b880a1c6",
-      "playedAt": "2026-10-08T09:57:45.449Z",
-      "spotifyUrl": "https://open.spotify.com/track/2soMoQzD2HlsVmys7Se3Pq",
-      "duration": 187221,
-      "previewUrl": ""
-    },
-    {
-      "id": "4VnDmjYCZkyeqeb0NIKqdA",
-      "name": "Can You Hear The Music",
-      "artist": "Ludwig Göransson",
-      "album": "Oppenheimer (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af634982d9b15de3c77f7dd9",
-      "playedAt": "2026-10-08T09:54:37.701Z",
-      "spotifyUrl": "https://open.spotify.com/track/4VnDmjYCZkyeqeb0NIKqdA",
-      "duration": 110160,
-      "previewUrl": ""
-    },
-    {
       "id": "4LlCnZLrF6Ri7bK5gwrpG5",
       "name": "呪われた海賊たち",
       "artist": "Antoine Barry",
@@ -65,39 +153,6 @@
       "playedAt": "2026-10-08T08:34:21.302Z",
       "spotifyUrl": "https://open.spotify.com/track/4LlCnZLrF6Ri7bK5gwrpG5",
       "duration": 94418,
-      "previewUrl": ""
-    },
-    {
-      "id": "1OrSkn4lXO1cD1NaR7v2IG",
-      "name": "Universal Fanfare",
-      "artist": "The Minions",
-      "album": "Minions (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732491486e0c8c1df2323c2541",
-      "playedAt": "2026-10-08T08:32:46.415Z",
-      "spotifyUrl": "https://open.spotify.com/track/1OrSkn4lXO1cD1NaR7v2IG",
-      "duration": 32417,
-      "previewUrl": ""
-    },
-    {
-      "id": "110uH4IxKOINJBWCy9J23k",
-      "name": "One Piece (1999) - Overtaken",
-      "artist": "Geek Music",
-      "album": "The Anime Collection Volume One",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
-      "playedAt": "2026-10-08T08:28:17.220Z",
-      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
-      "duration": 120212,
-      "previewUrl": ""
-    },
-    {
-      "id": "5pG8H6NpMISSR6fHfq701c",
-      "name": "Columbia Pictures - Cover Version",
-      "artist": "Cinescore",
-      "album": "The Film Studio Fanfare Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
-      "playedAt": "2026-10-08T08:16:00.016Z",
-      "spotifyUrl": "https://open.spotify.com/track/5pG8H6NpMISSR6fHfq701c",
-      "duration": 24273,
       "previewUrl": ""
     },
     {
@@ -274,61 +329,6 @@
       "playedAt": "2026-10-08T03:52:43.036Z",
       "spotifyUrl": "https://open.spotify.com/track/3txqYlzoDZGLoW8MGll9tQ",
       "duration": 225493,
-      "previewUrl": ""
-    },
-    {
-      "id": "1hyuVqyPEuUTjulIemtRft",
-      "name": "熱情のスペクトラム",
-      "artist": "Ikimonogakari",
-      "album": "FUN! FUN! FANFARE!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739b9a817af4096c3bdd01ff55",
-      "playedAt": "2026-10-08T03:48:57.037Z",
-      "spotifyUrl": "https://open.spotify.com/track/1hyuVqyPEuUTjulIemtRft",
-      "duration": 224520,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zs4EN2bPqsDLk0YtPwus3",
-      "name": "心予報",
-      "artist": "Eve",
-      "album": "心予報",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273731dd7eafee4d6e06d328583",
-      "playedAt": "2026-10-08T03:45:12.033Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zs4EN2bPqsDLk0YtPwus3",
-      "duration": 199995,
-      "previewUrl": ""
-    },
-    {
-      "id": "4OQq1bcP12GQQXJNupxqfR",
-      "name": "again",
-      "artist": "YUI",
-      "album": "HOLIDAYS IN THE SUN",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fdec3ee19da7cd9b1b02ca9c",
-      "playedAt": "2026-10-08T03:41:43.631Z",
-      "spotifyUrl": "https://open.spotify.com/track/4OQq1bcP12GQQXJNupxqfR",
-      "duration": 254346,
-      "previewUrl": ""
-    },
-    {
-      "id": "38FcQO2ta2pScW2sriQI2x",
-      "name": "Watch Me",
-      "artist": "天乃リリサ(CV: 前田佳織里), 橘 美花莉(CV: 鬼頭明里)",
-      "album": "Watch Me",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732ec1f3dd232589d74641b437",
-      "playedAt": "2026-10-08T03:37:28.707Z",
-      "spotifyUrl": "https://open.spotify.com/track/38FcQO2ta2pScW2sriQI2x",
-      "duration": 207813,
-      "previewUrl": ""
-    },
-    {
-      "id": "4zrKN5Sv8JS5mqnbVcsul7",
-      "name": "Celestial",
-      "artist": "Ed Sheeran",
-      "album": "Celestial",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735a4c27131ef5cf3f48f50805",
-      "playedAt": "2026-10-08T03:34:00.264Z",
-      "spotifyUrl": "https://open.spotify.com/track/4zrKN5Sv8JS5mqnbVcsul7",
-      "duration": 209026,
       "previewUrl": ""
     }
   ],
