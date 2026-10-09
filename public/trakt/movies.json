@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T23:52:21.733Z",
+  "generatedAt": "2026-10-09T23:25:50.024Z",
   "user": "masatoT",
   "watched": [
     {
@@ -629,6 +629,35 @@
       "recordedOrder": 14495350225,
       "rating": 10,
       "ratedAt": "2026-10-05T01:37:55.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 440,
+      "tmdb": 559,
+      "slug": "spider-man-3-2007",
+      "year": 2007,
+      "released": "2007-05-01",
+      "traktTitle": "Spider-Man 3",
+      "details": {
+        "poster": "/fzJD3sp3ypU9YuSOnNn3WQsoXVr.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "ニューヨーク。今やニューヨークのアイコンとして、市民に愛される存在となったスパイダーマン。その正体であるピーター・パーカーも学業の傍らで愛するメリー・ジェーン・ワトソン（MJ）との交際を続け、順風満帆な日々を過ごしていた。MJも女優としての活動を続けており、ついに念願のブロードウェイ・デビューを果たすまでに。ピーターはMJへのプロポーズを決意し、メイおばさんにその事を打ち明けた。「MJを幸せにする」と言うピーターに、おばさんは亡きベンおじさんがくれた婚約指輪をそっと託すのだった。",
+        "overviewLang": "ja",
+        "title": "スパイダーマン3",
+        "originalTitle": "Spider-Man 3",
+        "runtime": 139,
+        "releaseDate": "2007-05-01"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-09T15:07:00.000Z",
+      "recordedOrder": 14515003427,
+      "rating": 7,
+      "ratedAt": "2026-10-09T15:07:26.000Z"
     },
     {
       "type": "movie",
@@ -1383,6 +1412,34 @@
       "recordedOrder": 14495394473,
       "rating": 8,
       "ratedAt": "2026-10-05T01:55:43.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 128287,
+      "tmdb": 206487,
+      "slug": "predestination-2014",
+      "year": 2014,
+      "released": "2014-08-28",
+      "traktTitle": "Predestination",
+      "details": {
+        "poster": "/hWevVmO1kNPbxCrhEQYn0zUgcLp.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "スリラー"
+        ],
+        "overview": "1970年11月6日。ニューヨークは連続爆弾魔フィズル・ボマーの脅威にさらされていた。青年ジョンは場末のバーのバーテンダーに、女の子として生まれ孤児院で育ち、18歳の時に流れ者の男と恋に落ち子供を授かるが相手は蒸発、生まれた子は誘拐され行方知れずになってしまい、出産時に命の危機にさらされ男性となったという驚くべき身の上話をする。",
+        "overviewLang": "ja",
+        "title": "プリデスティネーション",
+        "originalTitle": "Predestination",
+        "runtime": 98,
+        "releaseDate": "2014-08-28"
+      },
+      "plays": 1,
+      "lastWatchedAt": null,
+      "recordedOrder": 14515283099,
+      "rating": 8,
+      "ratedAt": "2026-10-09T17:10:40.000Z"
     },
     {
       "type": "movie",
