@@ -1,6 +1,94 @@
 {
-  "lastUpdated": "2026-10-09T21:59:23.238Z",
+  "lastUpdated": "2026-10-10T03:16:08.157Z",
   "tracks": [
+    {
+      "id": "0GWNtMohuYUEHVZ40tcnHF",
+      "name": "SPECIALZ",
+      "artist": "King Gnu",
+      "album": "SPECIALZ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734ad6e7ba87518d193e08e578",
+      "playedAt": "2026-10-10T03:11:29.631Z",
+      "spotifyUrl": "https://open.spotify.com/track/0GWNtMohuYUEHVZ40tcnHF",
+      "duration": 238986,
+      "previewUrl": ""
+    },
+    {
+      "id": "4rPmTBTX1wobDkGYXKvcGR",
+      "name": "secret base ～君がくれたもの～ (10 years after Ver.)",
+      "artist": "本間芽衣子（CV.茅野愛衣）, 安城鳴子（CV.戸松 遥）, 鶴見知利子（CV.早見沙織）",
+      "album": "secret base ～君がくれたもの～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730267461fc0a66551d454fa22",
+      "playedAt": "2026-10-10T03:07:30.170Z",
+      "spotifyUrl": "https://open.spotify.com/track/4rPmTBTX1wobDkGYXKvcGR",
+      "duration": 352493,
+      "previewUrl": ""
+    },
+    {
+      "id": "2qEIVphvwMEkE35CXxdWAT",
+      "name": "Deal with the devil",
+      "artist": "Tia",
+      "album": "Deal with the devil",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738dfe4f03c7039b0717be5292",
+      "playedAt": "2026-10-10T03:00:00.573Z",
+      "spotifyUrl": "https://open.spotify.com/track/2qEIVphvwMEkE35CXxdWAT",
+      "duration": 282546,
+      "previewUrl": ""
+    },
+    {
+      "id": "13saEo7ciOYh6nUGrC79cx",
+      "name": "言わないけどね。",
+      "artist": "大原ゆい子",
+      "album": "星に名前をつけるとき",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27398a593a376031c1e7a64cb0f",
+      "playedAt": "2026-10-10T02:55:17.544Z",
+      "spotifyUrl": "https://open.spotify.com/track/13saEo7ciOYh6nUGrC79cx",
+      "duration": 272986,
+      "previewUrl": ""
+    },
+    {
+      "id": "1X7VQFZ23MgWshmLHYFRsZ",
+      "name": "勝手にシンドバッド",
+      "artist": "サザンオールスターズ",
+      "album": "勝手にシンドバッド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
+      "playedAt": "2026-10-10T02:50:47.241Z",
+      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
+      "duration": 237133,
+      "previewUrl": ""
+    },
+    {
+      "id": "6nYezkgAePhAmnxNTQRsLV",
+      "name": "PAKU",
+      "artist": "asmi",
+      "album": "PAKU",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273185f2c27972171fa2e88bca4",
+      "playedAt": "2026-10-10T02:29:32.606Z",
+      "spotifyUrl": "https://open.spotify.com/track/6nYezkgAePhAmnxNTQRsLV",
+      "duration": 125771,
+      "previewUrl": ""
+    },
+    {
+      "id": "6pllZAdgBf4QTcFUrF3DzL",
+      "name": "喜劇",
+      "artist": "Gen Hoshino",
+      "album": "喜劇",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e76ce8200edae0e2b1316393",
+      "playedAt": "2026-10-10T02:27:26.316Z",
+      "spotifyUrl": "https://open.spotify.com/track/6pllZAdgBf4QTcFUrF3DzL",
+      "duration": 230666,
+      "previewUrl": ""
+    },
+    {
+      "id": "5Olqp0fKkKQtu73jTtnPzC",
+      "name": "ウェカピポ",
+      "artist": "SOUL'd OUT",
+      "album": "SOUL'd OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273288fac96cc3e1e55d31143c6",
+      "playedAt": "2026-10-10T02:23:35.125Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Olqp0fKkKQtu73jTtnPzC",
+      "duration": 250760,
+      "previewUrl": ""
+    },
     {
       "id": "0U6lmEhmRVptZAX7HrauqG",
       "name": "Main Title",
@@ -123,17 +211,6 @@
       "previewUrl": ""
     },
     {
-      "id": "5Olqp0fKkKQtu73jTtnPzC",
-      "name": "ウェカピポ",
-      "artist": "SOUL'd OUT",
-      "album": "SOUL'd OUT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273288fac96cc3e1e55d31143c6",
-      "playedAt": "2026-10-09T11:40:58.096Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Olqp0fKkKQtu73jTtnPzC",
-      "duration": 250760,
-      "previewUrl": ""
-    },
-    {
       "id": "5OQIvZoUPvfQq02tITKjQZ",
       "name": "水流のロック",
       "artist": "Natsuko Nisshoku",
@@ -252,83 +329,6 @@
       "playedAt": "2026-10-09T04:10:46.374Z",
       "spotifyUrl": "https://open.spotify.com/track/3LHswlNzBFF9dBnIDyeB2Q",
       "duration": 214706,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LoV3sIPEFQj7wdY2YiwF1",
-      "name": "Blood Bag - Extended Version",
-      "artist": "Junkie XL",
-      "album": "Mad Max: Fury Road (Original Motion Picture Soundtrack) [Deluxe Version]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27372c2f7f1612b97d7e2825c8b",
-      "playedAt": "2026-10-09T02:12:20.855Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LoV3sIPEFQj7wdY2YiwF1",
-      "duration": 219500,
-      "previewUrl": ""
-    },
-    {
-      "id": "110uH4IxKOINJBWCy9J23k",
-      "name": "One Piece (1999) - Overtaken",
-      "artist": "Geek Music",
-      "album": "The Anime Collection Volume One",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
-      "playedAt": "2026-10-09T02:08:40.879Z",
-      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
-      "duration": 120212,
-      "previewUrl": ""
-    },
-    {
-      "id": "5pG8H6NpMISSR6fHfq701c",
-      "name": "Columbia Pictures - Cover Version",
-      "artist": "Cinescore",
-      "album": "The Film Studio Fanfare Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
-      "playedAt": "2026-10-09T02:06:40.206Z",
-      "spotifyUrl": "https://open.spotify.com/track/5pG8H6NpMISSR6fHfq701c",
-      "duration": 24273,
-      "previewUrl": ""
-    },
-    {
-      "id": "587i4g5fwUDAdl5xTP7UtW",
-      "name": "Miserlou",
-      "artist": "Dick Dale & His Del-Tones",
-      "album": "Surfer's Choice",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273189c10c705d2967fc0f503f7",
-      "playedAt": "2026-10-09T02:06:15.462Z",
-      "spotifyUrl": "https://open.spotify.com/track/587i4g5fwUDAdl5xTP7UtW",
-      "duration": 137426,
-      "previewUrl": ""
-    },
-    {
-      "id": "1OrSkn4lXO1cD1NaR7v2IG",
-      "name": "Universal Fanfare",
-      "artist": "The Minions",
-      "album": "Minions (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732491486e0c8c1df2323c2541",
-      "playedAt": "2026-10-09T01:29:53.051Z",
-      "spotifyUrl": "https://open.spotify.com/track/1OrSkn4lXO1cD1NaR7v2IG",
-      "duration": 32417,
-      "previewUrl": ""
-    },
-    {
-      "id": "0PH3OkM1QnIyb44VhFVbca",
-      "name": "BATTLE WITHOUT HONOR OR HUMANITY",
-      "artist": "HOTEI",
-      "album": "エレクトリック・サムライ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738068e6b8fdaefa1f2a1543ea",
-      "playedAt": "2026-10-09T01:29:20.164Z",
-      "spotifyUrl": "https://open.spotify.com/track/0PH3OkM1QnIyb44VhFVbca",
-      "duration": 149520,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LChvDjlhPXmp1DhIfejxv",
-      "name": "スラッグ溪谷の朝",
-      "artist": "Joe Hisaishi",
-      "album": "天空の城ラピュタ サウンドトラック ～飛行石の謎～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6bafda9334bda20e2e5e447",
-      "playedAt": "2026-10-09T01:26:50.180Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LChvDjlhPXmp1DhIfejxv",
-      "duration": 184293,
       "previewUrl": ""
     }
   ],
