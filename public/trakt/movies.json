@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T23:25:50.024Z",
+  "generatedAt": "2026-10-10T22:51:59.756Z",
   "user": "masatoT",
   "watched": [
     {
@@ -1093,6 +1093,35 @@
       "recordedOrder": 14496709013,
       "rating": 9,
       "ratedAt": "2026-10-05T13:31:21.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 1302,
+      "tmdb": 1930,
+      "slug": "the-amazing-spider-man-2012",
+      "year": 2012,
+      "released": "2012-06-23",
+      "traktTitle": "The Amazing Spider-Man",
+      "details": {
+        "poster": "/veQXQ8knv53CjQNW5Rj6vExSmJ4.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "両親を亡くし叔父のベンと叔母のメイの許で育てられたピーターは、ある日自分の父親が残したバッグに隠された資料をみつける。父について知りたいピーターは父の研究者仲間だったコナーズ博士に近づき博士の授業に参加する。しかし単独で行動し侵入した部屋で遺伝子の組みかえられたクモに刺され、博士の下で勉強している同級生のグウェンに追い出される。その帰りの電車の中でピーターは驚異的な力に目覚める。",
+        "overviewLang": "ja",
+        "title": "アメイジング・スパイダーマン",
+        "originalTitle": "The Amazing Spider-Man",
+        "runtime": 136,
+        "releaseDate": "2012-06-23"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-10T12:28:00.000Z",
+      "recordedOrder": 14518008847,
+      "rating": 8,
+      "ratedAt": "2026-10-10T12:28:38.000Z"
     },
     {
       "type": "movie",
