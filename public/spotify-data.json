@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-10-10T11:33:10.104Z",
+  "lastUpdated": "2026-10-10T16:33:38.639Z",
   "tracks": [
+    {
+      "id": "3virU2iQJXEfkHUAnOcmxt",
+      "name": "Glossy:MMM",
+      "artist": "Miyuki Hashimoto",
+      "album": "『咲-Saki-』Best Album ～Anthology～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730d1b6f4c56aded0cb66295b2",
+      "playedAt": "2026-10-10T12:52:59.971Z",
+      "spotifyUrl": "https://open.spotify.com/track/3virU2iQJXEfkHUAnOcmxt",
+      "duration": 254560,
+      "previewUrl": ""
+    },
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-10-10T12:49:32.326Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "6V53UDIOvJ8QNjRAQmvQQn",
+      "name": "Attack of the Killer Queen",
+      "artist": "Toby Fox, Lena Raine, Marcy Nabors",
+      "album": "DELTARUNE Chapter 2 (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e14fd3669881ed569497a76",
+      "playedAt": "2026-10-10T12:46:37.417Z",
+      "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
+      "duration": 120000,
+      "previewUrl": ""
+    },
+    {
+      "id": "3iKJWOQJtENE3kFWMXh8JM",
+      "name": "私以外私じゃないの",
+      "artist": "Gesu No Kiwami Otome",
+      "album": "両成敗",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8a4036d02f2af9b21bdc1f1",
+      "playedAt": "2026-10-10T12:44:22.350Z",
+      "spotifyUrl": "https://open.spotify.com/track/3iKJWOQJtENE3kFWMXh8JM",
+      "duration": 232613,
+      "previewUrl": ""
+    },
     {
       "id": "7K5JipRH1NKt04HE2nwZVJ",
       "name": "ユリーカ",
@@ -10,17 +54,6 @@
       "playedAt": "2026-10-10T10:21:05.076Z",
       "spotifyUrl": "https://open.spotify.com/track/7K5JipRH1NKt04HE2nwZVJ",
       "duration": 233933,
-      "previewUrl": ""
-    },
-    {
-      "id": "3virU2iQJXEfkHUAnOcmxt",
-      "name": "Glossy:MMM",
-      "artist": "Miyuki Hashimoto",
-      "album": "『咲-Saki-』Best Album ～Anthology～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730d1b6f4c56aded0cb66295b2",
-      "playedAt": "2026-10-10T10:12:42.864Z",
-      "spotifyUrl": "https://open.spotify.com/track/3virU2iQJXEfkHUAnOcmxt",
-      "duration": 254560,
       "previewUrl": ""
     },
     {
@@ -296,39 +329,6 @@
       "playedAt": "2026-10-10T03:07:30.170Z",
       "spotifyUrl": "https://open.spotify.com/track/4rPmTBTX1wobDkGYXKvcGR",
       "duration": 352493,
-      "previewUrl": ""
-    },
-    {
-      "id": "2qEIVphvwMEkE35CXxdWAT",
-      "name": "Deal with the devil",
-      "artist": "Tia",
-      "album": "Deal with the devil",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738dfe4f03c7039b0717be5292",
-      "playedAt": "2026-10-10T03:00:00.573Z",
-      "spotifyUrl": "https://open.spotify.com/track/2qEIVphvwMEkE35CXxdWAT",
-      "duration": 282546,
-      "previewUrl": ""
-    },
-    {
-      "id": "13saEo7ciOYh6nUGrC79cx",
-      "name": "言わないけどね。",
-      "artist": "大原ゆい子",
-      "album": "星に名前をつけるとき",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27398a593a376031c1e7a64cb0f",
-      "playedAt": "2026-10-10T02:55:17.544Z",
-      "spotifyUrl": "https://open.spotify.com/track/13saEo7ciOYh6nUGrC79cx",
-      "duration": 272986,
-      "previewUrl": ""
-    },
-    {
-      "id": "1X7VQFZ23MgWshmLHYFRsZ",
-      "name": "勝手にシンドバッド",
-      "artist": "サザンオールスターズ",
-      "album": "勝手にシンドバッド",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
-      "playedAt": "2026-10-10T02:50:47.241Z",
-      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
-      "duration": 237133,
       "previewUrl": ""
     }
   ],
