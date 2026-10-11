@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-11T12:37:25.819Z",
+  "lastUpdated": "2026-10-11T21:46:28.207Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -407,21 +407,21 @@
           "description": "Select a Standing Stone blessing",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/3a7e9d9c4f1142fdddbcc6988f23415d72d41ce0.jpg",
           "unlockedAt": "2025-10-10T12:22:18.000Z",
-          "percent": 62.2
+          "percent": 62
         },
         {
           "name": "Wanted",
           "description": "Escape from jail",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/9fa4e8043c60916d3714fa96fa8eb9bd46901c22.jpg",
           "unlockedAt": "2025-06-17T03:57:02.000Z",
-          "percent": 8.9
+          "percent": 8.8
         },
         {
           "name": "Expert",
           "description": "Reach Level 25",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/2162cee6a1a297e102e6ef7c5e60d936cbcc28a1.jpg",
           "unlockedAt": "2025-06-17T03:49:35.000Z",
-          "percent": 28.5
+          "percent": 28.3
         }
       ]
     },
