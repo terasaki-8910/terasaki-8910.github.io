@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T22:51:59.756Z",
+  "generatedAt": "2026-10-11T23:05:45.727Z",
   "user": "masatoT",
   "watched": [
     {
@@ -981,6 +981,37 @@
       "ratedAt": "2026-10-05T02:54:21.000Z"
     },
     {
+      "type": "show",
+      "kind": "drama",
+      "trakt": 1393,
+      "tmdb": 1402,
+      "slug": "the-walking-dead",
+      "year": 2010,
+      "released": "2010-10-31",
+      "traktTitle": "The Walking Dead",
+      "details": {
+        "poster": "/oc09SywjXI331Y6ep8LIq8SIuqV.jpg",
+        "genres": [
+          "Action & Adventure",
+          "ドラマ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "ある日死者が次々と蘇り、死者に噛まれると死に至りゾンビとなってしまう現象が世界で大量発生した未来が舞台である。生き残った人々は成すすべも無くただ社会文明が崩壊してくなか、必死に生きていく。元保安官リックとその家族もまた生き残るための戦いを続けていく。",
+        "overviewLang": "ja",
+        "title": "ウォーキング・デッド",
+        "originalTitle": "The Walking Dead",
+        "runtime": null,
+        "releaseDate": "2010-10-31",
+        "seasons": 11,
+        "episodes": 177
+      },
+      "plays": 9,
+      "lastWatchedAt": "2026-10-11T12:01:00.000Z",
+      "recordedOrder": null,
+      "rating": null,
+      "ratedAt": null
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 5408,
@@ -1093,6 +1124,35 @@
       "recordedOrder": 14496709013,
       "rating": 9,
       "ratedAt": "2026-10-05T13:31:21.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 14701,
+      "tmdb": 24428,
+      "slug": "the-avengers-2012",
+      "year": 2012,
+      "released": "2012-04-25",
+      "traktTitle": "The Avengers",
+      "details": {
+        "poster": "/l1SWn7SdwvAowNfC4ojV2B9LDgs.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "アクション",
+          "アドベンチャー"
+        ],
+        "overview": "人知を超えた悪によってひそかに進められる地球壊滅の陰謀。それを食い止めるべく、大富豪で天才発明家アイアンマン、神々の国から地球ヘと追放された雷神ソー、感情の爆発によって容姿を激変させる科学者ハルクなどを集めた部隊アベンジャーズが結成される。しかし、各々が抱えているつらい過去や苦悩が浮き上がっては衝突し合うようになり、人類史上最大の危機に立ち向かうチームとしての機能が消失しかけていた。＜アイアンマン、ソー、ハルク、キャプテン・アメリカなど、世界的に有名なヒット作の主人公が一堂に顔を合わせるアクション大作。特殊な戦闘力を誇る者たちによって編成されたチーム「アベンジャーズ」が、地球滅亡の危機を回避する戦いに身を投じる。＞",
+        "overviewLang": "ja",
+        "title": "アベンジャーズ",
+        "originalTitle": "The Avengers",
+        "runtime": 144,
+        "releaseDate": "2012-04-25"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-11T04:47:00.000Z",
+      "recordedOrder": 14520597480,
+      "rating": 8,
+      "ratedAt": "2026-10-11T04:47:37.000Z"
     },
     {
       "type": "movie",
@@ -1213,6 +1273,35 @@
       "recordedOrder": 14495523029,
       "rating": 6,
       "ratedAt": "2026-10-05T02:49:22.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 50134,
+      "tmdb": 68721,
+      "slug": "iron-man-3-2013",
+      "year": 2013,
+      "released": "2013-04-18",
+      "traktTitle": "Iron Man 3",
+      "details": {
+        "poster": "/cipMgzDMOSXygrXyCXVahNGQ1SK.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "スーパーヒーローで編成された部隊アベンジャーズの一員として戦い、地球と人類を滅亡の危機から救ったアイアンマンことトニー・スターク。だが、アメリカ政府はスーパーヒーローが国の防衛を担うことを危険視するようになり、それを契機に彼はアイアンマンの新型スーツを開発することに没頭していく。そんな中、正体不明の敵によってスターク邸が破壊され、これまでのアイアンマンが全て爆破されてしまう。何もかも失ったスタークだが、人並み外れた頭脳を武器に孤独な戦いに挑む。",
+        "overviewLang": "ja",
+        "title": "アイアンマン3",
+        "originalTitle": "Iron Man 3",
+        "runtime": 133,
+        "releaseDate": "2013-04-18"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-11T11:53:00.000Z",
+      "recordedOrder": 14521487957,
+      "rating": 8,
+      "ratedAt": "2026-10-11T11:54:02.000Z"
     },
     {
       "type": "movie",
@@ -2655,6 +2744,32 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 5706,
+      "tmdb": 10528,
+      "slug": "sherlock-holmes-2009",
+      "year": 2009,
+      "released": "2009-12-23",
+      "traktTitle": "Sherlock Holmes",
+      "details": {
+        "poster": "/xGrQtzfAtgzkmaum6j6OsbfkQJC.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "謎"
+        ],
+        "overview": "1891年のロンドン。若い女性が次々と誘拐され、儀式を思わせる不気味な手口で殺されてしまう。私立探偵ホームズと相棒ワトソンはスコットランド・ヤードと連携し、邪悪な黒魔術を操る犯人、ブラックウッド卿を逮捕。だがブラックウッド卿は死刑の直前、すぐに復活すると言い残す。その後ブラックウッド卿が甦ったとの報せがホームズたちに届いたのに続き、世界征服をめざすブラックウッド卿は、ある秘密組織を乗っ取っていた。",
+        "overviewLang": "ja",
+        "title": "シャーロック・ホームズ",
+        "originalTitle": "Sherlock Holmes",
+        "runtime": 129,
+        "releaseDate": "2009-12-23"
+      },
+      "listedAt": "2026-10-11T12:35:25.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 42897,
       "tmdb": 59967,
       "slug": "looper-2012",
@@ -2710,6 +2825,32 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 72297,
+      "tmdb": 100402,
+      "slug": "captain-america-the-winter-soldier-2014",
+      "year": 2014,
+      "released": "2014-03-20",
+      "traktTitle": "Captain America: The Winter Soldier",
+      "details": {
+        "poster": "/npB83Gapjes4zsDMgeaMOp8xOgy.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "アベンジャーズのメンバーとして戦ってから2年、キャプテン・アメリカはS.H.I.E.L.D.の一員として活動していた。ある日、キャプテン・アメリカとブラック・ウィドウを世界屈指の暗殺者ウィンター・ソルジャーが襲撃。さらにウィンター・ソルジャーの正体は、キャプテン・アメリカの親友で第2次世界大戦で亡くなったバッキー・バーンズで……。",
+        "overviewLang": "ja",
+        "title": "キャプテン・アメリカ／ウィンター・ソルジャー",
+        "originalTitle": "Captain America: The Winter Soldier",
+        "runtime": 136,
+        "releaseDate": "2014-03-20"
+      },
+      "listedAt": "2026-10-11T11:55:24.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 123707,
       "tmdb": 198184,
       "slug": "chappie-2015",
@@ -2757,6 +2898,32 @@
         "releaseDate": "2015-04-22"
       },
       "listedAt": "2026-10-07T13:42:01.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 73582,
+      "tmdb": 102899,
+      "slug": "ant-man-2015",
+      "year": 2015,
+      "released": "2015-07-14",
+      "traktTitle": "Ant-Man",
+      "details": {
+        "poster": "/7aqgrZYaRVCVsn11B6dXmxiXprn.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "アドベンチャー",
+          "アクション"
+        ],
+        "overview": "仕事や人間関係がうまくいかず、頑張ろうとすればするほど空回りしてしまうスコット・ラング。別れた妻が引き取った娘の養育費も用意することができず、人生の崖っぷちに立たされた彼のもとにある仕事が舞い込んでくる。それは肉体をわずか1.5センチに縮小できる特殊なスーツをまとい、正義の味方アントマンになるというものだった。スーツを着用した彼は、ヒーローとして活躍するために過酷なトレーニングを重ねていく。",
+        "overviewLang": "ja",
+        "title": "アントマン",
+        "originalTitle": "Ant-Man",
+        "runtime": 117,
+        "releaseDate": "2015-07-14"
+      },
+      "listedAt": "2026-10-11T04:51:40.000Z",
       "rating": null
     },
     {
