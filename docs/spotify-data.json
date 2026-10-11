@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-10-11T02:48:59.541Z",
+  "lastUpdated": "2026-10-11T11:46:44.129Z",
   "tracks": [
+    {
+      "id": "3GGOKTfxgyluPvAFnB30zE",
+      "name": "第ゼロ感",
+      "artist": "10-FEET",
+      "album": "第ゼロ感",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273884fb7177fe576362b1f6089",
+      "playedAt": "2026-10-11T06:16:50.744Z",
+      "spotifyUrl": "https://open.spotify.com/track/3GGOKTfxgyluPvAFnB30zE",
+      "duration": 287991,
+      "previewUrl": ""
+    },
+    {
+      "id": "0VjIjW4GlUZAMYd2vXMi3b",
+      "name": "Blinding Lights",
+      "artist": "The Weeknd",
+      "album": "After Hours",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
+      "playedAt": "2026-10-11T06:07:25.497Z",
+      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
+      "duration": 200040,
+      "previewUrl": ""
+    },
+    {
+      "id": "4q57oGT90FfPHf7vWp32Ho",
+      "name": "Judas",
+      "artist": "Lady Gaga",
+      "album": "Born This Way (Japan Special Edition Version)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d2bc35812c2d7f67d110e48",
+      "playedAt": "2026-10-11T06:04:05.079Z",
+      "spotifyUrl": "https://open.spotify.com/track/4q57oGT90FfPHf7vWp32Ho",
+      "duration": 249066,
+      "previewUrl": ""
+    },
+    {
+      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
+      "name": "Without You (feat. Sandro Cavazza)",
+      "artist": "Avicii, Sandro Cavazza",
+      "album": "AVĪCI (01)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
+      "playedAt": "2026-10-11T05:46:55.936Z",
+      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
+      "duration": 181672,
+      "previewUrl": ""
+    },
+    {
+      "id": "7M3TZDUNvaNBo0qtWVaZif",
+      "name": "WanteD! WanteD!",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "ENSEMBLE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27322c627adf9c8754c9302fa35",
+      "playedAt": "2026-10-11T05:43:55.266Z",
+      "spotifyUrl": "https://open.spotify.com/track/7M3TZDUNvaNBo0qtWVaZif",
+      "duration": 217386,
+      "previewUrl": ""
+    },
+    {
+      "id": "0a3587n25Xhw098UeEbeJq",
+      "name": "青と夏",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "青と夏",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273544c990ccc4e0b0a1ad6bb3a",
+      "playedAt": "2026-10-11T04:05:23.455Z",
+      "spotifyUrl": "https://open.spotify.com/track/0a3587n25Xhw098UeEbeJq",
+      "duration": 270506,
+      "previewUrl": ""
+    },
     {
       "id": "61dCUoMCg28qEBzrW6htYM",
       "name": "Rather Be (feat. Jess Glynne)",
@@ -263,72 +329,6 @@
       "playedAt": "2026-10-10T08:51:05.705Z",
       "spotifyUrl": "https://open.spotify.com/track/1n8NKQRg8LVHy7oUhUgbFF",
       "duration": 309093,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FL7eUG80aeUeyMO2N4btN",
-      "name": "Mission: Impossible Theme",
-      "artist": "Michael Giacchino",
-      "album": "Mission: Impossible III (Music From The Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b85f6d3142ef01d48b94480e",
-      "playedAt": "2026-10-10T08:44:43.504Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FL7eUG80aeUeyMO2N4btN",
-      "duration": 51800,
-      "previewUrl": ""
-    },
-    {
-      "id": "5EbGCyliRgdpX00MtNOPvT",
-      "name": "Back to the Future",
-      "artist": "Alan Silvestri, Cincinnati Pops Orchestra, Erich Kunzel",
-      "album": "Star Tracks II",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b671103145207b745ba0ad01",
-      "playedAt": "2026-10-10T08:42:20.332Z",
-      "spotifyUrl": "https://open.spotify.com/track/5EbGCyliRgdpX00MtNOPvT",
-      "duration": 199733,
-      "previewUrl": ""
-    },
-    {
-      "id": "4h9wh7iOZ0GGn8QVp4RAOB",
-      "name": "I Ain't Worried",
-      "artist": "OneRepublic",
-      "album": "I Ain’t Worried (Music From The Motion Picture \"Top Gun: Maverick\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
-      "playedAt": "2026-10-10T05:35:30.899Z",
-      "spotifyUrl": "https://open.spotify.com/track/4h9wh7iOZ0GGn8QVp4RAOB",
-      "duration": 148485,
-      "previewUrl": ""
-    },
-    {
-      "id": "5t77UGzgSBRDDnaxJvE9R3",
-      "name": "Moskau",
-      "artist": "Dschinghis Khan",
-      "album": "Moskau - Das Neue Best Of Album",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27387781996775435b9b6b75206",
-      "playedAt": "2026-10-10T05:27:27.787Z",
-      "spotifyUrl": "https://open.spotify.com/track/5t77UGzgSBRDDnaxJvE9R3",
-      "duration": 270360,
-      "previewUrl": ""
-    },
-    {
-      "id": "1fooGB6yJLKiOk8jW3thn6",
-      "name": "負け犬にアンコールはいらない",
-      "artist": "ヨルシカ",
-      "album": "負け犬にアンコールはいらない",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27328b535c92629e3c8d20ec242",
-      "playedAt": "2026-10-10T05:27:16.069Z",
-      "spotifyUrl": "https://open.spotify.com/track/1fooGB6yJLKiOk8jW3thn6",
-      "duration": 234283,
-      "previewUrl": ""
-    },
-    {
-      "id": "4cmZUd7tY9jaXI40LxrLyk",
-      "name": "FIRE!! （デジモンフロンティア全話OP）",
-      "artist": "Kyo Kimura",
-      "album": "熱烈！アニソン魂 THE BEST カバー楽曲集 TVアニメシリーズ「デジモンシリーズ」 vol.1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734530ac19c33d4d897312d452",
-      "playedAt": "2026-10-10T05:26:54.443Z",
-      "spotifyUrl": "https://open.spotify.com/track/4cmZUd7tY9jaXI40LxrLyk",
-      "duration": 253164,
       "previewUrl": ""
     }
   ],
