@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-12T05:43:48.687Z",
+  "lastUpdated": "2026-10-12T15:11:09.171Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -356,7 +356,7 @@
           "description": "Defeat your opponent by dealing more than 4000 damage at a time in a Ranked/Event Duel",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
           "unlockedAt": "2022-12-23T11:05:16.000Z",
-          "percent": 33.9
+          "percent": 34
         },
         {
           "name": "Necromancer",
@@ -523,14 +523,14 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 42.9
+          "percent": 43.2
         },
         {
           "name": "Kamura Amulet",
           "description": "A trinket given to new hunters who have proved themselves capable.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/01c4593add4173fdfdfcf8e50b6e99438c7895e8.jpg",
           "unlockedAt": "2023-07-11T08:07:02.000Z",
-          "percent": 86.8
+          "percent": 87
         }
       ]
     },
