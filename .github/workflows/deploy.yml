@@ -53,10 +53,27 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx --yes wrangler@4 pages deploy docs --project-name=fuyuiro --branch=main --commit-dirty=true
 
+      # GitHub Pages(旧 URL https://terasaki-8910.github.io)は、新しい URL への転送ページにする(scripts/build-redirect-site.mjs)。
+      # ただし Pages の公開元が「GitHub Actions」のときだけ。「main の /docs」のままだと、/docs の中身の公開と取り合いになるので、
+      # そのあいだは今までどおり docs/ を送る(公開元の切り替えは本人が Settings → Pages で行う)
+      - name: Choose what GitHub Pages serves
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mode=$(gh api "repos/${{ github.repository }}/pages" --jq .build_type || echo unknown)
+          echo "GitHub Pages build_type: $mode"
+          if [ "$mode" = "workflow" ]; then
+            node scripts/build-redirect-site.mjs
+            echo "path=./redirect-site" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=./docs" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs
+          path: ${{ steps.pages.outputs.path }}
 
   deploy:
     environment:

@@ -1,6 +1,6 @@
 # @オーバーライド
 
-個人サイト兼、自分で使う小さなツールの置き場です。サーバーは持たず、Spotify・Steam・GitHub などのデータは GitHub Actions が定期的に JSON にしてリポジトリへ commit し、GitHub Pages から静的に配信しています。
+個人サイト兼、自分で使う小さなツールの置き場です。サーバーは持たず、Spotify・Steam・GitHub などのデータは GitHub Actions が定期的に JSON にしてリポジトリへ commit し、push のたびに GitHub Actions でビルドして Cloudflare Pages から静的に配信しています。
 
 サイト: https://fuyuiro.pages.dev
 
@@ -38,11 +38,11 @@
 1. GitHub Actions のワークフローが cron で起動します（Spotify と Steam は 6 時間ごと、GitHub と Trakt は毎日、つくば市と Danbooru は毎週）。
 2. 外部 API からデータを取得します。キーは GitHub Secrets から環境変数で渡します。
 3. ページが読む形に整えた JSON を `public/` と `docs/` に書き、commit・push します。
-4. GitHub Pages は main ブランチの `/docs` を配信しているので、push だけで公開中のサイトに反映されます。
+4. main への push で `deploy.yml` が動き、GitHub Actions 上でビルドして Cloudflare Pages に送ります（wrangler の Direct Upload）。push だけで公開中のサイトに反映されます。
 5. ブラウザはビルド済みの HTML・JS と、この JSON を読み込みます。
 6. 画像は各サービスの CDN から直接読み込みます。
 
-画面やロジックの変更は手元で `npm run build` して `docs/` を作り直し、`docs/` ごと push します。推しア◯ネイターの推定エンジンとデータは別リポジトリ（開発元）で作り、`npm run sync:chara` で取り込みます。
+画面やロジックの変更は、ソースを push すれば公開されます（`docs/` はビルド結果で、手元の確認用に作り直して一緒に commit しています）。推しア◯ネイターの推定エンジンとデータは別リポジトリ（開発元）で作り、`npm run sync:chara` で取り込みます。
 
 ### 定期更新の流れ
 
@@ -58,7 +58,7 @@
 | 演出 | GSAP 3（ScrollTrigger）/ Lenis / Three.js / 素の JS（背景のマス目とページ移動） |
 | ビルド | Vite 5（マルチページ）/ PostCSS / `tsc --noEmit` で型チェック |
 | データ取得 | Node.js 18・20 / GitHub Actions / exceljs（市の xlsx の読み込み） |
-| 配信 | GitHub Pages（main ブランチの `/docs`） |
+| 配信 | Cloudflare Pages（GitHub Actions からデプロイ）。旧 URL の GitHub Pages は転送ページ |
 
 ## ページと機能
 
@@ -138,7 +138,7 @@ Trakt に記録した「観た・評価・観たい」を毎日取得し、TMDb 
 │   ├── data/            プロジェクト一覧・経歴などのデータ
 │   └── utils/           ASCII 描画・iCal 生成など
 ├── public/              そのまま配信するファイル(定期更新の JSON、フォント、アイコン)
-├── docs/                ビルド結果。GitHub Pages はここを配信する
+├── docs/                ビルド結果(deploy.yml が作り直して Cloudflare Pages に送る)
 ├── scripts/             データ取得・フォントのサブセット化・同期のスクリプト
 ├── documentation/       実装ドキュメントと README の画像
 └── .github/workflows/   定期更新のワークフロー
@@ -162,11 +162,13 @@ npm run typecheck    # 型チェック(tsc --noEmit)
 
 ### 公開のしかた
 
-GitHub Pages は「Deploy from a branch」で main ブランチの `/docs` を配信しています。main への push では、これとは別に `deploy.yml` も GitHub Actions 上で `npm run build` をやり直して公開します。どちらも同じ中身になるよう、ソースを変えたら手元でも `npm run build` で `docs/` を作り直し、一緒に commit して push します。定期更新のワークフローは `docs/` の JSON も直接書き換えるので、ビルドを待たずに反映されます。
+本番は Cloudflare Pages（https://fuyuiro.pages.dev）です。main への push のたびに `deploy.yml` が GitHub Actions 上で `npm run build`（更新履歴のグラフのため、全履歴つきの checkout）をして、出来上がった `docs/` を `wrangler pages deploy` で送ります。定期更新のワークフローの commit でも同じように動くので、データの更新もそのまま反映されます。
+
+旧 URL（https://terasaki-8910.github.io）の GitHub Pages は、新しい URL への転送ページです（`scripts/build-redirect-site.mjs`。GitHub Pages では 301 の転送ができないので、canonical・meta refresh・JS で、パスと ? と # を引き継いで転送します）。ごみ収集カレンダーの `.ics` は、旧 URL で購読している人のために中身をそのまま出し続けます。転送ページを出すのは、Settings → Pages の公開元が「GitHub Actions」のときだけで、それまでは今までどおり `docs/` を出します。
 
 自動更新のコミットが先に入っていて push が通らないときは、`git pull --rebase origin main` してから push し直します。
 
-### 定期更新に使う Secrets
+### ワークフローに使う Secrets
 
 | ワークフロー | Secrets |
 | --- | --- |
@@ -175,6 +177,7 @@ GitHub Pages は「Deploy from a branch」で main ブランチの `/docs` を�
 | `update-github-activity.yml` | `GH_CONTRIB_TOKEN` |
 | `update-trakt.yml` | `TRAKT_CLIENT_ID` / `TMDB_READ_ACCESS_TOKEN`（または `TMDB_API_KEY`） |
 | `update-gomi.yml` / `update-chara-images.yml` | なし |
+| `deploy.yml` | `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` |
 
 Spotify のリフレッシュトークンが失効したときは `scripts/get-refresh-token.js` で取り直します（取得したトークンは画面に出さず `gh secret set` へ直接渡します）。
 
