@@ -144,10 +144,13 @@ export default function Profile() {
                 ref={(el) => (listItemsRef.current[mainSkills.length + 1 + index] = el)}
                 className="relative pl-6 border-l border-line"
               >
-                <div className="text-sm font-mono text-ink">{talk.date}</div>
+                <div className="text-sm font-mono text-ink">
+                  {talk.date}
+                  {talk.status && `（${talk.status}）`}
+                </div>
                 <h4 className="text-xl font-display text-ink mt-2">{talk.title}</h4>
                 <p className="text-sm text-ink leading-relaxed mt-2">
-                  {talk.authors} ／ {talk.venue}
+                  {[talk.authors, talk.venue].filter(Boolean).join(' ／ ')}
                 </p>
               </div>
             ))}

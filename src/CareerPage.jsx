@@ -7,8 +7,8 @@ import './components/career/career.css'
 
 import { skills, OTHER_LEVELS } from './data/skills'
 import { research } from './data/research'
-import { timeline } from './data/timeline'
-import { works, WORKS_NOTE } from './data/works'
+import { timeline, partTimeJobs } from './data/timeline'
+import { works, WORKS_NOTE, AI_PRINCIPLES } from './data/works'
 
 /**
  * /career/ 就活用の1ページの経歴書(decisions タスク 5)。
@@ -127,6 +127,7 @@ export default function CareerPage() {
   const seenResearch = new Set()
   const seenSkills = new Set()
   const seenWorks = new Set()
+  const seenAi = new Set()
   const shownTimeline = timeline.filter((item) => !item.draft || SHOW_DRAFTS)
   const mainSkills = skills.filter((skill) => skill.group === 'main').sort((a, b) => a.careerOrder - b.careerOrder)
   const otherLevels = OTHER_LEVELS.map((level) => ({
@@ -195,6 +196,21 @@ export default function CareerPage() {
                 </Entry>
               ))}
             </div>
+            {/* TA 以外のアルバイトは、年表の下に1行ずつまとめる(R17-12) */}
+            {(!partTimeJobs.draft || SHOW_DRAFTS) && (
+              <dl className="mt-8 grid gap-x-6 gap-y-2 sm:grid-cols-[6.5em_minmax(0,1fr)]">
+                <dt className="text-sm text-muted sm:pt-0.5">アルバイト</dt>
+                <dd className="space-y-2">
+                  {partTimeJobs.items.map((job) => (
+                    <p key={job.name} className="text-ink leading-relaxed">
+                      <span className="text-sm font-mono">{job.period}</span>
+                      <span className="ml-3">{job.name}</span>
+                      <span className="block sm:inline sm:ml-3">{annotate(job.text, seenIntro)}</span>
+                    </p>
+                  ))}
+                </dd>
+              </dl>
+            )}
           </Section>
 
           {(STRENGTHS.strengths || STRENGTHS.weaknesses) && (
@@ -216,12 +232,13 @@ export default function CareerPage() {
             <p className="text-lg text-ink leading-relaxed">{annotate(research.summary, seenResearch)}</p>
             <div className="space-y-6 mt-10">
               {research.talks.map((talk) => (
-                <Entry key={talk.title} label={talk.date} title={talk.title}>
+                <Entry key={talk.title} label={talk.status ? `${talk.date}（${talk.status}）` : talk.date} title={talk.title}>
                   {(talk.plain || (SHOW_DRAFTS && talk.plainDraft)) && (
                     <p className="text-ink leading-relaxed mt-2">{annotate(talk.plain || talk.plainDraft, seenResearch)}</p>
                   )}
                   <p className="text-sm text-ink leading-relaxed mt-2">
-                    {talk.authors} ／ <Venue text={talk.venue} />
+                    {talk.authors && <>{talk.authors} ／ </>}
+                    <Venue text={talk.venue} />
                   </p>
                   {talk.authorsNote && <p className="text-sm text-ink mt-1">※ {talk.authorsNote}</p>}
                 </Entry>
@@ -308,6 +325,15 @@ export default function CareerPage() {
                 )
               })}
             </div>
+          </Section>
+
+          {/* プロジェクトに共通する、AI との開発の方針(R17-20・R17-21) */}
+          <Section title={AI_PRINCIPLES.title}>
+            <ul className="list-disc pl-5 space-y-2 text-ink leading-relaxed">
+              {AI_PRINCIPLES.items.map((item) => (
+                <li key={item}>{annotate(item, seenAi)}</li>
+              ))}
+            </ul>
           </Section>
         </div>
       </main>

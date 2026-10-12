@@ -25,9 +25,8 @@ export const skills = [
     period: '2025~',
     group: 'main',
     careerOrder: 3,
-    text: '研究室サーバの管理・運用。Dockerで動くGitLab を複数のメジャーバージョンにわたって段階的にアップグレードし、SSL 証明書の更新。自宅でもサーバを管理している。',
-    // 下書き(確認シート17回目)。R16-28 の欄の文から
-    draftText: '研究室のサーバで、Docker で動く GitLab を 17.4 から 19.3 まで段階的にアップグレードし、SSL 証明書も更新しました。研究室の Web サイトの一部の更新も行いました。自宅では、常に動かしている Ubuntu のマシンで Nextcloud・PostgreSQL・Bitwarden（パスワード管理）を Docker で動かし、Tailscale でつないだネットワークの中で管理しています。',
+    // 確認シート17回目 R17-22 で決まった文面(R16-28 の欄の文から)
+    text: '研究室のサーバで、Docker で動く GitLab を 17.4 から 19.3 まで段階的にアップグレードし、SSL 証明書も更新しました。研究室の Web サイトの一部の更新も行いました。自宅では、常に動かしている Ubuntu のマシンで Nextcloud・PostgreSQL・Bitwarden（パスワード管理）を Docker で動かし、Tailscale でつないだネットワークの中で管理しています。',
   },
   {
     name: 'GitHub',
