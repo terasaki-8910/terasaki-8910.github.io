@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 
 import { skills as allSkills, OTHER_LEVELS } from '../data/skills'
-import { research } from '../data/research'
+import { research, TALK_GROUPS } from '../data/research'
 import { timeline as allTimeline } from '../data/timeline'
 
 // onTop: false の項目は /career/ だけに出す
@@ -139,24 +139,49 @@ export default function Profile() {
         <div>
           <h3 className="text-2xl font-display text-ink mb-6">取り組んでいる研究</h3>
           <p className="text-lg text-ink leading-relaxed">{research.summary}</p>
-          <div className="space-y-6 mt-10">
-            {research.talks.map((talk, index) => (
-              <div
-                key={talk.title}
-                ref={(el) => (listItemsRef.current[mainSkills.length + 1 + index] = el)}
-                className="relative pl-6 border-l border-line"
-              >
-                <div className="text-sm font-mono text-ink">
-                  {talk.date}
-                  {talk.status && `（${talk.status}）`}
+          {/* 現在の研究と、これまでの研究に分ける(確認シート18回目 R18-8)。英語の題は欧文の書体、DOI はリンク(R18-17) */}
+          {TALK_GROUPS.map((group) => {
+            const talks = research.talks.filter((talk) => talk.group === group.id)
+            if (talks.length === 0) return null
+            return (
+              <div key={group.id} className="mt-10">
+                <p className="text-sm text-muted mb-4">{group.label}</p>
+                <div className="space-y-6">
+                  {talks.map((talk) => (
+                    <div
+                      key={talk.title}
+                      ref={(el) => (listItemsRef.current[mainSkills.length + 1 + research.talks.indexOf(talk)] = el)}
+                      className="relative pl-6 border-l border-line"
+                    >
+                      <div className="text-sm font-mono text-ink">
+                        {talk.date}
+                        {talk.status && `（${talk.status}）`}
+                      </div>
+                      <h4 lang={talk.lang} className={`text-xl ${talk.lang === 'en' ? 'font-latin-serif font-bold leading-snug' : 'font-display'} text-ink mt-2`}>
+                        {talk.title}
+                      </h4>
+                      <p className="text-sm text-ink leading-relaxed mt-2">
+                        {[talk.authors, talk.venue].filter(Boolean).join(' ／ ')}
+                      </p>
+                      {talk.doi && (
+                        <p className="text-sm text-ink mt-1">
+                          DOI:{' '}
+                          <a
+                            href={`https://doi.org/${talk.doi}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-mono break-all underline decoration-line underline-offset-4 hover:text-accent transition-colors"
+                          >
+                            {talk.doi}
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  ))}
                 </div>
-                <h4 className="text-xl font-display text-ink mt-2">{talk.title}</h4>
-                <p className="text-sm text-ink leading-relaxed mt-2">
-                  {[talk.authors, talk.venue].filter(Boolean).join(' ／ ')}
-                </p>
               </div>
-            ))}
-          </div>
+            )
+          })}
         </div>
       </div>
     </section>

@@ -28,6 +28,8 @@ export default {
         'display': ['"Craft Mincho"', '"Hiragino Mincho ProN"', '"Yu Mincho"', 'serif'],
         // Fira Mono はラテン文字だけなので、日本語はゴシックに落ちないよう Zen Kurenaido で出す
         'mono': ['"Fira Mono"', '"Zen Kurenaido"', '"SF Mono"', 'Menlo', 'Consolas', 'monospace'],
+        // 英語の論文の題は、論文と同じ欧文の書体で出す(確認シート18回目 R18-17「Times? とかに」)。どの OS にもある書体だけを使う
+        'latin-serif': ['"Times New Roman"', 'Times', '"Liberation Serif"', 'serif'],
       },
       fontSize: {
         'hero': ['clamp(3rem, 15vw, 12rem)', { lineHeight: '0.9', letterSpacing: '-0.04em' }],
