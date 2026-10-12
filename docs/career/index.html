@@ -9,9 +9,55 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 本体からはリンクせず、検索結果にも出さない。サイトマップにも載せない -->
-    <meta name="robots" content="noindex" />
+    <!-- 本体からはリンクしないが、検索には出す(確認シート17回目 R17-5。名前で探した人が見つけられるように)。
+         説明は自己紹介の1段落目(確認シート16回目で決まった文)。サイトマップにも載せる -->
     <title>プロフィール | 日野岡雅人</title>
+    <meta name="description" content="筑波大学大学院 情報学学位プログラム（博士前期課程）に在籍し、2028年3月に修了予定です。メタデータ研究室で、Web 上で公開されたつながりのあるデータ（Linked Open Data）を、問い合わせ言語の SPARQL で使いやすくする手法を研究しています。個人では Web アプリやツールを作っています。" />
+    <link rel="canonical" href="https://terasaki-8910.github.io/career/">
+    <meta property="og:title" content="プロフィール | 日野岡雅人">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://terasaki-8910.github.io/career/">
+    <meta property="og:image" content="https://terasaki-8910.github.io/icons/og-image.png">
+
+    <!-- 構造化データ(ページに出ている事実だけ) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "url": "https://terasaki-8910.github.io/career/",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "日野岡雅人",
+        "alternateName": "ヒノオカ マサト",
+        "url": "https://terasaki-8910.github.io/career/",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "筑波大学大学院 情報学学位プログラム"
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "筑波大学 情報学群 情報メディア創成学類"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "舞鶴工業高等専門学校"
+          }
+        ],
+        "knowsAbout": [
+          "Linked Open Data",
+          "SPARQL",
+          "RDF",
+          "Python",
+          "Linux",
+          "GitHub"
+        ],
+        "sameAs": [
+          "https://github.com/terasaki-8910"
+        ]
+      }
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
