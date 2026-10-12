@@ -3,7 +3,7 @@
 // とUID形式を揃えてあり、同じ日・同じカテゴリは常に同じUIDになる。
 // サーバーが無いためこちらはブラウザ側でdata: URIとして動的に生成する。
 
-const SITE_URL = 'https://terasaki-8910.github.io/gomi-tsukuba/'
+const SITE_URL = 'https://fuyuiro.pages.dev/gomi-tsukuba/'
 
 function pad(n) {
   return String(n).padStart(2, '0')

@@ -8,7 +8,7 @@ import { research } from '../src/data/research.js'
 import { skills, OTHER_LEVELS } from '../src/data/skills.js'
 import { works, WORKS_NOTE, AI_PRINCIPLES } from '../src/data/works.js'
 
-const SITE = 'https://terasaki-8910.github.io'
+const SITE = 'https://fuyuiro.pages.dev'
 const GITHUB = 'https://github.com/terasaki-8910'
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 const name = NAME_PARTS.map((p) => p.text).join('')

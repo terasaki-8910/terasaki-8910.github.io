@@ -33,7 +33,7 @@ const ICS_DIR = path.join(OUT_DIR, 'ics');
 
 const PAGE_URL =
   'https://www.city.tsukuba.lg.jp/soshikikarasagasu/seikatsukankyobukankyoeiseika/gyomuannai/2/1000820.html';
-const SITE_ORIGIN = 'https://terasaki-8910.github.io';
+const SITE_ORIGIN = 'https://fuyuiro.pages.dev';
 
 // ヘッダーのカテゴリ名 → id(順序は表示順としてもそのまま使う)
 const CATEGORIES = [

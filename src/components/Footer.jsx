@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-line text-center text-muted text-sm">
-          <p>© 2025 terasaki-8910.github.io | Built with React &amp; GSAP</p>
+          <p>© 2025 fuyuiro.pages.dev | Built with React &amp; GSAP</p>
           <p className="mt-2">アイコン: 若狭フユ（イラスト: Yasson / 吉田夜世）</p>
           {/* ヘッダーのメニューの魔人のランプ(Game Icons)は CC BY 3.0 なので、作者名とライセンスを書く */}
           <p className="mt-2">

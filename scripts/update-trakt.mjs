@@ -51,7 +51,7 @@ async function traktAll(endpoint) {
     const res = await fetch(`https://api.trakt.tv${endpoint}${sep}page=${page}&limit=100`, {
       headers: {
         'Content-Type': 'application/json',
-        'User-Agent': 'terasaki-8910.github.io/1.0',
+        'User-Agent': 'fuyuiro.pages.dev/1.0',
         'trakt-api-key': TRAKT_CLIENT_ID,
         'trakt-api-version': '2',
       },

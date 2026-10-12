@@ -58,7 +58,7 @@ const API = 'https://danbooru.donmai.us';
 /* 開発元(scripts/bayes/danbooru-client.mjs)と同じ自主規制。
  * 名乗ることがそのままchallenge回避にもなっている。 */
 const USER_AGENT =
-  'chara-picker-site/1.0 (+https://terasaki-8910.github.io/chara-picker/; representative image lookup, low frequency)';
+  'chara-picker-site/1.0 (+https://fuyuiro.pages.dev/chara-picker/; representative image lookup, low frequency)';
 const REQUEST_DELAY_MS = 1_100;
 
 /** sensitive以上は使わない(2022年の4段階化で `s` の意味がsafe→sensitiveに変わっている)。 */
