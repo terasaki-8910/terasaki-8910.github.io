@@ -7,7 +7,7 @@ import { timeline as allTimeline } from '../data/timeline'
 
 // onTop: false の項目は /career/ だけに出す
 const skills = allSkills.filter((item) => item.onTop !== false)
-const timeline = allTimeline.filter((item) => item.onTop !== false)
+const timeline = allTimeline.filter((item) => item.onTop !== false && !item.draft)
 // 技術スタックは /career/ と同じ並べ方(主な技術と、温度感ごとの「その他」。期間は出さない。確認シート14回目 R14-7)
 const mainSkills = skills.filter((skill) => skill.group === 'main').sort((a, b) => a.careerOrder - b.careerOrder)
 const otherLevels = OTHER_LEVELS.map((level) => ({
@@ -123,7 +123,7 @@ export default function Profile() {
                 <div
                   key={item.year}
                   ref={(el) => (itemsRef.current[index] = el)}
-                  className="relative pl-6 border-l-2 border-accent"
+                  className="relative pl-6 border-l border-line"
                 >
                   <div className="text-sm font-mono text-ink">{item.year}</div>
                   <h4 className="text-xl font-display text-ink mt-2">{item.title}</h4>
@@ -135,14 +135,14 @@ export default function Profile() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-display text-ink mb-6">研究</h3>
+          <h3 className="text-2xl font-display text-ink mb-6">取り組んでいる研究</h3>
           <p className="text-lg text-ink leading-relaxed">{research.summary}</p>
           <div className="space-y-6 mt-10">
             {research.talks.map((talk, index) => (
               <div
                 key={talk.title}
                 ref={(el) => (listItemsRef.current[mainSkills.length + 1 + index] = el)}
-                className="relative pl-6 border-l-2 border-accent"
+                className="relative pl-6 border-l border-line"
               >
                 <div className="text-sm font-mono text-ink">{talk.date}</div>
                 <h4 className="text-xl font-display text-ink mt-2">{talk.title}</h4>
