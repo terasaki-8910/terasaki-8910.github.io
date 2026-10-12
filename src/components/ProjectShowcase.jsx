@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SpotifyRecentTracks from './SpotifyRecentTracks'
 import HomeGomiPreview from './HomeGomiPreview'
 import HomeCharaOmakase from './HomeCharaOmakase'
+import HomeGamingPreview from './HomeGamingPreview'
+import HomeMoviesPreview from './HomeMoviesPreview'
 import AsciiModelViewer from './AsciiModelViewer'
 import { ASCII_MODELS } from '../data/asciiModels'
 import { projects } from '../data/projects'
@@ -55,9 +57,6 @@ export default function ProjectShowcase() {
                   ))}
                 </div>
 
-                {project.gaming && (
-                  <div className="mt-4 text-sm font-mono text-muted">Steam + Discord</div>
-                )}
               </a>
 
               {project.ascii && ASCII_MODELS[0] && (
@@ -87,6 +86,16 @@ export default function ProjectShowcase() {
               {project.charaPicker && (
                 <div className="mt-6">
                   <HomeCharaOmakase />
+                </div>
+              )}
+              {project.gaming && (
+                <div className="mt-6">
+                  <HomeGamingPreview />
+                </div>
+              )}
+              {project.movies && (
+                <div className="mt-6">
+                  <HomeMoviesPreview />
                 </div>
               )}
             </article>

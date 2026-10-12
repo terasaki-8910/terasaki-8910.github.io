@@ -10,6 +10,8 @@ import {
   PiSquaresFourBold,
 } from 'react-icons/pi'
 import './movieShelf.css'
+import Stars from './Stars'
+import { IMG, formatDate, kindLabel, originalOf, sortItems, titleOf } from './movieData'
 
 /**
  * Trakt に入れた映画・アニメ・ドラマの視聴履歴(/movies/)。データは scripts/update-trakt.mjs が毎日作る
@@ -25,8 +27,6 @@ import './movieShelf.css'
  *   絞り込みと並びはアイコンから開く一覧(ヘッダーのメニューと同じ、マスと項目名の並び)
  */
 
-const IMG = 'https://image.tmdb.org/t/p/'
-const STAR = 'M10 1.6l2.5 5.4 5.9.7-4.4 4 1.2 5.8L10 14.6l-5.2 2.9 1.2-5.8-4.4-4 5.9-.7z'
 const KINDS = [
   ['all', 'すべて'],
   ['movie', '映画'],
@@ -55,53 +55,9 @@ function matchesKind(m, kind) {
   return m.type === 'show' && m.kind !== 'anime'
 }
 
-function Stars({ rating }) {
-  if (!rating) return null
-  return (
-    <span className="mv-stars" role="img" aria-label={`評価 ${rating}/10`}>
-      {[0, 1, 2, 3, 4].map((i) => {
-        const v = rating - i * 2
-        return (
-          <svg key={i} viewBox="0 0 20 20" aria-hidden="true">
-            <path className="mv-stars__base" d={STAR} />
-            {v >= 1 && <path className="mv-stars__on" d={STAR} style={v === 1 ? { clipPath: 'inset(0 50% 0 0)' } : undefined} />}
-          </svg>
-        )
-      })}
-    </span>
-  )
-}
-
-const titleOf = (m) => m.details?.title || m.traktTitle
-const originalOf = (m) => m.details?.originalTitle || m.traktTitle
 const decadeOf = (m) => (m.year ? Math.floor(m.year / 10) * 10 : null)
-const kindLabel = (m) => ({ movie: '映画', anime: 'アニメ', drama: 'ドラマ' })[m.kind] || ''
 const traktUrl = (m) => `https://trakt.tv/${m.type === 'show' ? 'shows' : 'movies'}/${m.slug}`
 const tmdbUrl = (m) => `https://www.themoviedb.org/${m.type === 'show' ? 'tv' : 'movie'}/${m.tmdb}`
-
-function formatDate(value) {
-  if (!value) return null
-  const d = new Date(value)
-  return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`
-}
-
-/** 並べ替え。視聴順は、観た日が入っているものを新しい順に、残りは Trakt に記録した順(新しい順) */
-function sortItems(items, sort) {
-  const list = [...items]
-  const byReleased = (a, b) => (a.released ?? '9999').localeCompare(b.released ?? '9999')
-  if (sort === 'rating') return list.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0) || byReleased(b, a))
-  if (sort === 'watched') {
-    return list.sort((a, b) => {
-      if (a.lastWatchedAt && b.lastWatchedAt) return b.lastWatchedAt.localeCompare(a.lastWatchedAt)
-      if (a.lastWatchedAt) return -1
-      if (b.lastWatchedAt) return 1
-      return (b.recordedOrder ?? 0) - (a.recordedOrder ?? 0)
-    })
-  }
-  if (sort === 'added') return list.sort((a, b) => (b.listedAt ?? '').localeCompare(a.listedAt ?? ''))
-  // 時系列順は新しい順(最初に新しい作品を見せる。R11-2)
-  return list.sort((a, b) => byReleased(b, a))
-}
 
 function Detail({ movie, onClose }) {
   const closeRef = useRef(null)
