@@ -1,6 +1,8 @@
 /**
  * プロジェクト一覧。ProjectShowcase.jsx(トップページのカード表示)と
  * ProjectMenu.jsx(ヘッダー右上のメニュー)の両方から参照する単一の情報源。
+ * 項目を増やしたり題を変えたりしたら、index.html の #seo-fallback-content(クローラー向けのリンク)と
+ * public/sitemap.xml も合わせて直す。
  *
  * icon はヘッダーのメニューの行に出すアイコン(src/data/menuIcons.js のキー)。
  *
@@ -11,6 +13,9 @@
  * 遊んだゲームコレクション(旧 Gaming Archive)は2026-08-09にSteam連携で実装済み(scripts/update-steam.js、
  * GamingArchivePage.jsx)。Discordはライブ連携せず、Footerの招待リンクのまま
  * (本人判断、常時起動が要るBot/第三者サービス依存を避けた)。
+ *
+ * ascii・spotify・gomi・charaPicker・gaming・movies が true の項目は、ProjectShowcase.jsx が
+ * 項目の下にプレビューを出す(gaming と movies は確認シート16回目 R16-47 で追加)。
  */
 export const projects = [
   // 3D ASCIIはトップの独立セクションから、この一覧の1項目に移した。
@@ -75,6 +80,7 @@ export const projects = [
     description: 'Trakt に記録した作品（観た・評価・観たい）',
     tags: ['Trakt', 'TMDB', 'React'],
     link: '/movies/',
+    movies: true,
     pageKey: 'movies',
     icon: 'popcorn',
   },

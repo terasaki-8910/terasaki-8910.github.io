@@ -25,8 +25,7 @@
 /* プロジェクトの画面のスクショ。どれも同じ高さにそろえ、幅は画像の縦横比に任せる。
    見せ方は A(ブロックの影)に決めた(確認シート15回目 R15-1)。黒い枠とピンクのずらした影(ぼかさない)で、
    ロゴ(ピンクに黒の縁)と背景のマスに合わせる。押すと大きく出す(R15-2。カーソルは虫眼鏡)。
-   並べ方は2案(data-layout)。stack = 題の下に横に並べる、side = PC では右の列に縦に積み、左に説明を置く。
-   見本では /career/?layout=side で切り替えられる(決まったら1つにする) */
+   並べ方は、題の下に横に並べる(確認シート16回目 R16-1)。 */
 .works { --shot-h: 180px; --shot-mat: rgb(255 255 255 / 0.55); }
 :root[data-theme='dark'] .works { --shot-mat: rgb(255 255 255 / 0.06); }
 @media (max-width: 639px) { .works { --shot-h: 140px; } }
@@ -38,21 +37,20 @@
 }
 .work-shot:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 4px; }
 .work-shot img { display: block; height: var(--shot-h); width: auto; max-width: 100%; object-fit: contain; }
-@media (min-width: 768px) {
-  .works[data-layout='side'] { --shot-h: 150px; }
-  .works[data-layout='side'] .work { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 28px; }
-  .works[data-layout='side'] .work__head { grid-column: 1 / -1; }
-  .works[data-layout='side'] .work-shots { grid-column: 2; grid-row: 2; flex-direction: column; align-items: flex-end; align-self: start; margin-top: 1rem; }
-  .works[data-layout='side'] .work__facts { grid-column: 1; grid-row: 2; }
-}
 
-/* 画像を大きく見る(外側・Esc・× で閉じる) */
+/* 画像を大きく見る(外側・Esc・× で閉じる)。つまむ・ダブルタップ・ホイールで拡大し、拡大中は動かせる(R16-2) */
 .shot-viewer {
   position: fixed; inset: 0; z-index: 100; display: grid; place-items: center;
   padding: calc(64px + env(safe-area-inset-top, 0px)) 16px calc(24px + env(safe-area-inset-bottom, 0px));
   background: rgb(0 0 0 / 0.72); cursor: zoom-out;
 }
-.shot-viewer img { max-width: min(1280px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 4px; cursor: default; box-shadow: 0 12px 40px rgb(0 0 0 / 0.4); }
+.shot-viewer__img {
+  max-width: min(1280px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 4px;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.4); cursor: zoom-in; touch-action: none; user-select: none;
+  transform-origin: center center;
+}
+.shot-viewer__img[data-zoomed='true'] { cursor: grab; }
+.shot-viewer__img[data-zoomed='true']:active { cursor: grabbing; }
 .shot-viewer__close {
   position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); right: 12px; width: 44px; height: 44px;
   display: grid; place-items: center; border-radius: 50%; cursor: pointer; font-size: 22px; line-height: 1;

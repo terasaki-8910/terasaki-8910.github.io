@@ -37,7 +37,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://terasaki-8910.github.io">
+    <meta property="og:url" content="https://terasaki-8910.github.io/">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -73,6 +73,7 @@
         {
           "@type": "WebSite",
           "name": "@オーバーライド — 冬色",
+          "alternateName": ["冬色のポートフォリオ", "Fuyuiro's Portfolio"],
           "url": "https://terasaki-8910.github.io/",
           "description": "冬色のポートフォリオ。取り組んできたプロジェクト、未完成のアイデア、ついでの自己紹介。",
           "inLanguage": "ja"
@@ -112,6 +113,17 @@
         </p>
         <p>アイコンには「若狭フユ」を使用しています。イラスト: Yasson(吉田夜世)。</p>
         <p>趣味は映画鑑賞、麻雀、サーバこねこね。好きなアーティストはサカナクション、CentralCee。</p>
+        <!-- JS を動かさないクローラーも各ページへたどれるように、プロジェクトのリンクを置く。
+             題と説明は src/data/projects.js と同じ(項目を増やしたら、ここと public/sitemap.xml も直す) -->
+        <h2>プロジェクト</h2>
+        <ul>
+          <li><a href="/ascii/">3D ASCII</a>：3Dモデルを文字に置き換えたproject</li>
+          <li><a href="/spotify/">Spotifyダッシュボード</a>：最近聴いた曲</li>
+          <li><a href="/gomi-tsukuba/">つくばごみ収集カレンダー</a>：オープンデータ連携</li>
+          <li><a href="/chara-picker/">理想の推しア◯ネイター</a>：質問への回答からベイズ推定でキャラを推測</li>
+          <li><a href="/gaming-archive/">遊んだゲームコレクション</a></li>
+          <li><a href="/movies/">映画・アニメ・ドラマの視聴履歴</a>：Trakt に記録した作品（観た・評価・観たい）</li>
+        </ul>
       </div>
     </div>
     <script type="module" src="/src/main.jsx"></script>

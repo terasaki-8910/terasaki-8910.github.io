@@ -7,7 +7,7 @@ import { timeline as allTimeline } from '../data/timeline'
 
 // onTop: false の項目は /career/ だけに出す
 const skills = allSkills.filter((item) => item.onTop !== false)
-const timeline = allTimeline.filter((item) => item.onTop !== false)
+const timeline = allTimeline.filter((item) => item.onTop !== false && !item.draft)
 // 技術スタックは /career/ と同じ並べ方(主な技術と、温度感ごとの「その他」。期間は出さない。確認シート14回目 R14-7)
 const mainSkills = skills.filter((skill) => skill.group === 'main').sort((a, b) => a.careerOrder - b.careerOrder)
 const otherLevels = OTHER_LEVELS.map((level) => ({
@@ -72,7 +72,7 @@ export default function Profile() {
         {/* PC(md以上)は左の列に「自己紹介 → 学歴・経歴」、右の列に My Skills を置く。
             スマホはこの並び(自己紹介 → My Skills → 学歴・経歴)のまま縦に積む。
             3行目(1fr)が My Skills の長さの余りを受け持ち、左の列の間が空かないようにする。 */}
-        <div className="grid gap-12 mb-32 md:grid-cols-2 md:grid-rows-[auto_auto_1fr] md:gap-y-0">
+        <div className="grid gap-12 mb-12 md:mb-16 md:grid-cols-2 md:grid-rows-[auto_auto_1fr] md:gap-y-0">
           <div className="md:col-start-1 md:row-start-1">
             {/* 節の題が「自己紹介」になったので、ここの同じ見出しは外した(2026-10-05 本人指定) */}
             <div className="border-t border-line">
@@ -123,7 +123,7 @@ export default function Profile() {
                 <div
                   key={item.year}
                   ref={(el) => (itemsRef.current[index] = el)}
-                  className="relative pl-6 border-l-2 border-accent"
+                  className="relative pl-6 border-l border-line"
                 >
                   <div className="text-sm font-mono text-ink">{item.year}</div>
                   <h4 className="text-xl font-display text-ink mt-2">{item.title}</h4>
@@ -135,14 +135,14 @@ export default function Profile() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-display text-ink mb-6">研究</h3>
+          <h3 className="text-2xl font-display text-ink mb-6">取り組んでいる研究</h3>
           <p className="text-lg text-ink leading-relaxed">{research.summary}</p>
           <div className="space-y-6 mt-10">
             {research.talks.map((talk, index) => (
               <div
                 key={talk.title}
                 ref={(el) => (listItemsRef.current[mainSkills.length + 1 + index] = el)}
-                className="relative pl-6 border-l-2 border-accent"
+                className="relative pl-6 border-l border-line"
               >
                 <div className="text-sm font-mono text-ink">{talk.date}</div>
                 <h4 className="text-xl font-display text-ink mt-2">{talk.title}</h4>

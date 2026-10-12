@@ -1,12 +1,13 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import ProjectMenu from './components/ProjectMenu'
 import { annotate } from './components/career/Term'
+import ShotViewer from './components/career/ShotViewer'
 import './components/career/career.css'
 
 import { skills, OTHER_LEVELS } from './data/skills'
 import { research } from './data/research'
 import { timeline } from './data/timeline'
-import { works } from './data/works'
+import { works, WORKS_NOTE } from './data/works'
 
 /**
  * /career/ 就活用の1ページの経歴書(decisions タスク 5)。
@@ -16,7 +17,9 @@ import { works } from './data/works'
  * 研究・技術スタック・学歴・経歴は、トップの自己紹介と同じデータを読む。学歴・経歴は自己紹介の中に置く。
  * 専門用語(src/data/glossary.js)は、見出し(節)ごとに最初に出たところだけに説明の吹き出しを付ける。
  * 文章は黒(text-ink)で出す。灰色(text-muted)は、表の左の列・URL などのラベルだけに使う(2026-10-05 本人指定)。
+ * 決まっていない文(各データの draft・draftText・plainDraft)は、/career/?drafts のときだけ出す。
  */
+const SHOW_DRAFTS = new URLSearchParams(window.location.search).has('drafts')
 // 名前と読み仮名(本人指定。空なら振らない)
 const NAME_PARTS = [
   { text: '日野岡', reading: 'ヒノオカ' },
@@ -25,10 +28,16 @@ const NAME_PARTS = [
 const NAME = NAME_PARTS.map((part) => part.text).join('')
 const AFFILIATION = '筑波大学大学院 情報学学位プログラム 博士前期課程'
 const EMAIL = 'hinookajobhunting@gmail.com'
-const INTRO =
-  '筑波大学大学院 情報学学位プログラム（博士前期課程）に在籍し、2028年3月に修了予定です。研究では、Web 上で公開されたつながりのあるデータ（Linked Open Data）を、問い合わせ言語の SPARQL で使いやすくする手法を扱っています。研究室ではサーバの運用を担当し、個人では Web アプリやツールを作っています。'
-// 強み・弱み(本人が書く。両方空なら節ごと出さない)
+// 自己紹介の文(確認シート16回目 R16-17 で決まった文)。段落ごとに分ける
+const INTRO = [
+  '筑波大学大学院 情報学学位プログラム（博士前期課程）に在籍し、2028年3月に修了予定です。メタデータ研究室で、Web 上で公開されたつながりのあるデータ（Linked Open Data）を、問い合わせ言語の SPARQL で使いやすくする手法を研究しています。個人では Web アプリやツールを作っています。',
+  '舞鶴工業高等専門学校の電気情報工学科では、ネットワークを構築する実験、マイコンや PLC の制御、オペアンプを使った電子回路の実験など、電気と情報の分野を幅広く学びました。4人のチームで Blender を使って舞鶴の引揚船（戦後の引揚げで使われた船）を再現した制作では、チームを引っ張るリーダーの役割を受け持ちました。卒業研究では、表面プラズモン共鳴（光と金属表面の電子の共鳴）を利用して蛍光を強める研究をしました。',
+  '4年次に参加したカナデビア株式会社（旧日立造船）のインターンシップで ICT 分野に強く興味を持ち、筑波大学 情報学群 情報メディア創成学類に3年次編入しました。より高度な機械学習や Web アプリの作成、FPGAを用いた表示回路などを学び、3年次の後期にメタデータ研究室に配属されました。',
+]
+// 強み・弱み(本人が書く。両方空なら節ごと出さない。置き場所は自己紹介のすぐ後。R16-43)
 const STRENGTHS = { strengths: '', weaknesses: '' }
+// この先やってみたいこと(本人が書く。空なら節ごと出さない。R16-14「欄を作っておいておくだけ」)
+const FUTURE = ''
 const GITHUB = 'https://github.com/terasaki-8910/'
 
 /**
@@ -78,10 +87,10 @@ function Section({ title, children }) {
 }
 
 // トップの学歴・経歴と同じ部品(等幅の期間、見出し、説明、左の縦線)。
-// 期間の文字は黒、縦線はピンク(確認シート15回目 R15-7。ピンクの文字は黄色の地で読みにくいため)
+// 期間の文字は黒(R15-7)、縦線は灰色の細い線(R16-3「縦線(ピンク)は余計ですね」)
 function Entry({ label, title, children }) {
   return (
-    <div className="relative pl-6 border-l-2 border-accent">
+    <div className="relative pl-6 border-l border-line">
       {label && <div className="text-sm font-mono text-ink">{label}</div>}
       <h3 className="text-xl font-display text-ink mt-2">{title}</h3>
       {children}
@@ -110,55 +119,18 @@ function WorkFact({ term, children }) {
   )
 }
 
-// プロジェクトの画像の並べ方(2案の見本)。/career/?layout=side で切り替えて見比べる。決まったら1つにする
-const LAYOUTS = ['stack', 'side']
-function layoutFromUrl() {
-  const asked = new URLSearchParams(window.location.search).get('layout')
-  return LAYOUTS.includes(asked) ? asked : LAYOUTS[0]
-}
-
-// 画像を大きく見る。外側・Esc・× で閉じ、閉じたら押した画像にフォーカスを戻す。開いている間は後ろをスクロールしない
-function ShotViewer({ shot, onClose }) {
-  const closeRef = useRef(null)
-  useEffect(() => {
-    if (!shot) return undefined
-    const before = document.activeElement
-    const html = document.documentElement
-    const overflow = html.style.overflow
-    html.style.overflow = 'hidden'
-    closeRef.current?.focus()
-    const onKey = (event) => {
-      if (event.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', onKey)
-    return () => {
-      document.removeEventListener('keydown', onKey)
-      html.style.overflow = overflow
-      before?.focus?.()
-    }
-  }, [shot, onClose])
-  if (!shot) return null
-  return (
-    <div className="shot-viewer" role="dialog" aria-modal="true" aria-label={shot.alt} onClick={onClose}>
-      <img src={shot.full || shot.src} alt={shot.alt} onClick={(event) => event.stopPropagation()} />
-      <button ref={closeRef} type="button" className="shot-viewer__close" aria-label="閉じる" onClick={onClose}>
-        ×
-      </button>
-    </div>
-  )
-}
 
 export default function CareerPage() {
   // 専門用語の説明を付けた語。見出しごとに最初の1か所だけに付けるので、節ごとに作る(描画のたびに作り直す)
   const seenIntro = new Set()
   const seenResearch = new Set()
   const seenSkills = new Set()
+  const shownTimeline = timeline.filter((item) => !item.draft || SHOW_DRAFTS)
   const mainSkills = skills.filter((skill) => skill.group === 'main').sort((a, b) => a.careerOrder - b.careerOrder)
   const otherLevels = OTHER_LEVELS.map((level) => ({
     ...level,
     items: skills.filter((skill) => skill.group === 'other' && skill.level === level.id),
   })).filter((level) => level.items.length > 0)
-  const layout = layoutFromUrl()
   const [viewing, setViewing] = useState(null)
   const closeViewer = useCallback(() => setViewing(null), [])
   return (
@@ -178,6 +150,9 @@ export default function CareerPage() {
       </div>
       <main className="px-6 md:px-8 pt-28 pb-32">
         <div className="bk-content max-w-3xl mx-auto">
+          {SHOW_DRAFTS && (
+            <p className="mb-8 inline-block rounded-[3px] border border-ink px-3 py-1 text-sm text-ink">下書きも表示しています（/career/?drafts）</p>
+          )}
           <header>
             <p className="text-sm tracking-[0.12em] text-muted">プロフィール</p>
             <h1 className="mt-6 text-5xl md:text-6xl font-display text-ink" aria-label={NAME}>
@@ -204,9 +179,15 @@ export default function CareerPage() {
           </header>
 
           <Section title="自己紹介">
-            <p className="text-lg text-ink leading-relaxed">{annotate(INTRO, seenIntro)}</p>
+            <div className="space-y-4">
+              {INTRO.map((paragraph) => (
+                <p key={paragraph.slice(0, 16)} className="text-lg text-ink leading-relaxed">
+                  {annotate(paragraph, seenIntro)}
+                </p>
+              ))}
+            </div>
             <div className="space-y-6 mt-10">
-              {timeline.map((item) => (
+              {shownTimeline.map((item) => (
                 <Entry key={item.year} label={item.year} title={item.title}>
                   <p className="text-ink leading-relaxed mt-1">{annotate(item.description, seenIntro)}</p>
                 </Entry>
@@ -214,12 +195,29 @@ export default function CareerPage() {
             </div>
           </Section>
 
+          {(STRENGTHS.strengths || STRENGTHS.weaknesses) && (
+            <Section title="強み・弱み">
+              <dl className="grid gap-x-6 gap-y-3 sm:grid-cols-[6.5em_minmax(0,1fr)]">
+                {STRENGTHS.strengths && <WorkFact term="強み">{STRENGTHS.strengths}</WorkFact>}
+                {STRENGTHS.weaknesses && <WorkFact term="弱み">{STRENGTHS.weaknesses}</WorkFact>}
+              </dl>
+            </Section>
+          )}
+
+          {FUTURE && (
+            <Section title="この先やってみたいこと">
+              <p className="text-ink leading-relaxed">{FUTURE}</p>
+            </Section>
+          )}
+
           <Section title="取り組んでいる研究">
             <p className="text-lg text-ink leading-relaxed">{annotate(research.summary, seenResearch)}</p>
             <div className="space-y-6 mt-10">
               {research.talks.map((talk) => (
                 <Entry key={talk.title} label={talk.date} title={talk.title}>
-                  {talk.plain && <p className="text-ink leading-relaxed mt-2">{annotate(talk.plain, seenResearch)}</p>}
+                  {(talk.plain || (SHOW_DRAFTS && talk.plainDraft)) && (
+                    <p className="text-ink leading-relaxed mt-2">{annotate(talk.plain || talk.plainDraft, seenResearch)}</p>
+                  )}
                   <p className="text-sm text-ink leading-relaxed mt-2">
                     {talk.authors} ／ <Venue text={talk.venue} />
                   </p>
@@ -235,7 +233,7 @@ export default function CareerPage() {
               {mainSkills.map((skill) => (
                 <div key={skill.name} className="border-b border-line py-5">
                   <h3 className="text-xl font-display text-ink">{skill.name}</h3>
-                  <p className="text-ink leading-relaxed mt-1">{annotate(skill.careerText || skill.text, seenSkills)}</p>
+                  <p className="text-ink leading-relaxed mt-1">{annotate((SHOW_DRAFTS && skill.draftText) || skill.text, seenSkills)}</p>
                 </div>
               ))}
             </div>
@@ -261,8 +259,12 @@ export default function CareerPage() {
           </Section>
 
           <Section title="プロジェクト">
-            <div className="works space-y-12" data-layout={layout}>
-              {works.map((work) => (
+            {WORKS_NOTE && <p className="-mt-4 mb-10 text-ink leading-relaxed">{WORKS_NOTE}</p>}
+            <div className="works space-y-12">
+              {works.map((raw) => {
+                // 下書きを見るときは、工夫・経緯・学びを下書きの文に差し替える
+                const work = SHOW_DRAFTS && raw.draft ? { ...raw, ...raw.draft } : raw
+                return (
                 <article key={work.repo} className="work relative pl-6 border-l border-line">
                   <div className="work__head">
                   <h3 className="text-xl font-display text-ink">
@@ -301,18 +303,10 @@ export default function CareerPage() {
                     {work.learned && <WorkFact term="学び">{work.learned}</WorkFact>}
                   </dl>
                 </article>
-              ))}
+                )
+              })}
             </div>
           </Section>
-
-          {(STRENGTHS.strengths || STRENGTHS.weaknesses) && (
-            <Section title="強み・弱み">
-              <dl className="grid gap-x-6 gap-y-3 sm:grid-cols-[6.5em_minmax(0,1fr)]">
-                {STRENGTHS.strengths && <WorkFact term="強み">{STRENGTHS.strengths}</WorkFact>}
-                {STRENGTHS.weaknesses && <WorkFact term="弱み">{STRENGTHS.weaknesses}</WorkFact>}
-              </dl>
-            </Section>
-          )}
         </div>
       </main>
       <ShotViewer shot={viewing} onClose={closeViewer} />
