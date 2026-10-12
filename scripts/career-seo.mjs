@@ -4,7 +4,7 @@
 // 見た目は変わらない(トップの #seo-fallback-content と同じやり方)。構造化データ(JSON-LD)も同じデータから作る。
 import { NAME_PARTS, AFFILIATION, EMAIL, INTRO, STRENGTHS, FUTURE } from '../src/data/profile.js'
 import { timeline, partTimeJobs } from '../src/data/timeline.js'
-import { research, TALK_GROUPS } from '../src/data/research.js'
+import { research } from '../src/data/research.js'
 import { skills, OTHER_LEVELS } from '../src/data/skills.js'
 import { works, WORKS_NOTE, AI_PRINCIPLES } from '../src/data/works.js'
 
@@ -31,16 +31,12 @@ export function careerFallbackHtml() {
   if (FUTURE) out.push(`<h2>この先やってみたいこと</h2><p>${esc(FUTURE)}</p>`)
   out.push('<h2>取り組んでいる研究</h2>')
   out.push(`<p>${esc(research.summary)}</p>`)
-  for (const group of TALK_GROUPS) {
-    const talks = research.talks.filter((t) => t.group === group.id)
-    if (talks.length === 0) continue
-    out.push(`<h3>${esc(group.label)}</h3><ul>`)
-    for (const t of talks) {
-      const meta = [t.authors, t.venue, t.status, t.doi ? `DOI: ${t.doi}` : null].filter(Boolean).map(esc).join('。')
-      out.push(`<li>${esc(t.date)} <span${t.lang ? ` lang="${esc(t.lang)}"` : ''}>${esc(t.title)}</span>（${meta}）${t.plain ? esc(t.plain) : ''}</li>`)
-    }
-    out.push('</ul>')
+  out.push(`<h3>論文</h3><ul>`)
+  for (const t of research.talks) {
+    const meta = [t.authors, t.venue, t.status, t.refereed ? '査読有り' : null, t.doi ? `DOI: ${t.doi}` : null].filter(Boolean).map(esc).join('。')
+    out.push(`<li>${esc(t.date)} <span${t.lang ? ` lang="${esc(t.lang)}"` : ''}>${esc(t.title)}</span>（${meta}）${t.plain ? esc(t.plain) : ''}</li>`)
   }
+  out.push('</ul>')
   out.push('<h2>技術スタック</h2><ul>')
   for (const s of skills.filter((s) => s.group === 'main').sort((a, b) => a.careerOrder - b.careerOrder)) out.push(`<li>${esc(s.name)}：${esc(s.text)}</li>`)
   out.push('</ul>')

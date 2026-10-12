@@ -1,14 +1,10 @@
 // 研究の要旨と発表。トップの自己紹介と /career/ で同じデータを使う。
-// talks は、いまの研究(group: current)とこれまでの研究(past)に分け、それぞれ新しい順(R18-8「今は別の問題に取り組んでいることがわかるように」)。
-// date は等幅の見出しに出すので半角で書く。status(採択など)は date の横に添える。authors が空なら会場だけ出す。
-// lang: 'en' の題は、論文と同じ欧文の書体(Times など)で出す(R18-17)。doi があれば、会場の下にリンクを出す(R18-17)。
+// talks は論文の一覧(researchmap と同じ形。src/components/PaperList.jsx)。分けずに新しい順に並べる(確認シート19回目 R19-1)。
+// date は「2026.09」の形で書き、画面では「2026年9月」と出す。status は会場の後ろに (Accepted) のように添える。
+// refereed: true は査読のある論文で、「査読有り」の印を付ける(R19-1)。authors が空なら会場だけ出す。
+// lang: 'en' の題は、論文と同じ欧文の書体(Times など)で出す(R18-17)。doi があれば、題を論文へのリンクにし、DOI も出す(R18-17)。
 // plain は /career/ で、人事の人にも分かるように「何が問題で、どう解こうとしたか」を書く(確認シート16回目で決まった文)。
 // plainDraft はまだ決まっていない文で、/career/?drafts のときだけ出す。authorsNote は著者の下に添える一言(旧姓など)。
-export const TALK_GROUPS = [
-  { id: 'current', label: '現在の研究' },
-  { id: 'past', label: 'これまでの研究' },
-]
-
 export const research = {
   // 確認シート16回目 R16-22 で決まった文面
   summary:
@@ -16,10 +12,10 @@ export const research = {
   talks: [
     {
       // MTSR 2026 に採択(R17-28。2026-10-12 時点でカメラレディ前)。会議は 2026年11月16〜20日、ブカレスト(公式サイトで確認)。
-      // 卒業研究(2026.03 の発表)を発展させたもので、今は別の問題に取り組んでいる(R18-8)。著者は R18-6 の答え
-      group: 'past',
+      // 卒業研究(2026.03 の発表)を発展させたもの。著者は R18-6 の答え。国際会議の査読を経て採択されたので refereed
       date: '2026.11',
-      status: '採択',
+      status: 'Accepted',
+      refereed: true,
       title: 'Toward Portable SPARQL Queries Across Linked Open Data: A Query Relaxation Approach to Cross-Dataset Rewriting',
       lang: 'en',
       authors: 'Masato Hinooka, Mitsuharu Nagamori',
@@ -29,7 +25,6 @@ export const research = {
         '2026年3月の発表を発展させ、国際会議に採択された研究です。問い合わせを別のデータセット向けに書き換えても答えが0件になる原因を3つに分け、原因ごとに条件をゆるめる手順を作りました。545件の問い合わせで、答えが返る割合が86.4%から90.5%に上がりました。',
     },
     {
-      group: 'current',
       date: '2026.09',
       title: '未知のLODデータセットに対する問い合わせのための知識獲得支援手法の検討',
       authors: '日野岡雅人, 永森光晴, 三原鉄也',
@@ -39,19 +34,16 @@ export const research = {
         'データの項目の決め方（スキーマ）はデータセットごとに違うため、初めて見る LOD に問い合わせを書くのは難しくなります。大規模言語モデルで、そのデータセットに合った問い合わせの例を示し、書き始めを助ける方法を検討しました。',
     },
     {
-      group: 'past',
       date: '2026.03',
-      title: 'SPARQLクエリの再利用を目的としたQuery Relaxationに基づく変換手法の検討',
+      // 題は J-STAGE の正式な題にそろえた(確認シート19回目 R19-2。前は「SPARQLクエリの再利用を目的としたQuery Relaxationに基づく変換手法の検討」)
+      title: 'クエリの再利用性向上を目的とした異なるLODデータセット間におけるQuery Relaxation に基づくSPARQL 変換手法',
       authors: '日野岡雅人, 永森光晴, 三原鉄也',
       venue: '人工知能学会 第68回セマンティックウェブとオントロジー研究会（SIG-SWO-068-02）',
-      // J-STAGE の正式な題は「クエリの再利用性向上を目的とした異なるLODデータセット間におけるQuery Relaxation に基づくSPARQL 変換手法」。
-      // 題をそろえるかは確認シート19回目で聞く
       doi: '10.11517/jsaisigtwo.2026.SWO-068_02',
       plain:
         'あるデータセット向けに書いた問い合わせを別のデータセットで使うと、実行はできても結果が0件になることがよくあります。条件を少しずつゆるめて、別のデータセットでも答えが返る形に変換する手法を検討しました。',
     },
     {
-      group: 'past',
       date: '2024.03',
       title: '表面プラズモン共鳴を用いた蛍光増強の基礎的検討',
       authors: '寺﨑雅人, 内海淳志',
