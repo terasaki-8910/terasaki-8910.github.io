@@ -1,0 +1,5 @@
+/* 評価の星(Stars.jsx)。/movies/ とトップのプレビューで使う */
+.mv-stars { display: inline-flex; gap: 1px; vertical-align: -2px; }
+.mv-stars svg { width: 14px; height: 14px; }
+.mv-stars__base { fill: var(--color-line); }
+.mv-stars__on { fill: var(--color-ink); }
