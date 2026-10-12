@@ -6,7 +6,7 @@ import ShotViewer from './components/career/ShotViewer'
 import './components/career/career.css'
 
 import { skills, OTHER_LEVELS } from './data/skills'
-import { research } from './data/research'
+import { research, TALK_GROUPS } from './data/research'
 import { timeline, partTimeJobs } from './data/timeline'
 import { works, WORKS_NOTE, AI_PRINCIPLES } from './data/works'
 
@@ -89,11 +89,14 @@ function Section({ title, children }) {
 
 // トップの学歴・経歴と同じ部品(等幅の期間、見出し、説明、左の縦線)。
 // 期間の文字は黒(R15-7)、縦線は灰色の細い線(R16-3「縦線(ピンク)は余計ですね」)
-function Entry({ label, title, children }) {
+// 英語の題(lang="en")は、論文と同じ欧文の書体で出す(R18-17)
+function Entry({ label, title, lang, children }) {
   return (
     <div className="relative pl-6 border-l border-line">
       {label && <div className="text-sm font-mono text-ink">{label}</div>}
-      <h3 className="text-xl font-display text-ink mt-2">{title}</h3>
+      <h3 lang={lang} className={`text-xl ${lang === 'en' ? 'font-latin-serif font-bold leading-snug' : 'font-display'} text-ink mt-2`}>
+        {title}
+      </h3>
       {children}
     </div>
   )
@@ -171,7 +174,9 @@ export default function CareerPage() {
               )}
             </h1>
             <p className="mt-8 text-lg text-ink">{AFFILIATION}</p>
+            {/* 「連絡先: アドレス」の形(確認シート18回目 R18-17) */}
             <p className="mt-2">
+              <span className="text-muted">連絡先: </span>
               <a
                 href={`mailto:${EMAIL}`}
                 className="font-mono text-ink underline decoration-line underline-offset-4 hover:text-accent transition-colors"
@@ -230,9 +235,16 @@ export default function CareerPage() {
 
           <Section title="取り組んでいる研究">
             <p className="text-lg text-ink leading-relaxed">{annotate(research.summary, seenResearch)}</p>
-            <div className="space-y-6 mt-10">
-              {research.talks.map((talk) => (
-                <Entry key={talk.title} label={talk.status ? `${talk.date}（${talk.status}）` : talk.date} title={talk.title}>
+            {/* 現在の研究と、これまでの研究に分ける(R18-8「今は別の問題に取り組んでいることがわかるように」) */}
+            {TALK_GROUPS.map((group) => {
+              const talks = research.talks.filter((talk) => talk.group === group.id)
+              if (talks.length === 0) return null
+              return (
+                <div key={group.id} className="mt-10">
+                  <p className="text-sm text-muted mb-4">{group.label}</p>
+                  <div className="space-y-6">
+              {talks.map((talk) => (
+                <Entry key={talk.title} label={talk.status ? `${talk.date}（${talk.status}）` : talk.date} title={talk.title} lang={talk.lang}>
                   {(talk.plain || (SHOW_DRAFTS && talk.plainDraft)) && (
                     <p className="text-ink leading-relaxed mt-2">{annotate(talk.plain || talk.plainDraft, seenResearch)}</p>
                   )}
@@ -240,10 +252,26 @@ export default function CareerPage() {
                     {talk.authors && <>{talk.authors} ／ </>}
                     <Venue text={talk.venue} />
                   </p>
+                  {talk.doi && (
+                    <p className="text-sm text-ink mt-1">
+                      DOI:{' '}
+                      <a
+                        href={`https://doi.org/${talk.doi}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono break-all underline decoration-line underline-offset-4 hover:text-accent transition-colors"
+                      >
+                        {talk.doi}
+                      </a>
+                    </p>
+                  )}
                   {talk.authorsNote && <p className="text-sm text-ink mt-1">※ {talk.authorsNote}</p>}
                 </Entry>
               ))}
-            </div>
+                  </div>
+                </div>
+              )
+            })}
           </Section>
 
           {/* 年表に見えないように、期間と左の縦線は付けない。主な技術は説明を付けて、ほかは「その他」にまとめる */}
@@ -330,8 +358,8 @@ export default function CareerPage() {
             </div>
           </Section>
 
-          {/* プロジェクトに共通する、AI との開発の方針(R17-20・R17-21) */}
-          <Section title={AI_PRINCIPLES.title}>
+          {/* プロジェクトに共通する、AI との開発の方針(R17-20・R17-21)。見出しは「AI駆動開発での学び」(R18-17) */}
+          <Section title={annotate(AI_PRINCIPLES.title, seenAi)}>
             <ul className="list-disc pl-5 space-y-2 text-ink leading-relaxed">
               {AI_PRINCIPLES.items.map((item) => (
                 <li key={item}>{annotate(item, seenAi)}</li>
