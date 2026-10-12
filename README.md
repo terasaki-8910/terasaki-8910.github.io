@@ -9,9 +9,9 @@
 [![GitHub Activity](https://github.com/terasaki-8910/terasaki-8910.github.io/actions/workflows/update-github-activity.yml/badge.svg)](https://github.com/terasaki-8910/terasaki-8910.github.io/actions/workflows/update-github-activity.yml)
 [![Trakt](https://github.com/terasaki-8910/terasaki-8910.github.io/actions/workflows/update-trakt.yml/badge.svg)](https://github.com/terasaki-8910/terasaki-8910.github.io/actions/workflows/update-trakt.yml)
 
-![ページ移動の演出](documentation/readme/page-transition.gif)
+![サイト全体の動き](documentation/readme/site-tour.gif)
 
-<sub>ページを開くと背景のマス目がはがれて中身が見え、別のページへ移るときはマスが画面を埋めてから切り替わります。右上の 2×2 のボタンがプロジェクトのメニューです。</sub>
+<sub>トップを上から順に見て、右上の 2×2 のメニューからごみ収集カレンダーへ移るところです。スクロールに合わせて GitHub の草が横に流れ、別のページへ移るときは背景のマス目が画面を埋めてから切り替わります。</sub>
 
 ## 目次
 
@@ -70,12 +70,9 @@
 - プロジェクト：各ページへのリンクに、中身を縮めたプレビューを載せています（3D ASCII のビューア、最近の 3 曲、今日と明日のごみ、おまかせで 1 体、最近 2 週間に遊んだゲーム、最近観た 3 作品）。
 - 更新履歴：ビルド時に `git log`（親コミット付き）を取り込み、ブランチとマージをグラフで描きます。自動更新のコミットは除き、それをまたいでも線がつながるよう祖先をたどり直します。
 
-<table>
-  <tr>
-    <td width="50%"><img src="documentation/readme/projects.png" alt="プロジェクトのプレビュー"></td>
-    <td width="50%"><img src="documentation/readme/commit-graph.png" alt="更新履歴のブランチグラフ"></td>
-  </tr>
-</table>
+<img src="documentation/readme/projects.png" alt="プロジェクトのプレビュー" width="720">
+
+<img src="documentation/readme/commit-graph.png" alt="更新履歴のブランチグラフ" width="720">
 
 ### 3D ASCII `/ascii/`
 
