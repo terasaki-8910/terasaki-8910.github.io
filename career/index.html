@@ -15,45 +15,7 @@
     <meta property="og:url" content="https://terasaki-8910.github.io/career/">
     <meta property="og:image" content="https://terasaki-8910.github.io/icons/og-image.png">
 
-    <!-- 構造化データ(ページに出ている事実だけ) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "url": "https://terasaki-8910.github.io/career/",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "日野岡雅人",
-        "alternateName": "ヒノオカ マサト",
-        "url": "https://terasaki-8910.github.io/career/",
-        "affiliation": {
-          "@type": "CollegeOrUniversity",
-          "name": "筑波大学大学院 情報学学位プログラム"
-        },
-        "alumniOf": [
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "筑波大学 情報学群 情報メディア創成学類"
-          },
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "舞鶴工業高等専門学校"
-          }
-        ],
-        "knowsAbout": [
-          "Linked Open Data",
-          "SPARQL",
-          "RDF",
-          "Python",
-          "Linux",
-          "GitHub"
-        ],
-        "sameAs": [
-          "https://github.com/terasaki-8910"
-        ]
-      }
-    }
-    </script>
+    <!-- 構造化データと、検索エンジン向けの中身は、ビルドのときに入れる(vite.config.js の careerSeoPlugin) -->
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
