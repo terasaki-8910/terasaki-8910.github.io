@@ -99,7 +99,7 @@ function generateManifest(outputPath) {
   const manifest = {
     name: '@オーバーライド — 冬色',
     short_name: '@オーバーライド',
-    description: '冬色のポートフォリオ。取り組んできたプロジェクト、未完成のアイデア、ついでの自己紹介。',
+    description: '冬色の個人サイト。取り組んできたプロジェクト、未完成のアイデア、ついでの自己紹介。',
     start_url: '/',
     display: 'standalone',
     background_color: '#F9EC8E',

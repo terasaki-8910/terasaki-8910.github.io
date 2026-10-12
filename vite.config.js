@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { execSync } from 'child_process'
+import { careerFallbackHtml, careerJsonLd, FALLBACK_CSS } from './scripts/career-seo.mjs'
 
 // 画面の初期表示件数(「すべて見る」で展開する前)。
 const COMMIT_LOG_INITIAL = 15
@@ -188,8 +189,29 @@ function blockFxPlugin() {
   }
 }
 
+// /career/ の中身を、検索エンジン向けに HTML にも入れる(確認シート18回目 R18-11。scripts/career-seo.mjs)。
+// 構造化データも同じデータから作るので、文が変わっても食い違わない
+function careerSeoPlugin() {
+  return {
+    name: 'career-seo',
+    transformIndexHtml: {
+      order: 'pre',
+      handler(html, ctx) {
+        if (!(ctx.filename || '').split('\\').join('/').endsWith('/career/index.html')) return html
+        return html
+          .replace('<div id="root"></div>', `<div id="root">${careerFallbackHtml()}</div>`)
+          .replace('</head>', `  <style>${FALLBACK_CSS}</style>
+    <script type="application/ld+json">
+${careerJsonLd()}
+    </script>
+  </head>`)
+      },
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [react(), charaSessionLogDevPlugin(), blockFxPlugin()],
+  plugins: [react(), charaSessionLogDevPlugin(), blockFxPlugin(), careerSeoPlugin()],
   // username.github.ioのユーザーサイトは常にドメインルートで配信されるため
   // 絶対パスを使う。相対パス(./)だと、GitHub Pagesが404.htmlを任意の深さの
   // 存在しないURL(例: /foo/bar/baz)にそのまま返したときに、アセットの
