@@ -2,7 +2,7 @@
 
 個人サイト兼、自分で使う小さなツールの置き場です。サーバーは持たず、Spotify・Steam・GitHub などのデータは GitHub Actions が定期的に JSON にしてリポジトリへ commit し、GitHub Pages から静的に配信しています。
 
-サイト: https://terasaki-8910.github.io
+サイト: https://fuyuiro.pages.dev
 
 [![Spotify](https://github.com/terasaki-8910/terasaki-8910.github.io/actions/workflows/update-spotify.yml/badge.svg)](https://github.com/terasaki-8910/terasaki-8910.github.io/actions/workflows/update-spotify.yml)
 [![Steam](https://github.com/terasaki-8910/terasaki-8910.github.io/actions/workflows/update-steam.yml/badge.svg)](https://github.com/terasaki-8910/terasaki-8910.github.io/actions/workflows/update-steam.yml)
