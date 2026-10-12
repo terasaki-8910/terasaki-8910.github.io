@@ -64,8 +64,10 @@ export default function Profile() {
     })
   }, [])
 
+  // 節の上下は、節と節の間が空きすぎないよう 128px から 80px・64px に詰めた(確認シート17回目 R17-2)。
+  // 題の大きさと、題の下の余白(mb-20)はそのまま
   return (
-    <section ref={sectionRef} className="px-8 py-32">
+    <section ref={sectionRef} className="px-8 pt-20 pb-16">
       <div className="bk-content max-w-5xl mx-auto">
         <h2 className="text-massive font-medium font-display text-ink mb-20">自己紹介</h2>
 

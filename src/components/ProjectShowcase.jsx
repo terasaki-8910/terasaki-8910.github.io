@@ -33,11 +33,12 @@ export default function ProjectShowcase() {
     })
   }, [])
 
-  // 項目の間と、次の「更新履歴」までの余白は詰める。題(プロジェクト)の上下の余白はそのまま
-  // (題は大きく見せたい。確認シート16回目 R16-47)。行で並べるプレビューは最後の行の下線を出さず、
-  // 項目の区切り線で閉じる(線が2本続かないように)
+  // 項目の間と、次の「更新履歴」までの余白は詰める(確認シート16回目 R16-47)。節と節の間も詰める
+  // (R17-2「自己紹介とプロジェクトの間とか」。自己紹介の節の下 128→64px、この節の上 128→80px)。
+  // 題の大きさと、題の下の余白(mb-20)はそのまま(題は大きく見せたい)。行で並べるプレビューは
+  // 最後の行の下線を出さず、項目の区切り線で閉じる(線が2本続かないように)
   return (
-    <section ref={sectionRef} className="px-8 pt-32 pb-24">
+    <section ref={sectionRef} className="px-8 pt-20 pb-16">
       <div className="bk-content max-w-4xl mx-auto">
         <h2 className="text-massive font-medium font-display text-ink mb-20">プロジェクト</h2>
 
