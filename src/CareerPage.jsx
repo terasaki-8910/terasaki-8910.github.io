@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import ProjectMenu from './components/ProjectMenu'
 import { annotate } from './components/career/Term'
+import { SHOW_DRAFTS } from './components/career/drafts'
 import ShotViewer from './components/career/ShotViewer'
 import './components/career/career.css'
 
@@ -16,10 +17,10 @@ import { works, WORKS_NOTE } from './data/works'
  * 左上のロゴと右上のメニューは本体と同じものを置く(このサイトの一部だと分かるように。2026-10-05 本人指定)。
  * 研究・技術スタック・学歴・経歴は、トップの自己紹介と同じデータを読む。学歴・経歴は自己紹介の中に置く。
  * 専門用語(src/data/glossary.js)は、見出し(節)ごとに最初に出たところだけに説明の吹き出しを付ける。
+ * プロジェクトの節(概要・経緯・工夫・学び)にも付ける(R16-47「一般的(文系の人)にも不明な用語は注釈をつけること」)。
  * 文章は黒(text-ink)で出す。灰色(text-muted)は、表の左の列・URL などのラベルだけに使う(2026-10-05 本人指定)。
  * 決まっていない文(各データの draft・draftText・plainDraft)は、/career/?drafts のときだけ出す。
  */
-const SHOW_DRAFTS = new URLSearchParams(window.location.search).has('drafts')
 // 名前と読み仮名(本人指定。空なら振らない)
 const NAME_PARTS = [
   { text: '日野岡', reading: 'ヒノオカ' },
@@ -125,6 +126,7 @@ export default function CareerPage() {
   const seenIntro = new Set()
   const seenResearch = new Set()
   const seenSkills = new Set()
+  const seenWorks = new Set()
   const shownTimeline = timeline.filter((item) => !item.draft || SHOW_DRAFTS)
   const mainSkills = skills.filter((skill) => skill.group === 'main').sort((a, b) => a.careerOrder - b.careerOrder)
   const otherLevels = OTHER_LEVELS.map((level) => ({
@@ -259,7 +261,7 @@ export default function CareerPage() {
           </Section>
 
           <Section title="プロジェクト">
-            {WORKS_NOTE && <p className="-mt-4 mb-10 text-ink leading-relaxed">{WORKS_NOTE}</p>}
+            {WORKS_NOTE && <p className="-mt-4 mb-10 text-ink leading-relaxed">{annotate(WORKS_NOTE, seenWorks)}</p>}
             <div className="works space-y-12">
               {works.map((raw) => {
                 // 下書きを見るときは、工夫・経緯・学びを下書きの文に差し替える
@@ -289,18 +291,18 @@ export default function CareerPage() {
                     </div>
                   )}
                   <dl className="work__facts mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-[6.5em_minmax(0,1fr)]">
-                    <WorkFact term="概要">{work.summary}</WorkFact>
-                    {work.background && <WorkFact term="作った経緯">{work.background}</WorkFact>}
+                    <WorkFact term="概要">{annotate(work.summary, seenWorks)}</WorkFact>
+                    {work.background && <WorkFact term="作った経緯">{annotate(work.background, seenWorks)}</WorkFact>}
                     <WorkFact term="担当">{work.role}</WorkFact>
                     <WorkFact term="使った技術">{work.tech}</WorkFact>
                     <WorkFact term="工夫">
                       <ul className="list-disc pl-5 space-y-1">
                         {work.points.map((point) => (
-                          <li key={point}>{point}</li>
+                          <li key={point}>{annotate(point, seenWorks)}</li>
                         ))}
                       </ul>
                     </WorkFact>
-                    {work.learned && <WorkFact term="学び">{work.learned}</WorkFact>}
+                    {work.learned && <WorkFact term="学び">{annotate(work.learned, seenWorks)}</WorkFact>}
                   </dl>
                 </article>
                 )

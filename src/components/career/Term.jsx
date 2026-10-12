@@ -1,6 +1,10 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 import { PiInfoBold } from 'react-icons/pi'
 import { glossary } from '../../data/glossary'
+import { SHOW_DRAFTS } from './drafts'
+
+// 決まっていない説明(draft)は、/career/?drafts のときだけ使う
+const terms = glossary.filter((entry) => SHOW_DRAFTS || !entry.draft)
 
 const canHover = () => typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(hover: hover)').matches
 
@@ -122,7 +126,7 @@ export function annotate(text, seen) {
   let rest = text
   for (;;) {
     let best = null
-    for (const entry of glossary) {
+    for (const entry of terms) {
       if (seen.has(entry.id)) continue
       for (const word of entry.words) {
         const at = rest.indexOf(word)
