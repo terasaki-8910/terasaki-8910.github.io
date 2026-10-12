@@ -302,7 +302,10 @@ export default function CareerPage() {
                     <div className="work-shots">
                       {work.shots.map((shot) => (
                         <button key={shot.src} type="button" className="work-shot" aria-label={`${shot.alt}を大きく見る`} onClick={() => setViewing(shot)}>
-                          <img src={shot.src} width={shot.width} height={shot.height} alt={shot.alt} loading="lazy" decoding="async" />
+                          <picture>
+                            {shot.still && <source media="(prefers-reduced-motion: reduce)" srcSet={shot.still} />}
+                            <img src={shot.src} width={shot.width} height={shot.height} alt={shot.alt} loading="lazy" decoding="async" />
+                          </picture>
                         </button>
                       ))}
                     </div>
