@@ -72,7 +72,7 @@ export default function Profile() {
         {/* PC(md以上)は左の列に「自己紹介 → 学歴・経歴」、右の列に My Skills を置く。
             スマホはこの並び(自己紹介 → My Skills → 学歴・経歴)のまま縦に積む。
             3行目(1fr)が My Skills の長さの余りを受け持ち、左の列の間が空かないようにする。 */}
-        <div className="grid gap-12 mb-32 md:grid-cols-2 md:grid-rows-[auto_auto_1fr] md:gap-y-0">
+        <div className="grid gap-12 mb-12 md:mb-16 md:grid-cols-2 md:grid-rows-[auto_auto_1fr] md:gap-y-0">
           <div className="md:col-start-1 md:row-start-1">
             {/* 節の題が「自己紹介」になったので、ここの同じ見出しは外した(2026-10-05 本人指定) */}
             <div className="border-t border-line">
