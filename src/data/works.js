@@ -3,6 +3,8 @@
 // 文は確認シート17回目で決まったもの(本人のメモから、PC の幅で 経緯・学びは3行まで、工夫は1行ずつ3つまで。R16-47)。
 // draft はまだ決まっていない文で、/career/?drafts のときだけ points・background・learned の代わりに出す。
 // shots: 実際に動いている画面(public/career/works/)。何枚でも置ける。どれも同じ高さにそろえ、押すと full を大きく出す。
+// 今は各リポジトリの README のデモ GIF を animated WebP にしたもの(確認シート17回目 R17-28)。動きを減らす設定の人には
+// still(静止画。大きく見るときは fullStill)を出す。
 // このサイトは画面を載せても意味が無いので、画像なし(確認シート14回目)。
 // 担当は作品ごとに Claude Code と書かず、プロジェクトの見出しの下に1行でまとめる(R16-36。WORKS_NOTE)。
 
@@ -18,6 +20,17 @@ export const AI_PRINCIPLES = {
     '報告をうのみにせず、実際に触って確かめます。うまくいかないときは、比べる相手を用意して原因を切り分けます。',
   ],
 }
+
+// README のデモ(高さ360pxの縮小版・元の大きさ・それぞれの静止画)。width は縮小版の幅
+const demoShot = (name, width, alt) => ({
+  src: `/career/works/${name}-demo.webp`,
+  full: `/career/works/${name}-demo-full.webp`,
+  still: `/career/works/${name}-demo-still.webp`,
+  fullStill: `/career/works/${name}-demo-still-full.webp`,
+  width,
+  height: 360,
+  alt,
+})
 
 export const works = [
   {
@@ -46,8 +59,7 @@ export const works = [
     repo: 'happydeck',
     summary: '複数のマシンで動いている Claude Code のセッションを、1つの画面で見て操作するデスクトップアプリ（Happy 経由）',
     role: '個人で設計・実装',
-    // 1つのセッションを大きく出した画面(確認シート14回目 R14-33)
-    shots: [{ src: '/career/works/happydeck.webp', full: '/career/works/happydeck-full.webp', width: 640, height: 400, alt: 'happydeck の画面（モックデータで、1つのセッションを大きく出したところ）' }],
+    shots: [demoShot('happydeck', 576, 'happydeck で、複数のマシンのセッションを並べて操作しているところ')],
     background:
       'Tailscale でつないだ4台のマシンの Claude Code を、1つの画面で見て作業も振りたかったのがきっかけです。Happy の中継はそのまま使い、足りない PC 向けの画面だけを Tauri で作りました（メモリは実測200MB以下）。',
     learned:
@@ -64,7 +76,7 @@ export const works = [
     repo: 'voice-transcript',
     summary: 'Groq の Whisper API で音声を文字起こしする、CLI とデスクトップアプリ',
     role: '個人で設計・実装',
-    shots: [{ src: '/career/works/voice-transcript.webp', full: '/career/works/voice-transcript-full.webp', width: 601, height: 400, alt: 'voice-transcript の履歴の画面' }],
+    shots: [demoShot('voice-transcript', 554, 'voice-transcript で、文字起こしの履歴に注釈を付けたり検索したりしているところ')],
     background:
       '1時間を超える授業の音声を文字起こしするため、CLI として作り始めました。使いながら画面・履歴・録音・辞書・注釈・検索を足し、Mac と Windows で同じ履歴を使えるよう自宅のサーバーに置きました。',
     learned:
@@ -81,7 +93,7 @@ export const works = [
     repo: 'claude-usage-tray',
     summary: 'Claude の使用量（5時間のセッション枠と週の枠）を、タスクトレイとメニューバーに常に表示するデスクトップアプリ',
     role: '個人で設計・実装・配布（Windows / macOS）',
-    shots: [{ src: '/career/works/claude-usage-tray.webp', full: '/career/works/claude-usage-tray-full.webp', width: 304, height: 367, alt: 'UsageTray のポップアップ（使用量の表示）' }],
+    shots: [demoShot('claude-usage-tray', 309, 'UsageTray のポップアップで、使用量を確かめているところ')],
     background:
       '使用量を見ながら、モデルの切り替えや並列での作業を判断したかったのがきっかけです。5時間の枠が後ろにずれていくのを防ぐため、枠が切れた瞬間に最小のコストで次の枠を始める機能も付けました。',
     learned:
@@ -98,6 +110,7 @@ export const works = [
     repo: 'HitokoePet',
     summary: 'Claude Code のセッションの状態に反応して、作業の完了を声で知らせるデスクトップペット',
     role: '個人で開発（オープンソースの petdex を取り込み、機能を追加）',
+    shots: [demoShot('HitokoePet', 574, 'HitokoePet が、作業の終わりを吹き出しと声で知らせているところ')],
     background:
       '複数のプロジェクトで Claude Code を並行して動かすと、終わったものや確認待ちで止まったものを見落とすため作りました。既存の3つの実装を比べ、足りなかった複数セッションへの対応を、MIT ライセンスの petdex をフォークして足しました。',
     learned:

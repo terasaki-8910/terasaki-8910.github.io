@@ -36,6 +36,7 @@
   box-shadow: 6px 6px 0 rgb(var(--color-accent));
 }
 .work-shot:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 4px; }
+.work-shot picture { display: block; }
 .work-shot img { display: block; height: var(--shot-h); width: auto; max-width: 100%; object-fit: contain; }
 
 /* 画像を大きく見る(外側・Esc・× で閉じる)。つまむ・ダブルタップ・ホイールで拡大し、拡大中は動かせる(R16-2) */

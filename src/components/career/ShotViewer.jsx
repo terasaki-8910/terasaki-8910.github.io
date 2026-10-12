@@ -4,6 +4,8 @@ const MIN = 1
 const MAX = 4
 const DOUBLE_TAP_MS = 300
 const clampScale = (s) => Math.min(MAX, Math.max(MIN, s))
+// 動きを減らす設定の人には、動く画像(README のデモ)の代わりに静止画を出す
+const reduceMotion = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
 
 /**
  * 画像を大きく見る。外側・Esc・× で閉じ、閉じたら押した画像にフォーカスを戻す。開いている間は後ろをスクロールしない。
@@ -167,7 +169,7 @@ export default function ShotViewer({ shot, onClose }) {
     >
       <img
         ref={imgRef}
-        src={shot.full || shot.src}
+        src={(reduceMotion() && (shot.fullStill || shot.still)) || shot.full || shot.src}
         alt={shot.alt}
         className="shot-viewer__img"
         data-zoomed={view.scale > 1 ? 'true' : 'false'}
