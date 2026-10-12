@@ -38,7 +38,7 @@
   font-display: swap;
 }
 
-/* Zen Kurenaido(Google Fonts, SIL OFL)をサブセット化して自ホスト(223KB/1302文字種)。
+/* Zen Kurenaido(Google Fonts, SIL OFL)をサブセット化して自ホスト(265KB/1539文字種)。
    収録対象はソース内の日本語(コメントは除外)+印字可能ASCII全域+データ由来の
    表示文字(ごみカレンダーの町名/かな、キャラピッカーのキャラ名/作品名/質問文)。
    データ由来の文字はソースをgrepしても出てこないため、明示的に抽出対象に
@@ -57,17 +57,18 @@
   font-display: swap;
 }
 
-/* 「奢」だけ Klee One(Google Fonts, SIL OFL)の字を使う。Zen Kurenaido の「奢」は下の「者」が
-   詰まって崩れて見えるため(推しア◯ネイターの「華奢」。2026-10-06 本人指定)。
+/* Zen Kurenaido で出せない・崩れる字だけ、Klee One(Google Fonts, SIL OFL)の字を使う。
+   - 「奢」(U+5962): Zen Kurenaido の字は下の「者」が詰まって崩れて見える(推しア◯ネイターの「華奢」。2026-10-06 本人指定)。
+   - 「～」(U+FF5E): Zen Kurenaido に無い(作品名「無職転生 ～異世界行ったら本気だす～」。2026-10-07 の同期で増えた)。
    同じ名前で unicode-range を絞った面を後に書くと、その字ではこちらが先に使われる。
-   1字だけのサブセット: python3 -m fontTools.subset KleeOne-Regular.ttf --unicodes=U+5962 --flavor=woff2 */
+   作り方: python3 -m fontTools.subset KleeOne-Regular.ttf --unicodes=U+5962,U+FF5E --flavor=woff2 */
 @font-face {
   font-family: 'Zen Kurenaido';
-  src: url('/fonts/kasha-klee-one.woff2') format('woff2');
+  src: url('/fonts/klee-one-fallback.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+5962;
+  unicode-range: U+5962, U+FF5E;
 }
 
 :root {

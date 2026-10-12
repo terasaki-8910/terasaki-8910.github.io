@@ -1,21 +1,21 @@
 {
   "files": {
-    "public/chara-picker/characters.json": "2573ef9bc4c4c72b2e54dab03568786afe625892e9fa5b5fe4e25580d32a4d98",
-    "public/chara-picker/supply.json": "4c848e31141e029ff9dbd9072cfe201fe09e6b4e936d453ff795784eec7bc069",
-    "public/chara-picker/likelihoods.json": "141dfcac723e8e95fc487dfc76f046c58e2efa8e3657f9778a0b0b6b9b00b192",
-    "public/chara-picker/tag-map.json": "59cf94c7120420f90b1887b5deb61f19392d1651e7937d4efe570b2d060ae156",
+    "public/chara-picker/characters.json": "54c24cfadc929681eb93c5cf3e5c223d4fcfe0c1347533953800eebbbd1e5ff6",
+    "public/chara-picker/supply.json": "6d6e2df6516491d66c515532e9bf7ab957fa4b6222c3c6e6049f5f2290395bb6",
+    "public/chara-picker/likelihoods.json": "07ac4ac81a51ee592ddf25fd862a7fd667fba3a00913b5e5c7436bfd7ecf66c5",
+    "public/chara-picker/tag-map.json": "d3672254b14fc68263ad30f5cb4019a0610180572e835abfe5850f87c9278b61",
+    "src/chara/engine/bayes.ts": "fd6df7f40d0f530121fb4b885a84007d6c5be98513b589cec65419d792d0fdaa",
+    "src/chara/data/schema.ts": "bdf8533e57ce34bd1b838bb63e423bc5a9d5d3fdc5874d6a1ebe955c18d52162",
     "public/chara-picker/questions.runtime.json": "f9dfe1956a8c4a891063a06a4d4aef22bf64216b7050944c2a94239ec97644b3",
-    "src/chara/engine/bayes.ts": "5441020ba13a27c1cbb44d07c858226811beeab74c610bdd7f3417adb4aef290",
     "src/chara/engine/recommend.ts": "43318be751c830c40b4d46e40873ca59da8bb387bd310b8ed6a5fd02ca234f7e",
     "src/chara/engine/questions.ts": "68500d8e2df80381c65f6df5e0f4c9ca7c2e8d06d8de8d1bcfa69cac65c69e5a",
     "src/chara/engine/supply.ts": "451fb9d1a2dfa365ccb29eab2e1f5d5760ae0e402cef7b381a51b9697d38b927",
     "src/chara/engine/cooldown.ts": "97fec8df4b2b4d7acde284fb402eac91cbdd7e85c0d93cbf3a88e20037c90561",
-    "src/chara/data/schema.ts": "372ba7bac60064ea7816e3ae07bc791821727c350def36d2e36e3fcee5b5579f",
     "src/chara/hooks/useBayesInterview.ts": "b376b8c90891fc3577d874b773c82b14ce5779366b9b074ce3c666498212abd8",
     "src/chara/hooks/useSessionLog.ts": "5d59ef1fa9ae83638af3088fbe04e89caa997d568de19a94b3269ac1e5e10127"
   },
-  "syncedAt": "2026-10-05T05:04:33.584Z",
-  "upstreamCommit": "65aaa21463047e42b5f963e2a574e672682b7817",
-  "upstreamSubject": "feat/gemma4-apply を取り込む: LLM 抽出を gemma-4 でやり直した結果を尤度に反映",
+  "syncedAt": "2026-10-07T00:22:50.721Z",
+  "upstreamCommit": "5b96ffe777413e34df6eca756ed358bd200d357f",
+  "upstreamSubject": "feat/expansion-1000 を取り込む: 収録キャラを488体から1008体に増やし、ベイズの質問上限を15問にする",
   "upstreamDirty": false
 }
