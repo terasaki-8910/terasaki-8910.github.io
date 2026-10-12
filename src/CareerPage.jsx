@@ -6,7 +6,8 @@ import ShotViewer from './components/career/ShotViewer'
 import './components/career/career.css'
 
 import { skills, OTHER_LEVELS } from './data/skills'
-import { research, TALK_GROUPS } from './data/research'
+import { research } from './data/research'
+import PaperList from './components/PaperList'
 import { timeline, partTimeJobs } from './data/timeline'
 import { works, WORKS_NOTE, AI_PRINCIPLES } from './data/works'
 import { NAME_PARTS, AFFILIATION, EMAIL, INTRO, STRENGTHS, FUTURE } from './data/profile'
@@ -83,18 +84,6 @@ function Entry({ label, title, lang, children }) {
       </h3>
       {children}
     </div>
-  )
-}
-
-// 会場名の末尾の（SIG-SWO-069-08）のような番号は、途中で折り返さない
-function Venue({ text }) {
-  const at = text.lastIndexOf('（')
-  if (at <= 0) return text
-  return (
-    <>
-      {text.slice(0, at)}
-      <span className="whitespace-nowrap">{text.slice(at)}</span>
-    </>
   )
 }
 
@@ -219,43 +208,16 @@ export default function CareerPage() {
 
           <Section title="取り組んでいる研究">
             <p className="text-lg text-ink leading-relaxed">{annotate(research.summary, seenResearch)}</p>
-            {/* 現在の研究と、これまでの研究に分ける(R18-8「今は別の問題に取り組んでいることがわかるように」) */}
-            {TALK_GROUPS.map((group) => {
-              const talks = research.talks.filter((talk) => talk.group === group.id)
-              if (talks.length === 0) return null
-              return (
-                <div key={group.id} className="mt-10">
-                  <p className="text-sm text-muted mb-4">{group.label}</p>
-                  <div className="space-y-6">
-              {talks.map((talk) => (
-                <Entry key={talk.title} label={talk.status ? `${talk.date}（${talk.status}）` : talk.date} title={talk.title} lang={talk.lang}>
-                  {(talk.plain || (SHOW_DRAFTS && talk.plainDraft)) && (
-                    <p className="text-ink leading-relaxed mt-2">{annotate(talk.plain || talk.plainDraft, seenResearch)}</p>
-                  )}
-                  <p className="text-sm text-ink leading-relaxed mt-2">
-                    {talk.authors && <>{talk.authors} ／ </>}
-                    <Venue text={talk.venue} />
-                  </p>
-                  {talk.doi && (
-                    <p className="text-sm text-ink mt-1">
-                      DOI:{' '}
-                      <a
-                        href={`https://doi.org/${talk.doi}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-mono break-all underline decoration-line underline-offset-4 hover:text-accent transition-colors"
-                      >
-                        {talk.doi}
-                      </a>
-                    </p>
-                  )}
-                  {talk.authorsNote && <p className="text-sm text-ink mt-1">※ {talk.authorsNote}</p>}
-                </Entry>
-              ))}
-                  </div>
-                </div>
-              )
-            })}
+            {/* 論文の一覧(researchmap と同じ形。R19-1)。人事の人向けの説明と、旧姓の添え書きも出す */}
+            <div className="mt-10">
+              <PaperList
+                papers={research.talks}
+                titleTag="h3"
+                showNotes
+                plainOf={(paper) => paper.plain || (SHOW_DRAFTS && paper.plainDraft)}
+                renderPlain={(text) => annotate(text, seenResearch)}
+              />
+            </div>
           </Section>
 
           {/* 年表に見えないように、期間と左の縦線は付けない。主な技術は説明を付けて、ほかは「その他」にまとめる */}
