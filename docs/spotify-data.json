@@ -1,6 +1,127 @@
 {
-  "lastUpdated": "2026-10-11T16:58:42.899Z",
+  "lastUpdated": "2026-10-12T13:50:23.250Z",
   "tracks": [
+    {
+      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
+      "name": "Freakshow",
+      "artist": "Dirty Palm, LexBlaze",
+      "album": "Freakshow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
+      "playedAt": "2026-10-12T10:16:25.889Z",
+      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
+      "duration": 174375,
+      "previewUrl": ""
+    },
+    {
+      "id": "6V53UDIOvJ8QNjRAQmvQQn",
+      "name": "Attack of the Killer Queen",
+      "artist": "Toby Fox, Lena Raine, Marcy Nabors",
+      "album": "DELTARUNE Chapter 2 (Original Game Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e14fd3669881ed569497a76",
+      "playedAt": "2026-10-12T08:37:38.603Z",
+      "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
+      "duration": 120000,
+      "previewUrl": ""
+    },
+    {
+      "id": "0m9QPTZzjtqCWY9Jg8poHc",
+      "name": "ヴァンパイア",
+      "artist": "DECO*27",
+      "album": "ヴァンパイア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738d8d73b427590bc1a6ae8c99",
+      "playedAt": "2026-10-12T05:15:57.672Z",
+      "spotifyUrl": "https://open.spotify.com/track/0m9QPTZzjtqCWY9Jg8poHc",
+      "duration": 178235,
+      "previewUrl": ""
+    },
+    {
+      "id": "0QxUDD87uCY6G9hcWGVMMu",
+      "name": "エリート",
+      "artist": "Chinozo",
+      "album": "エリート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734d4a6142bbca45e92436ae29",
+      "playedAt": "2026-10-12T05:12:58.928Z",
+      "spotifyUrl": "https://open.spotify.com/track/0QxUDD87uCY6G9hcWGVMMu",
+      "duration": 169999,
+      "previewUrl": ""
+    },
+    {
+      "id": "6T2b2vKSdZuvbUzK3WIGJM",
+      "name": "ラヴィ",
+      "artist": "THREEE",
+      "album": "ラヴィ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733fee586e9a8ec4b9c65ac9e6",
+      "playedAt": "2026-10-12T05:03:22.671Z",
+      "spotifyUrl": "https://open.spotify.com/track/6T2b2vKSdZuvbUzK3WIGJM",
+      "duration": 180000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ic62hKqeDhZsa9l6YQxzJ",
+      "name": "メズマライザー (feat. 初音ミク&重音テト)",
+      "artist": "32ki, Hatsune Miku, 重音テト",
+      "album": "メズマライザー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321333eb66e3cf9f3818e789f",
+      "playedAt": "2026-10-12T05:00:22.184Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
+      "duration": 156972,
+      "previewUrl": ""
+    },
+    {
+      "id": "0zxyK9Ih5rnN485VY73bUp",
+      "name": "Luna say maybe",
+      "artist": "初星学園, 美波, 月村手毬",
+      "album": "Luna say maybe",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b3320c61c4d7e6fde1fff725",
+      "playedAt": "2026-10-12T04:57:34.122Z",
+      "spotifyUrl": "https://open.spotify.com/track/0zxyK9Ih5rnN485VY73bUp",
+      "duration": 265266,
+      "previewUrl": ""
+    },
+    {
+      "id": "6qB3lZIfnDC8TE2245NDtO",
+      "name": "夜の踊り子",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-10-12T04:53:08.304Z",
+      "spotifyUrl": "https://open.spotify.com/track/6qB3lZIfnDC8TE2245NDtO",
+      "duration": 302920,
+      "previewUrl": ""
+    },
+    {
+      "id": "364JzOajs76bJymjHm3sVY",
+      "name": "ピースサイン - Peace Sign",
+      "artist": "Kenshi Yonezu",
+      "album": "BOOTLEG",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
+      "playedAt": "2026-10-12T04:48:04.964Z",
+      "spotifyUrl": "https://open.spotify.com/track/364JzOajs76bJymjHm3sVY",
+      "duration": 238525,
+      "previewUrl": ""
+    },
+    {
+      "id": "2tlOVDJ3lQsUxz22vPJ4c4",
+      "name": "唱",
+      "artist": "Ado",
+      "album": "唱",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273985fe71d6d5d528429037716",
+      "playedAt": "2026-10-12T04:44:05.890Z",
+      "spotifyUrl": "https://open.spotify.com/track/2tlOVDJ3lQsUxz22vPJ4c4",
+      "duration": 189772,
+      "previewUrl": ""
+    },
+    {
+      "id": "4H89WUjBaQMIiqcnMSVX1j",
+      "name": "人マニア",
+      "artist": "Sasuke Haraguchi",
+      "album": "人マニア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f381b44dcb194d619a487dc",
+      "playedAt": "2026-10-12T04:40:51.462Z",
+      "spotifyUrl": "https://open.spotify.com/track/4H89WUjBaQMIiqcnMSVX1j",
+      "duration": 127200,
+      "previewUrl": ""
+    },
     {
       "id": "6HznFPNdvbxgzm5jJyNlwp",
       "name": "オーバーライド",
@@ -32,17 +153,6 @@
       "playedAt": "2026-10-11T13:29:41.013Z",
       "spotifyUrl": "https://open.spotify.com/track/19XVDw9shopE7w6odXNVSl",
       "duration": 234000,
-      "previewUrl": ""
-    },
-    {
-      "id": "5ic62hKqeDhZsa9l6YQxzJ",
-      "name": "メズマライザー (feat. 初音ミク&重音テト)",
-      "artist": "32ki, Hatsune Miku, 重音テト",
-      "album": "メズマライザー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321333eb66e3cf9f3818e789f",
-      "playedAt": "2026-10-11T13:20:15.153Z",
-      "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
-      "duration": 156972,
       "previewUrl": ""
     },
     {
@@ -219,116 +329,6 @@
       "playedAt": "2026-10-11T12:17:21.744Z",
       "spotifyUrl": "https://open.spotify.com/track/2FpEXjGqe2dJJ9oB8c8Io2",
       "duration": 249285,
-      "previewUrl": ""
-    },
-    {
-      "id": "3nVNZCA44SuIYipRzRVBhF",
-      "name": "Spider Dance",
-      "artist": "Toby Fox",
-      "album": "UNDERTALE Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27384eb923a79ba98269f0a7390",
-      "playedAt": "2026-10-11T12:13:11.936Z",
-      "spotifyUrl": "https://open.spotify.com/track/3nVNZCA44SuIYipRzRVBhF",
-      "duration": 106434,
-      "previewUrl": ""
-    },
-    {
-      "id": "6fKcJ3VglKLGyLRaiEyDPo",
-      "name": "Spider Dance",
-      "artist": "Holder, GameChops",
-      "album": "Undertale Remixed",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d6f95bd49983c2ba98795633",
-      "playedAt": "2026-10-11T12:11:24.975Z",
-      "spotifyUrl": "https://open.spotify.com/track/6fKcJ3VglKLGyLRaiEyDPo",
-      "duration": 180004,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FpXO7ehznN8Mh3sNfRd1r",
-      "name": "Oblivion",
-      "artist": "TheFatRat, Lola Blanc",
-      "album": "Oblivion",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
-      "playedAt": "2026-10-11T12:08:24.440Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
-      "duration": 211935,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LtKpKOO0fyGBAbv761JCu",
-      "name": "Sunlight",
-      "artist": "TheFatRat, Phaera",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-10-11T12:04:51.985Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
-      "duration": 169952,
-      "previewUrl": ""
-    },
-    {
-      "id": "3GGOKTfxgyluPvAFnB30zE",
-      "name": "第ゼロ感",
-      "artist": "10-FEET",
-      "album": "第ゼロ感",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273884fb7177fe576362b1f6089",
-      "playedAt": "2026-10-11T06:16:50.744Z",
-      "spotifyUrl": "https://open.spotify.com/track/3GGOKTfxgyluPvAFnB30zE",
-      "duration": 287991,
-      "previewUrl": ""
-    },
-    {
-      "id": "0VjIjW4GlUZAMYd2vXMi3b",
-      "name": "Blinding Lights",
-      "artist": "The Weeknd",
-      "album": "After Hours",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
-      "playedAt": "2026-10-11T06:07:25.497Z",
-      "spotifyUrl": "https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b",
-      "duration": 200040,
-      "previewUrl": ""
-    },
-    {
-      "id": "4q57oGT90FfPHf7vWp32Ho",
-      "name": "Judas",
-      "artist": "Lady Gaga",
-      "album": "Born This Way (Japan Special Edition Version)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736d2bc35812c2d7f67d110e48",
-      "playedAt": "2026-10-11T06:04:05.079Z",
-      "spotifyUrl": "https://open.spotify.com/track/4q57oGT90FfPHf7vWp32Ho",
-      "duration": 249066,
-      "previewUrl": ""
-    },
-    {
-      "id": "6Pgkp4qUoTmJIPn7ReaGxL",
-      "name": "Without You (feat. Sandro Cavazza)",
-      "artist": "Avicii, Sandro Cavazza",
-      "album": "AVĪCI (01)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389",
-      "playedAt": "2026-10-11T05:46:55.936Z",
-      "spotifyUrl": "https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL",
-      "duration": 181672,
-      "previewUrl": ""
-    },
-    {
-      "id": "7M3TZDUNvaNBo0qtWVaZif",
-      "name": "WanteD! WanteD!",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "ENSEMBLE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27322c627adf9c8754c9302fa35",
-      "playedAt": "2026-10-11T05:43:55.266Z",
-      "spotifyUrl": "https://open.spotify.com/track/7M3TZDUNvaNBo0qtWVaZif",
-      "duration": 217386,
-      "previewUrl": ""
-    },
-    {
-      "id": "0a3587n25Xhw098UeEbeJq",
-      "name": "青と夏",
-      "artist": "Mrs. GREEN APPLE",
-      "album": "青と夏",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273544c990ccc4e0b0a1ad6bb3a",
-      "playedAt": "2026-10-11T04:05:23.455Z",
-      "spotifyUrl": "https://open.spotify.com/track/0a3587n25Xhw098UeEbeJq",
-      "duration": 270506,
       "previewUrl": ""
     }
   ],
