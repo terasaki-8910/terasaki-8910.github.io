@@ -58,7 +58,7 @@ export default function HomeGamingPreview({ limit = 3 }) {
   return (
     <div className="border-t border-line">
       {state.rows.map((game) => (
-        <div key={game.appid} className="flex items-center gap-4 py-3 border-b border-line">
+        <div key={game.appid} className="flex items-center gap-4 py-3 border-b border-line last:border-b-0">
           {game.iconUrl ? (
             <img src={game.iconUrl} alt="" className="w-10 h-10 rounded shrink-0" loading="lazy" />
           ) : (

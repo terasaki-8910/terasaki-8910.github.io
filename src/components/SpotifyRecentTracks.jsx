@@ -196,7 +196,7 @@ export default function SpotifyRecentTracks({ limit = 30 }) {
             key={track.id}
             onClick={() => handlePlayPreview(track)}
             title={`${track.name} - ${track.artist} ${track.previewUrl ? '(30秒プレビュー)' : '(Spotifyで開く)'}`}
-            className="w-full flex items-center gap-4 py-3 border-b border-line text-left group"
+            className="w-full flex items-center gap-4 py-3 border-b border-line last:border-b-0 text-left group"
           >
             <div className="relative w-14 h-14 shrink-0 rounded overflow-hidden">
               <img

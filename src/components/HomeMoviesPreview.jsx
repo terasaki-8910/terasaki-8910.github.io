@@ -45,7 +45,7 @@ export default function HomeMoviesPreview({ limit = 3 }) {
   return (
     <div className="border-t border-line">
       {state.items.map((m) => (
-        <div key={`${m.type}-${m.trakt}`} className="flex items-center gap-4 py-3 border-b border-line">
+        <div key={`${m.type}-${m.trakt}`} className="flex items-center gap-4 py-3 border-b border-line last:border-b-0">
           <div className="h-14 aspect-[2/3] shrink-0 rounded overflow-hidden bg-line">
             {m.details?.poster && (
               <img src={`${IMG}w92${m.details.poster}`} alt="" className="w-full h-full object-cover" loading="lazy" />
