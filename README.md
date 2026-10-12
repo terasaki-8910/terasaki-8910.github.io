@@ -67,7 +67,7 @@
 ![GitHub の草を横に流すタイムライン](documentation/readme/github-timeline.gif)
 
 - GitHub の活動：GraphQL API の `contributionCalendar` を毎日取得し、活動のあった日だけを箱にして並べます。デスクトップでは縦スクロールに合わせて帯が横に流れます（GSAP ScrollTrigger の pin）。箱の高さはその日の件数、上下のずれは日付から決まるので、開くたびに配置が変わることはありません。
-- プロジェクト：各ページへのリンクに、中身を縮めたプレビューを載せています（最近の 3 曲、今日と明日のごみ、おまかせで 1 体）。
+- プロジェクト：各ページへのリンクに、中身を縮めたプレビューを載せています（3D ASCII のビューア、最近の 3 曲、今日と明日のごみ、おまかせで 1 体、最近 2 週間に遊んだゲーム、最近観た 3 作品）。
 - 更新履歴：ビルド時に `git log`（親コミット付き）を取り込み、ブランチとマージをグラフで描きます。自動更新のコミットは除き、それをまたいでも線がつながるよう祖先をたどり直します。
 
 <table>
@@ -109,7 +109,7 @@ Spotify の再生履歴（直近 30 曲）を 6 時間ごとに取得して並�
   </tr>
 </table>
 
-質問に答えていくと、488 体のキャラクターからベイズ推定で 1 体を当てます。「わからない」と答えたり、質問なしの「おまかせ」で選んだりもできます。エンジンとデータは開発元のリポジトリと同じファイルを `npm run sync:chara` で取り込み、ハッシュを記録して、こちらで手を入れていたら取り込みを止めます。キャラの画像は Danbooru から週 1 回 CI で候補を選んで JSON にしておき、表示は CDN への直リンクです（ブラウザから Danbooru の API を直接呼ぶと Cloudflare に止められるため）。詳しくは [documentation/chara-picker.md](documentation/chara-picker.md)。
+質問に答えていくと、1008 体のキャラクターからベイズ推定で 1 体を当てます（最初の推測までの質問は多くて 15 問）。「わからない」と答えたり、質問なしの「おまかせ」で選んだりもできます。エンジンとデータは開発元のリポジトリと同じファイルを `npm run sync:chara` で取り込み、ハッシュを記録して、こちらで手を入れていたら取り込みを止めます。キャラの画像は Danbooru から週 1 回 CI で候補を選んで JSON にしておき、表示は CDN への直リンクです（ブラウザから Danbooru の API を直接呼ぶと Cloudflare に止められるため）。詳しくは [documentation/chara-picker.md](documentation/chara-picker.md)。
 
 ### 遊んだゲームコレクション `/gaming-archive/`
 
@@ -165,7 +165,7 @@ npm run typecheck    # 型チェック(tsc --noEmit)
 
 ### 公開のしかた
 
-GitHub Pages は「Deploy from a branch」で main ブランチの `/docs` を配信しています。ソースを変えたら `npm run build` で `docs/` を作り直し、一緒に commit して push します。定期更新のワークフローは `docs/` の JSON も直接書き換えるので、ビルドを待たずに反映されます。
+GitHub Pages は「Deploy from a branch」で main ブランチの `/docs` を配信しています。main への push では、これとは別に `deploy.yml` も GitHub Actions 上で `npm run build` をやり直して公開します。どちらも同じ中身になるよう、ソースを変えたら手元でも `npm run build` で `docs/` を作り直し、一緒に commit して push します。定期更新のワークフローは `docs/` の JSON も直接書き換えるので、ビルドを待たずに反映されます。
 
 自動更新のコミットが先に入っていて push が通らないときは、`git pull --rebase origin main` してから push し直します。
 
