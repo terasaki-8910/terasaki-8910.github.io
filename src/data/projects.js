@@ -1,6 +1,8 @@
 /**
  * プロジェクト一覧。ProjectShowcase.jsx(トップページのカード表示)と
  * ProjectMenu.jsx(ヘッダー右上のメニュー)の両方から参照する単一の情報源。
+ * 項目を増やしたり題を変えたりしたら、index.html の #seo-fallback-content(クローラー向けのリンク)と
+ * public/sitemap.xml も合わせて直す。
  *
  * icon はヘッダーのメニューの行に出すアイコン(src/data/menuIcons.js のキー)。
  *
