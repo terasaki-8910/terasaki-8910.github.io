@@ -237,8 +237,7 @@ export default function SpotifyRecentTracks({ limit = 30 }) {
           </button>
         ))}
       </div>
-
-      <div className="text-muted text-sm mt-4">全{tracks.length}曲</div>
+      {/* 「全N曲」は外した(トップのプレビューでは3曲だけ出すので、全部で3曲と誤解されるため。確認シート16回目 R16-47) */}
     </div>
   )
 }
