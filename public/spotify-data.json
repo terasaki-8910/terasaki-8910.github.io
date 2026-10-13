@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-10-12T13:50:23.250Z",
+  "lastUpdated": "2026-10-13T04:41:44.888Z",
   "tracks": [
+    {
+      "id": "08JL0Sj30SFTuJif2H9nXJ",
+      "name": "CrossFire",
+      "artist": "KARUT",
+      "album": "Blue Archive Original Soundtrack (Vol.1 ~Longing for the memorable days~)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c9bed489db655b7ced162809",
+      "playedAt": "2026-10-13T04:02:19.274Z",
+      "spotifyUrl": "https://open.spotify.com/track/08JL0Sj30SFTuJif2H9nXJ",
+      "duration": 110589,
+      "previewUrl": ""
+    },
+    {
+      "id": "63gc4cyfksT7P69ZbK1lTN",
+      "name": "Operation☆DOTABATA!",
+      "artist": "ミツキヨ",
+      "album": "Blue Archive Original Soundtrack (Vol.6～Keeping for the abiding belief～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273aacfeb79a7e637915e5e4701",
+      "playedAt": "2026-10-13T04:00:33.684Z",
+      "spotifyUrl": "https://open.spotify.com/track/63gc4cyfksT7P69ZbK1lTN",
+      "duration": 116186,
+      "previewUrl": ""
+    },
+    {
+      "id": "0855UVvlrofWSSrtIBIpEk",
+      "name": "Sugary Holiday",
+      "artist": "EmoCosine",
+      "album": "Blue Archive Original Soundtrack (Vol.8　～Dreaming for the Melody of Revolution～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e56f85bdbfefbedc27f9fc32",
+      "playedAt": "2026-10-13T03:58:48.961Z",
+      "spotifyUrl": "https://open.spotify.com/track/0855UVvlrofWSSrtIBIpEk",
+      "duration": 148050,
+      "previewUrl": ""
+    },
+    {
+      "id": "1kJ3OVPVDyQRrupbNOJDES",
+      "name": "Peaceful Day",
+      "artist": "EmoCosine",
+      "album": "Blue Archive Original Soundtrack (Vol.8　～Dreaming for the Melody of Revolution～)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e56f85bdbfefbedc27f9fc32",
+      "playedAt": "2026-10-13T03:56:41.146Z",
+      "spotifyUrl": "https://open.spotify.com/track/1kJ3OVPVDyQRrupbNOJDES",
+      "duration": 145077,
+      "previewUrl": ""
+    },
     {
       "id": "4N3CAZ7qXbPKPWrcXd4gSh",
       "name": "Freakshow",
@@ -285,50 +329,6 @@
       "playedAt": "2026-10-11T12:31:05.937Z",
       "spotifyUrl": "https://open.spotify.com/track/034jvsVh9m8f2lRMvNeHWv",
       "duration": 195510,
-      "previewUrl": ""
-    },
-    {
-      "id": "2NCKZeWIu9lqUDfeLKAzfM",
-      "name": "Pixel Pig",
-      "artist": "Di Young",
-      "album": "Pixel Pig",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27373fc47ab6e8ee4c35c30673e",
-      "playedAt": "2026-10-11T12:27:49.907Z",
-      "spotifyUrl": "https://open.spotify.com/track/2NCKZeWIu9lqUDfeLKAzfM",
-      "duration": 173315,
-      "previewUrl": ""
-    },
-    {
-      "id": "2iEx9DTwwsNtGR4y4XWpH0",
-      "name": "Phoenix",
-      "artist": "Netrum, Halvorsen",
-      "album": "Phoenix",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dae3332426e0db9549075dc2",
-      "playedAt": "2026-10-11T12:24:56.065Z",
-      "spotifyUrl": "https://open.spotify.com/track/2iEx9DTwwsNtGR4y4XWpH0",
-      "duration": 238184,
-      "previewUrl": ""
-    },
-    {
-      "id": "5oOsiEQVNcTw3miJLjDuzK",
-      "name": "Ghosts",
-      "artist": "Jacob Tillberg",
-      "album": "Ghosts",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334004c0a11e05b6976d93022",
-      "playedAt": "2026-10-11T12:20:57.355Z",
-      "spotifyUrl": "https://open.spotify.com/track/5oOsiEQVNcTw3miJLjDuzK",
-      "duration": 215092,
-      "previewUrl": ""
-    },
-    {
-      "id": "2FpEXjGqe2dJJ9oB8c8Io2",
-      "name": "Unity",
-      "artist": "TheFatRat",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-10-11T12:17:21.744Z",
-      "spotifyUrl": "https://open.spotify.com/track/2FpEXjGqe2dJJ9oB8c8Io2",
-      "duration": 249285,
       "previewUrl": ""
     }
   ],
