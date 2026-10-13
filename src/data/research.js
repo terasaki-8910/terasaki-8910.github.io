@@ -12,17 +12,19 @@ export const research = {
   talks: [
     {
       // MTSR 2026 に採択(R17-28。2026-10-12 時点でカメラレディ前)。会議は 2026年11月16〜20日、ブカレスト(公式サイトで確認)。
-      // 卒業研究(2026.03 の発表)を発展させたもの。著者は R18-6 の答え。国際会議の査読を経て採択されたので refereed
+      // 著者は R18-6 の答え。国際会議の査読を経て採択されたので refereed。2026.03 の発表を「発展させた」ものではない
+      // (EKAW の査読をもとに書き方を変えたのがほとんど。2026-10-13 本人)。presentUntil の日までは「発表予定」を添える
       date: '2026.11',
       status: 'Accepted',
       refereed: true,
+      presentUntil: '2026-11-20',
       title: 'Toward Portable SPARQL Queries Across Linked Open Data: A Query Relaxation Approach to Cross-Dataset Rewriting',
       lang: 'en',
       authors: 'Masato Hinooka, Mitsuharu Nagamori',
       venue: '20th International Conference on Metadata and Semantics Research（MTSR 2026）',
-      // 確認シート18回目 R18-7 で決まった文(採択された論文の要旨から)
+      // 確認シート18回目 R18-7 で決まった文から、誤りだった「2026年3月の発表を発展させ、」を外した(2026-10-13)
       plain:
-        '2026年3月の発表を発展させ、国際会議に採択された研究です。問い合わせを別のデータセット向けに書き換えても答えが0件になる原因を3つに分け、原因ごとに条件をゆるめる手順を作りました。545件の問い合わせで、答えが返る割合が86.4%から90.5%に上がりました。',
+        '国際会議に採択された研究です。問い合わせを別のデータセット向けに書き換えても答えが0件になる原因を3つに分け、原因ごとに条件をゆるめる手順を作りました。545件の問い合わせで、答えが返る割合が86.4%から90.5%に上がりました。',
     },
     {
       date: '2026.09',
