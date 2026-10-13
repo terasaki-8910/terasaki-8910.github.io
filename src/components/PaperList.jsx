@@ -22,6 +22,9 @@ function Venue({ text }) {
   )
 }
 
+// presentUntil の日(その日を含む)までは「発表予定」と添える(採択済みで、まだ発表していない論文)
+const isUpcoming = (paper) => paper.presentUntil && new Date() <= new Date(`${paper.presentUntil}T23:59:59+09:00`)
+
 const LINK = 'underline decoration-line underline-offset-4 hover:text-accent transition-colors'
 
 export default function PaperList({ papers, titleTag: Title = 'h3', showNotes = false, plainOf, renderPlain, itemRef }) {
@@ -50,6 +53,7 @@ export default function PaperList({ papers, titleTag: Title = 'h3', showNotes = 
               <p className="text-sm text-ink mt-1">
                 <Venue text={paper.venue} />
                 {paper.status && ` (${paper.status})`} {monthOf(paper.date)}
+                {isUpcoming(paper) && '（発表予定）'}
                 {paper.refereed && (
                   <span className="ml-2 inline-block rounded-sm bg-accent px-1.5 align-[1px] text-xs leading-5 text-on-accent">査読有り</span>
                 )}
