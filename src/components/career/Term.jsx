@@ -14,8 +14,9 @@ const canHover = () => typeof window !== 'undefined' && window.matchMedia && win
  * もう一度押す・Esc・外側を押すと閉じる。
  * 語は span(role="button")にして、英語の語も文の中でふつうに折り返せるようにする(button だと折り返さない)。
  * 吹き出しは語の終わり(アイコンの下)に付け、画面の端からはみ出す分だけ横にずらす。
+ * quiet は同じ節で2回目以降に出た語。点線の下線だけにして、アイコンは出さない(押せば同じ説明が出る)。
  */
-export default function Term({ children, note, link }) {
+export default function Term({ children, note, link, quiet = false }) {
   const [open, setOpen] = useState(false)
   const [shift, setShift] = useState(0)
   const id = useId()
@@ -99,7 +100,7 @@ export default function Term({ children, note, link }) {
         }}
       >
         {children}
-        <PiInfoBold className="term__icon" aria-hidden="true" />
+        {!quiet && <PiInfoBold className="term__icon" aria-hidden="true" />}
       </span>
       <span className="term__pin">
         {open && (
@@ -118,8 +119,8 @@ export default function Term({ children, note, link }) {
 }
 
 /**
- * 文の中の専門用語を、seen に入っていない語の最初の1か所だけ Term にする。
- * seen を見出し(節)ごとに作れば「見出しごとに最初の1か所」になる。
+ * 文の中の専門用語を、出てくるたびに Term にする(2026-10-13 本人「同じワードなのに説明が見えない」)。
+ * seen を見出し(節)ごとに作り、節で最初の1か所だけアイコン付き、2回目からは点線の下線だけ(quiet)にする。
  */
 export function annotate(text, seen) {
   const parts = []
@@ -127,7 +128,6 @@ export function annotate(text, seen) {
   for (;;) {
     let best = null
     for (const entry of terms) {
-      if (seen.has(entry.id)) continue
       for (const word of entry.words) {
         const at = rest.indexOf(word)
         if (at !== -1 && (!best || at < best.at || (at === best.at && word.length > best.word.length))) best = { at, word, entry }
@@ -136,7 +136,7 @@ export function annotate(text, seen) {
     if (!best) break
     parts.push(rest.slice(0, best.at))
     parts.push(
-      <Term key={best.entry.id} note={best.entry.note} link={best.entry.link}>
+      <Term key={`${best.entry.id}-${parts.length}`} note={best.entry.note} link={best.entry.link} quiet={seen.has(best.entry.id)}>
         {best.word}
       </Term>,
     )
