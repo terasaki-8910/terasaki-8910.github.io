@@ -45,10 +45,10 @@ export function solveTridiagonal(lower, diag, upper, rhs) {
 export function naturalCubicSpline(xs, ys) {
   const N = xs.length - 1 // 区間の数。未知数は 4N 個
   if (N < 1 || ys.length !== xs.length) {
-    throw new RangeError('節点は 2 個以上で、xs と ys は同じ長さ')
+    throw new RangeError('xs and ys need the same length, at least 2')
   }
   const h = xs.slice(1).map((x, i) => x - xs[i]) // 区間の幅
-  if (h.some((hi) => !(hi > 0))) throw new RangeError('xs は増加列')
+  if (h.some((hi) => !(hi > 0))) throw new RangeError('xs must be increasing')
   const slope = h.map((hi, i) => (ys[i + 1] - ys[i]) / hi) // 区間の傾き
   // 内側の節点 i = 1..N-1 の2階微分 m_i が満たす連立方程式:
   // h[i-1] m[i-1] + 2 (h[i-1] + h[i]) m[i] + h[i] m[i+1]
