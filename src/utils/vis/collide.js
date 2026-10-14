@@ -6,7 +6,7 @@
 // 出典:
 //   Ericson, Real-Time Collision Detection (2004): 球どうしの 2 乗距離の判定、AABB の判定、Sweep and Prune、GJK
 //   Gilbert, Johnson, Keerthi, IEEE J. Robotics and Automation 4(2) (1988): GJK 法
-//   Baraff and Witkin, Physically Based Modeling: Principles and Practice, SIGGRAPH Course Notes (1997): 撃力による衝突の応答
+//   Baraff, An Introduction to Physically Based Modeling: Rigid Body Simulation II, SIGGRAPH Course Notes (1997): 撃力による衝突の応答
 
 // ---- 2 次元ベクトルの小さな補助 ----
 

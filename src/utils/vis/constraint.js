@@ -5,7 +5,7 @@
 // 数値積分では 1 ステップごとの誤差で C のずれがたまるので、ずれ C に比例した速度を足して直す
 // (ERP / CFM、Soft Constraint)。
 // 出典:
-//   Witkin and Baraff, Physically Based Modeling: Principles and Practice, SIGGRAPH Course Notes (1997): 拘束力 Jᵀλ と λ の求め方
+//   Witkin, Physically Based Modeling: Principles and Practice, Constrained Dynamics, SIGGRAPH Course Notes (1997): 拘束力 Jᵀλ と λ の求め方
 //   Smith, Open Dynamics Engine User Guide (2006): ERP と CFM
 //   Catto, Soft Constraints, GDC (2011): J v + (β/Δt) C + γλ = 0 の形
 
