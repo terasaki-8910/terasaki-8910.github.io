@@ -87,7 +87,7 @@ test('lerp: 端点でちょうど a と b になり、中点は平均。2点を�
   assert.equal(lerp(3, 7, 0), 3)
   assert.equal(lerp(3, 7, 1), 7)
   assert.equal(lerp(3, 7, 0.5), 5)
-  assert.equal(lerp(0.1, 0.7, 1), 0.7) // a + (b-a)t の形だと 1 にならないことがある
+  assert.equal(lerp(3, 0.1, 1), 0.1) // a + (b-a)t の形だと 0.10000000000000009 になる
   const [x0, y0, x1, y1] = [1, 2, 4, 11]
   const slope = (y1 - y0) / (x1 - x0)
   for (const x of [1, 1.5, 2.7, 4]) {
