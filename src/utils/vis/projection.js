@@ -16,8 +16,9 @@ export function perspectiveProject(p, f) {
 // @end
 
 // @snippet projection-projectToImage
-// 投影面の長さを画素に直す拡大 s と、画像の中心 (x0, y0) への平行移動を加える。
-// 同次座標では [[s,0,x0],[0,s,y0],[0,0,1]] を透視投影の行列に左から掛けた形
+// 投影面の長さを画素に直す拡大 s と、画像の中心 (x0, y0) への
+// 平行移動を加える。同次座標では [[s,0,x0],[0,s,y0],[0,0,1]] を
+// 透視投影の行列に左から掛けた形
 export function projectToImage(p, f, s, x0, y0) {
   const [x, y, z] = p
   return [(s * f * x) / z + x0, (s * f * y) / z + y0]
@@ -33,9 +34,10 @@ export function parallelProject(p) {
 // @end
 
 // @snippet projection-perspectiveMatrix
-// gluPerspective の行列。カメラは -z を見る。fovy は縦の視野角(ラジアン)、
-// aspect は幅/高さ、near と far は正の距離。出力の w' = -z (奥行きの正の値)で、
-// あとで w' で割ると透視投影になる。z は near → -1、far → +1 に写る
+// gluPerspective の行列。カメラは -z を見る。
+// fovy は縦の視野角(ラジアン)、aspect は幅/高さ、near と far は正の距離。
+// 出力の w' = -z (奥行きの正の値)で、あとで w' で割ると透視投影になる。
+// z は near → -1、far → +1 に写る
 export function perspectiveMatrix(fovy, aspect, near, far) {
   const fy = 1 / Math.tan(fovy / 2)
   return [
@@ -48,8 +50,8 @@ export function perspectiveMatrix(fovy, aspect, near, far) {
 // @end
 
 // @snippet projection-toNDC
-// クリップ座標 [x, y, z, w] を w で割って、正規化デバイス座標(-1〜1 の立方体)にする。
-// w > 0 (カメラの前)の点にだけ使う
+// クリップ座標 [x, y, z, w] を w で割り、正規化デバイス座標
+// (-1〜1 の立方体)にする。w > 0 (カメラの前)の点にだけ使う
 export function toNDC(clip) {
   const [x, y, z, w] = clip
   return [x / w, y / w, z / w]
@@ -57,9 +59,9 @@ export function toNDC(clip) {
 // @end
 
 // @snippet projection-insideClip
-// ビューボリュームの中の点は -w <= x, y, z <= w を満たす。w で割る前に判定できる。
-// カメラの後ろの点は w < 0 で、どの不等式も成り立たない
-// (先に割ると、後ろの点が鏡に映したように前へ出てしまう)
+// ビューボリュームの中の点は -w <= x, y, z <= w を満たす。
+// w で割る前に判定できる。カメラの後ろの点は w < 0 で、どの不等式も
+// 成り立たない(先に割ると、後ろの点が鏡に映したように前へ出てしまう)
 export function insideClip(clip) {
   const [x, y, z, w] = clip
   return -w <= x && x <= w && -w <= y && y <= w && -w <= z && z <= w
@@ -67,9 +69,10 @@ export function insideClip(clip) {
 // @end
 
 // @snippet projection-viewport
-// 正規化デバイス座標 x, y in [-1, 1] を、ウィンドウの [x0, x0+w] × [y0, y0+h] に
-// 移す1次式。(-1,-1) → (x0, y0)、(1,1) → (x0+w, y0+h)。y は上向きのまま
-// (画面の座標系に合わせた上下の反転は描画側で行う)
+// 正規化デバイス座標の x, y (-1〜1)を、ウィンドウの
+// [x0, x0+w] × [y0, y0+h] に移す1次式。
+// (-1,-1) → (x0, y0)、(1,1) → (x0+w, y0+h)。y は上向きのまま
+// (画面に合わせた上下の反転は描画側で行う)
 export function viewport(ndc, x0, y0, w, h) {
   return [(w / 2) * (ndc[0] + 1) + x0, (h / 2) * (ndc[1] + 1) + y0]
 }

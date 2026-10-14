@@ -88,7 +88,8 @@ export function rotateZ(theta) {
 // @end
 
 // @snippet mat4-multiply
-// 行列の積 A·B。AB と BA は一般に違うので、掛ける順番がそのまま変換の順番になる
+// 行列の積 A·B。AB と BA は一般に違うので、
+// 掛ける順番がそのまま変換の順番になる
 export function multiply(A, B) {
   const C = Array.from({ length: 4 }, () => [0, 0, 0, 0])
   for (let i = 0; i < 4; i++) {
@@ -109,7 +110,8 @@ export function compose(...Ms) {
 // @end
 
 // @snippet mat4-transformPoint
-// M·p。p = [x, y, z, w]。w=1 は位置、w=0 は向き(平行移動の影響を受けない)
+// M·p。p = [x, y, z, w]。w=1 は位置(平行移動される)、
+// w=0 は向き(平行移動の影響を受けない)
 export function transformPoint(M, p) {
   return M.map((row) => row.reduce((sum, m, j) => sum + m * p[j], 0))
 }
