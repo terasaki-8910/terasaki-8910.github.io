@@ -34,6 +34,11 @@ dist-ssr
 *.md
 # documentation/配下は実装ドキュメントとしてコミットする(docs/はビルド成果物のため別物)
 !documentation/*.md
+# Claude Code のプロンプト(CLAUDE.md・サブエージェント・ルール・スキル)もコミットする
+!CLAUDE.md
+!claude.md
+!**/CLAUDE.md
+!.claude/**/*.md
 
 # SVG icon generator
 svg/node_modules/
