@@ -14,6 +14,12 @@
 // 内積と、2 次元の外積(z 成分)
 const dot = (a, b) => a[0] * b[0] + a[1] * b[1]
 const cross = (a, b) => a[0] * b[1] - a[1] * b[0]
+
+// ベクトル u に垂直で、w の側を向くベクトル: (u × w) × u
+function perpToward(u, w) {
+  const s = cross(u, w)
+  return [-u[1] * s, u[0] * s]
+}
 // @end
 
 // ---- 反発 ----
@@ -122,45 +128,30 @@ export function minkowskiSupport(A, B, d) {
 // @end
 
 // @snippet collide-nextSimplex
-// 単体(線分か三角形)を原点に近い側へ縮め、次に探す方向を d に書き込む。
-// 三角形が原点を囲んでいたら true
-function nextSimplex(simplex, d) {
+// 単体(線分か三角形)を原点に近い側へ縮め、次に探す方向を返す。
+// 三角形が原点を囲んでいたら null
+function nextSimplex(simplex) {
   const a = simplex[simplex.length - 1] // いちばん新しく足した点
   const ao = [-a[0], -a[1]]
-  // 辺 u に垂直で、w の側を向くベクトル: (u × w) × u
-  const toward = (u, w) => {
-    const s = cross(u, w)
-    return [-u[1] * s, u[0] * s]
-  }
+  const b = simplex[simplex.length - 2]
+  const ab = [b[0] - a[0], b[1] - a[1]]
   if (simplex.length === 2) {
-    const ab = [simplex[0][0] - a[0], simplex[0][1] - a[1]]
-    if (dot(ab, ao) > 0) {
-      const perp = toward(ab, ao) // 原点は線分の横にある
-      d[0] = perp[0]
-      d[1] = perp[1]
-    } else {
-      simplex.shift() // 原点は a の先にある。a だけ残す
-      d[0] = ao[0]
-      d[1] = ao[1]
-    }
-    return false
+    if (dot(ab, ao) > 0) return perpToward(ab, ao) // 原点は線分の横にある
+    simplex.shift() // 原点は a の先にある。a だけ残す
+    return ao
   }
-  const ab = [simplex[1][0] - a[0], simplex[1][1] - a[1]]
   const ac = [simplex[0][0] - a[0], simplex[0][1] - a[1]]
-  const abOut = toward(ab, [-ac[0], -ac[1]]) // 辺 ab の外向き(c と反対側)
-  const acOut = toward(ac, [-ab[0], -ab[1]])
+  const abOut = perpToward(ab, [-ac[0], -ac[1]]) // 辺 ab の外向き(c と反対側)
   if (dot(abOut, ao) > 0) {
     simplex.shift() // c を捨てる
-    d[0] = abOut[0]
-    d[1] = abOut[1]
-  } else if (dot(acOut, ao) > 0) {
-    simplex.splice(1, 1) // b を捨てる
-    d[0] = acOut[0]
-    d[1] = acOut[1]
-  } else {
-    return true // 三角形が原点を囲んでいる
+    return abOut
   }
-  return false
+  const acOut = perpToward(ac, [-ab[0], -ab[1]])
+  if (dot(acOut, ao) > 0) {
+    simplex.splice(1, 1) // b を捨てる
+    return acOut
+  }
+  return null // 三角形が原点を囲んでいる
 }
 // @end
 
@@ -168,16 +159,15 @@ function nextSimplex(simplex, d) {
 // 凸多角形 A, B が重なる ⇔ 差の集合 A ⊕ (-B) が原点を含む。
 // 原点の向きのサポート点を足しながら、原点を囲む単体を探す
 export function gjkIntersect(A, B) {
-  const d = [1, 0] // 最初の方向は何でもよい
-  const simplex = [minkowskiSupport(A, B, d)]
-  d[0] = -simplex[0][0]
-  d[1] = -simplex[0][1]
+  const simplex = [minkowskiSupport(A, B, [1, 0])] // 最初の方向は何でもよい
+  let d = [-simplex[0][0], -simplex[0][1]]
   for (let iter = 0; iter < 100; iter++) {
     if (d[0] === 0 && d[1] === 0) return true // 原点が単体の上にある
     const p = minkowskiSupport(A, B, d)
     if (dot(p, d) < 0) return false // d の向きに原点まで届かない: 原点を含まない
     simplex.push(p)
-    if (nextSimplex(simplex, d)) return true
+    d = nextSimplex(simplex)
+    if (d === null) return true
   }
   return true // 反復が終わらないのは、ちょうど接する場合だけ
 }
