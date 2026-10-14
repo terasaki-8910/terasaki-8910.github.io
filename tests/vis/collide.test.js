@@ -428,6 +428,25 @@ test('GJK は、種を固定したランダムな凸多角形 3000 組で分離�
   assert.ok(hits > 300 && hits < 2700, `重なる組の数 ${hits} が偏りすぎている`)
 })
 
+test('GJK は、ほぼ接している(すき間やめり込みが 1e-6 や 1e-9)凸多角形でも分離軸判定と一致する', () => {
+  const rng = makeRng(33)
+  let checked = 0
+  for (let trial = 0; trial < 1500; trial++) {
+    const A = randomConvexPolygon(rng, 0, 0)
+    const B0 = randomConvexPolygon(rng, 0, 0)
+    const theta = rng() * 2 * Math.PI
+    const d = [Math.cos(theta), Math.sin(theta)]
+    // d 方向の射影がちょうど接する位置まで B を動かし、そこから少しだけずらす
+    const gap = Math.max(...A.map((p) => dot(p, d))) - Math.min(...B0.map((p) => dot(p, d)))
+    for (const delta of [-1e-6, 1e-6, -1e-9, 1e-9]) {
+      const B = B0.map((p) => [p[0] + (gap + delta) * d[0], p[1] + (gap + delta) * d[1]])
+      assert.equal(gjkIntersect(A, B), satIntersect(A, B), `${trial} 組目、ずらし ${delta}`)
+      checked++
+    }
+  }
+  assert.equal(checked, 6000)
+})
+
 test('GJK は、軸に平行な正方形どうし 300 組で、中心間の距離による判定と一致する', () => {
   const rng = makeRng(4)
   let hits = 0

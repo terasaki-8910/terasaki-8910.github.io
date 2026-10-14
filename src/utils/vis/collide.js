@@ -169,7 +169,7 @@ export function gjkIntersect(A, B) {
     d = nextSimplex(simplex)
     if (d === null) return true
   }
-  return true // 反復が終わらないのは、ちょうど接する場合だけ
+  return true // 丸め誤差で境目を決められない、ほぼ接している場合だけ
 }
 // @end
 
@@ -183,7 +183,7 @@ export function gjkIntersect(A, B) {
 export function resolveCircles(b1, b2, e) {
   const dx = b2.c[0] - b1.c[0]
   const dy = b2.c[1] - b1.c[1]
-  const dist = Math.hypot(dx, dy)
+  const dist = Math.sqrt(dx * dx + dy * dy)
   const nx = dist > 0 ? dx / dist : 1 // 法線は 1 から 2 へ。中心が一致していたら適当な向き
   const ny = dist > 0 ? dy / dist : 0
   const vn = (b1.v[0] - b2.v[0]) * nx + (b1.v[1] - b2.v[1]) * ny // 近づく速さ
@@ -205,7 +205,7 @@ export function resolveCircles(b1, b2, e) {
 export function separateCircles(b1, b2) {
   const dx = b2.c[0] - b1.c[0]
   const dy = b2.c[1] - b1.c[1]
-  const dist = Math.hypot(dx, dy)
+  const dist = Math.sqrt(dx * dx + dy * dy)
   const depth = b1.r + b2.r - dist
   const w1 = 1 / b1.m
   const w2 = 1 / b2.m

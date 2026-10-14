@@ -138,7 +138,9 @@ export function massSpringEnergy(state, springs) {
   }
   let elastic = 0
   for (const { i, j, k, L0 } of springs) {
-    const L = Math.hypot(state.p[j][0] - state.p[i][0], state.p[j][1] - state.p[i][1])
+    const dx = state.p[j][0] - state.p[i][0]
+    const dy = state.p[j][1] - state.p[i][1]
+    const L = Math.sqrt(dx * dx + dy * dy)
     elastic += 0.5 * k * (L - L0) * (L - L0)
   }
   return { kinetic, elastic }
