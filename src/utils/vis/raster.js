@@ -20,7 +20,7 @@ export function isBackFace(a, b, c) {
 // @snippet raster-depthSpan
 // 走査線の左端の深度 z0 と右端の深度 z1 から、n 画素ぶんの深度を作る。
 // 平面の三角形では深度 z_ndc が画面の座標の1次式になるので、1画素進むごとに
-// 一定の Δz を足すだけでよい(画素ごとに掛け算も割り算もしない)。
+// 一定の dz を足すだけでよい(画素ごとに掛け算も割り算もしない)。
 // 足してよいのは z_ndc と 1/z で、カメラ座標の z そのものは1次式にならない
 export function depthSpan(z0, z1, n) {
   const z = new Float64Array(n)
