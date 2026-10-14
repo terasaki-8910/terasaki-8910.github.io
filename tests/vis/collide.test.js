@@ -692,6 +692,17 @@ test('撃力: 動かない物体(m=Infinity)との衝突は reflectVelocity と�
   }
 })
 
+test('撃力: つかんで動かしている円(m=Infinity、速度あり)がぶつかると、つかんだ円の速度は変わらず、相手は相対速度が -e 倍になる', () => {
+  const grabbed = body(0, 0, 4, 0, 1, Infinity) // マウスで +x 向きに速さ 4 で動かしている
+  const other = body(1.8, 0, 1, 0.5, 1, 2)
+  const e = 0.5
+  resolveCircles(grabbed, other, e)
+  assert.deepEqual(grabbed.v, [4, 0])
+  // 相対速度の法線(x)成分: 3 → -e·3 = -1.5。つまり other の速度は 4 + 1.5 = 5.5
+  near(other.v[0], 4 + e * 3, 1e-12)
+  near(other.v[1], 0.5, 1e-12) // 接線(y)方向は変わらない
+})
+
 test('撃力: 中心が一致していても NaN にならず、両方とも動かない物体なら何もしない', () => {
   const a = body(1, 1, 2, 0)
   const b = body(1, 1, -2, 0)

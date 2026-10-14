@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {
+  attachViews,
   createMassSpringState,
   springForce,
   computeForces,
@@ -90,6 +91,24 @@ test('createMassSpringState: p[i]・v[i]・f[i] は pos・vel・force の同じ�
   state.pos[0] = 1.5
   assert.equal(state.p[0][0], 1.5)
   assert.ok(state.pos instanceof Float64Array && state.p[0] instanceof Float64Array)
+})
+
+test('pos・vel・w だけの状態(位置ベース法の状態など)でも使え、足りない force と view を最初の呼び出しで足す', () => {
+  const state = { n: 2, pos: new Float64Array([0, 0, 1.5, 0]), vel: new Float64Array(4), w: new Float64Array([0, 1]) }
+  assert.equal(state.p, undefined)
+  massSpringStep(state, [{ i: 0, j: 1, k: 100, kd: 0, L0: 1 }], { gravity: [0, -9.8] }, 0.01)
+  assert.equal(state.p.length, 2)
+  assert.equal(state.force.length, 4)
+  assert.equal(round(state.vel[2], 9), -0.5) // F = -k·0.5 = -50 → v = -0.5
+  assert.equal(round(state.vel[3], 9), -0.098)
+  assert.equal(round(state.pos[2], 9), 1.495)
+  const views = state.p
+  massSpringStep(state, [], {}, 0.01)
+  assert.equal(state.p, views) // 2 回目以降は作り直さない
+  assert.equal(attachViews(state), state)
+  // n がなくても w の長さから決まる
+  const bare = { pos: new Float64Array(6), vel: new Float64Array(6), w: new Float64Array(3).fill(1) }
+  assert.equal(attachViews(bare).n, 3)
 })
 
 // ---------------------------------------------------------------------------

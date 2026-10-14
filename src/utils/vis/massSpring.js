@@ -8,6 +8,8 @@
 //   state.pos / vel / force : Float64Array(2n)  x0, y0, x1, y1, ...(描画やコピーに使う)
 //   state.p[i] / v[i] / f[i] : 質点 i の [x, y] を指す長さ 2 の view(同じメモリ。アルゴリズムはこちらを使う)
 //   state.w[i]              : 質量の逆数。0 の質点は固定されて動かない
+// pos・vel・w だけを持つ状態(位置ベース法の状態など)に渡すと、足りない force と view を最初の呼び出しで足す
+// (attachViews)ので、同じ質点の状態を質点-ばね系と位置ベース法の両方で進められる。
 // ばねは { i, j, k, kd, L0 }(質点 i と j をつなぐ。ばね定数、減衰係数、自然長)の配列。
 // params は { gravity: [gx, gy], drag, external }(重力の加速度、速度に比例する抵抗の係数、
 // 力を state.f に足し込む関数。どれも省略できる)。
@@ -20,13 +22,22 @@
 const NO_GRAVITY = [0, 0]
 const scratch = [0, 0]
 
+// pos・vel・w だけを持つ状態に、力の領域 force と、質点ごとの view(p・v・f)を足す。足してあれば何もしない
+export function attachViews(state) {
+  if (state.p) return state
+  const n = state.w.length
+  state.n = n
+  state.force = state.force || new Float64Array(2 * n)
+  const views = (array) => Array.from({ length: n }, (_, i) => array.subarray(2 * i, 2 * i + 2))
+  state.p = views(state.pos)
+  state.v = views(state.vel)
+  state.f = views(state.force)
+  return state
+}
+
 // 質点 n 個の状態を作る。質量はすべて 1(w=1)で、位置も速度もゼロ
 export function createMassSpringState(n) {
-  const pos = new Float64Array(2 * n)
-  const vel = new Float64Array(2 * n)
-  const force = new Float64Array(2 * n)
-  const views = (array) => Array.from({ length: n }, (_, i) => array.subarray(2 * i, 2 * i + 2))
-  return { n, pos, vel, force, w: new Float64Array(n).fill(1), p: views(pos), v: views(vel), f: views(force) }
+  return attachViews({ pos: new Float64Array(2 * n), vel: new Float64Array(2 * n), w: new Float64Array(n).fill(1) })
 }
 
 // @snippet massSpring-springForce
@@ -56,6 +67,7 @@ export function springForce(p1, p2, v1, v2, k, kd, L0, out = [0, 0]) {
 // 各質点の力を state.f に集める。速度に比例する抵抗から始めて、ばねの力を両端の質点に
 // 逆向きに足し、最後に外から足す力(風など)を呼ぶ
 export function computeForces(state, springs, params) {
+  if (!state.p) attachViews(state)
   const { n, v, f } = state
   const drag = params.drag || 0
   for (let i = 0; i < n; i++) {
@@ -118,6 +130,7 @@ export function criticalDt(m, k) {
 
 // 運動エネルギー ½mv² の和と、ばねの弾性エネルギー ½k(L - L0)² の和
 export function massSpringEnergy(state, springs) {
+  if (!state.p) attachViews(state)
   let kinetic = 0
   for (let i = 0; i < state.n; i++) {
     if (state.w[i] === 0) continue
@@ -163,6 +176,7 @@ const windOut = { lift: [0, 0], drag: [0, 0] }
 // 風 wind は空気の速度で、板の速度は両端の平均。法線は風下を向くようにそろえる
 // (向きを逆にすると揚力の向きも逆になるので、風が当たる面を決めてから使う)
 export function addWindForces(state, segments, wind, depth, rho, CL, CD) {
+  if (!state.p) attachViews(state)
   const { p, v, f } = state
   for (let s = 0; s < segments.length; s++) {
     const { i, j } = segments[s]
