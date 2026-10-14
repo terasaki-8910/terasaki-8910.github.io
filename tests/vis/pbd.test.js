@@ -212,15 +212,16 @@ test('solveConstraints: 反復を増やすと、鎖(両端固定)の距離拘束
 
 test('pbdStep: 拘束がなければ半陰的オイラー(速度を先に更新)になり、位置は x0+v0·nΔt+gΔt²·n(n+1)/2 に一致する', () => {
   const st = createPbdState(1)
-  st.s.set([1, 2, 3, -1])
+  st.pos.set([1, 2])
+  st.vel.set([3, -1])
   const g = -9.8
   const dt = 0.01
   const n = 100
-  for (let k = 0; k < n; k++) pbdStep(st, [], { gx: 0, gy: g, iterations: 5 }, dt)
-  near(st.s[0], 1 + 3 * n * dt, 1e-9)
-  near(st.s[1], 2 + -1 * n * dt + (g * dt * dt * n * (n + 1)) / 2, 1e-9)
-  near(st.s[2], 3, 1e-12)
-  near(st.s[3], -1 + g * n * dt, 1e-9)
+  for (let k = 0; k < n; k++) pbdStep(st, [], { gravity: [0, g], iterations: 5 }, dt)
+  near(st.pos[0], 1 + 3 * n * dt, 1e-9)
+  near(st.pos[1], 2 + -1 * n * dt + (g * dt * dt * n * (n + 1)) / 2, 1e-9)
+  near(st.vel[0], 3, 1e-12)
+  near(st.vel[1], -1 + g * n * dt, 1e-9)
 })
 
 test('pbdStep: 自由落下の誤差は半陰的オイラーの g·t·Δt/2 で、Δt を半分にすると半分になる', () => {
@@ -228,21 +229,37 @@ test('pbdStep: 自由落下の誤差は半陰的オイラーの g·t·Δt/2 で�
   const errs = [0.02, 0.01, 0.005].map((dt) => {
     const st = createPbdState(1)
     const n = Math.round(T / dt)
-    for (let k = 0; k < n; k++) pbdStep(st, [], { gx: 0, gy: -9.8, iterations: 1 }, dt)
-    return Math.abs(st.s[1] - -0.5 * 9.8 * T * T)
+    for (let k = 0; k < n; k++) pbdStep(st, [], { gravity: [0, -9.8], iterations: 1 }, dt)
+    return Math.abs(st.pos[1] - -0.5 * 9.8 * T * T)
   })
   near(errs[0] / errs[1], 2, 1e-9)
   near(errs[1] / errs[2], 2, 1e-9)
   near(errs[2], (9.8 * T * 0.005) / 2, 1e-9)
 })
 
+test('pbdStep: pos・vel・w だけの状態でも動き(予測位置の領域は初回に作る)、配列はその場で書き換えて作り直さない', () => {
+  const state = { n: 2, pos: new Float64Array([0, 0, 1, 0]), vel: new Float64Array(4), w: new Float64Array([0, 1]) }
+  const cons = [{ i: 0, j: 1, d: 1 }]
+  const { pos, vel, w } = state
+  pbdStep(state, cons, { gravity: [0, -9.8], iterations: 5 }, 0.01)
+  const pred = state.pred
+  assert.ok(pred instanceof Float64Array && pred.length === 4)
+  for (let k = 0; k < 20; k++) pbdStep(state, cons, { gravity: [0, -9.8], iterations: 5 }, 0.01)
+  assert.equal(state.pred, pred)
+  assert.equal(state.pos, pos)
+  assert.equal(state.vel, vel)
+  assert.equal(state.w, w)
+  assert.ok(state.pos[3] < 0) // 重力で下に動いた
+})
+
 test('pbdStep: 固定点(w=0)は重力でも拘束でも動かず、速度は 0 のまま', () => {
   const st = createPbdState(3)
-  st.s.set([0, 0, 5, 5, 1, 0, 0, 0, 2, 0, 0, 0])
+  st.pos.set([0, 0, 1, 0, 2, 0])
+  st.vel.set([5, 5, 0, 0, 0, 0])
   st.w[0] = 0
   const cons = [{ i: 0, j: 1, d: 1 }, { i: 1, j: 2, d: 1 }]
-  for (let k = 0; k < 50; k++) pbdStep(st, cons, { gx: 1, gy: -9.8, iterations: 8 }, 0.01)
-  assert.deepEqual(Array.from(st.s.slice(0, 4)), [0, 0, 0, 0])
+  for (let k = 0; k < 50; k++) pbdStep(st, cons, { gravity: [1, -9.8], iterations: 8 }, 0.01)
+  assert.deepEqual([Array.from(st.pos.slice(0, 2)), Array.from(st.vel.slice(0, 2))], [[0, 0], [0, 0]])
 })
 
 test('pbdStep: 重力なしでは運動量の和 Σm·v が保存し、重心は等速で動く(質量が違う 4 粒子)', () => {
@@ -252,7 +269,8 @@ test('pbdStep: 重力なしでは運動量の和 Σm·v が保存し、重心は
   const mass = [1, 2, 0.5, 4]
   for (let i = 0; i < n; i++) {
     st.w[i] = 1 / mass[i]
-    st.s.set([rand() * 2, rand() * 2, rand() * 2 - 1, rand() * 2 - 1], 4 * i)
+    st.pos.set([rand() * 2, rand() * 2], 2 * i)
+    st.vel.set([rand() * 2 - 1, rand() * 2 - 1], 2 * i)
   }
   const cons = [
     { i: 0, j: 1, d: 0.9 },
@@ -261,32 +279,32 @@ test('pbdStep: 重力なしでは運動量の和 Σm·v が保存し、重心は
     { i: 3, j: 0, d: 1.3 },
     { i: 0, j: 2, d: 1.2 },
   ]
-  const total = (o) => mass.reduce((s, m, i) => s + m * st.s[4 * i + o], 0)
+  const total = (arr, o) => mass.reduce((s, m, i) => s + m * arr[2 * i + o], 0)
   const M = mass.reduce((a, b) => a + b, 0)
-  const p0 = [total(2), total(3)]
-  const c0 = [total(0) / M, total(1) / M]
+  const p0 = [total(st.vel, 0), total(st.vel, 1)]
+  const c0 = [total(st.pos, 0) / M, total(st.pos, 1) / M]
   const dt = 0.01
   const steps = 200
-  for (let k = 0; k < steps; k++) pbdStep(st, cons, { gx: 0, gy: 0, iterations: 6 }, dt)
-  near(total(2), p0[0], 1e-11)
-  near(total(3), p0[1], 1e-11)
-  near(total(0) / M, c0[0] + (p0[0] / M) * steps * dt, 1e-10)
-  near(total(1) / M, c0[1] + (p0[1] / M) * steps * dt, 1e-10)
+  for (let k = 0; k < steps; k++) pbdStep(st, cons, { gravity: [0, 0], iterations: 6 }, dt)
+  near(total(st.vel, 0), p0[0], 1e-11)
+  near(total(st.vel, 1), p0[1], 1e-11)
+  near(total(st.pos, 0) / M, c0[0] + (p0[0] / M) * steps * dt, 1e-10)
+  near(total(st.pos, 1) / M, c0[1] + (p0[1] / M) * steps * dt, 1e-10)
 })
 
 test('pbdStep: 振り子(固定点に長さ 1 の拘束)の長さが保たれ、エネルギーは増えず、Δt を半分にすると損失も半分になる', () => {
   const run = (hz, seconds) => {
     const st = createPbdState(2)
     st.w[0] = 0
-    st.s[4] = 1 // 水平に持ち上げて静かに放す
+    st.pos[2] = 1 // 水平に持ち上げて静かに放す
     const cons = [{ i: 0, j: 1, d: 1 }]
-    const energy = () => 0.5 * (st.s[6] ** 2 + st.s[7] ** 2) + 9.8 * st.s[5]
+    const energy = () => 0.5 * (st.vel[2] ** 2 + st.vel[3] ** 2) + 9.8 * st.pos[3]
     let maxE = -Infinity
     let maxLenErr = 0
     for (let k = 0; k < hz * seconds; k++) {
-      pbdStep(st, cons, { gx: 0, gy: -9.8, iterations: 10 }, 1 / hz)
+      pbdStep(st, cons, { gravity: [0, -9.8], iterations: 10 }, 1 / hz)
       maxE = Math.max(maxE, energy())
-      maxLenErr = Math.max(maxLenErr, Math.abs(Math.hypot(st.s[4], st.s[5]) - 1))
+      maxLenErr = Math.max(maxLenErr, Math.abs(Math.hypot(st.pos[2], st.pos[3]) - 1))
     }
     return { loss: -energy(), maxE, maxLenErr }
   }
@@ -307,19 +325,20 @@ test('pbdStep: 振り子(固定点に長さ 1 の拘束)の長さが保たれ、
 
 test('pbdStep: 箱 box を渡すと床と壁の外に出ず、床に向かう速度は 0 になる', () => {
   const st = createPbdState(1)
-  st.s.set([0.5, 1, 2, 0])
+  st.pos.set([0.5, 1])
+  st.vel.set([2, 0])
   const box = [0, 0, 1, 2]
   let minY = Infinity
   let maxX = -Infinity
   for (let k = 0; k < 600; k++) {
-    pbdStep(st, [], { gx: 0, gy: -9.8, iterations: 2, box }, 1 / 240)
-    minY = Math.min(minY, st.s[1])
-    maxX = Math.max(maxX, st.s[0])
+    pbdStep(st, [], { gravity: [0, -9.8], iterations: 2, box }, 1 / 240)
+    minY = Math.min(minY, st.pos[1])
+    maxX = Math.max(maxX, st.pos[0])
   }
   assert.equal(minY, 0)
   assert.equal(maxX, 1)
   // 床に着いたあとは、下向きの速度が毎回 0 に戻る(重力で足した分を位置の修正が打ち消す)
-  near(st.s[3], 0, 1e-9)
+  near(st.vel[1], 0, 1e-9)
 })
 
 // ---------------------------------------------------------------- 布
@@ -329,8 +348,8 @@ test('createCloth: 粒子数と拘束の数・自然長(縦横は間隔、斜め
   const rows = 5
   const { state, constraints } = createCloth(cols, rows, 0.1, 0.2, 1)
   assert.equal(state.n, cols * rows)
-  assert.equal(state.s.length, 4 * cols * rows)
-  assert.equal(state.p.length, 2 * cols * rows)
+  assert.equal(state.pos.length, 2 * cols * rows)
+  assert.equal(state.vel.length, 2 * cols * rows)
   const structural = rows * (cols - 1) + cols * (rows - 1)
   const shear = 2 * (cols - 1) * (rows - 1)
   assert.equal(constraints.length, structural + shear)
@@ -338,11 +357,11 @@ test('createCloth: 粒子数と拘束の数・自然長(縦横は間隔、斜め
   assert.equal(shear, 48)
   // 初めの配置では、どの拘束も自然長のとおり
   for (const { i, j, d } of constraints) {
-    near(Math.hypot(state.s[4 * i] - state.s[4 * j], state.s[4 * i + 1] - state.s[4 * j + 1]), d, 1e-12)
+    near(Math.hypot(state.pos[2 * i] - state.pos[2 * j], state.pos[2 * i + 1] - state.pos[2 * j + 1]), d, 1e-12)
   }
   // 左上が (x0, y0)、行が増えるほど下がる
-  assert.deepEqual([state.s[0], state.s[1]], [0.2, 1])
-  near(state.s[4 * (cols * (rows - 1)) + 1], 1 - 0.1 * (rows - 1))
+  assert.deepEqual([state.pos[0], state.pos[1]], [0.2, 1])
+  near(state.pos[2 * (cols * (rows - 1)) + 1], 1 - 0.1 * (rows - 1))
 })
 
 // 布の拘束の違反(長さの自然長に対する比の最大)
@@ -350,7 +369,7 @@ function maxStretch(cloth) {
   const { state, constraints } = cloth
   let worst = 0
   for (const { i, j, d } of constraints) {
-    const L = Math.hypot(state.s[4 * i] - state.s[4 * j], state.s[4 * i + 1] - state.s[4 * j + 1])
+    const L = Math.hypot(state.pos[2 * i] - state.pos[2 * j], state.pos[2 * i + 1] - state.pos[2 * j + 1])
     worst = Math.max(worst, Math.abs(L / d - 1))
   }
   return worst
@@ -362,7 +381,7 @@ test('布: 上の 2 隅を固定して 3 秒ぶら下げると、反復が多い
     cloth.state.w[0] = 0
     cloth.state.w[13] = 0
     for (let k = 0; k < 360; k++) {
-      pbdStep(cloth.state, cloth.constraints, { gx: 0, gy: -9.8, iterations, damping: 0.01 }, 1 / 120)
+      pbdStep(cloth.state, cloth.constraints, { gravity: [0, -9.8], iterations, damping: 0.01 }, 1 / 120)
     }
     return { stretch: maxStretch(cloth), cloth }
   }
@@ -376,24 +395,24 @@ test('布: 上の 2 隅を固定して 3 秒ぶら下げると、反復が多い
   // 固定した 2 隅は動かず、数が有限(発散していない)
   for (const { cloth } of [s5, s20, s80]) {
     const st = cloth.state
-    assert.deepEqual([st.s[0], st.s[1], st.s[4 * 13], st.s[4 * 13 + 1]], [0, 1, 0.65, 1])
-    assert.ok(st.s.every(Number.isFinite))
+    assert.deepEqual([st.pos[0], st.pos[1], st.pos[2 * 13], st.pos[2 * 13 + 1]], [0, 1, 0.65, 1])
+    assert.ok(st.pos.every(Number.isFinite) && st.vel.every(Number.isFinite))
   }
 })
 
 test('布: 掴んだ隅(w=0)をポインタの位置に毎フレーム書いて引くと、重力なしでは網全体が剛体のように回る(位置の誤差 1e-3 以内)', () => {
   const cloth = createCloth(10, 8, 0.05, 0, 1)
   const { state, constraints } = cloth
-  const rest = Float64Array.from(state.s)
+  const rest = Float64Array.from(state.pos)
   state.w[0] = 0 // 固定点
   state.w[9] = 0 // 掴んだ隅(右上)
-  const params = { gx: 0, gy: 0, iterations: 20, damping: 0 }
+  const params = { gravity: [0, 0], iterations: 20, damping: 0 }
   // 固定点のまわりの半径 0.45(上の行の長さ)の円に沿って、60° 引き下げる
   const angle = -Math.PI / 3
   for (let k = 1; k <= 120; k++) {
     const t = (angle * k) / 120
-    state.s[4 * 9] = 0.45 * Math.cos(t)
-    state.s[4 * 9 + 1] = 1 + 0.45 * Math.sin(t)
+    state.pos[2 * 9] = 0.45 * Math.cos(t)
+    state.pos[2 * 9 + 1] = 1 + 0.45 * Math.sin(t)
     pbdStep(state, constraints, params, 1 / 120)
   }
   for (let k = 0; k < 120; k++) pbdStep(state, constraints, params, 1 / 120)
@@ -401,9 +420,9 @@ test('布: 掴んだ隅(w=0)をポインタの位置に毎フレーム書いて�
   const s = Math.sin(angle)
   let worst = 0
   for (let i = 0; i < state.n; i++) {
-    const rx = rest[4 * i]
-    const ry = rest[4 * i + 1] - 1
-    worst = Math.max(worst, Math.hypot(state.s[4 * i] - (c * rx - s * ry), state.s[4 * i + 1] - (1 + s * rx + c * ry)))
+    const rx = rest[2 * i]
+    const ry = rest[2 * i + 1] - 1
+    worst = Math.max(worst, Math.hypot(state.pos[2 * i] - (c * rx - s * ry), state.pos[2 * i + 1] - (1 + s * rx + c * ry)))
   }
   assert.ok(worst < 1e-3, `剛体回転の位置との差の最大 ${worst}`)
 })
@@ -413,21 +432,21 @@ test('布: 重力のもとで隅を引いても、掴んだ位置に追従し、
   const { state, constraints } = cloth
   state.w[0] = 0
   state.w[9] = 0
-  const params = { gx: 0, gy: -9.8, iterations: 40, damping: 0.01 }
+  const params = { gravity: [0, -9.8], iterations: 40, damping: 0.01 }
   for (let k = 0; k < 120; k++) pbdStep(state, constraints, params, 1 / 120)
   for (let k = 1; k <= 120; k++) {
     const t = (-Math.PI / 6 * k) / 120
-    state.s[4 * 9] = 0.45 * Math.cos(t)
-    state.s[4 * 9 + 1] = 1 + 0.45 * Math.sin(t)
+    state.pos[2 * 9] = 0.45 * Math.cos(t)
+    state.pos[2 * 9 + 1] = 1 + 0.45 * Math.sin(t)
     pbdStep(state, constraints, params, 1 / 120)
   }
   for (let k = 0; k < 240; k++) pbdStep(state, constraints, params, 1 / 120)
-  near(state.s[4 * 9], 0.45 * Math.cos(-Math.PI / 6), 1e-12)
-  near(state.s[4 * 9 + 1], 1 + 0.45 * Math.sin(-Math.PI / 6), 1e-12)
+  near(state.pos[2 * 9], 0.45 * Math.cos(-Math.PI / 6), 1e-12)
+  near(state.pos[2 * 9 + 1], 1 + 0.45 * Math.sin(-Math.PI / 6), 1e-12)
   assert.ok(maxStretch(cloth) < 0.12, `伸び ${maxStretch(cloth)}`)
-  assert.ok(state.s.every(Number.isFinite))
+  assert.ok(state.pos.every(Number.isFinite))
   // 網は重力で下がる(下の行の中央は、固定点と同じ高さより下)
-  assert.ok(state.s[4 * (7 * 10 + 5) + 1] < 1 - 0.25)
+  assert.ok(state.pos[2 * (7 * 10 + 5) + 1] < 1 - 0.25)
 })
 
 // ---------------------------------------------------------------- 極分解

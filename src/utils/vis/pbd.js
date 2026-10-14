@@ -2,12 +2,17 @@
 // 力から加速度を求めて速度・位置を進める代わりに、拘束(距離を保つ、など)を満たすように
 // 予測した位置を直接動かし、速度は「位置の変化 / Δt」で後から決める。バネの剛性を大きくしても
 // 発散しにくいので、布のように硬い拘束が多い対象に向く。
-// 粒子の状態は Float64Array に [x, y, vx, vy] を粒子ごとに並べて持ち、1 ステップの中で配列を
-// 作らない(毎フレーム呼んでもごみが出ない)。位置だけの配列は [x0, y0, x1, y1, …]。
+// 状態は massSpring.js と同じ持ち方で、質点ごとの [x, y] を Float64Array に並べる(1 ステップの中で
+// 配列を作らないので、毎フレーム呼んでもごみが出ない)。
+//   state.pos / vel : Float64Array(2n)  x0, y0, x1, y1, …
+//   state.w[i]      : 質量の逆数(動きやすさ)。0 の質点は固定されて動かない
+//   state.pred      : 予測位置の作業領域(なければ pbdStep が初回に作る)
 // 出典: Müller, Heidelberger, Hennix, Ratcliff, "Position Based Dynamics",
 // J. Visual Communication and Image Representation 18(2), 2007
 // 極分解: Müller, Heidelberger, Teschner, Gross, "Meshless Deformations Based on Shape Matching",
 // ACM SIGGRAPH 2005
+
+const NO_GRAVITY = [0, 0]
 
 // @snippet pbd-projectDistance
 // 距離拘束 C(p1, p2) = |p1 − p2|² − d² を 1 回だけ射影する。
@@ -65,55 +70,55 @@ function clampToBox(p, w, n, box) {
 }
 
 // @snippet pbd-pbdStep
-// 位置ベース法の 1 ステップ。state = { n, s, w, p }
-//   s: [x, y, vx, vy] を粒子ごとに並べた Float64Array、w: 動きやすさ(質量の逆数。0 は固定点)、
-//   p: 予測位置の作業領域(長さ 2n)。params = { gx, gy, iterations, damping, box }
+// 位置ベース法の 1 ステップ。params = { gravity: [gx, gy], iterations, damping, box }
+// (damping は 1 ステップに失う速度の割合、box = [xmin, ymin, xmax, ymax] は動ける範囲。省略できる)
 export function pbdStep(state, constraints, params, dt) {
-  const { n, s, w, p } = state
-  const { gx, gy, iterations, damping = 0, box = null } = params
+  const { n, pos, vel, w } = state
+  const pred = state.pred || (state.pred = new Float64Array(2 * n))
+  const g = params.gravity || NO_GRAVITY
+  const { iterations, damping = 0, box = null } = params
   // 1. 速度に重力を足し、予測位置 p = x + Δt·v を作る(固定点は動かさない)
   for (let i = 0; i < n; i++) {
-    const o = 4 * i
     if (w[i] > 0) {
-      s[o + 2] = (s[o + 2] + dt * gx) * (1 - damping)
-      s[o + 3] = (s[o + 3] + dt * gy) * (1 - damping)
+      vel[2 * i] = (vel[2 * i] + dt * g[0]) * (1 - damping)
+      vel[2 * i + 1] = (vel[2 * i + 1] + dt * g[1]) * (1 - damping)
     } else {
-      s[o + 2] = 0
-      s[o + 3] = 0
+      vel[2 * i] = 0
+      vel[2 * i + 1] = 0
     }
-    p[2 * i] = s[o] + dt * s[o + 2]
-    p[2 * i + 1] = s[o + 1] + dt * s[o + 3]
+    pred[2 * i] = pos[2 * i] + dt * vel[2 * i]
+    pred[2 * i + 1] = pos[2 * i + 1] + dt * vel[2 * i + 1]
   }
   // 2. 拘束を射影して予測位置を直す(箱があれば、外に出た分を 1 回ごとに戻す)
   for (let it = 0; it < iterations; it++) {
-    solveConstraints(p, constraints, w, 1)
-    if (box) clampToBox(p, w, n, box)
+    solveConstraints(pred, constraints, w, 1)
+    if (box) clampToBox(pred, w, n, box)
   }
   // 3. 速度 = 位置の変化 / Δt、位置を予測位置に更新する
   for (let i = 0; i < n; i++) {
-    const o = 4 * i
-    s[o + 2] = (p[2 * i] - s[o]) / dt
-    s[o + 3] = (p[2 * i + 1] - s[o + 1]) / dt
-    s[o] = p[2 * i]
-    s[o + 1] = p[2 * i + 1]
+    vel[2 * i] = (pred[2 * i] - pos[2 * i]) / dt
+    vel[2 * i + 1] = (pred[2 * i + 1] - pos[2 * i + 1]) / dt
+    pos[2 * i] = pred[2 * i]
+    pos[2 * i + 1] = pred[2 * i + 1]
   }
 }
 // @end
 
-// 粒子 n 個の状態を作る。位置はすべて原点、動きやすさ w はすべて 1(質量 1)
+// 粒子 n 個の状態を作る。位置も速度も 0、動きやすさ w はすべて 1(質量 1)
 export function createPbdState(n) {
   return {
     n,
-    s: new Float64Array(4 * n),
+    pos: new Float64Array(2 * n),
+    vel: new Float64Array(2 * n),
     w: new Float64Array(n).fill(1),
-    p: new Float64Array(2 * n),
+    pred: new Float64Array(2 * n),
   }
 }
 
 // 布(2次元の格子状の網)を作る。cols×rows 個の粒子を間隔 spacing で並べ、左上の粒子を (x0, y0) に置く。
 // 行が増えるほど y が小さくなる(y は上向きが正)。縦横(構造)と斜め(せん断)の距離拘束でつなぐ。
 // 斜めの拘束がないと格子が菱形につぶれる。固定したい粒子は state.w[i] = 0 にする。
-// ドラッグは、掴んだ粒子を w=0 にして state.s[4i], state.s[4i+1] にポインタの位置を毎フレーム書き、離したら w を戻す
+// ドラッグは、掴んだ粒子を w=0 にして state.pos[2i], state.pos[2i+1] にポインタの位置を毎フレーム書き、離したら w を戻す
 export function createCloth(cols, rows, spacing, x0, y0) {
   const state = createPbdState(cols * rows)
   const constraints = []
@@ -121,8 +126,8 @@ export function createCloth(cols, rows, spacing, x0, y0) {
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       const i = r * cols + c
-      state.s[4 * i] = x0 + c * spacing
-      state.s[4 * i + 1] = y0 - r * spacing
+      state.pos[2 * i] = x0 + c * spacing
+      state.pos[2 * i + 1] = y0 - r * spacing
       if (c + 1 < cols) constraints.push({ i, j: i + 1, d: spacing })
       if (r + 1 < rows) constraints.push({ i, j: i + cols, d: spacing })
       if (c + 1 < cols && r + 1 < rows) {
