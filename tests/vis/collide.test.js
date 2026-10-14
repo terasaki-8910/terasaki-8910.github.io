@@ -30,6 +30,14 @@ function makeRng(seed) {
 }
 
 const dot = (a, b) => a.reduce((sum, x, i) => sum + x * b[i], 0)
+
+// 円の物体: 中心 c、速度 v、半径 r、質量 m
+const body = (x, y, vx, vy, r = 1, m = 1) => ({ c: [x, y], v: [vx, vy], r, m })
+const momentum = (...bodies) => [
+  bodies.reduce((s, b) => s + b.m * b.v[0], 0),
+  bodies.reduce((s, b) => s + b.m * b.v[1], 0),
+]
+const kinetic = (...bodies) => bodies.reduce((s, b) => s + 0.5 * b.m * (b.v[0] ** 2 + b.v[1] ** 2), 0)
 const sortPairs = (pairs) => pairs.map(([i, j]) => [i, j]).sort((p, q) => p[0] - q[0] || p[1] - q[1])
 
 // ---------------------------------------------------------------------------
@@ -541,16 +549,71 @@ test('GJK は渡された頂点の配列を書き換えない', () => {
   assert.deepEqual(B, copyB)
 })
 
+// 頂点が (±1,0)、(0,±1) の菱形
+const diamond = (cx, cy) => [
+  [cx + 1, cy],
+  [cx, cy + 1],
+  [cx - 1, cy],
+  [cx, cy - 1],
+]
+const boxOf = (points) => ({
+  min: [Math.min(...points.map((p) => p[0])), Math.min(...points.map((p) => p[1]))],
+  max: [Math.max(...points.map((p) => p[0])), Math.max(...points.map((p) => p[1]))],
+})
+
+test('菱形 2 つ(中心 (0,0) と (1.5,1.5))は、AABB の [-1,1]² と [0.5,2.5]² が重なるのに、GJK では離れている', () => {
+  const A = diamond(0, 0)
+  const B = diamond(1.5, 1.5)
+  assert.deepEqual(boxOf(A), { min: [-1, -1], max: [1, 1] })
+  assert.deepEqual(boxOf(B), { min: [0.5, 0.5], max: [2.5, 2.5] })
+  assert.equal(aabbOverlap(boxOf(A), boxOf(B)), true)
+  assert.equal(gjkIntersect(A, B), false)
+  // 菱形(半径 1 の L1 球)は中心の L1 距離が 2 以下で重なる
+  assert.equal(gjkIntersect(A, diamond(1, 1)), true)
+  assert.equal(gjkIntersect(A, diamond(1.01, 1)), false)
+  assert.equal(gjkIntersect(A, diamond(1.99, 0)), true)
+  assert.equal(gjkIntersect(A, diamond(2.01, 0)), false)
+})
+
+test('A=[0,2]², B=[1,3]², C=[1,3]×[2.5,4]: 軸ごとの区間で A と B は重なり、A と C は y 軸で離れている', () => {
+  const A = { min: [0, 0], max: [2, 2] }
+  const B = { min: [1, 1], max: [3, 3] }
+  const C = { min: [1, 2.5], max: [3, 4] }
+  assert.equal(aabbOverlap(A, B), true)
+  assert.equal(aabbOverlap(A, C), false)
+  assert.deepEqual(sortPairs(sweepAndPrune([A, B, C])), [[0, 1], [1, 2]])
+})
+
+test('x 軸の端点は A の端点の間に B の端点が入るが、y 軸で離れているので Sweep and Prune は組を返さない', () => {
+  const boxes = [
+    { min: [0, 0], max: [2, 1] },
+    { min: [1, 5], max: [3, 6] },
+  ]
+  assert.deepEqual(sweepAndPrune(boxes), [])
+  assert.equal(aabbOverlap({ min: [0], max: [2] }, { min: [1], max: [3] }), true) // x 軸だけなら重なる
+})
+
+test('A=[0,2]² と B=[1,3]² は差の集合 [-3,1]² が原点を含んで重なり、B=[3,5]×[0,2] は含まず離れている', () => {
+  const A = square(0, 0, 2)
+  assert.equal(gjkIntersect(A, square(1, 1, 2)), true)
+  assert.equal(gjkIntersect(A, [[3, 0], [5, 0], [5, 2], [3, 2]]), false)
+  // 差の集合 A ⊕ (-B) の端の点: x 方向の最大は 2 - 3 = -1(原点の手前で止まる)
+  const edge = minkowskiSupport(A, [[3, 0], [5, 0], [5, 2], [3, 2]], [1, 0])
+  assert.equal(edge[0], -1)
+})
+
+test('半径 1 の円 2 つの中心が 1.8 離れていると、めり込みは 0.2 で、ばね定数 1000 N/m のペナルティ力は 200 N', () => {
+  const a = body(0, 0, 0, 0, 1)
+  const b = body(1.8, 0, 0, 0, 1)
+  assert.equal(circlesOverlap(a.c, a.r, b.c, b.r), true)
+  const depth = separateCircles(a, b)
+  near(depth, 0.2, 1e-12)
+  near(1000 * depth, 200, 1e-9)
+})
+
 // ---------------------------------------------------------------------------
 // 撃力
 // ---------------------------------------------------------------------------
-
-const body = (x, y, vx, vy, r = 1, m = 1) => ({ c: [x, y], v: [vx, vy], r, m })
-const momentum = (...bodies) => [
-  bodies.reduce((s, b) => s + b.m * b.v[0], 0),
-  bodies.reduce((s, b) => s + b.m * b.v[1], 0),
-]
-const kinetic = (...bodies) => bodies.reduce((s, b) => s + 0.5 * b.m * (b.v[0] ** 2 + b.v[1] ** 2), 0)
 
 test('撃力: 運動量が保存され、法線方向の相対速度が -e 倍になり、接線方向は変わらない', () => {
   const rng = makeRng(41)
