@@ -9,6 +9,13 @@
 //   Smith, Open Dynamics Engine User Guide (2006): ERP と CFM
 //   Catto, Soft Constraints, GDC (2011): J v + (β/Δt) C + γλ = 0 の形
 
+// @snippet constraint-pendulumC
+// 拘束 C(x) = ½(x·x - 1)。円周の上で 0、外側で正、内側で負
+export function pendulumC(x) {
+  return 0.5 * (x[0] * x[0] + x[1] * x[1] - 1)
+}
+// @end
+
 // @snippet constraint-pendulumLambda
 // C̈ = ẋ·ẋ + x·ẍ = 0 に、運動方程式 ẍ = (f + λx)/m を入れて λ について解く。
 // x: 位置 [x, y]、v: 速度 [vx, vy]、f: 外力 [fx, fy]、m: 質量

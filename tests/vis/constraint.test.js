@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { pendulumLambda, pendulumStep, softLambda, erpDecay } from '../../src/utils/vis/constraint.js'
+import { pendulumC, pendulumLambda, pendulumStep, softLambda, erpDecay } from '../../src/utils/vis/constraint.js'
 
 // 表示の桁で丸める(-0 は 0 にそろえる)
 const round = (x, digits = 4) => Math.round(x * 10 ** digits) / 10 ** digits + 0
@@ -20,8 +20,13 @@ function makeRng(seed) {
 const dot = (a, b) => a[0] * b[0] + a[1] * b[1]
 const g = 9.8
 
-// 拘束 C(x) = ½(x·x - 1)
-const C = (x) => 0.5 * (dot(x, x) - 1)
+test('拘束 C は円周の上で 0、外側で正、内側で負((0.6,0.8) で 0、(0.9,0.8) で 0.225、(0.3,0.4) で -0.375)', () => {
+  assert.equal(round(pendulumC([0.6, 0.8]), 4), 0)
+  assert.equal(round(pendulumC([0.9, 0.8]), 4), 0.225)
+  assert.equal(round(pendulumC([0.3, 0.4]), 4), -0.375)
+  assert.equal(pendulumC([1, 0]), 0)
+  assert.equal(pendulumC([0, 0]), -0.5)
+})
 
 test('m=1, f=(0,-9.8), x=(0.6,-0.8), v=(0.8,0.6) で λ=-8.84、拘束力 f_c=(-5.304, 7.072)、C̈=0', () => {
   const m = 1
@@ -66,7 +71,7 @@ test('ヤコビアン J = ∂C/∂x は横ベクトル xᵀ(中心差分で確�
       const minus = x.slice()
       plus[k] += h
       minus[k] -= h
-      return (C(plus) - C(minus)) / (2 * h)
+      return (pendulumC(plus) - pendulumC(minus)) / (2 * h)
     })
     near(J[0], x[0], 1e-8)
     near(J[1], x[1], 1e-8)
@@ -235,8 +240,8 @@ test('softLambda は、ずれ C に比例する力(バネ)と、拘束の速度 
 
 test('円の外へずれた(C>0)振り子では、softLambda による拘束力 λx は中心の向き(内向き)になる', () => {
   const x = [1.2, 0]
-  assert.ok(C(x) > 0)
-  const lambda = softLambda(0, C(x), 0.2, 0.05, 1 / 60)
+  assert.ok(pendulumC(x) > 0)
+  const lambda = softLambda(0, pendulumC(x), 0.2, 0.05, 1 / 60)
   assert.ok(lambda < 0)
   assert.ok(lambda * x[0] < 0) // 力の x 成分が負: 原点へ引き戻す
 })

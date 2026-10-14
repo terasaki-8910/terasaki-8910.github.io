@@ -80,3 +80,29 @@ test('積み重ねた全体の誤差は Δt に比例する(dx/dt=e^t, x(0)=1 �
   // 誤差の主要部は Δt/2·(u(T) - u(0)) = (e - 1)·Δt/2(Δt=1/n)
   near((error(1000) * 2000) / (Math.E - 1), 1, 2e-3)
 })
+
+test('u は (t, x) を受け取る: dx/dt=x², x(0)=0.5 は Δt を小さくするほど t=1 で解析解 1/(2-t) の 1 に近づく', () => {
+  const u = (t, x) => x * x
+  const exact = (t) => 1 / (2 - t)
+  // 解析解の微分が x² に戻る
+  const h = 1e-6
+  for (const t of [0, 0.3, 0.7, 0.99]) {
+    near((exact(t + h) - exact(t - h)) / (2 * h), exact(t) ** 2, 1e-6 * Math.max(1, exact(t) ** 3))
+  }
+  assert.equal(exact(0), 0.5)
+  assert.equal(exact(1), 1)
+  const coarse = integrateEuler(u, 0.5, 1, 100) // Δt=0.01
+  const fine = integrateEuler(u, 0.5, 1, 1000) // Δt=0.001
+  assert.equal(round(coarse, 3), 0.993)
+  assert.equal(round(fine, 3), 0.999)
+  assert.ok(coarse < fine && fine < 1)
+})
+
+test('a=2, x0=0, Δt=0.5 では u=a の数値解が解析解 2t と一致し、u=at は t=1.5 で解析解 2.25 より 0.75 小さい', () => {
+  const a = 2
+  assert.deepEqual([1, 2, 3].map((n) => integrateEuler(() => a, 0, 0.5 * n, n)), [1, 2, 3])
+  assert.deepEqual([1, 2, 3].map((n) => integrateEuler((t) => a * t, 0, 0.5 * n, n)), [0, 0.5, 1.5])
+  assert.equal(0.5 * a * 1.5 ** 2, 2.25)
+  assert.equal(0.5 * a * 1.5 ** 2 - integrateEuler((t) => a * t, 0, 1.5, 3), 0.75)
+  assert.equal(0.5 * a * 1.5 * 0.5, 0.75) // a·t·Δt/2
+})
