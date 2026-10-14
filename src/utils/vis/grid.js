@@ -1,0 +1,174 @@
+// 格子(オイラー)法で流体の方程式の各項を調べるための部品(DOM に触れない純関数、依存ライブラリなし)。
+// 1 次元の配列は u[i]、2 次元の n×n の格子は Float64Array に u[i + n*j](i が x、j が y)で持つ。
+// 2 次元の格子はすべて周期境界(端は反対側の端につながる)で、微分は中心差分で書く。
+// 出典: Stam, "Stable Fluids", SIGGRAPH 1999(operator splitting と圧力の射影)/
+// Fedkiw, Stam, Jensen, "Visual Simulation of Smoke", SIGGRAPH 2001(渦度強制)/
+// Osher, Fedkiw, Level Set Methods and Dynamic Implicit Surfaces, Springer, 2003(風上差分とレベルセット)
+
+// @snippet grid-diffuse1D
+// 拡散項 ∂u/∂t = ν ∂²u/∂x² の 1 ステップ(周期境界、前進オイラー)。
+// 2 階微分を (u[i+1] − 2u[i] + u[i−1])/Δx² に置き換えると、更新は
+//   u[i] + 2a·((u[i+1] + u[i−1])/2 − u[i])、a = νΔt/Δx²
+// で「両隣の平均との差」だけ近づく。a ≤ 1/2 でないと発散する。out は u と別の配列
+export function diffuse1D(u, nu, dx, dt, out = new Float64Array(u.length)) {
+  const n = u.length
+  const a = (nu * dt) / (dx * dx)
+  for (let i = 0; i < n; i++) {
+    const left = u[i === 0 ? n - 1 : i - 1]
+    const right = u[i === n - 1 ? 0 : i + 1]
+    out[i] = u[i] + a * (left - 2 * u[i] + right)
+  }
+  return out
+}
+// @end
+
+// @snippet grid-advectUpwind1D
+// 移流方程式 ∂φ/∂t + c ∂φ/∂x = 0 の 1 ステップ(風上差分)。
+// 情報は流れの上流から来るので、c>0 なら左側の差分 (φ[i] − φ[i−1])/Δx、c<0 なら右側の差分を使う。
+// 流れ込む側の端の値は動かさない。CFL 数 |c|Δt/Δx ≤ 1 で安定で、= 1 なら厳密に 1 マスずれる。out は phi と別の配列
+export function advectUpwind1D(phi, c, dx, dt, out = new Float64Array(phi.length)) {
+  const n = phi.length
+  const k = (c * dt) / dx
+  if (c >= 0) {
+    out[0] = phi[0]
+    for (let i = 1; i < n; i++) out[i] = phi[i] - k * (phi[i] - phi[i - 1])
+  } else {
+    out[n - 1] = phi[n - 1]
+    for (let i = 0; i < n - 1; i++) out[i] = phi[i] - k * (phi[i + 1] - phi[i])
+  }
+  return out
+}
+// @end
+
+// @snippet grid-zeroCrossings1D
+// φ の符号が変わる区間を直線で補間して、φ = 0 の位置(液体の表面)を返す。phi[i] は x0 + i·Δx での値
+export function zeroCrossings1D(phi, x0, dx) {
+  const xs = []
+  for (let i = 0; i + 1 < phi.length; i++) {
+    if ((phi[i] < 0) !== (phi[i + 1] < 0)) {
+      xs.push(x0 + (i + phi[i] / (phi[i] - phi[i + 1])) * dx)
+    }
+  }
+  return xs
+}
+// @end
+
+// @snippet grid-reynolds
+// レイノルズ数 Re = uL/ν。移流項の大きさ U²/L と拡散項の大きさ νU/L² の比で、単位のない数
+export function reynolds(u, L, nu) {
+  return (u * L) / nu
+}
+// @end
+
+// @snippet grid-centralDiff
+// 中心差分 (f(x+h) − f(x−h)) / 2h。テイラー展開で偶数次が消えて、誤差は h²f'''/6 から始まる(h に 2 次)
+export function centralDiff(f, x, h) {
+  return (f(x + h) - f(x - h)) / (2 * h)
+}
+// @end
+
+// @snippet grid-forwardDiff
+// 前進差分 (f(x+h) − f(x)) / h。誤差は h·f''/2 から始まる(h に 1 次)
+export function forwardDiff(f, x, h) {
+  return (f(x + h) - f(x)) / h
+}
+// @end
+
+// @snippet grid-divergence2D
+// 速度場の発散 ∂u/∂x + ∂v/∂y(中心差分、周期境界)
+export function divergence2D(u, v, n, dx, out = new Float64Array(n * n)) {
+  for (let j = 0; j < n; j++) {
+    const jm = (j === 0 ? n - 1 : j - 1) * n
+    const jp = (j === n - 1 ? 0 : j + 1) * n
+    for (let i = 0; i < n; i++) {
+      const im = i === 0 ? n - 1 : i - 1
+      const ip = i === n - 1 ? 0 : i + 1
+      out[i + n * j] = (u[ip + n * j] - u[im + n * j] + v[i + jp] - v[i + jm]) / (2 * dx)
+    }
+  }
+  return out
+}
+// @end
+
+// @snippet grid-vorticity2D
+// 2 次元の渦度 ω = ∂v/∂x − ∂u/∂y(ω=(0,0,ω_z) の z 成分。反時計回りが正)
+export function vorticity2D(u, v, n, dx, out = new Float64Array(n * n)) {
+  for (let j = 0; j < n; j++) {
+    const jm = (j === 0 ? n - 1 : j - 1) * n
+    const jp = (j === n - 1 ? 0 : j + 1) * n
+    for (let i = 0; i < n; i++) {
+      const im = i === 0 ? n - 1 : i - 1
+      const ip = i === n - 1 ? 0 : i + 1
+      out[i + n * j] = (v[ip + n * j] - v[im + n * j] - u[i + jp] + u[i + jm]) / (2 * dx)
+    }
+  }
+  return out
+}
+// @end
+
+// @snippet grid-projectPeriodic2D
+// 圧力の段: 速度場 (u, v) から発散を取り除く(その場で書き換え、圧力の元になる q を返す)。
+// u' = u − (Δt/ρ)∇p で ∇·u' = 0 にするには ∇²p = (ρ/Δt)∇·u を解けばよい。q = Δt·p/ρ とおくと
+// ∇²q = ∇·u を解いて u' = u − ∇q。∇² は 5 点の差分、∇·u と ∇q は中心差分で、
+// ヤコビ法(新しい値を古い値だけから作る)で iterations 回解く。
+// 5 点の ∇² と、中心差分を 2 回かけた ∇·∇ は一致しないので、発散は完全には 0 にならない。
+// 1 周期が m マスの波では、収束したあとも元の sin²(π/m) 倍の発散が残る(細かい波ほど残る)。
+// ヤコビ法は大きな波ほど収束が遅く、n=32 で最大の波が 1% まで下がるのに 800 回ほど要る
+export function projectPeriodic2D(u, v, n, dx, iterations) {
+  const div = divergence2D(u, v, n, dx)
+  let q = new Float64Array(n * n)
+  let next = new Float64Array(n * n)
+  for (let it = 0; it < iterations; it++) {
+    for (let j = 0; j < n; j++) {
+      const jm = (j === 0 ? n - 1 : j - 1) * n
+      const jp = (j === n - 1 ? 0 : j + 1) * n
+      for (let i = 0; i < n; i++) {
+        const im = i === 0 ? n - 1 : i - 1
+        const ip = i === n - 1 ? 0 : i + 1
+        const k = i + n * j
+        next[k] = (q[im + n * j] + q[ip + n * j] + q[i + jm] + q[i + jp] - dx * dx * div[k]) / 4
+      }
+    }
+    const t = q
+    q = next
+    next = t
+  }
+  for (let j = 0; j < n; j++) {
+    const jm = (j === 0 ? n - 1 : j - 1) * n
+    const jp = (j === n - 1 ? 0 : j + 1) * n
+    for (let i = 0; i < n; i++) {
+      const im = i === 0 ? n - 1 : i - 1
+      const ip = i === n - 1 ? 0 : i + 1
+      u[i + n * j] -= (q[ip + n * j] - q[im + n * j]) / (2 * dx)
+      v[i + n * j] -= (q[i + jp] - q[i + jm]) / (2 * dx)
+    }
+  }
+  return q
+}
+// @end
+
+// @snippet grid-vorticityConfinement2D
+// 渦度強制力 F = ε h (N × ω)(h は格子の間隔)。2 次元では ω = (0, 0, ω) なので N × ω = (N_y ω, −N_x ω)。
+// N = ∇|ω| / |∇|ω||(渦度の大きいほう、つまり渦の中心を向く単位ベクトル)。
+// F は渦の回る向きに働き、数値計算でなまった渦を元に戻す。{ fx, fy } を返す
+export function vorticityConfinement2D(u, v, n, dx, eps) {
+  const w = vorticity2D(u, v, n, dx)
+  const fx = new Float64Array(n * n)
+  const fy = new Float64Array(n * n)
+  for (let j = 0; j < n; j++) {
+    const jm = (j === 0 ? n - 1 : j - 1) * n
+    const jp = (j === n - 1 ? 0 : j + 1) * n
+    for (let i = 0; i < n; i++) {
+      const im = i === 0 ? n - 1 : i - 1
+      const ip = i === n - 1 ? 0 : i + 1
+      const k = i + n * j
+      const gx = (Math.abs(w[ip + n * j]) - Math.abs(w[im + n * j])) / (2 * dx)
+      const gy = (Math.abs(w[i + jp]) - Math.abs(w[i + jm])) / (2 * dx)
+      const len = Math.hypot(gx, gy) + 1e-20 // 勾配が 0 なら N = 0 で、力も 0
+      fx[k] = eps * dx * (gy / len) * w[k]
+      fy[k] = -eps * dx * (gx / len) * w[k]
+    }
+  }
+  return { fx, fy }
+}
+// @end
