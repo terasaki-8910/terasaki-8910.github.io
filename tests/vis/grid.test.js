@@ -10,6 +10,7 @@ import {
   divergence2D,
   vorticity2D,
   projectPeriodic2D,
+  poissonResidual,
   vorticityConfinement2D,
 } from '../../src/utils/vis/grid.js'
 
@@ -283,64 +284,100 @@ function mixedField(n) {
   return { u, v, dx }
 }
 
-test('projectPeriodic2D: 発散のある成分(−sin x)を取り除き、回る成分(cos y)を残す。収束すると発散は sin²(π/n) 倍(n=32 で 0.00961)', () => {
+// 乱数の速度場(種を固定、各成分は −1〜1)
+function randomField(n, seed) {
+  const rand = lcg(seed)
+  const u = Float64Array.from({ length: n * n }, () => rand() * 2 - 1)
+  const v = Float64Array.from({ length: n * n }, () => rand() * 2 - 1)
+  return { u, v, dx: 1 / n }
+}
+
+test('projectPeriodic2D: 乱数の速度場(n=16)でも、射影後の中心差分の発散の最大値は射影前の 1e-8 倍以下(77 回で 8.3e-11 倍)', () => {
+  const n = 16
+  const { u, v, dx } = randomField(n, 1)
+  const before = maxAbs(divergence2D(u, v, n, dx))
+  assert.ok(before > 5) // 初めは発散がはっきりある
+  const { iterations } = projectPeriodic2D(u, v, n, dx, 10000)
+  const ratio = maxAbs(divergence2D(u, v, n, dx)) / before
+  assert.ok(ratio < 1e-8, `発散の比 ${ratio}`)
+  assert.ok(ratio < 1e-10 * 1.001) // 既定の tol=1e-10 まで解いた
+  assert.equal(iterations, 77)
+  assert.equal(Number(ratio.toPrecision(2)), 8.3e-11)
+  assert.ok(u.every(Number.isFinite) && v.every(Number.isFinite))
+})
+
+test('projectPeriodic2D: 1 周期が 3・4・8 マスの細かい波でも発散は 1e-9 倍以下になる(5 点の差分だと sin²(π/m)=0.75、0.5、0.15 倍が残る波)', () => {
+  const n = 24
+  const dx = 1 / n
+  for (const m of [3, 4, 8]) {
+    const u = new Float64Array(n * n)
+    const v = new Float64Array(n * n)
+    for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) u[i + n * j] = Math.sin((2 * Math.PI * i) / m)
+    const before = maxAbs(divergence2D(u, v, n, dx))
+    projectPeriodic2D(u, v, n, dx, 10000)
+    assert.ok(maxAbs(divergence2D(u, v, n, dx)) < 1e-9 * before, `波長 ${m} マス`)
+  }
+})
+
+test('projectPeriodic2D: 発散のある成分(−sin x)を取り除き、回る成分(cos y)をそのまま残す(n=32、317 回で誤差 6e-11)', () => {
   const n = 32
   const { u, v, dx } = mixedField(n)
   const before = maxAbs(divergence2D(u, v, n, dx))
-  projectPeriodic2D(u, v, n, dx, 4000)
-  const after = maxAbs(divergence2D(u, v, n, dx))
-  assert.ok(after < before)
-  assert.equal(round(after / before, 5), 0.00961)
-  near(after / before, Math.sin(Math.PI / n) ** 2, 1e-9)
-  // 回る成分 cos y はほぼそのまま残る(残りは取りきれなかった勾配の成分と同じ大きさ)
+  const { iterations } = projectPeriodic2D(u, v, n, dx, 10000)
+  assert.ok(maxAbs(divergence2D(u, v, n, dx)) < 1e-9 * before)
+  assert.equal(iterations, 317)
+  // 残りは cos y だけ(勾配の成分が中心差分でちょうど打ち消される)
   let err = 0
   for (let j = 0; j < n; j++) {
     for (let i = 0; i < n; i++) err = Math.max(err, Math.abs(u[i + n * j] - Math.cos(j * dx)), Math.abs(v[i + n * j]))
   }
-  assert.ok(err < 0.0097, `回る成分との差 ${err}`)
+  assert.ok(err < 1e-9, `回る成分との差 ${err}`)
 })
 
-test('projectPeriodic2D: ヤコビ法は大きな波ほど収束が遅く、反復が少ないと発散が残る(n=32 で 10 回なら 91%、100 回で 39%、400 回で 3.0%)', () => {
+test('projectPeriodic2D: iterations の上限で止めると発散が残り(n=32 の勾配成分で 10 回 97%、50 回 4.5%、100 回 0.09%)、tol を緩めると回数が減る', () => {
   const n = 32
-  const ratio = (iterations) => {
+  const ratio = (iterations, tol) => {
     const { u, v, dx } = mixedField(n)
     const before = maxAbs(divergence2D(u, v, n, dx))
-    projectPeriodic2D(u, v, n, dx, iterations)
-    return maxAbs(divergence2D(u, v, n, dx)) / before
+    const result = projectPeriodic2D(u, v, n, dx, iterations, tol)
+    return { ratio: maxAbs(divergence2D(u, v, n, dx)) / before, used: result.iterations }
   }
-  const r = [10, 100, 400, 1600].map(ratio)
-  assert.ok(r[0] > r[1] && r[1] > r[2] && r[2] > r[3])
-  assert.deepEqual([r[0], r[1]].map((x) => round(x, 2)), [0.91, 0.39])
-  assert.equal(round(r[2], 3), 0.03)
-  // 収束した値 sin²(π/32) = 0.0096 に向かう
-  assert.equal(round(r[3], 4), 0.0096)
+  const r = [10, 50, 100].map((it) => ratio(it, 1e-10))
+  assert.deepEqual(r.map((x) => x.used), [10, 50, 100]) // 上限まで使い切った
+  assert.ok(r[0].ratio > r[1].ratio && r[1].ratio > r[2].ratio)
+  assert.deepEqual([r[0].ratio, r[1].ratio].map((x) => round(x, 2)), [0.97, 0.04])
+  assert.equal(round(r[2].ratio, 4), 0.0009)
+  // tol を 1e-4 にすると、残差が初めの 1e-4 倍以下になった時点で止まる
+  const loose = ratio(10000, 1e-4)
+  assert.ok(loose.ratio <= 1e-4 && loose.used < 317 && loose.used > 100)
 })
 
-test('projectPeriodic2D: 返す q は ∇²q = ∇·u(5 点の差分)を満たし、u は u − ∇q(中心差分)になる', () => {
-  const n = 32
-  const { u, v, dx } = mixedField(n)
+test('projectPeriodic2D: 返す q は ∇·∇q = ∇·u(2 マス離れた差分)を満たし、u は u − ∇q(中心差分)になる', () => {
+  const n = 16
+  const { u, v, dx } = randomField(n, 3)
   const u0 = Float64Array.from(u)
   const v0 = Float64Array.from(v)
   const div0 = divergence2D(u0, v0, n, dx)
-  const q = projectPeriodic2D(u, v, n, dx, 4000)
-  let lapErr = 0
-  let uErr = 0
+  const { q } = projectPeriodic2D(u, v, n, dx, 10000)
+  assert.ok(poissonResidual(q, div0, n, dx) <= 1e-10 * maxAbs(div0) * 1.001)
+  // 残差を別の式(中心差分の勾配を作って、その発散をとる)でも確かめる
+  const gx = new Float64Array(n * n)
+  const gy = new Float64Array(n * n)
   for (let j = 0; j < n; j++) {
     for (let i = 0; i < n; i++) {
-      const k = i + n * j
-      const lap =
-        (q[((i + 1) % n) + n * j] + q[((i + n - 1) % n) + n * j] + q[i + n * ((j + 1) % n)] + q[i + n * ((j + n - 1) % n)] - 4 * q[k]) /
-        (dx * dx)
-      lapErr = Math.max(lapErr, Math.abs(lap - div0[k]))
-      uErr = Math.max(uErr, Math.abs(u[k] - (u0[k] - (q[((i + 1) % n) + n * j] - q[((i + n - 1) % n) + n * j]) / (2 * dx))))
+      gx[i + n * j] = (q[((i + 1) % n) + n * j] - q[((i + n - 1) % n) + n * j]) / (2 * dx)
+      gy[i + n * j] = (q[i + n * ((j + 1) % n)] - q[i + n * ((j + n - 1) % n)]) / (2 * dx)
     }
   }
-  assert.ok(lapErr < 1e-8, `ポアソン方程式の残り ${lapErr}`)
-  assert.ok(uErr < 1e-12)
-  near(sum(q), 0, 1e-9) // 圧力の平均(定数は決まらない)は 0 のまま
+  const lap = divergence2D(gx, gy, n, dx) // ∇·∇q
+  for (let k = 0; k < n * n; k++) {
+    near(lap[k], div0[k], 1e-9 * maxAbs(div0))
+    near(u[k], u0[k] - gx[k], 1e-12)
+    near(v[k], v0[k] - gy[k], 1e-12)
+  }
 })
 
-test('projectPeriodic2D: 発散が 0 の速度場(流れ関数 ψ から u=∂ψ/∂y、v=−∂ψ/∂x)は変わらない', () => {
+test('projectPeriodic2D: 発散が 0 の速度場(流れ関数 ψ から u=∂ψ/∂y、v=−∂ψ/∂x)は変わらない(反復 0 回)', () => {
   const n = 32
   const dx = 1 / n
   const rand = lcg(4)
@@ -360,25 +397,27 @@ test('projectPeriodic2D: 発散が 0 の速度場(流れ関数 ψ から u=∂ψ
   const u0 = Float64Array.from(u)
   const v0 = Float64Array.from(v)
   assert.ok(maxAbs(divergence2D(u, v, n, dx)) < 1e-9 * maxAbs(u))
-  const q = projectPeriodic2D(u, v, n, dx, 50)
-  assert.ok(maxAbs(q) < 1e-9 * maxAbs(u0) * dx * dx)
+  const { q, iterations } = projectPeriodic2D(u, v, n, dx, 5000)
+  assert.equal(iterations, 0)
+  assert.equal(maxAbs(q), 0)
   for (let k = 0; k < n * n; k++) {
-    near(u[k], u0[k], 1e-9 * maxAbs(u0))
-    near(v[k], v0[k], 1e-9 * maxAbs(v0))
+    near(u[k], u0[k], 1e-12 * maxAbs(u0))
+    near(v[k], v0[k], 1e-12 * maxAbs(v0))
   }
 })
 
-test('projectPeriodic2D: 乱数の速度場でも発散の最大値は減る(格子の目の細かい成分は中心差分に見えず、一部が残る)', () => {
-  const n = 32
-  const dx = 1 / n
-  const rand = lcg(1)
-  const u = Float64Array.from({ length: n * n }, () => rand() * 2 - 1)
-  const v = Float64Array.from({ length: n * n }, () => rand() * 2 - 1)
-  const before = maxAbs(divergence2D(u, v, n, dx))
-  projectPeriodic2D(u, v, n, dx, 1000)
-  const after = maxAbs(divergence2D(u, v, n, dx))
-  assert.ok(after < 0.7 * before, `発散の最大値 ${before} → ${after}`)
-  assert.ok(u.every(Number.isFinite) && v.every(Number.isFinite))
+test('poissonResidual: q=0 なら残差は max|∇·u|。2 マス離れた差分を使うので、n が奇数でも周期でつながる', () => {
+  const n = 9
+  const div = Float64Array.from({ length: n * n }, (_, k) => Math.sin(k))
+  assert.equal(poissonResidual(new Float64Array(n * n), div, n, 0.1), maxAbs(div))
+  // q が一定なら ∇·∇q = 0 なので残差は変わらない
+  assert.equal(poissonResidual(new Float64Array(n * n).fill(3), div, n, 0.1), maxAbs(div))
+  // 1 点だけの q=1 の ∇·∇q: 中心は −4/(4Δx²)、2 マス離れた 4 点は 1/(4Δx²)
+  const q = new Float64Array(n * n)
+  q[4 + n * 4] = 1
+  const zero = new Float64Array(n * n)
+  const dx = 0.5
+  assert.equal(poissonResidual(q, zero, n, dx), 4 / (4 * dx * dx)) // |0 − (−4/(4Δx²))| = 4
 })
 
 // ---------------------------------------------------------------- 渦度強制力

@@ -106,30 +106,51 @@ export function vorticity2D(u, v, n, dx, out = new Float64Array(n * n)) {
 }
 // @end
 
+// @snippet grid-poissonResidual
+// ポアソン方程式 ∇·∇q = ∇·u の残差 ∇·u − ∇·∇q の絶対値の最大。∇·∇q は中心差分を 2 回かけた形で、
+// 2 マス離れた点を使う (q[i+2] − 2q[i] + q[i−2])/(4Δx²) を x と y で足したもの
+export function poissonResidual(q, div, n, dx) {
+  let worst = 0
+  for (let j = 0; j < n; j++) {
+    const jm = ((j + n - 2) % n) * n
+    const jp = ((j + 2) % n) * n
+    for (let i = 0; i < n; i++) {
+      const im = (i + n - 2) % n
+      const ip = (i + 2) % n
+      const k = i + n * j
+      const lap = (q[im + n * j] + q[ip + n * j] + q[i + jm] + q[i + jp] - 4 * q[k]) / (4 * dx * dx)
+      worst = Math.max(worst, Math.abs(div[k] - lap))
+    }
+  }
+  return worst
+}
+// @end
+
 // @snippet grid-projectPeriodic2D
-// 圧力の段: 速度場 (u, v) から発散を取り除く(その場で書き換え、q を返す)。u' = u − (Δt/ρ)∇p で
-// ∇·u' = 0 にするには ∇²p = (ρ/Δt)∇·u を解けばよい。q = Δt·p/ρ として ∇²q = ∇·u を解き、u' = u − ∇q。
-// ∇² は 5 点の差分、∇·u と ∇q は中心差分で、ヤコビ法(新しい値を古い値だけから作る)で iterations 回解く。
-// 5 点の ∇² と中心差分の ∇·∇ は一致しないので、発散は完全には 0 にならない。1 周期が m マスの波では
-// 収束しても元の sin²(π/m) 倍が残る。ヤコビ法は大きな波ほど遅く、n=32 で 1% まで下げるのに 800 回ほど要る
-export function projectPeriodic2D(u, v, n, dx, iterations) {
+// 圧力の段: 速度場 (u, v) から発散を取り除く(その場で書き換える)。u' = u − (Δt/ρ)∇p で ∇·u' = 0 にするには
+// ∇²p = (ρ/Δt)∇·u を解けばよい。q = Δt·p/ρ として ∇²q = ∇·u を解き、u' = u − ∇q。
+// ∇·u と ∇q は中心差分で、∇² はその合成 ∇·∇ に一致させる(2 マス離れた点を使う差分)。
+// 隣どうしの 5 点の差分だと合成と一致せず、市松模様に近い細かい成分の発散が残る
+// (MAC 格子は速度を面に置いて、これを避けるもう 1 つの方法)。一致させたので、解けば発散は 0 になる。
+// ガウス・ザイデル法で、残差(= 射影後の発散)の最大値が初めの発散の最大値の tol 倍以下になるか、
+// iterations 回に達するまで解く。n ≥ 4。{ q, iterations: 使った回数 } を返す
+export function projectPeriodic2D(u, v, n, dx, iterations, tol = 1e-10) {
   const div = divergence2D(u, v, n, dx)
-  let q = new Float64Array(n * n)
-  let next = new Float64Array(n * n)
-  for (let it = 0; it < iterations; it++) {
+  const q = new Float64Array(n * n)
+  let target = 0
+  for (let k = 0; k < n * n; k++) target = Math.max(target, tol * Math.abs(div[k]))
+  let used = 0
+  while (used < iterations && poissonResidual(q, div, n, dx) > target) {
     for (let j = 0; j < n; j++) {
-      const jm = (j === 0 ? n - 1 : j - 1) * n
-      const jp = (j === n - 1 ? 0 : j + 1) * n
+      const jm = ((j + n - 2) % n) * n
+      const jp = ((j + 2) % n) * n
       for (let i = 0; i < n; i++) {
-        const im = i === 0 ? n - 1 : i - 1
-        const ip = i === n - 1 ? 0 : i + 1
         const k = i + n * j
-        next[k] = (q[im + n * j] + q[ip + n * j] + q[i + jm] + q[i + jp] - dx * dx * div[k]) / 4
+        const sum = q[((i + n - 2) % n) + n * j] + q[((i + 2) % n) + n * j] + q[i + jm] + q[i + jp]
+        q[k] = (sum - 4 * dx * dx * div[k]) / 4 // 求めたばかりの値をすぐ使う
       }
     }
-    const t = q // 配列を入れ替える(新しい配列を作らない)
-    q = next
-    next = t
+    used++
   }
   for (let j = 0; j < n; j++) {
     const jm = (j === 0 ? n - 1 : j - 1) * n
@@ -141,7 +162,7 @@ export function projectPeriodic2D(u, v, n, dx, iterations) {
       v[i + n * j] -= (q[i + jp] - q[i + jm]) / (2 * dx)
     }
   }
-  return q
+  return { q, iterations: used }
 }
 // @end
 
