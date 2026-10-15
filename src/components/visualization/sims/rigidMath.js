@@ -212,7 +212,7 @@ export function bruteForcePairs(boxes) {
 
 // 質量 m の円の見かけの半径(面積に比例。段階 5・6 で重い円を大きく見せる)
 export function radiusOf(m) {
-  return 0.18 * Math.sqrt(m)
+  return 0.26 * Math.sqrt(m)
 }
 
 const dotv = (a, b) => a[0] * b[0] + a[1] * b[1]

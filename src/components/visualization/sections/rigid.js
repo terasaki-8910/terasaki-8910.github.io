@@ -7,6 +7,8 @@ const RigidStep1 = lazy(() => import('../sims/rigidStep1.jsx'))
 const RigidStep2 = lazy(() => import('../sims/rigidStep2.jsx'))
 const RigidStep3 = lazy(() => import('../sims/rigidStep3.jsx'))
 const RigidStep4 = lazy(() => import('../sims/rigidStep4.jsx'))
+const RigidStep5 = lazy(() => import('../sims/rigidStep5.jsx'))
+const RigidStep6 = lazy(() => import('../sims/rigidStep6.jsx'))
 
 export default {
   id: 'rigid',
@@ -114,14 +116,62 @@ export default {
       snippets: ['collide-pairCount', 'collide-aabbOverlap', 'collide-sweepAndPrune'],
       Sim: RigidStep4,
     },
+    {
+      id: 'impulse',
+      title: '撃力による応答',
+      text: 'ぶつかった瞬間は、力を一瞬だけ強く加える撃力 j で、速度を直接変えます。撃力は 2 つの円の中心を結ぶ向き（法線）に、円 1 と円 2 へ逆向きで同じ大きさだけはたらくので、運動量の合計は変わらず、j は法線方向に近づく速さが −e 倍になるように決まります。円と矢印の先をつかんで最初の位置と速度を決め、質量と e を変えて、表の数を見てください。',
+      formulas: [
+        {
+          caption: '撃力による衝突の応答',
+          tex: 'j = \\frac{(1+e)\\,(\\mathbf{v}_1 - \\mathbf{v}_2)\\cdot\\mathbf{n}}{1/m_1 + 1/m_2}, \\qquad \\mathbf{v}_1^{\\prime} = \\mathbf{v}_1 - \\frac{j}{m_1}\\mathbf{n}, \\quad \\mathbf{v}_2^{\\prime} = \\mathbf{v}_2 + \\frac{j}{m_2}\\mathbf{n}',
+          symbols: [
+            { tex: 'j', meaning: '撃力の大きさ（力を一瞬だけ加えた量）', unit: '\\mathrm{N\\,s}' },
+            { tex: 'm_1,\\ m_2', meaning: '質量（つかんでいる円は無限大として扱う）', unit: '\\mathrm{kg}' },
+            { tex: '\\mathbf{v}_1,\\ \\mathbf{v}_2', meaning: '衝突の前の速度', unit: '\\mathrm{m/s}' },
+            { tex: '\\mathbf{n}', meaning: '円 1 から円 2 へ向かう単位法線', unit: '' },
+          ],
+        },
+        {
+          caption: '前後で変わらないものと、変わるもの',
+          tex: '\\begin{aligned} \\mathbf{p}^{\\prime} &= m_1\\,\\mathbf{v}_1^{\\prime} + m_2\\,\\mathbf{v}_2^{\\prime} = \\mathbf{p} \\\\ u^{\\prime} &= -e\\,u, \\qquad u = (\\mathbf{v}_1 - \\mathbf{v}_2)\\cdot\\mathbf{n} \\end{aligned}',
+          symbols: [
+            { tex: '\\mathbf{p}', meaning: '運動量の合計（質量 × 速度の和。′ がつくと衝突の後）', unit: '\\mathrm{kg\\,m/s}' },
+            { tex: 'u', meaning: '法線の向きに近づく速さ（正なら近づいている）', unit: '\\mathrm{m/s}' },
+          ],
+        },
+      ],
+      snippets: ['collide-resolveCircles'],
+      Sim: RigidStep5,
+    },
+    {
+      id: 'separation',
+      title: 'めり込みの押し戻し',
+      text: '撃力で速度を直しても、めり込んだ分は残るので、位置も直します。めり込みの深さ d を法線の向きに押し戻し、動かす量は動きやすさ（質量の逆数 w = 1/m）に比例して配るので、重い円は少し、軽い円は多く動き、質量が無限大の円は動きません。塗った円をつかんで重ね、質量を変えて、2 つの円が動く量の割合を見てください。',
+      formulas: [
+        {
+          caption: '質量の逆数に比例した押し戻し',
+          tex: '\\begin{aligned} d &= r_1 + r_2 - \\lVert \\mathbf{c}_1 - \\mathbf{c}_2 \\rVert, \\qquad w_i = \\frac{1}{m_i} \\\\ \\mathbf{c}_1 &\\leftarrow \\mathbf{c}_1 - \\frac{w_1}{w_1 + w_2}\\,d\\,\\mathbf{n}, \\qquad \\mathbf{c}_2 \\leftarrow \\mathbf{c}_2 + \\frac{w_2}{w_1 + w_2}\\,d\\,\\mathbf{n} \\end{aligned}',
+          symbols: [
+            { tex: 'd', meaning: 'めり込みの深さ（正なら重なっている）', unit: '\\mathrm{m}' },
+            { tex: 'w_1,\\ w_2', meaning: '質量の逆数（動きやすさ。質量が無限大なら 0）', unit: '\\mathrm{1/kg}' },
+            { tex: '\\mathbf{c}_1,\\ \\mathbf{c}_2', meaning: '2 つの円の中心', unit: '\\mathrm{m}' },
+            { tex: '\\mathbf{n}', meaning: '円 1 から円 2 へ向かう単位法線', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['collide-separateCircles'],
+      Sim: RigidStep6,
+    },
   ],
   combination: {
-    text: '1 フレーム（1/60 s）を 8 回のサブステップに分け、サブステップごとに次を順に行います。',
+    text: '1 フレーム（1/60 s）を、サブステップの数（初めは 8 回）に分け、サブステップごとに次を順に行います。',
     flow: [
       { steps: [1], text: '重力のもとで、位置と速度を Δt だけ進める（前進オイラー法）' },
       { steps: [4], text: '円を囲む箱を x 軸に並べて、ぶつかりそうな候補の組だけに絞る' },
-      { steps: [3], text: '円どうしが重なっているかを、距離の 2 乗と半径の和の 2 乗で判定する' },
-      { steps: [2], text: '床や壁にぶつかったら、法線方向の速さを −e 倍にして反発させる' },
+      { steps: [3], text: '候補の組が本当に重なっているかを、距離の 2 乗と半径の和の 2 乗で判定する' },
+      { steps: [5], text: '重なって近づいている組には、質量と e から決めた撃力で速度を直す' },
+      { steps: [6], text: '残っためり込みを、質量の逆数の割合で押し戻して、位置を直す' },
+      { steps: [2], text: '壁や床では、法線方向の速さを −e 倍にして反発させる' },
     ],
   },
   sources: [
@@ -129,24 +179,4 @@ export default {
     { text: 'Ericson, Real-Time Collision Detection, Morgan Kaufmann (2004)' },
     { text: 'Hairer, Nørsett, Wanner, Solving Ordinary Differential Equations I, 2nd ed., Springer (1993)' },
   ],
-
-  // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
-  legacyFormulas: [
-    {
-      id: 'impulse',
-      caption: '撃力による衝突の応答',
-      tex: 'j = \\frac{(1+e)\\,(\\mathbf{v}_1 - \\mathbf{v}_2)\\cdot\\mathbf{n}}{1/m_1 + 1/m_2}, \\qquad \\mathbf{v}_1^{\\prime} = \\mathbf{v}_1 - \\frac{j}{m_1}\\mathbf{n}, \\quad \\mathbf{v}_2^{\\prime} = \\mathbf{v}_2 + \\frac{j}{m_2}\\mathbf{n}',
-      symbols: [
-        { tex: 'j', meaning: '撃力の大きさ（力を一瞬だけ加えた量）', unit: '\\mathrm{N\\,s}' },
-        { tex: 'm_1,\\ m_2', meaning: '質量（つかんでいる円は無限大として扱う）', unit: '\\mathrm{kg}' },
-        { tex: '\\mathbf{v}_1,\\ \\mathbf{v}_2', meaning: '衝突の前の速度', unit: '\\mathrm{m/s}' },
-        { tex: '\\mathbf{n}', meaning: '円 1 から円 2 へ向かう単位法線', unit: '' },
-      ],
-    },
-  ],
-  legacySnippets: [
-    'collide-resolveCircles',
-  ],
-  legacyDescription:
-    '箱の中の円が、重力で落ちて壁や円どうしにぶつかる。位置と速度は前進オイラー法で小さく刻んで進め、ぶつかったら撃力で速度を変える。全部の組を調べる代わりに、AABB と Sweep and Prune で候補を絞ってから円の重なりを調べる。反発係数 e が 0 ならはね返らず、1 なら損失がないが、前進オイラー法ではエネルギーが少しずつ増えるので、サブステップを増やして抑える。',
 }
