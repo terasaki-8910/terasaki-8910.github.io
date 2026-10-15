@@ -9,6 +9,7 @@ import './components/visualization/visualization.css'
 // 物理シミュレーションの実装例(2026-10-15、決定は科目側の decisions.md の Round 4・Round 5)。
 // 殻は他のページ(GomiPage.jsx)と同じ。タブで 1 節ずつ見せる(SectionTabs)。節の中身(全体のシミュレーション、
 // 計算ごとの段階、組み合わせ、出典)は src/components/visualization/sections/<id>.js のデータ。
+// 題の下の 1 文は、この構成(全体 → 段階 → 組み合わせ)に合わせる。変えたら visualization/index.html の説明もそろえる。
 
 export default function VisualizationPage() {
   return (
@@ -28,7 +29,7 @@ export default function VisualizationPage() {
               <span className="inline-block">物理シミュレーションの</span>
               <span className="inline-block">実装例</span>
             </h1>
-            <p className="text-muted mb-8">式を JavaScript で実装し、パラメータを変えて動かせるようにしたもの</p>
+            <p className="text-muted mb-8">全体のシミュレーションを動かし、それを作る計算を 1 つずつ動かして確かめ、組み合わせて全体になるまでをたどる</p>
             <SectionTabs sections={SECTIONS} />
           </div>
         </div>
