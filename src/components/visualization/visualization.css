@@ -583,7 +583,7 @@
   line-height: 1.8;
   text-wrap: pretty;
 }
-/* 段階: 番号と名前 → 説明 → 式 → シミュレーション → 実装を見る */
+/* 段階: 番号と名前 → 説明 → シミュレーション → 式 → 記号の意味(開閉)→ 実装を見る(開閉) */
 .vis-step {
   margin-top: 3.5rem;
   padding-top: 2rem;
@@ -626,19 +626,20 @@
 .vis-step .vis-sim {
   margin-top: 1.5rem;
 }
-/* 段階に分ける前の式と実装のまとめ(開閉。CodeExcerpt の .vis-code と同じ見た目) */
-.vis-legacy {
+/* シミュレーションのすぐ下の式。絵とは余白で分ける */
+.vis-step .vis-formulas {
   margin-top: 2rem;
 }
-.vis-legacy__title {
-  font-size: inherit;
-  font-weight: inherit;
+/* 「記号の意味」(開閉)。式の下、「実装を見る」の上。表は開いたときだけ作る */
+.vis-symbols-details {
+  margin-top: 1.25rem;
 }
-.vis-legacy__body {
+.vis-symbols-details > .vis-symbols {
+  margin-top: 0;
   padding-bottom: 8px;
 }
-.vis-legacy__body .vis-code {
-  margin-top: 1rem;
+.vis-symbols-details + .vis-code {
+  margin-top: 0;
 }
 /* 組み合わせ: 番号(段階へ移るボタン)と、全体のどこに当たるか */
 .vis-combo {

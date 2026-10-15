@@ -20,12 +20,6 @@
 //   combination  組み合わせ: { text?, flow: [{ steps: [番号], text }] }。番号は段階の並び(1 始まり)。
 //                段階が空のあいだは null
 //   sources      [{ text, href? }] 元の論文・教科書(確かなものだけ)
-//
-// 段階に分ける前の式と抜粋は、次の名前で残してある(段階を作る人が、各段階の formulas・snippets へ移す。
-// 移し終えたら消す。残っているあいだは、節の「全体」の下の「この節で使う式と実装のまとめ」に出る):
-//   legacyDescription  第 1 版の description(2〜4 文の説明。画面には出ない)
-//   legacyFormulas     第 1 版の formulas([{ id, caption, tex, symbols }])
-//   legacySnippets     第 1 版の snippets
 import transform from './transform.js'
 import rigid from './rigid.js'
 import cloth from './cloth.js'

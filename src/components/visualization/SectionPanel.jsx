@@ -2,7 +2,6 @@ import { Suspense } from 'react'
 import { SimPlaceholder } from './SimShell'
 import StepSection from './StepSection'
 import Combination from './Combination'
-import LegacyBlock from './LegacyBlock'
 import Sources from './Sources'
 
 // タブ 1 つの中身(sections/<id>.js のデータ)。並びは
@@ -30,7 +29,6 @@ export default function SectionPanel({ section, headingId }) {
         )}
         {overview?.caption && <p className="vis-caption">{overview.caption}</p>}
       </section>
-      <LegacyBlock section={section} />
       {steps.map((step, i) => (
         <StepSection key={step.id} step={step} index={i} sectionId={section.id} />
       ))}

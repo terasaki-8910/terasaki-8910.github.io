@@ -1,11 +1,13 @@
 import { Suspense } from 'react'
-import FormulaList from './FormulaList'
+import FormulaList, { SymbolDetails } from './FormulaList'
 import CodeExcerpt from './CodeExcerpt'
 import LazyMount from './LazyMount'
 import { SimPlaceholder } from './SimShell'
 import { SimSizeContext } from './SimSizeContext'
 
-// 段階 1 つ(節の steps の要素)。並びは 番号と名前 → 説明 → 式 → シミュレーション → 実装を見る。
+// 段階 1 つ(節の steps の要素)。並びは
+//   番号と名前 → 説明 → シミュレーション → 式 → 記号の意味(開閉。初めは閉じる)→ 実装を見る(開閉)
+// 式が長くても、シミュレーションが画面の下へ押し出されないように、絵を式より前に置く(2026-10-15、画面の確かめで)。
 //   step: { id, title, text, formulas: [{ tex, symbols? }], snippets: [名前], Sim }
 //   index: 0 始まりの位置(表示する番号は index + 1。組み合わせ(Combination)の steps と同じ番号)
 //   sectionId: 節の id(DOM の id は `${sectionId}-step-${番号}`)
@@ -29,7 +31,6 @@ export default function StepSection({ step, index, sectionId }) {
         <span>{step.title}</span>
       </h3>
       {step.text && <p className="vis-step__text">{step.text}</p>}
-      <FormulaList formulas={step.formulas} />
       {Sim && (
         <SimSizeContext.Provider value="step">
           <LazyMount placeholder={fallback}>
@@ -39,6 +40,8 @@ export default function StepSection({ step, index, sectionId }) {
           </LazyMount>
         </SimSizeContext.Provider>
       )}
+      <FormulaList formulas={step.formulas} />
+      <SymbolDetails formulas={step.formulas} />
       <CodeExcerpt names={step.snippets} />
     </section>
   )

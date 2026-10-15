@@ -54,12 +54,6 @@ test('rigid: 組み合わせは、全段階をちょうど 1 回ずつ使い、1
   assert.deepEqual([...used].sort(), [1, 2, 3, 4, 5, 6])
 })
 
-test('rigid: 第 1 版の legacyFormulas・legacySnippets・legacyDescription は残っていない', () => {
-  assert.equal(rigid.legacyFormulas, undefined)
-  assert.equal(rigid.legacySnippets, undefined)
-  assert.equal(rigid.legacyDescription, undefined)
-})
-
 test('rigid: 段階のシミュレーションは rigidStep1〜6.jsx で、ファイルがある', () => {
   const source = readFileSync(ENTRY, 'utf8')
   for (let n = 1; n <= 6; n++) {

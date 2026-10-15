@@ -85,7 +85,7 @@ test('節は 4 つで、タブの並びと id が決まっている', () => {
 for (const id of ['transform', 'rigid', 'cloth', 'fluid']) {
   test(`${id}: 第 2 版の形(id・tabLabel・title・intro・overview・steps・combination・sources)`, () => {
     const s = SECTIONS.find((x) => x.id === id)
-    for (const key of OLD_KEYS) assert.ok(!(key in s), `${id}: 第 1 版の「${key}」が残っている(legacy* に名前を変える)`)
+    for (const key of OLD_KEYS) assert.ok(!(key in s), `${id}: 第 1 版の「${key}」が残っている(段階の formulas・snippets と overview に移す)`)
     for (const key of ['tabLabel', 'title', 'intro']) assert.ok(isString(s[key]), `${id}: ${key} が空`)
     assert.ok(s.overview && isComponent(s.overview.Sim), `${id}: overview.Sim がコンポーネントでない`)
     assert.ok(isString(s.overview.caption), `${id}: overview.caption が空`)
@@ -130,24 +130,9 @@ for (const id of ['transform', 'rigid', 'cloth', 'fluid']) {
     }
   })
 
-  test(`${id}: 第 1 版から残した legacy* の式は KaTeX で読め、抜粋は実在する`, () => {
+  test(`${id}: 第 1 版の名残(legacy*)は残っていない`, () => {
     const s = SECTIONS.find((x) => x.id === id)
-    if (s.legacyFormulas) checkFormulas(`${id} の legacyFormulas`, s.legacyFormulas)
-    if (s.legacySnippets) checkSnippets(`${id} の legacySnippets`, s.legacySnippets)
-    if (s.legacyDescription !== undefined) assert.ok(isString(s.legacyDescription))
+    const left = Object.keys(s).filter((key) => /^legacy/i.test(key))
+    assert.deepEqual(left, [], `${id}: ${left.join('・')} を消す(式と抜粋は各段階へ移し終えている)`)
   })
 }
-
-// 段階に移した式・抜粋は、legacy には残さない(同じものが二重に出ないように)
-test('段階に移した抜粋と式は、legacySnippets・legacyFormulas から消してある', () => {
-  for (const s of SECTIONS) {
-    const snippetsInSteps = new Set(s.steps.flatMap((step) => step.snippets ?? []))
-    for (const name of s.legacySnippets ?? []) {
-      assert.ok(!snippetsInSteps.has(name), `${s.id}: 抜粋「${name}」が段階と legacySnippets の両方にある(legacy から消す)`)
-    }
-    const texInSteps = new Set(s.steps.flatMap((step) => (step.formulas ?? []).map((f) => f.tex)))
-    for (const f of s.legacyFormulas ?? []) {
-      assert.ok(!texInSteps.has(f.tex), `${s.id}: 式「${f.caption ?? f.id}」が段階と legacyFormulas の両方にある(legacy から消す)`)
-    }
-  }
-})
