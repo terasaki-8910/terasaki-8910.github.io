@@ -107,13 +107,11 @@ export function vorticity2D(u, v, n, dx, out = new Float64Array(n * n)) {
 // @end
 
 // @snippet grid-projectPeriodic2D
-// 圧力の段: 速度場 (u, v) から発散を取り除く(その場で書き換え、圧力の元になる q を返す)。
-// u' = u − (Δt/ρ)∇p で ∇·u' = 0 にするには ∇²p = (ρ/Δt)∇·u を解けばよい。q = Δt·p/ρ とおくと
-// ∇²q = ∇·u を解いて u' = u − ∇q。∇² は 5 点の差分、∇·u と ∇q は中心差分で、
-// ヤコビ法(新しい値を古い値だけから作る)で iterations 回解く。
-// 5 点の ∇² と、中心差分を 2 回かけた ∇·∇ は一致しないので、発散は完全には 0 にならない。
-// 1 周期が m マスの波では、収束したあとも元の sin²(π/m) 倍の発散が残る(細かい波ほど残る)。
-// ヤコビ法は大きな波ほど収束が遅く、n=32 で最大の波が 1% まで下がるのに 800 回ほど要る
+// 圧力の段: 速度場 (u, v) から発散を取り除く(その場で書き換え、q を返す)。u' = u − (Δt/ρ)∇p で
+// ∇·u' = 0 にするには ∇²p = (ρ/Δt)∇·u を解けばよい。q = Δt·p/ρ として ∇²q = ∇·u を解き、u' = u − ∇q。
+// ∇² は 5 点の差分、∇·u と ∇q は中心差分で、ヤコビ法(新しい値を古い値だけから作る)で iterations 回解く。
+// 5 点の ∇² と中心差分の ∇·∇ は一致しないので、発散は完全には 0 にならない。1 周期が m マスの波では
+// 収束しても元の sin²(π/m) 倍が残る。ヤコビ法は大きな波ほど遅く、n=32 で 1% まで下げるのに 800 回ほど要る
 export function projectPeriodic2D(u, v, n, dx, iterations) {
   const div = divergence2D(u, v, n, dx)
   let q = new Float64Array(n * n)
@@ -129,7 +127,7 @@ export function projectPeriodic2D(u, v, n, dx, iterations) {
         next[k] = (q[im + n * j] + q[ip + n * j] + q[i + jm] + q[i + jp] - dx * dx * div[k]) / 4
       }
     }
-    const t = q
+    const t = q // 配列を入れ替える(新しい配列を作らない)
     q = next
     next = t
   }
