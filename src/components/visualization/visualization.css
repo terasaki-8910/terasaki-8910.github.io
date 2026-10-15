@@ -526,7 +526,7 @@
 .vis-sources a:hover {
   color: var(--color-ink);
 }
-@media (pointer: coarse) {
+@media (pointer: coarse), (max-width: 640px) {
   .vis-sources a {
     display: inline-block; /* 指で押せる高さ(44px 前後)にする */
     padding: 10px 0;
@@ -682,7 +682,7 @@
 .vis-combo__chip:hover {
   background: rgb(var(--color-accent) / 0.3);
 }
-@media (pointer: coarse) {
+@media (pointer: coarse), (max-width: 640px) {
   .vis-combo__chip {
     width: 44px;
     height: 44px;
