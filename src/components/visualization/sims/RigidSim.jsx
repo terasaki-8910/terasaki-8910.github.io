@@ -7,7 +7,7 @@ import { SimToolbar, PlayPauseButton, ResetButton, ToggleButton } from '../SimBu
 import useCanvas from '../useCanvas'
 import useSimLoop from '../useSimLoop'
 import usePointerDrag from '../usePointerDrag'
-import { makeView, drawAxes } from '../axes'
+import { makeView, drawAxes, drawGravityLegend } from '../axes'
 import {
   WORLD_W,
   WORLD_H,
@@ -137,6 +137,11 @@ export default function RigidSim() {
       }
       ctx.stroke()
     }
+
+    // 重力 g の凡例(右上。円が重なっても読めるよう、地の色で敷く)
+    ctx.fillStyle = colors.alpha('surface', 0.9)
+    ctx.fillRect(view.frame.right - 122, view.frame.top + 2, 120, 44)
+    drawGravityLegend(ctx, view, params.current.gravity, { colors })
   }, [])
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -247,13 +252,15 @@ export default function RigidSim() {
   // Δt・g・e は、スライダーが変わるたびに items が変わって書き直される
   const st = worldRef.current.stats
   const legendItems = [
+    { key: 'axes', label: '軸', value: 'x（右）, y（上）[m]' },
     { key: 't', symbol: 't', label: '時刻', value: formatTime(clock.current.t), minChars: 8 },
     { key: 'dt', symbol: '\\Delta t', label: '時間刻み', value: `${(1000 / 60 / substeps).toFixed(2)} ms × ${substeps} 回（1/60 s）` },
     { key: 'g', symbol: 'g', label: '重力', value: `${gravity.toFixed(1)} m/s² ↓` },
     { key: 'e', symbol: 'e', label: '反発係数', value: restitution.toFixed(2) },
     { key: 'total', label: '総当たり N(N−1)/2', value: `${st.total} 組`, minChars: 5 },
-    { key: 'candidates', label: '候補', value: `${st.candidates} 組`, minChars: 4 },
-    { key: 'contacts', label: '衝突', value: `${st.contacts} 組`, minChars: 4 },
+    // 「広域の判定を表示」のあいだは、細い線(候補)と太い線(衝突)の見分けを色見本で添える
+    { key: 'candidates', label: '候補', value: `${st.candidates} 組`, minChars: 4, swatch: showBroad ? 'var(--color-muted)' : undefined },
+    { key: 'contacts', label: '衝突', value: `${st.contacts} 組`, minChars: 4, swatch: showBroad ? 'var(--color-ink)' : undefined },
   ]
 
   return (

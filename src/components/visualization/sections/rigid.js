@@ -1,5 +1,7 @@
 // 節「剛体と衝突」のデータ。形は sections/index.js を見る。
-import RigidSim from '../sims/RigidSim.jsx'
+import { lazy } from 'react'
+
+const RigidSim = lazy(() => import('../sims/RigidSim.jsx'))
 
 export default {
   id: 'rigid',
@@ -8,7 +10,7 @@ export default {
   intro: '箱の中の円が、重力で落ちて、壁や円どうしにぶつかる。円はつかんで投げられる。',
   overview: {
     Sim: RigidSim,
-    caption: '円をつかんで投げられる。「広域の判定を表示」で、候補に絞った組（細い線）と、実際に重なっている組（太い線）が見える。',
+    caption: '円をつかんで投げられる。軸の数は位置 [m]、右上の矢印は重力 g。「広域の判定を表示」で、候補に絞った組（細い線）と、実際に重なっている組（太い線）が見える。',
   },
   steps: [],
   combination: null,
