@@ -34,7 +34,7 @@ export function createClothWorld({
   worldH = WORLD_H,
 } = {}) {
   const x0 = (worldW - (cols - 1) * spacing) / 2
-  const y0 = worldH - 0.3
+  const y0 = worldH - 0.55 // 上の辺の少し下(絵の右上の重力の凡例と重ならないように)
   const cloth = createCloth(cols, rows, spacing, x0, y0)
   const { state, constraints } = cloth
   state.w.fill(1 / NODE_MASS)

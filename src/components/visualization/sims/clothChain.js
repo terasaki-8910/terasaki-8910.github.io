@@ -7,13 +7,19 @@ import { createMassSpringState, massSpringStep, springForce } from '../../../uti
 import { pbdStep } from '../../../utils/vis/pbd.js'
 
 export const CHAIN_W = 2.4 // 描く範囲 [m]
-export const CHAIN_H = 1.6
+export const CHAIN_H = 2.2
 export const CHAIN_M = 0.1 // おもり 1 個の質量 [kg]
 export const CHAIN_L0 = 0.2 // バネの自然長 [m]
 export const CHAIN_G = 9.8 // 重力加速度 [m/s²]
 export const AIR_RATE = 0.3 // 空気抵抗で速度が減る割合 [1/s]
-export const PIN = [1.2, 1.5] // 固定した端の位置 [m]
-export const START_ANGLE = (60 * Math.PI) / 180 // 最初に、真下から傾けて置く角度
+export const PIN = [1.2, 2.1] // 固定した端の位置 [m]
+const MAX_START_ANGLE = (60 * Math.PI) / 180
+const START_HALF_WIDTH = 1.0 // 最初の鎖が固定の端から横へ出てよい長さ [m](描く範囲に収めるため)
+
+// 最初に、真下から傾けて置く角度。長い鎖ほど小さくする(60° まで)
+export function startAngle(n) {
+  return Math.min(MAX_START_ANGLE, Math.asin(Math.min(1, START_HALF_WIDTH / (n * CHAIN_L0))))
+}
 export const GRAB_SPEED = 3 // つかんだおもりが手を追う速さの上限 [m/s]
 const DIVERGE_LIMIT = 100 // これより遠くへ飛んだら、計算が発散したとみなす [m]
 const SLACK = { springs: 0.4, pbd: 0.12 } // つかんで引いたとき、固定の端から届く距離に許す伸びの割合
@@ -25,8 +31,9 @@ export function createChain({ n = 6, k = 200, kd = 0.3 } = {}) {
   const state = createMassSpringState(n + 1)
   state.w.fill(1 / CHAIN_M)
   state.w[0] = 0
-  const sin = Math.sin(START_ANGLE)
-  const cos = Math.cos(START_ANGLE)
+  const angle = startAngle(n)
+  const sin = Math.sin(angle)
+  const cos = Math.cos(angle)
   for (let i = 0; i <= n; i++) {
     state.pos[2 * i] = PIN[0] + i * CHAIN_L0 * sin
     state.pos[2 * i + 1] = PIN[1] - i * CHAIN_L0 * cos

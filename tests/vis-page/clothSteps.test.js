@@ -446,7 +446,7 @@ test('plateEnds・foldAngle: 板の両端は中心から ±L/2。角度は (−9
 
 // ---- 段階 7: 小さい網 ----
 
-const SMALL = { cols: 7, rows: 5, spacing: 0.3, worldW: 2.4, worldH: 1.8 }
+const SMALL = { cols: 7, rows: 5, spacing: 0.3, worldW: 2.4, worldH: 2.2 }
 const NET = { method: 'springs', k: 300, kd: 0.5, iterations: 6, windSpeed: 0, CD: 1, CL: 0 }
 
 test('段階 7: 小さい網(7 × 5)は、安定な Δt(4 ms)で発散せず、吊り下がる', () => {

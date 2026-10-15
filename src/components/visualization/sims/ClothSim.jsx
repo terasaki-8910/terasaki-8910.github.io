@@ -1,15 +1,18 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import SimShell from '../SimShell'
 import SimCanvas from '../SimCanvas'
+import SimLegend from '../SimLegend'
 import ParamSlider from '../ParamSlider'
 import ControlGroup from '../ControlGroup'
 import { SimToolbar, PlayPauseButton, ResetButton, ModeSwitch } from '../SimButtons'
 import useCanvas from '../useCanvas'
 import useSimLoop from '../useSimLoop'
 import usePointerDrag from '../usePointerDrag'
+import { drawArrow, drawAxes, drawGravityLegend, makeView } from '../axes'
 import {
   WORLD_W,
   WORLD_H,
+  GRAVITY,
   createClothWorld,
   resetCloth,
   applyPins,
@@ -19,22 +22,29 @@ import {
   moveGrab,
   snapGrab,
   releaseGrab,
+  nudgeAll,
   stableDt,
   latticeStableDt,
   maxStretch,
 } from './clothWorld'
+import { drawDivergedNotice, drawNet } from './clothNetDraw'
+import { drawText } from './clothDraw'
+import { fmtTime, runSteps } from './clothStepKit'
 
-// 節「バネ-質点系と位置ベース法」のシミュレーション。2 次元の網を、質点-ばね系(半陰的オイラー法)と
+// 節「バネ-質点系と位置ベース法」の全体のシミュレーション。2 次元の網を、質点-ばね系(半陰的オイラー法)と
 // 位置ベース法のどちらでも進められる。切り替えても同じ質点の状態(位置・速度)を引き継ぐ。
 // 計算は clothWorld.js(massSpring.js・pbd.js の関数を呼ぶ)、ここは画面と操作。
-const ASPECT = WORLD_W / WORLD_H
+// 凡例: 軸は x [m]・y [m](canvas の中)、重力 g(絵の右上の矢印)、風 U(左の矢印と文字)、t・Δt・安定の限界・最大の伸び(絵の下)。
+// 毎フレーム変わる値(t、最大の伸び)は legend.update で文字だけ書き換える。
+const ASPECT = 1.27 // 4 m × 3 m の枠に軸の余白(左右 56px、上下 66px)を足した縦横比
 const MAX_STEPS_PER_FRAME = 32
 const STATS_INTERVAL = 0.2 // 数値の表示を更新する間隔 [s]
 const GRAB_RADIUS_PX = 22 // 質点をつかめる範囲(タッチの的 44 px)
-const STRETCH_HIGHLIGHT = 0.1 // 自然長より 10 % 以上伸びた辺は色を変える
-
+const KICK = 0.8 // 矢印キー 1 回で足す速さ [m/s]
 const WIND_ARROW_Y = [2.3, 1.7, 1.1] // 風の矢印を描く高さ [m]
+const WIND_ARROW_PER_MS = 0.12 // 風の矢印の長さ [m] / (m/s)
 
+const viewOf = (width, height) => makeView({ width, height, xRange: [0, WORLD_W], yRange: [0, WORLD_H] })
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v))
 
 export default function ClothSim() {
@@ -48,133 +58,64 @@ export default function ClothSim() {
   const [windSpeed, setWindSpeed] = useState(0)
   const [drag, setDrag] = useState(1)
   const [lift, setLift] = useState(0)
-  const [info, setInfo] = useState({ stretch: 0, diverged: false })
+  const [announce, setAnnounce] = useState('')
 
   const worldRef = useRef(null)
   if (!worldRef.current) worldRef.current = createClothWorld({ pin: 'edge', k: 300, kd: 0.5 })
+  const legend = useRef(null)
   const dtMs = method === 'springs' ? dtSprings : dtPbd
   const params = useRef({})
   params.current = { method, k, kd, iterations, windSpeed, CD: drag, CL: lift, dt: dtMs / 1000 }
-  const clock = useRef({ acc: 0, stats: 0 })
+  const clock = useRef({ acc: 0, t: 0, stats: 0 })
 
   const draw = useCallback(({ ctx, width, height, colors }) => {
     const world = worldRef.current
-    const { pos } = world.state
-    const scale = Math.min(width / WORLD_W, height / WORLD_H)
-    const px = (i) => pos[2 * i] * scale
-    const py = (i) => height - pos[2 * i + 1] * scale
-    const segs = world.segments
+    const view = viewOf(width, height)
+    const { windSpeed: wind } = params.current
 
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
+    drawAxes(ctx, view, { colors, xLabel: 'x [m]', yLabel: 'y [m]' })
+    drawGravityLegend(ctx, view, GRAVITY, { colors })
 
-    // 風(左から右へ)
-    const { windSpeed: wind, method: m } = params.current
+    // 風(左から右へ。矢印の長さが風の速さ)
     if (wind > 0) {
-      const len = 6 * wind
-      ctx.strokeStyle = colors.muted
-      ctx.lineWidth = 1.5
-      ctx.beginPath()
-      for (let a = 0; a < WIND_ARROW_Y.length; a++) {
-        const y = WIND_ARROW_Y[a]
-        const ay = height - y * scale
-        ctx.moveTo(8, ay)
-        ctx.lineTo(8 + len, ay)
-        ctx.moveTo(8 + len - 6, ay - 4)
-        ctx.lineTo(8 + len, ay)
-        ctx.lineTo(8 + len - 6, ay + 4)
+      for (const y of WIND_ARROW_Y) {
+        drawArrow(ctx, view, 0.08, y, 0.08 + WIND_ARROW_PER_MS * wind, y, { color: colors.muted, width: 1.8, head: 8 })
       }
-      ctx.stroke()
     }
+    drawText(ctx, wind > 0 ? `風 U = ${wind.toFixed(1)} m/s` : '風 なし', view.sx(0.1), view.sy(WIND_ARROW_Y[0]) - 12, {
+      color: colors.ink,
+      size: 12,
+      mono: true,
+    })
 
-    // 辺。伸びた辺は別の色で太く(二度に分けて引く)
-    ctx.lineWidth = 1.5
-    ctx.strokeStyle = colors.alpha('ink', 0.75)
-    ctx.beginPath()
-    for (let s = 0; s < segs.length; s++) {
-      const { i, j, d } = segs[s]
-      const dx = pos[2 * j] - pos[2 * i]
-      const dy = pos[2 * j + 1] - pos[2 * i + 1]
-      if (Math.sqrt(dx * dx + dy * dy) > d * (1 + STRETCH_HIGHLIGHT)) continue
-      ctx.moveTo(px(i), py(i))
-      ctx.lineTo(px(j), py(j))
-    }
-    ctx.stroke()
-    ctx.lineWidth = 2.5
-    ctx.strokeStyle = colors.alpha('diff-delete', 1) // 伸びすぎの警告の色(地に 4.7:1 以上。accent は 1.6:1 で見えない)
-    ctx.beginPath()
-    for (let s = 0; s < segs.length; s++) {
-      const { i, j, d } = segs[s]
-      const dx = pos[2 * j] - pos[2 * i]
-      const dy = pos[2 * j + 1] - pos[2 * i + 1]
-      if (!(Math.sqrt(dx * dx + dy * dy) > d * (1 + STRETCH_HIGHLIGHT))) continue
-      ctx.moveTo(px(i), py(i))
-      ctx.lineTo(px(j), py(j))
-    }
-    ctx.stroke()
-
-    // 質点。固定した質点は四角、つかんでいる質点は大きな丸
-    ctx.fillStyle = colors.ink
-    const n = world.state.n
-    for (let i = 0; i < n; i++) {
-      if (i === world.grab.index) continue
-      if (isPinned(world, i)) ctx.fillRect(px(i) - 3.5, py(i) - 3.5, 7, 7)
-      else ctx.fillRect(px(i) - 1.5, py(i) - 1.5, 3, 3)
-    }
-    if (world.grab.index >= 0) {
-      const g = world.grab.index
-      ctx.fillStyle = colors.accent
-      ctx.strokeStyle = colors.ink
-      ctx.lineWidth = 2
-      ctx.beginPath()
-      ctx.arc(px(g), py(g), 8, 0, Math.PI * 2)
-      ctx.fill()
-      ctx.stroke()
-    }
-
+    drawNet(ctx, view, world, colors)
     if (world.diverged) {
-      const text = m === 'springs' ? '計算が発散しました（Δt が大きすぎる）。リセットで戻せます' : '計算が発散しました。リセットで戻せます'
-      ctx.font = '600 14px system-ui, sans-serif'
-      ctx.textAlign = 'center'
-      ctx.textBaseline = 'middle'
-      const w = ctx.measureText(text).width + 28
-      ctx.fillStyle = colors.surface
-      ctx.fillRect((width - w) / 2, height / 2 - 20, w, 40)
-      ctx.strokeStyle = colors.ink
-      ctx.lineWidth = 1.5
-      ctx.strokeRect((width - w) / 2, height / 2 - 20, w, 40)
-      ctx.fillStyle = colors.ink
-      ctx.fillText(text, width / 2, height / 2)
+      const text = params.current.method === 'springs' ? '計算が発散しました（Δt が大きすぎる）。リセットで戻せます' : '計算が発散しました。リセットで戻せます'
+      drawDivergedNotice(ctx, width, height, colors, text)
     }
   }, [])
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
 
-  // 表示する数値。変わったときだけ state にする
-  const publishInfo = useCallback(() => {
+  // 凡例の、毎フレームは変わらない数(最大の伸び)
+  const publishStats = useCallback(() => {
     const world = worldRef.current
-    const stretch = world.diverged ? 0 : Math.round(maxStretch(world) * 1000) / 10 // 0.1 % 単位
-    setInfo((prev) => (prev.stretch === stretch && prev.diverged === world.diverged ? prev : { stretch, diverged: world.diverged }))
+    legend.current?.update({ stretch: world.diverged ? '発散' : `${(maxStretch(world) * 100).toFixed(1)} %` })
   }, [])
 
   const loop = useSimLoop(
     (frameDt) => {
       const world = worldRef.current
       const c = clock.current
-      const dt = params.current.dt
-      c.acc += frameDt
-      let steps = 0
-      while (c.acc >= dt - 1e-4 && steps < MAX_STEPS_PER_FRAME) {
-        stepCloth(world, params.current, dt)
-        c.acc -= dt
-        steps++
-      }
-      if (steps === MAX_STEPS_PER_FRAME) c.acc = 0 // 追いつけないぶんは捨てる
+      runSteps(c, frameDt, params.current.dt, MAX_STEPS_PER_FRAME, (dt) => stepCloth(world, params.current, dt))
+      legend.current?.update({ t: fmtTime(c.t) })
       redraw()
       c.stats += frameDt
       if (c.stats >= STATS_INTERVAL) {
         c.stats = 0
-        publishInfo()
+        publishStats()
       }
     },
     { targetRef: canvasRef },
@@ -183,15 +124,15 @@ export default function ClothSim() {
   // 操作に合わせて、止まっているあいだも描き直す
   useEffect(() => {
     applyPins(worldRef.current, pin)
-    publishInfo()
+    publishStats()
     redraw()
-  }, [pin, publishInfo, redraw])
+  }, [pin, publishStats, redraw])
 
   useEffect(() => {
     if (worldRef.current.diverged) resetCloth(worldRef.current) // 崩れた状態は別の方式に引き継げない
-    publishInfo()
+    publishStats()
     redraw()
-  }, [method, publishInfo, redraw])
+  }, [method, publishStats, redraw])
 
   useEffect(() => {
     redraw() // 風の矢印
@@ -199,8 +140,8 @@ export default function ClothSim() {
 
   const toWorld = (x, y) => {
     const { width, height } = sizeRef.current
-    const scale = Math.min(width / WORLD_W, height / WORLD_H)
-    return { wx: clamp(x / scale, 0, WORLD_W), wy: clamp((height - y) / scale, 0, WORLD_H), scale }
+    const view = viewOf(width, height)
+    return { wx: clamp(view.wx(x), 0, WORLD_W), wy: clamp(view.wy(y), 0, WORLD_H), scale: view.scaleX }
   }
   // つかめる質点の上か(固定した質点と、発散したあとはつかめない)。usePointerDrag が canGrab で cursor を grab / grabbing に変える
   const overNode = ({ x, y }) => {
@@ -242,34 +183,48 @@ export default function ClothSim() {
     },
   })
 
+  // 矢印キー: 網全体を横や上下に弾く(ドラッグできない人の代わり)。止まっているときは動かし始める
+  function onKeyDown(event) {
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    const kick = event.shiftKey ? 2.5 * KICK : KICK
+    const moves = { ArrowLeft: [-kick, 0], ArrowRight: [kick, 0], ArrowUp: [0, kick], ArrowDown: [0, -kick] }
+    const move = moves[event.key]
+    if (!move) return
+    event.preventDefault()
+    nudgeAll(worldRef.current, move[0], move[1])
+    setAnnounce('網を弾いた')
+    if (!loop.running) loop.play()
+  }
+
   function reset() {
     resetCloth(worldRef.current)
     clock.current.acc = 0
-    publishInfo()
+    clock.current.t = 0
+    legend.current?.update({ t: fmtTime(0) })
+    publishStats()
     redraw()
   }
 
-  const ms = (s) => (s * 1000).toFixed(1)
+  const ms = (s) => `${(s * 1000).toFixed(1)} ms`
   const netLimit = latticeStableDt(k, kd)
-  const readout = (
-    <>
-      {method === 'springs' ? (
-        <div>
-          <span style={{ marginRight: '1.5em', whiteSpace: 'nowrap' }}>Δt = {dtMs} ms</span>
-          <span style={{ marginRight: '1.5em', whiteSpace: 'nowrap' }}>安定の限界 2√(m/k) = {ms(stableDt(k))} ms（ばね 1 本）</span>
-          <span style={{ whiteSpace: 'nowrap' }}>
-            この網では {ms(netLimit)} ms（目安）{dtMs / 1000 > netLimit ? '：Δt が超えている' : ''}
-          </span>
-        </div>
-      ) : (
-        <div>
-          <span style={{ marginRight: '1.5em', whiteSpace: 'nowrap' }}>Δt = {dtMs} ms</span>
-          <span style={{ whiteSpace: 'nowrap' }}>反復 {iterations} 回</span>
-        </div>
-      )}
-      <div>{info.diverged ? '計算が発散' : `最大の伸び ${info.stretch.toFixed(1)} %`}</div>
-    </>
-  )
+  const legendItems = [
+    { key: 't', symbol: 't', label: '時刻', value: fmtTime(clock.current.t), minChars: 7 },
+    {
+      key: 'dt',
+      symbol: '\\Delta t',
+      label: '時間刻み',
+      value: method === 'springs' ? `${dtMs} ms` : `${dtMs} ms（位置の補正を ${iterations} 回くり返す）`,
+    },
+    { key: 'g', symbol: 'g', label: '重力', value: `${GRAVITY.toFixed(1)} m/s² ↓` },
+    { key: 'wind', symbol: 'U', label: '風', value: windSpeed > 0 ? `${windSpeed.toFixed(1)} m/s →` : 'なし' },
+    ...(method === 'springs'
+      ? [
+          { key: 'limit1', label: '安定の限界 2√(m/k)（ばね 1 本）', value: ms(stableDt(k)) },
+          { key: 'limitNet', label: 'この網の限界（目安）', value: `${ms(netLimit)}${dtMs / 1000 > netLimit ? '：Δt が超えている' : ''}` },
+        ]
+      : []),
+    { key: 'stretch', label: '最大の伸び', value: '0.0 %', minChars: 6 },
+  ]
 
   const windIdle = windSpeed === 0
   return (
@@ -279,10 +234,20 @@ export default function ClothSim() {
       stage={
         <SimCanvas
           ref={canvasRef}
-          label="質点を辺でつないだ網が、上の辺から吊られて重力で垂れ下がる。風が左から吹く。網の質点はドラッグでつかめる"
+          role="application"
+          tabIndex={0}
+          onKeyDown={onKeyDown}
+          label="質点を辺でつないだ網が、上の辺から吊られて重力で垂れ下がる。風が左から吹く。網の質点はドラッグでつかめる。矢印キーで網全体を弾ける"
         />
       }
-      readout={readout}
+      legend={
+        <>
+          <SimLegend ref={legend} items={legendItems} />
+          <span className="sr-only" role="status" aria-live="polite">
+            {announce}
+          </span>
+        </>
+      }
       controls={
         <>
           <SimToolbar>
