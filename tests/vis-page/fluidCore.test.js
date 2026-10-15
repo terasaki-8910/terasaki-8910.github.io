@@ -60,7 +60,7 @@ function fakeColors() {
     surface: 'rgb(255, 255, 240)',
     ink: 'rgb(20, 20, 20)',
     muted: 'rgb(100, 100, 100)',
-    rgb: { ink: [20, 20, 20], accent: [250, 160, 160], muted: [100, 100, 100] },
+    rgb: { ink: [20, 20, 20], accent: [250, 160, 160], 'lane-1': [30, 138, 158], muted: [100, 100, 100] },
     alpha: (name, a) => `rgb(0 0 0 / ${a}-${name})`,
   }
 }
@@ -245,7 +245,7 @@ test('drawFluid: 色の段ごとにまとめて描き、粒子の数だけ円を
   }
   assert.equal(cache.palette.length, LEVELS)
   assert.equal(cache.palette[0], 'rgb(20, 20, 20)') // 段 0 は ink
-  assert.equal(cache.palette[LEVELS - 1], 'rgb(250, 160, 160)') // 最後の段は accent
+  assert.equal(cache.palette[LEVELS - 1], 'rgb(30, 138, 158)') // 最後の段は FAST_COLOR(--lane-1)
   const palette = cache.palette
   drawFluid(fakeCtx(), 600, 300, colors, s, { colorMode: 'speed', showGrid: false, rho0: P.rho0 }, cache)
   assert.equal(cache.palette, palette)

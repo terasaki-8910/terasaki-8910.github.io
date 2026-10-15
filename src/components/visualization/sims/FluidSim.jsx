@@ -23,6 +23,7 @@ import {
   pointerUp,
   pointerHover,
   drawFluid,
+  FAST_COLOR,
 } from './fluidCore.js'
 
 // 節「流体(SPH)」のシミュレーション: 2 次元のダムの決壊。ドラッグで近くの粒子を押せる。
@@ -176,7 +177,7 @@ export default function FluidSim() {
                 height: 8,
                 border: '1px solid var(--color-muted)',
                 borderRadius: 2,
-                background: 'linear-gradient(to right, var(--color-ink), rgb(var(--color-accent)))',
+                background: `linear-gradient(to right, var(--color-ink), var(--${FAST_COLOR}))`,
               }}
             />
             <span>{speedMode ? `${SPEED_FULL} m/s 以上` : `${DENSITY_HIGH} 以上`}</span>

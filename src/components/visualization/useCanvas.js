@@ -30,6 +30,8 @@ export function readColors() {
   const token = (name) => style.getPropertyValue(`--color-${name}`).trim()
   const rgb = {}
   for (const name of ['paper', 'surface', 'ink', 'muted', 'line', 'accent', 'on-accent']) rgb[name] = parseColor(token(name))
+  // データの色(--lane-*。背景に対して 3:1 以上を検証済み。accent は淡い地に 1.6:1 しかなく、図形の色には使えない)
+  for (const name of ['lane-0', 'lane-1', 'lane-2', 'lane-3', 'lane-4']) rgb[name] = parseColor(style.getPropertyValue(`--${name}`))
   // accent と on-accent は「250 160 160」のようなチャンネル値で持っているので、rgb() にする
   const channels = (name) => `rgb(${rgb[name].join(' ')})`
   return {

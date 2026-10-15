@@ -19,10 +19,11 @@ export const STIR_STRENGTH = 400 // かき混ぜの強さ(1 秒あたりの近�
 export const STIR_SPEED_MAX = 6 // ポインタの速度の上限 [m/s]
 export const STIR_STALE_MS = 80 // これより長く動かさなかったら、ポインタの速度を 0 とみなす(止めた手)
 export const STIR_RADIUS_PX = 36 // かき混ぜの半径(画面上)
-export const SPEED_FULL = 2.5 // 色が accent になる速さ [m/s]
+export const SPEED_FULL = 2.5 // 色が FAST_COLOR(速い粒子の色)になる速さ [m/s]
 export const DENSITY_LOW = 0.6 // ρ/ρ0 がこれ以下で ink
-export const DENSITY_HIGH = 1.1 // ρ/ρ0 がこれ以上で accent
-export const LEVELS = 12 // ink〜accent の段数(同じ色の粒子を 1 回の fill でまとめて描く)
+export const DENSITY_HIGH = 1.1 // ρ/ρ0 がこれ以上で FAST_COLOR
+export const FAST_COLOR = 'lane-1' // 速い(密度が高い)粒子の色。readColors の rgb のキー(--lane-1)
+export const LEVELS = 12 // ink〜FAST_COLOR の段数(同じ色の粒子を 1 回の fill でまとめて描く)
 const TAU = Math.PI * 2
 
 export const BASE = defaultSphParams(SPACING)
@@ -170,11 +171,11 @@ export function pointerHover(s, x, y, width, height) {
 
 // ---------------------------------------------------------------- 描画
 
-// ink〜accent の段ごとの色と、グリッドなどの線の色。テーマが変わったとき(colors が新しくなったとき)だけ作り直す
+// ink〜FAST_COLOR の段ごとの色と、グリッドなどの線の色。テーマが変わったとき(colors が新しくなったとき)だけ作り直す
 export function ensureCache(cache, colors) {
   if (cache.colors === colors) return cache
   const a = colors.rgb.ink
-  const b = colors.rgb.accent
+  const b = colors.rgb[FAST_COLOR]
   cache.colors = colors
   cache.palette = Array.from({ length: LEVELS }, (_, i) => {
     const t = i / (LEVELS - 1)
@@ -226,7 +227,7 @@ export function drawFluid(ctx, width, height, colors, s, opts, cache) {
     }
   }
 
-  // 粒子: 速さか密度を ink〜accent の段にして、同じ段の粒子を 1 回の fill で描く
+  // 粒子: 速さか密度を ink〜FAST_COLOR の段にして、同じ段の粒子を 1 回の fill で描く
   const bucket = s.bucket
   const top = LEVELS - 1
   if (opts.colorMode === 'speed') {
