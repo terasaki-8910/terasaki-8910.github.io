@@ -12,13 +12,14 @@ import useParticleBoard from './fluidBoard.js'
 
 // 段階 4「圧力の力」: 少数の粒子を詰めた塊。圧力が高い粒子は、近くの粒子から押されて離れていく。
 // 矢印は粒子が受ける力の合計(圧力だけ。粘性はこの段階では 0)。選んだ粒子と、それを一番強く押している粒子には、
-// その 2 つだけの組の力も描く(向きが逆で大きさが同じ)。「再生」で手を離すと、塊が広がって圧力が下がり、力が消えていく。
+// その 2 つだけの組の力も描く(向きが逆で大きさが同じ)。「再生」(実時間の 1/4 の速さ)で手を離すと、塊が広がって圧力が下がり、力が消えていく。
 // 計算は fluidPatch.js(utils/vis/sph.js の computeForces)。
 const COLS = 5
 const ROWS = 4
 const P_FULL = 30000
 const PER_N = 0.06 / 300 // 矢印の長さ [m/N]。300 N が 0.06 m(h より少し長い)
 const SPACING = 0.016
+const SLOW = 0.25 // 再生は実時間の 1/4 の速さ(詰めた塊は 0.2 秒ほどで広がるので、ゆっくり見せる)
 const viewOf = (w, h) => viewFor(WORLD_WIDE, w, h)
 
 export default function FluidStep4() {
@@ -80,7 +81,7 @@ export default function FluidStep4() {
 
   const loop = useSimLoop(
     (dt) => {
-      advancePatch(patchRef.current, dt)
+      advancePatch(patchRef.current, dt * SLOW)
       redraw()
     },
     { targetRef: canvasRef, autoStart: false },
@@ -114,6 +115,7 @@ export default function FluidStep4() {
     { key: 'pair', label: '一番強く押す粒子との組の力', value: '', minChars: 14 },
     { key: 'sum', label: '全粒子の力の合計', value: '', minChars: 8 },
     { label: '矢印', value: '黒＝合力、橙＝選んだ組の力' },
+    { label: '再生の速さ', value: '実時間の 1/4（ゆっくり見せる）' },
   ]
 
   return (
