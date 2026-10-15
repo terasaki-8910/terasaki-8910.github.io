@@ -105,6 +105,7 @@ W_{\mathrm{poly6}}(r,h) &= \frac{4}{\pi h^{8}}\,(h^{2}-r^{2})^{3} \\
     },
     {
       text: 'Müller, M., Charypar, D., Gross, M., Particle-based fluid simulation for interactive applications, Proceedings of the 2003 ACM SIGGRAPH/Eurographics Symposium on Computer Animation, 154–159 (2003)',
+      href: 'https://doi.org/10.2312/SCA03/154-159',
     },
     {
       text: 'Gingold, R. A., Monaghan, J. J., Smoothed particle hydrodynamics: theory and application to non-spherical stars, Monthly Notices of the Royal Astronomical Society 181, 375–389 (1977)',
