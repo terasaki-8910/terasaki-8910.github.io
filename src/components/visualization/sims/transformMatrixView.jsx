@@ -14,8 +14,8 @@ const HI = 'font-bold underline decoration-2 underline-offset-4'
 
 function Block({ name, children }) {
   return (
-    <div className="flex flex-col">
-      <span className="mb-0.5 h-3 text-center text-[0.6875rem] leading-3" aria-hidden="true">
+    <div className="flex flex-col items-center">
+      <span className="mb-0.5 h-4 whitespace-nowrap text-center text-xs leading-4" aria-hidden="true">
         {name}
       </span>
       {children}
@@ -60,7 +60,7 @@ export function Vec({ name, v, hi = [] }) {
 export function Op({ children }) {
   return (
     <div className="flex flex-col" aria-hidden="true">
-      <span className="mb-0.5 h-3" />
+      <span className="mb-0.5 h-4" />
       <span className="flex flex-1 items-center px-2">{children}</span>
     </div>
   )

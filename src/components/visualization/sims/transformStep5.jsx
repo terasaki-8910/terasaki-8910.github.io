@@ -37,7 +37,7 @@ function PointRow({ name, s, point }) {
   if (info.behind) verdict = `w_c = ${f2(info.w)} < 0 なので、カメラの後ろ。w_c で割る前なら、外と分かる`
   else if (!info.inside) verdict = `${info.reasons.map((r) => REASON[r]).join('、')}`
   return (
-    <>
+    <div className="mb-3">
       <MatRow label={`${name} のクリップ座標と、w_c で割った NDC`}>
         <Vec name={`${name} の (x_c, y_c, z_c, w_c)`} v={info.clip} hi={[3]} />
         <Op>÷ w_c →</Op>
@@ -47,7 +47,7 @@ function PointRow({ name, s, point }) {
         <strong>{name}: {info.inside ? '内側' : '外側'}</strong>。{verdict}。
         {info.behind && ` 先に割ってしまうと y_n = ${f2(info.ndc[1])} になり、画面の中に出てしまう（上下も逆）。`}
       </ReadNote>
-    </>
+    </div>
   )
 }
 

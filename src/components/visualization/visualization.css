@@ -38,6 +38,7 @@
   padding-top: 2rem;
 }
 .vis-head__title {
+  scroll-margin-top: 7rem; /* #id で開いたとき、固定のヘッダーの下に見出しが隠れない */
   font-family: 'Craft Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
   font-size: clamp(1.5rem, 3.4vw, 2.25rem);
   line-height: 1.3;

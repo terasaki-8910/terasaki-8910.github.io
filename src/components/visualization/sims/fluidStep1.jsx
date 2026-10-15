@@ -30,7 +30,7 @@ import {
 // 各粒子の重み(幅 V_j、高さ W の棒。面積が重み V_j·W で、全部足すと 1)。
 // 計算は fluidKernel1d.js(核の形は utils/vis/sph.js)。ここは操作と描画。
 const V_RANGE = [0, 1.1] // 値 A の表示範囲
-const TOP_MARGIN = { left: 44, right: 14, top: 20, bottom: 24 }
+const TOP_MARGIN = { left: 44, right: 14, top: 26, bottom: 24 }
 const BOTTOM_MARGIN = { left: 44, right: 14, top: 22, bottom: 40 }
 const TOP_SHARE = 0.56 // 上の図が canvas の高さに占める割合
 const GRAB_PX = 16 // 点のまわり、このくらいまでならつかめる(指で触れやすいように)
@@ -222,6 +222,8 @@ export default function FluidStep1() {
   const drag = useRef(null) // { kind: 'particle', index } か { kind: 'probe' }
   usePointerDrag(canvasRef, {
     canGrab: ({ x, y }) => particleAt(x, y) >= 0,
+    // 粒子のない所を押すと「調べる位置」が横に動く(つかんでいる間もそのまま)ので、左右の矢印の cursor にする
+    cursorAt: ({ x, y }) => (particleAt(x, y) >= 0 ? null : 'ew-resize'),
     onDown: ({ x, y }) => {
       const j = particleAt(x, y)
       if (j >= 0) {
