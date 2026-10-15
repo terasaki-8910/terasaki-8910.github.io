@@ -91,6 +91,11 @@ export default function useCanvas({ draw, maxDpr = MAX_DPR } = {}) {
     }
     colorsRef.current = readColors()
     resize()
+    // canvas の文字(目盛りなど)は、書体の読み込みが終わっても自動では描き直されない。終わったら 1 回描き直す
+    let alive = true
+    document.fonts?.ready.then(() => {
+      if (alive) redraw()
+    })
     const resizeObserver = new ResizeObserver(resize)
     resizeObserver.observe(parent)
     const themeObserver = new MutationObserver(() => {
@@ -99,6 +104,7 @@ export default function useCanvas({ draw, maxDpr = MAX_DPR } = {}) {
     })
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
     return () => {
+      alive = false
       resizeObserver.disconnect()
       themeObserver.disconnect()
     }

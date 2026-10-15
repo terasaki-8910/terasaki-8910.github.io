@@ -705,6 +705,14 @@
   gap: 6px;
   white-space: nowrap;
 }
+.vis-legend__label {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.vis-legend__symbol {
+  font-size: 1.05em;
+}
 .vis-legend__value {
   font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace;
   font-variant-numeric: tabular-nums;

@@ -4,15 +4,8 @@
 // canvas の縦横比(幅/高さ)。枠(SimShell)の --aspect と、投影行列の aspect の両方がこれを使う
 export const ASPECT = 4 / 3
 
-let bodyFont = null
-
 // canvas の文字(ラベル)の書体指定。ページ本文と同じ書体をそのまま使う
-export function uiFont(size) {
-  if (bodyFont === null) {
-    bodyFont = typeof document !== 'undefined' ? getComputedStyle(document.body).fontFamily || 'sans-serif' : 'sans-serif'
-  }
-  return `${size}px ${bodyFont}`
-}
+export { uiFont } from '../canvasFont.js'
 
 // 小数 digits 桁。-0.00 にならないようにする
 export function fmt(v, digits = 2) {

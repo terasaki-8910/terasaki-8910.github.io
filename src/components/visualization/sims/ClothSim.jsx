@@ -56,7 +56,6 @@ export default function ClothSim() {
   const params = useRef({})
   params.current = { method, k, kd, iterations, windSpeed, CD: drag, CL: lift, dt: dtMs / 1000 }
   const clock = useRef({ acc: 0, stats: 0 })
-  const cursor = useRef('')
 
   const draw = useCallback(({ ctx, width, height, colors }) => {
     const world = worldRef.current
@@ -203,17 +202,27 @@ export default function ClothSim() {
     const scale = Math.min(width / WORLD_W, height / WORLD_H)
     return { wx: clamp(x / scale, 0, WORLD_W), wy: clamp((height - y) / scale, 0, WORLD_H), scale }
   }
-  const setCursor = (value) => {
-    if (cursor.current === value) return
-    cursor.current = value
-    if (canvasRef.current) canvasRef.current.style.cursor = value
+  // つかめる質点の上か(固定した質点と、発散したあとはつかめない)。usePointerDrag が canGrab で cursor を grab / grabbing に変える
+  const overNode = ({ x, y }) => {
+    const world = worldRef.current
+    if (world.diverged) return false
+    const { wx, wy, scale } = toWorld(x, y)
+    const reach = GRAB_RADIUS_PX / scale
+    const { pos } = world.state
+    for (let i = 0; i < world.state.n; i++) {
+      if (isPinned(world, i)) continue
+      const dx = wx - pos[2 * i]
+      const dy = wy - pos[2 * i + 1]
+      if (dx * dx + dy * dy <= reach * reach) return true
+    }
+    return false
   }
 
   usePointerDrag(canvasRef, {
+    canGrab: overNode,
     onDown: ({ x, y }) => {
       const { wx, wy, scale } = toWorld(x, y)
       if (worldRef.current.diverged || !grabNode(worldRef.current, wx, wy, GRAB_RADIUS_PX / scale)) return false
-      setCursor('grabbing')
       if (!loop.running) {
         snapGrab(worldRef.current)
         redraw()
@@ -229,23 +238,7 @@ export default function ClothSim() {
     },
     onUp: () => {
       releaseGrab(worldRef.current)
-      setCursor('')
       redraw()
-    },
-    onHover: ({ x, y }) => {
-      const world = worldRef.current
-      if (world.diverged) return
-      const { wx, wy, scale } = toWorld(x, y)
-      const reach = GRAB_RADIUS_PX / scale
-      const { pos } = world.state
-      let over = false
-      for (let i = 0; i < world.state.n && !over; i++) {
-        if (isPinned(world, i)) continue
-        const dx = wx - pos[2 * i]
-        const dy = wy - pos[2 * i + 1]
-        over = dx * dx + dy * dy <= reach * reach
-      }
-      setCursor(over ? 'grab' : '')
     },
   })
 
