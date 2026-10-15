@@ -506,6 +506,12 @@
 .vis-sources a:hover {
   color: var(--color-ink);
 }
+@media (pointer: coarse) {
+  .vis-sources a {
+    display: inline-block; /* 指で押せる高さ(44px 前後)にする */
+    padding: 10px 0;
+  }
+}
 
 /* ---- 案 B: 実験台 -------------------------------------------------------------------- */
 .vis-b {
