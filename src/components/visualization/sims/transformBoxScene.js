@@ -2,7 +2,7 @@
 // 行列は mat4.js の translate・rotate*・scale・compose、点の写しは transformMesh.js(projection の関数)。ここに式は書かない。
 // 世界は右手系で x が右、y が上、z が手前。箱は辺 ±1 の立方体を行列 M で移したもの。
 import { identity, multiply, translate, rotateX, rotateY, rotateZ, scale, compose, transformPoint } from '../../../utils/vis/mat4.js'
-import { clamp, toRad, toDeg, uiFont } from './transformCommon.js'
+import { clamp, toRad, toDeg, wrapDeg, uiFont } from './transformCommon.js'
 import { lookAtPose, cameraMatrices, pixelRay, rayPlaneZ } from './transformCamera.js'
 import { splitPanels } from './transformArm.js'
 import {
@@ -132,6 +132,15 @@ export function step2Model(s) {
 
 export const meanScale = (s) => (s.sx + s.sy + s.sz) / 3
 
+// 箱をつかんで動かしたとき: 左右の動き dx が y 軸まわり、上下の動き dy(画面は下向きが正)が x 軸まわりの回転になる
+export const TILT_PER_PX = 0.6 // 1 px あたりの回転 [°]
+export function tiltFromDrag(s, dx, dy) {
+  return {
+    ry: Math.round(wrapDeg(s.ry + dx * TILT_PER_PX)),
+    rx: Math.round(wrapDeg(s.rx + dy * TILT_PER_PX)),
+  }
+}
+
 // 取っ手の世界の位置
 export function rotateHandlePos(rzDeg) {
   const a = toRad(rzDeg)
@@ -165,6 +174,7 @@ export function step2Pick(view, s, x, y, radius = 16) {
 }
 
 export function drawStep2({ ctx, width, height, colors }, s, { active = null } = {}) {
+  const grabbed = active === 'body'
   const rect = fullRect(width, height)
   const view = boxView(rect, STEP12_CAMERA)
   const { VP } = view
@@ -182,7 +192,7 @@ export function drawStep2({ ctx, width, height, colors }, s, { active = null } =
       rect,
       [
         { M: identity(), stroke: colors.muted, ghost: true },
-        { M: m.M, fill: accentFill(colors, false), stroke: colors.ink },
+        { M: m.M, fill: accentFill(colors, grabbed), stroke: colors.ink, lineWidth: grabbed ? 2.5 : 1.75 },
       ],
       colors,
     )

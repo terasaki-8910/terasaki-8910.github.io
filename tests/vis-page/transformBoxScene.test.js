@@ -21,6 +21,7 @@ import {
   scaleHandlePos,
   angleFromPlanePoint,
   scaleFromPlanePoint,
+  tiltFromDrag,
   step3Model,
   step3Views,
   step3Pick,
@@ -115,6 +116,19 @@ test('段階 2: 平面の点から取っ手の位置へ、ポインタの光線�
   const p = projectPoint(view.VP, hp, RECT)
   const q = pointerOnPlane(view, p.x, p.y, 0)
   assert.ok(nearArr(q, hp, 1e-6))
+})
+
+test('段階 2: 箱を右へつかんで動かすと y 軸まわり、下へ動かすと x 軸まわりに回る。±180° に収まる', () => {
+  const s = { ...STEP2_DEFAULT, rx: 0, ry: 0 }
+  const right = tiltFromDrag(s, 50, 0)
+  assert.ok(right.ry > 0 && right.rx === 0)
+  const down = tiltFromDrag(s, 0, 50)
+  assert.ok(down.rx > 0 && down.ry === 0)
+  const wrap = tiltFromDrag({ ...s, ry: 179 }, 20, 0)
+  assert.ok(wrap.ry >= -180 && wrap.ry < 180 && wrap.ry < 0, `ry = ${wrap.ry}`)
+  // 画面で右へ動かしたとき、箱の手前の面(+z)が右へ回る: R_y(θ)·(0, 0, 1) = (sin θ, 0, cos θ)
+  const m = step2Model({ ...s, ry: right.ry })
+  assert.ok(transformPoint(m.R, [0, 0, 1, 0])[0] > 0)
 })
 
 test('段階 3: T·R·S の箱の中心は移動量 t、S·R·T の中心は s·R·t(同じ T・R・S でも結果が違う)', () => {

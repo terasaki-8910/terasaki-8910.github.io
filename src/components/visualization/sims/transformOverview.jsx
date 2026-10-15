@@ -9,7 +9,7 @@ import useCanvas from '../useCanvas'
 import useSimLoop from '../useSimLoop'
 import usePointerDrag from '../usePointerDrag'
 import { useStacked } from './transformHooks.js'
-import { clamp, fmt, fmtDeg, toDeg, toRad } from './transformCommon.js'
+import { clamp, fmt, fmtDeg, toDeg, toRad, wrapDeg } from './transformCommon.js'
 import { inRect } from './transformMesh.js'
 import { drawOverview, sceneModel, handOnScreen } from './transformScene.js'
 import {
@@ -32,7 +32,6 @@ import {
 const ASPECT_SIDE = 2 // 左右に並べるとき(2 枚の絵がそれぞれ縦横 1:1 ほど)
 const ASPECT_STACKED = 0.78 // 上下に並べるとき
 const UI_INTERVAL = 0.066 // 時刻のスライダーを書き換える間隔 [s](毎フレームは React を動かさない)
-const wrapDeg = (d) => ((((d + 180) % 360) + 360) % 360) - 180
 
 export default function TransformOverview() {
   const [time, setTime] = useState(0)

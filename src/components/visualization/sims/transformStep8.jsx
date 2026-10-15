@@ -188,7 +188,7 @@ export default function TransformStep8() {
           </MatRow>
           <ReadNote>
             det J = L₁L₂ sin θ₂ = {fmt2(det)}。θ₂ が 0 か π（腕が伸びきる・折りたたまれる）で 0 になり、そのとき J の逆行列はない。
-            {jacobianMode ? ' Δθ = Jᵀ(JJᵀ + λ²I)⁻¹e を 1 歩ごとに足して、e を小さくする。' : ' 解析解は、角度を直接求めるので、反復はない（J と e は見るだけ）。'}
+            {jacobianMode ? ' Δθ = Jᵀ(JJᵀ + λ²I)⁻¹e を 1 歩ごとに足して、e を小さくする。目標を動かすと、反復が始まる。' : ' 解析解は、角度を直接求めるので、反復はない（J と e は見るだけ）。'}
           </ReadNote>
           <span className="sr-only" role="status" aria-live="polite">
             {announce}

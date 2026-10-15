@@ -6,7 +6,8 @@ import ControlGroup from '../ControlGroup'
 import { SimToolbar, ResetButton } from '../SimButtons'
 import useCanvas from '../useCanvas'
 import usePointerDrag from '../usePointerDrag'
-import { clamp } from './transformCommon.js'
+import { boxHit } from './transformMesh.js'
+import { clamp, wrapDeg } from './transformCommon.js'
 import { arrowDelta } from './transformHooks.js'
 import { Mat, Vec, Op, MatRow, ReadNote } from './transformMatrixView.jsx'
 import {
@@ -20,13 +21,13 @@ import {
   meanScale,
   angleFromPlanePoint,
   scaleFromPlanePoint,
+  tiltFromDrag,
   drawStep2,
 } from './transformBoxScene.js'
 
-// 段階 2「回転と拡大」: 取っ手をつかんで、箱を回す(輪の上の取っ手)・広げる(右下の取っ手)。
-// 回転角・拡大率と、R・S の行列が追従する。ほかの回転(x・y まわり)と、軸ごとの拡大はスライダーで。
+// 段階 2「回転と拡大」: 箱をつかんで向きを変える(左右が y 軸まわり、上下が x 軸まわり)。取っ手をつかんで、
+// z 軸まわりに回す(輪の上の取っ手)・広げる(右下の取っ手)。回転角・拡大率と、R・S の行列が追従する。軸ごとの拡大はスライダーで。
 // 計算は mat4.js の rotateX・rotateY・rotateZ・scale・compose。ここは状態と操作。
-const wrapDeg = (d) => ((((d + 180) % 360) + 360) % 360) - 180
 
 export default function TransformStep2() {
   const [s, setS] = useState(STEP2_DEFAULT)
@@ -57,20 +58,35 @@ export default function TransformStep2() {
     }
   }
 
+  // つかめるのは、2 つの取っ手と、箱そのもの(取っ手が優先)
+  const pick = (x, y) => {
+    const view = viewNow()
+    const cur = params.current.s
+    const handle = step2Pick(view, cur, x, y)
+    if (handle) return handle
+    return boxHit(view.VP, step2Model(cur).M, view.rect, x, y) ? 'body' : null
+  }
+
   usePointerDrag(canvasRef, {
-    canGrab: ({ x, y }) => step2Pick(viewNow(), params.current.s, x, y) !== null,
+    canGrab: ({ x, y }) => pick(x, y) !== null,
     onDown: ({ x, y }) => {
-      const name = step2Pick(viewNow(), params.current.s, x, y)
+      const name = pick(x, y)
       if (!name) return false
       drag.current = name
       setActive(name)
-      setFocusHandle(name)
+      if (name !== 'body') setFocusHandle(name)
       canvasRef.current?.focus({ preventScroll: true })
-      apply(name, x, y)
+      if (name !== 'body') apply(name, x, y)
       return undefined
     },
-    onMove: ({ x, y }) => {
-      if (drag.current) apply(drag.current, x, y)
+    onMove: ({ x, y, dx, dy }) => {
+      const name = drag.current
+      if (!name) return
+      if (name === 'body') {
+        setS((v) => ({ ...v, ...tiltFromDrag(v, dx, dy) }))
+      } else {
+        apply(name, x, y)
+      }
     },
     onUp: () => {
       drag.current = null
@@ -112,7 +128,7 @@ export default function TransformStep2() {
           role="application"
           tabIndex={0}
           onKeyDown={onKeyDown}
-          label={`箱と 2 つの取っ手。輪の上の取っ手をドラッグすると回り、右下の取っ手をドラッグすると広がる。矢印キーで動かし、Space で取っ手を切り替える。いまは${focusHandle === 'rotate' ? '回す' : '広げる'}取っ手`}
+          label={`箱と 2 つの取っ手。箱をドラッグすると向きが変わり、輪の上の取っ手をドラッグすると z 軸まわりに回り、右下の取っ手をドラッグすると広がる。矢印キーで取っ手を動かし、Space で取っ手を切り替える。いまは${focusHandle === 'rotate' ? '回す' : '広げる'}取っ手`}
         />
       }
       readout={

@@ -21,3 +21,6 @@ export function fmtDeg(rad) {
   if (d <= -180) d += 360
   return fmt(d, 1)
 }
+
+// 角度(度)を [-180, 180) にする
+export const wrapDeg = (d) => ((((d + 180) % 360) + 360) % 360) - 180
