@@ -107,7 +107,7 @@ export function drawStep1({ ctx, width, height, colors }, s, { grabbed = false }
     drawDot3d(ctx, VP, rect, pa, { fill: colors.accent, stroke: colors.ink, radius: 5.5, lineWidth: 2 })
     drawText3d(ctx, VP, rect, p, 'p', { color: colors.ink, dx: -11, dy: -9, size: 12 })
     drawText3d(ctx, VP, rect, pa, "p'", { color: colors.ink, dx: 10, dy: 10, size: 12 })
-    drawText3d(ctx, VP, rect, addScaled(p, dot3(m.d), 1.6), 'd', { color: colors.muted, dx: 0, dy: -11, size: 12 })
+    drawText3d(ctx, VP, rect, addScaled(p, dot3(m.d), 1.6), 'd', { color: colors.ink, dx: 0, dy: -11, size: 12 })
     drawText3d(ctx, VP, rect, addScaled(pa, dot3(m.dAfter), 1.6), "d'", { color: colors.ink, dx: 0, dy: -11, size: 12 })
     // 箱の中心のつかみ印
     drawDot3d(ctx, VP, rect, center, { fill: colors.ink, radius: 2.5 })

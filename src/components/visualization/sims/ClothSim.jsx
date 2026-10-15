@@ -84,10 +84,12 @@ export default function ClothSim() {
         drawArrow(ctx, view, 0.08, y, 0.08 + WIND_ARROW_PER_MS * wind, y, { color: colors.muted, width: 1.8, head: 8 })
       }
     }
-    drawText(ctx, wind > 0 ? `風 U = ${wind.toFixed(1)} m/s` : '風 なし', view.sx(0.1), view.sy(WIND_ARROW_Y[0]) - 12, {
+    // 風の文字は、絵の左上の角に置く(網の上の空き。狭い画面では網の左端が近く、矢印のすぐ上だと質点に重なる)
+    drawText(ctx, wind > 0 ? `風 U = ${wind.toFixed(1)} m/s` : '風 なし', view.frame.left + 8, view.frame.top + 8, {
       color: colors.ink,
       size: 12,
       mono: true,
+      baseline: 'top',
     })
 
     drawNet(ctx, view, world, colors)
