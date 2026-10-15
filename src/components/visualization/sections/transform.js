@@ -4,6 +4,9 @@
 import { lazy } from 'react'
 
 const TransformOverview = lazy(() => import('../sims/transformOverview.jsx'))
+const Step1 = lazy(() => import('../sims/transformStep1.jsx'))
+const Step2 = lazy(() => import('../sims/transformStep2.jsx'))
+const Step3 = lazy(() => import('../sims/transformStep3.jsx'))
 
 export default {
   id: 'transform',
@@ -14,8 +17,78 @@ export default {
     Sim: TransformOverview,
     caption: '左の図は、ドラッグで見る向きを回せる。右の絵は、右のバーで動かすカメラが撮ったもの。再生すると、腕が番号の順にキーフレームをなぞる。',
   },
-  steps: [],
-  combination: null,
+  steps: [
+    {
+      id: 'homogeneous-translation',
+      title: '同次座標と平行移動',
+      text: '平行移動は、3×3 の行列の掛け算では書けない（原点が必ず原点に移ってしまう）。そこで点に 4 つ目の成分 w = 1 を足して (x, y, z, 1) とし、右端の列に移動量を入れた 4×4 の行列を掛ける。向きのベクトルは w = 0 にしておくと、移動量が掛からないので動かない。',
+      formulas: [
+        {
+          tex: String.raw`\begin{aligned}
+T &= \begin{pmatrix} 1 & 0 & 0 & t_x \\ 0 & 1 & 0 & t_y \\ 0 & 0 & 1 & t_z \\ 0 & 0 & 0 & 1 \end{pmatrix} \\[6pt]
+T \begin{pmatrix} x \\ y \\ z \\ 1 \end{pmatrix} &= \begin{pmatrix} x + t_x \\ y + t_y \\ z + t_z \\ 1 \end{pmatrix}, \qquad
+T \begin{pmatrix} d_x \\ d_y \\ d_z \\ 0 \end{pmatrix} = \begin{pmatrix} d_x \\ d_y \\ d_z \\ 0 \end{pmatrix}
+\end{aligned}`,
+          symbols: [
+            { tex: String.raw`T`, meaning: '平行移動の 4×4 行列。右端の列が移動量', unit: '' },
+            { tex: String.raw`t_x,\ t_y,\ t_z`, meaning: '各軸の向きの移動量', unit: String.raw`\mathrm{m}` },
+            { tex: String.raw`(x,\ y,\ z,\ 1)`, meaning: '位置の同次座標。4 つ目の成分 w = 1 のとき、移動量が足される', unit: String.raw`\mathrm{m}` },
+            { tex: String.raw`(d_x,\ d_y,\ d_z,\ 0)`, meaning: '向きの同次座標。w = 0 のとき、移動量が掛からず、向きは変わらない', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['mat4-translate', 'mat4-transformPoint'],
+      Sim: Step1,
+    },
+    {
+      id: 'rotation-scale',
+      title: '回転と拡大',
+      text: '拡大は、対角成分に倍率を並べるだけ。回転は、z 軸まわりなら (x, y) を cos と sin で回す式で、x 軸まわり・y 軸まわりも同じ形（符号の位置だけが違う）。3 つの軸まわりの回転を Rz·Ry·Rx の順に掛けて、1 つの R にまとめる。',
+      formulas: [
+        {
+          tex: String.raw`\begin{aligned}
+R_z(\theta) &= \begin{pmatrix} \cos\theta & -\sin\theta & 0 & 0 \\ \sin\theta & \cos\theta & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}, \qquad
+S = \begin{pmatrix} s_x & 0 & 0 & 0 \\ 0 & s_y & 0 & 0 \\ 0 & 0 & s_z & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \\[6pt]
+R &= R_z(\theta_z)\,R_y(\theta_y)\,R_x(\theta_x)
+\end{aligned}`,
+          symbols: [
+            { tex: String.raw`R_x,\ R_y,\ R_z`, meaning: '各軸のまわりの回転の 4×4 行列（軸の正の側から見て、反時計回りが正）', unit: '' },
+            { tex: String.raw`\theta_x,\ \theta_y,\ \theta_z`, meaning: '各軸のまわりの回転角', unit: String.raw`\mathrm{rad}` },
+            { tex: 'R', meaning: '3 つの回転をまとめた行列。左上の 3×3 は直交行列で、行列式は 1', unit: '' },
+            { tex: String.raw`s_x,\ s_y,\ s_z`, meaning: '軸ごとの拡大率', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['mat4-scale', 'mat4-rotateX', 'mat4-rotateY', 'mat4-rotateZ'],
+      Sim: Step2,
+    },
+    {
+      id: 'composition-order',
+      title: '合成の順',
+      text: '行列の積は、掛ける順を入れ替えると結果が変わる（AB と BA は一般に違う）。M = T·R·S は、点に右から S、R、T の順に効く。S·R·T は先に移動してから回すので、箱は原点のまわりを回り、そのあと原点から拡大される。',
+      formulas: [
+        {
+          tex: String.raw`\begin{aligned}
+M_{TRS} &= T\,R\,S = \begin{pmatrix} R_3 S & \mathbf{t} \\ \mathbf{0}^{\mathsf T} & 1 \end{pmatrix} \\[6pt]
+M_{SRT} &= S\,R\,T = \begin{pmatrix} S R_3 & S R_3\,\mathbf{t} \\ \mathbf{0}^{\mathsf T} & 1 \end{pmatrix}
+\end{aligned}`,
+          symbols: [
+            { tex: String.raw`M_{TRS},\ M_{SRT}`, meaning: '同じ T・R・S を、掛ける順だけ変えた 2 つの行列。右にあるほど先に点へ効く', unit: '' },
+            { tex: String.raw`R_3,\ S`, meaning: '回転の 3×3 と、拡大の対角行列（S は 3×3 として読む）', unit: '' },
+            { tex: String.raw`\mathbf{t}`, meaning: '平行移動量。T·R·S ではそのまま右端の列に入り、S·R·T では S·R₃ で回して拡大した値になる', unit: String.raw`\mathrm{m}` },
+          ],
+        },
+      ],
+      snippets: ['mat4-multiply', 'mat4-compose'],
+      Sim: Step3,
+    },
+  ],
+  combination: {
+    text: '全体の腕は、段階 7 → 8 → 1〜3 → 4〜6 の順につながって、画面に出る。',
+    flow: [
+      { steps: [1, 2, 3], text: '腕の関節の角度から、箱の行列を作って 3 次元に置く（モデル変換。関節ごとに回転と平行移動を右から掛ける）' },
+    ],
+  },
   sources: [
     { text: 'Foley, van Dam, Feiner, Hughes, Computer Graphics: Principles and Practice, 2nd ed., Addison-Wesley (1990)' },
     { text: 'Akenine-Möller, Haines, Hoffman, Real-Time Rendering, 4th ed., CRC Press (2018)' },
@@ -34,26 +107,6 @@ export default {
 
   // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
   legacyFormulas: [
-    {
-      id: 'homogeneous',
-      caption: '同次座標の変換と合成',
-      tex: String.raw`\begin{aligned}
-\mathbf{p}' &= M\,\mathbf{p}, \qquad M = T\,R\,S \\
-T &= \begin{pmatrix} I & \mathbf{t} \\ \mathbf{0}^{\mathsf T} & 1 \end{pmatrix}, \quad
-R = \begin{pmatrix} R_3 & \mathbf{0} \\ \mathbf{0}^{\mathsf T} & 1 \end{pmatrix}, \quad
-S = \begin{pmatrix} \mathrm{diag}(s_x,\, s_y,\, s_z) & \mathbf{0} \\ \mathbf{0}^{\mathsf T} & 1 \end{pmatrix} \\
-R_3 &= R_z(\theta_z)\,R_y(\theta_y)\,R_x(\theta_x)
-\end{aligned}`,
-      symbols: [
-        { tex: String.raw`\mathbf{p},\ \mathbf{p}'`, meaning: '変換の前と後の点。同次座標 (x, y, z, w) で、w = 1 は位置、w = 0 は向き（平行移動されない）', unit: String.raw`\mathrm{m}` },
-        { tex: 'M', meaning: '合成した 4×4 の変換行列。右にある行列ほど先に点へ効く', unit: '' },
-        { tex: String.raw`T,\ R,\ S`, meaning: '平行移動、回転、拡大の 4×4 行列。掛ける順を変えると結果が変わる', unit: '' },
-        { tex: String.raw`\mathbf{t}`, meaning: '平行移動量', unit: String.raw`\mathrm{m}` },
-        { tex: 'R_3', meaning: '3×3 の回転行列（直交行列で、行列式は +1）', unit: '' },
-        { tex: String.raw`\theta_x,\ \theta_y,\ \theta_z`, meaning: '各軸のまわりの回転角（軸の正の側から見て反時計回りが正）', unit: String.raw`\mathrm{rad}` },
-        { tex: String.raw`s_x,\ s_y,\ s_z`, meaning: '軸ごとの拡大率', unit: '' },
-      ],
-    },
     {
       id: 'perspective',
       caption: '透視投影',
@@ -149,8 +202,6 @@ l_1 \cos\theta_1 + l_2 \cos(\theta_1 + \theta_2) & l_2 \cos(\theta_1 + \theta_2)
     },
   ],
   legacySnippets: [
-    'mat4-multiply',
-    'mat4-compose',
     'projection-perspectiveMatrix',
     'projection-toNDC',
     'projection-viewport',

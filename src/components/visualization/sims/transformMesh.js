@@ -267,14 +267,16 @@ export function drawGround(ctx, MVP, rect, { y = 0, half = 3, step = 1, color, w
   }
 }
 
-// 世界の軸 x・y・z。原点から長さ len(m)まで、1 m ごとに点を打ち、先に「x [m]」のように名前と単位を書く
-export function drawAxes3d(ctx, MVP, rect, colors, { len = 2, unit = 'm' } = {}) {
-  const dirs = [
-    ['x', [1, 0, 0]],
-    ['y', [0, 1, 0]],
-    ['z', [0, 0, 1]],
-  ]
-  for (const [name, d] of dirs) {
+// 世界の軸。原点から長さ len(m)まで、1 m ごとに点を打ち、先に「x [m]」のように名前と単位を書く。
+// axes: 描く軸の名前('x'・'y'・'z' のうち)。省略すると 3 本
+export function drawAxes3d(ctx, MVP, rect, colors, { len = 2, unit = 'm', axes = ['x', 'y', 'z'] } = {}) {
+  const dirs = {
+    x: [1, 0, 0],
+    y: [0, 1, 0],
+    z: [0, 0, 1],
+  }
+  for (const name of axes) {
+    const d = dirs[name]
     drawArrow3d(ctx, MVP, rect, [0, 0, 0], [d[0] * len, d[1] * len, d[2] * len], { color: colors.ink, width: 1.5, head: 8 })
     for (let k = 1; k < len; k++) {
       drawDot3d(ctx, MVP, rect, [d[0] * k, d[1] * k, d[2] * k], { fill: colors.ink, radius: 2 })

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import SimShell from '../SimShell'
 import SimCanvas from '../SimCanvas'
 import SimLegend from '../SimLegend'
@@ -8,6 +8,7 @@ import { SimToolbar, PlayPauseButton, ResetButton } from '../SimButtons'
 import useCanvas from '../useCanvas'
 import useSimLoop from '../useSimLoop'
 import usePointerDrag from '../usePointerDrag'
+import { useStacked } from './transformHooks.js'
 import { clamp, fmt, fmtDeg, toDeg, toRad } from './transformCommon.js'
 import { inRect } from './transformMesh.js'
 import { drawOverview, sceneModel, handOnScreen } from './transformScene.js'
@@ -20,7 +21,6 @@ import {
   keyframeInfo,
   advanceClock,
   splitPanels,
-  isStacked,
 } from './transformArm.js'
 
 // 節「変換・投影・補間・IK」の全体のシミュレーション: 2 関節の腕のキーフレームアニメーションを、カメラで撮って画面に描く。
@@ -39,12 +39,9 @@ export default function TransformOverview() {
   const [cam, setCam] = useState(CAMERA_DEFAULT)
   const [yawDeg, setYawDeg] = useState(Math.round(toDeg(OUTSIDE_DEFAULT.yaw)))
   const [pitchDeg, setPitchDeg] = useState(Math.round(toDeg(OUTSIDE_DEFAULT.pitch)))
-  const [stacked, setStacked] = useState(() => typeof window !== 'undefined' && window.innerWidth < 640)
 
   const path = useMemo(() => buildPath(), [])
   const sim = useRef({ clock: { t: 0, acc: 0 }, ui: 0 })
-  const params = useRef(null)
-  params.current = { path, cam, yaw: toRad(yawDeg), pitch: toRad(pitchDeg), stacked }
   const legend = useRef(null)
 
   const stateNow = () => ({ ...params.current, t: sim.current.clock.t })
@@ -53,6 +50,9 @@ export default function TransformOverview() {
     drawOverview({ ctx, width, height, colors }, { ...params.current, t: sim.current.clock.t })
   }, [])
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
+  const stacked = useStacked(canvasRef) // 狭い画面では上下に並べる
+  const params = useRef(null)
+  params.current = { path, cam, yaw: toRad(yawDeg), pitch: toRad(pitchDeg), stacked }
 
   // 凡例のうち、時刻とともに変わる値(文字だけ書き換える)
   const liveValues = () => {
@@ -84,17 +84,6 @@ export default function TransformOverview() {
     },
     { targetRef: canvasRef },
   )
-
-  // 狭い画面では上下に並べる(枠の幅を見る。縦横比は並べ方で変わるので、幅は変わらない)
-  useLayoutEffect(() => {
-    const parent = canvasRef.current?.parentElement
-    if (!parent) return undefined
-    const update = () => setStacked(isStacked(parent.clientWidth))
-    update()
-    const observer = new ResizeObserver(update)
-    observer.observe(parent)
-    return () => observer.disconnect()
-  }, [canvasRef])
 
   // 止まっているあいだも、操作に合わせて描き直す
   useEffect(() => {
