@@ -3,7 +3,7 @@ import { SectionHead, SectionFormulas, SectionSim, SectionCode, SectionSources }
 
 // 案 B「実験台」: 1024px 以上で2列。左(7/12)にシミュレーションと操作を sticky で置き、
 // 右(5/12)で説明と式が流れる。狭い画面は 見出しと説明 → シミュレーション → 式 の順に縦に積む。
-const CONTEXT = { layout: 'b', placement: 'below', aside: null }
+const CONTEXT = { layout: 'b', placement: 'below' }
 
 export default function LayoutB({ sections }) {
   return (

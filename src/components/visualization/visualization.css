@@ -214,21 +214,6 @@
     gap: 4px;
   }
 }
-.vis-sim__side .vis-symbols th,
-.vis-sim__side .vis-symbols td {
-  padding-right: 14px;
-}
-.vis-sim__side > .vis-formulas {
-  margin-top: 1.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-line);
-}
-.vis-sim__side > .vis-formulas:first-child { /* 操作がない枠では、式が欄の先頭 */
-  margin-top: 0;
-  padding-top: 0;
-  border-top: 0;
-}
-
 /* ---- ボタンと切り替え ------------------------------------------------------------------ */
 .vis-toolbar {
   display: flex;
@@ -603,6 +588,12 @@
 }
 .vis-c__panel .vis-sim {
   margin-top: 1.5rem;
+}
+/* 式はシミュレーションの下に、案 A と同じ読み物の幅(48rem)で流す。2 列にすると半分の幅(550px ほど)で、
+   長い式(3 次スプラインの条件、2 リンクの解析解など)が横にはみ出して切れる */
+.vis-c__panel > .vis-formulas {
+  max-width: 48rem;
+  margin-top: 2.5rem;
 }
 
 /* ---- 見た目の案の切り替え(プレビュー用。案が決まったら消す) ------------------------------ */

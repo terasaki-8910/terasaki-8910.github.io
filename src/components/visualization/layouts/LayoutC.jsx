@@ -1,10 +1,14 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { LayoutContext } from '../LayoutContext'
 import { SectionHead, SectionFormulas, SectionSim, SectionCode, SectionSources } from '../SectionParts'
 
 // 案 C「タブ」: 上に4つのタブ(role=tablist、矢印キーで移る)。1度に1節だけ出す(ほかの節のシミュレーションは
-// 作られないので動かない)。1024px 以上では、シミュレーションを大きく、操作と式を右の欄に置く
-// (式は SimShell が操作の下に出す。LayoutContext の aside)。節の id は URL の # に反映する。
+// 作られないので動かない)。1024px 以上では、シミュレーションを大きく、操作を右の欄(20rem)に置く。
+// 式はシミュレーションの下に、案 A と同じ読み物の幅で流す(流体と変換は式が7つあり、欄に入れると画面の高さを大きく超える。
+// 2 列にすると、長い式が半分の幅に収まらずに切れる)。
+// 節の id は URL の # に反映する。
+
+const CONTEXT = { layout: 'c', placement: 'side' }
 
 function initialId(sections) {
   const hash = typeof location !== 'undefined' ? location.hash.slice(1) : ''
@@ -24,11 +28,6 @@ export default function LayoutC({ sections }) {
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [sections])
 
-  const context = useMemo(
-    () => ({ layout: 'c', placement: 'side', aside: <SectionFormulas section={section} /> }),
-    [section],
-  )
-
   function select(i, focus = false) {
     const n = (i + sections.length) % sections.length
     setActiveId(sections[n].id)
@@ -46,7 +45,7 @@ export default function LayoutC({ sections }) {
   }
 
   return (
-    <LayoutContext.Provider value={context}>
+    <LayoutContext.Provider value={CONTEXT}>
       <div className="vis-c">
         <div className="vis-tabs" role="tablist" aria-label="節" onKeyDown={onKeyDown}>
           {sections.map((s, i) => (
@@ -75,6 +74,7 @@ export default function LayoutC({ sections }) {
         >
           <SectionHead section={section} headingId={section.id} />
           <SectionSim section={section} />
+          <SectionFormulas section={section} />
           <SectionCode section={section} />
           <SectionSources section={section} />
         </section>

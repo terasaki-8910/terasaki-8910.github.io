@@ -9,9 +9,9 @@ import { useLayout } from './LayoutContext'
 //   readout:  絵の下の数値の表示(行列など)。省略できる
 //   switcher: 絵の上に付ける切り替え(1つの絵で複数の見せ方を切り替えるときの、見せ方のタブ)。省略できる。
 //             絵の上は切り替えても動かないので、押す位置が変わらない
-// 案 C の広い画面では、操作は絵の右の欄に出て、その下に式(aside)が続く。
+// 案 C の広い画面では、操作は絵の右の欄に出る(式は節の側で、シミュレーションの下に流す)。
 export default function SimShell({ label, aspect = 4 / 3, stage, controls, readout, switcher, className = '' }) {
-  const { placement, aside } = useLayout()
+  const { placement } = useLayout()
   return (
     <div
       className={`vis-sim ${className}`}
@@ -27,7 +27,6 @@ export default function SimShell({ label, aspect = 4 / 3, stage, controls, reado
       </div>
       <div className="vis-sim__side">
         {controls && <div className="vis-sim__controls">{controls}</div>}
-        {placement === 'side' && aside}
       </div>
     </div>
   )
