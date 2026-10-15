@@ -22,19 +22,37 @@ const DIVERGE_LIMIT = 100 // これより遠くへ飛んだら、計算が発散
 
 const gravityVector = [0, -GRAVITY]
 
-export function createClothWorld({ pin = 'edge', k = 300, kd = 0.5 } = {}) {
-  const x0 = (WORLD_W - (COLS - 1) * SPACING) / 2
-  const y0 = WORLD_H - 0.3
-  const cloth = createCloth(COLS, ROWS, SPACING, x0, y0)
+// 既定は全体の網(14 × 10 個、間隔 0.2 m、世界 4 m × 3 m)。段階の小さい網は cols・rows・spacing・worldW・worldH を渡す
+export function createClothWorld({
+  pin = 'edge',
+  k = 300,
+  kd = 0.5,
+  cols = COLS,
+  rows = ROWS,
+  spacing = SPACING,
+  worldW = WORLD_W,
+  worldH = WORLD_H,
+} = {}) {
+  const x0 = (worldW - (cols - 1) * spacing) / 2
+  const y0 = worldH - 0.3
+  const cloth = createCloth(cols, rows, spacing, x0, y0)
   const { state, constraints } = cloth
   state.w.fill(1 / NODE_MASS)
   attachViews(state)
   const springs = constraints.map((c) => ({ i: c.i, j: c.j, k, kd, L0: c.d }))
+  const isStructural = (c) => c.d === spacing
   const world = {
+    cols,
+    rows,
+    spacing,
+    worldW,
+    worldH,
     state,
     constraints, // 位置ベース法の距離の拘束 { i, j, d }
     springs, // 質点-ばね系のばね { i, j, k, kd, L0 }(拘束と同じ並び)
-    segments: constraints.filter((c) => c.d === SPACING), // 風を受ける板にする辺(縦と横。斜めは除く)
+    structuralSprings: springs.filter((_, s) => isStructural(constraints[s])), // 縦横のばねだけ(斜めを外す段階 7 用)
+    structuralConstraints: constraints.filter(isStructural),
+    segments: constraints.filter(isStructural), // 風を受ける板にする辺(縦と横。斜めは除く)
     pin,
     k,
     kd,
@@ -69,8 +87,8 @@ export function resetCloth(world) {
 export function applyPins(world, mode) {
   world.pin = mode
   const free = 1 / NODE_MASS
-  for (let c = 0; c < COLS; c++) {
-    const pinned = mode === 'edge' || c === 0 || c === COLS - 1
+  for (let c = 0; c < world.cols; c++) {
+    const pinned = mode === 'edge' || c === 0 || c === world.cols - 1
     if (c === world.grab.index) continue // つかんでいる質点は離すときに戻す
     world.state.w[c] = pinned ? 0 : free
     if (pinned) {
@@ -81,7 +99,7 @@ export function applyPins(world, mode) {
 }
 
 export function isPinned(world, i) {
-  return i < COLS && (world.pin === 'edge' || i === 0 || i === COLS - 1)
+  return i < world.cols && (world.pin === 'edge' || i === 0 || i === world.cols - 1)
 }
 
 // ---- つかむ ----
@@ -114,8 +132,8 @@ export function grabNode(world, x, y, radius) {
 // 「0.15 m + 固定した辺からの段数 × 間隔 × TETHER」以内に収める(固定に近い質点ほど動ける範囲が小さい)
 export const TETHER = 0.4
 function limitReach(world, i, x, y, out) {
-  const row = Math.floor(i / COLS)
-  const reach = 0.15 + row * SPACING * TETHER
+  const row = Math.floor(i / world.cols)
+  const reach = 0.15 + row * world.spacing * TETHER
   const ax = world.positions0[2 * i]
   const ay = world.positions0[2 * i + 1]
   const dx = x - ax
@@ -169,6 +187,16 @@ export function snapGrab(world, dt = 0, tethered = true) {
   vel[2 * i + 1] = 0
 }
 
+// キーボードの代わりのつかみ方: 固定されていない全部の質点に速度 (dvx, dvy) [m/s] を足して揺らす
+export function nudgeAll(world, dvx, dvy) {
+  const { vel, w } = world.state
+  for (let i = 0; i < world.state.n; i++) {
+    if (w[i] === 0) continue
+    vel[2 * i] += dvx
+    vel[2 * i + 1] += dvy
+  }
+}
+
 export function releaseGrab(world) {
   const g = world.grab
   if (g.index < 0) return
@@ -190,10 +218,15 @@ function checkDiverged(world) {
   }
 }
 
-// 1 回ぶんの時間 dt を進める。p = { method: 'springs' | 'pbd', k, kd, iterations, windSpeed, CD, CL }
+// 1 回ぶんの時間 dt を進める。p = { method: 'springs' | 'pbd', k, kd, iterations, windSpeed, CD, CL, diagonals }
+// diagonals が false なら、斜めのばね(拘束)を使わない(縦横だけ。省略は使う)
 export function stepCloth(world, p, dt) {
   if (world.diverged) return
-  const { state, springs } = world
+  const { state } = world
+  const useDiagonals = p.diagonals !== false
+  const springs = world.springs // k・kd は斜めも含めて書き換える
+  const activeSprings = useDiagonals ? world.springs : world.structuralSprings
+  const activeConstraints = useDiagonals ? world.constraints : world.structuralConstraints
   world.wind[0] = p.windSpeed
   world.aero.CD = p.CD
   world.aero.CL = p.CL
@@ -209,7 +242,7 @@ export function stepCloth(world, p, dt) {
         springs[s].kd = p.kd
       }
     }
-    massSpringStep(state, springs, world.msParams, dt)
+    massSpringStep(state, activeSprings, world.msParams, dt)
   } else {
     if (grab.index >= 0) {
       // 位置ベース法では、つかんだ質点にポインタへ向かう速度を与える。位置を直接動かすと拘束を大きく破り、
@@ -241,7 +274,7 @@ export function stepCloth(world, p, dt) {
     const pp = world.pbdParams
     pp.iterations = p.iterations
     pp.damping = 1 - Math.exp(-AIR_RATE * dt) // 1 ステップで失う速度の割合(質点-ばね系の空気抵抗と同じ減り方)
-    pbdStep(state, world.constraints, pp, dt)
+    pbdStep(state, activeConstraints, pp, dt)
   }
   checkDiverged(world)
 }
@@ -300,12 +333,13 @@ export function latticeStableDt(k, kd = 0) {
   return Math.sqrt(beta * beta + dt0 * dt0) - beta
 }
 
-// 辺の自然長に対する伸びの最大値(縮みは含まない)。0.1 = 10 %
-export function maxStretch(world) {
+// 辺の自然長に対する伸びの最大値(縮みは含まない)。0.1 = 10 %。diagonals が false なら縦横の辺だけ見る
+export function maxStretch(world, diagonals = true) {
   const { pos } = world.state
+  const list = diagonals ? world.springs : world.structuralSprings
   let max = 0
-  for (let s = 0; s < world.springs.length; s++) {
-    const { i, j, L0 } = world.springs[s]
+  for (let s = 0; s < list.length; s++) {
+    const { i, j, L0 } = list[s]
     const dx = pos[2 * j] - pos[2 * i]
     const dy = pos[2 * j + 1] - pos[2 * i + 1]
     const strain = (Math.sqrt(dx * dx + dy * dy) - L0) / L0
