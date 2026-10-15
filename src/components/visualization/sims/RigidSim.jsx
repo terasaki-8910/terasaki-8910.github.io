@@ -36,10 +36,13 @@ export default function RigidSim() {
   const [restitution, setRestitution] = useState(0.6)
   const [substeps, setSubsteps] = useState(8)
   const [showBroad, setShowBroad] = useState(false)
-  const [stats, setStats] = useState({ total: 0, candidates: 0, contacts: 0 })
 
   const worldRef = useRef(null)
-  if (!worldRef.current) worldRef.current = createRigidWorld(24)
+  if (!worldRef.current) {
+    worldRef.current = createRigidWorld(24)
+    detectContacts(worldRef.current, 0, false) // 最初の数値を出すために、一度だけ数える
+  }
+  const [stats, setStats] = useState(() => ({ ...worldRef.current.stats }))
   const params = useRef({})
   params.current = { gravity, e: restitution, substeps, showBroad }
   const clock = useRef({ acc: 0, stats: 0 })
