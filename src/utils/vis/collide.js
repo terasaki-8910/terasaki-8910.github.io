@@ -199,6 +199,7 @@ export function resolveCircles(b1, b2, e) {
 }
 // @end
 
+// @snippet collide-separateCircles
 // めり込みを、動きやすさ(質量の逆数)に比例して法線方向に押し戻す。
 // 速度は撃力だけで決まるので、位置の補正は resolveCircles とは別にして、めり込みが残って沈むのを防ぐ。
 // 重なっていたら押し戻した量(めり込みの深さ)を、そうでなければ 0 を返す
@@ -220,3 +221,4 @@ export function separateCircles(b1, b2) {
   b2.c[1] += s2 * ny
   return depth
 }
+// @end
