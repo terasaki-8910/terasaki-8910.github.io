@@ -146,15 +146,59 @@
 .vis-sim__side {
   min-width: 0;
 }
-.vis-sim__controls {
+.vis-sim__controls,
+.vis-stack__item {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 4px 28px;
   align-content: start;
 }
-.vis-sim__controls > .vis-toolbar {
+.vis-sim__controls > .vis-toolbar,
+.vis-stack__item > .vis-toolbar {
   grid-column: 1 / -1;
   margin-bottom: 8px;
+}
+/* 見せ方ごとの欄を同じ場所に重ねる(ViewStack)。高さは、場所を取っておく見せ方の最大に合い、見えない方は hidden(Tab・読み上げにも出ない) */
+.vis-stack {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1fr);
+}
+.vis-stack__item {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+.vis-stack__item[data-active='false'] {
+  visibility: hidden;
+}
+.vis-stack__item[data-active='false'][data-reserve='false'] {
+  display: none; /* 場所を取っておかない見せ方 */
+}
+.vis-sim__readout .vis-stack__item {
+  display: block; /* 読みは操作の欄の grid にしない */
+}
+/* 絵の上の切り替え(主)。絵の枠に接するタブの形 */
+.vis-sim__switcher {
+  position: relative;
+  z-index: 1; /* タブの下の辺で、絵の枠の上の辺を隠す */
+  margin-bottom: -1px;
+}
+.vis-sim__switcher + .vis-sim__stage {
+  border-top-left-radius: 0;
+}
+/* 見出し付きの操作の群(ControlGroup)。横幅いっぱいで、中は操作の欄と同じ並び */
+.vis-group {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+  gap: 4px 28px;
+}
+.vis-group__label {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
 }
 /* 案 C の広い画面: 絵を大きく、操作と式は右の欄 */
 @media (min-width: 1024px) {
@@ -163,7 +207,9 @@
     align-items: start;
     gap: 28px;
   }
-  .vis-sim[data-placement='side'] .vis-sim__controls {
+  .vis-sim[data-placement='side'] .vis-sim__controls,
+  .vis-sim[data-placement='side'] .vis-stack__item,
+  .vis-sim[data-placement='side'] .vis-group {
     grid-template-columns: minmax(0, 1fr);
     gap: 4px;
   }
@@ -265,6 +311,31 @@
   border-color: var(--color-ink);
   color: var(--color-paper);
   position: relative;
+}
+
+/* 主の切り替え(tabs): 絵の上に付くタブ。選んだものを ink で塗り、絵の枠とつなぐ */
+.vis-seg--tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.vis-seg--tabs .vis-seg__item {
+  border-bottom-color: var(--color-muted);
+}
+.vis-seg--tabs .vis-seg__item:first-child {
+  border-radius: 4px 0 0 0;
+}
+.vis-seg--tabs .vis-seg__item:last-child {
+  border-radius: 0 4px 0 0;
+}
+.vis-seg--tabs .vis-seg__item[aria-checked='true'] {
+  border-bottom-color: var(--color-ink);
+}
+/* 従の切り替え(quiet): 見せ方の中の選択肢。塗らずに、選んだものを ink の太い枠で示す */
+.vis-seg--quiet .vis-seg__item[aria-checked='true'] {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+  box-shadow: inset 0 0 0 1px var(--color-ink);
 }
 
 /* ---- スライダー ----------------------------------------------------------------------- */

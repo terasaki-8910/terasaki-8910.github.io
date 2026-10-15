@@ -6,6 +6,8 @@ import { PiPlayBold, PiPauseBold, PiArrowCounterClockwiseBold } from 'react-icon
 //     <PlayPauseButton running={loop.running} onToggle={loop.toggle} />
 //     <ResetButton onClick={reset} />
 //     <ModeSwitch label="掛ける順" value={order} onChange={setOrder} options={[{ value: 'trs', label: 'TRS' }, ...]} />
+//       variant="tabs"  絵の見せ方の切り替え(SimShell の switcher に置く。絵の上に付くタブの形で、選んだものを ink で塗る)
+//       variant="quiet" 見せ方の中の選択肢。選んだものを塗らずに ink の太い枠で示す(塗りは主の切り替えだけ)
 //     <ToggleButton pressed={showGrid} onChange={setShowGrid}>グリッドを表示</ToggleButton>
 //   </SimToolbar>
 
@@ -52,7 +54,7 @@ export function ToggleButton({ pressed, onChange, children, disabled = false }) 
 }
 
 // 方式の切り替え(2〜4個から1つ)。radiogroup で、矢印キーで移る(選んだ項目だけが Tab の停止点)
-export function ModeSwitch({ label, value, options, onChange, disabled = false }) {
+export function ModeSwitch({ label, value, options, onChange, disabled = false, variant }) {
   const refs = useRef([])
   const index = Math.max(0, options.findIndex((o) => o.value === value))
 
@@ -79,7 +81,7 @@ export function ModeSwitch({ label, value, options, onChange, disabled = false }
   }
 
   return (
-    <div className="vis-seg" role="radiogroup" aria-label={label} onKeyDown={onKeyDown}>
+    <div className={variant ? `vis-seg vis-seg--${variant}` : 'vis-seg'} role="radiogroup" aria-label={label} onKeyDown={onKeyDown}>
       {options.map((option, i) => (
         <button
           key={option.value}

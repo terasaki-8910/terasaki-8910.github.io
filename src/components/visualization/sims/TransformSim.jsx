@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { PiSkipForwardBold } from 'react-icons/pi'
-import SimShell from '../SimShell'
+import SimShell, { ViewStack } from '../SimShell'
+import ControlGroup from '../ControlGroup'
 import SimCanvas from '../SimCanvas'
 import ParamSlider from '../ParamSlider'
 import { SimToolbar, PlayPauseButton, ResetButton, ModeSwitch } from '../SimButtons'
@@ -52,23 +53,6 @@ const CANVAS_LABEL = {
   keyframes:
     'キーフレームの補間。横軸が時間、縦軸が値。点を縦にドラッグするか、左右の矢印キーで選んで上下の矢印キーで動かす。グラフの上を押すと、その時刻へ移る',
   ik: '2リンクの腕。目標の位置をドラッグするか矢印キーで動かすと、手先が追う',
-}
-
-// 横幅いっぱいの見出し付きのまとまり(SimShell の操作の欄は grid)
-function ControlGroup({ label, children }) {
-  return (
-    <div
-      role="group"
-      aria-label={label}
-      className="col-span-full grid gap-x-7 gap-y-1"
-      style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(15rem, 100%), 1fr))' }}
-    >
-      <p aria-hidden="true" className="col-span-full mt-2 text-[0.8125rem] tracking-wide text-ink">
-        {label}
-      </p>
-      {children}
-    </div>
-  )
 }
 
 function Matrix({ title, m }) {
@@ -321,6 +305,7 @@ export default function TransformSim() {
 
   function changeView(next) {
     sim.current.drag = null
+    if (liveRef.current) liveRef.current.textContent = '' // 前の見せ方の文字を、描き直すまで残さない
     setAnnounce('')
     setView(next)
   }
@@ -361,112 +346,116 @@ export default function TransformSim() {
   const setNear = (value) => setCube((c) => ({ ...c, near: value, far: Math.max(c.far, value + 0.5) }))
   const setFar = (value) => setCube((c) => ({ ...c, far: value, near: Math.min(c.near, value - 0.5) }))
 
-  const controls = (
+  // 見せ方ごとの操作。3つを同じ場所に重ねて置く(ViewStack)。
+  // 見せ方の切り替え(主)は絵の上のタブ(switcher)。ここにある切り替えは、見せ方の中の選択肢(従)なので quiet
+  const cubeControls = (
     <>
-      <SimToolbar label="見せ方">
-        <ModeSwitch label="見せ方" value={view} onChange={changeView} options={VIEWS} />
+      <SimToolbar label="立方体の操作">
+        <ModeSwitch
+          variant="quiet"
+          label="変換を掛ける順"
+          value={cube.order}
+          onChange={setCubeValue('order')}
+          options={[
+            { value: 'trs', label: 'T·R·S' },
+            { value: 'srt', label: 'S·R·T' },
+          ]}
+        />
+        <ResetButton onClick={reset} />
       </SimToolbar>
+      <ControlGroup label="モデル変換">
+        <ParamSlider symbol="\theta_x" label="X 軸まわりの回転" unit="°" value={cube.rx} min={-180} max={180} step={1} onChange={setCubeValue('rx')} />
+        <ParamSlider symbol="\theta_y" label="Y 軸まわりの回転" unit="°" value={cube.ry} min={-180} max={180} step={1} onChange={setCubeValue('ry')} />
+        <ParamSlider symbol="\theta_z" label="Z 軸まわりの回転" unit="°" value={cube.rz} min={-180} max={180} step={1} onChange={setCubeValue('rz')} />
+        <ParamSlider symbol="t_x" label="x 方向の移動" value={cube.tx} min={-3} max={3} step={0.1} onChange={setCubeValue('tx')} format={(v) => v.toFixed(1)} />
+        <ParamSlider symbol="t_y" label="y 方向の移動" value={cube.ty} min={-3} max={3} step={0.1} onChange={setCubeValue('ty')} format={(v) => v.toFixed(1)} />
+        <ParamSlider symbol="t_z" label="z 方向の移動（奥行き）" value={cube.tz} min={-3} max={3} step={0.1} onChange={setCubeValue('tz')} format={(v) => v.toFixed(1)} />
+        <ParamSlider symbol="s" label="拡大" value={cube.s} min={0.3} max={2} step={0.05} onChange={setCubeValue('s')} format={(v) => v.toFixed(2)} />
+      </ControlGroup>
+      <ControlGroup label="カメラ">
+        <ParamSlider symbol="\theta_{\mathrm{fov}}" label="縦の視野角" unit="°" value={cube.fov} min={20} max={120} step={1} onChange={setCubeValue('fov')} />
+        <ParamSlider symbol="n" label="手前の面 near" value={cube.near} min={0.1} max={10} step={0.1} onChange={setNear} format={(v) => v.toFixed(1)} />
+        <ParamSlider symbol="f" label="奥の面 far" value={cube.far} min={1} max={30} step={0.5} onChange={setFar} format={(v) => v.toFixed(1)} />
+      </ControlGroup>
+    </>
+  )
 
-      {view === 'cube' && (
-        <>
-          <SimToolbar label="立方体の操作">
-            <ModeSwitch
-              label="変換を掛ける順"
-              value={cube.order}
-              onChange={setCubeValue('order')}
-              options={[
-                { value: 'trs', label: 'T·R·S' },
-                { value: 'srt', label: 'S·R·T' },
-              ]}
-            />
-            <ResetButton onClick={reset} />
-          </SimToolbar>
-          <ControlGroup label="モデル変換">
-            <ParamSlider symbol="\theta_x" label="X 軸まわりの回転" unit="°" value={cube.rx} min={-180} max={180} step={1} onChange={setCubeValue('rx')} />
-            <ParamSlider symbol="\theta_y" label="Y 軸まわりの回転" unit="°" value={cube.ry} min={-180} max={180} step={1} onChange={setCubeValue('ry')} />
-            <ParamSlider symbol="\theta_z" label="Z 軸まわりの回転" unit="°" value={cube.rz} min={-180} max={180} step={1} onChange={setCubeValue('rz')} />
-            <ParamSlider symbol="t_x" label="x 方向の移動" value={cube.tx} min={-3} max={3} step={0.1} onChange={setCubeValue('tx')} format={(v) => v.toFixed(1)} />
-            <ParamSlider symbol="t_y" label="y 方向の移動" value={cube.ty} min={-3} max={3} step={0.1} onChange={setCubeValue('ty')} format={(v) => v.toFixed(1)} />
-            <ParamSlider symbol="t_z" label="z 方向の移動（奥行き）" value={cube.tz} min={-3} max={3} step={0.1} onChange={setCubeValue('tz')} format={(v) => v.toFixed(1)} />
-            <ParamSlider symbol="s" label="拡大" value={cube.s} min={0.3} max={2} step={0.05} onChange={setCubeValue('s')} format={(v) => v.toFixed(2)} />
-          </ControlGroup>
-          <ControlGroup label="カメラ">
-            <ParamSlider symbol="\theta_{\mathrm{fov}}" label="縦の視野角" unit="°" value={cube.fov} min={20} max={120} step={1} onChange={setCubeValue('fov')} />
-            <ParamSlider symbol="n" label="手前の面 near" value={cube.near} min={0.1} max={10} step={0.1} onChange={setNear} format={(v) => v.toFixed(1)} />
-            <ParamSlider symbol="f" label="奥の面 far" value={cube.far} min={1} max={30} step={0.5} onChange={setFar} format={(v) => v.toFixed(1)} />
-          </ControlGroup>
-        </>
-      )}
+  const keyframeControls = (
+    <>
+      <SimToolbar label="補間の操作">
+        <PlayPauseButton running={loop.running} onToggle={loop.toggle} />
+        <ResetButton onClick={reset} />
+      </SimToolbar>
+      <ParamSlider
+        symbol="t"
+        label="時刻"
+        unit="s"
+        value={time}
+        min={0}
+        max={T_END}
+        step={0.01}
+        format={(v) => v.toFixed(2)}
+        onChange={(value) => {
+          loop.pause()
+          scrubTo(value)
+        }}
+      />
+    </>
+  )
 
-      {view === 'keyframes' && (
-        <>
-          <SimToolbar label="補間の操作">
-            <PlayPauseButton running={loop.running} onToggle={loop.toggle} />
-            <ResetButton onClick={reset} />
-          </SimToolbar>
-          <ParamSlider
-            symbol="t"
-            label="時刻"
-            unit="s"
-            value={time}
-            min={0}
-            max={T_END}
-            step={0.01}
-            format={(v) => v.toFixed(2)}
-            onChange={(value) => {
-              loop.pause()
-              scrubTo(value)
-            }}
+  const ikControls = (
+    <>
+      <SimToolbar label="腕の操作">
+        <ModeSwitch
+          variant="quiet"
+          label="解き方"
+          value={solver}
+          onChange={changeSolver}
+          options={[
+            { value: 'analytic', label: '解析解' },
+            { value: 'jacobian', label: 'ヤコビアン' },
+          ]}
+        />
+        {solver === 'analytic' && (
+          <ModeSwitch
+            variant="quiet"
+            label="肘の向き（根元から目標を見て）"
+            value={elbow}
+            onChange={setElbow}
+            options={[
+              { value: 'left', label: '肘が左' },
+              { value: 'right', label: '肘が右' },
+            ]}
           />
-        </>
-      )}
-
-      {view === 'ik' && (
+        )}
+        {solver === 'jacobian' && <PlayPauseButton running={loop.running} onToggle={loop.toggle} />}
+        {solver === 'jacobian' && !loop.running && (
+          <button type="button" className="vis-btn" onClick={stepOnce} disabled={ikStatus !== 'running'}>
+            <PiSkipForwardBold aria-hidden="true" />
+            <span>1歩進める</span>
+          </button>
+        )}
+        <ResetButton onClick={reset} />
+      </SimToolbar>
+      {solver === 'jacobian' && (
         <>
-          <SimToolbar label="腕の操作">
-            <ModeSwitch
-              label="解き方"
-              value={solver}
-              onChange={changeSolver}
-              options={[
-                { value: 'analytic', label: '解析解' },
-                { value: 'jacobian', label: 'ヤコビアン' },
-              ]}
-            />
-            {solver === 'analytic' && (
-              <ModeSwitch
-                label="肘の向き（根元から目標を見て）"
-                value={elbow}
-                onChange={setElbow}
-                options={[
-                  { value: 'left', label: '肘が左' },
-                  { value: 'right', label: '肘が右' },
-                ]}
-              />
-            )}
-            {solver === 'jacobian' && <PlayPauseButton running={loop.running} onToggle={loop.toggle} />}
-            {solver === 'jacobian' && !loop.running && (
-              <button type="button" className="vis-btn" onClick={stepOnce} disabled={ikStatus !== 'running'}>
-                <PiSkipForwardBold aria-hidden="true" />
-                <span>1歩進める</span>
-              </button>
-            )}
-            <ResetButton onClick={reset} />
-          </SimToolbar>
-          {solver === 'jacobian' && (
-            <>
-              <ParamSlider symbol="\lambda" label="減衰" value={lambda} min={0} max={1} step={0.01} onChange={setLambda} format={(v) => v.toFixed(2)} />
-              <ParamSlider symbol="\Delta\theta_{\max}" label="1歩の上限" unit="rad" value={maxStep} min={0.02} max={1} step={0.01} onChange={setMaxStep} format={(v) => v.toFixed(2)} />
-            </>
-          )}
+          <ParamSlider symbol="\lambda" label="減衰" value={lambda} min={0} max={1} step={0.01} onChange={setLambda} format={(v) => v.toFixed(2)} />
+          <ParamSlider symbol="\Delta\theta_{\max}" label="1歩の上限" unit="rad" value={maxStep} min={0.02} max={1} step={0.01} onChange={setMaxStep} format={(v) => v.toFixed(2)} />
         </>
       )}
     </>
   )
 
+  // 数値の表示。立方体は行列、補間と IK は文字(liveRef に draw が書く)。これも重ねて、高さを最大に合わせる
   const readout = (
     <>
-      {view === 'cube' ? <CubeReadout cube={cube} /> : <div ref={liveRef} className="whitespace-pre-line" />}
+      <ViewStack
+        active={view === 'cube' ? 'cube' : 'text'}
+        views={{
+          cube: <CubeReadout cube={cube} />,
+          text: <div ref={liveRef} className="whitespace-pre-line" />,
+        }}
+      />
       <span className="sr-only" role="status" aria-live="polite">
         {announce}
       </span>
@@ -487,7 +476,17 @@ export default function TransformSim() {
           onKeyDown={onKeyDown}
         />
       }
-      controls={controls}
+      switcher={<ModeSwitch variant="tabs" label="見せ方" value={view} onChange={changeView} options={VIEWS} />}
+      controls={
+        // 立方体のスライダーは 10 本あり、補間と IK の欄の 5 倍ほど高い。立方体の分まで場所を取ると、補間と IK の下に
+        // 何もない空きが 500px 以上できる(スマホでは 700px 超)ので、取っておくのは補間と IK の最大まで。
+        // ボタンの行(上端)はどの見せ方でも同じ位置で、伸びるのは立方体のスライダーの分だけ
+        <ViewStack
+          active={view}
+          views={{ cube: cubeControls, keyframes: keyframeControls, ik: ikControls }}
+          reserve={['keyframes', 'ik']}
+        />
+      }
       readout={readout}
     />
   )
