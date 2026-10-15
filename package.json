@@ -21,6 +21,7 @@
     "@studio-freight/lenis": "^1.0.29",
     "dotenv": "^17.2.3",
     "gsap": "^3.12.4",
+    "katex": "^0.16.47",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",

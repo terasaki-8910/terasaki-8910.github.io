@@ -235,6 +235,7 @@ export default defineConfig({
         charaPicker: resolve(__dirname, 'chara-picker/index.html'),
         gamingArchive: resolve(__dirname, 'gaming-archive/index.html'),
         movies: resolve(__dirname, 'movies/index.html'),
+        visualization: resolve(__dirname, 'visualization/index.html'),
         dramas: resolve(__dirname, 'dramas/index.html'),
         anime: resolve(__dirname, 'anime/index.html'),
         career: resolve(__dirname, 'career/index.html'),
