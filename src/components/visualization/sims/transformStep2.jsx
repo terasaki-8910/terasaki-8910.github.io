@@ -7,7 +7,7 @@ import { SimToolbar, ResetButton } from '../SimButtons'
 import useCanvas from '../useCanvas'
 import usePointerDrag from '../usePointerDrag'
 import { boxHit } from './transformMesh.js'
-import { clamp, wrapDeg } from './transformCommon.js'
+import { clamp, wrapDeg, roundTo } from './transformCommon.js'
 import { arrowDelta } from './transformHooks.js'
 import { Mat, Vec, Op, MatRow, ReadNote } from './transformMatrixView.jsx'
 import {
@@ -109,7 +109,7 @@ export default function TransformStep2() {
     if (focusHandle === 'rotate') {
       setS((v) => ({ ...v, rz: Math.round(wrapDeg(v.rz + sign * (event.shiftKey ? 15 : 5))) }))
     } else {
-      const k = clamp(Math.round((meanScale(params.current.s) + sign * (event.shiftKey ? 0.25 : 0.05)) / 0.05) * 0.05, SCALE_RANGE[0], SCALE_RANGE[1])
+      const k = clamp(roundTo(meanScale(params.current.s) + sign * (event.shiftKey ? 0.25 : 0.05), 0.05), SCALE_RANGE[0], SCALE_RANGE[1])
       setS((v) => ({ ...v, sx: k, sy: k, sz: k }))
     }
   }

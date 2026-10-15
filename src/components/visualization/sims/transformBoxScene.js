@@ -2,7 +2,7 @@
 // 行列は mat4.js の translate・rotate*・scale・compose、点の写しは transformMesh.js(projection の関数)。ここに式は書かない。
 // 世界は右手系で x が右、y が上、z が手前。箱は辺 ±1 の立方体を行列 M で移したもの。
 import { identity, multiply, translate, rotateX, rotateY, rotateZ, scale, compose, transformPoint } from '../../../utils/vis/mat4.js'
-import { clamp, toRad, toDeg, wrapDeg, uiFont } from './transformCommon.js'
+import { clamp, toRad, toDeg, wrapDeg, roundTo as round, uiFont } from './transformCommon.js'
 import { lookAtPose, cameraMatrices, pixelRay, rayPlaneZ } from './transformCamera.js'
 import { splitPanels } from './transformArm.js'
 import {
@@ -39,7 +39,6 @@ export const STEP3_CAMERA = { position: [0, 0, 14], target: [0, 0, 0], fov: toRa
 
 export const P_MODEL = [1, 1, 1, 1] // 箱の角(位置。w = 1)
 export const D_MODEL = [1, 0, 0, 0] // 箱の辺の向き(向き。w = 0)
-const round = (v, step) => Math.round(v / step) * step
 
 const accentFill = (colors, grabbed) => colors.alpha('accent', grabbed ? 0.95 : 0.55)
 

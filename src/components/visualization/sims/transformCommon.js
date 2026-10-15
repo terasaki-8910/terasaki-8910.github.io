@@ -24,3 +24,6 @@ export function fmtDeg(rad) {
 
 // 角度(度)を [-180, 180) にする
 export const wrapDeg = (d) => ((((d + 180) % 360) + 360) % 360) - 180
+
+// step の倍数に丸める(0.05 刻みで 6.050000000000001 のような誤差を残さない)
+export const roundTo = (v, step) => Number((Math.round(v / step) * step).toFixed(6))

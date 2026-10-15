@@ -7,7 +7,7 @@ import { SimToolbar, ResetButton } from '../SimButtons'
 import useCanvas from '../useCanvas'
 import usePointerDrag from '../usePointerDrag'
 import { boxHit, inRect } from './transformMesh.js'
-import { clamp, wrapDeg } from './transformCommon.js'
+import { clamp, wrapDeg, roundTo as round } from './transformCommon.js'
 import { useStacked, arrowDelta } from './transformHooks.js'
 import { Mat, Gap, MatRow, ReadNote } from './transformMatrixView.jsx'
 import {
@@ -28,7 +28,6 @@ import {
 // どちらの箱もつかんで動かせる(その箱が指に付いてくるよう、移動量 t を決める)。回す取っ手(輪の外の丸)で回転も変える。
 // 動かすと、両方の箱と 2 つの 4×4 行列が変わる。計算は mat4.js の translate・rotateZ・scale・compose。
 const fmt2 = (v) => v.toFixed(2)
-const round = (v, step) => Math.round(v / step) * step
 
 export default function TransformStep3() {
   const [s, setS] = useState(STEP3_DEFAULT)

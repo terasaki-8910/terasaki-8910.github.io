@@ -10,7 +10,7 @@ import useSimLoop from '../useSimLoop'
 import { fk2, ikStep, jacobian2 } from '../../../utils/vis/ik.js'
 import { useHandleDrag, arrowDelta } from './transformHooks.js'
 import { Mat, Vec, Gap, MatRow, ReadNote } from './transformMatrixView.jsx'
-import { fmt } from './transformCommon.js'
+import { fmt, roundTo } from './transformCommon.js'
 import {
   L1,
   L2,
@@ -83,7 +83,7 @@ export default function TransformStep8() {
   const viewNow = () => ikView(sizeRef.current.width, sizeRef.current.height)
   const moveTarget = (target) => {
     const s = sim.current
-    s.ik.target = clampTarget(target)
+    s.ik.target = clampTarget(target).map((v) => roundTo(v, 0.001))
     s.acc = 0
     restartIterations(s.ik)
     redraw()

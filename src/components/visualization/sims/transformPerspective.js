@@ -4,11 +4,10 @@
 import { transformPoint } from '../../../utils/vis/mat4.js'
 import { perspectiveProject, perspectiveMatrix, insideClip, toNDC, viewport } from '../../../utils/vis/projection.js'
 import { makeView, drawAxes, formatTick, axisTicks } from '../axes.js'
-import { clamp, toDeg, toRad } from './transformCommon.js'
+import { clamp, toDeg, toRad, roundTo as round } from './transformCommon.js'
 import { drawGrip, drawLabel, drawSeg } from './transformHandles.js'
 import { splitPanels } from './transformArm.js'
 
-const round = (v, step) => Math.round(v / step) * step
 const margin = { left: 38, right: 12, top: 24, bottom: 36 }
 
 // ---- 段階 4: 透視投影 -----------------------------------------------------------------------

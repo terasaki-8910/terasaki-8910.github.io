@@ -7,7 +7,7 @@ import { SimToolbar, ResetButton } from '../SimButtons'
 import useCanvas from '../useCanvas'
 import usePointerDrag from '../usePointerDrag'
 import { boxHit } from './transformMesh.js'
-import { clamp } from './transformCommon.js'
+import { clamp, roundTo } from './transformCommon.js'
 import { arrowDelta } from './transformHooks.js'
 import { Mat, Vec, Op, MatRow, ReadNote } from './transformMatrixView.jsx'
 import {
@@ -25,7 +25,7 @@ import {
 // 位置 p(w = 1)は箱と一緒に動き、向き d(w = 0)は動かない。計算は mat4.js の translate・transformPoint。
 // ここは状態と操作で、絵は transformBoxScene.js。
 const fmt1 = (v) => v.toFixed(2)
-const round = (v) => Math.round(v / 0.05) * 0.05
+const round = (v) => roundTo(v, 0.05)
 
 export default function TransformStep1() {
   const [s, setS] = useState(STEP1_DEFAULT)
