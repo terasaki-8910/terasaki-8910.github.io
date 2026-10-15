@@ -124,6 +124,12 @@
   user-select: none;
   -webkit-user-select: none;
 }
+/* 全体の絵は、窓が低いとき(1280×800 など)に、絵と凡例が 1 画面に入るよう高さに上限をつける(幅はそのまま。
+   絵は縦横比を保って枠の中に収まるので、上限にかかると左右に余白ができる)。下限は 20rem */
+.vis-sim[data-size='overview'] .vis-canvas {
+  max-height: max(20rem, calc(100vh - 15rem));
+  max-height: max(20rem, calc(100svh - 15rem));
+}
 .vis-canvas--scroll {
   touch-action: pan-y;
 }
