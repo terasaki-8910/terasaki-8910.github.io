@@ -89,7 +89,7 @@ export const projects = [
     id: 8,
     title: 'ビジュアライゼーションの授業における物理シミュレーションの実装例',
     menuTitle: '物理シミュレーション',
-    description: '式を JavaScript で実装し、パラメータを変えて動かせるようにしたもの',
+    description: '計算を 1 つずつ動かして確かめ、組み合わせて全体のシミュレーションになるまでをたどる',
     tags: ['Canvas', 'KaTeX', 'React'],
     link: '/visualization/',
     pageKey: 'visualization',
