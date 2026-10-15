@@ -15,7 +15,7 @@ import useParticleBoard from './fluidBoard.js'
 const P_FULL = 30000 // 色が最後の段になる圧力 [N/m]
 const SPACING = 0.018 // 初めの粒子の間隔 [m](休止の 0.02 より少し詰めてあり、内側ほど圧力が高い)
 const RHO_RANGE = [400, 2000]
-const P_RANGE = [0, 120] // kN/m
+const P_RANGE = [0, 150] // kN/m
 const STACK = { stack: true } // 幅が足りないときは、グラフを絵の下に置く
 const HEIGHT = { pc: [280, 360], phone: [400, 480] } // スマホは上下に並べるので高くする
 const viewOf = (w, h) => {
@@ -51,8 +51,12 @@ export default function FluidStep3() {
       const knee = [params.rho0, 0]
       const end = [RHO_RANGE[1], (params.k * (RHO_RANGE[1] - params.rho0)) / 1000]
       const marks = []
-      for (let q = 0; q < patch.n; q++) marks.push({ x: state.rho[q], y: state.pressure[q] / 1000, r: 2.5, color: colors.alpha('lane-1', 0.6) })
-      marks.push({ x: rho, y: p / 1000, r: 6, color: colors.alpha('lane-3', 1) })
+      // グラフの範囲を超えた点は、枠の縁に置く
+      const inRange = (v, [lo, hi]) => Math.min(hi, Math.max(lo, v))
+      for (let q = 0; q < patch.n; q++) {
+        marks.push({ x: inRange(state.rho[q], RHO_RANGE), y: inRange(state.pressure[q] / 1000, P_RANGE), r: 2.5, color: colors.alpha('lane-1', 0.6) })
+      }
+      marks.push({ x: inRange(rho, RHO_RANGE), y: inRange(p / 1000, P_RANGE), r: 6, color: colors.alpha('lane-3', 1) })
       ctx.fillStyle = colors.surface
       ctx.fillRect(side.left, side.top, side.width, side.height)
       drawSeries(ctx, side, colors, {
@@ -138,7 +142,7 @@ export default function FluidStep3() {
           <SimToolbar>
             <ResetButton onClick={reset} />
           </SimToolbar>
-          <ParamSlider symbol="s" label="粒子の間隔" unit="m" value={spacing} min={0.012} max={0.026} step={0.001} onChange={setSpacing} format={(v) => v.toFixed(3)} />
+          <ParamSlider symbol="s" label="粒子の間隔" unit="m" value={spacing} min={0.014} max={0.026} step={0.001} onChange={setSpacing} format={(v) => v.toFixed(3)} />
           <ParamSlider symbol="k" label="圧力の係数" unit="m²/s²" value={k} min={40} max={150} step={5} onChange={setK} />
           <ParamSlider symbol="\rho_0" label="休止密度" unit="kg/m²" value={rho0} min={900} max={1100} step={1} onChange={setRho0} />
         </>
