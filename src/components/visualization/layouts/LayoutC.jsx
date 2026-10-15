@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { LayoutContext } from '../LayoutContext'
 import { SectionHead, SectionFormulas, SectionSim, SectionCode, SectionSources } from '../SectionParts'
 
@@ -16,6 +16,13 @@ export default function LayoutC({ sections }) {
   const tabRefs = useRef([])
   const index = Math.max(0, sections.findIndex((s) => s.id === activeId))
   const section = sections[index]
+
+  // # だけが変わる移動(リンクを同じタブで開く、戻るなど)にもタブを合わせる
+  useEffect(() => {
+    const onHashChange = () => setActiveId(initialId(sections))
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [sections])
 
   const context = useMemo(
     () => ({ layout: 'c', placement: 'side', aside: <SectionFormulas section={section} /> }),
