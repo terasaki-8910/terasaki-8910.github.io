@@ -113,7 +113,6 @@ export default function ClothStep3() {
         tNow: c.t,
         W,
         yRange: [0, yMax],
-        yTickRange: [0, 3 * e0],
         yLabel: 'E [J]',
         series: [
           { ch: 0, color: cForward, width: 2.5, dash: [7, 3], markers: params.current.dt >= W / 90 },

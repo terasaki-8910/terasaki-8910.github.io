@@ -110,6 +110,8 @@ function drawKeyAbove(ctx, view, colors, rows) {
   ctx.restore()
 }
 
+export const TIME_PLOT_Y_GAP = 30 // 低い枠でも 3 つ以上の目盛りが並ぶ間隔(数の高さ 11px の 2.5 倍ほど)
+
 // 時間の流れのグラフ(横軸 t [s])を rect の中に描く。
 //   o.trace      clothTrace.js の記録
 //   o.tNow       いまの時刻 [s]。W 秒の窓を、始まって W 秒たつまでは [0, W]、それからは [tNow − W, tNow] にする
@@ -118,7 +120,8 @@ function drawKeyAbove(ctx, view, colors, rows) {
 //   o.xLabel / o.yLabel  軸の名前(単位つき)。xLabel の既定は 't [s]'
 //   o.zero       true なら縦軸の 0 に細い線
 //   o.overlay    (ctx, view) => void  枠の中に足して描く(解析解の線など。view は世界 = (t, 値) の座標)
-//   o.yTickRange 縦軸の目盛りを打つ範囲(省略すると yRange 全体。枠が低いと、全体では目盛りが 0 だけになるので、狭めて -0.5・0・0.5 のようにする)
+//   o.yTickRange 縦軸の目盛りを打つ範囲(省略すると yRange 全体。世界の範囲のうち一部だけに目盛りを打ちたいときに使う)
+//   o.minYGap    縦軸の目盛りの間隔の最小(画面の px。既定は TIME_PLOT_Y_GAP)。枠が低いと、既定の 72px では目盛りが 0 だけになる
 //   o.key        [{ label, color, width?, dash? }]  線の説明。枠の上の余白に右寄せで描く(1 行に収まらなければ複数行にして、余白を広げる)
 // 戻り値は view(軸の外の文字を足したいとき)。
 export function drawTimePlot(ctx, rect, colors, o) {
@@ -145,7 +148,13 @@ export function drawTimePlot(ctx, rect, colors, o) {
     margin,
   })
   if (keyRows) drawKeyAbove(ctx, view, colors, keyRows)
-  drawAxes(ctx, view, { colors, xLabel: o.xLabel ?? 't [s]', yLabel: o.yLabel, yRange: o.yTickRange ?? yRange })
+  drawAxes(ctx, view, {
+    colors,
+    xLabel: o.xLabel ?? 't [s]',
+    yLabel: o.yLabel,
+    yRange: o.yTickRange ?? yRange,
+    minYGap: o.minYGap ?? TIME_PLOT_Y_GAP,
+  })
   const { frame } = view
   ctx.beginPath()
   ctx.rect(frame.left, frame.top, frame.width, frame.height)

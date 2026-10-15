@@ -19,8 +19,8 @@ export const DEFAULT_MARGIN = { left: 42, right: 14, top: 26, bottom: 40 }
 const TICK_LEN = 4
 const TICK_FONT = 11
 const LABEL_FONT = 12
-const MIN_X_TICK_GAP = 72 // x の目盛りの間隔の最小(px)。数の幅と間があく分
-const MIN_Y_TICK_GAP = 72
+export const MIN_X_TICK_GAP = 72 // x の目盛りの間隔の最小(px)の既定。数の幅と間があく分
+export const MIN_Y_TICK_GAP = 72 // y の既定。縦の絵が低いとき(時間のグラフなど)は drawAxes の minYGap で小さくする(下限は文字の高さ ≈ 20px)
 
 // 目盛りの間隔: 範囲 span を target 個ほどに区切る 1・2・5 × 10^n。target が 1 未満・span が 0 以下なら 1
 export function niceStep(span, target = 5) {
@@ -60,8 +60,13 @@ export function formatTick(value, step) {
 }
 
 // 目盛りの数: 軸の長さ lengthPx に、間隔 minGapPx 以上あけて並ぶ個数(2 以上)
-function tickTarget(lengthPx, minGapPx) {
+export function tickTarget(lengthPx, minGapPx) {
   return Math.max(2, Math.floor(lengthPx / minGapPx))
+}
+
+// 目盛りの間隔の最小(px)。指定がなければ既定、指定しても 20px(数の高さ 11px + 間)より小さくはしない
+export function clampGap(gap, fallback) {
+  return Number.isFinite(gap) && gap > 0 ? Math.max(20, gap) : fallback
 }
 
 // 世界の範囲 xRange × yRange を、canvas(width × height の CSS px)の余白の内側に収める view。
@@ -108,12 +113,15 @@ export function makeView({ width, height, xRange, yRange, margin, equal = true }
 //   opts.colors   useCanvas の draw に渡る colors(必須)
 //   opts.xLabel / opts.yLabel  軸の名前。単位をつける('x [m]'、't [s]')。x は軸の右端の下、y は軸の上端の上
 //   opts.xRange / opts.yRange  目盛りを打つ範囲。省略すると view の範囲(世界の範囲のうち一部だけに打つときに使う)
+//   opts.minXGap / opts.minYGap  目盛りの間隔の最小(画面の px)。既定は 72。低い絵(枠の高さが 150px 以下など)では、既定だと
+//                              目盛りが 0 の 1 つだけになるので、yRange を狭める代わりに minYGap を 28〜36 にする
+//                              (数の高さ 11px + 間。下限 20px)
 // 軸と目盛りの線は colors.muted(地に 3:1 以上)、文字は colors.ink(4.5:1 以上)。
 export function drawAxes(ctx, view, opts = {}) {
   const { colors, xLabel, yLabel, xRange = view.xRange, yRange = view.yRange } = opts
   const { frame } = view
-  const xTicks = axisTicks(xRange[0], xRange[1], tickTarget(frame.width, MIN_X_TICK_GAP))
-  const yTicks = axisTicks(yRange[0], yRange[1], tickTarget(frame.height, MIN_Y_TICK_GAP))
+  const xTicks = axisTicks(xRange[0], xRange[1], tickTarget(frame.width, clampGap(opts.minXGap, MIN_X_TICK_GAP)))
+  const yTicks = axisTicks(yRange[0], yRange[1], tickTarget(frame.height, clampGap(opts.minYGap, MIN_Y_TICK_GAP)))
 
   ctx.save()
   ctx.strokeStyle = colors.muted

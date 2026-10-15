@@ -179,7 +179,6 @@ export default function ClothOscillator({ variant }) {
         tNow: c.t,
         W,
         yRange: Y_RANGE,
-        yTickRange: [-0.5, 0.5],
         yLabel: 'x [m]',
         zero: true,
         series: [{ ch: 0, color: lane, width: 2.5, markers: showMarkers }],

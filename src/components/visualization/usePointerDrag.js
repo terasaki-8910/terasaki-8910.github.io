@@ -9,6 +9,10 @@ import { useEffect, useRef } from 'react'
 //     canGrab({ x, y }),                  座標がつかめる物の上なら true。渡すと canvas の cursor を自動で変える:
 //                                         つかめる物の上 = grab、つかんでいる間 = grabbing、離したあと(マウス・ペンで、まだ上にいるとき)= grab、
 //                                         それ以外 = 既定。cursor を自分で書かなくてよい。onDown がつかむ座標と同じ当たり判定にする
+//     cursorAt({ x, y }),                 grab 以外の cursor を出したいとき(例:何もない所の上で 'ew-resize')、その座標の cursor(CSS の値の文字列)
+//                                         を返す。何も返さない(null・undefined・'')と canGrab の判定にまかせる。canGrab が false でも効き、
+//                                         canGrab が true の所でも、文字列を返せばそちらが優先。この値で押し始めたときは、つかんでいる間も
+//                                         その cursor のまま(grabbing に変えない)。onHover と同じく、つかんでいないときの移動と、離した直後に呼ばれる
 //   })
 // 座標は canvas の左上を原点にした CSS ピクセル。速度は px/s で、直近の動きをならした値。
 // 止めてからしばらくして離したときの速度は 0(投げない)。
@@ -16,6 +20,19 @@ import { useEffect, useRef } from 'react'
 
 const VELOCITY_TAU = 0.06 // 速度をならす時定数(s)
 const STALE_MS = 100 // これより長く動かさずに離したら速度 0
+
+// つかんでいないときの cursor。cursorAt が文字列を返せばそれ、なければ canGrab が true のとき 'grab'、それ以外は ''(既定)。
+// 純関数(tests/vis-page/pointerCursor.test.js)。
+export function hoverCursor(handlers, p) {
+  const custom = handlers.cursorAt?.(p)
+  if (typeof custom === 'string' && custom !== '') return custom
+  return handlers.canGrab?.(p) ? 'grab' : ''
+}
+
+// つかんでいる間の cursor。押し始めの所の cursor が grab 以外の指定(cursorAt)ならそのまま、そうでなければ 'grabbing'
+export function dragCursor(startCursor) {
+  return startCursor && startCursor !== 'grab' ? startCursor : 'grabbing'
+}
 
 export default function usePointerDrag(canvasRef, handlers) {
   const handlersRef = useRef(handlers)
@@ -26,12 +43,13 @@ export default function usePointerDrag(canvasRef, handlers) {
     if (!canvas) return undefined
     let drag = null
 
-    // cursor は、canGrab を渡したときだけ書き換える(渡さないときは何も触らない)
+    // cursor は、canGrab か cursorAt を渡したときだけ書き換える(渡さないときは何も触らない)
     const setCursor = (value) => {
-      if (!handlersRef.current.canGrab) return
+      const h = handlersRef.current
+      if (!h.canGrab && !h.cursorAt) return
       if (canvas.style.cursor !== value) canvas.style.cursor = value
     }
-    const cursorAt = (p) => (handlersRef.current.canGrab?.(p) ? 'grab' : '')
+    const cursorAt = (p) => hoverCursor(handlersRef.current, p)
 
     const local = (event) => {
       const rect = canvas.getBoundingClientRect()
@@ -41,10 +59,11 @@ export default function usePointerDrag(canvasRef, handlers) {
     const onPointerDown = (event) => {
       if (drag || (event.pointerType === 'mouse' && event.button !== 0)) return
       const p = local(event)
+      const startCursor = cursorAt(p) // onDown が状態を変える前の、押した所の cursor
       if (handlersRef.current.onDown?.({ ...p, event }) === false) return
       drag = { id: event.pointerId, x: p.x, y: p.y, t: event.timeStamp, vx: 0, vy: 0 }
       canvas.setPointerCapture(event.pointerId)
-      setCursor('grabbing')
+      setCursor(dragCursor(startCursor))
       event.preventDefault()
     }
 

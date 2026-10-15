@@ -1,7 +1,7 @@
 // axes.js の純関数(目盛りの間隔・位置・文字、世界 → 画面の変換)。実行: node --test "tests/vis-page/*.test.js"
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { niceStep, axisTicks, tickDecimals, formatTick, makeView, DEFAULT_MARGIN } from '../../src/components/visualization/axes.js'
+import { niceStep, axisTicks, tickDecimals, formatTick, makeView, DEFAULT_MARGIN, tickTarget, clampGap, MIN_Y_TICK_GAP } from '../../src/components/visualization/axes.js'
 
 const near = (a, b, eps = 1e-9) => assert.ok(Math.abs(a - b) <= eps, `${a} が ${b} に近くない`)
 
@@ -127,4 +127,25 @@ test('makeView: equal=false は余白の内側いっぱいに伸ばす', () => {
 test('makeView: 小さすぎる canvas でも、縮尺が有限の正の数', () => {
   const v = makeView({ width: 10, height: 10, xRange: [0, 4], yRange: [0, 3] })
   assert.ok(Number.isFinite(v.scaleX) && v.scaleX > 0)
+})
+
+test('drawAxes の目盛りの間隔(minYGap): 低い枠で既定の 72px だと 0 だけになるが、小さくすると増える', () => {
+  const frameH = 90 // 低い時間のグラフ
+  const range = [-0.8, 0.8]
+  const byDefault = axisTicks(range[0], range[1], tickTarget(frameH, clampGap(undefined, MIN_Y_TICK_GAP)))
+  const tight = axisTicks(range[0], range[1], tickTarget(frameH, clampGap(30, MIN_Y_TICK_GAP)))
+  assert.ok(tight.values.length > byDefault.values.length, `既定 ${byDefault.values.length} 個 → minYGap 30 で ${tight.values.length} 個`)
+  assert.ok(tight.values.length >= 3)
+  // 隣の目盛りの間隔(px)は、指定した minYGap の半分以上(1・2・5 に丸めるぶんのゆらぎ)
+  const px = (tight.step * frameH) / (range[1] - range[0])
+  assert.ok(px >= 15, `${px}px`)
+})
+
+test('clampGap: 指定がなければ既定、数でなければ既定、指定しても 20px 未満にはしない', () => {
+  assert.equal(clampGap(undefined, 72), 72)
+  assert.equal(clampGap(NaN, 72), 72)
+  assert.equal(clampGap(0, 72), 72)
+  assert.equal(clampGap(-5, 72), 72)
+  assert.equal(clampGap(30, 72), 30)
+  assert.equal(clampGap(8, 72), 20)
 })
