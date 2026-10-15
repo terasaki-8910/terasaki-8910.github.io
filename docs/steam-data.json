@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14T21:33:09.629Z",
+  "lastUpdated": "2026-10-15T04:23:16.222Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -356,7 +356,7 @@
           "description": "Defeat your opponent by dealing more than 4000 damage at a time in a Ranked/Event Duel",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
           "unlockedAt": "2022-12-23T11:05:16.000Z",
-          "percent": 34
+          "percent": 33.9
         },
         {
           "name": "Necromancer",
