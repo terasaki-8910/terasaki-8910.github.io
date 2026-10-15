@@ -84,4 +84,15 @@ export const projects = [
     pageKey: 'movies',
     icon: 'popcorn',
   },
+  // 2026-10-15 追加。アイコンは原子(メニューでは「物理シミュレーション」だけ。本人指定)
+  {
+    id: 8,
+    title: 'ビジュアライゼーションの授業における物理シミュレーションの実装例',
+    menuTitle: '物理シミュレーション',
+    description: '式を JavaScript で実装し、パラメータを変えて動かせるようにしたもの',
+    tags: ['Canvas', 'KaTeX', 'React'],
+    link: '/visualization/',
+    pageKey: 'visualization',
+    icon: 'atom',
+  },
 ]
