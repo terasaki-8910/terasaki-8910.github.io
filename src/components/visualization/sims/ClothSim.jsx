@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import SimShell from '../SimShell'
 import SimCanvas from '../SimCanvas'
 import ParamSlider from '../ParamSlider'
+import ControlGroup from '../ControlGroup'
 import { SimToolbar, PlayPauseButton, ResetButton, ModeSwitch } from '../SimButtons'
 import useCanvas from '../useCanvas'
 import useSimLoop from '../useSimLoop'
@@ -304,6 +305,7 @@ export default function ClothSim() {
               ]}
             />
             <ModeSwitch
+              variant="quiet"
               label="固定する所"
               value={pin}
               onChange={setPin}
@@ -325,9 +327,16 @@ export default function ClothSim() {
               <ParamSlider symbol="\Delta t" label="時間刻み" unit="ms" value={dtPbd} min={1} max={16} step={1} onChange={setDtPbd} />
             </>
           )}
-          <ParamSlider symbol="U" label="風の速さ" unit="m/s" value={windSpeed} min={0} max={5} step={0.5} onChange={setWindSpeed} format={(v) => v.toFixed(1)} />
-          <ParamSlider symbol="C_D" label="抗力係数" value={drag} min={0} max={1.5} step={0.1} onChange={setDrag} disabled={windIdle} format={(v) => v.toFixed(1)} />
-          <ParamSlider symbol="C_L" label="揚力係数" value={lift} min={-1} max={1} step={0.1} onChange={setLift} disabled={windIdle} format={(v) => v.toFixed(1)} />
+          {/* 抗力・揚力の係数は風があるときだけ。風 0 のまま、動かしても何も変わない操作を残さない */}
+          <ControlGroup label="風">
+            <ParamSlider symbol="U" label="風の速さ" unit="m/s" value={windSpeed} min={0} max={5} step={0.5} onChange={setWindSpeed} format={(v) => v.toFixed(1)} />
+            {!windIdle && (
+              <>
+                <ParamSlider symbol="C_D" label="抗力係数" value={drag} min={0} max={1.5} step={0.1} onChange={setDrag} format={(v) => v.toFixed(1)} />
+                <ParamSlider symbol="C_L" label="揚力係数" value={lift} min={-1} max={1} step={0.1} onChange={setLift} format={(v) => v.toFixed(1)} />
+              </>
+            )}
+          </ControlGroup>
         </>
       }
     />
