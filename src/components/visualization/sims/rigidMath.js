@@ -130,8 +130,9 @@ export const BROAD_W = 4
 export const BROAD_H = 3
 export const MAX_SCATTER = 40
 
-// 箱の中にばらまいた円の置き場(先頭から n 個を使う。n を変えても先頭の円は同じ位置)
-export function makeScatter(count = MAX_SCATTER, seed = 20261015) {
+// 箱の中にばらまいた円の置き場(先頭から n 個を使う。n を変えても先頭の円は同じ位置)。
+// 種 137 は、20 個のときも 40 個のときも、候補が衝突より何組か多く出る(箱は重なるが円は重ならない組がある)ものを選んだ
+export function makeScatter(count = MAX_SCATTER, seed = 137) {
   const rand = makeRandom(seed)
   const out = []
   for (let i = 0; i < count; i++) {

@@ -6,6 +6,7 @@ const RigidSim = lazy(() => import('../sims/RigidSim.jsx'))
 const RigidStep1 = lazy(() => import('../sims/rigidStep1.jsx'))
 const RigidStep2 = lazy(() => import('../sims/rigidStep2.jsx'))
 const RigidStep3 = lazy(() => import('../sims/rigidStep3.jsx'))
+const RigidStep4 = lazy(() => import('../sims/rigidStep4.jsx'))
 
 export default {
   id: 'rigid',
@@ -91,11 +92,34 @@ export default {
       snippets: ['collide-circlesOverlap'],
       Sim: RigidStep3,
     },
+    {
+      id: 'broad-phase',
+      title: '広域の判定（AABB と Sweep and Prune）',
+      text: '円が N 個あると組は N(N−1)/2 個あり、全部の組で円の重なりを調べるのは重くなります。そこでまず、円を囲む軸に平行な箱（AABB）で大まかに調べます。箱どうしの重なりは、x と y のそれぞれで区間が重なるかを比べるだけで、距離も平方根も要りません。さらに、箱を x 軸に落とした区間を左から順にたどり（Sweep and Prune）、走査線にかかっている箱とだけ比べます。円や走査線をつかんで動かし、総当たりの数と候補の数の差を見てください。',
+      formulas: [
+        {
+          caption: '組の数',
+          tex: '\\binom{N}{2} = \\frac{N\\,(N-1)}{2}',
+          symbols: [{ tex: 'N', meaning: '円の数（組は、順番を区別せずに 2 つ選ぶ）', unit: '' }],
+        },
+        {
+          caption: 'AABB の重なり判定',
+          tex: '\\left(a_k^{\\min} \\le b_k^{\\max}\\right) \\land \\left(b_k^{\\min} \\le a_k^{\\max}\\right) \\quad (k = x,\\ y)',
+          symbols: [
+            { tex: 'a_k^{\\min},\\ a_k^{\\max}', meaning: '箱 a の、k 軸での最小値と最大値（円なら中心 ± 半径）', unit: '\\mathrm{m}' },
+            { tex: 'b_k^{\\min},\\ b_k^{\\max}', meaning: '箱 b の、k 軸での最小値と最大値', unit: '\\mathrm{m}' },
+          ],
+        },
+      ],
+      snippets: ['collide-pairCount', 'collide-aabbOverlap', 'collide-sweepAndPrune'],
+      Sim: RigidStep4,
+    },
   ],
   combination: {
     text: '1 フレーム（1/60 s）を 8 回のサブステップに分け、サブステップごとに次を順に行います。',
     flow: [
       { steps: [1], text: '重力のもとで、位置と速度を Δt だけ進める（前進オイラー法）' },
+      { steps: [4], text: '円を囲む箱を x 軸に並べて、ぶつかりそうな候補の組だけに絞る' },
       { steps: [3], text: '円どうしが重なっているかを、距離の 2 乗と半径の和の 2 乗で判定する' },
       { steps: [2], text: '床や壁にぶつかったら、法線方向の速さを −e 倍にして反発させる' },
     ],
@@ -109,15 +133,6 @@ export default {
   // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
   legacyFormulas: [
     {
-      id: 'aabb-overlap',
-      caption: 'AABB の重なり判定',
-      tex: '\\left(a_k^{\\min} \\le b_k^{\\max}\\right) \\land \\left(b_k^{\\min} \\le a_k^{\\max}\\right) \\quad (k = x,\\ y)',
-      symbols: [
-        { tex: 'a_k^{\\min},\\ a_k^{\\max}', meaning: '箱 a の、k 軸での最小値と最大値（円なら中心 ± 半径）', unit: '\\mathrm{m}' },
-        { tex: 'b_k^{\\min},\\ b_k^{\\max}', meaning: '箱 b の、k 軸での最小値と最大値', unit: '\\mathrm{m}' },
-      ],
-    },
-    {
       id: 'impulse',
       caption: '撃力による衝突の応答',
       tex: 'j = \\frac{(1+e)\\,(\\mathbf{v}_1 - \\mathbf{v}_2)\\cdot\\mathbf{n}}{1/m_1 + 1/m_2}, \\qquad \\mathbf{v}_1^{\\prime} = \\mathbf{v}_1 - \\frac{j}{m_1}\\mathbf{n}, \\quad \\mathbf{v}_2^{\\prime} = \\mathbf{v}_2 + \\frac{j}{m_2}\\mathbf{n}',
@@ -130,8 +145,6 @@ export default {
     },
   ],
   legacySnippets: [
-    'collide-aabbOverlap',
-    'collide-sweepAndPrune',
     'collide-resolveCircles',
   ],
   legacyDescription:

@@ -143,6 +143,10 @@ test('段階 4: 総当たりは N(N−1)/2、候補はそれ以下、衝突は�
   }
   const forty = broadStats(pool)
   assert.ok(forty.candidates < forty.total / 3, `候補 ${forty.candidates} 組が総当たり ${forty.total} 組を絞っていない`)
+  // 見せる配置では、候補が衝突より何組か多い(箱は重なるが円は重ならない組がある)
+  const twenty = broadStats(pool.slice(0, 20))
+  assert.ok(twenty.candidates - twenty.contacts >= 3 && twenty.contacts >= 3, `20 個: 候補 ${twenty.candidates}・衝突 ${twenty.contacts}`)
+  assert.ok(forty.candidates - forty.contacts >= 5, `40 個: 候補 ${forty.candidates}・衝突 ${forty.contacts}`)
 })
 
 test('段階 4: 置き場の先頭の円は、数を変えても同じ位置。円はすべて箱の中', () => {

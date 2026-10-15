@@ -3,6 +3,23 @@ import usePointerDrag from '../usePointerDrag'
 import { BROAD_H, BROAD_W } from './rigidMath'
 import { GRAB_SLOP_PX, clamp } from './rigidKit'
 
+// 画面の座標 { x, y } の下にある円の番号(なければ -1)。円の外側 GRAB_SLOP_PX まで当たる。重なっていれば、縁にいちばん近い円
+export function pickCircle(view, circles, { x, y }) {
+  const wx = view.wx(x)
+  const wy = view.wy(y)
+  const slop = GRAB_SLOP_PX / view.scaleX
+  let best = -1
+  let bestGap = Infinity
+  circles.forEach((b, i) => {
+    const gap = Math.hypot(wx - b.c[0], wy - b.c[1]) - b.r
+    if (gap <= slop && gap < bestGap) {
+      best = i
+      bestGap = gap
+    }
+  })
+  return best
+}
+
 // 世界の円(中心 c、半径 r)をつかんで動かす。段階 3・4・5・6 で使う。
 //   const drag = useCircleDrag(canvasRef, {
 //     getView,            () => makeView の結果(いまの canvas の大きさで)
@@ -17,22 +34,7 @@ import { GRAB_SLOP_PX, clamp } from './rigidKit'
 export function useCircleDrag(canvasRef, { getView, getCircles, onGrab, onMove, onRelease, bounds = [0, BROAD_W, 0, BROAD_H] }) {
   const drag = useRef(null)
 
-  const pick = ({ x, y }) => {
-    const view = getView()
-    const wx = view.wx(x)
-    const wy = view.wy(y)
-    const slop = GRAB_SLOP_PX / view.scaleX
-    let best = -1
-    let bestGap = Infinity
-    getCircles().forEach((b, i) => {
-      const gap = Math.hypot(wx - b.c[0], wy - b.c[1]) - b.r
-      if (gap <= slop && gap < bestGap) {
-        best = i
-        bestGap = gap
-      }
-    })
-    return best
-  }
+  const pick = (p) => pickCircle(getView(), getCircles(), p)
 
   usePointerDrag(canvasRef, {
     canGrab: (p) => pick(p) >= 0,
