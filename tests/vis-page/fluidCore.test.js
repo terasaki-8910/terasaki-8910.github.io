@@ -13,7 +13,9 @@ import {
   resetSim,
   syncParams,
   advanceSim,
-  readoutLines,
+  legendValues,
+  insideTank,
+  viewOfTank,
   pointerDown,
   pointerMove,
   pointerUp,
@@ -37,8 +39,15 @@ function fakeCtx() {
       log.strokeStyles.add(v)
     },
     set lineWidth(v) {},
+    set font(v) {},
+    set textAlign(v) {},
+    set textBaseline(v) {},
     fillRect() {},
     strokeRect() {},
+    fillText() {},
+    save() {},
+    restore() {},
+    closePath() {},
     beginPath() {},
     moveTo() {},
     lineTo() {},
@@ -111,7 +120,7 @@ test('advanceSim: 計算が重いときは、ステップ数を減らして実�
   assert.equal(s.stats.steps, Math.floor(FRAME_BUDGET_MS / 3))
   assert.equal(s.stats.dt, sphMaxDt(s.params))
   assert.ok(s.stats.speed < 0.5 && s.stats.speed > 0)
-  assert.match(readoutLines(s)[1], /実時間の/)
+  assert.match(legendValues(s).speed, /実時間の 0\.\d+ 倍/)
 })
 
 test('advanceSim: 始めの数フレームはステップ数を絞り(JIT が温まるまで)、だんだん増やす', () => {
@@ -183,26 +192,38 @@ test('resetSim: 最初の積み方に戻り、速度が 0 になる', () => {
   assert.ok(s.state.vel.every((v) => v === 0))
 })
 
-test('ポインタ: 画面の座標を水槽の座標(y は上向き)に直し、速度は上限で打ち切り、離すと params.stir が外れる', () => {
+test('ポインタ: 画面の座標を水槽の座標(軸の余白を除く。y は上向き)に直し、速度は上限で打ち切り、離すと params.stir が外れる', () => {
   const s = makeSim('wide', P)
-  const width = 600 // 1 m あたり 300 px(水槽 2 m × 1 m なので高さ 300)
-  const height = 300
-  pointerDown(s, 150, 60, width, height)
-  assert.ok(Math.abs(s.stir.x - 0.5) < 1e-12 && Math.abs(s.stir.y - 0.8) < 1e-12)
+  const width = 600
+  const height = 340
+  const view = viewOfTank(s.tank, width, height)
+  const at = (wx, wy) => [view.sx(wx), view.sy(wy)]
+  pointerDown(s, ...at(0.5, 0.8), width, height)
+  assert.ok(Math.abs(s.stir.x - 0.5) < 1e-9 && Math.abs(s.stir.y - 0.8) < 1e-9)
   assert.equal(s.params.stir, s.stir)
   assert.ok(s.stirOn && s.probe.on)
   assert.ok(s.stir.radius >= 0.08 && s.stir.radius <= 0.2)
-  pointerMove(s, 180, 90, 300, -150, width, height) // 右へ 300 px/s、上へ 150 px/s(画面の y は下向き)
-  assert.ok(Math.abs(s.stir.vx - 1) < 1e-12 && Math.abs(s.stir.vy - 0.5) < 1e-12)
-  pointerMove(s, 180, 90, 6000, 0, width, height)
+  const k = view.scaleX // 1 m あたりの px
+  pointerMove(s, ...at(0.6, 0.7), 1 * k, -0.5 * k, width, height) // 右へ 1 m/s、上へ 0.5 m/s(画面の y は下向き)
+  assert.ok(Math.abs(s.stir.vx - 1) < 1e-9 && Math.abs(s.stir.vy - 0.5) < 1e-9)
+  pointerMove(s, ...at(0.6, 0.7), 20 * k, 0, width, height)
   assert.ok(Math.abs(Math.hypot(s.stir.vx, s.stir.vy) - 6) < 1e-9)
   pointerUp(s, true)
   assert.equal(s.params.stir, null)
   assert.ok(!s.stirOn && s.probe.on)
   pointerUp(s, false)
   assert.ok(!s.probe.on)
-  pointerHover(s, 300, 150, width, height)
-  assert.ok(s.probe.on && Math.abs(s.probe.x - 1) < 1e-12 && Math.abs(s.probe.y - 0.5) < 1e-12)
+  pointerHover(s, ...at(1, 0.5), width, height)
+  assert.ok(s.probe.on && Math.abs(s.probe.x - 1) < 1e-9 && Math.abs(s.probe.y - 0.5) < 1e-9)
+})
+
+test('insideTank: 水槽の中だけ押せる(軸の余白は外)', () => {
+  const s = makeSim('wide', P)
+  const view = viewOfTank(s.tank, 600, 340)
+  assert.ok(insideTank(s, view.sx(1), view.sy(0.5), 600, 340))
+  assert.ok(insideTank(s, view.frame.left + 1, view.frame.bottom - 1, 600, 340))
+  assert.ok(!insideTank(s, 10, 100, 600, 340)) // y の目盛りの数のあたり
+  assert.ok(!insideTank(s, view.sx(1), view.frame.bottom + 8, 600, 340)) // x の目盛りのあたり
 })
 
 test('ポインタで押すと、近くの粒子がポインタの向きに動く', () => {
@@ -211,9 +232,12 @@ test('ポインタで押すと、近くの粒子がポインタの向きに動�
   const syncAll = () => syncParams(s, { ...P, g: 0 })
   // 水の塊の中(x = 0.4, y = 0.3)で、右向きに動かす
   const width = 600
-  const height = 300
-  pointerDown(s, 0.4 * 300, height - 0.3 * 300, width, height)
-  pointerMove(s, 0.4 * 300, height - 0.3 * 300, 450, 0, width, height) // +1.5 m/s
+  const height = 340
+  const view = viewOfTank(s.tank, width, height)
+  const px = view.sx(0.4)
+  const py = view.sy(0.3)
+  pointerDown(s, px, py, width, height)
+  pointerMove(s, px, py, 1.5 * view.scaleX, 0, width, height) // +1.5 m/s
   let near = -1
   let best = Infinity
   for (let i = 0; i < s.state.n; i++) {
@@ -241,7 +265,7 @@ test('drawFluid: 色の段ごとにまとめて描き、粒子の数だけ円を
     const ctx = fakeCtx()
     drawFluid(ctx, 600, 300, colors, s, { colorMode, showGrid: false, rho0: P.rho0 }, cache)
     assert.equal(ctx.log.arcs, s.state.n)
-    assert.ok(ctx.log.fills <= LEVELS)
+    assert.ok(ctx.log.fills <= LEVELS + 1) // 色の段ごとに 1 回 + 重力の矢印の頭
     for (const style of [...ctx.log.fillStyles, ...ctx.log.strokeStyles]) assert.ok(!String(style).includes('#'), style)
   }
   assert.equal(cache.palette.length, LEVELS)
@@ -262,23 +286,43 @@ test('drawFluid: グリッドの表示では、ポインタの近傍(h 以内の
   const plain = fakeCtx()
   drawFluid(plain, 600, 300, colors, s, opts, cache)
   assert.equal(plain.log.arcs, s.state.n) // ポインタが無ければ粒子だけ
-  pointerHover(s, 0.3 * 300, 300 - 0.3 * 300, 600, 300) // 水の中
+  const view = viewOfTank(s.tank, 600, 300)
+  pointerHover(s, view.sx(0.3), view.sy(0.3), 600, 300) // 水の中
   const probe = fakeCtx()
   drawFluid(probe, 600, 300, colors, s, opts, cache)
   const neighbors = probe.log.arcs - s.state.n - 1 // 粒子 + h の円 1 つ + 近傍の輪
   assert.ok(neighbors >= 10 && neighbors <= 60, `近傍 ${neighbors} 個`)
-  pointerDown(s, 0.3 * 300, 300 - 0.3 * 300, 600, 300)
+  pointerDown(s, view.sx(0.3), view.sy(0.3), 600, 300)
   const stir = fakeCtx()
   drawFluid(stir, 600, 300, colors, s, opts, cache)
   assert.equal(stir.log.arcs, probe.log.arcs + 1)
 })
 
-test('readoutLines: 粒子の数・h・近い組・総当たりとの比較・Δt を出す', () => {
+test('legendValues: 時刻・Δt・粒子の数と h・距離を調べた候補(総当たりとの比較)・進みを出す。時刻は進めた分だけ増える', () => {
   const s = makeSim('wide', P)
-  const [a, b] = readoutLines(s)
-  assert.match(a, /粒子 1280 個/)
-  assert.match(a, new RegExp(`h = ${BASE.h.toFixed(2)} m`))
-  assert.match(a, new RegExp(`総当たりなら ${(1280 * 1279) / 2}`))
-  assert.match(b, /Δt = 1\.50 ms/)
+  const v = legendValues(s)
+  assert.equal(v.t, '0.00 s')
+  assert.match(v.n, /1280 個/)
+  assert.match(v.n, new RegExp(`h = ${BASE.h.toFixed(2)} m`))
+  assert.match(v.pairs, new RegExp(`総当たりなら ${(1280 * 1279) / 2}`))
+  assert.match(v.dt, /Δt|ms/)
+  assert.match(v.dt, /1\.50 ms/)
+  s.stepMs = 0.05
+  s.frames = 100
+  advanceSim(s, 1 / 60, CLOCK)
+  assert.ok(Math.abs(s.time - 1 / 60) < 1e-12)
+  assert.equal(legendValues(s).t, '0.02 s')
+  resetSim(s, P)
+  assert.equal(s.time, 0)
   assert.ok(TANKS.wide.width / TANKS.wide.height === 2)
+})
+
+test('drawFluid: 軸(x・y [m])と重力 g の凡例を描く', () => {
+  const s = makeSim('wide', P)
+  const texts = []
+  const ctx = fakeCtx()
+  ctx.fillText = (t) => texts.push(t)
+  drawFluid(ctx, 600, 340, fakeColors(), s, { colorMode: 'speed', showGrid: false, rho0: P.rho0, g: 9.8 }, { colors: null, palette: [], gridLine: '', cell: '', cellLine: '' })
+  assert.ok(texts.includes('x [m]') && texts.includes('y [m]'), texts.join(' '))
+  assert.ok(texts.some((t) => t.startsWith('g = 9.8')), texts.join(' '))
 })

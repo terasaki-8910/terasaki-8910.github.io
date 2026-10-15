@@ -1,9 +1,11 @@
 // 節「流体(SPH)」のシミュレーションの React に依存しない部分(状態・1 フレームの進め方・描画・ポインタ)。
 // 計算は utils/vis/sph.js の関数だけを使い、ここでは式を書き直さない(近傍探索 → 密度 → 圧力 → 力 →
 // 半陰的オイラー、は sphStep の中)。FluidSim.jsx がこれを React の部品につなぐ。
-// 長さは m、水槽の左下が原点で y は上向き(画面には反転して描く)。h は影響半径で、動作を確かめた 0.05 m に固定する。
+// 長さは m、水槽の左下が原点で y は上向き(画面には axes.js の makeView で反転して描く。軸と目盛りは drawAxes)。
+// h は影響半径で、動作を確かめた 0.05 m に固定する。
 
 import { createSphState, fillBlock, sphStep, sphMaxDt, defaultSphParams, neighborsAt } from '../../../utils/vis/sph.js'
+import { makeView, drawAxes, drawGravityLegend } from '../axes.js'
 
 export const SPACING = 0.02 // 粒子の間隔 [m]。defaultSphParams を動作確認した値(h は 2.5 倍、質量は面密度 1000 に合わせる)
 export const TANKS = {
@@ -11,6 +13,8 @@ export const TANKS = {
   narrow: { width: 1.2, height: 1, cols: 24, rows: 25 }, // 600 個(幅 640px 未満)
 }
 export const NARROW_QUERY = '(max-width: 639px)'
+// 絵の縦横比(軸の余白を足したもの。幅 600px 前後で余りが出ない)。SimShell の aspect
+export const ASPECTS = { wide: 1.8, narrow: 1.15 }
 
 export const FRAME_BUDGET_MS = 8 // 1 フレームの計算にかける時間の上限。超えそうなら実時間より遅く進める
 export const MAX_FRAME_SIM = 1 / 30 // 1 フレームで進める時間の上限 [s](タブの復帰直後などで跳ばない)
@@ -52,6 +56,7 @@ export function makeSim(tankKey, p) {
     nbr: new Int32Array(n), // probe から h 以内の粒子
     bucket: new Uint8Array(n), // 粒子の色の段
     stepMs: 0.5, // 1 ステップにかかる時間の移動平均 [ms]
+    time: 0, // 動かしてからの時刻 [s]
     stats: { dt: sphMaxDt(BASE), steps: 0, ms: 0, speed: 1 },
     frames: 0, // 進めたフレームの数(始めの数フレームは、まだ速くなっていない JIT のためにステップ数を絞る)
     acc: 0,
@@ -69,6 +74,7 @@ export function resetSim(s, p) {
   s.stirOn = false
   s.params.stir = null
   s.probe.on = false
+  s.time = 0
   s.stats.steps = 0
   s.stats.ms = 0
   s.stats.speed = 1
@@ -98,26 +104,41 @@ export function advanceSim(s, frameDt, now = () => performance.now()) {
   stats.steps = steps
   stats.ms += 0.2 * (elapsed - stats.ms)
   stats.speed = (steps * dt) / simDt
+  s.time += steps * dt
   s.frames++
 }
 
-// 絵の下に出す 2 行の数値
-export function readoutLines(s) {
+// 凡例の、動いているあいだに変わる値(SimLegend の update に渡す。t は毎フレーム、ほかは 0.25 秒ごとに書けばよい)
+export function legendValues(s) {
   const { state, stats, params } = s
   const n = state.n
-  const slow = stats.speed < SLOW_NOTE_BELOW ? ` ・ 実時間の ${stats.speed.toFixed(2)} 倍` : ''
-  return [
-    `粒子 ${n} 個 ・ h = ${params.h.toFixed(2)} m ・ 近い組 ${state.grid.pairCount} ・ 距離を調べた候補 ${state.grid.checked}（総当たりなら ${(n * (n - 1)) / 2}）`,
-    `Δt = ${(stats.dt * 1000).toFixed(2)} ms × ${stats.steps} 回/フレーム ・ 計算 ${stats.ms.toFixed(1)} ms${slow}`,
-  ]
+  const total = (n * (n - 1)) / 2
+  return {
+    t: `${s.time.toFixed(2)} s`,
+    dt: `${(stats.dt * 1000).toFixed(2)} ms × ${stats.steps} 回/フレーム`,
+    n: `${n} 個（h = ${params.h.toFixed(2)} m）`,
+    pairs: `${state.grid.checked}（総当たりなら ${total}）`,
+    speed: `実時間の ${stats.speed.toFixed(2)} 倍（計算 ${stats.ms.toFixed(1)} ms）`,
+  }
 }
 
 // ---------------------------------------------------------------- ポインタ(かき混ぜ)
 
+// 水槽を canvas(width × height の CSS px)の余白の内側に収める view(軸と目盛りの余白つき)
+export function viewOfTank(tank, width, height) {
+  return makeView({ width, height, xRange: [0, tank.width], yRange: [0, tank.height] })
+}
+
 // 画面の座標(CSS ピクセル、左上が原点)→ 水槽の座標 [m]。scale は 1 m あたりのピクセル数
 function toWorld(s, x, y, width, height) {
-  const scale = width / s.tank.width
-  return { wx: x / scale, wy: (height - y) / scale, scale }
+  const view = viewOfTank(s.tank, width, height)
+  return { wx: view.wx(x), wy: view.wy(y), scale: view.scaleX }
+}
+
+// 画面の点 (x, y) が水槽の中か(水槽の外=軸の余白では、かき混ぜを始めない)
+export function insideTank(s, x, y, width, height) {
+  const { frame } = viewOfTank(s.tank, width, height)
+  return x >= frame.left && x <= frame.right && y >= frame.top && y <= frame.bottom
 }
 
 export function pointerDown(s, x, y, width, height) {
@@ -188,31 +209,38 @@ export function ensureCache(cache, colors) {
   return cache
 }
 
-// 1 フレームの絵。opts = { colorMode: 'speed' | 'density', showGrid, rho0 }。配列は作らない
+// 1 フレームの絵。opts = { colorMode: 'speed' | 'density', showGrid, rho0, g }。配列は作らない
 export function drawFluid(ctx, width, height, colors, s, opts, cache) {
   const { state, tank, params, probe } = s
   const pal = ensureCache(cache, colors)
-  const scale = width / tank.width
+  const view = viewOfTank(tank, width, height)
+  const scale = view.scaleX
   const { pos, vel, rho, n } = state
   const h = params.h
+  const { frame } = view
+  const px = view.sx
+  const py = view.sy
 
   ctx.fillStyle = colors.surface
   ctx.fillRect(0, 0, width, height)
+  ctx.strokeStyle = colors.muted
+  ctx.lineWidth = 1.5
+  ctx.strokeRect(frame.left, frame.top, frame.width, frame.height)
+  drawAxes(ctx, view, { colors, xLabel: 'x [m]', yLabel: 'y [m]' })
 
   if (opts.showGrid) {
-    const cell = h * scale
     ctx.strokeStyle = pal.gridLine
     ctx.lineWidth = 1
     ctx.beginPath()
     for (let c = 1; c * h < tank.width - 1e-9; c++) {
-      const x = Math.round(c * cell) + 0.5
-      ctx.moveTo(x, 0)
-      ctx.lineTo(x, height)
+      const x = Math.round(px(c * h)) + 0.5
+      ctx.moveTo(x, frame.top)
+      ctx.lineTo(x, frame.bottom)
     }
     for (let c = 1; c * h < tank.height - 1e-9; c++) {
-      const y = Math.round(height - c * cell) + 0.5
-      ctx.moveTo(0, y)
-      ctx.lineTo(width, y)
+      const y = Math.round(py(c * h)) + 0.5
+      ctx.moveTo(frame.left, y)
+      ctx.lineTo(frame.right, y)
     }
     ctx.stroke()
     if (probe.on) {
@@ -224,10 +252,10 @@ export function drawFluid(ctx, width, height, colors, s, opts, cache) {
       const y0 = Math.max(0, (cy - 1) * h)
       const y1 = Math.min(tank.height, (cy + 2) * h)
       ctx.fillStyle = pal.cell
-      ctx.fillRect(x0 * scale, height - y1 * scale, (x1 - x0) * scale, (y1 - y0) * scale)
+      ctx.fillRect(px(x0), py(y1), px(x1) - px(x0), py(y0) - py(y1))
       ctx.strokeStyle = pal.cellLine
       ctx.lineWidth = 2
-      ctx.strokeRect(x0 * scale, height - y1 * scale, (x1 - x0) * scale, (y1 - y0) * scale)
+      ctx.strokeRect(px(x0), py(y1), px(x1) - px(x0), py(y0) - py(y1))
     }
   }
 
@@ -252,8 +280,8 @@ export function drawFluid(ctx, width, height, colors, s, opts, cache) {
     ctx.beginPath()
     for (let i = 0; i < n; i++) {
       if (bucket[i] !== b) continue
-      const x = pos[2 * i] * scale
-      const y = height - pos[2 * i + 1] * scale
+      const x = px(pos[2 * i])
+      const y = py(pos[2 * i + 1])
       ctx.moveTo(x + r, y)
       ctx.arc(x, y, r, 0, TAU)
     }
@@ -265,15 +293,15 @@ export function drawFluid(ctx, width, height, colors, s, opts, cache) {
     ctx.strokeStyle = colors.ink
     ctx.lineWidth = 1
     ctx.beginPath()
-    ctx.arc(probe.x * scale, height - probe.y * scale, h * scale, 0, TAU)
+    ctx.arc(px(probe.x), py(probe.y), h * scale, 0, TAU)
     ctx.stroke()
     const count = neighborsAt(state.grid, pos, probe.x, probe.y, h, s.nbr, -1)
     ctx.lineWidth = 1.5
     ctx.beginPath()
     for (let q = 0; q < count; q++) {
       const i = s.nbr[q]
-      const x = pos[2 * i] * scale
-      const y = height - pos[2 * i + 1] * scale
+      const x = px(pos[2 * i])
+      const y = py(pos[2 * i + 1])
       ctx.moveTo(x + r + 1.5, y)
       ctx.arc(x, y, r + 1.5, 0, TAU)
     }
@@ -284,7 +312,10 @@ export function drawFluid(ctx, width, height, colors, s, opts, cache) {
     ctx.strokeStyle = colors.ink
     ctx.lineWidth = 1.5
     ctx.beginPath()
-    ctx.arc(s.stir.x * scale, height - s.stir.y * scale, s.stir.radius * scale, 0, TAU)
+    ctx.arc(px(s.stir.x), py(s.stir.y), s.stir.radius * scale, 0, TAU)
     ctx.stroke()
   }
+
+  // 重力(右上に、下向きの矢印と g の値)
+  drawGravityLegend(ctx, view, opts.g ?? -params.gravity[1], { colors })
 }

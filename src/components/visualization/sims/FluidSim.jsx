@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import SimShell from '../SimShell'
 import SimCanvas from '../SimCanvas'
+import SimLegend from '../SimLegend'
 import ParamSlider from '../ParamSlider'
 import { SimToolbar, PlayPauseButton, ResetButton, ModeSwitch, ToggleButton } from '../SimButtons'
 import useCanvas from '../useCanvas'
@@ -8,6 +9,7 @@ import useSimLoop from '../useSimLoop'
 import usePointerDrag from '../usePointerDrag'
 import {
   TANKS,
+  ASPECTS,
   NARROW_QUERY,
   DEFAULTS,
   SPEED_FULL,
@@ -17,7 +19,8 @@ import {
   resetSim,
   syncParams,
   advanceSim,
-  readoutLines,
+  legendValues,
+  insideTank,
   pointerDown,
   pointerMove,
   pointerUp,
@@ -26,8 +29,10 @@ import {
   FAST_COLOR,
 } from './fluidCore.js'
 
-// 節「流体(SPH)」のシミュレーション: 2 次元のダムの決壊。ドラッグで近くの粒子を押せる。
+// 節「流体(SPH)」の全体のシミュレーション: 2 次元のダムの決壊。ドラッグで近くの粒子を押せる。
 // 状態・計算の進め方・描画は fluidCore.js(React に依存しない)。ここは操作と canvas・ループをつなぐ。
+// 凡例(絵の下 SimLegend): 時刻 t(毎フレーム書き換え)、Δt×1 フレームのステップ数、重力 g、粒子の色の意味、粒子の数と h、
+// 近傍探索で距離を調べた組(総当たりとの比較)、実時間に対する進み。軸と目盛り(x・y [m])と g の矢印は canvas に描く(drawFluid)。
 
 function isNarrow() {
   return typeof window !== 'undefined' && !!window.matchMedia?.(NARROW_QUERY).matches
@@ -49,13 +54,10 @@ export default function FluidSim() {
   const sim = useRef(null)
   if (sim.current === null) sim.current = makeSim(tankKey, p)
   const cacheRef = useRef({ colors: null, palette: [], gridLine: '', cell: '' })
-  const line1 = useRef(null)
-  const line2 = useRef(null)
+  const legend = useRef(null)
 
-  const writeReadout = useCallback(() => {
-    const [a, b] = readoutLines(sim.current)
-    if (line1.current) line1.current.textContent = a
-    if (line2.current) line2.current.textContent = b
+  const writeLegend = useCallback(() => {
+    legend.current?.update(legendValues(sim.current))
   }, [])
 
   const draw = useCallback(({ ctx, width, height, colors }) => {
@@ -70,9 +72,10 @@ export default function FluidSim() {
       syncParams(s, paramsRef.current)
       if (dt > 0) advanceSim(s, dt)
       s.acc += dt
+      legend.current?.update({ t: `${s.time.toFixed(2)} s` })
       if (s.acc >= 0.25) {
         s.acc = 0
-        writeReadout()
+        writeLegend()
       }
       redraw()
     },
@@ -90,28 +93,35 @@ export default function FluidSim() {
   useLayoutEffect(() => {
     if (sim.current.tankKey === tankKey) return
     sim.current = makeSim(tankKey, paramsRef.current)
-    writeReadout()
+    writeLegend()
     redraw()
-  }, [tankKey, redraw, writeReadout])
+  }, [tankKey, redraw, writeLegend])
 
   // 止まっているあいだも、表示にかかわる設定を変えたら描き直す
   useEffect(() => {
     redraw()
-  }, [colorMode, showGrid, rho0, redraw])
+  }, [colorMode, showGrid, rho0, g, redraw])
   useEffect(() => {
-    writeReadout()
-  }, [writeReadout])
+    writeLegend()
+  }, [writeLegend])
 
   // 止まっているときは、ポインタを動かしたら自分で描き直す(動いているときはループが描く)
   const repaint = () => {
     if (!loop.active) redraw()
   }
 
+  // 水槽の中ならどこでも押せる(軸の余白では押せない)。usePointerDrag が cursor を grab / grabbing にする
+  const inTank = ({ x, y }) => {
+    const { width, height } = sizeRef.current
+    return insideTank(sim.current, x, y, width, height)
+  }
+
   usePointerDrag(canvasRef, {
+    canGrab: inTank,
     onDown: ({ x, y }) => {
+      if (!inTank({ x, y })) return false
       const { width, height } = sizeRef.current
       pointerDown(sim.current, x, y, width, height)
-      canvasRef.current.style.cursor = 'grabbing'
       repaint()
     },
     onMove: ({ x, y, vx, vy }) => {
@@ -121,7 +131,6 @@ export default function FluidSim() {
     },
     onUp: ({ event }) => {
       pointerUp(sim.current, event.pointerType === 'mouse') // マウスは離したあとも、上にいる間は近傍を見せる
-      canvasRef.current.style.cursor = 'grab'
       repaint()
     },
     onHover: ({ x, y }) => {
@@ -145,45 +154,38 @@ export default function FluidSim() {
 
   function reset() {
     resetSim(sim.current, paramsRef.current)
-    writeReadout()
+    writeLegend()
     redraw()
   }
 
   const speedMode = colorMode === 'speed'
   const tank = TANKS[tankKey]
+  const legendItems = [
+    { key: 't', symbol: 't', label: '時刻', value: `${sim.current.time.toFixed(2)} s`, minChars: 7 },
+    { key: 'dt', symbol: '\\Delta t', label: '時間刻み', value: '', minChars: 25 },
+    { key: 'g', symbol: 'g', label: '重力', value: `${g.toFixed(1)} m/s² ↓` },
+    {
+      key: 'color',
+      label: speedMode ? '粒子の色（速さ）' : '粒子の色（密度 ρ/ρ0）',
+      value: speedMode ? `0 → ${SPEED_FULL} m/s 以上` : `${DENSITY_LOW} → ${DENSITY_HIGH} 以上`,
+      swatch: `linear-gradient(to right, var(--color-ink), var(--${FAST_COLOR}))`,
+    },
+    { key: 'n', symbol: 'N', label: '粒子の数', value: '', minChars: 18 },
+    { key: 'pairs', label: '距離を調べた候補', value: '', minChars: 24 },
+    { key: 'speed', label: '進み', value: '', minChars: 22 },
+  ]
 
   return (
     <SimShell
       label="粒子法の流体（SPH）：ダムの決壊"
-      aspect={tank.width / tank.height}
+      aspect={ASPECTS[tankKey]}
       stage={
         <SimCanvas
           ref={canvasRef}
-          style={{ cursor: 'grab' }}
           label="水を表す粒子の集まり。左に積んだ水の塊が崩れて、水槽の中を広がる。ドラッグすると近くの粒子を押せる"
         />
       }
-      readout={
-        <>
-          <div ref={line1} />
-          <div ref={line2} />
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0 8px', marginTop: 4 }}>
-            <span>色：{speedMode ? '速さ' : '密度 ρ/ρ0'}</span>
-            <span>{speedMode ? '0' : DENSITY_LOW}</span>
-            <span
-              aria-hidden="true"
-              style={{
-                width: 96,
-                height: 8,
-                border: '1px solid var(--color-muted)',
-                borderRadius: 2,
-                background: `linear-gradient(to right, var(--color-ink), var(--${FAST_COLOR}))`,
-              }}
-            />
-            <span>{speedMode ? `${SPEED_FULL} m/s 以上` : `${DENSITY_HIGH} 以上`}</span>
-          </div>
-        </>
-      }
+      legend={<SimLegend ref={legend} items={legendItems} />}
       controls={
         <>
           <SimToolbar>
