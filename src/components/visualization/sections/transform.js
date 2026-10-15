@@ -7,6 +7,9 @@ const TransformOverview = lazy(() => import('../sims/transformOverview.jsx'))
 const Step1 = lazy(() => import('../sims/transformStep1.jsx'))
 const Step2 = lazy(() => import('../sims/transformStep2.jsx'))
 const Step3 = lazy(() => import('../sims/transformStep3.jsx'))
+const Step4 = lazy(() => import('../sims/transformStep4.jsx'))
+const Step5 = lazy(() => import('../sims/transformStep5.jsx'))
+const Step6 = lazy(() => import('../sims/transformStep6.jsx'))
 
 export default {
   id: 'transform',
@@ -82,11 +85,80 @@ M_{SRT} &= S\,R\,T = \begin{pmatrix} S R_3 & S R_3\,\mathbf{t} \\ \mathbf{0}^{\m
       snippets: ['mat4-multiply', 'mat4-compose'],
       Sim: Step3,
     },
+    {
+      id: 'perspective-projection',
+      title: '透視投影（カメラ目線）',
+      text: 'カメラを原点に置き、前（+z の向き）に距離 f のところへ投影面を立てる。点とカメラを結ぶ直線が投影面と交わる高さが、画面に写る位置になる。相似な三角形から y′ = f·y / z で、遠い（z が大きい）ほど小さく写る。',
+      formulas: [
+        {
+          tex: String.raw`\frac{y'}{f} = \frac{y}{z} \quad\Longrightarrow\quad x' = \frac{f\,x}{z}, \qquad y' = \frac{f\,y}{z}`,
+          symbols: [
+            { tex: String.raw`(x,\ y,\ z)`, meaning: 'カメラから見た点の位置。z がカメラから前への距離（正）', unit: String.raw`\mathrm{m}` },
+            { tex: String.raw`(x',\ y')`, meaning: '投影面の上の像の位置', unit: String.raw`\mathrm{m}` },
+            { tex: 'f', meaning: 'カメラ（投影中心）から投影面までの距離', unit: String.raw`\mathrm{m}` },
+          ],
+        },
+      ],
+      snippets: ['projection-perspectiveProject'],
+      Sim: Step4,
+    },
+    {
+      id: 'frustum-clipping',
+      title: '視錐台とクリッピング',
+      text: 'カメラに写る範囲は、視野角・near・far で決まる台形の立体（視錐台）になる。投影の行列を掛けた (x_c, y_c, z_c, w_c) が −w_c ≤ x_c, y_c, z_c ≤ w_c を満たす点だけが範囲の中にある。w_c で割る前に調べるのは、カメラの後ろの点（w_c < 0）を先に割ると、符号が反転して前に出てきてしまうため。',
+      formulas: [
+        {
+          tex: String.raw`\begin{aligned}
+P &= \begin{pmatrix}
+\dfrac{c}{a} & 0 & 0 & 0 \\
+0 & c & 0 & 0 \\
+0 & 0 & \dfrac{f+n}{n-f} & \dfrac{2fn}{n-f} \\
+0 & 0 & -1 & 0
+\end{pmatrix}, \qquad c = \cot\frac{\theta_{\mathrm{fov}}}{2} \\[6pt]
+\begin{pmatrix} x_c \\ y_c \\ z_c \\ w_c \end{pmatrix} &= P \begin{pmatrix} x \\ y \\ z \\ 1 \end{pmatrix}, \qquad
+-w_c \le x_c,\ y_c,\ z_c \le w_c, \qquad
+\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix} = \frac{1}{w_c}\begin{pmatrix} x_c \\ y_c \\ z_c \end{pmatrix}
+\end{aligned}`,
+          symbols: [
+            { tex: String.raw`\theta_{\mathrm{fov}}`, meaning: '縦の視野角', unit: String.raw`\mathrm{rad}` },
+            { tex: 'a', meaning: '画面の縦横比（幅 ÷ 高さ）', unit: '' },
+            { tex: String.raw`n,\ f`, meaning: 'カメラから手前の面（near）と奥の面（far）までの距離。どちらも正で n < f', unit: String.raw`\mathrm{m}` },
+            { tex: String.raw`x_c,\ y_c,\ z_c,\ w_c`, meaning: 'クリップ座標。4 つ目の成分は、カメラからの奥行き（−z）に等しい', unit: String.raw`\mathrm{m}` },
+            { tex: String.raw`x_n,\ y_n,\ z_n`, meaning: '正規化デバイス座標。視錐台の内側は、どの成分も −1 から 1', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['projection-perspectiveMatrix', 'projection-insideClip', 'projection-toNDC'],
+      Sim: Step5,
+    },
+    {
+      id: 'viewport',
+      title: 'ビューポート変換',
+      text: '正規化デバイス座標（−1〜1 の正方形）を、ウィンドウの画素の長方形に移す。x_n を 0〜1 にして、ウィンドウの幅を掛けるだけの 1 次式なので、ウィンドウの大きさを変えても、四角の中の同じ割合の位置に写る。',
+      formulas: [
+        {
+          tex: String.raw`\begin{aligned}
+x_s &= x_0 + \frac{W}{2}\,(x_n + 1) \\
+y_s &= y_0 + \frac{H}{2}\,(y_n + 1)
+\end{aligned}`,
+          symbols: [
+            { tex: String.raw`x_n,\ y_n`, meaning: '正規化デバイス座標（−1〜1）', unit: '' },
+            { tex: String.raw`x_s,\ y_s`, meaning: 'ウィンドウ上の座標（左下が原点で、y は上向き）', unit: String.raw`\mathrm{px}` },
+            { tex: String.raw`x_0,\ y_0`, meaning: 'ウィンドウの隅の位置', unit: String.raw`\mathrm{px}` },
+            { tex: String.raw`W,\ H`, meaning: 'ウィンドウの幅と高さ', unit: String.raw`\mathrm{px}` },
+          ],
+        },
+      ],
+      snippets: ['projection-viewport'],
+      Sim: Step6,
+    },
   ],
   combination: {
     text: '全体の腕は、段階 7 → 8 → 1〜3 → 4〜6 の順につながって、画面に出る。',
     flow: [
       { steps: [1, 2, 3], text: '腕の関節の角度から、箱の行列を作って 3 次元に置く（モデル変換。関節ごとに回転と平行移動を右から掛ける）' },
+      { steps: [4, 5], text: 'カメラの位置から見た座標にして、透視投影で遠いほど小さく写し、視錐台の外を除く' },
+      { steps: [6], text: 'ビューポート変換で、右の絵の画素の位置にする' },
     ],
   },
   sources: [
@@ -107,41 +179,6 @@ M_{SRT} &= S\,R\,T = \begin{pmatrix} S R_3 & S R_3\,\mathbf{t} \\ \mathbf{0}^{\m
 
   // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
   legacyFormulas: [
-    {
-      id: 'perspective',
-      caption: '透視投影',
-      tex: String.raw`\begin{aligned}
-P &= \begin{pmatrix}
-\dfrac{c}{a} & 0 & 0 & 0 \\
-0 & c & 0 & 0 \\
-0 & 0 & \dfrac{f+n}{n-f} & \dfrac{2fn}{n-f} \\
-0 & 0 & -1 & 0
-\end{pmatrix}, \qquad c = \cot\frac{\theta_{\mathrm{fov}}}{2} \\[6pt]
-\begin{pmatrix} x_c \\ y_c \\ z_c \\ w_c \end{pmatrix} &= P\,V\,M \begin{pmatrix} x \\ y \\ z \\ 1 \end{pmatrix}, \qquad
-\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix} = \frac{1}{w_c}\begin{pmatrix} x_c \\ y_c \\ z_c \end{pmatrix}
-\end{aligned}`,
-      symbols: [
-        { tex: String.raw`\theta_{\mathrm{fov}}`, meaning: '縦の視野角', unit: String.raw`\mathrm{rad}` },
-        { tex: 'a', meaning: '画面の縦横比（幅 ÷ 高さ）', unit: '' },
-        { tex: String.raw`n,\ f`, meaning: 'カメラから手前の面（near）と奥の面（far）までの距離。どちらも正で n < f', unit: String.raw`\mathrm{m}` },
-        { tex: 'V', meaning: 'ビュー行列。世界座標をカメラの座標（カメラが原点で −z を向く）に移す', unit: '' },
-        { tex: String.raw`x_c,\ y_c,\ z_c,\ w_c`, meaning: 'クリップ座標。4 つ目の成分は、カメラからの奥行き（−z）に等しい', unit: String.raw`\mathrm{m}` },
-        { tex: String.raw`x_n,\ y_n,\ z_n`, meaning: '正規化デバイス座標。視錐台の内側は、どの成分も −1 から 1', unit: '' },
-      ],
-    },
-    {
-      id: 'viewport',
-      caption: 'ビューポート変換',
-      tex: String.raw`\begin{aligned}
-x_s &= x_0 + \frac{W}{2}\,(x_n + 1) \\
-y_s &= y_0 + \frac{H}{2}\,(y_n + 1)
-\end{aligned}`,
-      symbols: [
-        { tex: String.raw`x_s,\ y_s`, meaning: 'ウィンドウ上の座標', unit: String.raw`\mathrm{px}` },
-        { tex: String.raw`x_0,\ y_0`, meaning: 'ウィンドウの隅の位置', unit: String.raw`\mathrm{px}` },
-        { tex: String.raw`W,\ H`, meaning: 'ウィンドウの幅と高さ', unit: String.raw`\mathrm{px}` },
-      ],
-    },
     {
       id: 'lerp',
       caption: '線形補間',
@@ -202,9 +239,6 @@ l_1 \cos\theta_1 + l_2 \cos(\theta_1 + \theta_2) & l_2 \cos(\theta_1 + \theta_2)
     },
   ],
   legacySnippets: [
-    'projection-perspectiveMatrix',
-    'projection-toNDC',
-    'projection-viewport',
     'raster-isBackFace',
     'spline-naturalCubicSpline',
     'ik-ik2Analytic',
