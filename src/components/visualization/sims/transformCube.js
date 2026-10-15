@@ -4,7 +4,7 @@
 import { rotateX, rotateY, rotateZ, translate, scale, compose, transformPoint } from '../../../utils/vis/mat4.js'
 import { perspectiveMatrix, toNDC, insideClip, viewport } from '../../../utils/vis/projection.js'
 import { isBackFace } from '../../../utils/vis/raster.js'
-import { fmt, toRad, uiFont } from './transformCommon.js'
+import { ASPECT, fmt, toRad, uiFont } from './transformCommon.js'
 
 // カメラは (0, 0, CAMERA_Z) から -z を見る(perspectiveMatrix の向き)。ビュー行列は平行移動だけ
 export const CAMERA_Z = 7
@@ -74,7 +74,7 @@ function project(MVP, point, width, height) {
 }
 
 export function drawCube({ ctx, width, height, colors }, p) {
-  const { MVP } = cubeMatrices(p, width / height)
+  const { MVP } = cubeMatrices(p, ASPECT) // 枠の縦横比は固定なので、画面の行列の数と同じ行列で描く
   const pts = VERTS.map((v) => project(MVP, [v[0], v[1], v[2], 1], width, height))
 
   // 面の表裏。画面上の反時計回りが表(isBackFace は時計回りを背面とする)。カメラの後ろの頂点がある面は不明(null)

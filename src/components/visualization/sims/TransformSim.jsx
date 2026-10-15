@@ -35,15 +35,13 @@ import {
   restartIterations,
   stepJacobian,
 } from './transformIk.js'
-import { fmt } from './transformCommon.js'
+import { ASPECT, fmt } from './transformCommon.js'
 
 // 節「変換・投影・補間・IK」のシミュレーション。1つの canvas で、3つの見せ方を切り替える。
 //   変換・投影 … transformCube.js    立方体を mat4 と projection だけで画面に出す
 //   補間       … transformKeyframes.js  キーフレームを lerp と naturalCubicSpline で結ぶ
 //   IK         … transformIk.js      2リンクの腕を ik2Analytic と ikStep で動かす
 // ここは状態・操作・時間の進め方。計算は src/utils/vis/ の関数で、このファイルには式を書かない。
-const ASPECT = 4 / 3
-
 const VIEWS = [
   { value: 'cube', label: '変換・投影' },
   { value: 'keyframes', label: '補間' },
@@ -220,6 +218,7 @@ export default function TransformSim() {
       const p = params.current
       const s = sim.current
       const { width, height } = sizeRef.current
+      if (p.view !== 'cube') canvasRef.current.focus({ preventScroll: true }) // つかんだあと、矢印キーでも動かせるように
       if (p.view === 'keyframes') {
         const r = plotRect(width, height)
         const i = pickKeyframe(r, p.model.ys, x, y)
