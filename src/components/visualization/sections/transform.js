@@ -107,7 +107,7 @@ M_{SRT} &= S\,R\,T = \begin{pmatrix} S R_3 & S R_3\,\mathbf{t} \\ \mathbf{0}^{\m
     {
       id: 'frustum-clipping',
       title: '視錐台とクリッピング',
-      text: 'カメラに写る範囲は、視野角・near・far で決まる台形の立体（視錐台）になる。投影の行列を掛けた (x_c, y_c, z_c, w_c) が −w_c ≤ x_c, y_c, z_c ≤ w_c を満たす点だけが範囲の中にある。w_c で割る前に調べるのは、カメラの後ろの点（w_c < 0）を先に割ると、符号が反転して前に出てきてしまうため。',
+      text: 'カメラに写る範囲は、視野角・near・far で決まる、四角錐を near と far の面で切り取った形（視錐台）になる。投影の行列を掛けた (x_c, y_c, z_c, w_c) が −w_c ≤ x_c, y_c, z_c ≤ w_c を満たす点だけが範囲の中にある。w_c で割る前に調べるのは、カメラの後ろの点（w_c < 0）を先に割ると、符号が反転して前に出てきてしまうため。',
       formulas: [
         {
           tex: String.raw`\begin{aligned}
