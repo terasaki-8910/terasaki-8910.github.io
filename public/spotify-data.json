@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-10-15T10:31:47.409Z",
+  "lastUpdated": "2026-10-15T15:56:17.360Z",
   "tracks": [
+    {
+      "id": "3virU2iQJXEfkHUAnOcmxt",
+      "name": "Glossy:MMM",
+      "artist": "Miyuki Hashimoto",
+      "album": "『咲-Saki-』Best Album ～Anthology～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730d1b6f4c56aded0cb66295b2",
+      "playedAt": "2026-10-15T12:09:29.449Z",
+      "spotifyUrl": "https://open.spotify.com/track/3virU2iQJXEfkHUAnOcmxt",
+      "duration": 254560,
+      "previewUrl": ""
+    },
+    {
+      "id": "53tydlVOxbQkBQ3yyvWiuj",
+      "name": "Futuristic Player",
+      "artist": "Miyuki Hashimoto",
+      "album": "『咲-Saki-』Best Album ～Anthology～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730d1b6f4c56aded0cb66295b2",
+      "playedAt": "2026-10-15T12:03:14.927Z",
+      "spotifyUrl": "https://open.spotify.com/track/53tydlVOxbQkBQ3yyvWiuj",
+      "duration": 228600,
+      "previewUrl": ""
+    },
+    {
+      "id": "5gHguYSm6FjjyXJehHG6qi",
+      "name": "MIRACLE RUSH",
+      "artist": "StylipS",
+      "album": "THE LIGHTNING CELEBRATION",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733aaa38391f1513c93cd8957a",
+      "playedAt": "2026-10-15T11:34:25.945Z",
+      "spotifyUrl": "https://open.spotify.com/track/5gHguYSm6FjjyXJehHG6qi",
+      "duration": 246306,
+      "previewUrl": ""
+    },
     {
       "id": "0Jcx9VqsO4t20gYeznW7Uq",
       "name": "アカシア",
@@ -32,17 +65,6 @@
       "playedAt": "2026-10-15T09:51:51.475Z",
       "spotifyUrl": "https://open.spotify.com/track/6u6MGAF5TQ0PvQf5rkf5zX",
       "duration": 236800,
-      "previewUrl": ""
-    },
-    {
-      "id": "3virU2iQJXEfkHUAnOcmxt",
-      "name": "Glossy:MMM",
-      "artist": "Miyuki Hashimoto",
-      "album": "『咲-Saki-』Best Album ～Anthology～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730d1b6f4c56aded0cb66295b2",
-      "playedAt": "2026-10-15T09:46:16.840Z",
-      "spotifyUrl": "https://open.spotify.com/track/3virU2iQJXEfkHUAnOcmxt",
-      "duration": 254560,
       "previewUrl": ""
     },
     {
@@ -307,28 +329,6 @@
       "playedAt": "2026-10-14T08:56:06.722Z",
       "spotifyUrl": "https://open.spotify.com/track/5feA3fPJaYOHSLOYklCuMS",
       "duration": 109624,
-      "previewUrl": ""
-    },
-    {
-      "id": "37x5cuh2RfCZoxc7581Hzc",
-      "name": "Play Ball!",
-      "artist": "EmoCosine",
-      "album": "Blue Archive Original Soundtrack (Vol.8　～Dreaming for the Melody of Revolution～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e56f85bdbfefbedc27f9fc32",
-      "playedAt": "2026-10-14T08:54:26.334Z",
-      "spotifyUrl": "https://open.spotify.com/track/37x5cuh2RfCZoxc7581Hzc",
-      "duration": 136970,
-      "previewUrl": ""
-    },
-    {
-      "id": "1AJUpsXKwFKgTty5IF51jR",
-      "name": "Raise the Huddle",
-      "artist": "Nor",
-      "album": "Blue Archive Original Soundtrack (Vol.5～Striving for the bloomy festival～)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2ba530e957206e25657baf0",
-      "playedAt": "2026-10-14T08:52:32.774Z",
-      "spotifyUrl": "https://open.spotify.com/track/1AJUpsXKwFKgTty5IF51jR",
-      "duration": 127936,
       "previewUrl": ""
     }
   ],
