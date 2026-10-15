@@ -31,7 +31,7 @@ function Table({ name, rows, hiCell }) {
           <tr key={i}>
             {row.map((v, j) => (
               <td key={j} className={`px-1.5 py-0.5 text-right tabular-nums ${hiCell(i, j) ? HI : ''}`}>
-                {fmt(v, 2)}
+                {Number.isFinite(v) ? fmt(v, 2) : '—'}
               </td>
             ))}
           </tr>

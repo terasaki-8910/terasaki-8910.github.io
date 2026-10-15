@@ -1,8 +1,5 @@
-// 節「変換・投影・補間・IK」の3つの見せ方(transformCube / transformKeyframes / transformIk)が共有する小物。
-// 計算の関数は src/utils/vis/ にあり、ここは canvas の文字の書体と数の表示だけ。
-
-// canvas の縦横比(幅/高さ)。枠(SimShell)の --aspect と、投影行列の aspect の両方がこれを使う
-export const ASPECT = 4 / 3
+// 節「変換・投影・補間・IK」の絵と操作が共有する小物。
+// 計算の関数は src/utils/vis/ にあり、ここは canvas の文字の書体と数の表示、角度・範囲の小さな変換だけ。
 
 // canvas の文字(ラベル)の書体指定。ページ本文と同じ書体をそのまま使う
 export { uiFont } from '../canvasFont.js'

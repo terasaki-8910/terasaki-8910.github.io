@@ -1,6 +1,7 @@
-// 見せ方3「IK」: 2リンクの腕。解析解(ik2Analytic)と、ヤコビアンの繰り返し(ikStep)を並べる。
+// 段階 8「IK」: 2リンクの腕。解析解(ik2Analytic)と、ヤコビアンの繰り返し(ikStep)を並べる。
 // 角度・順運動学・1歩の更新は ik.js の関数だけで求める。ここは状態(反復の回数と終わり方)と描画。
 import { fk2, ik2Analytic, ikStep } from '../../../utils/vis/ik.js'
+import { makeView, drawAxes } from '../axes.js'
 import { clamp, fmt, fmtDeg, uiFont } from './transformCommon.js'
 
 export const L1 = 1
@@ -62,17 +63,21 @@ export function analyticPose(target, elbowUp) {
   return ik2Analytic(L1, L2, target[0], target[1], elbowUp)
 }
 
-// canvas の中心が腕の根元。腕を伸ばしきった円が canvas の高さに収まる大きさ
+// 腕の根元を原点にした世界(x が右、y が上、単位 m)の範囲。腕を伸ばしきった円(半径 L1 + L2 = 1.7)が収まる
+export const IK_RANGE = { x: [-2, 2], y: [-1.8, 1.8] }
+const IK_MARGIN = { left: 38, right: 12, top: 24, bottom: 34 }
+
+// 世界 → 画面は axes.js の makeView(軸・目盛りと同じ)。cx・cy は腕の根元の画面の位置、u は世界の 1 m あたりの px
 export function ikView(width, height) {
-  return { cx: width / 2, cy: height / 2, u: (Math.min(width, height) / 2 - 14) / (L1 + L2) }
+  const view = makeView({ width, height, xRange: IK_RANGE.x, yRange: IK_RANGE.y, margin: IK_MARGIN })
+  return { view, cx: view.sx(0), cy: view.sy(0), u: view.scaleX }
 }
-export function pixelToWorld(view, x, y) {
-  return [(x - view.cx) / view.u, (view.cy - y) / view.u]
+export function pixelToWorld(v, x, y) {
+  return [v.view.wx(x), v.view.wy(y)]
 }
-export function clampTarget(view, width, height, [x, y]) {
-  const mx = (width / 2 - 12) / view.u
-  const my = (height / 2 - 12) / view.u
-  return [clamp(x, -mx, mx), clamp(y, -my, my)]
+// 目標は、軸の範囲の中に収める
+export function clampTarget([x, y]) {
+  return [clamp(x, IK_RANGE.x[0], IK_RANGE.x[1]), clamp(y, IK_RANGE.y[0], IK_RANGE.y[1])]
 }
 
 const STATUS_TEXT = {
@@ -96,9 +101,10 @@ export function readoutText(s, { solver, elbowUp, lambda, maxStep, paused = fals
   return `${angles}   反復 ${s.iter} 回   誤差 ${fmt(tipError(s), 4)}   ${status}\nλ = ${fmt(lambda)}   1歩の上限 ${fmt(maxStep)} rad`
 }
 
-export function drawIk({ ctx, width, height, colors }, s, { solver, elbowUp }) {
+export function drawIk({ ctx, width, height, colors }, s, { solver, elbowUp, active = false }) {
   const view = ikView(width, height)
   const { cx, cy, u } = view
+  drawAxes(ctx, view.view, { colors, xLabel: 'x [m]', yLabel: 'y [m]' })
   const px = (p) => [cx + p[0] * u, cy - p[1] * u]
   const theta = solver === 'analytic' ? analyticPose(s.target, elbowUp) : s.theta
   ctx.lineCap = 'round'
@@ -206,13 +212,14 @@ export function drawIk({ ctx, width, height, colors }, s, { solver, elbowUp }) {
     ctx.stroke()
     ctx.setLineDash([])
   }
-  ctx.fillStyle = colors.alpha('accent', 0.9)
+  ctx.fillStyle = active ? colors.ink : colors.alpha('accent', 0.9)
   ctx.strokeStyle = colors.ink
   ctx.lineWidth = 2
   ctx.beginPath()
-  ctx.arc(gx, gy, 11, 0, Math.PI * 2)
+  ctx.arc(gx, gy, active ? 12.5 : 11, 0, Math.PI * 2)
   ctx.fill()
   ctx.stroke()
+  ctx.strokeStyle = active ? colors.surface : colors.ink
   ctx.lineWidth = 1.5
   ctx.beginPath()
   ctx.moveTo(gx - 5, gy)

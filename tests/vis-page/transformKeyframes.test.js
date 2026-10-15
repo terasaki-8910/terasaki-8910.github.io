@@ -84,6 +84,6 @@ test('clampValue: キーフレームの値を [-1, 1] に収め、0.01 刻みに
 test('readoutText: 時刻・2 つの補間の値・選んでいるキーフレームの番号が出る', () => {
   const model = buildModel(KF_DEFAULT)
   const [line1, line2] = readoutText(model, 1, 1).split('\n')
-  assert.match(line1, /t = 1\.00 s\s+lerp = 0\.75\s+spline = 0\.75/)
-  assert.match(line2, /キーフレーム 2\/6/)
+  assert.match(line1, /t = 1\.00 s\s+線形補間 = 0\.75 m\s+スプライン = 0\.75 m/)
+  assert.match(line2, /キーフレーム 2\/6.*x = 0\.75 m/)
 })

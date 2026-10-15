@@ -1,6 +1,6 @@
 // 節「変換・投影・補間・IK」のデータ。形は sections/index.js を見る。
-// シミュレーションは sims/TransformSim.jsx(1つの canvas で3つの見せ方を切り替える)。
-// 節の中でしか使わない大きなコンポーネントなので、この節を開くまで読み込まない。
+// 全体は 2 関節の腕のキーフレームアニメーション(sims/transformOverview.jsx)。段階 1〜8 は、その計算を 1 つずつ取り出した小さなシミュレーション
+// (sims/transformStep1〜8.jsx)。どれもこの節を開くまで読み込まず、段階は画面に近づいてから作る(StepSection の LazyMount)。
 import { lazy } from 'react'
 
 const TransformOverview = lazy(() => import('../sims/transformOverview.jsx'))
@@ -10,12 +10,14 @@ const Step3 = lazy(() => import('../sims/transformStep3.jsx'))
 const Step4 = lazy(() => import('../sims/transformStep4.jsx'))
 const Step5 = lazy(() => import('../sims/transformStep5.jsx'))
 const Step6 = lazy(() => import('../sims/transformStep6.jsx'))
+const Step7 = lazy(() => import('../sims/transformStep7.jsx'))
+const Step8 = lazy(() => import('../sims/transformStep8.jsx'))
 
 export default {
   id: 'transform',
   title: '変換・投影・補間・IK',
   tabLabel: '変換・IK',
-  intro: '立方体を、モデル行列・視点・透視投影・ビューポートの順に通して画面に描く。キーフレームの補間と、2 リンクの腕の IK も、見せ方を切り替えて動かせる。',
+  intro: '2 関節の腕のキーフレームアニメーションを、カメラで撮って画面に描く。補間・IK・3 次元の変換・投影・画面への写しを、計算ごとに分けて動かして確かめる。',
   overview: {
     Sim: TransformOverview,
     caption: '左の図は、ドラッグで見る向きを回せる。右の絵は、右のバーで動かすカメラが撮ったもの。再生すると、腕が番号の順にキーフレームをなぞる。',
@@ -152,11 +154,81 @@ y_s &= y_0 + \frac{H}{2}\,(y_n + 1)
       snippets: ['projection-viewport'],
       Sim: Step6,
     },
+    {
+      id: 'keyframe-interpolation',
+      title: 'キーフレームの補間',
+      text: 'アニメーションは、いくつかの時刻（キーフレーム）の値だけを決めておき、その間を計算で埋める。2 点を直線でつなぐのが線形補間。区間ごとの 3 次式を、つなぎ目で傾きと曲がり方がそろうようにつなぐのが 3 次スプラインで、同じ値が並ぶ区間でも滑らかに膨らむ。',
+      formulas: [
+        {
+          tex: String.raw`L(x) = (1-u)\,y_i + u\,y_{i+1}, \qquad u = \frac{x - x_i}{x_{i+1} - x_i}, \quad x_i \le x \le x_{i+1}`,
+          symbols: [
+            { tex: String.raw`x_i`, meaning: 'キーフレームの時刻', unit: String.raw`\mathrm{s}` },
+            { tex: String.raw`y_i`, meaning: 'キーフレームの値', unit: '' },
+            { tex: 'u', meaning: '区間の中での位置（0 で始点、1 で終点）', unit: '' },
+          ],
+        },
+        {
+          tex: String.raw`\begin{aligned}
+S_i(x) &= a_i (x - x_i)^3 + b_i (x - x_i)^2 + c_i (x - x_i) + d_i, \qquad x_i \le x \le x_{i+1} \\
+S_i(x_i) &= y_i, \qquad S_i(x_{i+1}) = y_{i+1} \\
+S_i'(x_{i+1}) &= S_{i+1}'(x_{i+1}), \qquad S_i''(x_{i+1}) = S_{i+1}''(x_{i+1}) \\
+S_0''(x_0) &= S_{N-1}''(x_N) = 0 \\[6pt]
+h_{i-1} m_{i-1} &+ 2(h_{i-1} + h_i)\, m_i + h_i m_{i+1} = 6\left(\frac{y_{i+1} - y_i}{h_i} - \frac{y_i - y_{i-1}}{h_{i-1}}\right)
+\end{aligned}`,
+          symbols: [
+            { tex: String.raw`S_i`, meaning: '区間 i の 3 次式。N 区間で未知数は 4N 個', unit: '' },
+            { tex: String.raw`a_i,\ b_i,\ c_i,\ d_i`, meaning: '区間 i の係数', unit: '' },
+            { tex: String.raw`h_i`, meaning: '区間の幅（隣り合う節点の時刻の差）', unit: String.raw`\mathrm{s}` },
+            { tex: String.raw`m_i`, meaning: '節点での 2 階微分の値。三重対角の連立方程式をトーマス法で解く', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['spline-lerp', 'spline-naturalCubicSpline', 'spline-evalSpline'],
+      Sim: Step7,
+    },
+    {
+      id: 'inverse-kinematics',
+      title: 'IK（腕の関節の角度を求める）',
+      text: '手先を目標に届かせる、関節の角度を求める。2 本のリンクなら、原点・肘・手先の三角形の辺の長さから、余弦定理で角度が決まる（解析解。肘の向きが 2 通り）。一般の腕では、手先の速度と関節の角速度を結ぶヤコビアン J を使い、誤差を小さくする向きに角度を少しずつ変えるのを繰り返す。',
+      formulas: [
+        {
+          tex: String.raw`\theta_2 = \pm\arccos\frac{x^2 + y^2 - l_1^2 - l_2^2}{2\,l_1 l_2}, \qquad
+\theta_1 = \operatorname{atan2}(y,\, x) \mp \arccos\frac{l_1^2 + x^2 + y^2 - l_2^2}{2\,l_1 \sqrt{x^2 + y^2}}`,
+          symbols: [
+            { tex: String.raw`l_1,\ l_2`, meaning: '根元側と先端側のリンクの長さ', unit: String.raw`\mathrm{m}` },
+            { tex: String.raw`x,\ y`, meaning: '手先の目標。原点（根元）からの距離が、2 本のリンクの長さの差以上、和以下のときだけ届く', unit: String.raw`\mathrm{m}` },
+            { tex: String.raw`\theta_1`, meaning: '1 本目の向き（x 軸から反時計回り）', unit: String.raw`\mathrm{rad}` },
+            { tex: String.raw`\theta_2`, meaning: '関節の曲げ角（1 本目の延長から反時計回り）。± は肘の 2 つの解で、上と下の符号が対応する', unit: String.raw`\mathrm{rad}` },
+          ],
+        },
+        {
+          tex: String.raw`\begin{aligned}
+J &= \frac{\partial(x,\, y)}{\partial(\theta_1,\, \theta_2)} = \begin{pmatrix}
+-l_1 \sin\theta_1 - l_2 \sin(\theta_1 + \theta_2) & -l_2 \sin(\theta_1 + \theta_2) \\
+l_1 \cos\theta_1 + l_2 \cos(\theta_1 + \theta_2) & l_2 \cos(\theta_1 + \theta_2)
+\end{pmatrix} \\[6pt]
+\Delta\boldsymbol{\theta} &= J^{\mathsf T}\bigl(J J^{\mathsf T} + \lambda^2 I\bigr)^{-1}\mathbf{e}, \qquad \mathbf{e} = \mathbf{x}_{\mathrm{goal}} - \mathbf{x}_{\mathrm{tip}} \\[6pt]
+\boldsymbol{\theta} &\leftarrow \boldsymbol{\theta} + k\,\Delta\boldsymbol{\theta}, \qquad k = \min\!\left(1,\ \frac{\Delta\theta_{\max}}{\lVert \Delta\boldsymbol{\theta} \rVert}\right)
+\end{aligned}`,
+          symbols: [
+            { tex: 'J', meaning: 'ヤコビアン。手先の速度は J × 関節の角速度。2 本が一直線になる姿勢（伸びきる・折りたたむ）で特異になる', unit: String.raw`\mathrm{m/rad}` },
+            { tex: String.raw`\mathbf{e}`, meaning: '手先の誤差（目標 − 手先）', unit: String.raw`\mathrm{m}` },
+            { tex: String.raw`\Delta\boldsymbol{\theta}`, meaning: '関節角の変化', unit: String.raw`\mathrm{rad}` },
+            { tex: String.raw`\lambda`, meaning: '減衰係数。大きいほど特異な姿勢でも安定するが、1 歩は小さくなる', unit: String.raw`\mathrm{m/rad}` },
+            { tex: String.raw`\Delta\theta_{\max}`, meaning: '1 歩で動かしてよい関節角の上限。J は小さな動きでしか正しくないので、超えたら縮める', unit: String.raw`\mathrm{rad}` },
+          ],
+        },
+      ],
+      snippets: ['ik-fk2', 'ik-ik2Analytic', 'ik-jacobian2', 'ik-ikStep'],
+      Sim: Step8,
+    },
   ],
   combination: {
-    text: '全体の腕は、段階 7 → 8 → 1〜3 → 4〜6 の順につながって、画面に出る。',
+    text: '全体の腕は、段階 7 → 8 → 1〜3 → 4〜6 の順につながって、画面に出る。番号を押すと、その段階へ移る。',
     flow: [
-      { steps: [1, 2, 3], text: '腕の関節の角度から、箱の行列を作って 3 次元に置く（モデル変換。関節ごとに回転と平行移動を右から掛ける）' },
+      { steps: [7], text: 'キーフレームの手先の位置を、スプラインでつなぎ、時刻ごとの手先の目標を決める' },
+      { steps: [8], text: '目標に手先が届くよう、IK で 2 つの関節の角度を求める' },
+      { steps: [1, 2, 3], text: '角度から腕の箱の行列を作り、世界の 3 次元に置く（モデル変換。関節ごとに回転と平行移動を右から掛ける）' },
       { steps: [4, 5], text: 'カメラの位置から見た座標にして、透視投影で遠いほど小さく写し、視錐台の外を除く' },
       { steps: [6], text: 'ビューポート変換で、右の絵の画素の位置にする' },
     ],
@@ -176,74 +248,4 @@ y_s &= y_0 + \frac{H}{2}\,(y_n + 1)
       href: 'https://www.math.ucsd.edu/~sbuss/ResearchWeb/ikmethods/iksurvey.pdf',
     },
   ],
-
-  // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
-  legacyFormulas: [
-    {
-      id: 'lerp',
-      caption: '線形補間',
-      tex: String.raw`L(x) = (1-u)\,y_i + u\,y_{i+1}, \qquad u = \frac{x - x_i}{x_{i+1} - x_i}, \quad x_i \le x \le x_{i+1}`,
-      symbols: [
-        { tex: String.raw`x_i`, meaning: 'キーフレームの時刻', unit: String.raw`\mathrm{s}` },
-        { tex: String.raw`y_i`, meaning: 'キーフレームの値', unit: '' },
-        { tex: 'u', meaning: '区間の中での位置（0 で始点、1 で終点）', unit: '' },
-      ],
-    },
-    {
-      id: 'spline',
-      caption: '自然 3 次スプラインの条件',
-      tex: String.raw`\begin{aligned}
-S_i(x) &= a_i (x - x_i)^3 + b_i (x - x_i)^2 + c_i (x - x_i) + d_i, \qquad x_i \le x \le x_{i+1} \\
-S_i(x_i) &= y_i, \qquad S_i(x_{i+1}) = y_{i+1} \\
-S_i'(x_{i+1}) &= S_{i+1}'(x_{i+1}), \qquad S_i''(x_{i+1}) = S_{i+1}''(x_{i+1}) \\
-S_0''(x_0) &= S_{N-1}''(x_N) = 0 \\[6pt]
-h_{i-1} m_{i-1} &+ 2(h_{i-1} + h_i)\, m_i + h_i m_{i+1} = 6\left(\frac{y_{i+1} - y_i}{h_i} - \frac{y_i - y_{i-1}}{h_{i-1}}\right)
-\end{aligned}`,
-      symbols: [
-        { tex: String.raw`S_i`, meaning: '区間 i の 3 次式。N 区間で未知数は 4N 個', unit: '' },
-        { tex: String.raw`a_i,\ b_i,\ c_i,\ d_i`, meaning: '区間 i の係数', unit: '' },
-        { tex: String.raw`h_i`, meaning: '区間の幅（隣り合う節点の時刻の差）', unit: String.raw`\mathrm{s}` },
-        { tex: String.raw`m_i`, meaning: '節点での 2 階微分の値。三重対角の連立方程式をトーマス法で解く', unit: '' },
-      ],
-    },
-    {
-      id: 'ik-analytic',
-      caption: '2 リンクの解析解（余弦定理）',
-      tex: String.raw`\theta_2 = \pm\arccos\frac{x^2 + y^2 - l_1^2 - l_2^2}{2\,l_1 l_2}, \qquad
-\theta_1 = \operatorname{atan2}(y,\, x) \mp \arccos\frac{l_1^2 + x^2 + y^2 - l_2^2}{2\,l_1 \sqrt{x^2 + y^2}}`,
-      symbols: [
-        { tex: String.raw`l_1,\ l_2`, meaning: '根元側と先端側のリンクの長さ', unit: String.raw`\mathrm{m}` },
-        { tex: String.raw`x,\ y`, meaning: '手先の目標。原点（根元）からの距離が、2 本のリンクの長さの差以上、和以下のときだけ届く', unit: String.raw`\mathrm{m}` },
-        { tex: String.raw`\theta_1`, meaning: '1 本目の向き（x 軸から反時計回り）', unit: String.raw`\mathrm{rad}` },
-        { tex: String.raw`\theta_2`, meaning: '関節の曲げ角（1 本目の延長から反時計回り）。± は肘の 2 つの解で、上と下の符号が対応する', unit: String.raw`\mathrm{rad}` },
-      ],
-    },
-    {
-      id: 'ik-dls',
-      caption: 'ヤコビアンと減衰つき最小二乗の更新',
-      tex: String.raw`\begin{aligned}
-J &= \frac{\partial(x,\, y)}{\partial(\theta_1,\, \theta_2)} = \begin{pmatrix}
--l_1 \sin\theta_1 - l_2 \sin(\theta_1 + \theta_2) & -l_2 \sin(\theta_1 + \theta_2) \\
-l_1 \cos\theta_1 + l_2 \cos(\theta_1 + \theta_2) & l_2 \cos(\theta_1 + \theta_2)
-\end{pmatrix} \\[6pt]
-\Delta\boldsymbol{\theta} &= J^{\mathsf T}\bigl(J J^{\mathsf T} + \lambda^2 I\bigr)^{-1}\mathbf{e}, \qquad \mathbf{e} = \mathbf{x}_{\mathrm{goal}} - \mathbf{x}_{\mathrm{tip}} \\[6pt]
-\boldsymbol{\theta} &\leftarrow \boldsymbol{\theta} + k\,\Delta\boldsymbol{\theta}, \qquad k = \min\!\left(1,\ \frac{\Delta\theta_{\max}}{\lVert \Delta\boldsymbol{\theta} \rVert}\right)
-\end{aligned}`,
-      symbols: [
-        { tex: 'J', meaning: 'ヤコビアン。手先の速度は J × 関節の角速度。2 本が一直線になる姿勢（伸びきる・折りたたむ）で特異になる', unit: String.raw`\mathrm{m/rad}` },
-        { tex: String.raw`\mathbf{e}`, meaning: '手先の誤差（目標 − 手先）', unit: String.raw`\mathrm{m}` },
-        { tex: String.raw`\Delta\boldsymbol{\theta}`, meaning: '関節角の変化', unit: String.raw`\mathrm{rad}` },
-        { tex: String.raw`\lambda`, meaning: '減衰係数。大きいほど特異な姿勢でも安定するが、1 歩は小さくなる', unit: String.raw`\mathrm{m/rad}` },
-        { tex: String.raw`\Delta\theta_{\max}`, meaning: '1 歩で動かしてよい関節角の上限。J は小さな動きでしか正しくないので、超えたら縮める', unit: String.raw`\mathrm{rad}` },
-      ],
-    },
-  ],
-  legacySnippets: [
-    'raster-isBackFace',
-    'spline-naturalCubicSpline',
-    'ik-ik2Analytic',
-    'ik-ikStep',
-  ],
-  legacyDescription:
-    '立方体を、モデル行列、視点、透視投影、ビューポートの順に通して画面に描く。キーフレームの間は、線形補間と自然 3 次スプラインの 2 通りで結ぶ。2 リンクの腕は、解析解と、ヤコビアンの繰り返しで目標へ向ける。掛ける順や視野角、減衰の大きさを変えて、結果がどう変わるかを見られる。',
 }

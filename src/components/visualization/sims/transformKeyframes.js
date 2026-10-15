@@ -1,4 +1,4 @@
-// 見せ方2「キーフレームの補間」: 時間軸に並べたキーフレームを、線形補間(lerp)と
+// 段階 7「キーフレームの補間」: 時間軸に並べたキーフレームを、線形補間(lerp)と
 // 自然3次スプライン(naturalCubicSpline)の2通りで結ぶ。曲線の値は spline.js の関数だけで求める。
 import { lerp, naturalCubicSpline, evalSpline, findSegment } from '../../../utils/vis/spline.js'
 import { clamp, fmt, uiFont } from './transformCommon.js'
@@ -23,8 +23,8 @@ export function sample(model, t) {
 
 export function plotRect(width, height) {
   const left = 40
-  const right = width - 72
-  return { left, right, top: 30, bottom: height - 32, stripX: right + 36 }
+  const right = width - 84
+  return { left, right, top: 30, bottom: height - 32, stripX: right + 48 }
 }
 export const timeToX = (r, t) => r.left + (t / T_END) * (r.right - r.left)
 export const valueToY = (r, v) => r.top + ((V_MAX - v) / (2 * V_MAX)) * (r.bottom - r.top)
@@ -57,8 +57,8 @@ export function readoutText(model, time, selected) {
   const s = sample(model, time)
   const k = selected
   return [
-    `t = ${fmt(time)} s   lerp = ${fmt(s.lerp)}   spline = ${fmt(s.spline)}`,
-    `キーフレーム ${k + 1}/${KF_TIMES.length}：t = ${fmt(KF_TIMES[k])} s，値 ${fmt(model.ys[k])}`,
+    `t = ${fmt(time)} s   線形補間 = ${fmt(s.lerp)} m   スプライン = ${fmt(s.spline)} m`,
+    `キーフレーム ${k + 1}/${KF_TIMES.length}：t = ${fmt(KF_TIMES[k])} s，x = ${fmt(model.ys[k])} m`,
   ].join('\n')
 }
 
@@ -93,8 +93,10 @@ export function drawKeyframes({ ctx, width, height, colors }, { model, selected,
     ctx.moveTo(x, r.bottom)
     ctx.lineTo(x, r.bottom + 4)
     ctx.stroke()
-    ctx.fillText(t === T_END ? `${t} s` : String(t), x, r.bottom + 8)
+    ctx.fillText(String(t), x, r.bottom + 8)
   }
+  ctx.textAlign = 'left'
+  ctx.fillText('t [s]', r.right + 12, r.bottom + 8)
   ctx.strokeStyle = colors.line
   ctx.setLineDash([2, 4])
   for (const t of KF_TIMES) {
@@ -224,5 +226,5 @@ export function drawKeyframes({ ctx, width, height, colors }, { model, selected,
   entry(colors.ink, 2.5, [], '自然3次スプライン')
   ctx.fillStyle = colors.ink
   ctx.textAlign = 'left'
-  ctx.fillText('値', 6, y)
+  ctx.fillText('x [m]', 6, y)
 }

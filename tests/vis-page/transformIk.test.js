@@ -5,6 +5,7 @@ import assert from 'node:assert/strict'
 import {
   L1,
   L2,
+  IK_RANGE,
   MAX_ITER,
   TOL,
   analyticPose,
@@ -86,15 +87,20 @@ test('restartIterations: 回数を 0 に戻す。いまの姿勢がもう目標�
   assert.equal(s.status, 'converged')
 })
 
-test('画面と世界の座標: pixelToWorld は腕の根元(canvas の中心)を原点にして、y を上向きにする。clampTarget は canvas の中に収める', () => {
+test('画面と世界の座標: 根元(原点)は軸の原点の位置で、y は上向き、1 m は u px。clampTarget は軸の範囲に収める', () => {
   const view = ikView(800, 600)
-  assert.deepEqual(pixelToWorld(view, 400, 300), [0, 0])
-  const [x, y] = pixelToWorld(view, 400 + view.u, 300 - view.u)
-  assert.ok(Math.abs(x - 1) < 1e-12 && Math.abs(y - 1) < 1e-12)
-  const [cx, cy] = clampTarget(view, 800, 600, [100, -100])
-  assert.ok(Math.abs(cx * view.u) <= 400 - 12 + 1e-9)
-  assert.ok(Math.abs(cy * view.u) <= 300 - 12 + 1e-9)
-  assert.deepEqual(clampTarget(view, 800, 600, [0.5, 0.5]), [0.5, 0.5])
+  // 世界の原点 → 画面 → 世界で戻る
+  const [x0, y0] = pixelToWorld(view, view.cx, view.cy)
+  assert.ok(Math.abs(x0) < 1e-12 && Math.abs(y0) < 1e-12)
+  const [x, y] = pixelToWorld(view, view.cx + view.u, view.cy - view.u)
+  assert.ok(Math.abs(x - 1) < 1e-12 && Math.abs(y - 1) < 1e-12) // 画面の上は +y
+  // 腕を伸ばしきった円(半径 L1 + L2)が、枠の中に収まる
+  const reach = L1 + L2
+  assert.ok(view.cy - reach * view.u >= view.view.frame.top - 1e-9)
+  assert.ok(view.cy + reach * view.u <= view.view.frame.bottom + 1e-9)
+  assert.ok(view.cx - reach * view.u >= view.view.frame.left - 1e-9)
+  assert.deepEqual(clampTarget([100, -100]), [IK_RANGE.x[1], IK_RANGE.y[0]])
+  assert.deepEqual(clampTarget([0.5, 0.5]), [0.5, 0.5])
 })
 
 test('readoutText(解析解): 届く範囲の中と外で文が変わる。ヤコビアンでは反復の回数と状態が出る', () => {
