@@ -156,3 +156,53 @@ export function drawAxes(ctx, view, opts = {}) {
   }
   ctx.restore()
 }
+
+// 矢印(世界の座標で始点と終点)。力・速度・重力などの向きを見せる。色は colors のトークンから渡す
+export function drawArrow(ctx, view, x0, y0, x1, y1, { color, width = 2, head = 9 } = {}) {
+  const ax = view.sx(x0)
+  const ay = view.sy(y0)
+  const bx = view.sx(x1)
+  const by = view.sy(y1)
+  const len = Math.hypot(bx - ax, by - ay)
+  if (len < 1) return
+  const ux = (bx - ax) / len
+  const uy = (by - ay) / len
+  const h = Math.min(head, len * 0.5)
+  ctx.save()
+  ctx.strokeStyle = color
+  ctx.fillStyle = color
+  ctx.lineWidth = width
+  ctx.beginPath()
+  ctx.moveTo(ax, ay)
+  ctx.lineTo(bx - ux * h * 0.8, by - uy * h * 0.8)
+  ctx.stroke()
+  ctx.beginPath()
+  ctx.moveTo(bx, by)
+  ctx.lineTo(bx - ux * h - uy * h * 0.5, by - uy * h + ux * h * 0.5)
+  ctx.lineTo(bx - ux * h + uy * h * 0.5, by - uy * h - ux * h * 0.5)
+  ctx.closePath()
+  ctx.fill()
+  ctx.restore()
+}
+
+// 重力の凡例:絵の右上の余白の内側に、下向きの矢印と「g = 9.8 m/s²」を描く(どのタブでも同じ見た目にする)。
+// g が 0 なら矢印を描かず「g = 0」だけ。lengthPx は g=9.8 のときの矢印の長さ(画面の px)
+export function drawGravityLegend(ctx, view, g, { colors, lengthPx = 28, label = 'g' } = {}) {
+  const x = view.frame.right - 12
+  const y = view.frame.top + 8
+  ctx.save()
+  ctx.font = monoFont(11)
+  ctx.fillStyle = colors.ink
+  ctx.textAlign = 'right'
+  ctx.textBaseline = 'top'
+  const text = `${label} = ${g.toFixed(1)} m/s²`
+  ctx.fillText(text, x - 10, y)
+  if (g > 0) {
+    const L = lengthPx * Math.min(g / 9.8, 2)
+    const toWorld = (px) => px / view.scaleY
+    const wx = view.wx(x)
+    const wy0 = view.wy(y)
+    drawArrow(ctx, view, wx, wy0, wx, wy0 - toWorld(L), { color: colors.ink, width: 2, head: 7 })
+  }
+  ctx.restore()
+}
