@@ -101,7 +101,7 @@ export default function ClothSim() {
     }
     ctx.stroke()
     ctx.lineWidth = 2.5
-    ctx.strokeStyle = colors.accent
+    ctx.strokeStyle = colors.alpha('diff-delete', 1) // 伸びすぎの警告の色(地に 4.7:1 以上。accent は 1.6:1 で見えない)
     ctx.beginPath()
     for (let s = 0; s < segs.length; s++) {
       const { i, j, d } = segs[s]

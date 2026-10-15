@@ -182,8 +182,9 @@ export function ensureCache(cache, colors) {
     const c = [0, 1, 2].map((k) => Math.round(a[k] + (b[k] - a[k]) * t))
     return `rgb(${c[0]}, ${c[1]}, ${c[2]})`
   })
-  cache.gridLine = colors.alpha('muted', 0.45)
-  cache.cell = colors.alpha('accent', 0.35)
+  cache.gridLine = colors.alpha('muted', 0.8) // 地に 3:1 以上(0.45 だと 1.8:1)
+  cache.cell = colors.alpha('ink', 0.08) // 調べるセルの塗り。淡いので、輪郭(cellLine)で見せる
+  cache.cellLine = colors.muted // 地に 4.4:1 以上(以前の accent の塗りは 1.2:1 で、ほとんど見えなかった)
   return cache
 }
 
@@ -224,6 +225,9 @@ export function drawFluid(ctx, width, height, colors, s, opts, cache) {
       const y1 = Math.min(tank.height, (cy + 2) * h)
       ctx.fillStyle = pal.cell
       ctx.fillRect(x0 * scale, height - y1 * scale, (x1 - x0) * scale, (y1 - y0) * scale)
+      ctx.strokeStyle = pal.cellLine
+      ctx.lineWidth = 2
+      ctx.strokeRect(x0 * scale, height - y1 * scale, (x1 - x0) * scale, (y1 - y0) * scale)
     }
   }
 

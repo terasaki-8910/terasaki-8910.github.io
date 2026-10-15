@@ -38,6 +38,7 @@ function fakeCtx() {
     },
     set lineWidth(v) {},
     fillRect() {},
+    strokeRect() {},
     beginPath() {},
     moveTo() {},
     lineTo() {},
@@ -235,7 +236,7 @@ test('drawFluid: 色の段ごとにまとめて描き、粒子の数だけ円を
   s.stepMs = 0.05
   for (let f = 0; f < 20; f++) advanceSim(s, 1 / 60, CLOCK)
   const colors = fakeColors()
-  const cache = { colors: null, palette: [], gridLine: '', cell: '' }
+  const cache = { colors: null, palette: [], gridLine: '', cell: '', cellLine: '' }
   for (const colorMode of ['speed', 'density']) {
     const ctx = fakeCtx()
     drawFluid(ctx, 600, 300, colors, s, { colorMode, showGrid: false, rho0: P.rho0 }, cache)
@@ -256,7 +257,7 @@ test('drawFluid: 色の段ごとにまとめて描き、粒子の数だけ円を
 test('drawFluid: グリッドの表示では、ポインタの近傍(h 以内の粒子)に輪をかけ、かき混ぜ中は半径の円を描く', () => {
   const s = makeSim('wide', P)
   const colors = fakeColors()
-  const cache = { colors: null, palette: [], gridLine: '', cell: '' }
+  const cache = { colors: null, palette: [], gridLine: '', cell: '', cellLine: '' }
   const opts = { colorMode: 'speed', showGrid: true, rho0: P.rho0 }
   const plain = fakeCtx()
   drawFluid(plain, 600, 300, colors, s, opts, cache)

@@ -39,7 +39,7 @@ function draw(params) {
 }
 
 const FRONT = 'ink' // 表の辺の色
-const BACK = 'ink@0.3' // 背面の辺の色
+const BACK = 'ink@0.5' // 背面の辺の色
 const FACING = { rx: 0, ry: 0, rz: 0, tx: 0, ty: 0, tz: 0 } // 回転なし・原点。カメラは +z 側から -z を見る
 
 test('正面から見る: 表の面は +z の 1 面だけで、表の辺 4 本・背面の辺 8 本。軸は 3 本', () => {

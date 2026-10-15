@@ -104,8 +104,8 @@ export function drawCube({ ctx, width, height, colors }, p) {
   ctx.lineCap = 'round'
   // 奥から: 背面の辺(薄く)→ 表の辺。視錐台の外に出た辺は破線にする
   for (const e of edges.filter((e) => e.back)) {
-    if (e.outside) line(e, colors.alpha('muted', 0.6), 1, [3, 4])
-    else line(e, colors.alpha('ink', 0.3), 1)
+    if (e.outside) line(e, colors.alpha('muted', 0.85), 1, [3, 4])
+    else line(e, colors.alpha('ink', 0.5), 1) // 背面は細く薄く。地に 3:1 以上(0.3 だと 1.9:1)
   }
   for (const e of edges.filter((e) => !e.back)) {
     if (e.outside) line(e, colors.muted, 1.5, [5, 4])

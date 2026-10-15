@@ -139,8 +139,8 @@ export function drawIk({ ctx, width, height, colors }, s, { solver, elbowUp }) {
 
   // 解析解では、もう一方の肘の解を薄く出す
   if (solver === 'analytic') {
-    const other = arm(analyticPose(s.target, !elbowUp), colors.alpha('ink', 0.22), 3)
-    ctx.fillStyle = colors.alpha('ink', 0.22)
+    const other = arm(analyticPose(s.target, !elbowUp), colors.alpha('ink', 0.5), 3)
+    ctx.fillStyle = colors.alpha('ink', 0.5)
     ctx.beginPath()
     ctx.arc(other.ex, other.ey, 4, 0, Math.PI * 2)
     ctx.fill()

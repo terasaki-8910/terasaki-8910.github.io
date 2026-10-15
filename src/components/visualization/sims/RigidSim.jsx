@@ -60,7 +60,7 @@ export default function RigidSim() {
 
     if (broad) {
       // AABB
-      ctx.strokeStyle = colors.alpha('ink', 0.4)
+      ctx.strokeStyle = colors.alpha('ink', 0.6) // 地に 3:1 以上(0.4 だと 2.4:1)
       ctx.lineWidth = 1
       ctx.beginPath()
       for (let i = 0; i < world.n; i++) {
