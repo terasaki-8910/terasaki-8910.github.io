@@ -535,6 +535,9 @@
     top: 5.5rem;
     align-self: start;
   }
+  .vis-b__sim[data-fits='false'] {
+    position: static; /* 画面より高いときは sticky にしない(LayoutB の StickySim) */
+  }
   .vis-b__sim .vis-sim {
     margin-top: 0;
   }
