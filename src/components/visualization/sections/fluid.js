@@ -29,8 +29,11 @@ export default {
       formulas: [
         {
           id: 'approximation',
-          caption: '粒子の値を重みをつけて足す（1 次元）',
-          tex: String.raw`A(x) \approx \sum_j \frac{m_j}{\rho_j}\,A_j\,W\bigl(\lvert x-x_j\rvert,\,h\bigr)`,
+          caption: '粒子の値を重みをつけて足す（1 次元）と、核の条件（重みの面積が 1）',
+          tex: String.raw`\begin{aligned}
+A(x) &\approx \sum_j \frac{m_j}{\rho_j}\,A_j\,W\bigl(\lvert x-x_j\rvert,\,h\bigr) \\
+\int W(\lvert x\rvert,\,h)\,dx &= 1,\qquad W(r,\,h) = 0\quad (r \ge h)
+\end{aligned}`,
           symbols: [
             { tex: 'A,\\ A_j', meaning: '場の量（温度や速度など）と、粒子 j が持つ値', unit: '' },
             { tex: 'x,\\ x_j', meaning: '値を求める位置と、粒子 j の位置', unit: '\\mathrm{m}' },
@@ -41,22 +44,13 @@ export default {
           ],
         },
         {
-          id: 'kernel-condition',
-          caption: '核の条件（重みの面積が 1）',
-          tex: String.raw`\int W(\lvert x\rvert,\,h)\,dx = 1,\qquad W(r,\,h) = 0\quad (r \ge h)`,
-        },
-        {
           id: 'cubic-spline',
-          caption: '3 次スプライン核の例（1 次元。2 次元では係数が 10/(7πs²)、s = h/2 になる）',
+          caption: '3 次スプライン核の例（q は距離を h/2 で割った値。2 次元では係数が 10/(7πs²)、s = h/2 になる）',
           tex: String.raw`W(r,\,h) = \frac{4}{3h}\begin{cases}
 1 - \tfrac{3}{2}q^{2} + \tfrac{3}{4}q^{3} & (0 \le q < 1) \\
 \tfrac{1}{4}\,(2-q)^{3} & (1 \le q < 2) \\
 0 & (q \ge 2)
 \end{cases},\qquad q = \frac{2r}{h}`,
-          symbols: [
-            { tex: 'r', meaning: '粒子までの距離', unit: '\\mathrm{m}' },
-            { tex: 'q', meaning: '距離を h/2 で割った値（q = 2 で核が 0 になる）', unit: '' },
-          ],
         },
       ],
       snippets: ['sph-cubicSpline', 'sph-sphInterpolate'],
@@ -69,19 +63,17 @@ export default {
       formulas: [
         {
           id: 'density',
-          caption: '密度（和）',
-          tex: String.raw`\rho_i = \sum_j m\,W_{\mathrm{poly6}}\bigl(\lvert\mathbf{x}_i-\mathbf{x}_j\rvert,\,h\bigr)`,
+          caption: '密度（和）と、密度用の核（2 次元用の係数。3 次元の定数はそのままでは使えない）',
+          tex: String.raw`\begin{aligned}
+\rho_i &= \sum_j m\,W_{\mathrm{poly6}}\bigl(\lvert\mathbf{x}_i-\mathbf{x}_j\rvert,\,h\bigr) \\
+W_{\mathrm{poly6}}(r,\,h) &= \frac{4}{\pi h^{8}}\,(h^{2}-r^{2})^{3}\quad (r < h)
+\end{aligned}`,
           symbols: [
             { tex: '\\rho_i', meaning: '粒子 i の密度（j は i 自身も含む）', unit: '\\mathrm{kg/m^2}' },
             { tex: 'm', meaning: '粒子 1 個の質量（全部同じ）', unit: '\\mathrm{kg}' },
             { tex: 'W_{\\mathrm{poly6}}', meaning: '密度用の核', unit: '\\mathrm{m^{-2}}' },
+            { tex: 'r', meaning: '粒子 i から粒子 j までの距離（r ≥ h では 0）', unit: '\\mathrm{m}' },
           ],
-        },
-        {
-          id: 'poly6',
-          caption: '密度用の核（2 次元用の係数。3 次元の定数はそのままでは使えない）',
-          tex: String.raw`W_{\mathrm{poly6}}(r,\,h) = \frac{4}{\pi h^{8}}\,(h^{2}-r^{2})^{3}\quad (r < h)`,
-          symbols: [{ tex: 'r', meaning: '粒子 i から粒子 j までの距離（r ≥ h では 0）', unit: '\\mathrm{m}' }],
         },
       ],
       snippets: ['sph-poly6', 'sph-computeDensity'],
@@ -119,18 +111,16 @@ export default {
         },
         {
           id: 'pressure-force',
-          caption: '圧力の力（対称な形）',
-          tex: String.raw`\mathbf{F}_i^{\mathrm{press}} = -\sum_j m^2\left(\frac{p_i}{\rho_i^{2}}+\frac{p_j}{\rho_j^{2}}\right)\nabla W_{\mathrm{spiky}}\bigl(\mathbf{x}_i-\mathbf{x}_j,\,h\bigr)`,
+          caption: '圧力の力（対称な形）と、圧力用の核の勾配（2 次元用の係数）',
+          tex: String.raw`\begin{aligned}
+\mathbf{F}_i^{\mathrm{press}} &= -\sum_j m^2\left(\frac{p_i}{\rho_i^{2}}+\frac{p_j}{\rho_j^{2}}\right)\nabla W_{\mathrm{spiky}}\bigl(\mathbf{x}_i-\mathbf{x}_j,\,h\bigr) \\
+\nabla W_{\mathrm{spiky}}(\mathbf{r},\,h) &= -\frac{30}{\pi h^{5}}\,(h-r)^{2}\,\frac{\mathbf{r}}{r}\quad (r < h)
+\end{aligned}`,
           symbols: [
             { tex: '\\mathbf{F}_i^{\\mathrm{press}}', meaning: '粒子 i が圧力から受ける力（組 (i, j) の力は逆向きで同じ大きさ）', unit: '\\mathrm{N}' },
             { tex: '\\nabla W_{\\mathrm{spiky}}', meaning: '圧力用の核の勾配（中心でも 0 にならない）', unit: '\\mathrm{m^{-3}}' },
+            { tex: '\\mathbf{r},\\ r', meaning: '粒子 i から見た粒子 j の相対位置 x_i − x_j と、その長さ', unit: '\\mathrm{m}' },
           ],
-        },
-        {
-          id: 'spiky',
-          caption: '圧力用の核の勾配（2 次元用の係数）',
-          tex: String.raw`\nabla W_{\mathrm{spiky}}(\mathbf{r},\,h) = -\frac{30}{\pi h^{5}}\,(h-r)^{2}\,\frac{\mathbf{r}}{r}\quad (r < h)`,
-          symbols: [{ tex: '\\mathbf{r},\\ r', meaning: '粒子 i から見た粒子 j の相対位置 x_i − x_j と、その長さ', unit: '\\mathrm{m}' }],
         },
       ],
       snippets: ['sph-spikyGrad', 'sph-computeForces'],
@@ -143,18 +133,16 @@ export default {
       formulas: [
         {
           id: 'viscosity-force',
-          caption: '粘性の力',
-          tex: String.raw`\mathbf{F}_i^{\mathrm{visc}} = \mu \sum_j m^2\,\frac{\mathbf{v}_j-\mathbf{v}_i}{\rho_i\,\rho_j}\,\nabla^{2} W_{\mathrm{visc}}\bigl(\lvert\mathbf{x}_i-\mathbf{x}_j\rvert,\,h\bigr)`,
+          caption: '粘性の力と、粘性用の核のラプラシアン（2 次元用の係数）',
+          tex: String.raw`\begin{aligned}
+\mathbf{F}_i^{\mathrm{visc}} &= \mu \sum_j m^2\,\frac{\mathbf{v}_j-\mathbf{v}_i}{\rho_i\,\rho_j}\,\nabla^{2} W_{\mathrm{visc}}\bigl(\lvert\mathbf{x}_i-\mathbf{x}_j\rvert,\,h\bigr) \\
+\nabla^{2} W_{\mathrm{visc}}(r,\,h) &= \frac{40}{\pi h^{5}}\,(h-r)\quad (r < h)
+\end{aligned}`,
           symbols: [
             { tex: '\\mu', meaning: '粘性係数', unit: '\\mathrm{kg/s}' },
             { tex: '\\mathbf{v}_i,\\ \\mathbf{v}_j', meaning: '粒子の速度', unit: '\\mathrm{m/s}' },
             { tex: '\\nabla^{2} W_{\\mathrm{visc}}', meaning: '粘性用の核のラプラシアン', unit: '\\mathrm{m^{-4}}' },
           ],
-        },
-        {
-          id: 'visc-kernel',
-          caption: '粘性用の核のラプラシアン（2 次元用の係数）',
-          tex: String.raw`\nabla^{2} W_{\mathrm{visc}}(r,\,h) = \frac{40}{\pi h^{5}}\,(h-r)\quad (r < h)`,
         },
       ],
       snippets: ['sph-viscLaplacian', 'sph-computeForces'],

@@ -27,16 +27,26 @@ export function unit(v, lo, hi) {
   return t <= 0 ? 0 : t >= 1 ? 1 : t
 }
 
-// canvas(width × height)を、絵(main)とグラフ(side)に分ける。幅が sideMin 未満なら side は null(絵だけ)。
-// side の幅は全体の frac。2 つの領域の間は gap。領域は { left, top, width, height }
-export function splitPanels(width, height, { sideMin = 520, frac = 0.38, gap = 8 } = {}) {
-  if (width < sideMin) return { main: { left: 0, top: 0, width, height }, side: null }
-  const sideW = Math.round(width * frac)
-  const mainW = width - sideW - gap
-  return {
-    main: { left: 0, top: 0, width: mainW, height },
-    side: { left: mainW + gap, top: 0, width: sideW, height },
+// canvas(width × height)を、絵(main)とグラフ(side)に分ける。幅が sideMin 以上なら左右に(side の幅は全体の frac、
+// 間は gap)。足りないときは、stack なら上下に(main が高さの mainFrac)、そうでなければ side は null(絵だけ)。
+// 領域は { left, top, width, height }
+export function splitPanels(width, height, { sideMin = 520, frac = 0.38, gap = 8, stack = false, mainFrac = 0.62 } = {}) {
+  if (width >= sideMin) {
+    const sideW = Math.round(width * frac)
+    const mainW = width - sideW - gap
+    return {
+      main: { left: 0, top: 0, width: mainW, height },
+      side: { left: mainW + gap, top: 0, width: sideW, height },
+    }
   }
+  if (stack) {
+    const mainH = Math.round(height * mainFrac)
+    return {
+      main: { left: 0, top: 0, width, height: mainH },
+      side: { left: 0, top: mainH + gap, width, height: height - mainH - gap },
+    }
+  }
+  return { main: { left: 0, top: 0, width, height }, side: null }
 }
 
 // 領域 rect の中のグラフの view(世界の範囲 xRange × yRange を余白の内側いっぱいに伸ばす)
@@ -46,7 +56,7 @@ export function seriesView(rect, xRange, yRange, margin) {
     height: rect.height,
     xRange,
     yRange,
-    margin: { left: 44, right: 10, top: 24, bottom: 36, ...margin },
+    margin: { left: 44, right: 18, top: 24, bottom: 36, ...margin },
     equal: false,
   })
 }

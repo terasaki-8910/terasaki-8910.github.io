@@ -23,8 +23,10 @@ const PER_V = 0.05 / 0.3 // 速度の矢印の長さ [m/(m/s)]。0.3 m/s が 0.0
 const PER_F = 0.012 // 力の矢印の長さ [m/N]
 const WINDOW = 1.5 // グラフが見せる時間 [s]
 const MAX_POINTS = 900
+const STACK = { stack: true } // 幅が足りないときは、グラフを絵の下に置く
+const HEIGHT = { pc: [280, 360], phone: [400, 480] } // スマホは上下に並べるので高くする
 const viewOf = (w, h) => {
-  const { main } = splitPanels(w, h)
+  const { main } = splitPanels(w, h, STACK)
   return viewFor(WORLD5, main.width, main.height)
 }
 
@@ -53,7 +55,7 @@ export default function FluidStep5() {
   const draw = useCallback(({ ctx, width, height, colors }) => {
     const patch = patchRef.current
     const { state } = patch
-    const { main, side } = splitPanels(width, height)
+    const { main, side } = splitPanels(width, height, STACK)
     const view = viewFor(WORLD5, main.width, main.height)
     drawBoard(ctx, view, colors, { width, height })
     const { pos, vel } = state
@@ -76,7 +78,7 @@ export default function FluidStep5() {
       ctx.fillRect(side.left, side.top, side.width, side.height)
       drawSeries(ctx, side, colors, {
         xRange: [t0, t1],
-        yRange: [-0.4, 0.4],
+        yRange: [-0.5, 0.5],
         xLabel: 't [s]',
         yLabel: '平均の vx [m/s]',
         curves: [
@@ -147,6 +149,7 @@ export default function FluidStep5() {
     <SimShell
       label="粘性の力のシミュレーション"
       aspect={1.6}
+      height={HEIGHT}
       stage={
         <SimCanvas
           ref={canvasRef}

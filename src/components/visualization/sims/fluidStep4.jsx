@@ -6,27 +6,28 @@ import ParamSlider from '../ParamSlider'
 import { SimToolbar, PlayPauseButton, ResetButton } from '../SimButtons'
 import useSimLoop from '../useSimLoop'
 import { rampColor, unit, fmt } from './fluidKit.js'
-import { createPatch, layoutLattice, settle, advancePatch, closestTo, pairForce, forceSum, BASE } from './fluidPatch.js'
-import { WORLD, viewFor, drawBoard, drawParticles, drawProbe, drawVector, drawScaleArrow } from './fluidPatchDraw.js'
+import { createPatch, layoutLattice, settle, advancePatch, strongestPartner, pairForce, forceSum, BASE } from './fluidPatch.js'
+import { WORLD_WIDE, viewFor, drawBoard, drawParticles, drawProbe, drawVector, drawScaleArrow } from './fluidPatchDraw.js'
 import useParticleBoard from './fluidBoard.js'
 
 // 段階 4「圧力の力」: 少数の粒子を詰めた塊。圧力が高い粒子は、近くの粒子から押されて離れていく。
-// 矢印は粒子が受ける力の合計(圧力だけ。粘性はこの段階では 0)。選んだ粒子とそのいちばん近い粒子には、
+// 矢印は粒子が受ける力の合計(圧力だけ。粘性はこの段階では 0)。選んだ粒子と、それを一番強く押している粒子には、
 // その 2 つだけの組の力も描く(向きが逆で大きさが同じ)。「再生」で手を離すと、塊が広がって圧力が下がり、力が消えていく。
 // 計算は fluidPatch.js(utils/vis/sph.js の computeForces)。
 const COLS = 5
 const ROWS = 4
-const P_FULL = 20000
-const PER_N = 0.06 / 500 // 矢印の長さ [m/N]。500 N が 0.06 m(h より少し長い)
-const SPACING = 0.014
-const viewOf = (w, h) => viewFor(WORLD, w, h)
+const P_FULL = 30000
+const PER_N = 0.06 / 300 // 矢印の長さ [m/N]。300 N が 0.06 m(h より少し長い)
+const SPACING = 0.016
+const viewOf = (w, h) => viewFor(WORLD_WIDE, w, h)
 
 export default function FluidStep4() {
   const [spacing, setSpacing] = useState(SPACING)
   const [k, setK] = useState(BASE.k)
   const patchRef = useRef(null)
   if (patchRef.current === null) {
-    patchRef.current = createPatch({ cols: COLS, rows: ROWS, spacing: SPACING, ...WORLD, params: { mu: 0 } })
+    patchRef.current = createPatch({ cols: COLS, rows: ROWS, spacing: SPACING, ...WORLD_WIDE, params: { mu: 0 } })
+    patchRef.current.selected = 2 // 下の辺の真ん中の粒子(外側の粒子は、外向きに押される)
   }
   const legend = useRef(null)
   const live = useRef(null)
@@ -44,13 +45,14 @@ export default function FluidStep4() {
     for (let i = 0; i < patch.n; i++) {
       drawVector(ctx, view, colors, pos[2 * i], pos[2 * i + 1], force[2 * i], force[2 * i + 1], PER_N, { color: colors.ink, width: 1.75 })
     }
-    // 選んだ粒子 i と、いちばん近い粒子 j の、その 2 つだけの組の力
+    // 選んだ粒子 i と、i を一番強く押している粒子 j の、その 2 つだけの組の力
     const i = patch.selected
-    const j = closestTo(patch, i)
+    const partner = strongestPartner(patch, i, 'pressure')
+    const j = partner ? partner.j : -1
     const amber = colors.alpha('lane-3', 1)
     let fij = [0, 0]
     if (j >= 0) {
-      fij = pairForce(patch, i, j, 'pressure')
+      fij = partner.f
       const fji = pairForce(patch, j, i, 'pressure')
       drawVector(ctx, view, colors, pos[2 * i], pos[2 * i + 1], fij[0], fij[1], PER_N, { color: amber, width: 3, head: 10 })
       drawVector(ctx, view, colors, pos[2 * j], pos[2 * j + 1], fji[0], fji[1], PER_N, { color: amber, width: 3, head: 10 })
@@ -92,7 +94,8 @@ export default function FluidStep4() {
   }, [k, redraw])
 
   function relayout(nextSpacing) {
-    layoutLattice(patchRef.current, nextSpacing)
+    const patch = patchRef.current
+    layoutLattice(patch, nextSpacing)
     redraw()
   }
   useEffect(() => {
@@ -108,7 +111,7 @@ export default function FluidStep4() {
   const legendItems = [
     { key: 't', symbol: 't', label: '時刻', value: '', minChars: 7 },
     { key: 'F', symbol: '\\mathbf{F}_i', label: '選んだ粒子の合力の大きさ', value: '', minChars: 7 },
-    { key: 'pair', label: '最も近い粒子との組の力', value: '', minChars: 14 },
+    { key: 'pair', label: '一番強く押す粒子との組の力', value: '', minChars: 14 },
     { key: 'sum', label: '全粒子の力の合計', value: '', minChars: 8 },
     { label: '矢印', value: '黒＝合力、橙＝選んだ組の力' },
   ]
@@ -138,7 +141,7 @@ export default function FluidStep4() {
             <PlayPauseButton running={loop.running} onToggle={loop.toggle} />
             <ResetButton onClick={reset} />
           </SimToolbar>
-          <ParamSlider symbol="s" label="粒子の間隔" unit="m" value={spacing} min={0.01} max={0.024} step={0.001} onChange={setSpacing} format={(v) => v.toFixed(3)} />
+          <ParamSlider symbol="s" label="粒子の間隔" unit="m" value={spacing} min={0.012} max={0.019} step={0.001} onChange={setSpacing} format={(v) => v.toFixed(3)} />
           <ParamSlider symbol="k" label="圧力の係数" unit="m²/s²" value={k} min={40} max={150} step={5} onChange={setK} />
         </>
       }

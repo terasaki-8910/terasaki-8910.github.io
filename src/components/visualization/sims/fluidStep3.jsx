@@ -4,36 +4,38 @@ import SimCanvas from '../SimCanvas'
 import SimLegend from '../SimLegend'
 import ParamSlider from '../ParamSlider'
 import { SimToolbar, ResetButton } from '../SimButtons'
-import { rampColor, unit, fmt, splitPanels, drawSeries, drawParticle } from './fluidKit.js'
+import { rampColor, unit, fmt, splitPanels, drawSeries } from './fluidKit.js'
 import { createPatch, layoutLattice, settle, densityParts, BASE } from './fluidPatch.js'
 import { WORLD, viewFor, drawBoard, drawParticles, drawProbe } from './fluidPatchDraw.js'
 import useParticleBoard from './fluidBoard.js'
-import { SP } from './fluidKit.js'
 
 // 段階 3「圧力（状態方程式）」: 粒子を詰める(間隔のスライダーか、粒子をつかんで近づける)と密度が上がり、
 // 密度が休止密度 ρ0 を超えたぶんに比例して圧力 p = k(ρ − ρ0) が正になる(色は圧力)。広い画面では、右に p–ρ のグラフ。
 // 計算は fluidPatch.js(utils/vis/sph.js の computePressure)。
-const P_FULL = 20000 // 色が最後の段になる圧力 [N/m]
+const P_FULL = 30000 // 色が最後の段になる圧力 [N/m]
+const SPACING = 0.018 // 初めの粒子の間隔 [m](休止の 0.02 より少し詰めてあり、内側ほど圧力が高い)
 const RHO_RANGE = [400, 2000]
 const P_RANGE = [0, 120] // kN/m
+const STACK = { stack: true } // 幅が足りないときは、グラフを絵の下に置く
+const HEIGHT = { pc: [280, 360], phone: [400, 480] } // スマホは上下に並べるので高くする
 const viewOf = (w, h) => {
-  const { main } = splitPanels(w, h)
+  const { main } = splitPanels(w, h, STACK)
   return viewFor(WORLD, main.width, main.height)
 }
 
 export default function FluidStep3() {
-  const [spacing, setSpacing] = useState(SP)
+  const [spacing, setSpacing] = useState(SPACING)
   const [k, setK] = useState(BASE.k)
   const [rho0, setRho0] = useState(Math.round(BASE.rho0))
   const patchRef = useRef(null)
-  if (patchRef.current === null) patchRef.current = createPatch({ cols: 12, rows: 9, ...WORLD })
+  if (patchRef.current === null) patchRef.current = createPatch({ cols: 12, rows: 9, ...WORLD, spacing: SPACING })
   const legend = useRef(null)
   const live = useRef(null)
 
   const draw = useCallback(({ ctx, width, height, colors }) => {
     const patch = patchRef.current
     const { state, params } = patch
-    const { main, side } = splitPanels(width, height)
+    const { main, side } = splitPanels(width, height, STACK)
     const view = viewFor(WORLD, main.width, main.height)
     drawBoard(ctx, view, colors, { width, height })
     drawParticles(ctx, view, colors, patch, (i) => rampColor(colors, unit(state.pressure[i], 0, P_FULL)))
@@ -94,12 +96,12 @@ export default function FluidStep3() {
   }, [spacing, redraw])
 
   function reset() {
-    setSpacing(SP)
+    setSpacing(SPACING)
     setK(BASE.k)
     setRho0(Math.round(BASE.rho0))
     const patch = patchRef.current
     patch.selected = Math.floor(patch.rows / 2) * patch.cols + Math.floor(patch.cols / 2)
-    layoutLattice(patch, SP)
+    layoutLattice(patch, SPACING)
     redraw()
   }
 
@@ -108,13 +110,14 @@ export default function FluidStep3() {
     { key: 'rho', symbol: '\\rho', label: '密度（kg/m²）', value: '', minChars: 5 },
     { key: 'p', symbol: 'p', label: '圧力', value: '', minChars: 10 },
     { key: 'positive', label: '圧力が正の粒子', value: '', minChars: 9 },
-    { label: '粒子の色（圧力）', value: '0 → 20 kN/m 以上', swatch: 'linear-gradient(to right, var(--color-ink), var(--lane-1))' },
+    { label: '粒子の色（圧力）', value: '0 → 30 kN/m 以上', swatch: 'linear-gradient(to right, var(--color-ink), var(--lane-1))' },
   ]
 
   return (
     <SimShell
       label="圧力のシミュレーション"
       aspect={1.3}
+      height={HEIGHT}
       stage={
         <SimCanvas
           ref={canvasRef}

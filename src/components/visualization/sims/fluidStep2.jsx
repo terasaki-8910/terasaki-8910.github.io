@@ -6,7 +6,7 @@ import ParamSlider from '../ParamSlider'
 import { SimToolbar, ResetButton } from '../SimButtons'
 import { rampColor, unit, fmt } from './fluidKit.js'
 import { createPatch, layoutLattice, settle, setSmoothing, densityParts } from './fluidPatch.js'
-import { WORLD, viewFor, drawBoard, drawParticles, drawProbe } from './fluidPatchDraw.js'
+import { WORLD_WIDE, viewFor, drawBoard, drawParticles, drawProbe } from './fluidPatchDraw.js'
 import useParticleBoard from './fluidBoard.js'
 import { poly6 } from '../../../utils/vis/sph.js'
 
@@ -16,12 +16,12 @@ import { poly6 } from '../../../utils/vis/sph.js'
 const H_MAX = 0.06
 const DENSITY_LOW = 0.6 // ρ/ρ0 がこれ以下で ink(全体のシミュレーションと同じ)
 const DENSITY_HIGH = 1.1 // これ以上で FAST_COLOR
-const viewOf = (w, h) => viewFor(WORLD, w, h)
+const viewOf = (w, h) => viewFor(WORLD_WIDE, w, h)
 
 export default function FluidStep2() {
   const [h, setH] = useState(0.05)
   const patchRef = useRef(null)
-  if (patchRef.current === null) patchRef.current = createPatch({ cols: 12, rows: 9, ...WORLD, cell: H_MAX })
+  if (patchRef.current === null) patchRef.current = createPatch({ cols: 12, rows: 9, ...WORLD_WIDE, cell: H_MAX })
   const hRef = useRef(h)
   hRef.current = h
   const legend = useRef(null)

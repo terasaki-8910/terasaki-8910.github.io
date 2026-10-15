@@ -23,8 +23,10 @@ const ROUGH_SPEED = 4 // 最大の速さがこれを超えたら「荒れてい�
 const RECENT = 0.3 // 荒れの判定に使う直近の時間 [s]
 const WINDOW = 1.5
 const MAX_POINTS = 900
+const STACK = { stack: true } // 幅が足りないときは、グラフを絵の下に置く
+const HEIGHT = { pc: [280, 360], phone: [400, 480] } // スマホは上下に並べるので高くする
 const viewOf = (w, h) => {
-  const { main } = splitPanels(w, h)
+  const { main } = splitPanels(w, h, STACK)
   return viewFor(WORLD7, main.width, main.height)
 }
 
@@ -60,7 +62,7 @@ export default function FluidStep7() {
   const draw = useCallback(({ ctx, width, height, colors }) => {
     const patch = patchRef.current
     const { state, params } = patch
-    const { main, side } = splitPanels(width, height)
+    const { main, side } = splitPanels(width, height, STACK)
     const view = viewFor(WORLD7, main.width, main.height)
     drawBoard(ctx, view, colors, { width, height })
     const { vel } = state
@@ -155,6 +157,7 @@ export default function FluidStep7() {
     <SimShell
       label="時間の進め方のシミュレーション"
       aspect={1.6}
+      height={HEIGHT}
       stage={
         <SimCanvas
           ref={canvasRef}

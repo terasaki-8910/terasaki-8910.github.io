@@ -6,18 +6,18 @@ import ParamSlider from '../ParamSlider'
 import { SimToolbar, ResetButton } from '../SimButtons'
 import { fmt, drawParticle } from './fluidKit.js'
 import { createPatch, settle, scatter, setCell, neighborsOf, BASE } from './fluidPatch.js'
-import { WORLD, viewFor, drawBoard, drawProbe, radiusPx } from './fluidPatchDraw.js'
+import { WORLD_WIDE, viewFor, drawBoard, drawProbe, radiusPx } from './fluidPatchDraw.js'
 import useParticleBoard from './fluidBoard.js'
 
 // 段階 6「近傍探索（均一グリッド）」: 領域を 1 辺 h のセルに区切り、粒子をセルに振り分ける。粒子を 1 つ選ぶと、
 // その粒子のセルと隣の 8 セル(あわせて 9 セル)だけを調べる。調べる候補(青緑)のうち、半径 h の中にいるもの(橙)が近い粒子。
 // 全部の組を調べる総当たりに比べて、調べる組の数がどれだけ減るかを数で見せる。
 // 計算は fluidPatch.js(utils/vis/sph.js の UniformGrid・findPairs・neighborsAt)。
-const viewOf = (w, h) => viewFor(WORLD, w, h)
-const DEFAULT_N = 150
+const viewOf = (w, h) => viewFor(WORLD_WIDE, w, h)
+const DEFAULT_N = 200
 
 function makePatch(n, cellFactor) {
-  const patch = createPatch({ cols: n, rows: 1, ...WORLD })
+  const patch = createPatch({ cols: n, rows: 1, ...WORLD_WIDE })
   setCell(patch, cellFactor * patch.params.h)
   scatter(patch)
   return patch
@@ -154,7 +154,7 @@ export default function FluidStep6() {
           <SimToolbar>
             <ResetButton onClick={scatterAgain}>ばらまき直す</ResetButton>
           </SimToolbar>
-          <ParamSlider symbol="N" label="粒子の数" unit="個" value={n} min={40} max={300} step={10} onChange={setN} />
+          <ParamSlider symbol="N" label="粒子の数" unit="個" value={n} min={40} max={400} step={10} onChange={setN} />
           <ParamSlider symbol="c/h" label="セルの 1 辺 ÷ h" value={cellFactor} min={1} max={3} step={0.5} onChange={setCellFactor} format={(v) => v.toFixed(1)} />
         </>
       }

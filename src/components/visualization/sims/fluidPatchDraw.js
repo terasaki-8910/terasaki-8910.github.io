@@ -5,7 +5,8 @@ import { makeView, drawAxes, drawArrow } from '../axes.js'
 import { drawParticle, drawNote, SP } from './fluidKit.js'
 import { neighborsOf } from './fluidPatch.js'
 
-export const WORLD = { width: 0.32, height: 0.24 } // 小さなシミュレーションの領域 [m]
+export const WORLD = { width: 0.32, height: 0.24 } // 小さなシミュレーションの領域 [m](グラフを横に並べる段階 3)
+export const WORLD_WIDE = { width: 0.44, height: 0.24 } // グラフがない段階(2・4・6)。PC の幅 800px・高さ 360px の絵に近い縦横比
 export const MARGIN = { left: 40, right: 12, top: 24, bottom: 38 }
 const TAU = Math.PI * 2
 

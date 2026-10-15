@@ -13,6 +13,7 @@ import {
   nearestParticle,
   neighborsOf,
   closestTo,
+  strongestPartner,
   densityParts,
   pairForce,
   summedPairForce,
@@ -104,6 +105,12 @@ test('段階 4 圧力の力: 組 (i, j) の力は逆向きで同じ大きさ。�
   assert.ok(Math.abs(fij[0] + fji[0]) < 1e-9 && Math.abs(fij[1] + fji[1]) < 1e-9)
   const [sx, sy] = forceSum(patch)
   assert.ok(Math.hypot(sx, sy) < 1e-6)
+  // 一番強く押している粒子 j*: その組の力は、近くのどの粒子との組の力より大きい
+  const best = strongestPartner(patch, i, 'pressure')
+  const count = neighborsOf(patch, i)
+  for (let q = 0; q < count; q++) {
+    assert.ok(Math.hypot(...pairForce(patch, i, patch.nbr[q], 'pressure')) <= Math.hypot(...best.f) + 1e-9)
+  }
   // 組の力の和 = 合力(sphStep が出した力と同じ)
   const total = summedPairForce(patch, i, 'pressure')
   assert.ok(Math.abs(total[0] - patch.state.force[2 * i]) < 1e-6 && Math.abs(total[1] - patch.state.force[2 * i + 1]) < 1e-6)

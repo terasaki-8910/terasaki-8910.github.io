@@ -158,6 +158,23 @@ export function pairForce(patch, i, j, only) {
   return [mini.force[0], mini.force[1]]
 }
 
+// 粒子 i を、近くの粒子のうち一番強く押している(組の力が最大の)粒子 j と、その力(i が j から受ける力)。近くに粒子がなければ null
+export function strongestPartner(patch, i, only) {
+  const count = neighborsOf(patch, i)
+  let best = null
+  let bestMag = -1
+  for (let q = 0; q < count; q++) {
+    const j = patch.nbr[q]
+    const f = pairForce(patch, i, j, only)
+    const mag = Math.hypot(f[0], f[1])
+    if (mag > bestMag) {
+      bestMag = mag
+      best = { j, f }
+    }
+  }
+  return best
+}
+
 // 粒子 i が近くの全粒子から受ける力の合計(only は pairForce と同じ)。settle か sphStep のあとに呼ぶ
 export function summedPairForce(patch, i, only) {
   const count = neighborsOf(patch, i)
