@@ -32,6 +32,8 @@ const STATS_INTERVAL = 0.2 // 数値の表示を更新する間隔 [s]
 const GRAB_RADIUS_PX = 22 // 質点をつかめる範囲(タッチの的 44 px)
 const STRETCH_HIGHLIGHT = 0.1 // 自然長より 10 % 以上伸びた辺は色を変える
 
+const WIND_ARROW_Y = [2.3, 1.7, 1.1] // 風の矢印を描く高さ [m]
+
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v))
 
 export default function ClothSim() {
@@ -73,7 +75,8 @@ export default function ClothSim() {
       ctx.strokeStyle = colors.muted
       ctx.lineWidth = 1.5
       ctx.beginPath()
-      for (const y of [2.3, 1.7, 1.1]) {
+      for (let a = 0; a < WIND_ARROW_Y.length; a++) {
+        const y = WIND_ARROW_Y[a]
         const ay = height - y * scale
         ctx.moveTo(8, ay)
         ctx.lineTo(8 + len, ay)
