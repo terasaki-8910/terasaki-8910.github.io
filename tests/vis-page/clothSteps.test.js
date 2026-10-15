@@ -12,6 +12,7 @@ import {
   createSpring1d,
   criticalDamping,
   decayRate,
+  envelopeAmplitude,
   explicitEnergyFactor,
   extensionOf,
   forceOnMass,
@@ -50,13 +51,17 @@ import {
   moveGrab,
   nodeAt,
   nodeForces,
+  nudge,
   releaseGrab,
   resetChain,
+  startAngle,
   stepChain,
+  CHAIN_H,
+  CHAIN_W,
 } from '../../src/components/visualization/sims/clothChain.js'
 import { foldAngle, plateEnds, plateWindForces, PLATE_DEPTH, AIR_DENSITY } from '../../src/components/visualization/sims/clothPlate.js'
 import { correctPair } from '../../src/components/visualization/sims/clothPair.js'
-import { createClothWorld, latticeStableDt, maxStretch, stepCloth } from '../../src/components/visualization/sims/clothWorld.js'
+import { createClothWorld, latticeStableDt, maxStretch, nudgeAll, stepCloth } from '../../src/components/visualization/sims/clothWorld.js'
 
 const near = (a, b, tol, msg) => assert.ok(Math.abs(a - b) <= tol, `${msg ?? ''} ${a} と ${b} の差が ${tol} を超えている`)
 
@@ -498,4 +503,47 @@ test('段階 7: 斜めを外した網は、斜めのばねの伸びを数えな�
   assert.ok(maxStretch(world, true) >= maxStretch(world, false))
   assert.equal(world.structuralSprings.length, 6 * 5 + 7 * 4) // 横 6 × 5 段 + 縦 7 列 × 4
   assert.equal(world.springs.length, world.structuralSprings.length + 2 * 6 * 4) // + 斜め 2 本 × 6 × 4 セル
+})
+
+// ---- 追加: 包絡線・最初の置き方・キーボードで弾く ----
+
+test('段階 4: 振動の山は、包絡線 A·e^{−γt} を超えない(出発の速度があっても)', () => {
+  for (const [kd, v0] of [[1, 0], [2, 0.8], [4, -0.5]]) {
+    const p = { m: 1, k: 16, kd }
+    const A = envelopeAmplitude(p, 0.5, v0)
+    const g = decayRate(1, kd)
+    for (let t = 0; t < 6; t += 0.01) {
+      assert.ok(Math.abs(analyticX(t, p, 0.5, v0)) <= A * Math.exp(-g * t) + 1e-9, `kd = ${kd}、t = ${t}`)
+    }
+  }
+  assert.equal(envelopeAmplitude({ m: 1, k: 16, kd: 8 }, 0.5), null, '臨界以上は振動しないので包絡線なし')
+  near(envelopeAmplitude({ m: 1, k: 16, kd: 0 }, 0.5), 0.5, 1e-12)
+})
+
+test('鎖の最初の置き方: 何個でも、描く範囲の中に収まる(長い鎖ほど傾きを小さくする)', () => {
+  assert.ok(startAngle(6) <= Math.PI / 3 + 1e-12)
+  assert.ok(startAngle(10) < startAngle(6))
+  for (const n of [2, 6, 8, 10]) {
+    const world = createChain({ n })
+    const { pos } = world.state
+    for (let i = 0; i <= n; i++) {
+      assert.ok(pos[2 * i] > 0 && pos[2 * i] < CHAIN_W, `n = ${n}、質点 ${i} の x = ${pos[2 * i]}`)
+      assert.ok(pos[2 * i + 1] > 0 && pos[2 * i + 1] < CHAIN_H, `n = ${n}、質点 ${i} の y = ${pos[2 * i + 1]}`)
+    }
+  }
+})
+
+test('キーボードで弾く: nudge は選んだ質点だけ(0 なら固定でない全部)、nudgeAll は動ける質点全部に速度を足す', () => {
+  const world = createChain({ n: 4 })
+  nudge(world, 1, 0, 2)
+  assert.deepEqual([1, 2, 3, 4].map((i) => world.state.vel[2 * i]), [0, 1, 0, 0])
+  nudge(world, 0, 2)
+  assert.deepEqual([0, 1, 2, 3, 4].map((i) => world.state.vel[2 * i + 1]), [0, 2, 2, 2, 2], '固定の端(0)は動かさない')
+  const net = createClothWorld({ ...SMALL, pin: 'edge' })
+  nudgeAll(net, 0.5, -0.5)
+  const { vel, w } = net.state
+  for (let i = 0; i < net.state.n; i++) {
+    assert.equal(vel[2 * i], w[i] === 0 ? 0 : 0.5)
+    assert.equal(vel[2 * i + 1], w[i] === 0 ? 0 : -0.5)
+  }
 })
