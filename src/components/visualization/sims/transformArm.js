@@ -9,7 +9,7 @@ import { L1, L2 } from './transformIk.js'
 import { toRad } from './transformCommon.js'
 
 export const FIXED_DT = 1 / 60 // アニメーションの時間刻み Δt [s]
-export const T_END = 5 // 1 周の長さ [s]
+export const T_END = 6 // 1 周の長さ [s]
 export const ARM_WIDTH = 0.16 // 腕の箱の太さ [m]
 export const ARM_BASE = [0, 0, 0] // 肩の位置(世界)。モデル変換の平行移動
 export const GROUND_Y = -1.05 // 床の高さ
@@ -18,21 +18,23 @@ export const NEAR = 0.5
 export const FAR = 30
 
 // キーフレーム: 時刻と、その時刻に手先を置きたい位置(x, y)[m]。最後は最初と同じで、1 周して戻る。
-// どの位置も腕の届く範囲(|L1−L2| = 0.3〜L1+L2 = 1.7)の内側
-export const KEY_TIMES = [0, 1, 2, 3, 4, 5]
+// どの位置も腕の届く範囲(|L1−L2| = 0.3〜L1+L2 = 1.7)の内側で、肩の下の台(y < 0)には入らない
+export const KEY_TIMES = [0, 1, 2, 3, 4, 5, 6]
 export const KEY_POINTS = [
-  [1.2, 0.05],
-  [0.95, 1.0],
-  [-0.25, 1.25],
-  [-1.1, 0.35],
-  [-0.3, -0.85],
-  [1.2, 0.05],
+  [1.3, 0.5],
+  [0.8, 1.2],
+  [-0.3, 1.35],
+  [-1.0, 0.8],
+  [-0.5, 0.45],
+  [0.5, 0.5],
+  [1.3, 0.5],
 ]
-export const KEY_LABELS = [1, 2, 3, 4, 5, 1] // 表示する番号(6 つ目は 1 に戻る)
+export const KEY_LABELS = [1, 2, 3, 4, 5, 6, 1] // 表示する番号(7 つ目は 1 に戻る)
 
 // 画面に出す設定の初期値
 export const CAMERA_DEFAULT = { x: 2, y: 1.2, z: 5.5, fovDeg: 45 }
-export const OUTSIDE_DEFAULT = { yaw: toRad(55), pitch: toRad(22), dist: 11, fov: toRad(40) }
+// 外から見るカメラ: 腕とカメラの両方が入るよう、腕とカメラのあいだの点 target を見る
+export const OUTSIDE_DEFAULT = { target: [0.6, 0.2, 1.9], yaw: toRad(40), pitch: toRad(26), dist: 10.5, fov: toRad(38) }
 
 // 手先の目標の経路: x(t)・y(t) をそれぞれ自然 3 次スプラインでつなぐ
 export function buildPath(points = KEY_POINTS, times = KEY_TIMES) {
@@ -133,8 +135,8 @@ export function splitPanels(width, height, stacked) {
   }
 }
 
-// 画面の幅から、上下に並べるかを決める(幅 560px 未満は上下)
-export const STACK_BELOW = 560
+// 画面の幅から、上下に並べるかを決める(幅 480px 未満は上下)
+export const STACK_BELOW = 480
 export function isStacked(width) {
   return width < STACK_BELOW
 }

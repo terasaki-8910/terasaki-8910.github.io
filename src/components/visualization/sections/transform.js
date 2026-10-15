@@ -3,7 +3,7 @@
 // 節の中でしか使わない大きなコンポーネントなので、この節を開くまで読み込まない。
 import { lazy } from 'react'
 
-const TransformSim = lazy(() => import('../sims/TransformSim.jsx'))
+const TransformOverview = lazy(() => import('../sims/transformOverview.jsx'))
 
 export default {
   id: 'transform',
@@ -11,8 +11,8 @@ export default {
   tabLabel: '変換・IK',
   intro: '立方体を、モデル行列・視点・透視投影・ビューポートの順に通して画面に描く。キーフレームの補間と、2 リンクの腕の IK も、見せ方を切り替えて動かせる。',
   overview: {
-    Sim: TransformSim,
-    caption: '上のタブで見せ方（立方体・補間・IK）を切り替える。立方体の向きと位置、カメラは、スライダーで変える。',
+    Sim: TransformOverview,
+    caption: '左の図は、ドラッグで見る向きを回せる。右の絵は、右のバーで動かすカメラが撮ったもの。再生すると、腕が番号の順にキーフレームをなぞる。',
   },
   steps: [],
   combination: null,

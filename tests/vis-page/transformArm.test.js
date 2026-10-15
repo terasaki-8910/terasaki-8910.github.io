@@ -61,7 +61,7 @@ test('IK の角度から FK で手先を求めると、目標に一致する(経
 
 test('モデル変換: 行列を掛けて求めた肘・手先は、fk2 と一致する(ARM_BASE の分だけ平行移動)', () => {
   const path = buildPath()
-  for (const t of [0, 0.7, 1.9, 3.3, 4.6]) {
+  for (const t of [0, 0.7, 1.9, 3.3, 4.6, 5.8]) {
     const target = handAt(path, t)
     const theta = armAngles(target)
     const m = armMatrices(theta)
@@ -93,10 +93,19 @@ test('keyframeInfo: 区間の番号と、区間の中の位置(0〜1)', () => {
   assert.equal(mid.from, 3)
   assert.equal(mid.to, 4)
   assert.ok(near(mid.frac, 0.25))
-  const last = keyframeInfo(4.5)
-  assert.equal(last.from, 5)
-  assert.equal(last.to, 1) // 6 つ目は 1 に戻る
+  const last = keyframeInfo(5.5)
+  assert.equal(last.from, 6)
+  assert.equal(last.to, 1) // 7 つ目は 1 に戻る
   assert.equal(keyframeInfo(T_END).segment, KEY_TIMES.length - 2) // 終端は最後の区間
+})
+
+test('手先も肘も、肩の下の台(幅 ±0.3、y < 0)の中には入らない', () => {
+  const path = buildPath()
+  for (const p of samplePath(path, 300)) {
+    assert.ok(p[1] > 0.2, `手先 y = ${p[1]}`)
+    const m = armMatrices(armAngles(p))
+    assert.ok(Math.abs(m.elbow[0]) > 0.35 || m.elbow[1] > 0, `肘 (${m.elbow[0]}, ${m.elbow[1]}) が台の上に重なる`)
+  }
 })
 
 test('advanceClock: Δt の整数倍で進み、1 周したら 0 に戻る', () => {
@@ -133,7 +142,7 @@ test('splitPanels: 左右に並べると題の帯の下が枠。上下に並べ�
 
 test('isStacked: 狭い幅は上下', () => {
   assert.equal(isStacked(375), true)
-  assert.equal(isStacked(559), true)
-  assert.equal(isStacked(560), false)
+  assert.equal(isStacked(479), true)
+  assert.equal(isStacked(480), false)
   assert.equal(isStacked(1000), false)
 })
