@@ -9,9 +9,31 @@ export default {
   id: 'transform',
   title: '変換・投影・補間・IK',
   tabLabel: '変換・IK',
-  description:
-    '立方体を、モデル行列、視点、透視投影、ビューポートの順に通して画面に描く。キーフレームの間は、線形補間と自然 3 次スプラインの 2 通りで結ぶ。2 リンクの腕は、解析解と、ヤコビアンの繰り返しで目標へ向ける。掛ける順や視野角、減衰の大きさを変えて、結果がどう変わるかを見られる。',
-  formulas: [
+  intro: '立方体を、モデル行列・視点・透視投影・ビューポートの順に通して画面に描く。キーフレームの補間と、2 リンクの腕の IK も、見せ方を切り替えて動かせる。',
+  overview: {
+    Sim: TransformSim,
+    caption: '上のタブで見せ方（立方体・補間・IK）を切り替える。立方体の向きと位置、カメラは、スライダーで変える。',
+  },
+  steps: [],
+  combination: null,
+  sources: [
+    { text: 'Foley, van Dam, Feiner, Hughes, Computer Graphics: Principles and Practice, 2nd ed., Addison-Wesley (1990)' },
+    { text: 'Akenine-Möller, Haines, Hoffman, Real-Time Rendering, 4th ed., CRC Press (2018)' },
+    {
+      text: 'gluPerspective, OpenGL 2.1 Reference Pages, Khronos Group',
+      href: 'https://registry.khronos.org/OpenGL-Refpages/gl2.1/xhtml/gluPerspective.xml',
+    },
+    { text: 'de Boor, A Practical Guide to Splines, Springer (1978)' },
+    { text: 'Burden, Faires, Numerical Analysis, 9th ed., Brooks/Cole (2011)' },
+    { text: 'Craig, Introduction to Robotics: Mechanics and Control, 3rd ed., Pearson (2005)' },
+    {
+      text: 'Buss, Introduction to Inverse Kinematics with Jacobian Transpose, Pseudoinverse and Damped Least Squares methods (2004)',
+      href: 'https://www.math.ucsd.edu/~sbuss/ResearchWeb/ikmethods/iksurvey.pdf',
+    },
+  ],
+
+  // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
+  legacyFormulas: [
     {
       id: 'homogeneous',
       caption: '同次座標の変換と合成',
@@ -126,7 +148,7 @@ l_1 \cos\theta_1 + l_2 \cos(\theta_1 + \theta_2) & l_2 \cos(\theta_1 + \theta_2)
       ],
     },
   ],
-  snippets: [
+  legacySnippets: [
     'mat4-multiply',
     'mat4-compose',
     'projection-perspectiveMatrix',
@@ -137,20 +159,6 @@ l_1 \cos\theta_1 + l_2 \cos(\theta_1 + \theta_2) & l_2 \cos(\theta_1 + \theta_2)
     'ik-ik2Analytic',
     'ik-ikStep',
   ],
-  sources: [
-    { text: 'Foley, van Dam, Feiner, Hughes, Computer Graphics: Principles and Practice, 2nd ed., Addison-Wesley (1990)' },
-    { text: 'Akenine-Möller, Haines, Hoffman, Real-Time Rendering, 4th ed., CRC Press (2018)' },
-    {
-      text: 'gluPerspective, OpenGL 2.1 Reference Pages, Khronos Group',
-      href: 'https://registry.khronos.org/OpenGL-Refpages/gl2.1/xhtml/gluPerspective.xml',
-    },
-    { text: 'de Boor, A Practical Guide to Splines, Springer (1978)' },
-    { text: 'Burden, Faires, Numerical Analysis, 9th ed., Brooks/Cole (2011)' },
-    { text: 'Craig, Introduction to Robotics: Mechanics and Control, 3rd ed., Pearson (2005)' },
-    {
-      text: 'Buss, Introduction to Inverse Kinematics with Jacobian Transpose, Pseudoinverse and Damped Least Squares methods (2004)',
-      href: 'https://www.math.ucsd.edu/~sbuss/ResearchWeb/ikmethods/iksurvey.pdf',
-    },
-  ],
-  Sim: TransformSim,
+  legacyDescription:
+    '立方体を、モデル行列、視点、透視投影、ビューポートの順に通して画面に描く。キーフレームの間は、線形補間と自然 3 次スプラインの 2 通りで結ぶ。2 リンクの腕は、解析解と、ヤコビアンの繰り返しで目標へ向ける。掛ける順や視野角、減衰の大きさを変えて、結果がどう変わるかを見られる。',
 }

@@ -6,9 +6,34 @@ export default {
   id: 'fluid',
   title: '流体（SPH）',
   tabLabel: '流体',
-  description:
-    '流体を粒子の集まりで表し、まわりの粒子の値を核で重み付けして足すことで、密度や力を求める。ここでは、積んだ水の塊が崩れて広がるようすを 2 次元で動かす。影響が届くのは近くの粒子だけなので、粒子を一辺 h のグリッドに振り分けてから、近くだけを調べる。ドラッグすると近くの粒子を押せる。',
-  formulas: [
+  intro: '積んだ水の塊が崩れて広がるようすを、粒子の集まり（SPH）で 2 次元に動かす。ドラッグすると、近くの粒子を押せる。',
+  overview: {
+    Sim: FluidSim,
+    caption: '粒子の色は、速さか密度で切り替えられる。「グリッド」を入れると、近くの粒子を探すセルが見える。',
+  },
+  steps: [],
+  combination: null,
+  sources: [
+    {
+      text: 'Monaghan, J. J., Smoothed particle hydrodynamics, Annual Review of Astronomy and Astrophysics 30, 543–574 (1992)',
+      href: 'https://doi.org/10.1146/annurev.aa.30.090192.002551',
+    },
+    {
+      text: 'Müller, M., Charypar, D., Gross, M., Particle-based fluid simulation for interactive applications, Proceedings of the 2003 ACM SIGGRAPH/Eurographics Symposium on Computer Animation, 154–159 (2003)',
+      href: 'https://doi.org/10.2312/SCA03/154-159',
+    },
+    {
+      text: 'Gingold, R. A., Monaghan, J. J., Smoothed particle hydrodynamics: theory and application to non-spherical stars, Monthly Notices of the Royal Astronomical Society 181, 375–389 (1977)',
+      href: 'https://doi.org/10.1093/mnras/181.3.375',
+    },
+    {
+      text: 'Lucy, L. B., A numerical approach to the testing of the fission hypothesis, The Astronomical Journal 82, 1013–1024 (1977)',
+      href: 'https://doi.org/10.1086/112164',
+    },
+  ],
+
+  // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
+  legacyFormulas: [
     {
       id: 'approximation',
       caption: 'SPH の近似と勾配',
@@ -87,7 +112,7 @@ W_{\mathrm{poly6}}(r,h) &= \frac{4}{\pi h^{8}}\,(h^{2}-r^{2})^{3} \\
       ],
     },
   ],
-  snippets: [
+  legacySnippets: [
     'sph-poly6',
     'sph-spikyGrad',
     'sph-viscLaplacian',
@@ -98,23 +123,6 @@ W_{\mathrm{poly6}}(r,h) &= \frac{4}{\pi h^{8}}\,(h^{2}-r^{2})^{3} \\
     'sph-computeForces',
     'sph-sphStep',
   ],
-  sources: [
-    {
-      text: 'Monaghan, J. J., Smoothed particle hydrodynamics, Annual Review of Astronomy and Astrophysics 30, 543–574 (1992)',
-      href: 'https://doi.org/10.1146/annurev.aa.30.090192.002551',
-    },
-    {
-      text: 'Müller, M., Charypar, D., Gross, M., Particle-based fluid simulation for interactive applications, Proceedings of the 2003 ACM SIGGRAPH/Eurographics Symposium on Computer Animation, 154–159 (2003)',
-      href: 'https://doi.org/10.2312/SCA03/154-159',
-    },
-    {
-      text: 'Gingold, R. A., Monaghan, J. J., Smoothed particle hydrodynamics: theory and application to non-spherical stars, Monthly Notices of the Royal Astronomical Society 181, 375–389 (1977)',
-      href: 'https://doi.org/10.1093/mnras/181.3.375',
-    },
-    {
-      text: 'Lucy, L. B., A numerical approach to the testing of the fission hypothesis, The Astronomical Journal 82, 1013–1024 (1977)',
-      href: 'https://doi.org/10.1086/112164',
-    },
-  ],
-  Sim: FluidSim,
+  legacyDescription:
+    '流体を粒子の集まりで表し、まわりの粒子の値を核で重み付けして足すことで、密度や力を求める。ここでは、積んだ水の塊が崩れて広がるようすを 2 次元で動かす。影響が届くのは近くの粒子だけなので、粒子を一辺 h のグリッドに振り分けてから、近くだけを調べる。ドラッグすると近くの粒子を押せる。',
 }

@@ -33,17 +33,9 @@
   outline-offset: 2px;
 }
 
-/* ---- 節 ------------------------------------------------------------------------------- */
-.vis-section {
-  scroll-margin-top: 6rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--color-line);
-}
-.vis-section + .vis-section {
-  margin-top: 4rem;
-}
-.vis-a {
-  max-width: 48rem; /* max-w-3xl */
+/* ---- タブの中身 ----------------------------------------------------------------------- */
+.vis-panel {
+  padding-top: 2rem;
 }
 .vis-head__title {
   font-family: 'Craft Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
@@ -61,7 +53,8 @@
 
 /* ---- 式と記号 ------------------------------------------------------------------------- */
 .vis-formulas {
-  margin-top: 1.75rem;
+  max-width: 48rem; /* 読み物の幅。2 列にすると、長い式(3 次スプラインの条件など)が半分の幅に収まらずに切れる */
+  margin-top: 1.5rem;
 }
 .vis-formula + .vis-formula {
   margin-top: 1.5rem;
@@ -107,11 +100,13 @@
 }
 
 /* ---- シミュレーションの枠 -------------------------------------------------------------- */
+/* 配置は全体も段階も同じ: 幅 1024px 以上で横長なら 絵が左・バーが右(20rem)、それ以外は 絵が上・バーが下。
+   JS は何も見ない(media query だけ)。バーを下に置くときは、バーの欄が幅に応じて 2〜3 列に並ぶ */
 .vis-sim {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 16px;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 }
 .vis-sim__stage {
   border: 1px solid var(--color-muted);
@@ -206,19 +201,37 @@
   letter-spacing: 0.04em;
   color: var(--color-ink);
 }
-/* 案 C の広い画面: 絵を大きく、操作と式は右の欄 */
-@media (min-width: 1024px) {
-  .vis-sim[data-placement='side'] {
+/* 横長の広い画面: 絵が左、バーが右。バーは 1 列 */
+@media (min-width: 1024px) and (orientation: landscape) {
+  .vis-sim {
     grid-template-columns: minmax(0, 1fr) 20rem;
     align-items: start;
     gap: 28px;
   }
-  .vis-sim[data-placement='side'] .vis-sim__controls,
-  .vis-sim[data-placement='side'] .vis-stack__item,
-  .vis-sim[data-placement='side'] .vis-group {
+  .vis-sim__controls,
+  .vis-stack__item,
+  .vis-group {
     grid-template-columns: minmax(0, 1fr);
     gap: 4px;
   }
+}
+/* 段階のシミュレーション(data-size='step')は小さい: 絵の高さが スマホ 220〜300px、PC(640px 以上)280〜360px。
+   canvas は縦横比でなく高さで決める(SimShell の height で変えられる) */
+.vis-sim[data-size='step'] {
+  --stage-h: clamp(var(--step-h-phone-min, 220px), 62vw, var(--step-h-phone-max, 300px));
+}
+@media (min-width: 640px) {
+  .vis-sim[data-size='step'] {
+    --stage-h: clamp(var(--step-h-pc-min, 280px), 34vw, var(--step-h-pc-max, 360px));
+  }
+}
+.vis-sim[data-size='step'] .vis-canvas {
+  aspect-ratio: auto;
+  height: var(--stage-h);
+}
+.vis-sim[data-size='step'] .vis-placeholder {
+  aspect-ratio: auto;
+  height: var(--stage-h);
 }
 /* ---- ボタンと切り替え ------------------------------------------------------------------ */
 .vis-toolbar {
@@ -261,7 +274,7 @@
 .vis-btn:focus-visible,
 .vis-seg__item:focus-visible,
 .vis-tab:focus-visible,
-.vis-preview__btn:focus-visible,
+.vis-combo__chip:focus-visible,
 .vis-code__summary:focus-visible {
   outline: 2px solid var(--color-ink);
   outline-offset: 2px;
@@ -519,53 +532,7 @@
   }
 }
 
-/* ---- 案 B: 実験台 -------------------------------------------------------------------- */
-.vis-b {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-}
-.vis-b__sim .vis-sim {
-  margin-top: 1.5rem;
-}
-.vis-b__body {
-  margin-top: 0.5rem;
-}
-@media (min-width: 1024px) {
-  .vis-b {
-    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-    grid-template-rows: auto 1fr; /* 余った高さは本文の側に回し、見出しと本文の間を空けない */
-    column-gap: 2.5rem;
-  }
-  .vis-b__head {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .vis-b__sim {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    position: sticky;
-    top: 5.5rem;
-    align-self: start;
-  }
-  .vis-b__sim[data-fits='false'] {
-    position: static; /* 画面より高いときは sticky にしない(LayoutB の StickySim) */
-  }
-  .vis-b__sim .vis-sim {
-    margin-top: 0;
-  }
-  /* 絵と操作が1画面に収まるよう、絵の幅を画面の高さで抑える */
-  .vis-b__sim .vis-sim__main {
-    max-width: calc((100vh - 20rem) * var(--aspect, 1.333));
-    min-width: min(100%, 22rem);
-  }
-  .vis-b__body {
-    grid-column: 2;
-    grid-row: 2;
-    margin-top: 0;
-  }
-}
-
-/* ---- 案 C: タブ ----------------------------------------------------------------------- */
+/* ---- タブ ----------------------------------------------------------------------------- */
 .vis-tabs {
   display: flex;
   overflow-x: auto;
@@ -598,58 +565,154 @@
   color: var(--color-ink);
   border-bottom-color: var(--color-ink);
 }
-.vis-c__panel {
+/* ---- 全体・段階・組み合わせ ------------------------------------------------------------- */
+.vis-overview {
+  margin-top: 2rem;
+}
+.vis-part__title {
+  font-family: 'Craft Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+.vis-caption {
+  margin-top: 0.75rem;
+  max-width: 40rem;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+/* 段階: 番号と名前 → 説明 → 式 → シミュレーション → 実装を見る */
+.vis-step {
+  margin-top: 3.5rem;
   padding-top: 2rem;
+  border-top: 1px solid var(--color-line);
+  scroll-margin-top: 6rem;
 }
-.vis-c__panel .vis-sim {
-  margin-top: 1.5rem;
-}
-/* 式はシミュレーションの下に、案 A と同じ読み物の幅(48rem)で流す。2 列にすると半分の幅(550px ほど)で、
-   長い式(3 次スプラインの条件、2 リンクの解析解など)が横にはみ出して切れる */
-.vis-c__panel > .vis-formulas {
-  max-width: 48rem;
-  margin-top: 2.5rem;
-}
-
-/* ---- 見た目の案の切り替え(プレビュー用。案が決まったら消す) ------------------------------ */
-.vis-preview {
+.vis-step__title {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px 8px;
-  margin-bottom: 2rem;
-  font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace;
-  font-size: 0.75rem;
-  color: var(--color-muted);
+  align-items: flex-start;
+  gap: 0.75rem;
 }
-.vis-preview__label {
-  margin-right: 4px;
+.vis-step__title:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 4px;
 }
-@media (max-width: 639px) {
-  .vis-preview__label {
-    flex-basis: 100%;
-  }
-}
-.vis-preview__btn {
-  min-height: 32px;
-  padding: 0 10px;
-  border: 1px solid var(--color-line);
-  border-radius: 3px;
+.vis-step__num,
+.vis-combo__chip {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  border: 1px solid var(--color-ink);
+  border-radius: 4px;
   background: transparent;
   color: var(--color-ink);
-  font: inherit;
+  font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.vis-step__num {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.9375rem;
+}
+.vis-step__text {
+  margin-top: 0.75rem;
+  max-width: 40rem;
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+.vis-step .vis-sim {
+  margin-top: 1.5rem;
+}
+/* 段階に分ける前の式と実装のまとめ(開閉。CodeExcerpt の .vis-code と同じ見た目) */
+.vis-legacy {
+  margin-top: 2rem;
+}
+.vis-legacy__title {
+  font-size: inherit;
+  font-weight: inherit;
+}
+.vis-legacy__body {
+  padding-bottom: 8px;
+}
+.vis-legacy__body .vis-code {
+  margin-top: 1rem;
+}
+/* 組み合わせ: 番号(段階へ移るボタン)と、全体のどこに当たるか */
+.vis-combo {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-line);
+}
+.vis-combo__text {
+  margin-top: 0.75rem;
+  max-width: 40rem;
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+.vis-combo__list {
+  margin-top: 1.25rem;
+  max-width: 40rem;
+  padding: 0;
+  list-style: none;
+}
+.vis-combo__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 0;
+  border-top: 1px solid var(--color-line);
+}
+.vis-combo__steps {
+  display: flex;
+  flex: 0 0 6.5rem;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.vis-combo__chip {
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 0.875rem;
   cursor: pointer;
 }
-.vis-preview__btn:hover:not([aria-pressed='true']) {
-  border-color: var(--color-muted);
-}
-.vis-preview__btn[aria-pressed='true'] {
-  background: var(--color-ink);
-  border-color: var(--color-ink);
-  color: var(--color-paper);
+.vis-combo__chip:hover {
+  background: rgb(var(--color-accent) / 0.3);
 }
 @media (pointer: coarse) {
-  .vis-preview__btn {
-    min-height: 44px;
+  .vis-combo__chip {
+    width: 44px;
+    height: 44px;
   }
+}
+.vis-combo__label {
+  line-height: 1.7;
+}
+
+/* ---- 凡例(SimLegend)。値は毎フレーム変わるので、数字は等幅で幅をそろえる ---------------------- */
+.vis-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 20px;
+  margin-top: 8px;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+.vis-legend__item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+}
+.vis-legend__value {
+  font-family: 'Fira Mono', 'Zen Kurenaido', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+.vis-legend__swatch {
+  align-self: center;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-muted);
+  border-radius: 2px;
 }

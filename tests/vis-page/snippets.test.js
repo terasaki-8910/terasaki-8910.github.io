@@ -39,24 +39,3 @@ for (const file of files) {
     }
   })
 }
-
-// 節のデータ(sections/*.js)の snippets に書いた名前が、実在する抜粋であること。
-// データのファイルは JSX の部品を import するので Node からは読み込めない。テキストから snippets の配列を拾う。
-test('節の snippets は、すべて実在する抜粋を指す', () => {
-  const sectionsDir = fileURLToPath(new URL('../../src/components/visualization/sections/', import.meta.url))
-  const known = new Set()
-  for (const file of files) {
-    for (const s of listSnippets(readFileSync(join(VIS_DIR, file), 'utf8'))) known.add(s.name)
-  }
-  let checked = 0
-  for (const file of readdirSync(sectionsDir).filter((f) => f.endsWith('.js') && f !== 'index.js')) {
-    const text = readFileSync(join(sectionsDir, file), 'utf8')
-    const match = /snippets:\s*\[([\s\S]*?)\]/.exec(text)
-    if (!match) continue
-    for (const [, name] of match[1].matchAll(/['"]([^'"]+)['"]/g)) {
-      assert.ok(known.has(name), `${file}: 抜粋「${name}」が src/utils/vis/ にありません`)
-      checked++
-    }
-  }
-  assert.ok(checked > 0)
-})

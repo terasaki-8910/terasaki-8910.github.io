@@ -5,9 +5,26 @@ export default {
   id: 'cloth',
   title: '布（バネ-質点系と位置ベース法）',
   tabLabel: '布',
-  description:
-    '質点を辺でつないだ 2 次元の網を、2 通りの方法で動かして比べる。質点-ばね系は、ばねと減衰の力から加速度を求めて半陰的オイラー法で進めるので、時間刻みが安定の限界を超えると崩れる。位置ベース法は、辺の長さを保つように予測位置を直接動かし、速度は位置の変化から決めるので、時間刻みを大きくしても崩れにくい。風は、辺を板とみなして抗力と揚力を加える。',
-  formulas: [
+  intro: '質点を辺でつないだ網を、バネ-質点系と位置ベース法のどちらでも動かして比べる。質点をつかんで揺らせて、風も吹かせられる。',
+  overview: {
+    Sim: ClothSim,
+    caption: '方式を切り替えても、質点の位置と速度は引き継がれる。バネ-質点系は、Δt が安定の限界を超えると発散する。',
+  },
+  steps: [],
+  combination: null,
+  sources: [
+    { text: 'Provot, Deformation constraints in a mass-spring model to describe rigid cloth behavior, Graphics Interface (1995)' },
+    { text: 'Hairer, Lubich, Wanner, Geometric Numerical Integration, Springer (2002)' },
+    { text: 'Müller, Heidelberger, Hennix, Ratcliff, Position Based Dynamics, Journal of Visual Communication and Image Representation 18(2) (2007)' },
+    {
+      text: 'Bender, Müller, Macklin, Position-Based Simulation Methods in Computer Graphics, Eurographics 2015 Tutorial',
+      href: 'https://doi.org/10.2312/egt.20151045',
+    },
+    { text: 'Anderson, Fundamentals of Aerodynamics, 6th ed. (2017)' },
+  ],
+
+  // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
+  legacyFormulas: [
     {
       id: 'spring',
       caption: 'ばねの力と減衰',
@@ -68,7 +85,7 @@ export default {
       ],
     },
   ],
-  snippets: [
+  legacySnippets: [
     'massSpring-springForce',
     'massSpring-massSpringStep',
     'massSpring-criticalDt',
@@ -78,15 +95,6 @@ export default {
     'pbd-solveConstraints',
     'pbd-pbdStep',
   ],
-  sources: [
-    { text: 'Provot, Deformation constraints in a mass-spring model to describe rigid cloth behavior, Graphics Interface (1995)' },
-    { text: 'Hairer, Lubich, Wanner, Geometric Numerical Integration, Springer (2002)' },
-    { text: 'Müller, Heidelberger, Hennix, Ratcliff, Position Based Dynamics, Journal of Visual Communication and Image Representation 18(2) (2007)' },
-    {
-      text: 'Bender, Müller, Macklin, Position-Based Simulation Methods in Computer Graphics, Eurographics 2015 Tutorial',
-      href: 'https://doi.org/10.2312/egt.20151045',
-    },
-    { text: 'Anderson, Fundamentals of Aerodynamics, 6th ed. (2017)' },
-  ],
-  Sim: ClothSim,
+  legacyDescription:
+    '質点を辺でつないだ 2 次元の網を、2 通りの方法で動かして比べる。質点-ばね系は、ばねと減衰の力から加速度を求めて半陰的オイラー法で進めるので、時間刻みが安定の限界を超えると崩れる。位置ベース法は、辺の長さを保つように予測位置を直接動かし、速度は位置の変化から決めるので、時間刻みを大きくしても崩れにくい。風は、辺を板とみなして抗力と揚力を加える。',
 }

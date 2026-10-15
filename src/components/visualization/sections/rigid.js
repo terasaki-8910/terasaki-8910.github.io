@@ -5,9 +5,21 @@ export default {
   id: 'rigid',
   title: '剛体と衝突',
   tabLabel: '剛体',
-  description:
-    '箱の中の円が、重力で落ちて壁や円どうしにぶつかる。位置と速度は前進オイラー法で小さく刻んで進め、ぶつかったら撃力で速度を直接変える。全部の組を調べる代わりに、AABB と Sweep and Prune で候補を絞ってから円の重なりを調べる。反発係数 e が 0 ならはね返らず、1 なら損失がないが、前進オイラー法ではエネルギーが少しずつ増えるので、サブステップを増やして抑える。',
-  formulas: [
+  intro: '箱の中の円が、重力で落ちて、壁や円どうしにぶつかる。円はつかんで投げられる。',
+  overview: {
+    Sim: RigidSim,
+    caption: '円をつかんで投げられる。「広域の判定を表示」で、候補に絞った組（細い線）と、実際に重なっている組（太い線）が見える。',
+  },
+  steps: [],
+  combination: null,
+  sources: [
+    { text: 'Baraff, An Introduction to Physically Based Modeling: Rigid Body Simulation II, SIGGRAPH Course Notes (1997)' },
+    { text: 'Ericson, Real-Time Collision Detection, Morgan Kaufmann (2004)' },
+    { text: 'Hairer, Nørsett, Wanner, Solving Ordinary Differential Equations I, 2nd ed., Springer (1993)' },
+  ],
+
+  // 段階に分ける前の式と抜粋と説明(sections/index.js を見る)。段階へ移し終えたら消す
+  legacyFormulas: [
     {
       id: 'euler',
       caption: '前進オイラー法',
@@ -60,7 +72,7 @@ export default {
       ],
     },
   ],
-  snippets: [
+  legacySnippets: [
     'integrate-eulerStep',
     'collide-reflectVelocity',
     'collide-circlesOverlap',
@@ -68,10 +80,6 @@ export default {
     'collide-sweepAndPrune',
     'collide-resolveCircles',
   ],
-  sources: [
-    { text: 'Baraff, An Introduction to Physically Based Modeling: Rigid Body Simulation II, SIGGRAPH Course Notes (1997)' },
-    { text: 'Ericson, Real-Time Collision Detection, Morgan Kaufmann (2004)' },
-    { text: 'Hairer, Nørsett, Wanner, Solving Ordinary Differential Equations I, 2nd ed., Springer (1993)' },
-  ],
-  Sim: RigidSim,
+  legacyDescription:
+    '箱の中の円が、重力で落ちて壁や円どうしにぶつかる。位置と速度は前進オイラー法で小さく刻んで進め、ぶつかったら撃力で速度を直接変える。全部の組を調べる代わりに、AABB と Sweep and Prune で候補を絞ってから円の重なりを調べる。反発係数 e が 0 ならはね返らず、1 なら損失がないが、前進オイラー法ではエネルギーが少しずつ増えるので、サブステップを増やして抑える。',
 }
