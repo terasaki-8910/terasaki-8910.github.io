@@ -21,6 +21,11 @@
   width: max-content;
   min-width: 100%;
 }
+/* 複数行の式と行列の列ぞろえは mathAlign.js が補う。セルは中央ぞろえに固定し、右・左は詰め物で作る
+   (Chromium は columnalign を読まず、text-align も center しか効かないため) */
+.vis-math mtd {
+  text-align: center;
+}
 .vis-math--block:focus-visible,
 .vis-symbols:focus-visible,
 .vis-code__pre:focus-visible {
@@ -73,6 +78,7 @@
   overflow-x: auto;
 }
 .vis-symbols table {
+  width: 100%; /* 式ごとに表の幅がばらつかないよう、列の幅にそろえる */
   border-collapse: collapse;
   font-size: 0.875rem;
   line-height: 1.6;

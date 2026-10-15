@@ -1,6 +1,7 @@
-import { useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import katex from 'katex'
 import useOverflowFocus from './useOverflowFocus'
+import { alignMathColumns } from './mathAlign'
 
 // 数式を MathML で出す(KaTeX の output: 'mathml')。KaTeX の CSS とフォントは読まない。
 // 字形はブラウザが OS の数式フォント(font-family: math)で描くので、サイトのフォントは増えない
@@ -29,6 +30,15 @@ export default function Formula({ tex, display = false, className = '' }) {
   const ref = useRef(null)
   useOverflowFocus(ref) // 行内では ref を付けないので何もしない
   const html = render(tex, display)
+  const inlineRef = useRef(null)
+  // 表の列ぞろえ(Chromium の分)。数式のフォントが読み込まれると幅が変わるので、そのあとにもう一度
+  useLayoutEffect(() => {
+    const el = display ? ref.current : inlineRef.current
+    alignMathColumns(el)
+    let alive = true
+    document.fonts?.ready.then(() => { if (alive) alignMathColumns(el) })
+    return () => { alive = false }
+  }, [html, display])
   if (display) {
     return (
       <div
@@ -38,5 +48,5 @@ export default function Formula({ tex, display = false, className = '' }) {
       />
     )
   }
-  return <span className={`vis-math ${className}`} dangerouslySetInnerHTML={{ __html: html }} />
+  return <span ref={inlineRef} className={`vis-math ${className}`} dangerouslySetInnerHTML={{ __html: html }} />
 }
