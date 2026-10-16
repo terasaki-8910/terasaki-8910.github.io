@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16T16:31:09.950Z",
+  "lastUpdated": "2026-10-16T20:54:41.132Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -356,7 +356,7 @@
           "description": "Defeat your opponent by dealing more than 4000 damage at a time in a Ranked/Event Duel",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
           "unlockedAt": "2022-12-23T11:05:16.000Z",
-          "percent": 34
+          "percent": 33.9
         },
         {
           "name": "Necromancer",
@@ -479,7 +479,7 @@
           "description": "Caught 50 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/2308a9900f12b3cdf8bc7f1229bc4b2488a4fcb3.jpg",
           "unlockedAt": "2024-01-27T11:11:25.000Z",
-          "percent": 62.5
+          "percent": 62.6
         }
       ]
     },
@@ -501,7 +501,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
           "unlockedAt": "2026-09-12T08:21:27.000Z",
-          "percent": 71.5
+          "percent": 71.4
         },
         {
           "name": "Troll with the Punches",
