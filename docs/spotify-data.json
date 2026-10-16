@@ -1,6 +1,182 @@
 {
-  "lastUpdated": "2026-10-16T10:18:54.078Z",
+  "lastUpdated": "2026-10-16T15:44:35.827Z",
   "tracks": [
+    {
+      "id": "1bIZxrSkbxatnTo8ObcIxX",
+      "name": "orion",
+      "artist": "Kenshi Yonezu",
+      "album": "BOOTLEG",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
+      "playedAt": "2026-10-16T15:41:39.120Z",
+      "spotifyUrl": "https://open.spotify.com/track/1bIZxrSkbxatnTo8ObcIxX",
+      "duration": 281903,
+      "previewUrl": ""
+    },
+    {
+      "id": "1sbvIp94XFJcdndOqQgNh6",
+      "name": "カルマ",
+      "artist": "BUMP OF CHICKEN",
+      "album": "SONG FOR TALES OF THE ABYSS",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307de4ed160fd708ff039acf0",
+      "playedAt": "2026-10-16T15:36:56.717Z",
+      "spotifyUrl": "https://open.spotify.com/track/1sbvIp94XFJcdndOqQgNh6",
+      "duration": 199773,
+      "previewUrl": ""
+    },
+    {
+      "id": "1J66QIjAuES6rRNJGnLSJh",
+      "name": "The Everlasting Guilty Crown",
+      "artist": "EGOIST",
+      "album": "Extra terrestrial Biological Entities",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fce3ae50618016f1fcc620f4",
+      "playedAt": "2026-10-16T15:33:36.421Z",
+      "spotifyUrl": "https://open.spotify.com/track/1J66QIjAuES6rRNJGnLSJh",
+      "duration": 326960,
+      "previewUrl": ""
+    },
+    {
+      "id": "0XT65K4AnBTrjq9x32aj8v",
+      "name": "プレパレード",
+      "artist": "逢坂大河・櫛枝実乃梨・川嶋亜美(釘宮理恵、堀江由衣、喜多村英梨)",
+      "album": "プレパレード",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306304207870db2dcd3affc47",
+      "playedAt": "2026-10-16T15:28:09.021Z",
+      "spotifyUrl": "https://open.spotify.com/track/0XT65K4AnBTrjq9x32aj8v",
+      "duration": 204840,
+      "previewUrl": ""
+    },
+    {
+      "id": "2l7kjbDVtqivr8yMhOSWH4",
+      "name": "NO, Thank You!",
+      "artist": "Ho - Kago Tea Time",
+      "album": "NO, Thank You!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736b22e65292bcf5e934f51336",
+      "playedAt": "2026-10-16T12:40:32.345Z",
+      "spotifyUrl": "https://open.spotify.com/track/2l7kjbDVtqivr8yMhOSWH4",
+      "duration": 257493,
+      "previewUrl": ""
+    },
+    {
+      "id": "343P4NOfSrRoWq3l9hNfZl",
+      "name": "Sparkling Daydream",
+      "artist": "ZAQ",
+      "album": "NOISY Lab.",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27373d6f1bb38a4581030995c34",
+      "playedAt": "2026-10-16T12:36:46.389Z",
+      "spotifyUrl": "https://open.spotify.com/track/343P4NOfSrRoWq3l9hNfZl",
+      "duration": 249773,
+      "previewUrl": ""
+    },
+    {
+      "id": "2yvmPp76lP4qG8ulICaGIo",
+      "name": "God knows...",
+      "artist": "涼宮ハルヒ (CV.平野 綾)",
+      "album": "涼宮ハルヒの詰合",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730dd2938fade1b1abe5d03ea9",
+      "playedAt": "2026-10-16T11:01:52.706Z",
+      "spotifyUrl": "https://open.spotify.com/track/2yvmPp76lP4qG8ulICaGIo",
+      "duration": 278908,
+      "previewUrl": ""
+    },
+    {
+      "id": "76X16LOhkwkDXPEMQzkLFV",
+      "name": "Survivor",
+      "artist": "BLUE ENCOUNT",
+      "album": "THE END",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27383e03ace4d7508c828d1fbf8",
+      "playedAt": "2026-10-16T10:57:13.293Z",
+      "spotifyUrl": "https://open.spotify.com/track/76X16LOhkwkDXPEMQzkLFV",
+      "duration": 220013,
+      "previewUrl": ""
+    },
+    {
+      "id": "6yv4uty2hl96Wu0RFoYsxO",
+      "name": "かいじゅうのマーチ",
+      "artist": "Kenshi Yonezu",
+      "album": "BOOTLEG",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
+      "playedAt": "2026-10-16T10:49:12.787Z",
+      "spotifyUrl": "https://open.spotify.com/track/6yv4uty2hl96Wu0RFoYsxO",
+      "duration": 295730,
+      "previewUrl": ""
+    },
+    {
+      "id": "2BBIUV8wIBbqc7HXObzdgH",
+      "name": "愛♡スクリ～ム！",
+      "artist": "AiScReam",
+      "album": "愛♡スクリ～ム！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732590b046b72d6ce5d6703ee7",
+      "playedAt": "2026-10-16T10:44:16.499Z",
+      "spotifyUrl": "https://open.spotify.com/track/2BBIUV8wIBbqc7HXObzdgH",
+      "duration": 262106,
+      "previewUrl": ""
+    },
+    {
+      "id": "6DNcnUEh0bOSZ7uHDclwIS",
+      "name": "ピースサイン - Peace Sign",
+      "artist": "Kenshi Yonezu",
+      "album": "ピースサイン - Peace Sign",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b63f3516605726c0b32218be",
+      "playedAt": "2026-10-16T10:39:52.396Z",
+      "spotifyUrl": "https://open.spotify.com/track/6DNcnUEh0bOSZ7uHDclwIS",
+      "duration": 237289,
+      "previewUrl": ""
+    },
+    {
+      "id": "47eLnWll78mdBJjcgJu34o",
+      "name": "フィクション",
+      "artist": "sumika",
+      "album": "Chime",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27353f800c56583e4b014d5006e",
+      "playedAt": "2026-10-16T10:35:54.604Z",
+      "spotifyUrl": "https://open.spotify.com/track/47eLnWll78mdBJjcgJu34o",
+      "duration": 233253,
+      "previewUrl": ""
+    },
+    {
+      "id": "3IIWswUsUI4BnTWYZU2UsN",
+      "name": "未来のミュージアム",
+      "artist": "Perfume",
+      "album": "未来のミュージアム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2730941cfa94fd14780ab3c27df",
+      "playedAt": "2026-10-16T10:31:54.290Z",
+      "spotifyUrl": "https://open.spotify.com/track/3IIWswUsUI4BnTWYZU2UsN",
+      "duration": 202933,
+      "previewUrl": ""
+    },
+    {
+      "id": "4MorYttxU39XKVoRlCopyz",
+      "name": "QUESTION",
+      "artist": "3年E組うた担(渚&茅野&業&磯貝&前原)",
+      "album": "QUESTION",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0f01a5f8f3e0d9a0f857870",
+      "playedAt": "2026-10-16T10:28:30.863Z",
+      "spotifyUrl": "https://open.spotify.com/track/4MorYttxU39XKVoRlCopyz",
+      "duration": 266226,
+      "previewUrl": ""
+    },
+    {
+      "id": "2rL6MSMZSZg1muJvtMHbBe",
+      "name": "ハレ晴レユカイ～Ver.涼宮ハルヒ～",
+      "artist": "涼宮ハルヒ (CV.平野 綾)",
+      "album": "涼宮ハルヒの憂鬱 キャラクターソングVol.1 涼宮ハルヒ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273237d6ee5f25234e9e71a46b2",
+      "playedAt": "2026-10-16T10:23:28.878Z",
+      "spotifyUrl": "https://open.spotify.com/track/2rL6MSMZSZg1muJvtMHbBe",
+      "duration": 217866,
+      "previewUrl": ""
+    },
+    {
+      "id": "21htkjP5rYjD3CXG3y9wCT",
+      "name": "オレンジ",
+      "artist": "7!!",
+      "album": "アニップス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731e80ff49846a5654e005d411",
+      "playedAt": "2026-10-16T10:21:56.589Z",
+      "spotifyUrl": "https://open.spotify.com/track/21htkjP5rYjD3CXG3y9wCT",
+      "duration": 350200,
+      "previewUrl": ""
+    },
     {
       "id": "4pjQ19ATjMCMFqnEF75O9T",
       "name": "魂のルフラン",
@@ -90,17 +266,6 @@
       "previewUrl": ""
     },
     {
-      "id": "0XT65K4AnBTrjq9x32aj8v",
-      "name": "プレパレード",
-      "artist": "逢坂大河・櫛枝実乃梨・川嶋亜美(釘宮理恵、堀江由衣、喜多村英梨)",
-      "album": "プレパレード",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306304207870db2dcd3affc47",
-      "playedAt": "2026-10-16T09:24:21.977Z",
-      "spotifyUrl": "https://open.spotify.com/track/0XT65K4AnBTrjq9x32aj8v",
-      "duration": 204840,
-      "previewUrl": ""
-    },
-    {
       "id": "4OQq1bcP12GQQXJNupxqfR",
       "name": "again",
       "artist": "YUI",
@@ -164,171 +329,6 @@
       "playedAt": "2026-10-16T09:01:59.214Z",
       "spotifyUrl": "https://open.spotify.com/track/6oT13AZPh97zsU5JJlqhpj",
       "duration": 262566,
-      "previewUrl": ""
-    },
-    {
-      "id": "7onucgU6HHFbtZ9r0jXgmy",
-      "name": "DREAM SOLISTER",
-      "artist": "TRUE",
-      "album": "Joy Heart",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
-      "playedAt": "2026-10-16T08:57:36.112Z",
-      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
-      "duration": 300533,
-      "previewUrl": ""
-    },
-    {
-      "id": "6ElSzFGDDrOnE0ifSf7WMC",
-      "name": "Catch You Catch Me",
-      "artist": "GUMI",
-      "album": "カードキャプターさくら　ソングコレクション 1998.4～1999.2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273193532dece8c9bd455095412",
-      "playedAt": "2026-10-16T08:52:35.048Z",
-      "spotifyUrl": "https://open.spotify.com/track/6ElSzFGDDrOnE0ifSf7WMC",
-      "duration": 225333,
-      "previewUrl": ""
-    },
-    {
-      "id": "5DO71lPVktpmiULXUaOBFN",
-      "name": "This game",
-      "artist": "Konomi Suzuki",
-      "album": "LIFE of DASH",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732cda52425201959d93af5413",
-      "playedAt": "2026-10-16T08:48:49.168Z",
-      "spotifyUrl": "https://open.spotify.com/track/5DO71lPVktpmiULXUaOBFN",
-      "duration": 284080,
-      "previewUrl": ""
-    },
-    {
-      "id": "53Uy2m8yielFV4bkGBybhZ",
-      "name": "全力☆Summer!",
-      "artist": "angela",
-      "album": "Beyond",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
-      "playedAt": "2026-10-16T08:44:04.558Z",
-      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
-      "duration": 233893,
-      "previewUrl": ""
-    },
-    {
-      "id": "2g1k9DguVUrZSPIVzcphlQ",
-      "name": "恋は渾沌の隷也",
-      "artist": "Ushirokarahaiyoritai G",
-      "album": "恋は渾沌の隷也",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732f2c2e38759d3898cffd9a61",
-      "playedAt": "2026-10-16T08:39:52.613Z",
-      "spotifyUrl": "https://open.spotify.com/track/2g1k9DguVUrZSPIVzcphlQ",
-      "duration": 238853,
-      "previewUrl": ""
-    },
-    {
-      "id": "5viFjDGTnrApmUY5c8qkfw",
-      "name": "A Whole New World",
-      "artist": "Mena Massoud, Naomi Scott",
-      "album": "Aladdin (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739986d69836eac008a927b032",
-      "playedAt": "2026-10-16T08:35:53.236Z",
-      "spotifyUrl": "https://open.spotify.com/track/5viFjDGTnrApmUY5c8qkfw",
-      "duration": 175593,
-      "previewUrl": ""
-    },
-    {
-      "id": "5zydI0vRlMI6mrEKgZR8zq",
-      "name": "そばかす",
-      "artist": "JUDY AND MARY",
-      "album": "THE POWER SOURCE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cf8805ce8411879bc7673fb6",
-      "playedAt": "2026-10-16T08:32:57.112Z",
-      "spotifyUrl": "https://open.spotify.com/track/5zydI0vRlMI6mrEKgZR8zq",
-      "duration": 255706,
-      "previewUrl": ""
-    },
-    {
-      "id": "08sjU4Uck88xYCQA3ncPS5",
-      "name": "ファンファーレ",
-      "artist": "sumika",
-      "album": "ファンファーレ / 春夏秋冬",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732f466e097dcb385223a4eaa5",
-      "playedAt": "2026-10-16T08:28:40.887Z",
-      "spotifyUrl": "https://open.spotify.com/track/08sjU4Uck88xYCQA3ncPS5",
-      "duration": 187480,
-      "previewUrl": ""
-    },
-    {
-      "id": "3NxmPorT172gaqyGiOE3bT",
-      "name": "心予報 (feat. 花里みのり&桐谷遥&桃井愛莉&日野森雫&初音ミク)",
-      "artist": "MORE MORE JUMP!",
-      "album": "MORE MORE JUMP！ SEKAI ALBUM vol.2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f680791c4b07572606079ec",
-      "playedAt": "2026-10-16T08:25:32.877Z",
-      "spotifyUrl": "https://open.spotify.com/track/3NxmPorT172gaqyGiOE3bT",
-      "duration": 201373,
-      "previewUrl": ""
-    },
-    {
-      "id": "3OxCaZnYX1pJA7CwV5rZ9O",
-      "name": "Shangri-La",
-      "artist": "angela",
-      "album": "I/O",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fd7669446ea1f0ffc855021",
-      "playedAt": "2026-10-16T08:22:10.969Z",
-      "spotifyUrl": "https://open.spotify.com/track/3OxCaZnYX1pJA7CwV5rZ9O",
-      "duration": 280200,
-      "previewUrl": ""
-    },
-    {
-      "id": "0T4AitQuq8IJhWBWuZwkFA",
-      "name": "群青",
-      "artist": "YOASOBI",
-      "album": "群青",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735235b1b2b4feb3783e12a434",
-      "playedAt": "2026-10-16T08:17:30.239Z",
-      "spotifyUrl": "https://open.spotify.com/track/0T4AitQuq8IJhWBWuZwkFA",
-      "duration": 248444,
-      "previewUrl": ""
-    },
-    {
-      "id": "1deyspHwRUXonRoBZ8eSCZ",
-      "name": "おジャ魔女カーニバル!!",
-      "artist": "茜屋 日海夏, 若井 友希, 久保田 未夢",
-      "album": "カバ☆リス",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f81796145ddbdccdfdd7c7fd",
-      "playedAt": "2026-10-16T08:13:21.215Z",
-      "spotifyUrl": "https://open.spotify.com/track/1deyspHwRUXonRoBZ8eSCZ",
-      "duration": 213080,
-      "previewUrl": ""
-    },
-    {
-      "id": "2hL8ESlWIwfXPHgPaTYTWk",
-      "name": "フィナーレ。",
-      "artist": "eill",
-      "album": "プレロマンス / フィナーレ。",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27346eb5f343959f8f87211553d",
-      "playedAt": "2026-10-16T08:05:02.025Z",
-      "spotifyUrl": "https://open.spotify.com/track/2hL8ESlWIwfXPHgPaTYTWk",
-      "duration": 242367,
-      "previewUrl": ""
-    },
-    {
-      "id": "4MnCYguz7oO1NmZ4ZQulEn",
-      "name": "灼熱スイッチ",
-      "artist": "雀が原中学卓球部",
-      "album": "灼熱スイッチ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339bec7ad804f2a1699fb9477",
-      "playedAt": "2026-10-16T08:00:59.125Z",
-      "spotifyUrl": "https://open.spotify.com/track/4MnCYguz7oO1NmZ4ZQulEn",
-      "duration": 282893,
-      "previewUrl": ""
-    },
-    {
-      "id": "7b6WvfgtlRNR8PmHfNhWl5",
-      "name": "TT",
-      "artist": "TWICE",
-      "album": "TWICEcoaster : LANE2",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739dae955bf89905477e113971",
-      "playedAt": "2026-10-16T07:49:40.514Z",
-      "spotifyUrl": "https://open.spotify.com/track/7b6WvfgtlRNR8PmHfNhWl5",
-      "duration": 212990,
       "previewUrl": ""
     }
   ],
