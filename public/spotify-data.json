@@ -1,6 +1,105 @@
 {
-  "lastUpdated": "2026-10-17T14:37:05.564Z",
+  "lastUpdated": "2026-10-17T19:49:11.980Z",
   "tracks": [
+    {
+      "id": "466C6kwoJHLUJ8VHG98hCY",
+      "name": "Roundabout - 2024 Remaster",
+      "artist": "Yes",
+      "album": "Fragile (Super Deluxe)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735b6ff520a41ff9b0f29f701e",
+      "playedAt": "2026-10-17T16:36:14.690Z",
+      "spotifyUrl": "https://open.spotify.com/track/466C6kwoJHLUJ8VHG98hCY",
+      "duration": 516245,
+      "previewUrl": ""
+    },
+    {
+      "id": "4LlCnZLrF6Ri7bK5gwrpG5",
+      "name": "呪われた海賊たち",
+      "artist": "Antoine Barry",
+      "album": "パイレーツ・オブ・カリビアン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27359bd349ad0b72ea53d9cfcee",
+      "playedAt": "2026-10-17T16:28:18.383Z",
+      "spotifyUrl": "https://open.spotify.com/track/4LlCnZLrF6Ri7bK5gwrpG5",
+      "duration": 94418,
+      "previewUrl": ""
+    },
+    {
+      "id": "0XT65K4AnBTrjq9x32aj8v",
+      "name": "プレパレード",
+      "artist": "逢坂大河・櫛枝実乃梨・川嶋亜美(釘宮理恵、堀江由衣、喜多村英梨)",
+      "album": "プレパレード",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306304207870db2dcd3affc47",
+      "playedAt": "2026-10-17T15:01:39.247Z",
+      "spotifyUrl": "https://open.spotify.com/track/0XT65K4AnBTrjq9x32aj8v",
+      "duration": 204840,
+      "previewUrl": ""
+    },
+    {
+      "id": "6G34wfDOMVdWfJ6lGM9LNL",
+      "name": "くちづけDiamond",
+      "artist": "WEAVER",
+      "album": "Night Rainbow",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27325e1ee1be10addc80f6cdbdb",
+      "playedAt": "2026-10-17T14:57:57.056Z",
+      "spotifyUrl": "https://open.spotify.com/track/6G34wfDOMVdWfJ6lGM9LNL",
+      "duration": 236720,
+      "previewUrl": ""
+    },
+    {
+      "id": "3OxCaZnYX1pJA7CwV5rZ9O",
+      "name": "Shangri-La",
+      "artist": "angela",
+      "album": "I/O",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fd7669446ea1f0ffc855021",
+      "playedAt": "2026-10-17T14:53:59.808Z",
+      "spotifyUrl": "https://open.spotify.com/track/3OxCaZnYX1pJA7CwV5rZ9O",
+      "duration": 280200,
+      "previewUrl": ""
+    },
+    {
+      "id": "06XQvnJb53SUYmlWIhUXUi",
+      "name": "怪物",
+      "artist": "YOASOBI",
+      "album": "怪物",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b2efc5e5f5922ca1f1b88928",
+      "playedAt": "2026-10-17T14:49:19.089Z",
+      "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
+      "duration": 206000,
+      "previewUrl": ""
+    },
+    {
+      "id": "2hL8ESlWIwfXPHgPaTYTWk",
+      "name": "フィナーレ。",
+      "artist": "eill",
+      "album": "プレロマンス / フィナーレ。",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27346eb5f343959f8f87211553d",
+      "playedAt": "2026-10-17T14:45:52.558Z",
+      "spotifyUrl": "https://open.spotify.com/track/2hL8ESlWIwfXPHgPaTYTWk",
+      "duration": 242367,
+      "previewUrl": ""
+    },
+    {
+      "id": "2LjozKhOvVNAsir4E4WnKK",
+      "name": "ハレ晴レユカイ",
+      "artist": "Aya Hirano, 茅原実里, 後藤邑子",
+      "album": "涼宮ハルヒの記憶",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27300b115712159698f127831f8",
+      "playedAt": "2026-10-17T14:41:49.668Z",
+      "spotifyUrl": "https://open.spotify.com/track/2LjozKhOvVNAsir4E4WnKK",
+      "duration": 217866,
+      "previewUrl": ""
+    },
+    {
+      "id": "66DAA9F0AFPpDvezYunqm3",
+      "name": "ゴールデンタイムラバー",
+      "artist": "Sukima Switch",
+      "album": "ゴールデンタイムラバー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27353cdee3f51c9562dd7e4210f",
+      "playedAt": "2026-10-17T14:38:11.284Z",
+      "spotifyUrl": "https://open.spotify.com/track/66DAA9F0AFPpDvezYunqm3",
+      "duration": 340800,
+      "previewUrl": ""
+    },
     {
       "id": "08Eb6W0AC4WV4hMFATZqoY",
       "name": "可愛くてごめん",
@@ -230,105 +329,6 @@
       "playedAt": "2026-10-17T11:01:51.270Z",
       "spotifyUrl": "https://open.spotify.com/track/4Z9n913mHKPWbsD0n5gEwF",
       "duration": 58189,
-      "previewUrl": ""
-    },
-    {
-      "id": "30lXCrnKs5TJJOuSVwiQn1",
-      "name": "Zoltraak",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
-      "playedAt": "2026-10-17T11:00:52.551Z",
-      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
-      "duration": 140664,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Xtsv7BUMrNodQWH2JPOc0",
-      "name": "Caravan",
-      "artist": "John Wasson",
-      "album": "Whiplash (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fce4a71d3973d3bbb12e8d7",
-      "playedAt": "2026-10-17T10:58:31.361Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Xtsv7BUMrNodQWH2JPOc0",
-      "duration": 555000,
-      "previewUrl": ""
-    },
-    {
-      "id": "08QaHlMPWuO5PUxjl61bXn",
-      "name": "He's a Pirate",
-      "artist": "Klaus Badelt",
-      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27338786c7492ac252797bb2648",
-      "playedAt": "2026-10-17T10:48:59.191Z",
-      "spotifyUrl": "https://open.spotify.com/track/08QaHlMPWuO5PUxjl61bXn",
-      "duration": 90426,
-      "previewUrl": ""
-    },
-    {
-      "id": "6RxsExIM2y163Iy1Qst36S",
-      "name": "あの夏へ",
-      "artist": "Joe Hisaishi",
-      "album": "千と千尋の神隠し サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27326174e356765f36b1ba996be",
-      "playedAt": "2026-10-17T10:47:28.238Z",
-      "spotifyUrl": "https://open.spotify.com/track/6RxsExIM2y163Iy1Qst36S",
-      "duration": 189800,
-      "previewUrl": ""
-    },
-    {
-      "id": "0PH3OkM1QnIyb44VhFVbca",
-      "name": "BATTLE WITHOUT HONOR OR HUMANITY",
-      "artist": "HOTEI",
-      "album": "エレクトリック・サムライ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738068e6b8fdaefa1f2a1543ea",
-      "playedAt": "2026-10-17T10:44:17.912Z",
-      "spotifyUrl": "https://open.spotify.com/track/0PH3OkM1QnIyb44VhFVbca",
-      "duration": 149520,
-      "previewUrl": ""
-    },
-    {
-      "id": "110uH4IxKOINJBWCy9J23k",
-      "name": "One Piece (1999) - Overtaken",
-      "artist": "Geek Music",
-      "album": "The Anime Collection Volume One",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731d56e46f3ebfe89377b035a6",
-      "playedAt": "2026-10-17T10:37:22.983Z",
-      "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
-      "duration": 120212,
-      "previewUrl": ""
-    },
-    {
-      "id": "1n8NKQRg8LVHy7oUhUgbFF",
-      "name": "Hedwig's Theme",
-      "artist": "John Williams",
-      "album": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27313f982aa5c43146c3d2c1964",
-      "playedAt": "2026-10-17T10:35:22.244Z",
-      "spotifyUrl": "https://open.spotify.com/track/1n8NKQRg8LVHy7oUhUgbFF",
-      "duration": 309093,
-      "previewUrl": ""
-    },
-    {
-      "id": "0cm6cAtRu0C0sEZzDjZFsx",
-      "name": "Discombobulate",
-      "artist": "Hans Zimmer",
-      "album": "Sherlock Holmes (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273796560c266f28ba4841a8df4",
-      "playedAt": "2026-10-17T10:30:12.630Z",
-      "spotifyUrl": "https://open.spotify.com/track/0cm6cAtRu0C0sEZzDjZFsx",
-      "duration": 145080,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LChvDjlhPXmp1DhIfejxv",
-      "name": "スラッグ溪谷の朝",
-      "artist": "Joe Hisaishi",
-      "album": "天空の城ラピュタ サウンドトラック ～飛行石の謎～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6bafda9334bda20e2e5e447",
-      "playedAt": "2026-10-17T10:27:47.024Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LChvDjlhPXmp1DhIfejxv",
-      "duration": 184293,
       "previewUrl": ""
     }
   ],
