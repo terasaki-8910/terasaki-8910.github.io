@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-10-18T10:04:05.295Z",
+  "lastUpdated": "2026-10-18T15:04:13.056Z",
   "tracks": [
+    {
+      "id": "343P4NOfSrRoWq3l9hNfZl",
+      "name": "Sparkling Daydream",
+      "artist": "ZAQ",
+      "album": "NOISY Lab.",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27373d6f1bb38a4581030995c34",
+      "playedAt": "2026-10-18T13:08:17.613Z",
+      "spotifyUrl": "https://open.spotify.com/track/343P4NOfSrRoWq3l9hNfZl",
+      "duration": 249773,
+      "previewUrl": ""
+    },
+    {
+      "id": "4EkbGJChszyxhEP0bIwBSZ",
+      "name": "空色デイズ",
+      "artist": "Shoko Nakagawa",
+      "album": "しょこたん☆べすと――(°∀°)――!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735015c8ee13ce0a321269d199",
+      "playedAt": "2026-10-18T12:38:30.022Z",
+      "spotifyUrl": "https://open.spotify.com/track/4EkbGJChszyxhEP0bIwBSZ",
+      "duration": 252173,
+      "previewUrl": ""
+    },
+    {
+      "id": "6u6MGAF5TQ0PvQf5rkf5zX",
+      "name": "ツキアカリのミチシルベ",
+      "artist": "Stereopony",
+      "album": "OVER THE BORDER",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27371a1d519da617e05c406a07c",
+      "playedAt": "2026-10-18T12:34:17.327Z",
+      "spotifyUrl": "https://open.spotify.com/track/6u6MGAF5TQ0PvQf5rkf5zX",
+      "duration": 236800,
+      "previewUrl": ""
+    },
     {
       "id": "0XT65K4AnBTrjq9x32aj8v",
       "name": "プレパレード",
@@ -296,39 +329,6 @@
       "playedAt": "2026-10-17T14:45:52.558Z",
       "spotifyUrl": "https://open.spotify.com/track/2hL8ESlWIwfXPHgPaTYTWk",
       "duration": 242367,
-      "previewUrl": ""
-    },
-    {
-      "id": "2LjozKhOvVNAsir4E4WnKK",
-      "name": "ハレ晴レユカイ",
-      "artist": "Aya Hirano, 茅原実里, 後藤邑子",
-      "album": "涼宮ハルヒの記憶",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27300b115712159698f127831f8",
-      "playedAt": "2026-10-17T14:41:49.668Z",
-      "spotifyUrl": "https://open.spotify.com/track/2LjozKhOvVNAsir4E4WnKK",
-      "duration": 217866,
-      "previewUrl": ""
-    },
-    {
-      "id": "66DAA9F0AFPpDvezYunqm3",
-      "name": "ゴールデンタイムラバー",
-      "artist": "Sukima Switch",
-      "album": "ゴールデンタイムラバー",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27353cdee3f51c9562dd7e4210f",
-      "playedAt": "2026-10-17T14:38:11.284Z",
-      "spotifyUrl": "https://open.spotify.com/track/66DAA9F0AFPpDvezYunqm3",
-      "duration": 340800,
-      "previewUrl": ""
-    },
-    {
-      "id": "08Eb6W0AC4WV4hMFATZqoY",
-      "name": "可愛くてごめん",
-      "artist": "HoneyWorks, ちゅーたん(CV:早見沙織)",
-      "album": "ねぇ、好きって痛いよ。～告白実行委員会キャラクターソング集～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737a7e7992bf1353777cba99e5",
-      "playedAt": "2026-10-17T14:32:29.961Z",
-      "spotifyUrl": "https://open.spotify.com/track/08Eb6W0AC4WV4hMFATZqoY",
-      "duration": 219840,
       "previewUrl": ""
     }
   ],
