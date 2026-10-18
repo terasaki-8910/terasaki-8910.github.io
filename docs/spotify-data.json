@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-10-18T15:04:13.056Z",
+  "lastUpdated": "2026-10-18T19:50:22.869Z",
   "tracks": [
+    {
+      "id": "3gbUPOTnqFjXy5bPlEtXFm",
+      "name": "優しさの理由",
+      "artist": "ChouCho",
+      "album": "flyleaf",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e390b0d50610c5d1e7c05e8b",
+      "playedAt": "2026-10-18T15:54:49.424Z",
+      "spotifyUrl": "https://open.spotify.com/track/3gbUPOTnqFjXy5bPlEtXFm",
+      "duration": 254226,
+      "previewUrl": ""
+    },
     {
       "id": "343P4NOfSrRoWq3l9hNfZl",
       "name": "Sparkling Daydream",
@@ -318,17 +329,6 @@
       "playedAt": "2026-10-17T14:49:19.089Z",
       "spotifyUrl": "https://open.spotify.com/track/06XQvnJb53SUYmlWIhUXUi",
       "duration": 206000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2hL8ESlWIwfXPHgPaTYTWk",
-      "name": "フィナーレ。",
-      "artist": "eill",
-      "album": "プレロマンス / フィナーレ。",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27346eb5f343959f8f87211553d",
-      "playedAt": "2026-10-17T14:45:52.558Z",
-      "spotifyUrl": "https://open.spotify.com/track/2hL8ESlWIwfXPHgPaTYTWk",
-      "duration": 242367,
       "previewUrl": ""
     }
   ],
