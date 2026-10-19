@@ -1,6 +1,50 @@
 {
-  "lastUpdated": "2026-10-19T11:31:08.713Z",
+  "lastUpdated": "2026-10-19T17:55:45.643Z",
   "tracks": [
+    {
+      "id": "2g1k9DguVUrZSPIVzcphlQ",
+      "name": "恋は渾沌の隷也",
+      "artist": "Ushirokarahaiyoritai G",
+      "album": "恋は渾沌の隷也",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732f2c2e38759d3898cffd9a61",
+      "playedAt": "2026-10-19T13:29:09.404Z",
+      "spotifyUrl": "https://open.spotify.com/track/2g1k9DguVUrZSPIVzcphlQ",
+      "duration": 238853,
+      "previewUrl": ""
+    },
+    {
+      "id": "6NrLhZLj28EU0MC9tUMRsI",
+      "name": "ギミー!レボリューション",
+      "artist": "Maaya Uchida",
+      "album": "ギミー!レボリューション 通常盤",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27355ed1839c2986e2e9a9ad3b1",
+      "playedAt": "2026-10-19T13:23:52.858Z",
+      "spotifyUrl": "https://open.spotify.com/track/6NrLhZLj28EU0MC9tUMRsI",
+      "duration": 235706,
+      "previewUrl": ""
+    },
+    {
+      "id": "1c7alUM5wJn6O0rG3Gio7I",
+      "name": "メリッサ",
+      "artist": "PornoGraffitti",
+      "album": "PORNO GRAFFITTI BEST BLUE'S",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27342d99967c387a76d54bed01f",
+      "playedAt": "2026-10-19T12:56:17.890Z",
+      "spotifyUrl": "https://open.spotify.com/track/1c7alUM5wJn6O0rG3Gio7I",
+      "duration": 274773,
+      "previewUrl": ""
+    },
+    {
+      "id": "1sMagdJx1dkLn9p5j3lf9k",
+      "name": "空中散歩",
+      "artist": "Joe Hisaishi",
+      "album": "ハウルの動く城 サウンドトラック",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315e2471f4af3fe85e339b5d6",
+      "playedAt": "2026-10-19T12:53:08.758Z",
+      "spotifyUrl": "https://open.spotify.com/track/1sMagdJx1dkLn9p5j3lf9k",
+      "duration": 134800,
+      "previewUrl": ""
+    },
     {
       "id": "5EbGCyliRgdpX00MtNOPvT",
       "name": "Back to the Future",
@@ -285,50 +329,6 @@
       "playedAt": "2026-10-18T08:40:38.344Z",
       "spotifyUrl": "https://open.spotify.com/track/7EvzUhU6zpdJxAsjNQZ1gN",
       "duration": 269173,
-      "previewUrl": ""
-    },
-    {
-      "id": "4ejVSv31daoRyDMffmVT3k",
-      "name": "かくしん的☆めたまるふぉ〜ぜっ!",
-      "artist": "土間うまる(CV:田中あいみ)",
-      "album": "かくしん的☆めたまるふぉ〜ぜっ!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dfc9600004dfcf8fc830a325",
-      "playedAt": "2026-10-18T08:36:08.636Z",
-      "spotifyUrl": "https://open.spotify.com/track/4ejVSv31daoRyDMffmVT3k",
-      "duration": 211969,
-      "previewUrl": ""
-    },
-    {
-      "id": "53Uy2m8yielFV4bkGBybhZ",
-      "name": "全力☆Summer!",
-      "artist": "angela",
-      "album": "Beyond",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
-      "playedAt": "2026-10-18T08:32:36.169Z",
-      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
-      "duration": 233893,
-      "previewUrl": ""
-    },
-    {
-      "id": "5r7egnfTIQjaKSGREhIky9",
-      "name": "Formula 1 Theme",
-      "artist": "Brian Tyler",
-      "album": "Formula 1 Theme",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273873a7854fcfe9fbf1ea1923d",
-      "playedAt": "2026-10-18T08:28:43.097Z",
-      "spotifyUrl": "https://open.spotify.com/track/5r7egnfTIQjaKSGREhIky9",
-      "duration": 194351,
-      "previewUrl": ""
-    },
-    {
-      "id": "7hZ2wV0F3Ca17GTSYHH2f1",
-      "name": "メトロシティ",
-      "artist": "imase, natori",
-      "album": "メトロシティ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27375b7de023f3b78a63f146dac",
-      "playedAt": "2026-10-18T08:28:17.765Z",
-      "spotifyUrl": "https://open.spotify.com/track/7hZ2wV0F3Ca17GTSYHH2f1",
-      "duration": 200511,
       "previewUrl": ""
     }
   ],
