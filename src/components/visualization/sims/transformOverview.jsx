@@ -12,10 +12,14 @@ import { useStacked } from './transformHooks.js'
 import { clamp, fmt, fmtDeg, toDeg, toRad, wrapDeg } from './transformCommon.js'
 import { inRect } from './transformMesh.js'
 import { drawOverview, sceneModel, handOnScreen } from './transformScene.js'
+import { orbitPosition } from './transformCamera.js'
 import {
   T_END,
   FIXED_DT,
   CAMERA_DEFAULT,
+  CAMERA_RANGE,
+  CAMERA_TARGET,
+  clampCameraPosition,
   OUTSIDE_DEFAULT,
   buildPath,
   keyframeInfo,
@@ -26,12 +30,13 @@ import {
 // 節「変換・投影・補間・IK」の全体のシミュレーション: 2 関節の腕のキーフレームアニメーションを、カメラで撮って画面に描く。
 //   キーフレーム → 補間(スプライン)→ 手先の目標 → IK → 関節の角度 → 腕を 3 次元に置く(モデル変換)
 //   → カメラで撮る(ビュー・投影)→ 画面に描く(ビューポート)
-// 1 つの canvas を「外から見た図」(ドラッグで見る向きを回せる)と「カメラから見た絵」に分ける。
+// 1 つの canvas を「外から見た図」(ドラッグで見る向きを回せる)と「カメラから見た絵」(ドラッグでカメラを回せる)に分ける。
 // 狭い画面では上下に並べる。計算は transformArm.js(spline・ik・mat4)と transformCamera.js・transformMesh.js(projection)で、
 // 絵は transformScene.js。ここは状態・操作・時間の進め方。
 const ASPECT_SIDE = 2 // 左右に並べるとき(2 枚の絵がそれぞれ縦横 1:1 ほど)
 const ASPECT_STACKED = 0.78 // 上下に並べるとき
 const UI_INTERVAL = 0.066 // 時刻のスライダーを書き換える間隔 [s](毎フレームは React を動かさない)
+const CAMERA_PITCH = { pitchMin: toRad(-10), pitchMax: toRad(80) } // カメラから見た絵をドラッグするときの仰角の範囲
 
 export default function TransformOverview() {
   const [time, setTime] = useState(0)
@@ -91,17 +96,39 @@ export default function TransformOverview() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cam, yawDeg, pitchDeg, stacked, redraw])
 
-  // 外から見た図をドラッグして回す(つかめるのは外から見た図の中だけ)
-  const outsideRect = () => {
+  // ドラッグ: 外から見た図は見る向きを回し、カメラから見た絵はカメラを見る点のまわりで回す(どちらも同じ向きと速さ)。
+  // カメラは、押したときの位置から、押してからの動きの合計だけ回す(位置を 0.01 m に丸めても誤差がたまらない)
+  const panelAt = (x, y) => {
     const { width, height } = sizeRef.current
-    return splitPanels(width, height, params.current.stacked).outside.rect
+    const panels = splitPanels(width, height, params.current.stacked)
+    if (inRect(panels.outside.rect, x, y)) return 'outside'
+    if (inRect(panels.camera.rect, x, y)) return 'camera'
+    return null
   }
+  const drag = useRef(null)
   usePointerDrag(canvasRef, {
-    canGrab: ({ x, y }) => inRect(outsideRect(), x, y),
-    onDown: ({ x, y }) => (inRect(outsideRect(), x, y) ? undefined : false),
+    canGrab: ({ x, y }) => panelAt(x, y) !== null,
+    onDown: ({ x, y }) => {
+      const panel = panelAt(x, y)
+      if (!panel) return false
+      const { cam: c } = params.current
+      drag.current = { panel, start: [c.x, c.y, c.z], sx: 0, sy: 0 }
+    },
     onMove: ({ dx, dy }) => {
-      setYawDeg((v) => Math.round(wrapDeg(v - dx * 0.5)))
-      setPitchDeg((v) => Math.round(clamp(v + dy * 0.4, 2, 85)))
+      const d = drag.current
+      if (!d) return
+      if (d.panel === 'outside') {
+        setYawDeg((v) => Math.round(wrapDeg(v - dx * 0.5)))
+        setPitchDeg((v) => Math.round(clamp(v + dy * 0.4, 2, 85)))
+        return
+      }
+      d.sx += dx
+      d.sy += dy
+      const position = orbitPosition(d.start, CAMERA_TARGET, toRad(-d.sx * 0.5), toRad(d.sy * 0.4), CAMERA_PITCH)
+      setCam((c) => ({ ...c, ...clampCameraPosition(position) }))
+    },
+    onUp: () => {
+      drag.current = null
     },
   })
 
@@ -161,7 +188,7 @@ export default function TransformOverview() {
           role="application"
           tabIndex={0}
           onKeyDown={onKeyDown}
-          label="2 関節の腕がキーフレームの位置をなぞって動く。外から見た図はドラッグか矢印キーで見る向きを回せる。カメラから見た絵は、カメラの位置と視野角で変わる"
+          label="2 関節の腕がキーフレームの位置をなぞって動く。外から見た図はドラッグか矢印キーで見る向きを回せる。カメラから見た絵は、ドラッグするとカメラが腕のまわりを回り、カメラの位置と視野角で変わる"
         />
       }
       legend={<SimLegend ref={legend} items={legendItems} />}
@@ -182,10 +209,10 @@ export default function TransformOverview() {
             format={(v) => v.toFixed(2)}
             onChange={scrub}
           />
-          <ControlGroup label="カメラ（右の絵を撮る）">
-            <ParamSlider symbol="x" label="位置 x" unit="m" value={cam.x} min={-5} max={5} step={0.1} onChange={setCamValue('x')} format={(v) => v.toFixed(1)} />
-            <ParamSlider symbol="y" label="位置 y（高さ）" unit="m" value={cam.y} min={-0.5} max={4} step={0.1} onChange={setCamValue('y')} format={(v) => v.toFixed(1)} />
-            <ParamSlider symbol="z" label="位置 z（手前）" unit="m" value={cam.z} min={1.5} max={9} step={0.1} onChange={setCamValue('z')} format={(v) => v.toFixed(1)} />
+          <ControlGroup label="カメラ（撮った絵をドラッグしても回る）">
+            <ParamSlider symbol="x" label="位置 x" unit="m" value={cam.x} min={CAMERA_RANGE.x[0]} max={CAMERA_RANGE.x[1]} step={0.1} onChange={setCamValue('x')} format={(v) => v.toFixed(1)} />
+            <ParamSlider symbol="y" label="位置 y（高さ）" unit="m" value={cam.y} min={CAMERA_RANGE.y[0]} max={CAMERA_RANGE.y[1]} step={0.1} onChange={setCamValue('y')} format={(v) => v.toFixed(1)} />
+            <ParamSlider symbol="z" label="位置 z（手前）" unit="m" value={cam.z} min={CAMERA_RANGE.z[0]} max={CAMERA_RANGE.z[1]} step={0.1} onChange={setCamValue('z')} format={(v) => v.toFixed(1)} />
             <ParamSlider symbol="\theta_{\mathrm{fov}}" label="縦の視野角" unit="°" value={cam.fovDeg} min={20} max={90} step={1} onChange={setCamValue('fovDeg')} />
           </ControlGroup>
           <ControlGroup label="外から見る向き（図をドラッグしても回る）">
