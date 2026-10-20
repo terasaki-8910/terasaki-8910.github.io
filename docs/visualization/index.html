@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="3D の変換・補間・IK、剛体と衝突、バネ-質点系と位置ベース法の布、SPH の流体を、全体のシミュレーションと計算ごとの小さなシミュレーションで動かして確かめるページ。実装は JavaScript。" />
+    <meta name="description" content="3D の変換・補間・IK、剛体と衝突、バネ-質点系と位置ベース法の布、SPH の流体、格子で解くナビエ・ストークス方程式を、全体のシミュレーションと計算ごとの小さなシミュレーションで動かして確かめるページ。実装は JavaScript。" />
     <title>ビジュアライゼーションの授業における物理シミュレーションの実装例 | @オーバーライド</title>
     <link rel="canonical" href="https://fuyuiro.pages.dev/visualization/">
 
@@ -22,7 +22,7 @@
 
     <!-- Open Graph (SNSシェア用) -->
     <meta property="og:title" content="ビジュアライゼーションの授業における物理シミュレーションの実装例">
-    <meta property="og:description" content="全体のシミュレーションを動かし、それを作る計算を 1 つずつ動かして確かめ、組み合わせて全体になるまでをたどる。">
+    <meta property="og:description" content="変換・IK、剛体、布、SPH の流体、格子で解くナビエ・ストークス方程式を動かして確かめる。">
     <meta property="og:image" content="https://fuyuiro.pages.dev/icons/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -32,7 +32,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ビジュアライゼーションの授業における物理シミュレーションの実装例">
-    <meta name="twitter:description" content="全体のシミュレーションを動かし、それを作る計算を 1 つずつ動かして確かめ、組み合わせて全体になるまでをたどる。">
+    <meta name="twitter:description" content="変換・IK、剛体、布、SPH の流体、格子で解くナビエ・ストークス方程式を動かして確かめる。">
     <meta name="twitter:image" content="https://fuyuiro.pages.dev/icons/og-image.png">
 
     <!-- 共有ヘッダーCSS -->
@@ -61,7 +61,7 @@
       "@type": "WebApplication",
       "name": "ビジュアライゼーションの授業における物理シミュレーションの実装例",
       "url": "https://fuyuiro.pages.dev/visualization/",
-      "description": "変換・補間・IK、剛体と衝突、バネ-質点系と位置ベース法の布、SPH の流体を、全体のシミュレーションと計算ごとの小さなシミュレーションで、パラメータを変えて動かせるページ。",
+      "description": "変換・補間・IK、剛体と衝突、バネ-質点系と位置ベース法の布、SPH の流体、格子で解くナビエ・ストークス方程式を、全体のシミュレーションと計算ごとの小さなシミュレーションで、パラメータを変えて動かせるページ。",
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Any",
       "inLanguage": "ja",
@@ -73,15 +73,15 @@
       }
     }
     </script>
-    <script type="module" crossorigin src="/assets/visualization-DBjDmu5j.js"></script>
+    <script type="module" crossorigin src="/assets/visualization-Pa5jGkP6.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/blockFx-B-pr8Zfi.js">
     <link rel="modulepreload" crossorigin href="/assets/index-D02qiZAk.js">
     <link rel="modulepreload" crossorigin href="/assets/PageBackground-D1SyezlD.js">
     <link rel="modulepreload" crossorigin href="/assets/preload-helper-D7HrI6pR.js">
     <link rel="modulepreload" crossorigin href="/assets/index-Cz-zfCKe.js">
-    <link rel="modulepreload" crossorigin href="/assets/axes-BTkSktIz.js">
+    <link rel="modulepreload" crossorigin href="/assets/axes-DyFTKY8t.js">
     <link rel="stylesheet" crossorigin href="/assets/index-ChZ93x9y.css">
-    <link rel="stylesheet" crossorigin href="/assets/visualization-9vaK4ILa.css">
+    <link rel="stylesheet" crossorigin href="/assets/visualization-3RN7de_Y.css">
   </head>
   <body>
     <div id="root">
@@ -91,7 +91,7 @@
         <h1>ビジュアライゼーションの授業における物理シミュレーションの実装例</h1>
         <p>
           全体のシミュレーションを動かし、それを作る計算を 1 つずつ動かして確かめ、組み合わせて全体になるまでをたどるページです。
-          変換・投影・補間・逆運動学、剛体と衝突、バネ-質点系と位置ベース法の布、SPH(粒子法)の流体の4つを、
+          変換・投影・補間・逆運動学、剛体と衝突、バネ-質点系と位置ベース法の布、SPH(粒子法)の流体、ナビエ・ストークス方程式(格子)の5つを、
           全体のシミュレーション、計算ごとの小さなシミュレーションと式、組み合わせ、実装のコードの順に並べています。
           式は JavaScript で実装し、パラメータを変えて動かせます。
         </p>
@@ -99,6 +99,7 @@
         <h2>剛体と衝突</h2>
         <h2>布(バネ-質点系と位置ベース法)</h2>
         <h2>流体(SPH)</h2>
+        <h2>ナビエ・ストークス方程式(格子)</h2>
       </div>
     </div>
   </body>
