@@ -77,7 +77,7 @@ test('全体: 凡例に軸・時刻・時間刻み・キーフレーム・カメ
   const h = html.transformOverview
   for (const t of ['軸 x・y・z', '時刻', '時間刻み', 'キーフレーム', 'カメラの位置', '視野角', '手先の画面位置']) assert.ok(h.includes(t), t)
   assert.ok(h.includes('一時停止') || h.includes('再生'), '再生ボタン')
-  assert.ok(h.includes('外から見る向き') && h.includes('カメラ（右の絵を撮る）'))
+  assert.ok(h.includes('外から見る向き') && h.includes('カメラ（撮った絵をドラッグしても回る）'))
 })
 
 test('段階 1〜3: 4×4 の行列の表と、点・向きの計算が出る。段階 2 は R と S、段階 3 は T·R·S と S·R·T', () => {

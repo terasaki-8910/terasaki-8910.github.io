@@ -9,6 +9,7 @@ import {
   frustumCorners,
   pixelRay,
   rayPlaneZ,
+  orbitPosition,
 } from '../../src/components/visualization/sims/transformCamera.js'
 import { multiply, transformPoint } from '../../src/utils/vis/mat4.js'
 import { projectPoint, ndcFromPixel } from '../../src/components/visualization/sims/transformMesh.js'
@@ -90,4 +91,25 @@ test('光線が平面と平行、または平面がカメラの後ろなら交�
   assert.equal(rayPlaneZ(ray, 1), null) // 光線は z 一定(平面と平行)
   const front = orbitPose({ target: [0, 0, 0], yaw: 0, pitch: 0, dist: 5 })
   assert.equal(rayPlaneZ(pixelRay(front, { fov: deg(45), aspect: 1 }, 0, 0), 9), null) // 平面はカメラの後ろ
+})
+
+test('orbitPosition: 見る点からの距離は変わらず、仰角は範囲に収まる', () => {
+  const target = [0, 0.3, 0]
+  const start = [2, 1.2, 5.5]
+  const dist = Math.hypot(start[0] - target[0], start[1] - target[1], start[2] - target[2])
+  const p = orbitPosition(start, target, deg(-40), deg(25))
+  assert.ok(near(Math.hypot(p[0] - target[0], p[1] - target[1], p[2] - target[2]), dist, 1e-9))
+  const top = lookAtPose(orbitPosition(start, target, 0, deg(200), { pitchMin: deg(-10), pitchMax: deg(80) }), target)
+  assert.ok(near(top.pitch, deg(80), 1e-9))
+})
+
+test('orbitPosition: 回す量が 0 なら元の位置。dYaw < 0 でカメラは自分の左(右向きの逆)へ動く', () => {
+  const target = [0, 0.3, 0]
+  const start = [2, 1.2, 5.5]
+  assert.ok(nearArr(orbitPosition(start, target, 0, 0), start, 1e-9))
+  const pose = lookAtPose(start, target)
+  const right = transformPoint(pose.Vinv, [1, 0, 0, 0]).slice(0, 3) // カメラの右の向き(世界)
+  const p = orbitPosition(start, target, deg(-1), 0)
+  const moved = p.map((v, i) => v - start[i])
+  assert.ok(moved[0] * right[0] + moved[1] * right[1] + moved[2] * right[2] < 0)
 })

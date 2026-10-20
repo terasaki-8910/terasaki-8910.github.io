@@ -33,6 +33,13 @@ export const KEY_LABELS = [1, 2, 3, 4, 5, 6, 1] // 表示する番号(7 つ目�
 
 // 画面に出す設定の初期値
 export const CAMERA_DEFAULT = { x: 2, y: 1.2, z: 5.5, fovDeg: 45 }
+// カメラの位置を動かせる範囲 [m](スライダーとドラッグで同じ)。z の下限で、カメラは腕より手前に留まる
+export const CAMERA_RANGE = { x: [-5, 5], y: [-0.5, 4], z: [1.5, 9] }
+// 位置 [x, y, z] を CAMERA_RANGE に収めて、0.01 m に丸める
+export function clampCameraPosition([x, y, z]) {
+  const fit = (v, [lo, hi]) => Math.round(Math.min(hi, Math.max(lo, v)) * 100) / 100
+  return { x: fit(x, CAMERA_RANGE.x), y: fit(y, CAMERA_RANGE.y), z: fit(z, CAMERA_RANGE.z) }
+}
 // 外から見るカメラ: 腕とカメラの両方が入るよう、腕とカメラのあいだの点 target を見る
 export const OUTSIDE_DEFAULT = { target: [0.6, 0.2, 1.9], yaw: toRad(40), pitch: toRad(26), dist: 10.5, fov: toRad(38) }
 

@@ -20,6 +20,9 @@ import {
   splitPanels,
   isStacked,
   PANEL_TITLE_H,
+  CAMERA_DEFAULT,
+  CAMERA_RANGE,
+  clampCameraPosition,
 } from '../../src/components/visualization/sims/transformArm.js'
 import { L1, L2 } from '../../src/components/visualization/sims/transformIk.js'
 import { fk2 } from '../../src/utils/vis/ik.js'
@@ -145,4 +148,11 @@ test('isStacked: 狭い幅は上下', () => {
   assert.equal(isStacked(479), true)
   assert.equal(isStacked(480), false)
   assert.equal(isStacked(1000), false)
+})
+
+test('clampCameraPosition: 範囲の外は端に、内側は 0.01 m に丸める。初期位置は範囲の内側', () => {
+  assert.deepEqual(clampCameraPosition([-7, 5, 0.2]), { x: CAMERA_RANGE.x[0], y: CAMERA_RANGE.y[1], z: CAMERA_RANGE.z[0] })
+  assert.deepEqual(clampCameraPosition([1.234, -0.456, 3.0049]), { x: 1.23, y: -0.46, z: 3 })
+  const { x, y, z } = CAMERA_DEFAULT
+  assert.deepEqual(clampCameraPosition([x, y, z]), { x, y, z })
 })

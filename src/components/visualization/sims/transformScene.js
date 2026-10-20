@@ -177,7 +177,7 @@ export function drawOverview({ ctx, width, height, colors }, state) {
     ctx.textBaseline = 'bottom'
     ctx.fillText(`${Math.round(rect.width)} × ${Math.round(rect.height)} px`, rect.left + rect.width - 8, rect.top + rect.height - 6)
     ctx.restore()
-    title(ctx, panels.camera, 'カメラから見た絵', colors)
+    title(ctx, panels.camera, 'カメラから見た絵（ドラッグでカメラを回す）', colors)
   }
 
   // 2 つの枠の仕切り

@@ -33,6 +33,15 @@ export function lookAtPose(position, target) {
   })
 }
 
+// 位置 position のカメラを、見る点 target のまわりで回した位置(距離は変えない)。
+// 角度に直して(lookAtPose)方位角に dYaw、仰角に dPitch を足し、仰角は [pitchMin, pitchMax] に収めて位置に戻す。
+// dYaw < 0 でカメラは自分の左へ動く(絵の中の物は右へ動く)
+export function orbitPosition(position, target, dYaw, dPitch, { pitchMin = -1.5, pitchMax = 1.5 } = {}) {
+  const pose = lookAtPose(position, target)
+  const pitch = Math.min(pitchMax, Math.max(pitchMin, pose.pitch + dPitch))
+  return orbitPose({ target, yaw: pose.yaw + dYaw, pitch, dist: pose.dist }).position
+}
+
 // ビューと投影をまとめる。fov はラジアン(縦の視野角)、aspect は幅/高さ
 export function cameraMatrices(pose, { fov, aspect, near, far }) {
   const P = perspectiveMatrix(fov, aspect, near, far)
