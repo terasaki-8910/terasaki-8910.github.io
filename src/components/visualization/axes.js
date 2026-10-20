@@ -50,7 +50,9 @@ export function axisTicks(min, max, target = 5) {
 // 間隔 step の目盛りに要る小数の桁数(0.5 → 1、0.02 → 2、2 → 0、50 → 0)
 export function tickDecimals(step) {
   if (!(step > 0)) return 0
-  return Math.max(0, -Math.floor(Math.log10(step) + 1e-9))
+  let digits = Math.max(0, -Math.floor(Math.log10(step) + 1e-9))
+  while (digits < 10 && Math.abs(step * 10 ** digits - Math.round(step * 10 ** digits)) > 1e-8) digits++
+  return digits
 }
 
 // 目盛りの文字。マイナスは U+2212(−)。-0 は 0
@@ -116,12 +118,13 @@ export function makeView({ width, height, xRange, yRange, margin, equal = true }
 //   opts.minXGap / opts.minYGap  目盛りの間隔の最小(画面の px)。既定は 72。低い絵(枠の高さが 150px 以下など)では、既定だと
 //                              目盛りが 0 の 1 つだけになるので、yRange を狭める代わりに minYGap を 28〜36 にする
 //                              (数の高さ 11px + 間。下限 20px)
+//   opts.xTicks / opts.yTicks  固定した目盛り { step, values }。省略時は幅から決める。
 // 軸と目盛りの線は colors.muted(地に 3:1 以上)、文字は colors.ink(4.5:1 以上)。
 export function drawAxes(ctx, view, opts = {}) {
   const { colors, xLabel, yLabel, xRange = view.xRange, yRange = view.yRange } = opts
   const { frame } = view
-  const xTicks = axisTicks(xRange[0], xRange[1], tickTarget(frame.width, clampGap(opts.minXGap, MIN_X_TICK_GAP)))
-  const yTicks = axisTicks(yRange[0], yRange[1], tickTarget(frame.height, clampGap(opts.minYGap, MIN_Y_TICK_GAP)))
+  const xTicks = opts.xTicks ?? axisTicks(xRange[0], xRange[1], tickTarget(frame.width, clampGap(opts.minXGap, MIN_X_TICK_GAP)))
+  const yTicks = opts.yTicks ?? axisTicks(yRange[0], yRange[1], tickTarget(frame.height, clampGap(opts.minYGap, MIN_Y_TICK_GAP)))
 
   ctx.save()
   ctx.strokeStyle = colors.muted

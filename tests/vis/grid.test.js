@@ -1,6 +1,10 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {
+  advectSemiLagrangian2D,
+  diffuse2D,
+  addSplat2D,
+  fluidStep2D,
   diffuse1D,
   advectUpwind1D,
   zeroCrossings1D,
@@ -515,4 +519,96 @@ test('vorticityConfinement2D: 一様な流れ・渦度が一様な流れ(渦度�
   const b = vorticityConfinement2D(u, zero, n, dx, 1)
   assert.equal(maxAbs(b.fy), 0)
   assert.ok(maxAbs(b.fx) > 0)
+})
+
+// ---------------------------------------------------------------- 2 次元の全体
+
+test('advectSemiLagrangian2D: 一様な速度で縦横にちょうど 1 マス進み、端は反対側につながる', () => {
+  const n = 8, dx = 0.25, dt = 0.125
+  const q = Float64Array.from({ length: n * n }, (_, k) => k)
+  for (const [ux, vy] of [[2, 0], [0, -2], [2, 2], [34, -34]]) {
+    const u = new Float64Array(n * n).fill(ux), v = new Float64Array(n * n).fill(vy)
+    const out = advectSemiLagrangian2D(q, u, v, n, dx, dt, new Float64Array(n * n))
+    for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) {
+      const x = ((i - ux * dt / dx) % n + n) % n, y = ((j - vy * dt / dx) % n + n) % n
+      near(out[i + n * j], q[x + n * y])
+    }
+  }
+  assert.throws(() => advectSemiLagrangian2D(q, q, q, n, dx, dt, q), /separate/)
+})
+
+test('advectSemiLagrangian2D: 半マスの移動は隣の平均、縦横とも半マスなら周囲 4 点の平均', () => {
+  const n = 8, q = Float64Array.from({ length: n * n }, (_, k) => Math.sin(k))
+  const u = new Float64Array(n * n).fill(0.5)
+  for (const vy of [0, 0.5]) {
+    const v = new Float64Array(n * n).fill(vy)
+    const out = advectSemiLagrangian2D(q, u, v, n, 1, 1, new Float64Array(n * n))
+    for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) {
+      const left = (i + n - 1) % n, down = (j + n - 1) % n
+      const row = (q[i + n * j] + q[left + n * j]) / 2
+      near(out[i + n * j], vy === 0 ? row : (row + (q[i + n * down] + q[left + n * down]) / 2) / 2)
+    }
+  }
+})
+
+test('diffuse2D: 総量を保ち、市松模様を減衰させ、縦横の端にも広がる', () => {
+  const n = 8
+  const q = Float64Array.from({ length: n * n }, (_, k) => 2 + ((k % n + Math.floor(k / n)) % 2 ? -1 : 1))
+  const out = diffuse2D(q, 0.1, 1, 1, n, new Float64Array(n * n))
+  near(sum(out), sum(q))
+  near(maxAbs(out.map((x) => x - 2)), 0.2)
+  q.fill(0); q[0] = 1
+  diffuse2D(q, 0.25, 1, 1, n, out)
+  near(sum(out), 1)
+  for (const k of [1, n - 1, n, n * (n - 1)]) near(out[k], 0.25)
+})
+
+test('addSplat2D: マスの中心で最大になり、縦横の端を越えて対称に広がる', () => {
+  const n = 16, dx = 1 / n, f = new Float64Array(n * n)
+  addSplat2D(f, n, dx, dx / 2, dx / 2, 0.1, 2)
+  near(f[0], 2)
+  assert.equal(f.indexOf(Math.max(...f)), 0)
+  near(f[1], f[n - 1]); near(f[n], f[n * (n - 1)])
+  assert.ok(f[n - 1] > f[n / 2])
+  const shifted = new Float64Array(n * n)
+  addSplat2D(shifted, n, dx, 2 + dx / 2, -1 + dx / 2, 0.1, 2)
+  assert.deepEqual(shifted, f)
+})
+
+test('fluidStep2D: 乱数の速度場でも射影後の発散は減り、報告値は実際の発散と一致する', () => {
+  const n = 16, field = randomField(n, 7)
+  const w = { n, ...field, dye: new Float64Array(n * n) }
+  const before = maxAbs(divergence2D(w.u, w.v, n, w.dx))
+  const r = fluidStep2D(w, { dt: 1 / 60, nu: 0, iterations: 60, advect: false, diffuse: false })
+  near(r.divergenceBefore, before)
+  near(r.divergenceAfter, maxAbs(divergence2D(w.u, w.v, n, w.dx)))
+  assert.ok(r.divergenceAfter < r.divergenceBefore * 0.01)
+  assert.equal(r.iterations, 60)
+})
+
+test('fluidStep2D: 各項のスイッチはその計算だけを省き、移流は開始時の速度で 3 つを運ぶ', () => {
+  const n = 8, base = { n, ...randomField(n, 12), dye: Float64Array.from({ length: n * n }, (_, k) => Math.cos(k)) }
+  for (const advect of [false, true]) for (const diffuse of [false, true]) for (const project of [false, true]) {
+    const w = { ...base, u: base.u.slice(), v: base.v.slice(), dye: base.dye.slice() }
+    let u = base.u.slice(), v = base.v.slice(), dye = base.dye.slice()
+    const dt = 1 / 60, nu = 0.003, iterations = 60
+    if (advect) {
+      const nextU = advectSemiLagrangian2D(u, u, v, n, w.dx, dt, new Float64Array(n * n))
+      const nextV = advectSemiLagrangian2D(v, u, v, n, w.dx, dt, new Float64Array(n * n))
+      dye = advectSemiLagrangian2D(dye, u, v, n, w.dx, dt, new Float64Array(n * n))
+      u = nextU; v = nextV
+    }
+    if (diffuse) {
+      u = diffuse2D(u, nu, w.dx, dt, n, new Float64Array(n * n))
+      v = diffuse2D(v, nu, w.dx, dt, n, new Float64Array(n * n))
+    }
+    if (project) projectPeriodic2D(u, v, n, w.dx, iterations)
+    const r = fluidStep2D(w, { dt, nu, iterations, advect, diffuse, project })
+    assert.deepEqual(w.u, u); assert.deepEqual(w.v, v); assert.deepEqual(w.dye, dye)
+    if (!project) { assert.equal(r.iterations, 0); near(r.divergenceBefore, r.divergenceAfter) }
+    const scratch = w.scratch
+    fluidStep2D(w, { dt, nu: 0, iterations, advect: false, project: false })
+    assert.equal(w.scratch, scratch)
+    assert.deepEqual(w.u, u); assert.deepEqual(w.v, v)
+  }
 })

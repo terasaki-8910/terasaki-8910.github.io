@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import SectionPanel from './SectionPanel'
 
-// 4 つの節をタブで 1 つずつ見せる(role=tablist、矢印キーと Home・End で移る)。
+// 5 つの節をタブで 1 つずつ見せる(role=tablist、矢印キーと Home・End で移る)。
 // 1 度に出すのは 1 つの節だけ。ほかの節のシミュレーションは作られないので動かない。
 // 節の id は URL の # に反映する(# だけが変わる移動 — 戻る・同じタブでリンクを開く — にもタブを合わせる)。
 

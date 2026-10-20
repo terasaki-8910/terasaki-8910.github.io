@@ -4,5 +4,6 @@ export const VISUALIZATION_TABS = [
   { id: 'rigid', label: '剛体' },
   { id: 'cloth', label: '布' },
   { id: 'fluid', label: '流体' },
+  { id: 'navier-stokes', label: 'NS 方程式' },
 ]
 export const VISUALIZATION_PREVIEW_TAB = 'rigid'

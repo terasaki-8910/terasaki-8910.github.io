@@ -1,8 +1,8 @@
-// 4 つの節(タブ)。並びがそのままタブの並び(id は URL の # とタブの id)。
+// 5 つの節(タブ)。並びがそのままタブの並び(id は URL の # とタブの id)。
 // 節の文章・式・出典・シミュレーションは、節ごとのファイルに書く(ファイルを分けて、書き手がぶつからないように)。
 //
 // 節のデータの形(第 2 版。tests/vis-page/sections.test.js が検査する):
-//   id           URL の #id とタブの id(transform / rigid / cloth / fluid)。変えない
+//   id           URL の #id とタブの id(transform / rigid / cloth / fluid / navier-stokes)。変えない
 //   tabLabel     タブの短い名前
 //   title        h2 の見出し
 //   intro        何のシミュレーションかの 1〜2 文(平文)
@@ -24,5 +24,6 @@ import transform from './transform.js'
 import rigid from './rigid.js'
 import cloth from './cloth.js'
 import fluid from './fluid.js'
+import navierStokes from './navierStokes.js'
 
-export const SECTIONS = [transform, rigid, cloth, fluid]
+export const SECTIONS = [transform, rigid, cloth, fluid, navierStokes]

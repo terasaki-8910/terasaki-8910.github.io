@@ -558,6 +558,11 @@
   font-size: 0.9375rem;
   cursor: pointer;
 }
+@media (max-width: 420px) {
+  .vis-tab {
+    padding: 0 11px; /* 5 つのタブが幅 375px の画面(列 328px)に横スクロールなしで収まる */
+  }
+}
 @media (min-width: 640px) {
   .vis-tab {
     flex: 0 0 auto;

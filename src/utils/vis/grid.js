@@ -191,3 +191,97 @@ export function vorticityConfinement2D(u, v, n, dx, eps) {
   return { fx, fy }
 }
 // @end
+
+// @snippet grid-advectSemiLagrangian2D
+// 各マスの中心から速度×Δt だけさかのぼり、周囲 4 点の q を双線形補間する(周期境界)。
+// out は q・u・v と重ならない配列。中心の半マス分は出発点と補間の座標で相殺する。
+export function advectSemiLagrangian2D(q, u, v, n, dx, dt, out) {
+  if (out === q || out === u || out === v) throw new Error('out must be a separate array')
+  const step = dt / dx
+  for (let j = 0; j < n; j++) {
+    for (let i = 0; i < n; i++) {
+      const k = i + n * j
+      const x = ((i - step * u[k]) % n + n) % n
+      const y = ((j - step * v[k]) % n + n) % n
+      const i0 = Math.floor(x), j0 = Math.floor(y)
+      const i1 = (i0 + 1) % n, j1 = (j0 + 1) % n
+      const a = x - i0, b = y - j0
+      out[k] = (1 - b) * ((1 - a) * q[i0 + n * j0] + a * q[i1 + n * j0])
+        + b * ((1 - a) * q[i0 + n * j1] + a * q[i1 + n * j1])
+    }
+  }
+  return out
+}
+// @end
+
+// @snippet grid-diffuse2D
+// 粘性の 1 ステップ(周期境界、5 点のラプラシアン、陽解法)。安定条件は νΔt/Δx² ≤ 1/4。
+// out は q と別の配列。
+export function diffuse2D(q, nu, dx, dt, n, out) {
+  const a = nu * dt / (dx * dx)
+  for (let j = 0; j < n; j++) {
+    const jm = ((j + n - 1) % n) * n, jp = ((j + 1) % n) * n
+    for (let i = 0; i < n; i++) {
+      const k = i + n * j
+      out[k] = q[k] + a * (q[(i + n - 1) % n + n * j] + q[(i + 1) % n + n * j]
+        + q[i + jm] + q[i + jp] - 4 * q[k])
+    }
+  }
+  return out
+}
+// @end
+
+// @snippet grid-addSplat2D
+// (x, y) のまわりにガウス型の山を足す。距離は周期境界で最短のもの、マスの中心は (i+0.5)Δx。
+export function addSplat2D(field, n, dx, x, y, radius, amount) {
+  const L = n * dx
+  x = (x % L + L) % L
+  y = (y % L + L) % L
+  for (let j = 0; j < n; j++) {
+    const sy = Math.abs((j + 0.5) * dx - y)
+    const dy = Math.min(sy, L - sy)
+    for (let i = 0; i < n; i++) {
+      const sx = Math.abs((i + 0.5) * dx - x)
+      const ddx = Math.min(sx, L - sx)
+      field[i + n * j] += amount * Math.exp(-(ddx * ddx + dy * dy) / (radius * radius))
+    }
+  }
+  return field
+}
+// @end
+
+// @snippet grid-fluidStep2D
+// 1 ステップを移流 → 粘性 → 圧力に分ける。外力は呼ぶ前に足す。
+// 移流は 3 つとも開始時の速度を使う。作業用配列と戻り値は state に保ち、次のステップでも使う。
+export function fluidStep2D(state, { dt, nu, iterations, advect = true, diffuse = true, project = true }) {
+  const { n, dx, u, v, dye } = state
+  if (!state.scratch || state.scratch.u.length !== n * n) {
+    state.scratch = {
+      u: new Float64Array(n * n), v: new Float64Array(n * n), dye: new Float64Array(n * n),
+      div: new Float64Array(n * n), result: { iterations: 0, divergenceBefore: 0, divergenceAfter: 0 },
+    }
+  }
+  const s = state.scratch
+  if (advect) {
+    advectSemiLagrangian2D(u, u, v, n, dx, dt, s.u)
+    advectSemiLagrangian2D(v, u, v, n, dx, dt, s.v)
+    advectSemiLagrangian2D(dye, u, v, n, dx, dt, s.dye)
+    u.set(s.u); v.set(s.v); dye.set(s.dye)
+  }
+  if (diffuse && nu !== 0) {
+    diffuse2D(u, nu, dx, dt, n, s.u)
+    diffuse2D(v, nu, dx, dt, n, s.v)
+    u.set(s.u); v.set(s.v)
+  }
+  divergence2D(u, v, n, dx, s.div)
+  let before = 0
+  for (let k = 0; k < s.div.length; k++) before = Math.max(before, Math.abs(s.div[k]))
+  s.result.iterations = project ? projectPeriodic2D(u, v, n, dx, iterations).iterations : 0
+  divergence2D(u, v, n, dx, s.div)
+  let after = 0
+  for (let k = 0; k < s.div.length; k++) after = Math.max(after, Math.abs(s.div[k]))
+  s.result.divergenceBefore = before
+  s.result.divergenceAfter = after
+  return s.result
+}
+// @end
