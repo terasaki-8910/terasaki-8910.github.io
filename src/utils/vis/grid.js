@@ -22,6 +22,22 @@ export function diffuse1D(u, nu, dx, dt, out = new Float64Array(u.length)) {
 }
 // @end
 
+// @snippet grid-advectSemiLagrangian1D
+// x_i = i·Δx から c·Δt だけさかのぼり、両側の値を線形補間する。
+// 格子の外では最初・最後の値を使う。CFL 数が 1 を超えても元の値の範囲に収まる。out は phi と別の配列。
+export function advectSemiLagrangian1D(phi, c, dx, dt, out = new Float64Array(phi.length)) {
+  if (out === phi) throw new Error('out must be a separate array')
+  const n = phi.length
+  for (let i = 0; i < n; i++) {
+    const x = Math.max(0, Math.min(n - 1, i - c * dt / dx))
+    const left = Math.floor(x), right = Math.min(n - 1, left + 1)
+    const a = x - left
+    out[i] = (1 - a) * phi[left] + a * phi[right]
+  }
+  return out
+}
+// @end
+
 // @snippet grid-advectUpwind1D
 // 移流方程式 ∂φ/∂t + c ∂φ/∂x = 0 の 1 ステップ(風上差分)。
 // 情報は流れの上流から来るので、c>0 なら左側の差分 (φ[i] − φ[i−1])/Δx、c<0 なら右側の差分を使う。
@@ -133,14 +149,14 @@ export function poissonResidual(q, div, n, dx) {
 // 隣どうしの 5 点の差分だと合成と一致せず、市松模様に近い細かい成分の発散が残る
 // (MAC 格子は速度を面に置いて、これを避けるもう 1 つの方法)。一致させたので、解けば発散は 0 になる。
 // ガウス・ザイデル法で、残差(= 射影後の発散)の最大値が初めの発散の最大値の tol 倍以下になるか、
-// iterations 回に達するまで解く。n ≥ 4。{ q, iterations: 使った回数 } を返す
+// iterations 回に達するまで解く。tol=0 なら指定回数を必ず実行する。n ≥ 4。{ q, iterations: 使った回数 } を返す
 export function projectPeriodic2D(u, v, n, dx, iterations, tol = 1e-10) {
   const div = divergence2D(u, v, n, dx)
   const q = new Float64Array(n * n)
   let target = 0
   for (let k = 0; k < n * n; k++) target = Math.max(target, tol * Math.abs(div[k]))
   let used = 0
-  while (used < iterations && poissonResidual(q, div, n, dx) > target) {
+  while (used < iterations && (tol === 0 || poissonResidual(q, div, n, dx) > target)) {
     for (let j = 0; j < n; j++) {
       const jm = ((j + n - 2) % n) * n
       const jp = ((j + 2) % n) * n
@@ -250,10 +266,12 @@ export function addSplat2D(field, n, dx, x, y, radius, amount) {
 }
 // @end
 
-// @snippet grid-fluidStep2D
-// 1 ステップを移流 → 粘性 → 圧力に分ける。外力は呼ぶ前に足す。
+// @snippet grid-fluidSubstep2D
+// 移流・粘性・圧力のうち stage で指定した 1 段だけを進める。
 // 移流は 3 つとも開始時の速度を使う。作業用配列と戻り値は state に保ち、次のステップでも使う。
-export function fluidStep2D(state, { dt, nu, iterations, advect = true, diffuse = true, project = true }) {
+// 圧力の段は反復回数と前後の発散を返す。project=false のときは速度を変えずに発散だけ調べる。
+export function fluidSubstep2D(state, { dt, nu, iterations, project = true }, stage) {
+  if (!['advect', 'diffuse', 'project'].includes(stage)) throw new Error('unknown fluid stage')
   const { n, dx, u, v, dye } = state
   if (!state.scratch || state.scratch.u.length !== n * n) {
     state.scratch = {
@@ -262,16 +280,20 @@ export function fluidStep2D(state, { dt, nu, iterations, advect = true, diffuse 
     }
   }
   const s = state.scratch
-  if (advect) {
+  if (stage === 'advect') {
     advectSemiLagrangian2D(u, u, v, n, dx, dt, s.u)
     advectSemiLagrangian2D(v, u, v, n, dx, dt, s.v)
     advectSemiLagrangian2D(dye, u, v, n, dx, dt, s.dye)
     u.set(s.u); v.set(s.v); dye.set(s.dye)
+    return
   }
-  if (diffuse && nu !== 0) {
-    diffuse2D(u, nu, dx, dt, n, s.u)
-    diffuse2D(v, nu, dx, dt, n, s.v)
-    u.set(s.u); v.set(s.v)
+  if (stage === 'diffuse') {
+    if (nu !== 0) {
+      diffuse2D(u, nu, dx, dt, n, s.u)
+      diffuse2D(v, nu, dx, dt, n, s.v)
+      u.set(s.u); v.set(s.v)
+    }
+    return
   }
   divergence2D(u, v, n, dx, s.div)
   let before = 0
@@ -283,5 +305,15 @@ export function fluidStep2D(state, { dt, nu, iterations, advect = true, diffuse 
   s.result.divergenceBefore = before
   s.result.divergenceAfter = after
   return s.result
+}
+// @end
+
+// @snippet grid-fluidStep2D
+// 1 ステップを移流 → 粘性 → 圧力に分ける。外力は呼ぶ前に足す。
+// 各項のスイッチが false ならその計算だけを省き、最後に前後の発散を返す。
+export function fluidStep2D(state, params) {
+  if (params.advect !== false) fluidSubstep2D(state, params, 'advect')
+  if (params.diffuse !== false) fluidSubstep2D(state, params, 'diffuse')
+  return fluidSubstep2D(state, params, 'project')
 }
 // @end

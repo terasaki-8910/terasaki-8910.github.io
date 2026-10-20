@@ -35,7 +35,8 @@ export default function NsSim() {
 
   const writeLegend = useCallback(() => {
     const w = world.current
-    let speed = 0, div = 0
+    let speed = 0,
+      div = 0
     divergence2D(w.u, w.v, N, DX, diagnostic.current)
     for (let k = 0; k < N * N; k++) {
       speed = Math.max(speed, Math.hypot(w.u[k], w.v[k]))
@@ -43,14 +44,16 @@ export default function NsSim() {
     }
     const viscosity = params.current.nu
     legend.current?.update({
-      t: `${w.time.toFixed(2)} s`, nu: `${viscosity.toFixed(4)} m²/s`,
+      t: `${w.time.toFixed(2)} s`,
+      nu: `${viscosity.toFixed(4)} m²/s`,
       re: viscosity === 0 ? '∞' : reynolds(speed, L, viscosity).toFixed(0),
       div: `${div.toExponential(2)} s⁻¹`,
     })
   }, [])
 
   const draw = useCallback(({ ctx, width, height, colors }) => {
-    const w = world.current, p = params.current
+    const w = world.current,
+      p = params.current
     if (!raster.current) {
       const canvas = document.createElement('canvas')
       canvas.width = canvas.height = N
@@ -74,7 +77,8 @@ export default function NsSim() {
     r.context.putImageData(r.image, 0, 0)
     ctx.fillStyle = colors.paper
     ctx.fillRect(0, 0, width, height)
-    const view = viewOf(width, height), { frame } = view
+    const view = viewOf(width, height),
+      { frame } = view
     ctx.imageSmoothingEnabled = true
     ctx.drawImage(r.canvas, frame.left, frame.top, frame.width, frame.height)
     ctx.save()
@@ -84,7 +88,9 @@ export default function NsSim() {
     if (p.arrows) {
       for (let j = 2; j < N; j += 4) {
         for (let i = 2; i < N; i += 4) {
-          const k = i + N * j, x = (i + 0.5) * DX, y = (j + 0.5) * DX
+          const k = i + N * j,
+            x = (i + 0.5) * DX,
+            y = (j + 0.5) * DX
           const scale = Math.min(0.08, 0.045 / (Math.hypot(w.u[k], w.v[k]) || 1))
           drawArrow(ctx, view, x, y, x + scale * w.u[k], y + scale * w.v[k], { color: colors.ink, width: 1, head: 4 })
         }
@@ -99,19 +105,25 @@ export default function NsSim() {
     drawAxes(ctx, view, { colors, xLabel: 'x [m]', yLabel: 'y [m]', xTicks: TICKS, yTicks: TICKS })
   }, [])
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
-  const loop = useSimLoop((elapsed) => {
-    const w = world.current
-    w.acc += elapsed
-    while (w.acc >= DT) {
-      fluidStep2D(w, { ...params.current, dt: DT, iterations: ITERATIONS })
-      w.time += DT
-      w.acc -= DT
-    }
+  const loop = useSimLoop(
+    (elapsed) => {
+      const w = world.current
+      w.acc += elapsed
+      while (w.acc >= DT) {
+        fluidStep2D(w, { ...params.current, dt: DT, iterations: ITERATIONS })
+        w.time += DT
+        w.acc -= DT
+      }
+      writeLegend()
+      redraw()
+    },
+    { targetRef: canvasRef },
+  )
+
+  useEffect(() => {
     writeLegend()
     redraw()
-  }, { targetRef: canvasRef })
-
-  useEffect(() => { writeLegend(); redraw() }, [nu, mode, arrows, writeLegend, redraw])
+  }, [nu, mode, arrows, writeLegend, redraw])
 
   const local = ({ x, y }) => {
     const view = viewOf(sizeRef.current.width, sizeRef.current.height)
@@ -129,14 +141,22 @@ export default function NsSim() {
     },
     onMove: (p) => {
       const q = local(p)
-      if (!inside(q)) { pointer.current = null; redraw(); return }
-      const fx = p.vx / q.view.scaleX, fy = -p.vy / q.view.scaleY
+      if (!inside(q)) {
+        pointer.current = null
+        redraw()
+        return
+      }
+      const fx = p.vx / q.view.scaleX,
+        fy = -p.vy / q.view.scaleY
       pointer.current = { x: q.x, y: q.y, fx, fy }
       pushAt(world.current, q.x, q.y, fx, fy, params.current.strength)
       writeLegend()
       redraw()
     },
-    onUp: () => { pointer.current = null; redraw() },
+    onUp: () => {
+      pointer.current = null
+      redraw()
+    },
   })
 
   function onKeyDown(event) {
@@ -159,34 +179,87 @@ export default function NsSim() {
     { key: 'div', label: '発散の最大 |∇·u|', value: '', minChars: 13 },
     { label: '外力', value: 'ドラッグした所だけ（重力なし）' },
     { label: '境界', value: '端は反対側とつながる（周期境界）' },
-    { key: 'color', label: mode === 'dye' ? '染料' : '渦度',
+    {
+      key: 'color',
+      label: mode === 'dye' ? '染料' : '渦度',
       value: mode === 'dye' ? '0 → 1' : `−${VORTICITY_SCALE}（時計回り）→ 0 → +${VORTICITY_SCALE}（反時計回り）s⁻¹`,
-      swatch: mode === 'dye' ? 'linear-gradient(to right, var(--color-paper), var(--lane-1))'
-        : 'linear-gradient(to right, var(--diff-delete), var(--color-paper), var(--lane-1))' },
+      swatch:
+        mode === 'dye'
+          ? 'linear-gradient(to right, var(--color-paper), var(--lane-1))'
+          : 'linear-gradient(to right, var(--diff-delete), var(--color-paper), var(--lane-1))',
+    },
   ]
   return (
     <SimShell
       label="ナビエ・ストークス方程式：二重せん断層"
       aspect={1}
-      switcher={<ModeSwitch variant="tabs" label="流れの色" value={mode} onChange={setMode} options={[{ value: 'dye', label: '染料' }, { value: 'vorticity', label: '渦度' }]} />}
-      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="1 m 四方の周期境界の流れ。色は染料または渦度、矢印は速度。ドラッグで流れを押せる。矢印キーで中央をその向きに押し、Shift を押しながらだと強く押せる" />}
+      switcher={
+        <ModeSwitch
+          variant="tabs"
+          label="流れの色"
+          value={mode}
+          onChange={setMode}
+          options={[
+            { value: 'dye', label: '染料' },
+            { value: 'vorticity', label: '渦度' },
+          ]}
+        />
+      }
+      stage={
+        <SimCanvas
+          ref={canvasRef}
+          role="application"
+          tabIndex={0}
+          onKeyDown={onKeyDown}
+          label="1 m 四方の周期境界の流れ。色は染料または渦度、矢印は速度。ドラッグで流れを押せる。矢印キーで中央をその向きに押し、Shift を押しながらだと強く押せる"
+        />
+      }
       legend={<SimLegend ref={legend} items={legendItems} />}
-      controls={<>
-        <SimToolbar>
-          <PlayPauseButton running={loop.running} onToggle={loop.toggle} />
-          <ResetButton onClick={() => { world.current = createWorld(); pointer.current = null; writeLegend(); redraw() }} />
-        </SimToolbar>
-        <ParamSlider symbol="\nu" label="動粘性係数" unit="m²/s" value={nu} min={0} max={NU_MAX} step={0.0001} onChange={setNu} format={(v) => v.toFixed(4)} />
-        <ParamSlider label="押す強さ" value={strength} min={0} max={1} step={0.05} onChange={setStrength} format={(v) => v.toFixed(2)} />
-        <ControlGroup label="項を切ってみる">
-          <SimToolbar label="式の項">
-            <ToggleButton pressed={advect} onChange={setAdvect}>移流</ToggleButton>
-            <ToggleButton pressed={diffuse} onChange={setDiffuse}>粘性</ToggleButton>
-            <ToggleButton pressed={project} onChange={setProject}>圧力</ToggleButton>
+      controls={
+        <>
+          <SimToolbar>
+            <PlayPauseButton running={loop.running} onToggle={loop.toggle} />
+            <ResetButton
+              onClick={() => {
+                world.current = createWorld()
+                pointer.current = null
+                writeLegend()
+                redraw()
+              }}
+            />
           </SimToolbar>
-        </ControlGroup>
-        <SimToolbar label="速度の表示"><ToggleButton pressed={arrows} onChange={setArrows}>速度の矢印</ToggleButton></SimToolbar>
-      </>}
+          <ParamSlider
+            symbol="\nu"
+            label="動粘性係数"
+            unit="m²/s"
+            value={nu}
+            min={0}
+            max={NU_MAX}
+            step={0.0001}
+            onChange={setNu}
+            format={(v) => v.toFixed(4)}
+          />
+          <ParamSlider label="押す強さ" value={strength} min={0} max={1} step={0.05} onChange={setStrength} format={(v) => v.toFixed(2)} />
+          <ControlGroup label="項を切ってみる">
+            <SimToolbar label="式の項">
+              <ToggleButton pressed={advect} onChange={setAdvect}>
+                移流
+              </ToggleButton>
+              <ToggleButton pressed={diffuse} onChange={setDiffuse}>
+                粘性
+              </ToggleButton>
+              <ToggleButton pressed={project} onChange={setProject}>
+                圧力
+              </ToggleButton>
+            </SimToolbar>
+          </ControlGroup>
+          <SimToolbar label="速度の表示">
+            <ToggleButton pressed={arrows} onChange={setArrows}>
+              速度の矢印
+            </ToggleButton>
+          </SimToolbar>
+        </>
+      }
     />
   )
 }

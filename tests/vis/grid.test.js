@@ -5,6 +5,8 @@ import {
   diffuse2D,
   addSplat2D,
   fluidStep2D,
+  fluidSubstep2D,
+  advectSemiLagrangian1D,
   diffuse1D,
   advectUpwind1D,
   zeroCrossings1D,
@@ -26,6 +28,57 @@ const near = (actual, expected, tol = 1e-12) =>
 
 const maxAbs = (a) => a.reduce((m, x) => Math.max(m, Math.abs(x)), 0)
 const sum = (a) => a.reduce((s, x) => s + x, 0)
+
+test('advectSemiLagrangian1D: CFL=±1 はちょうど1マス移動し、外では端の値を使う', () => {
+  const phi = Float64Array.from([2, 3, 7, -1, 4])
+  assert.deepEqual([...advectSemiLagrangian1D(phi, 2, 0.25, 0.125)], [2, 2, 3, 7, -1])
+  assert.deepEqual([...advectSemiLagrangian1D(phi, -2, 0.25, 0.125)], [3, 7, -1, 4, 4])
+  assert.deepEqual([...advectSemiLagrangian1D(phi, 200, 0.25, 1)], [2, 2, 2, 2, 2])
+  assert.deepEqual([...advectSemiLagrangian1D(phi, -200, 0.25, 1)], [4, 4, 4, 4, 4])
+  assert.deepEqual(advectSemiLagrangian1D(phi, 0, 0.25, 1), phi)
+  assert.throws(() => advectSemiLagrangian1D(phi, 1, 1, 1, phi), /separate/)
+})
+
+test('advectSemiLagrangian1D: CFL=2.5 は線形補間で有界、同じ条件の風上差分は増幅する', () => {
+  const phi = Float64Array.from([0, 0, 1, 1, 0, 0, 0, 0])
+  const out = new Float64Array(phi.length)
+  assert.equal(advectSemiLagrangian1D(phi, 1, 0.025, 0.0625, out), out)
+  assert.deepEqual([...out], [0, 0, 0, 0, 0.5, 1, 0.5, 0])
+  for (const c of [-1, 1]) {
+    let semi = phi.slice(), upwind = phi.slice()
+    for (let k = 0; k < 4; k++) {
+      semi = advectSemiLagrangian1D(semi, c, 0.025, 0.0625)
+      upwind = advectUpwind1D(upwind, c, 0.025, 0.0625)
+      assert.ok(Math.max(...semi) <= 1 && Math.min(...semi) >= 0)
+    }
+    assert.ok(maxAbs(upwind) > 10)
+  }
+})
+
+test('fluidSubstep2D: 3段を順に実行すると fluidStep2D とビット単位で同じになる', () => {
+  const n = 16
+  const base = { n, ...randomField(n, 54), dye: Float64Array.from({ length: n * n }, (_, i) => Math.cos(i)) }
+  const copy = () => ({ ...base, u: base.u.slice(), v: base.v.slice(), dye: base.dye.slice() })
+  for (const nu of [0, 0.0001, 0.003]) {
+    const a = copy(), b = copy(), params = { nu, dt: 1 / 60, iterations: 60 }
+    const full = fluidStep2D(a, params)
+    fluidSubstep2D(b, params, 'advect')
+    fluidSubstep2D(b, params, 'diffuse')
+    const part = fluidSubstep2D(b, params, 'project')
+    for (const key of ['u', 'v', 'dye']) assert.deepEqual(a[key], b[key])
+    assert.deepEqual(full, part)
+  }
+  assert.throws(() => fluidSubstep2D(copy(), {}, 'invalid'), /stage/)
+})
+
+test('projectPeriodic2D: tol=0 は発散が初めから0でも指定回数だけ計算する', () => {
+  for (const iterations of [0, 1, 60, 200]) {
+    const u = new Float64Array(64).fill(1), v = new Float64Array(64)
+    const result = projectPeriodic2D(u, v, 8, 1 / 8, iterations, 0)
+    assert.equal(result.iterations, iterations)
+    assert.ok(u.every((x) => x === 1) && v.every((x) => x === 0))
+  }
+})
 
 // 種を固定した乱数(線形合同法)
 function lcg(seed) {
