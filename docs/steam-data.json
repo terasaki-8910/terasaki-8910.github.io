@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-19T22:16:05.106Z",
+  "lastUpdated": "2026-10-20T16:47:54.246Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -465,7 +465,7 @@
           "description": "Caught 90 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
           "unlockedAt": "2024-02-02T11:36:25.000Z",
-          "percent": 45
+          "percent": 45.1
         },
         {
           "name": "Hillside Sovereign",
@@ -501,7 +501,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
           "unlockedAt": "2026-09-12T08:21:27.000Z",
-          "percent": 71.4
+          "percent": 71.5
         },
         {
           "name": "Troll with the Punches",
