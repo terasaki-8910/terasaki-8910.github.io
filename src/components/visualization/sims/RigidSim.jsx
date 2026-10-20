@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { drawCircles } from './rigidDraw'
 import SimShell from '../SimShell'
 import SimCanvas from '../SimCanvas'
 import SimLegend from '../SimLegend'
@@ -89,27 +90,7 @@ export default function RigidSim() {
       ctx.stroke()
     }
 
-    // 円
-    ctx.lineWidth = 1.5
-    ctx.strokeStyle = colors.ink
-    ctx.fillStyle = colors.alpha('accent', 0.6)
-    for (let i = 0; i < world.n; i++) {
-      const b = world.circles[i]
-      if (i === world.grab.index) continue
-      ctx.beginPath()
-      ctx.arc(px(b.c[0]), py(b.c[1]), b.r * scale, 0, Math.PI * 2)
-      ctx.fill()
-      ctx.stroke()
-    }
-    if (world.grab.index >= 0) {
-      const b = world.circles[world.grab.index]
-      ctx.fillStyle = colors.accent
-      ctx.lineWidth = 2.5
-      ctx.beginPath()
-      ctx.arc(px(b.c[0]), py(b.c[1]), b.r * scale, 0, Math.PI * 2)
-      ctx.fill()
-      ctx.stroke()
-    }
+    drawCircles(ctx, view, world, colors)
 
     if (broad) {
       // 候補の組(Sweep and Prune)を細い線で、その中で実際に重なっている組を太い線で

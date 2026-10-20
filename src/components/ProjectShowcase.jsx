@@ -6,6 +6,7 @@ import HomeGomiPreview from './HomeGomiPreview'
 import HomeCharaOmakase from './HomeCharaOmakase'
 import HomeGamingPreview from './HomeGamingPreview'
 import HomeMoviesPreview from './HomeMoviesPreview'
+import HomeVisualizationPreview from './HomeVisualizationPreview'
 import AsciiModelViewer from './AsciiModelViewer'
 import { ASCII_MODELS } from '../data/asciiModels'
 import { projects } from '../data/projects'
@@ -100,6 +101,11 @@ export default function ProjectShowcase() {
               {project.movies && (
                 <div className="mt-5">
                   <HomeMoviesPreview />
+                </div>
+              )}
+              {project.visualization && (
+                <div className="mt-5">
+                  <HomeVisualizationPreview />
                 </div>
               )}
             </article>
