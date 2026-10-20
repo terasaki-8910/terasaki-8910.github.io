@@ -149,3 +149,8 @@ test('clampGap: 指定がなければ既定、数でなければ既定、指定�
   assert.equal(clampGap(30, 72), 30)
   assert.equal(clampGap(8, 72), 20)
 })
+
+test('0.25 m 刻みの目盛りは小数 2 桁で丸める', () => {
+  assert.equal(formatTick(0.25, 0.25), '0.25')
+  assert.equal(formatTick(0.75, 0.25), '0.75')
+})

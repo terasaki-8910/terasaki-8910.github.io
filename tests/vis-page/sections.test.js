@@ -78,11 +78,11 @@ function checkSnippets(where, names) {
   }
 }
 
-test('節は 4 つで、タブの並びと id が決まっている', () => {
-  assert.deepEqual(SECTIONS.map((s) => s.id), ['transform', 'rigid', 'cloth', 'fluid'])
+test('節は 5 つで、タブの並びと id が決まっている', () => {
+  assert.deepEqual(SECTIONS.map((s) => s.id), ['transform', 'rigid', 'cloth', 'fluid', 'navier-stokes'])
 })
 
-for (const id of ['transform', 'rigid', 'cloth', 'fluid']) {
+for (const id of ['transform', 'rigid', 'cloth', 'fluid', 'navier-stokes']) {
   test(`${id}: 第 2 版の形(id・tabLabel・title・intro・overview・steps・combination・sources)`, () => {
     const s = SECTIONS.find((x) => x.id === id)
     for (const key of OLD_KEYS) assert.ok(!(key in s), `${id}: 第 1 版の「${key}」が残っている(段階の formulas・snippets と overview に移す)`)
