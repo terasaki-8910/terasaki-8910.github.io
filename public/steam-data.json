@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T11:38:01.578Z",
+  "lastUpdated": "2026-10-21T17:03:45.124Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,8 +11,8 @@
       "appid": 2717220,
       "name": "雀魂 -じゃんたま-",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtime2weeksMinutes": 515,
-      "playtimeForeverMinutes": 515
+      "playtime2weeksMinutes": 541,
+      "playtimeForeverMinutes": 541
     },
     {
       "appid": 688130,
@@ -76,7 +76,7 @@
       "appid": 2717220,
       "name": "Mahjong Soul",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtimeForeverMinutes": 515
+      "playtimeForeverMinutes": 541
     },
     {
       "appid": 1446780,
@@ -508,7 +508,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/5c9e26c4941ae4fc98c6eaf3c023e3a18dc2df51.jpg",
           "unlockedAt": "2026-09-12T04:30:37.000Z",
-          "percent": 76.9
+          "percent": 77
         }
       ]
     },
@@ -523,7 +523,7 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 42.9
+          "percent": 43
         },
         {
           "name": "Kamura Amulet",
