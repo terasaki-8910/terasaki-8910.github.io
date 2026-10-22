@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-22T11:37:59.405Z",
+  "lastUpdated": "2026-10-22T17:02:57.578Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,8 +11,8 @@
       "appid": 2717220,
       "name": "雀魂 -じゃんたま-",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtime2weeksMinutes": 541,
-      "playtimeForeverMinutes": 541
+      "playtime2weeksMinutes": 608,
+      "playtimeForeverMinutes": 608
     },
     {
       "appid": 688130,
@@ -60,16 +60,16 @@
       "playtimeForeverMinutes": 863
     },
     {
+      "appid": 2717220,
+      "name": "Mahjong Soul",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
+      "playtimeForeverMinutes": 608
+    },
+    {
       "appid": 990080,
       "name": "Hogwarts Legacy",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg",
       "playtimeForeverMinutes": 545
-    },
-    {
-      "appid": 2717220,
-      "name": "Mahjong Soul",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtimeForeverMinutes": 541
     },
     {
       "appid": 1446780,
@@ -400,7 +400,7 @@
           "description": "Select a Standing Stone blessing",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/3a7e9d9c4f1142fdddbcc6988f23415d72d41ce0.jpg",
           "unlockedAt": "2025-10-10T12:22:18.000Z",
-          "percent": 62
+          "percent": 62.1
         },
         {
           "name": "Wanted",
@@ -494,14 +494,14 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
           "unlockedAt": "2026-09-12T08:21:27.000Z",
-          "percent": 71.4
+          "percent": 71.2
         },
         {
           "name": "Troll with the Punches",
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/5c9e26c4941ae4fc98c6eaf3c023e3a18dc2df51.jpg",
           "unlockedAt": "2026-09-12T04:30:37.000Z",
-          "percent": 77
+          "percent": 76.8
         }
       ]
     },
@@ -516,7 +516,7 @@
           "description": "Awarded for earning 1,000,000 zenny. Heavy with impressively intricate goldwork.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1446780/8b4dcd36433002cc0ab4bb43214c93335a372ca7.jpg",
           "unlockedAt": "2023-07-11T08:19:25.000Z",
-          "percent": 42.9
+          "percent": 43
         },
         {
           "name": "Kamura Amulet",
