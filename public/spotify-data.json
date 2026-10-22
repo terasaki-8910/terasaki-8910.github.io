@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-10-21T16:16:38.683Z",
+  "lastUpdated": "2026-10-22T10:48:48.489Z",
   "tracks": [
+    {
+      "id": "73TEyhGLxixHAwzOdoamgV",
+      "name": "Aoi",
+      "artist": "sakanaction",
+      "album": "sakanaction",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736dd4b6207e6e3780e50a24d6",
+      "playedAt": "2026-10-22T07:38:39.101Z",
+      "spotifyUrl": "https://open.spotify.com/track/73TEyhGLxixHAwzOdoamgV",
+      "duration": 256120,
+      "previewUrl": ""
+    },
+    {
+      "id": "5Olqp0fKkKQtu73jTtnPzC",
+      "name": "ウェカピポ",
+      "artist": "SOUL'd OUT",
+      "album": "SOUL'd OUT",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273288fac96cc3e1e55d31143c6",
+      "playedAt": "2026-10-22T07:33:37.385Z",
+      "spotifyUrl": "https://open.spotify.com/track/5Olqp0fKkKQtu73jTtnPzC",
+      "duration": 250760,
+      "previewUrl": ""
+    },
+    {
+      "id": "3KIcKiftxner9luU8Na5KZ",
+      "name": "AIAIAI (feat. 中田ヤスタカ)",
+      "artist": "Kizuna AI, Yasutaka Nakata",
+      "album": "AIAIAI (feat. 中田ヤスタカ)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732afbeb724be112ac5ea10cf9",
+      "playedAt": "2026-10-22T07:28:33.375Z",
+      "spotifyUrl": "https://open.spotify.com/track/3KIcKiftxner9luU8Na5KZ",
+      "duration": 193385,
+      "previewUrl": ""
+    },
+    {
+      "id": "0D3usrJm2RiAkW9o0kRCyu",
+      "name": "ハナノイロ",
+      "artist": "nano.RIPE",
+      "album": "星の夜の脈の音の",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27356099479086aa15653e66699",
+      "playedAt": "2026-10-22T07:21:46.662Z",
+      "spotifyUrl": "https://open.spotify.com/track/0D3usrJm2RiAkW9o0kRCyu",
+      "duration": 244706,
+      "previewUrl": ""
+    },
+    {
+      "id": "09J1T3GnieB0DZGSxhfEn2",
+      "name": "猫祭り",
+      "artist": "イロドリミドリ",
+      "album": "推薦",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27355626fd3f5fa2640c27f568e",
+      "playedAt": "2026-10-22T06:37:38.141Z",
+      "spotifyUrl": "https://open.spotify.com/track/09J1T3GnieB0DZGSxhfEn2",
+      "duration": 181106,
+      "previewUrl": ""
+    },
+    {
+      "id": "0yOSOwtkdhydkkgw1oG7H0",
+      "name": "JOINT",
+      "artist": "川田まみ",
+      "album": "SAVIA",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739d3c6139b3651cb31ebb95f6",
+      "playedAt": "2026-10-22T06:34:36.423Z",
+      "spotifyUrl": "https://open.spotify.com/track/0yOSOwtkdhydkkgw1oG7H0",
+      "duration": 241506,
+      "previewUrl": ""
+    },
+    {
+      "id": "2qEIVphvwMEkE35CXxdWAT",
+      "name": "Deal with the devil",
+      "artist": "Tia",
+      "album": "Deal with the devil",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738dfe4f03c7039b0717be5292",
+      "playedAt": "2026-10-22T06:30:34.419Z",
+      "spotifyUrl": "https://open.spotify.com/track/2qEIVphvwMEkE35CXxdWAT",
+      "duration": 282546,
+      "previewUrl": ""
+    },
     {
       "id": "2tHQgtm46XngnOFgATFJWM",
       "name": "心絵",
@@ -252,83 +329,6 @@
       "playedAt": "2026-10-21T14:33:56.504Z",
       "spotifyUrl": "https://open.spotify.com/track/0WrwF6MWqUTdjWAr1uIZHO",
       "duration": 156000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6fKcJ3VglKLGyLRaiEyDPo",
-      "name": "Spider Dance",
-      "artist": "Holder, GameChops",
-      "album": "Undertale Remixed",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d6f95bd49983c2ba98795633",
-      "playedAt": "2026-10-21T14:31:19.965Z",
-      "spotifyUrl": "https://open.spotify.com/track/6fKcJ3VglKLGyLRaiEyDPo",
-      "duration": 180004,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FpXO7ehznN8Mh3sNfRd1r",
-      "name": "Oblivion",
-      "artist": "TheFatRat, Lola Blanc",
-      "album": "Oblivion",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736337c1092bec45e016413a03",
-      "playedAt": "2026-10-21T14:28:19.410Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FpXO7ehznN8Mh3sNfRd1r",
-      "duration": 211935,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LtKpKOO0fyGBAbv761JCu",
-      "name": "Sunlight",
-      "artist": "TheFatRat, Phaera",
-      "album": "Unity - 10th Anniversary Compilation",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3b24d7997db331a6e841d3",
-      "playedAt": "2026-10-21T14:24:46.860Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LtKpKOO0fyGBAbv761JCu",
-      "duration": 169952,
-      "previewUrl": ""
-    },
-    {
-      "id": "4N3CAZ7qXbPKPWrcXd4gSh",
-      "name": "Freakshow",
-      "artist": "Dirty Palm, LexBlaze",
-      "album": "Freakshow",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734100bb8f3298a25a2abc6366",
-      "playedAt": "2026-10-21T14:21:56.339Z",
-      "spotifyUrl": "https://open.spotify.com/track/4N3CAZ7qXbPKPWrcXd4gSh",
-      "duration": 174375,
-      "previewUrl": ""
-    },
-    {
-      "id": "6V53UDIOvJ8QNjRAQmvQQn",
-      "name": "Attack of the Killer Queen",
-      "artist": "Toby Fox, Lena Raine, Marcy Nabors",
-      "album": "DELTARUNE Chapter 2 (Original Game Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e14fd3669881ed569497a76",
-      "playedAt": "2026-10-21T14:19:01.417Z",
-      "spotifyUrl": "https://open.spotify.com/track/6V53UDIOvJ8QNjRAQmvQQn",
-      "duration": 120000,
-      "previewUrl": ""
-    },
-    {
-      "id": "3J13AWtVj8EWWEi1yfNl8J",
-      "name": "青空のラプソディ",
-      "artist": "fhána",
-      "album": "青空のラプソディ 【アニメ盤】",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273561d2f47b41a92ed67b759f2",
-      "playedAt": "2026-10-21T11:49:28.831Z",
-      "spotifyUrl": "https://open.spotify.com/track/3J13AWtVj8EWWEi1yfNl8J",
-      "duration": 278000,
-      "previewUrl": ""
-    },
-    {
-      "id": "4MorYttxU39XKVoRlCopyz",
-      "name": "QUESTION",
-      "artist": "3年E組うた担(渚&茅野&業&磯貝&前原)",
-      "album": "QUESTION",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0f01a5f8f3e0d9a0f857870",
-      "playedAt": "2026-10-21T11:44:50.337Z",
-      "spotifyUrl": "https://open.spotify.com/track/4MorYttxU39XKVoRlCopyz",
-      "duration": 266226,
       "previewUrl": ""
     }
   ],
