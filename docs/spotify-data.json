@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-10-22T10:48:48.489Z",
+  "lastUpdated": "2026-10-23T10:41:06.034Z",
   "tracks": [
+    {
+      "id": "1X7VQFZ23MgWshmLHYFRsZ",
+      "name": "勝手にシンドバッド",
+      "artist": "サザンオールスターズ",
+      "album": "勝手にシンドバッド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6e4835dfb1aa38e53313620",
+      "playedAt": "2026-10-23T07:14:31.251Z",
+      "spotifyUrl": "https://open.spotify.com/track/1X7VQFZ23MgWshmLHYFRsZ",
+      "duration": 237133,
+      "previewUrl": ""
+    },
     {
       "id": "73TEyhGLxixHAwzOdoamgV",
       "name": "Aoi",
@@ -318,17 +329,6 @@
       "playedAt": "2026-10-21T14:38:47.503Z",
       "spotifyUrl": "https://open.spotify.com/track/2PLMiHYcVixnjsG8QPiHFo",
       "duration": 290467,
-      "previewUrl": ""
-    },
-    {
-      "id": "0WrwF6MWqUTdjWAr1uIZHO",
-      "name": "MEGALOVANIA",
-      "artist": "Toby Fox",
-      "album": "UNDERTALE Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27384eb923a79ba98269f0a7390",
-      "playedAt": "2026-10-21T14:33:56.504Z",
-      "spotifyUrl": "https://open.spotify.com/track/0WrwF6MWqUTdjWAr1uIZHO",
-      "duration": 156000,
       "previewUrl": ""
     }
   ],
