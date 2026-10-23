@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T22:37:19.841Z",
+  "generatedAt": "2026-10-23T22:32:16.933Z",
   "user": "masatoT",
   "watched": [
     {
@@ -2719,6 +2719,35 @@
       "recordedOrder": 14557392194,
       "rating": 10,
       "ratedAt": "2026-10-21T06:26:42.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 1164118,
+      "tmdb": 1423191,
+      "slug": "resident-evil-2026",
+      "year": 2026,
+      "released": "2026-09-16",
+      "traktTitle": "Resident Evil",
+      "details": {
+        "poster": "/wHXSnGH3zQtvpxPwaBXMoS9o8Vl.jpg",
+        "genres": [
+          "ホラー",
+          "サイエンスフィクション",
+          "アドベンチャー"
+        ],
+        "overview": "ある医療品の配送を請け負った男を襲う、地獄の一夜。 男は、己の命運を懸けた壮絶なサバイバルを余儀なくされる…",
+        "overviewLang": "ja",
+        "title": "バイオハザード",
+        "originalTitle": "Resident Evil",
+        "runtime": 95,
+        "releaseDate": "2026-09-16"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-23T09:24:00.000Z",
+      "recordedOrder": 14563548411,
+      "rating": 6,
+      "ratedAt": "2026-10-23T09:24:59.000Z"
     }
   ],
   "watchlist": [
