@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-10-23T20:46:33.717Z",
+  "lastUpdated": "2026-10-24T09:58:00.454Z",
   "tracks": [
+    {
+      "id": "7M3TZDUNvaNBo0qtWVaZif",
+      "name": "WanteD! WanteD!",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "ENSEMBLE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27322c627adf9c8754c9302fa35",
+      "playedAt": "2026-10-24T09:49:21.200Z",
+      "spotifyUrl": "https://open.spotify.com/track/7M3TZDUNvaNBo0qtWVaZif",
+      "duration": 217386,
+      "previewUrl": ""
+    },
     {
       "id": "0FOVGBW0RpVRuDuUuN4ZVw",
       "name": "ヨワネハキ",
@@ -318,17 +329,6 @@
       "playedAt": "2026-10-23T13:10:45.275Z",
       "spotifyUrl": "https://open.spotify.com/track/3HOOzsN7ypLG53pyBq9eeL",
       "duration": 231093,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Wg6U4mLyjJj8ApPkWHBKB",
-      "name": "Believe",
-      "artist": "Folder 5",
-      "album": "HYPER GROOVE 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b0c63cf351d4883ae5d4af4",
-      "playedAt": "2026-10-23T13:06:53.712Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Wg6U4mLyjJj8ApPkWHBKB",
-      "duration": 226700,
       "previewUrl": ""
     }
   ],
