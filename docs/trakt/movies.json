@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T22:32:16.933Z",
+  "generatedAt": "2026-10-24T21:48:05.649Z",
   "user": "masatoT",
   "watched": [
     {
@@ -1705,6 +1705,35 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 71938,
+      "tmdb": 99861,
+      "slug": "avengers-age-of-ultron-2015",
+      "year": 2015,
+      "released": "2015-04-22",
+      "traktTitle": "Avengers: Age of Ultron",
+      "details": {
+        "poster": "/jSaRZoFY8gAioBO9nMnSGA3mjl6.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "アイアンマンことトニー・スタークが完成させた人工知能“ウルトロン”の暴走に端を発する、ヒーローたちによる愛する者たちを救うための戦いをダイナミックに描く。人類の危機的状況を何度も打破してきたアイアンマンことトニー・スタークは、平和維持システムとしての人工知能“ウルトロン”を誕生させる。人類を脅威から守るために完成させたウルトロンであったが、平和を脅かす唯一の存在は人類だと結論付け、抹消しようとする。監督は、前作でもメガホンを取ったジョス・ウェドン。",
+        "overviewLang": "ja",
+        "title": "アベンジャーズ／エイジ・オブ・ウルトロン",
+        "originalTitle": "Avengers: Age of Ultron",
+        "runtime": 142,
+        "releaseDate": "2015-04-22"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-24T11:25:00.000Z",
+      "recordedOrder": 14566800084,
+      "rating": 7,
+      "ratedAt": "2026-10-24T11:25:22.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 183371,
       "tmdb": 286217,
       "slug": "the-martian-2015",
@@ -2964,32 +2993,6 @@
     {
       "type": "movie",
       "kind": "movie",
-      "trakt": 71938,
-      "tmdb": 99861,
-      "slug": "avengers-age-of-ultron-2015",
-      "year": 2015,
-      "released": "2015-04-22",
-      "traktTitle": "Avengers: Age of Ultron",
-      "details": {
-        "poster": "/jSaRZoFY8gAioBO9nMnSGA3mjl6.jpg",
-        "genres": [
-          "アクション",
-          "アドベンチャー",
-          "サイエンスフィクション"
-        ],
-        "overview": "アイアンマンことトニー・スタークが完成させた人工知能“ウルトロン”の暴走に端を発する、ヒーローたちによる愛する者たちを救うための戦いをダイナミックに描く。人類の危機的状況を何度も打破してきたアイアンマンことトニー・スタークは、平和維持システムとしての人工知能“ウルトロン”を誕生させる。人類を脅威から守るために完成させたウルトロンであったが、平和を脅かす唯一の存在は人類だと結論付け、抹消しようとする。監督は、前作でもメガホンを取ったジョス・ウェドン。",
-        "overviewLang": "ja",
-        "title": "アベンジャーズ／エイジ・オブ・ウルトロン",
-        "originalTitle": "Avengers: Age of Ultron",
-        "runtime": 142,
-        "releaseDate": "2015-04-22"
-      },
-      "listedAt": "2026-10-07T13:42:01.000Z",
-      "rating": null
-    },
-    {
-      "type": "movie",
-      "kind": "movie",
       "trakt": 73582,
       "tmdb": 102899,
       "slug": "ant-man-2015",
@@ -3272,6 +3275,31 @@
         "overviewLang": "ja"
       },
       "listedAt": "2026-10-05T03:10:49.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 1095879,
+      "tmdb": 1339713,
+      "slug": "obsession-2026",
+      "year": 2026,
+      "released": "2026-05-13",
+      "traktTitle": "Obsession",
+      "details": {
+        "poster": "/vJIRyV24YoZcF79EdmddbX6MlQP.jpg",
+        "genres": [
+          "ホラー",
+          "スリラー"
+        ],
+        "overview": "主人公は孤独で内向的な青年ベア（マイケル・ジョンストン）。想いを寄せる女性ニッキー（インディ・ナヴァレッティ）との距離を縮めたい一心で、“願いを叶える”という不気味なまじない「ワン・ウィッシュ・ウィロー」に手を出したことから、彼の日常は少しずつ狂い始める。純粋だったはずの恋愛感情は執着へと変貌し、“最愛”が“災愛”へと反転していく──。",
+        "overviewLang": "ja",
+        "title": "オブセッション 災愛",
+        "originalTitle": "Obsession",
+        "runtime": 109,
+        "releaseDate": "2026-05-13"
+      },
+      "listedAt": "2026-10-24T10:31:18.000Z",
       "rating": null
     },
     {
