@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-10-24T15:02:07.647Z",
+  "lastUpdated": "2026-10-24T19:57:18.231Z",
   "tracks": [
+    {
+      "id": "47IJAEuqiu4r1dEoEExfMA",
+      "name": "空想メソロギヰ",
+      "artist": "Yousei Teikoku",
+      "album": "PAX VESANIA",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd463667d0879f62cfdf863d",
+      "playedAt": "2026-10-24T16:25:41.897Z",
+      "spotifyUrl": "https://open.spotify.com/track/47IJAEuqiu4r1dEoEExfMA",
+      "duration": 243226,
+      "previewUrl": ""
+    },
     {
       "id": "7hOskESv9D8tUS4lqfpkEn",
       "name": "檄! 帝国華撃団",
@@ -318,17 +329,6 @@
       "playedAt": "2026-10-23T16:53:40.997Z",
       "spotifyUrl": "https://open.spotify.com/track/153lRbNmhQZVi69kbhmjY8",
       "duration": 222813,
-      "previewUrl": ""
-    },
-    {
-      "id": "5uodb4Kj8xSuxurunWcbPJ",
-      "name": "NANIMONO (feat. 米津玄師)",
-      "artist": "Yasutaka Nakata, Kenshi Yonezu",
-      "album": "Digital Native",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738ea096353b1d1adf86a337f3",
-      "playedAt": "2026-10-23T16:49:57.606Z",
-      "spotifyUrl": "https://open.spotify.com/track/5uodb4Kj8xSuxurunWcbPJ",
-      "duration": 246133,
       "previewUrl": ""
     }
   ],
