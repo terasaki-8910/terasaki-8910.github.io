@@ -29,6 +29,7 @@ jobs:
     timeout-minutes: 45
     permissions:
       contents: write
+      actions: write # deploy.yml を呼ぶ(下の Deploy the updated data)
 
     steps:
       - name: Checkout repository
@@ -44,6 +45,7 @@ jobs:
         run: node scripts/update-chara-images.mjs
 
       - name: Commit and push changes
+        id: commit
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -58,6 +60,7 @@ jobs:
           # その回の更新がそのまま消える(2026-08-18に実際に発生)。
           for i in 1 2 3 4 5; do
             if git push; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             echo "push失敗、pull --rebaseしてリトライ ($i/5)"
@@ -66,3 +69,11 @@ jobs:
           done
           echo "5回リトライしてもpushできませんでした"
           exit 1
+
+      # GITHUB_TOKEN での push では deploy.yml が動かない(GitHub の仕様。workflow_dispatch だけは動く)。
+      # 新しい画像を本番(Cloudflare Pages)に出すため、push できたときだけここで呼ぶ
+      - name: Deploy the updated data
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main --repo "${{ github.repository }}"
