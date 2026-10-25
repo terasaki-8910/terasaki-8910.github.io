@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T21:48:05.649Z",
+  "generatedAt": "2026-10-25T09:38:01.162Z",
   "user": "masatoT",
   "watched": [
     {
@@ -1820,6 +1820,35 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 169105,
+      "tmdb": 271110,
+      "slug": "captain-america-civil-war-2016",
+      "year": 2016,
+      "released": "2016-04-27",
+      "traktTitle": "Captain America: Civil War",
+      "details": {
+        "poster": "/qCZnPrC5NGjnO7uTqCD5JkCBALQ.jpg",
+        "genres": [
+          "アドベンチャー",
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "overview": "アベンジャーズのリーダーとなった、キャプテン・アメリカ。しかし、彼らが世界各地で繰り広げた戦いが甚大な被害を及ぼしたことが問題になる。さらに、それを回避するためにアベンジャーズは国際的政府組織の管理下に置かれ、活動を制限されることに。アイアンマンことトニー・スタークはこの処置に賛成するが、自発的に平和を守るべきだと考えるキャプテン・アメリカはそんな彼に反発。二人のにらみ合いが激化していく中、世界を震撼させるテロ事件が起きてしまう。",
+        "overviewLang": "ja",
+        "title": "シビル・ウォー／キャプテン・アメリカ",
+        "originalTitle": "Captain America: Civil War",
+        "runtime": 148,
+        "releaseDate": "2016-04-27"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-25T07:04:00.000Z",
+      "recordedOrder": 14569724402,
+      "rating": 7,
+      "ratedAt": "2026-10-25T07:04:05.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 188631,
       "tmdb": 291805,
       "slug": "now-you-see-me-2-2016",
@@ -2021,6 +2050,35 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 196213,
+      "tmdb": 315635,
+      "slug": "spider-man-homecoming-2017",
+      "year": 2017,
+      "released": "2017-07-05",
+      "traktTitle": "Spider-Man: Homecoming",
+      "details": {
+        "poster": "/x4uMWPwYUljcc6LWJSZNq19HryO.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "15歳の高校生ピーター・パーカーは、まるで部活動のようなテンションでスパイダーマンとして活動していた。まだ若い彼の才能に気付いたアイアンマンことトニー・スタークは、ピーターを真のヒーローとして育てようとする。スタークに新しいスーツを新調してもらったピーターは、意気揚々と街へ乗り出す。",
+        "overviewLang": "ja",
+        "title": "スパイダーマン：ホームカミング",
+        "originalTitle": "Spider-Man: Homecoming",
+        "runtime": 133,
+        "releaseDate": "2017-07-05"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-25T07:03:00.000Z",
+      "recordedOrder": 14569723636,
+      "rating": 8,
+      "ratedAt": "2026-10-25T07:03:50.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 223444,
       "tmdb": 343668,
       "slug": "kingsman-the-golden-circle-2017",
@@ -2046,6 +2104,36 @@
       "recordedOrder": 14495530594,
       "rating": 7,
       "ratedAt": "2026-10-05T02:52:33.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 181312,
+      "tmdb": 284053,
+      "slug": "thor-ragnarok-2017",
+      "year": 2017,
+      "released": "2017-10-02",
+      "traktTitle": "Thor: Ragnarok",
+      "details": {
+        "poster": "/22v9TpnY5doZg6muPKZTaHVmKmi.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "コメディ",
+          "サイエンスフィクション"
+        ],
+        "overview": "アベンジャーズの一員ソーの前に死の女神・ヘラが現れた。復讐と野望に燃えるヘラは、ソーの故郷へ攻撃をはじめる。故郷を奪われたソーは、この最強の敵を倒すため盟友ハルク、宿敵ロキらと型破りのチーム“リベンジャーズ”を組み極限バトルに挑む。 そこには、ソーの運命を変える秘密が隠されていた。",
+        "overviewLang": "ja",
+        "title": "マイティ・ソー バトルロイヤル",
+        "originalTitle": "Thor: Ragnarok",
+        "runtime": 131,
+        "releaseDate": "2017-10-02"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-25T07:04:00.000Z",
+      "recordedOrder": 14569724588,
+      "rating": 7,
+      "ratedAt": "2026-10-25T07:04:20.000Z"
     },
     {
       "type": "movie",
@@ -3014,59 +3102,6 @@
         "releaseDate": "2015-07-14"
       },
       "listedAt": "2026-10-11T04:51:40.000Z",
-      "rating": null
-    },
-    {
-      "type": "movie",
-      "kind": "movie",
-      "trakt": 169105,
-      "tmdb": 271110,
-      "slug": "captain-america-civil-war-2016",
-      "year": 2016,
-      "released": "2016-04-27",
-      "traktTitle": "Captain America: Civil War",
-      "details": {
-        "poster": "/qCZnPrC5NGjnO7uTqCD5JkCBALQ.jpg",
-        "genres": [
-          "アドベンチャー",
-          "アクション",
-          "サイエンスフィクション"
-        ],
-        "overview": "アベンジャーズのリーダーとなった、キャプテン・アメリカ。しかし、彼らが世界各地で繰り広げた戦いが甚大な被害を及ぼしたことが問題になる。さらに、それを回避するためにアベンジャーズは国際的政府組織の管理下に置かれ、活動を制限されることに。アイアンマンことトニー・スタークはこの処置に賛成するが、自発的に平和を守るべきだと考えるキャプテン・アメリカはそんな彼に反発。二人のにらみ合いが激化していく中、世界を震撼させるテロ事件が起きてしまう。",
-        "overviewLang": "ja",
-        "title": "シビル・ウォー／キャプテン・アメリカ",
-        "originalTitle": "Captain America: Civil War",
-        "runtime": 148,
-        "releaseDate": "2016-04-27"
-      },
-      "listedAt": "2026-10-07T13:35:04.000Z",
-      "rating": null
-    },
-    {
-      "type": "movie",
-      "kind": "movie",
-      "trakt": 181312,
-      "tmdb": 284053,
-      "slug": "thor-ragnarok-2017",
-      "year": 2017,
-      "released": "2017-10-02",
-      "traktTitle": "Thor: Ragnarok",
-      "details": {
-        "poster": "/22v9TpnY5doZg6muPKZTaHVmKmi.jpg",
-        "genres": [
-          "アクション",
-          "アドベンチャー",
-          "コメディ",
-          "サイエンスフィクション"
-        ],
-        "overview": "アベンジャーズの一員ソーの前に死の女神・ヘラが現れた。復讐と野望に燃えるヘラは、ソーの故郷へ攻撃をはじめる。故郷を奪われたソーは、この最強の敵を倒すため盟友ハルク、宿敵ロキらと型破りのチーム“リベンジャーズ”を組み極限バトルに挑む。 そこには、ソーの運命を変える秘密が隠されていた。",
-        "overviewLang": "ja",
-        "title": "マイティ・ソー バトルロイヤル",
-        "originalTitle": "Thor: Ragnarok",
-        "runtime": 131,
-        "releaseDate": "2017-10-02"
-      },
-      "listedAt": "2026-10-07T16:09:50.000Z",
       "rating": null
     },
     {
