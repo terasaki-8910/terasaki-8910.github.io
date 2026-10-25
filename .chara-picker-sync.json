@@ -1,21 +1,21 @@
 {
   "files": {
-    "public/chara-picker/characters.json": "54c24cfadc929681eb93c5cf3e5c223d4fcfe0c1347533953800eebbbd1e5ff6",
-    "public/chara-picker/supply.json": "6d6e2df6516491d66c515532e9bf7ab957fa4b6222c3c6e6049f5f2290395bb6",
-    "public/chara-picker/likelihoods.json": "07ac4ac81a51ee592ddf25fd862a7fd667fba3a00913b5e5c7436bfd7ecf66c5",
-    "public/chara-picker/tag-map.json": "d3672254b14fc68263ad30f5cb4019a0610180572e835abfe5850f87c9278b61",
-    "src/chara/engine/bayes.ts": "fd6df7f40d0f530121fb4b885a84007d6c5be98513b589cec65419d792d0fdaa",
-    "src/chara/data/schema.ts": "bdf8533e57ce34bd1b838bb63e423bc5a9d5d3fdc5874d6a1ebe955c18d52162",
+    "public/chara-picker/characters.json": "5f77af208c069358d526da3472f4ecdce3e0c9a70a0d0b7613479f40184c268f",
+    "public/chara-picker/supply.json": "50aba4096a499f83fe06b1be267f831ba2dde4f5b7b00ffbfd689c51b49b015e",
+    "public/chara-picker/likelihoods.json": "33f78eedd591f82e550e3e9d78da2289ac575f7529810a7c858d727049c148bc",
+    "public/chara-picker/tag-map.json": "c7f07f21b89dc05b80652cfb8a8bd571b0b6cbe09c750371e02f6b8291e3f2e9",
     "public/chara-picker/questions.runtime.json": "f9dfe1956a8c4a891063a06a4d4aef22bf64216b7050944c2a94239ec97644b3",
+    "src/chara/engine/bayes.ts": "fd6df7f40d0f530121fb4b885a84007d6c5be98513b589cec65419d792d0fdaa",
     "src/chara/engine/recommend.ts": "43318be751c830c40b4d46e40873ca59da8bb387bd310b8ed6a5fd02ca234f7e",
     "src/chara/engine/questions.ts": "68500d8e2df80381c65f6df5e0f4c9ca7c2e8d06d8de8d1bcfa69cac65c69e5a",
     "src/chara/engine/supply.ts": "451fb9d1a2dfa365ccb29eab2e1f5d5760ae0e402cef7b381a51b9697d38b927",
     "src/chara/engine/cooldown.ts": "97fec8df4b2b4d7acde284fb402eac91cbdd7e85c0d93cbf3a88e20037c90561",
+    "src/chara/data/schema.ts": "bdf8533e57ce34bd1b838bb63e423bc5a9d5d3fdc5874d6a1ebe955c18d52162",
     "src/chara/hooks/useBayesInterview.ts": "b376b8c90891fc3577d874b773c82b14ce5779366b9b074ce3c666498212abd8",
     "src/chara/hooks/useSessionLog.ts": "5d59ef1fa9ae83638af3088fbe04e89caa997d568de19a94b3269ac1e5e10127"
   },
-  "syncedAt": "2026-10-07T00:22:50.721Z",
-  "upstreamCommit": "5b96ffe777413e34df6eca756ed358bd200d357f",
-  "upstreamSubject": "feat/expansion-1000 を取り込む: 収録キャラを488体から1008体に増やし、ベイズの質問上限を15問にする",
+  "syncedAt": "2026-10-25T06:21:13.938Z",
+  "upstreamCommit": "6f21104b0623e4d11677640b3aa87732533b7905",
+  "upstreamSubject": "feat/add-kaguya-saki を取り込む: かぐや様5体と咲36体を足す(1008 → 1049体)",
   "upstreamDirty": false
 }
