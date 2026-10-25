@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  actions: write # deploy.yml を呼ぶ(下の Deploy the updated data)
 
 jobs:
   update:
@@ -39,6 +40,7 @@ jobs:
         run: node scripts/update-trakt.mjs
 
       - name: Commit and push changes
+        id: commit
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -51,6 +53,7 @@ jobs:
           # ほかの自動更新が先に push していたときに備えてリトライする(update-spotify.yml と同じ)
           for i in 1 2 3 4 5; do
             if git push; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             echo "push失敗、pull --rebaseしてリトライ ($i/5)"
@@ -59,3 +62,11 @@ jobs:
           done
           echo "5回リトライしてもpushできませんでした"
           exit 1
+
+      # GITHUB_TOKEN での push では deploy.yml が動かない(GitHub の仕様。workflow_dispatch だけは動く)。
+      # 新しいデータを本番(Cloudflare Pages)に出すため、push できたときだけここで呼ぶ
+      - name: Deploy the updated data
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main --repo "${{ github.repository }}"

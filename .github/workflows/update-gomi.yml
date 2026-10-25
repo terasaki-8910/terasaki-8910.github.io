@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write # deploy.yml を呼ぶ(下の Deploy the updated data)
 
     steps:
       - name: Checkout repository
@@ -36,9 +37,23 @@ jobs:
         run: node scripts/update-gomi-calendar.js
 
       - name: Commit and push changes
+        id: commit
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add public/gomi-tsukuba
-          git diff --staged --quiet || git commit -m "🗑️ Update gomi calendar data"
+          if git diff --staged --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "🗑️ Update gomi calendar data"
           git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # GITHUB_TOKEN での push では deploy.yml が動かない(GitHub の仕様。workflow_dispatch だけは動く)。
+      # 新しいデータを本番(Cloudflare Pages)に出すため、push できたときだけここで呼ぶ
+      - name: Deploy the updated data
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main --repo "${{ github.repository }}"
