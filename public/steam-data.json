@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-26T04:29:48.907Z",
+  "lastUpdated": "2026-10-26T12:45:55.743Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -487,7 +487,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/92b36c71d5eed910a58979f776c1d70a93ab117b.jpg",
           "unlockedAt": "2026-09-13T13:09:22.000Z",
-          "percent": 23
+          "percent": 22.9
         },
         {
           "name": "A Keen Sense of Spell",
@@ -501,7 +501,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/5c9e26c4941ae4fc98c6eaf3c023e3a18dc2df51.jpg",
           "unlockedAt": "2026-09-12T04:30:37.000Z",
-          "percent": 76.8
+          "percent": 76.7
         }
       ]
     },
