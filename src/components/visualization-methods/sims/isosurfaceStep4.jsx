@@ -105,7 +105,7 @@ export default function IsosurfaceStep4() {
       legend={<SimLegend items={[
         { key: 'samples', label: '測定点（重みで大きさ・濃さが変化）', swatch: 'var(--lane-0)' },
         { key: 'local', label: '局所 2 次式', swatch: 'var(--lane-1)' },
-        { key: 'curve', label: 'MLS 曲線', swatch: 'var(--ink)' },
+        { key: 'curve', label: 'MLS 曲線', swatch: 'var(--color-ink)' },
         { key: 'coefficients', symbol: 'c', label: '係数', value: `(${coefficients.map((value) => Number.isFinite(value) ? value.toFixed(3) : '—').join(', ')})`, minChars: 24 },
       ]} />}
       controls={<>

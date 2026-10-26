@@ -2,6 +2,7 @@ import { gridPlane, uvSphere } from '../../../utils/vis/mesh'
 import { blinnPhongSpecular, lambert, phongSpecular } from '../../../utils/vis/shading'
 import { dot, normalize } from '../../../utils/vis/vec3'
 import { GRAB_SLOP_PX, markerCircle } from '../../visualization/sims/rigidKit'
+import { blitPixels } from './pixelKit'
 
 export const HALF_PI = Math.PI / 2
 export const ANGLE_HANDLE_R = 7
@@ -151,7 +152,7 @@ export function drawPixelSphere(ctx, cx, cy, radius, colors, { L, V = [0, 0, 1],
       image.data[offset + 3] = 255
     }
   }
-  ctx.putImageData(image, Math.round(cx - size / 2), Math.round(cy - size / 2))
+  blitPixels(ctx, image, size, size, Math.round(cx - size / 2), Math.round(cy - size / 2))
   ctx.strokeStyle = colors.line
   ctx.lineWidth = 1
   ctx.beginPath()
@@ -186,4 +187,15 @@ export function drawPolarLobe(ctx, view, origin, radius, colors, { L, V, m, matc
 
 export function angleBetween(a, b) {
   return Math.acos(Math.max(-1, Math.min(1, dot(normalize(a.slice()), normalize(b.slice())))))
+}
+
+// どの向きも同じ 1 色の環境(背景を canvas の地の色にそろえたい 3 次元の絵に使う)
+export function flatEnvironment(colors, name = 'surface') {
+  const c = tokenRgb(colors, name)
+  return (direction, out) => {
+    out[0] = c[0]
+    out[1] = c[1]
+    out[2] = c[2]
+    return out
+  }
 }

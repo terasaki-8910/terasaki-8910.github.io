@@ -75,8 +75,8 @@ export default function IsosurfaceStep2() {
       label="陰関数の値、法線、曲率"
       stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="円の陰関数。点をドラッグまたは矢印キーで動かすと、値、勾配、単位法線が変わります。" />}
       legend={<SimLegend items={[
-        { key: 'field', label: '−f の色（内側を濃く表示）', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--surface), var(--lane-1))' },
-        { key: 'gradient', symbol: '\\nabla f', label: '勾配', value: `(${gradient[0].toFixed(2)}, ${gradient[1].toFixed(2)})`, swatch: 'var(--ink)' },
+        { key: 'field', label: '−f の色（内側を濃く表示）', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--color-surface), var(--lane-1))' },
+        { key: 'gradient', symbol: '\\nabla f', label: '勾配', value: `(${gradient[0].toFixed(2)}, ${gradient[1].toFixed(2)})`, swatch: 'var(--color-ink)' },
         { key: 'normal', symbol: '\\hat{n}', label: '単位法線', value: `(${normal[0].toFixed(2)}, ${normal[1].toFixed(2)})`, swatch: 'var(--lane-0)' },
       ]} />}
       controls={<>

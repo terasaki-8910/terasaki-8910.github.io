@@ -8,6 +8,7 @@ import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView } from '../../visualization/axes'
 import { arrowStep, clamp, drawText, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
+import { drawSubLabel } from './labelKit'
 import { bilinear, trilinear } from '../../../utils/vis/isosurface'
 import { rampColor } from './isosurfaceKit'
 
@@ -23,7 +24,14 @@ export default function IsosurfaceStep1() {
   const draw = ({ ctx, width, height, colors }) => {
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
-    const view = makeView({ width, height, xRange: [-0.35, mode === '2d' ? 1.35 : 1.7], yRange: [-0.25, 1.65], margin: { left: 38, right: 24, top: 22, bottom: 34 }, equal: true })
+    const view = makeView({
+      width,
+      height,
+      xRange: mode === '2d' ? [-0.42, 1.42] : [-0.3, 1.65],
+      yRange: mode === '2d' ? [-0.25, 1.28] : [-0.25, 1.5],
+      margin: { left: 38, right: 24, top: 22, bottom: 34 },
+      equal: true,
+    })
     const project = (x, y, z = 0) => [view.sx(x + 0.34 * z), view.sy(y + 0.24 * z)]
     const faces = mode === '2d' ? [0] : [0, 1]
     for (const z of faces) {
@@ -60,13 +68,18 @@ export default function IsosurfaceStep1() {
       const x = local % 2
       const y = local >= 2 ? 1 : 0
       const base = project(x, y, z)
-      const top = [base[0], base[1] - values[index] * 34]
+      const top = [base[0], base[1] - values[index] * 42]
       barTops.push(top)
       ctx.strokeStyle = laneColor(colors, z ? 2 : 0)
       ctx.lineWidth = 3
       ctx.beginPath(); ctx.moveTo(...base); ctx.lineTo(...top); ctx.stroke()
       markerCircle(ctx, top[0], top[1], 6, { fill: colors.accent, stroke: colors.ink, lineWidth: selectedRef.current.index === index ? 3 : 1.5 })
-      drawText(ctx, `f${index} = ${values[index].toFixed(2)}`, top[0] + 9, top[1] - 5, { color: colors.ink, size: 11 })
+      drawText(ctx, `f${index} = ${values[index].toFixed(2)}`, top[0] + (x ? 10 : -10), top[1] + (y ? -8 : 10), {
+        color: colors.ink,
+        size: 11,
+        align: x ? 'left' : 'right',
+        baseline: y ? 'bottom' : 'top',
+      })
     }
     ctx.lineWidth = 1.5
     for (const [left, right, color] of [[0, 1, 2], [2, 3, 2], [4, 5, 3], [6, 7, 3]]) {
@@ -82,11 +95,11 @@ export default function IsosurfaceStep1() {
     const backA = bilinear(values[4], values[5], values[6], values[7], a, 0)
     const backB = bilinear(values[4], values[5], values[6], values[7], a, 1)
     const drawInterpolation = (p, value, color, label) => {
-      const q = [p[0], p[1] - value * 34]
+      const q = [p[0], p[1] - value * 42]
       ctx.strokeStyle = color; ctx.lineWidth = 1.7; ctx.setLineDash([4, 3])
       ctx.beginPath(); ctx.moveTo(...p); ctx.lineTo(...q); ctx.stroke(); ctx.setLineDash([])
       markerCircle(ctx, q[0], q[1], 3.5, { fill: color, stroke: colors.ink, lineWidth: 0.8 })
-      if (label) drawText(ctx, label, q[0] + 7, q[1], { color: colors.ink, size: 11 })
+      if (label) drawSubLabel(ctx, label, q[0] + 7, q[1], { color: colors.ink, size: 11 })
       return q
     }
     const pA = drawInterpolation(project(a, 0, 0), frontA, laneColor(colors, 2), 'f_A')
@@ -114,7 +127,14 @@ export default function IsosurfaceStep1() {
 
   const geometry = () => {
     const { width, height } = sizeRef.current
-    const view = makeView({ width, height, xRange: [-0.35, mode === '2d' ? 1.35 : 1.7], yRange: [-0.25, 1.65], margin: { left: 38, right: 24, top: 22, bottom: 34 }, equal: true })
+    const view = makeView({
+      width,
+      height,
+      xRange: mode === '2d' ? [-0.42, 1.42] : [-0.3, 1.65],
+      yRange: mode === '2d' ? [-0.25, 1.28] : [-0.25, 1.5],
+      margin: { left: 38, right: 24, top: 22, bottom: 34 },
+      equal: true,
+    })
     return { view, project: (x, y, z = 0) => [view.sx(x + 0.34 * z), view.sy(y + 0.24 * z)] }
   }
   const hit = (point) => {
@@ -123,7 +143,7 @@ export default function IsosurfaceStep1() {
     for (let index = 0; index < count; index++) {
       const local = index % 4
       const base = project(local % 2, local >= 2 ? 1 : 0, index >= 4 ? 1 : 0)
-      if (Math.hypot(point.x - base[0], point.y - (base[1] - values[index] * 34)) < 18) return { kind: 'value', index }
+      if (Math.hypot(point.x - base[0], point.y - (base[1] - values[index] * 42)) < 18) return { kind: 'value', index }
     }
     const p = project(probe[0], probe[1], mode === '3d' ? depth : 0)
     return Math.hypot(point.x - p[0], point.y - p[1]) < 20 ? { kind: 'probe', index: -1 } : null
@@ -133,7 +153,7 @@ export default function IsosurfaceStep1() {
     onDown: (point) => { const target = hit(point); if (!target) return false; selectedRef.current = target; redraw(); return true },
     onMove: ({ x, y, dy }) => {
       if (selectedRef.current.kind === 'value') {
-        setValues((current) => current.map((value, index) => index === selectedRef.current.index ? clamp(value - dy / 34, -1, 1) : value))
+        setValues((current) => current.map((value, index) => index === selectedRef.current.index ? clamp(value - dy / 42, -1, 1) : value))
       } else {
         const { view } = geometry()
         setProbe([clamp(view.wx(x) - (mode === '3d' ? 0.34 * depth : 0), 0, 1), clamp(view.wy(y) - (mode === '3d' ? 0.24 * depth : 0), 0, 1)])
@@ -157,8 +177,8 @@ export default function IsosurfaceStep1() {
       switcher={<ModeSwitch label="次元" value={mode} options={[{ value: '2d', label: '2 次元' }, { value: '3d', label: '3 次元' }]} onChange={setMode} variant="tabs" />}
       stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="角の縦棒を上下にドラッグして値を変え、点をドラッグまたは矢印キーで動かせます。" />}
       legend={<SimLegend items={[
-        { key: 'front', label: '手前の補間', swatch: 'var(--lane-0)' },
-        { key: 'back', label: '奥の補間', swatch: 'var(--lane-3)' },
+        { key: 'front', label: mode === '2d' ? '横の補間' : '手前の補間', swatch: 'var(--lane-0)' },
+        { key: 'back', label: mode === '2d' ? '縦の補間' : '奥の補間', swatch: 'var(--lane-3)' },
         { key: 'value', symbol: 'f', label: '点の値', value: value.toFixed(3), minChars: 7 },
       ]} />}
       controls={<>

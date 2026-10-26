@@ -72,6 +72,10 @@ export default function ShapeStep2() {
 - TeX の関数名は `\cos`・`\sin`・`\cosh`・`\sinh`・`\exp`・`\max` で書く（`cos t` と書くと斜体の c・o・s になる）
 - JSX の属性の文字列ではバックスラッシュは 1 つ（`symbol="\varepsilon"`。JSX の属性はエスケープを解かないので `"\\varepsilon"` は 2 つのまま KaTeX に渡り、文字が出る）。JS の文字列（`'\\varepsilon'`）や `symbol={'\\varepsilon'}` では 2 つ。`tests/vis-page/methodsJsx.test.js` が検査する
 - 式の中の言葉は日本語（`\text{影}`、`\text{それ以外}`）
+- 画素の絵（ImageData・RGBA の配列）は `sims/pixelKit.js` の `blitPixels(ctx, pixels, w, h, dx, dy, dw, dh)` で描く。見える canvas に `ctx.putImageData` を直接使わない（dpr 2 の画面で絵が左上の 1/4 になる。`tests/vis-page/methodsJsx.test.js` が検査する）
+- CSS の変数の名前はトークンのとおり：`var(--color-ink)`・`var(--color-paper)`・`var(--color-surface)`・`var(--color-muted)`・`var(--lane-0)`〜`var(--lane-4)`・`var(--diff-insert)`。accent はチャンネル値なので `rgb(var(--color-accent))`。`var(--ink)` などは存在しない（凡例の色見本が空になる。テストが検査する）
+- canvas の文字に TeX の `_` を出さない。下付きは `sims/labelKit.js` の `drawSubLabel(ctx, 'f_A = 0.26', x, y, opts)`。負の数は rigidKit の `fmt`（− を使う）
+- 3 次元の絵の背景を canvas の地の色にそろえるときは `shadingKit.js` の `flatEnvironment(colors)`
 - グラフの軸には目盛りを付ける（0・0.5・1 など）
 
 ## 節のデータ（`sections/<id>.js`）

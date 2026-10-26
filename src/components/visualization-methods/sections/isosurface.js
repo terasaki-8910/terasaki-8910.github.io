@@ -5,6 +5,11 @@ const IsosurfaceStep1 = lazy(() => import('../sims/isosurfaceStep1.jsx'))
 const IsosurfaceStep2 = lazy(() => import('../sims/isosurfaceStep2.jsx'))
 const IsosurfaceStep3 = lazy(() => import('../sims/isosurfaceStep3.jsx'))
 const IsosurfaceStep4 = lazy(() => import('../sims/isosurfaceStep4.jsx'))
+const IsosurfaceStep5 = lazy(() => import('../sims/isosurfaceStep5.jsx'))
+const IsosurfaceStep6 = lazy(() => import('../sims/isosurfaceStep6.jsx'))
+const IsosurfaceStep7 = lazy(() => import('../sims/isosurfaceStep7.jsx'))
+const IsosurfaceStep8 = lazy(() => import('../sims/isosurfaceStep8.jsx'))
+const IsosurfaceStep9 = lazy(() => import('../sims/isosurfaceStep9.jsx'))
 
 export default {
   id: 'isosurface',
@@ -121,12 +126,118 @@ export default {
       snippets: ['isosurface-weightedLeastSquares', 'isosurface-solveLinear'],
       Sim: IsosurfaceStep4,
     },
+    {
+      id: 'edge-crossing',
+      title: '辺の上の交点',
+      text: '辺の両端がしきい値 T の反対側なら、途中に値がちょうど T になる点が必ずあります。両端の値を直線で結び、その直線が T を横切る割合から交点を求めます。端の縦棒を上下につかみ、格子数 N を増やすと円との最大距離がおよそ 1/N² で小さくなる様子を見てください。',
+      formulas: [
+        {
+          caption: '辺の線形補間',
+          tex: 't = \\frac{T-f_a}{f_b-f_a},\\qquad \\boldsymbol{p}=(1-t)\\boldsymbol{p}_a+t\\boldsymbol{p}_b',
+          symbols: [
+            { tex: 'f_a,\\ f_b', meaning: '辺の両端の値', unit: '' },
+            { tex: 't', meaning: '端 a から交点までの割合', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['isosurface-edgeCrossing'],
+      Sim: IsosurfaceStep5,
+    },
+    {
+      id: 'marching-squares',
+      title: 'マスごとに線を引く（マーチングスクエア）',
+      text: '四隅を T 以上か未満かに分けると、1 マスには 2⁴ = 16 通りの番号が付きます。番号ごとに辺の交点を結ぶ表を使い、すべてのマスへ順番に線分を引くと、隣同士は共有する辺の同じ交点でつながります。左の四隅を切り替え、右の円をつかんで、case 番号と線のつながりを見てください。',
+      formulas: [
+        {
+          caption: '4 ビットの case 番号',
+          tex: '\\mathrm{case}=\\sum_{k=0}^{3}2^k[\\,f_k\\ge T\\,]\\qquad (16\\text{ 通り})',
+          symbols: [
+            { tex: 'k=0,1,2,3', meaning: '左下、右下、右上、左上の順', unit: '' },
+            { tex: '[\\,f_k\\ge T\\,]', meaning: '条件が真なら 1、偽なら 0', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['isosurface-squareCase', 'isosurface-marchingSquares'],
+      Sim: IsosurfaceStep6,
+    },
+    {
+      id: 'ambiguity',
+      title: 'あいまいなマス（漸近線判定）',
+      text: '対角の 2 点が同じ側にあるマスでは、4 つの交点に 2 通りの結び方があります。マスの中を双線形関数とみなすと等値線は双曲線になり、その中心にある鞍点の値が T 以上かどうかで正しい接続を決められます。四隅の縦棒をつかみ、漸近線判定と単純な中心値の判定が食い違う条件を見てください。',
+      formulas: [
+        {
+          caption: 'マスの中の双線形関数',
+          tex: 'f(u,v)=f_{00}(1-u)(1-v)+f_{10}u(1-v)+f_{01}(1-u)v+f_{11}uv',
+          symbols: [
+            { tex: 'u,\\ v', meaning: 'マスの中の横・縦の割合', unit: '' },
+          ],
+        },
+        {
+          caption: '鞍点と漸近線判定',
+          tex: 'd=f_{00}-f_{10}-f_{01}+f_{11},\\quad u_s=\\frac{f_{00}-f_{01}}{d},\\quad v_s=\\frac{f_{00}-f_{10}}{d},\\quad f_s=\\frac{f_{00}f_{11}-f_{10}f_{01}}{d}',
+          symbols: [
+            { tex: 'f_s\\ge T', meaning: 'T 以上の対角 2 点をマスの内側でつなぐ条件', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['isosurface-saddleValue', 'isosurface-saddlePoint'],
+      Sim: IsosurfaceStep7,
+    },
+    {
+      id: 'marching-cubes',
+      title: '立方体ごとに面を張る（マーチングキューブ）',
+      text: '3 次元では八隅の内外から 2⁸ = 256 通りの case を作り、もとの方法は各 case の三角形を表から選びます。ここでは六面に前段の線の規則を当て、辺の交点で線を輪につないでから三角形へ分けます。角を切り替えるか空いた所をつかんで回し、回転と内外の交換で 15 組にまとまることを確かめてください。',
+      formulas: [
+        {
+          caption: '8 ビットの case 番号',
+          tex: '\\mathrm{case}=\\sum_{k=0}^{7}2^k[\\,f_k\\ge T\\,]\\qquad (256\\text{ 通り})',
+          symbols: [
+            { tex: 'f_k', meaning: '立方体の角 k の値', unit: '' },
+          ],
+        },
+        {
+          caption: '対称性による分類',
+          tex: '256\\ \\text{通り} \\;\\to\\; 15\\ \\text{組} \\quad (\\text{回転と内外の入れ替えでまとめる})',
+          symbols: [],
+        },
+      ],
+      snippets: ['isosurface-cubeCase', 'isosurface-marchingCubesCell', 'isosurface-cubeCaseClasses', 'isosurface-marchingCubes'],
+      Sim: IsosurfaceStep8,
+    },
+    {
+      id: 'level-set',
+      title: '形を動かす（レベルセット法）',
+      text: '形を表面までの符号付き距離 φ で表すと、表面は φ = 0 の線になります。流れで φ そのものを運べば形も動きますが、運ぶうちに傾きの大きさが 1 ではなくなり、距離としてゆがみます。再生して回転を見たあと「距離に直す」を押し、表面を動かさずに |∇φ| を 1 へ戻す変化を確かめてください。',
+      formulas: [
+        {
+          caption: '流れによる移流',
+          tex: '\\frac{\\partial\\phi}{\\partial t}+\\boldsymbol{u}\\cdot\\nabla\\phi=0',
+          symbols: [
+            { tex: '\\boldsymbol{u}', meaning: '形を運ぶ速度場', unit: '' },
+          ],
+        },
+        {
+          caption: '距離の性質と再初期化',
+          tex: '|\\nabla\\phi|=1,\\qquad \\frac{\\partial\\phi}{\\partial\\tau}+\\operatorname{sgn}(\\phi)(|\\nabla\\phi|-1)=0',
+          symbols: [
+            { tex: '\\tau', meaning: '距離へ戻すための仮想的な時間', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['isosurface-signedDistanceSlottedDisk', 'isosurface-reinitStep', 'grid-advectSemiLagrangian2D'],
+      Sim: IsosurfaceStep9,
+    },
   ],
   combination: {
-    text: 'ここまでの 4 段階では、格子間の値を補い、0 の場所とその幾何を読み、粒子や測定点から場を組み立てます。',
+    text: '全体の線（面）は、格子の値から次の順に作っている。',
     flow: [
-      { steps: [1, 2], text: '格子点の値を補間し、値が 0 になる場所を線や面として読み取ります。' },
-      { steps: [3, 4], text: '粒子の山や散らばった測定点から、連続した場や曲線を作ります。' },
+      { steps: [3, 4], text: '粒子や点の集まりから場を作る' },
+      { steps: [1], text: '格子の点の値と、その間の値' },
+      { steps: [5], text: '符号の違う辺の上の交点' },
+      { steps: [6, 7], text: 'マスごとに交点を結ぶ（あいまいなマスは漸近線判定）' },
+      { steps: [8], text: '3 次元では立方体ごとに三角形を張る' },
+      { steps: [2], text: '法線は場の勾配から' },
+      { steps: [9], text: '場そのものを流れで運ぶと形が動く' },
     ],
   },
   sources: [

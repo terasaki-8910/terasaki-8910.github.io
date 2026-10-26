@@ -190,7 +190,7 @@ export default function ShapeSim() {
   }
   const modeLabel = mode === 'bezier' ? '6 次・1 本' : mode === 'bspline' ? '3 次・4 区分' : `${levels} 回（${chaikin(points, levels).length} 点）`
   const legend = [
-    { key: 'controls', label: '制御点', swatch: 'var(--color-accent)' },
+    { key: 'controls', label: '制御点', swatch: 'rgb(var(--color-accent))' },
     { key: 'curve', label: '曲線', swatch: 'var(--color-ink)' },
     { key: 'polygon', label: '制御点の折れ線', swatch: 'var(--color-muted)' },
     { key: 'circle', label: '曲率の円', swatch: 'var(--lane-1)' },

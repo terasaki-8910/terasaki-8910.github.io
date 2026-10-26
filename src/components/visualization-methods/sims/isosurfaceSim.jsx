@@ -12,8 +12,9 @@ import { drawAxes } from '../../visualization/axes'
 import { arrowStep, clamp, markerCircle } from '../../visualization/sims/rigidKit'
 import { marchingCubes, marchingSquares, metaballField, squareCase } from '../../../utils/vis/isosurface'
 import { cameraViewProjection, projectVertex, renderScene } from '../../../utils/vis/render'
-import { makeEnvironment, tokenRgb } from './shadingKit'
+import { flatEnvironment, tokenRgb } from './shadingKit'
 import { clipToFrame, drawBallHandles, drawFieldCells, drawSegments, hitBall, makeIsoView } from './isosurfaceKit'
+import { blitPixels } from './pixelKit'
 
 const INITIAL_BALLS = [
   { x: 0.85, y: 0.9, z: 0.75, b: 1 },
@@ -132,9 +133,9 @@ export default function IsosurfaceSim() {
       }],
       light: { position: [5, 6, 6], intensity: 1 },
       ambient: 0.12,
-      environment: makeEnvironment(colors),
+      environment: flatEnvironment(colors),
     }, camera, { width, height, shading: 'phong', model: 'blinn-phong', shadows: false }, pixels)
-    ctx.putImageData(new ImageData(pixels, width, height), 0, 0)
+    blitPixels(ctx, pixels, width, height)
     const matrix = cameraViewProjection(camera, width / height)
     activeBalls.forEach((ball, index) => {
       const point = projectVertex(matrix, [ball.x, ball.y, ball.z], width, height)
@@ -249,8 +250,8 @@ export default function IsosurfaceSim() {
       switcher={<ModeSwitch label="次元" value={mode} options={[{ value: '2d', label: '2 次元' }, { value: '3d', label: '3 次元' }]} onChange={setMode} variant="tabs" />}
       stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label={mode === '2d' ? '5 個の粒子から作る等値線。粒子をドラッグまたは矢印キーで動かせます。' : '5 個の粒子から作る等値面。粒子をドラッグでき、空いた所のドラッグで視点を回せます。'} />}
       legend={<SimLegend ref={legendRef} items={[
-        { key: 'field', label: '場', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--surface), var(--lane-1))' },
-        { key: 'contour', label: mode === '2d' ? '等値線' : '等値面', swatch: mode === '2d' ? 'var(--ink)' : 'var(--lane-1)' },
+        { key: 'field', label: '場', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--color-paper), var(--lane-1))' },
+        { key: 'contour', label: mode === '2d' ? '等値線' : '等値面', swatch: mode === '2d' ? 'var(--color-ink)' : 'var(--lane-1)' },
         { key: 'threshold', symbol: 'T', label: 'しきい値', value: threshold.toFixed(2) },
         { key: 'grid', symbol: mode === '2d' ? 'N\\times N' : 'N\\times N\\times N', label: '格子', value: mode === '2d' ? `${grid2d} × ${grid2d}` : `${grid3d} × ${grid3d} × ${grid3d}` },
         { key: 'count', label: mode === '2d' ? '線分' : '三角形', value: '0', minChars: 6 },

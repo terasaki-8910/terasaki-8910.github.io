@@ -9,6 +9,7 @@ import { arrowStep, clamp, drawText, fmt, laneColor, markerCircle } from '../../
 import { barycentric, rasterTriangle } from '../../../utils/vis/raster'
 import { blinnPhongSpecular, lambert } from '../../../utils/vis/shading'
 import { normalize } from '../../../utils/vis/vec3'
+import { blitPixels } from './pixelKit'
 
 const INITIAL = { angle: 0, weights: [0.28, 0.34, 0.38] }
 const NORMALS = [
@@ -96,7 +97,7 @@ export default function ShadingStep6() {
         for (let channel = 0; channel < 3; channel++) image.data[offset + channel] = Math.min(255, base[channel] * Math.min(1, diffuse) + paper[channel] * Math.max(0, diffuse - 0.55) * 0.75)
       })
     })
-    ctx.putImageData(image, 0, 0)
+    blitPixels(ctx, image, image.width, image.height)
 
     ctx.strokeStyle = colors.ink
     ctx.lineWidth = 1.5

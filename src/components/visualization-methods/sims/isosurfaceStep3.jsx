@@ -112,11 +112,12 @@ export default function IsosurfaceStep3() {
   return (
     <SimShell
       label="粒子から作るメタボール場"
+      height={{ phone: [320, 400], pc: [280, 360] }}
       stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="3 個の粒子と水平な断面線をドラッグできます。矢印キーでも選んだ対象を動かせます。" />}
       legend={<SimLegend items={[
-        { key: 'field', label: '場', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--surface), var(--lane-1))' },
+        { key: 'field', label: '場', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--color-surface), var(--lane-1))' },
         { key: 'bumps', label: '各粒子の山', swatch: 'var(--lane-0)' },
-        { key: 'sum', label: '山の合計', swatch: 'var(--ink)' },
+        { key: 'sum', label: '山の合計', swatch: 'var(--color-ink)' },
         { key: 'threshold', symbol: 'T', label: 'しきい値', value: threshold.toFixed(2) },
         { key: 'line', symbol: 'y_c', label: '断面の高さ', value: lineY.toFixed(2) },
       ]} />}
