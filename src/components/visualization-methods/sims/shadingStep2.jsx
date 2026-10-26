@@ -1,0 +1,139 @@
+import { useEffect, useState } from 'react'
+import SimShell from '../../visualization/SimShell'
+import SimCanvas from '../../visualization/SimCanvas'
+import SimLegend from '../../visualization/SimLegend'
+import { SimToolbar, ResetButton } from '../../visualization/SimButtons'
+import useCanvas from '../../visualization/useCanvas'
+import usePointerDrag from '../../visualization/usePointerDrag'
+import { makeView, drawArrow } from '../../visualization/axes'
+import { STEP_MARGIN, arrowStep, clamp, drawText, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
+import { lambert } from '../../../utils/vis/shading'
+import { angleFromPoint, directionFromAngle, drawAngleHandle, drawPixelSphere, drawSemicircle, hitAngleHandle } from './shadingKit'
+
+const INITIAL = 35 * Math.PI / 180
+const ORIGIN = [0, 0]
+const RADIUS = 1.55
+
+export default function ShadingStep2() {
+  const [angle, setAngle] = useState(INITIAL)
+  const direction = directionFromAngle(angle)
+  const brightness = lambert([0, 1, 0], direction)
+  const viewOf = (width, height) => makeView({ width, height, xRange: [-3.2, 3.2], yRange: [-0.55, 2.55], margin: STEP_MARGIN, equal: true })
+
+  const draw = ({ ctx, width, height, colors }) => {
+    const view = viewOf(width, height)
+    ctx.fillStyle = colors.surface
+    ctx.fillRect(0, 0, width, height)
+    ctx.save()
+    ctx.beginPath()
+    ctx.rect(view.frame.left, view.frame.top, view.frame.width, view.frame.height)
+    ctx.clip()
+    ctx.strokeStyle = colors.ink
+    ctx.lineWidth = 2
+    ctx.beginPath()
+    ctx.moveTo(view.sx(-2.8), view.sy(0))
+    ctx.lineTo(view.sx(2.8), view.sy(0))
+    ctx.stroke()
+    drawSemicircle(ctx, view, ORIGIN, RADIUS, colors)
+    drawArrow(ctx, view, 0, 0, 0, 1.15, { color: colors.ink, width: 2 })
+    drawText(ctx, 'N', view.sx(0) + 9, view.sy(1.15), { color: colors.ink })
+    drawAngleHandle(ctx, view, ORIGIN, RADIUS, angle, colors, 'L', laneColor(colors, 0))
+
+    const beamWidth = 0.34
+    const tangent = [direction[1], -direction[0]]
+    const top = [direction[0] * 2.35, direction[1] * 2.35]
+    const intersections = []
+    ;[-1, 1].forEach((side) => {
+      const start = [top[0] + tangent[0] * beamWidth * side, top[1] + tangent[1] * beamWidth * side]
+      const t = start[1] / Math.max(direction[1], 0.05)
+      const end = [start[0] - direction[0] * t, 0]
+      intersections.push(end[0])
+      drawArrow(ctx, view, start[0], start[1], end[0], end[1], { color: colors.muted, width: 1.5 })
+    })
+    ctx.fillStyle = colors.alpha('lane-0', 0.18)
+    const left = Math.min(...intersections)
+    const right = Math.max(...intersections)
+    ctx.fillRect(view.sx(left), view.sy(0) - 5, view.sx(right) - view.sx(left), 10)
+    drawText(ctx, `幅 ${fmt(1 / Math.max(brightness, 0.01), 2)} 倍`, view.sx((left + right) / 2), view.sy(0) + 18, { color: colors.ink, align: 'center' })
+
+    const graphLeft = view.sx(1.7)
+    const graphTop = view.sy(2.25)
+    const graphWidth = Math.max(70, view.frame.right - graphLeft)
+    const graphHeight = 64
+    ctx.strokeStyle = colors.line
+    ctx.lineWidth = 1
+    ctx.beginPath()
+    ctx.moveTo(graphLeft, graphTop + graphHeight)
+    ctx.lineTo(graphLeft + graphWidth, graphTop + graphHeight)
+    ctx.moveTo(graphLeft, graphTop)
+    ctx.lineTo(graphLeft, graphTop + graphHeight)
+    ctx.stroke()
+    ;[0, 0.5, 1].forEach((tick) => {
+      const x = graphLeft + graphWidth * tick
+      const y = graphTop + graphHeight * (1 - tick)
+      ctx.beginPath()
+      ctx.moveTo(x, graphTop + graphHeight)
+      ctx.lineTo(x, graphTop + graphHeight + 4)
+      ctx.moveTo(graphLeft - 4, y)
+      ctx.lineTo(graphLeft, y)
+      ctx.stroke()
+      drawText(ctx, String(tick), x, graphTop + graphHeight + 14, { color: colors.muted, align: 'center' })
+      drawText(ctx, String(tick), graphLeft - 7, y, { color: colors.muted, align: 'right', baseline: 'middle' })
+    })
+    ctx.strokeStyle = colors.ink
+    ctx.lineWidth = 2
+    ctx.beginPath()
+    for (let i = 0; i <= 80; i++) {
+      const t = i / 80
+      const x = graphLeft + graphWidth * t
+      const y = graphTop + graphHeight * (1 - Math.cos(t * Math.PI / 2))
+      if (i === 0) ctx.moveTo(x, y)
+      else ctx.lineTo(x, y)
+    }
+    ctx.stroke()
+    markerCircle(ctx, graphLeft + graphWidth * Math.abs(angle) / (Math.PI / 2), graphTop + graphHeight * (1 - brightness), 4, { fill: colors.accent, stroke: colors.ink, lineWidth: 1.25 })
+    drawText(ctx, 'θ', graphLeft + graphWidth, graphTop + graphHeight + 14, { color: colors.ink, align: 'right' })
+
+    drawPixelSphere(ctx, view.sx(-2.35), view.sy(1.45), Math.min(38, view.scaleX * 0.48), colors, { L: [direction[0], 0, direction[1]], mode: 'lambert' })
+    ctx.restore()
+
+    const barX = view.frame.left
+    const barY = view.frame.top + 8
+    const barW = Math.min(110, view.frame.width * 0.24)
+    ctx.fillStyle = colors.line
+    ctx.fillRect(barX, barY, barW, 10)
+    ctx.fillStyle = laneColor(colors, 1)
+    ctx.fillRect(barX, barY, barW * brightness, 10)
+    drawText(ctx, '明るさ', barX, barY + 24, { color: colors.ink })
+  }
+
+  const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
+  useEffect(() => { redraw() })
+  const hit = (point) => hitAngleHandle(viewOf(sizeRef.current.width, sizeRef.current.height), ORIGIN, RADIUS, angle, point)
+  usePointerDrag(canvasRef, {
+    canGrab: hit,
+    onDown: (point) => {
+      if (!hit(point)) return false
+    },
+    onMove: (point) => setAngle(clamp(angleFromPoint(viewOf(sizeRef.current.width, sizeRef.current.height), ORIGIN, point), -Math.PI / 2, Math.PI / 2)),
+  })
+  const onKeyDown = (event) => {
+    const step = arrowStep(event)
+    if (!step) return
+    event.preventDefault()
+    setAngle((value) => clamp(value + step.dx * 5 * Math.PI / 180, -Math.PI / 2, Math.PI / 2))
+  }
+
+  return (
+    <SimShell
+      label="光が当たる角度"
+      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="平面へ当たる光線、広がる照射範囲、余弦グラフと球を描いています。Lのつまみをドラッグするか左右の矢印キーで光の角度を変えられます。" />}
+      legend={<SimLegend items={[
+        { key: 'theta', symbol: '\\theta', label: '入射角', value: `${fmt(Math.abs(angle) * 180 / Math.PI, 1)}°`, minChars: 7 },
+        { key: 'cos', symbol: '\\cos\\theta', label: '明るさ', value: fmt(brightness, 3), minChars: 6 },
+        { key: 'area', label: '照射幅', value: `${fmt(1 / Math.max(brightness, 0.01), 2)} 倍`, minChars: 8 },
+      ]} />}
+      controls={<SimToolbar><ResetButton onClick={() => setAngle(INITIAL)} /></SimToolbar>}
+    />
+  )
+}
