@@ -90,3 +90,22 @@ test('影の表: 光源の真下の球の上面は近く、床は遠い。表の
   assert.ok(floorUnder.dL < floorUnder.dC - 1) // 床の点より手前に球がある
   assert.equal(shadowLookup(map, [100, 0, 0]), null)
 })
+
+test('カメラの光線: 真ん中は視線の向きで、光線の上の点はその画素に写る', async () => {
+  const { cameraRay } = await import('../../src/utils/vis/render.js')
+  const cam = { eye: [0, 2, 5], target: [0, 1, 0], fov: 0.8 }
+  const aspect = 4 / 3
+  const center = cameraRay(cam, aspect, 0, 0)
+  const f = normalize([0, -1, -5])
+  for (let k = 0; k < 3; k++) assert.ok(Math.abs(center.dir[k] - f[k]) < 1e-12)
+  const W = 400
+  const H = 300
+  const VP = cameraViewProjection(cam, aspect)
+  for (const [nx, ny] of [[0.5, 0.25], [-0.8, -0.6]]) {
+    const r = cameraRay(cam, aspect, nx, ny)
+    const p = [0, 1, 2].map((i) => r.origin[i] + 3 * r.dir[i])
+    const v = projectVertex(VP, p, W, H)
+    assert.ok(Math.abs(v[0] - ((nx + 1) / 2) * W) < 1e-6)
+    assert.ok(Math.abs(v[1] - ((1 - ny) / 2) * H) < 1e-6)
+  }
+})

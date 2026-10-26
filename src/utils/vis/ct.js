@@ -67,6 +67,32 @@ export function projectPhantom(ellipses, s, theta) {
 }
 // @end
 
+// @snippet ct-lineIntegral
+// 画素の画像から数えた線積分: 光線 x cosθ + y sinθ = s の上を、刻み (2/n)/2 で点を取り、画素の値を足して刻みを掛ける
+// (画素の間は双線形補間)。式で求めた投影(projectPhantom)と比べる確かめに使う
+export function lineIntegral(img, n, s, theta) {
+  const tau = 2 / n
+  const dt = tau / 2
+  const c = Math.cos(theta)
+  const sn = Math.sin(theta)
+  let sum = 0
+  for (let t = -1.5; t <= 1.5; t += dt) {
+    const x = s * c - t * sn
+    const y = s * sn + t * c
+    const gx = (x + 1) / tau - 0.5
+    const gy = (1 - y) / tau - 0.5
+    const i = Math.floor(gx)
+    const j = Math.floor(gy)
+    if (i < -1 || j < -1 || i >= n || j >= n) continue
+    const a = gx - i
+    const b = gy - j
+    const at = (ii, jj) => (ii >= 0 && jj >= 0 && ii < n && jj < n ? img[jj * n + ii] : 0)
+    sum += (1 - a) * (1 - b) * at(i, j) + a * (1 - b) * at(i + 1, j) + (1 - a) * b * at(i, j + 1) + a * b * at(i + 1, j + 1)
+  }
+  return sum * dt
+}
+// @end
+
 export const detectorPosition = (m, nDet) => -1 + ((m + 0.5) * 2) / nDet
 export const angleOf = (k, nAngles) => (k * Math.PI) / nAngles
 

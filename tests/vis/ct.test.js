@@ -194,3 +194,28 @@ test('モルフォロジー: 開放は孤立点を消し、閉鎖は 1 点の穴
   const right = dilate(comp, w, h, SE_CROSS)
   for (let y = 2; y < h - 2; y++) for (let x = 2; x < w - 2; x++) assert.equal(left[y * w + x], right[y * w + x])
 })
+
+test('画素で数えた線積分は、式で求めた投影とほぼ同じ', async () => {
+  const { lineIntegral } = await import('../../src/utils/vis/ct.js')
+  const n = 128
+  const shape = [[1, 0.4, 0.25, 0.1, 0.05, 20]]
+  const img = rasterizePhantom(n, shape)
+  for (const [s, theta] of [[0, 0], [0.15, 0.9], [-0.2, 2.2]]) {
+    near(lineIntegral(img, n, s, theta), projectPhantom(shape, s, theta), 0.03)
+  }
+})
+
+test('差分: 1 次関数の 1 回の差分は傾き、2 回の差分は 0。ごま塩の雑音はおよそ割合だけ', async () => {
+  const { difference1D, addImpulseNoise } = await import('../../src/utils/vis/imageFilter.js')
+  const lin = Array.from({ length: 10 }, (_, i) => 3 + 0.5 * i)
+  const d1 = difference1D(lin, 1)
+  const d2 = difference1D(lin, 2)
+  for (let i = 1; i < 8; i++) {
+    near(d1[i], 0.5, 1e-12)
+    near(d2[i], 0, 1e-12)
+  }
+  const img = new Float64Array(10000).fill(0.5)
+  const noisy = addImpulseNoise(img, 0.1, seededRandom(9))
+  const changed = noisy.filter((v) => v !== 0.5).length
+  assert.ok(changed > 800 && changed < 1200)
+})

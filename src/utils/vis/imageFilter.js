@@ -35,6 +35,21 @@ export function median1D(signal, n) {
 }
 // @end
 
+// @snippet imageFilter-difference1D
+// 差分: 1 回の差分 f(i+1) − f(i) は傾き(輪郭で大きい)、2 回の差分 f(i+1) − 2f(i) + f(i−1) は傾きの変わり方
+// (輪郭の両側で正と負に振れる。1 次元のラプラシアン)。端は端の値をくり返す
+export function difference1D(signal, order = 1) {
+  const n = signal.length
+  const at = (i) => signal[clampI(i, n)]
+  return signal.map((_, i) => (order === 2 ? at(i + 1) - 2 * at(i) + at(i - 1) : at(i + 1) - at(i)))
+}
+// @end
+
+// ごま塩の雑音: 割合 rate の画素を、でたらめに最小値か最大値にする(rand は 0〜1 を返す関数)
+export function addImpulseNoise(img, rate, rand, lo = 0, hi = 1) {
+  return img.map((v) => (rand() < rate ? (rand() < 0.5 ? lo : hi) : v))
+}
+
 // @snippet imageFilter-convolve3x3
 // 3 × 3 の重み(行優先の 9 個)との積和: g_ij = Σ_{k,l = −1..1} w_kl f_{i+k, j+l}
 export function convolve3x3(img, w, h, kernel) {

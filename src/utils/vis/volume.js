@@ -144,6 +144,17 @@ export function sampleVolume(volume, n, x, y, z) {
   return (c00 * (1 - b) + c10 * b) * (1 - c) + (c01 * (1 - b) + c11 * b) * c
 }
 
+// @snippet volume-sampleVolumeNearest
+// 最近傍: いちばん近い格子点の値をそのまま使う(補間しない)。格子の間で値が段になる
+export function sampleVolumeNearest(volume, n, x, y, z) {
+  const s = (n - 1) / 2
+  const i = Math.min(n - 1, Math.max(0, Math.round((x + 1) * s)))
+  const j = Math.min(n - 1, Math.max(0, Math.round((y + 1) * s)))
+  const k = Math.min(n - 1, Math.max(0, Math.round((z + 1) * s)))
+  return volume[i + n * (j + n * k)]
+}
+// @end
+
 // @snippet volume-castRay
 // 光線 1 本の色(ボリュームレイキャスティング)。箱に入ってから出るまで Δs ごとに値を補間して取り、
 //   composite: 伝達関数で色と不透明度にして、前から合成する(不透明度は Δs に合わせて補正。A ≥ stopAt で打ち切る)

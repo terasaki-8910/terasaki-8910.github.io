@@ -131,3 +131,17 @@ test('格子の速度の場は、マスの中心で格子の値', () => {
   const f = gridField(u, v, n, dx)
   near(f(1.5 * dx, 2.5 * dx)[0], u[1 + n * 2])
 })
+
+test('スポットノイズ: 横向きの場では、模様が横に長く伸びる(横の差が縦の差より小さい)', async () => {
+  const { spotNoise } = await import('../../src/utils/vis/flow.js')
+  const w = 80
+  const h = 80
+  const img = spotNoise(() => [1, 0], w, h, 1500, { rand: seededRandom(4), length: 0.08, width: 0.012 })
+  let dx = 0
+  let dy = 0
+  for (let j = 1; j < h; j++) for (let i = 1; i < w; i++) {
+    dx += (img[j * w + i] - img[j * w + i - 1]) ** 2
+    dy += (img[j * w + i] - img[(j - 1) * w + i]) ** 2
+  }
+  assert.ok(dx < 0.5 * dy)
+})

@@ -116,3 +116,13 @@ test('頭の模型: 外の殻は 1、中は 0.2、空洞は 0、外は 0', () =>
   assert.equal(vol.length, 17 ** 3)
   assert.ok(Math.max(...vol) <= 1 + 1e-6 && Math.min(...vol) >= -1e-6)
 })
+
+test('最近傍は、格子点ではその値、格子の間ではいちばん近い格子点の値', async () => {
+  const { sampleVolumeNearest } = await import('../../src/utils/vis/volume.js')
+  const n = 3
+  const vol = Float32Array.from({ length: 27 }, (_, i) => i)
+  near(sampleVolumeNearest(vol, n, -1, -1, -1), 0)
+  near(sampleVolumeNearest(vol, n, 0, 0, 0), 13)
+  near(sampleVolumeNearest(vol, n, 0.4, 0, 0), 13) // x の格子点 0 と 1 の間で 0 に近い
+  near(sampleVolumeNearest(vol, n, 0.6, 0, 0), 14)
+})

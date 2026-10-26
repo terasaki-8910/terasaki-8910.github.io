@@ -195,6 +195,41 @@ export function lic(field, noise, w, h, L, { bounds = [0, 0, 1, 1], step = 1, t 
 }
 // @end
 
+// @snippet flow-spotNoise
+// スポットノイズ(van Wijk 1991): 小さな楕円の点(スポット)を、その場所の流れの向きに長く伸ばし、でたらめな ± の強さで
+// たくさん重ねる。1 つのスポットは楕円の中で 1 − (距離)² の山。重なりの模様が流れの向きにそろう
+export function spotNoise(field, w, h, count, { bounds = [0, 0, 1, 1], rand = Math.random, length = 0.06, width = 0.012, t = 0 } = {}) {
+  const out = new Float32Array(w * h)
+  const sx = (bounds[2] - bounds[0]) / w
+  const sy = (bounds[3] - bounds[1]) / h
+  for (let s = 0; s < count; s++) {
+    const cx = bounds[0] + rand() * (bounds[2] - bounds[0])
+    const cy = bounds[1] + rand() * (bounds[3] - bounds[1])
+    const a = rand() < 0.5 ? -1 : 1
+    const v = field(cx, cy, t)
+    const len = Math.hypot(v[0], v[1])
+    const ux = len > 1e-12 ? v[0] / len : 1
+    const uy = len > 1e-12 ? v[1] / len : 0
+    const r = Math.max(length, width)
+    const i0 = Math.max(0, Math.floor((cx - r - bounds[0]) / sx))
+    const i1 = Math.min(w - 1, Math.ceil((cx + r - bounds[0]) / sx))
+    const j0 = Math.max(0, Math.floor((bounds[3] - (cy + r)) / sy))
+    const j1 = Math.min(h - 1, Math.ceil((bounds[3] - (cy - r)) / sy))
+    for (let j = j0; j <= j1; j++) {
+      const y = bounds[3] - (j + 0.5) * sy - cy
+      for (let i = i0; i <= i1; i++) {
+        const x = bounds[0] + (i + 0.5) * sx - cx
+        const along = (x * ux + y * uy) / length
+        const across = (-x * uy + y * ux) / width
+        const q = along * along + across * across
+        if (q < 1) out[j * w + i] += a * (1 - q)
+      }
+    }
+  }
+  return out
+}
+// @end
+
 // @snippet flow-seedsUniform
 // 出発点を格子に均等に並べる(nx × ny 個、マスの中心)
 export function seedsUniform(nx, ny, bounds) {

@@ -41,6 +41,19 @@ export function lookAt(eye, target, up = [0, 1, 0]) {
   ]
 }
 
+// @snippet render-cameraRay
+// 画面の点 (nx, ny)(−1〜1。右と上が正)を通る、目からの光線の向き(単位ベクトル)。
+// 向きは 視線 f + nx·tan(fov/2)·aspect·右 + ny·tan(fov/2)·上 を正規化したもの
+export function cameraRay(camera, aspect, nx, ny) {
+  const f = normalize(sub(camera.target, camera.eye))
+  const right = normalize(cross(f, camera.up ?? [0, 1, 0]))
+  const up = cross(right, f)
+  const t = Math.tan(camera.fov / 2)
+  const d = [0, 1, 2].map((i) => f[i] + nx * t * aspect * right[i] + ny * t * up[i])
+  return { origin: camera.eye.slice(), dir: normalize(d) }
+}
+// @end
+
 export function cameraViewProjection(camera, aspect) {
   const V = lookAt(camera.eye, camera.target, camera.up ?? [0, 1, 0])
   const P = perspectiveMatrix(camera.fov, aspect, camera.near ?? 0.1, camera.far ?? 100)
