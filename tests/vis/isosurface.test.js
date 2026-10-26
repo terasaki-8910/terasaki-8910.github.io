@@ -5,7 +5,7 @@ import assert from 'node:assert/strict'
 import { advectSemiLagrangian2D } from '../../src/utils/vis/grid.js'
 import {
   bilinear, cubeCase, cubeCaseClasses, curvature2D, edgeCrossing, gradient2D, interfaceGradientStats, marchingCubes,
-  marchingCubesCell, marchingSquares, metaballField, metaballWeight, reinitStep, saddleValue, sampleGrid2D,
+  marchingCubesCell, marchingSquares, metaballField, metaballWeight, reinitStep, saddlePoint, saddleValue, sampleGrid2D,
   signedDistanceSlottedDisk, solveLinear, squareCase, squareSegments, trilinear, weightedLeastSquares,
 } from '../../src/utils/vis/isosurface.js'
 
@@ -93,6 +93,18 @@ test('マーチングスクエア: 16 通りの番号と、円の等値線は閉
     for (const c of count.values()) assert.equal(c, 2)
     assert.ok(maxErr < 0.6 * h * h / r + 1e-9, `誤差 ${maxErr}`)
   }
+})
+
+test('鞍点の位置では双線形関数の傾きが 0 で、値は saddleValue。1 次式なら鞍点はない', () => {
+  const [f00, f10, f01, f11] = [0.9, -0.7, -0.4, 0.6]
+  const s = saddlePoint(f00, f10, f01, f11)
+  const f = (u, v) => bilinear(f00, f10, f01, f11, u, v)
+  const h = 1e-6
+  close((f(s.u + h, s.v) - f(s.u - h, s.v)) / (2 * h), 0, 1e-8)
+  close((f(s.u, s.v + h) - f(s.u, s.v - h)) / (2 * h), 0, 1e-8)
+  close(s.value, saddleValue(f00, f10, f01, f11))
+  close(s.value, f(s.u, s.v))
+  assert.equal(saddlePoint(0, 1, 2, 3), null) // f = u + 2v(1 次式)
 })
 
 test('鞍点の値は双線形関数の鞍点での値。あいまいなマスの線は、どちらの決め方でも 2 本', () => {

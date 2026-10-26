@@ -168,6 +168,17 @@ export function saddleValue(f00, f10, f01, f11) {
 }
 // @end
 
+// @snippet isosurface-saddlePoint
+// 鞍点の位置: f(u, v) = a + bu + cv + duv(b = f10 − f00、c = f01 − f00、d = f00 − f10 − f01 + f11)を
+// u と v で微分して 0 とおくと、u_s = −c/d = (f00 − f01)/d、v_s = −b/d = (f00 − f10)/d。
+// そこでの値が f_s(saddleValue と同じ)。d = 0 なら f は 1 次式で鞍点はない(null)
+export function saddlePoint(f00, f10, f01, f11) {
+  const d = f00 - f10 - f01 + f11
+  if (d === 0) return null
+  return { u: (f00 - f01) / d, v: (f00 - f10) / d, value: (f00 * f11 - f10 * f01) / d }
+}
+// @end
+
 // 辺の番号: 0 = 下(左下→右下)、1 = 右(右下→右上)、2 = 上(左上→右上)、3 = 左(左下→左上)
 // 通り方ごとに、結ぶ辺の組(あいまいな 5・10 は別に決める)
 const SQUARE_EDGES = [
