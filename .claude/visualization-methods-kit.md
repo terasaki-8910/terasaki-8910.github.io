@@ -48,7 +48,7 @@ export default function ShapeStep2() {
 ```
 
 - `SimShell({ label, aspect = 4/3, size, height, stage, controls, legend, readout, switcher })`：幅 1024px 以上の横長で絵が左・バーが右、それ以外は上下（CSS がする）。段階（StepSection の中）では高さが自動（PC 280〜360px、スマホ 220〜300px）なので、絵は width・height から描く。`switcher` は絵の上の見せ方の切り替え（`<ModeSwitch variant="tabs" ... />`）。`readout` は絵の下の数の表示
-- `ViewStack({ active, views: { key: node }, reserve })`：見せ方ごとに違う操作の欄を同じ場所に重ねる
+- `ViewStack({ active, views: { key: node }, reserve })`：見せ方ごとに違う操作の欄を同じ場所に重ねる。reserve は「いつも場所を取っておく見せ方のキーの配列」（例 `reserve={['subdivision']}`。true などの配列でない値は不可。省略すると全部）
 - `SimCanvas`：canvas に role="img" と aria-label。つかむ canvas は touch-action: none（自動）
 - `useCanvas({ draw, maxDpr })` → `{ canvasRef, redraw, getColors, sizeRef }`。`draw({ ctx, width, height, dpr, colors })` は CSS px で描く（dpr 済み・clear 済み）。大きさは親の幅に自動で合わせる
 - `colors`：`paper`・`surface`・`ink`・`muted`・`line`・`accent`・`onAccent`（CSS の色の文字列）、`rgb[name]`（`[r, g, b]`。name は paper・surface・ink・muted・line・accent・on-accent・lane-0〜lane-4・diff-insert・diff-delete）、`alpha(name, a)`（不透明度つきの色の文字列）、`dark`（ダークのテーマか）。画素を塗る絵（ImageData）は `rgb` を混ぜて作る
@@ -59,6 +59,16 @@ export default function ShapeStep2() {
 - `ParamSlider({ symbol, label, value, min, max, step, unit, format, onChange, disabled })`、`ControlGroup({ label })`、`SimToolbar`・`PlayPauseButton({ running, onToggle })`・`ResetButton({ onClick })`・`ToggleButton({ pressed, onChange })`・`ModeSwitch({ label, value, options: [{ value, label }], onChange, variant })`（variant：'tabs' は絵の上の主の切り替え、'quiet' は欄の中の選択肢）
 - rigidKit：`STEP_MARGIN`、`GRAB_SLOP_PX`（12）、`clamp`、`laneColor(colors, n)`、`laneAlpha(colors, n, a)`、`fmt(v, d)`、`arrowStep(event)`（矢印キーなら `{ dx, dy }`、それ以外 null）、`markerCircle(ctx, px, py, r, { fill, stroke, lineWidth })`、`drawText(ctx, text, x, y, { color, size, align, baseline })`
 - 3 次元の線の絵（行列 MVP と描く枠 rect）：`../../visualization/sims/transformMesh.js` の `projectPoint(MVP, p, rect)`・`drawLine3d`・`drawPolyline3d`・`drawArrow3d`・`drawDot3d`・`drawText3d`・`drawGround`・`drawAxes3d(ctx, MVP, rect, colors)`・`withClip`。カメラは `../../visualization/sims/transformCamera.js` の `orbitPose({ target, yaw, pitch, dist })`・`cameraMatrices(pose, { fov, aspect, near, far })` → `{ V, P, VP }`。行列は `src/utils/vis/mat4.js`、投影は `src/utils/vis/projection.js`
+
+## 見た目の決まり（画面で確かめて決めたこと）
+
+- 表示の切り替え（ToggleButton）は `SimToolbar` の行に並べる（今のページの「広域の判定を表示」と同じ、折り返す小さな枠のボタン）。ControlGroup に入れると横いっぱいの黒い帯になり、絵より目立つ
+- 世界の座標の絵は、軸の枠（view.frame）の外に描かない（`ctx.save(); ctx.beginPath(); ctx.rect(...frame); ctx.clip()`）。接触円のような大きな形もはみ出させない
+- x と y を同じ縮尺にする絵（`equal: true`）は、見せたい範囲を真ん中に置いたまま、短い方の軸の範囲を canvas の縦横比に合わせて広げる。左右や上下に大きな空白の帯を作らない
+- accent（淡い色）は、意味を伝える線や塗りに使わない（地に対して 1.6:1）。つまみの塗りだけ。今の位置を示す縦線などは ink の破線
+- 文字のラベルどうしが重ならないようにずらす（線分の比の数字など）
+- TeX の関数名は `\cos`・`\sin`・`\cosh`・`\sinh`・`\exp`・`\max` で書く（`cos t` と書くと斜体の c・o・s になる）
+- グラフの軸には目盛りを付ける（0・0.5・1 など）
 
 ## 節のデータ（`sections/<id>.js`）
 
