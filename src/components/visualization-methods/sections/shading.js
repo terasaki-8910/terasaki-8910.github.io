@@ -5,6 +5,10 @@ const ShadingStep1 = lazy(() => import('../sims/shadingStep1.jsx'))
 const ShadingStep2 = lazy(() => import('../sims/shadingStep2.jsx'))
 const ShadingStep3 = lazy(() => import('../sims/shadingStep3.jsx'))
 const ShadingStep4 = lazy(() => import('../sims/shadingStep4.jsx'))
+const ShadingStep5 = lazy(() => import('../sims/shadingStep5.jsx'))
+const ShadingStep6 = lazy(() => import('../sims/shadingStep6.jsx'))
+const ShadingStep7 = lazy(() => import('../sims/shadingStep7.jsx'))
+const ShadingStep8 = lazy(() => import('../sims/shadingStep8.jsx'))
 
 export default {
   id: 'shading',
@@ -121,12 +125,126 @@ export default {
       snippets: ['shading-halfVector', 'shading-blinnPhongSpecular'],
       Sim: ShadingStep4,
     },
+    {
+      id: 'cook-torrance',
+      title: '小さな面の集まり（クック-トランス）',
+      text: '表面を向きの異なる小さな鏡の集まりと考え、光と目の中間 H を向く面の割合 D、途中で遮られない割合 G、反射する割合 F を掛けます。粗さ m が大きいほど小さな面の傾きが広く散り、つやは広く弱くなります。L と V をつかみ、光を目へ返す微小面と、右の D・G・F・合成したつやの変化を見てください。この D は半球全体で足すと1になる形で、文献によって定数の置き方が異なります。',
+      formulas: [
+        {
+          caption: 'クック-トランスの鏡面反射',
+          tex: 'R_s = \\frac{DGF}{4(N \\cdot L)(N \\cdot V)}',
+          symbols: [
+            { tex: 'D', meaning: 'H を向く微小面の分布', unit: '' },
+            { tex: 'G', meaning: '光路が遮られない割合', unit: '' },
+            { tex: 'F', meaning: '表面で反射する割合', unit: '' },
+          ],
+        },
+        {
+          caption: 'Beckmann 分布',
+          tex: 'D(\\alpha) = \\frac{\\exp(-\\tan^2\\alpha/m^2)}{\\pi m^2\\cos^4\\alpha},\\quad \\alpha = \\arccos(N \\cdot H)',
+          symbols: [
+            { tex: '\\alpha', meaning: '法線と H のなす角', unit: '\\mathrm{rad}' },
+            { tex: 'm', meaning: '粗さ', unit: '' },
+          ],
+        },
+        {
+          caption: '幾何減衰とフレネル項',
+          tex: 'G = \\min\\!\\left(1, \\frac{2(N\\cdot H)(N\\cdot V)}{V\\cdot H}, \\frac{2(N\\cdot H)(N\\cdot L)}{V\\cdot H}\\right),\\quad F \\approx F_0 + (1-F_0)(1-V\\cdot H)^5',
+          symbols: [
+            { tex: 'F_0', meaning: '正面から見た反射率', unit: '' },
+            { tex: 'N,L,V,H', meaning: '法線・光・目・中間の単位方向', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['shading-beckmannD', 'shading-geometryG', 'shading-fresnelSchlick', 'shading-cookTorranceSpecular'],
+      Sim: ShadingStep5,
+    },
+    {
+      id: 'smooth-shading',
+      title: '面の中の色（グロー／フォンシェーディング）',
+      text: '三角形の頂点でだけ色を計算し、重み λ で面の中へ混ぜるのがグローシェーディングです。計算は速い一方、頂点にない中央のつやは消えます。フォンシェーディングは法線を混ぜて長さを1に戻し、各画素で光を計算するため中央のつやも残ります。光と面内の点をつかみ、左右の明るさと λ0・λ1・λ2 を比べてください。',
+      formulas: [
+        {
+          caption: '重心座標',
+          tex: 'p = \\lambda_0 v_0 + \\lambda_1 v_1 + \\lambda_2 v_2,\\quad \\lambda_0 + \\lambda_1 + \\lambda_2 = 1',
+          symbols: [
+            { tex: 'p', meaning: '三角形の中の点', unit: '' },
+            { tex: '\\lambda_i', meaning: '各頂点の重み', unit: '' },
+          ],
+        },
+        {
+          caption: '色と法線の補間',
+          tex: 'c(p) = \\sum_i \\lambda_i c_i,\\qquad n(p) = \\operatorname{normalize}\\!\\left(\\sum_i \\lambda_i n_i\\right)',
+          symbols: [
+            { tex: 'c_i', meaning: '頂点で計算した色', unit: '' },
+            { tex: 'n_i', meaning: '頂点法線', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['raster-barycentric', 'raster-rasterTriangle'],
+      Sim: ShadingStep6,
+    },
+    {
+      id: 'refraction',
+      title: '曲がる光と映り込み（スネルの法則）',
+      text: '屈折率の異なる境界では、入射角 θ と屈折角 φ が η1 sin θ = η2 sin φ になる向きへ光が曲がります。密な側から浅い角度で出ると屈折する向きがなくなり、光はすべて反射します。入射光をつかみ、屈折率を変えて反射・屈折の角度と全反射を確かめてください。映り込みやガラスは、この向きで遠くの背景画像から色を取ります。',
+      formulas: [
+        {
+          caption: 'スネルの法則',
+          tex: '\\eta_1\\sin\\theta = \\eta_2\\sin\\phi',
+          symbols: [
+            { tex: '\\eta_1,\\eta_2', meaning: '上側と下側の屈折率', unit: '' },
+            { tex: '\\theta,\\phi', meaning: '入射角と屈折角', unit: '\\mathrm{rad}' },
+          ],
+        },
+        {
+          caption: '反射と屈折の向き',
+          tex: 'R = I - 2(N\\cdot I)N,\\qquad T = \\eta I + (\\eta\\cos\\theta-\\cos\\phi)N,\\quad \\eta=\\eta_1/\\eta_2',
+          symbols: [
+            { tex: 'I,R,T', meaning: '入射・反射・屈折の単位方向', unit: '' },
+            { tex: 'N', meaning: '入射側を向く単位法線', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['shading-reflectIncident', 'shading-refract'],
+      Sim: ShadingStep7,
+    },
+    {
+      id: 'shadow-map',
+      title: '影（シャドウマップ）',
+      text: '光源から方向ごとに最初の物体までの距離 dL を表へ記録し、カメラに見える点の距離 dC がそれより遠ければ、間に物体があるので影にします。表が粗いと影の縁はぎざぎざになり、ずらし ε が小さすぎると同じ面を誤って遮蔽物とみなす斑点が出ます。光源と箱をつかみ、光線数・ε・やわらかい影を変えて床と距離表を見比べてください。',
+      formulas: [
+        {
+          caption: '影の判定',
+          tex: '\\text{影} \\iff d_C > d_L + \\varepsilon',
+          symbols: [
+            { tex: 'd_C', meaning: '調べる点までの距離', unit: '\\mathrm{m}' },
+            { tex: 'd_L', meaning: '表に記録した最短距離', unit: '\\mathrm{m}' },
+            { tex: '\\varepsilon', meaning: '自己遮蔽を避けるずらし', unit: '\\mathrm{m}' },
+          ],
+        },
+        {
+          caption: 'VSM の明るさ上限',
+          tex: 'P(d \\ge d_C) \\le \\frac{\\sigma^2}{\\sigma^2 + (d_C-\\mu)^2},\\quad \\mu=E[d],\\quad \\sigma^2=E[d^2]-\\mu^2',
+          symbols: [
+            { tex: '\\mu', meaning: '近くの距離の平均', unit: '\\mathrm{m}' },
+            { tex: '\\sigma^2', meaning: '近くの距離の分散', unit: '\\mathrm{m}^2' },
+          ],
+        },
+      ],
+      snippets: ['shading-inShadow', 'shading-chebyshevUpperBound'],
+      Sim: ShadingStep8,
+    },
   ],
   combination: {
-    text: 'ここまでの4段階では、面の向きから拡散反射を求め、目の方向を加えて2種類のつやを計算します。',
+    text: '全体の 1 枚の絵は、画素ごとに次の計算をして色を決めている。',
     flow: [
-      { steps: [1, 2], text: '三角形から法線を作り、光との角度で拡散反射を決めます。' },
-      { steps: [3, 4], text: '光と目の方向から、鏡方向またはハーフベクトルを使ってつやを足します。' },
+      { steps: [1], text: '面と頂点の法線を求める' },
+      { steps: [2], text: '光の当たる角で明るさ（拡散）' },
+      { steps: [3, 4, 5], text: 'つやの光（鏡面）を、選んだモデルで足す' },
+      { steps: [6], text: '面の中は色か法線を混ぜる' },
+      { steps: [7], text: '映り込みとガラスは、反射・屈折の向きで背景の色を取る' },
+      { steps: [8], text: '光源から見えない点は光の分を引いて影にする' },
     ],
   },
   sources: [

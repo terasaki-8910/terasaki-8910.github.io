@@ -68,16 +68,20 @@ export default function ShadingStep2() {
     ctx.moveTo(graphLeft, graphTop)
     ctx.lineTo(graphLeft, graphTop + graphHeight)
     ctx.stroke()
-    ;[0, 0.5, 1].forEach((tick) => {
+    ;[0, 1 / 3, 2 / 3, 1].forEach((tick, index) => {
       const x = graphLeft + graphWidth * tick
-      const y = graphTop + graphHeight * (1 - tick)
       ctx.beginPath()
       ctx.moveTo(x, graphTop + graphHeight)
       ctx.lineTo(x, graphTop + graphHeight + 4)
+      ctx.stroke()
+      drawText(ctx, `${index * 30}°`, x, graphTop + graphHeight + 14, { color: colors.muted, align: 'center' })
+    })
+    ;[0, 0.5, 1].forEach((tick) => {
+      const y = graphTop + graphHeight * (1 - tick)
+      ctx.beginPath()
       ctx.moveTo(graphLeft - 4, y)
       ctx.lineTo(graphLeft, y)
       ctx.stroke()
-      drawText(ctx, String(tick), x, graphTop + graphHeight + 14, { color: colors.muted, align: 'center' })
       drawText(ctx, String(tick), graphLeft - 7, y, { color: colors.muted, align: 'right', baseline: 'middle' })
     })
     ctx.strokeStyle = colors.ink

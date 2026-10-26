@@ -74,33 +74,42 @@ export default function ShadingSim() {
     drawAxes3d(ctx, VP, { left: 8, top: height - axesSize - 8, right: 8 + axesSize, bottom: height - 8, width: axesSize, height: axesSize }, colors, { unit: 'm' })
     const projected = projectVertex(VP, light, width, height)
     if (projected) {
-      markerCircle(ctx, projected[0], projected[1], 8, { fill: colors.accent, stroke: colors.ink, lineWidth: 2 })
+      const margin = 18
+      const marker = [clamp(projected[0], margin, width - margin), clamp(projected[1], margin, height - margin)]
+      const outside = marker[0] !== projected[0] || marker[1] !== projected[1]
+      markerCircle(ctx, marker[0], marker[1], 8, { fill: colors.accent, stroke: colors.ink, lineWidth: 2 })
       ctx.strokeStyle = colors.ink
       ctx.lineWidth = 1.5
-      for (let i = 0; i < 8; i++) {
-        const a = i * Math.PI / 4
+      if (outside) {
+        const angle = Math.atan2(projected[1] - marker[1], projected[0] - marker[0])
+        const tip = [marker[0] + Math.cos(angle) * 16, marker[1] + Math.sin(angle) * 16]
         ctx.beginPath()
-        ctx.moveTo(projected[0] + Math.cos(a) * 11, projected[1] + Math.sin(a) * 11)
-        ctx.lineTo(projected[0] + Math.cos(a) * 15, projected[1] + Math.sin(a) * 15)
+        ctx.moveTo(marker[0] + Math.cos(angle) * 10, marker[1] + Math.sin(angle) * 10)
+        ctx.lineTo(tip[0], tip[1])
+        ctx.lineTo(tip[0] - Math.cos(angle - 0.6) * 5, tip[1] - Math.sin(angle - 0.6) * 5)
+        ctx.moveTo(tip[0], tip[1])
+        ctx.lineTo(tip[0] - Math.cos(angle + 0.6) * 5, tip[1] - Math.sin(angle + 0.6) * 5)
         ctx.stroke()
+      } else {
+        for (let i = 0; i < 8; i++) {
+          const a = i * Math.PI / 4
+          ctx.beginPath()
+          ctx.moveTo(marker[0] + Math.cos(a) * 11, marker[1] + Math.sin(a) * 11)
+          ctx.lineTo(marker[0] + Math.cos(a) * 15, marker[1] + Math.sin(a) * 15)
+          ctx.stroke()
+        }
       }
     }
     legendRef.current?.update({ triangles: String(result.triangles) })
   }
 
-  const { canvasRef, redraw, sizeRef } = useCanvas({ draw, maxDpr: 1 })
+  const { canvasRef, redraw } = useCanvas({ draw, maxDpr: 1 })
   useEffect(() => { redraw() })
   const loop = useSimLoop((dt) => setAzimuth((value) => (value + dt * 7) % 360), { targetRef: canvasRef, autoStart: false })
 
-  const hitLight = (point) => {
-    const { width, height } = sizeRef.current
-    const projected = projectVertex(cameraViewProjection(CAMERA, width / Math.max(height, 1)), light, width, height)
-    return projected && Math.hypot(point.x - projected[0], point.y - projected[1]) <= 22
-  }
   usePointerDrag(canvasRef, {
-    canGrab: hitLight,
-    onDown: (point) => {
-      if (!hitLight(point)) return false
+    canGrab: () => true,
+    onDown: () => {
       dragging.current = true
       loop.pause()
       redraw()
@@ -143,7 +152,7 @@ export default function ShadingSim() {
     <SimShell
       label="反射モデルと影"
       switcher={<ModeSwitch label="反射モデル" value={model} options={MODEL_OPTIONS} onChange={setModel} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="球と床、光源、影を描いた三次元の場面。太陽印をドラッグするか矢印キーで光源を動かせます。" />}
+      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="球と床、光源、影を描いた三次元の場面。絵のどこからでもドラッグし、または矢印キーで光源の方位角と仰角を動かせます。画面外の光源は端の太陽印と矢印で方向を示します。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'light', symbol: 'L', label: '光源位置', value: `(${light.map((v) => fmt(v, 2)).join(', ')}) m`, minChars: 23 },
         { key: 'mode', label: 'モデル・陰影', value: `${modelLabel}・${shadingLabel}`, minChars: 19 },

@@ -70,6 +70,8 @@ export default function ShapeStep2() {
 - 角度の軸の目盛りは度（0°・30°・60°・90°）で書く
 - 文字のラベルどうしが重ならないようにずらす（線分の比の数字など）
 - TeX の関数名は `\cos`・`\sin`・`\cosh`・`\sinh`・`\exp`・`\max` で書く（`cos t` と書くと斜体の c・o・s になる）
+- JSX の属性の文字列ではバックスラッシュは 1 つ（`symbol="\varepsilon"`。JSX の属性はエスケープを解かないので `"\\varepsilon"` は 2 つのまま KaTeX に渡り、文字が出る）。JS の文字列（`'\\varepsilon'`）や `symbol={'\\varepsilon'}` では 2 つ。`tests/vis-page/methodsJsx.test.js` が検査する
+- 式の中の言葉は日本語（`\text{影}`、`\text{それ以外}`）
 - グラフの軸には目盛りを付ける（0・0.5・1 など）
 
 ## 節のデータ（`sections/<id>.js`）

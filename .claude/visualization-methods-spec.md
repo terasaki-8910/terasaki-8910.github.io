@@ -408,3 +408,6 @@ intro：体の断面を、いろいろな向きから X 線で撮った影（投
 8. そのあと `.claude/visualization-tasks.md` の 1〜4（2・3 はこのページの段階も対象）
 
 進み具合はこの節に書き足す。
+
+- 2026-10-26：土台（登録・6 タブの枠・データの検査）済み。計算は 6 タブ分すべて済み（curve・vec3・shading・raster・mesh・render・isosurface・volume・flow・fft・ct・imageFilter とテスト。Codex の使用量を抑えるため、計算とテストは Claude が書き、画面は Codex）。形状のタブは全体と段階 1〜8 済み（画面で確かめて直した）。反射と影は全体と段階 1〜4 済み、5〜8 を作っている
+- シミュレーションを書くときの部品の使い方と、画面で決めた見た目の決まりは `.claude/visualization-methods-kit.md`
