@@ -31,7 +31,7 @@ test('CSS の変数は、src/index.css にあるトークンだけを使う(acce
   const bad = []
   for (const file of files) {
     const src = readFileSync(file, 'utf8')
-    for (const m of src.matchAll(/(rgb\()?var\((--[a-z0-9-]+)\)/g)) {
+    for (const m of src.matchAll(/(rgb\()?var\((--[a-z0-9-]+)[,)]/g)) {
       if (!defined.has(m[2])) bad.push(`${file}: ${m[2]} は定義されていない`)
       else if (/^--color-(on-)?accent$/.test(m[2]) && !m[1]) bad.push(`${file}: ${m[2]} は rgb(var(...)) で使う`)
     }

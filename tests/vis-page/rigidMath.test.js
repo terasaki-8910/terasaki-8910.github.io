@@ -275,6 +275,8 @@ test('rigidKit: 表示の数はマイナスを − にし、-0 を出さない�
   assert.deepEqual(arrowStep({ key: 'ArrowUp', shiftKey: false }), { dx: 0, dy: 1 })
   assert.deepEqual(arrowStep({ key: 'ArrowLeft', shiftKey: true }), { dx: -5, dy: 0 })
   assert.equal(arrowStep({ key: 'a' }), null)
+  assert.equal(arrowStep({ key: 'ArrowLeft', altKey: true }), null)
+  assert.equal(arrowStep({ key: 'ArrowRight', metaKey: true }), null)
   assert.equal(clamp(5, 0, 3), 3)
   assert.equal(clamp(-1, 0, 3), 0)
 })

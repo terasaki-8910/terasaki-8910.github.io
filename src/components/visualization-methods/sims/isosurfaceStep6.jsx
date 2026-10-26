@@ -140,7 +140,7 @@ export default function IsosurfaceStep6() {
       height={{ phone: [330, 410], pc: [280, 360] }}
       stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="左の四隅をクリック、または 1 から 4 キーで切り替えられます。右の円の中心をドラッグでき、矢印キーでも選択中の対象を操作できます。" />}
       legend={<SimLegend items={[
-        { key: 'outside', label: '外側の角', swatch: 'var(--surface, var(--color-paper))' },
+        { key: 'outside', label: '外側の角', swatch: 'var(--color-surface)' },
         { key: 'inside', label: '内側の角', swatch: 'var(--color-ink)' },
         { key: 'case', label: '左の case', value: String(cellCase), minChars: 3 },
         { key: 'segments', label: '右の線分', value: String(fieldData().contour.segments.length), minChars: 4 },
