@@ -231,17 +231,22 @@ export function renderScene(scene, camera, opts, out) {
   })
 
   // 影の表(光源から場面の中心を見る)
+  const shadowFov = opts.shadowFov ?? 1.6
+  const shadowSize = opts.shadowSize ?? 512
   const shadowMap = shadows
     ? renderDepthMap(scene, {
       eye: lightPos,
       target: opts.shadowTarget ?? [0, 0.5, 0],
       up: Math.abs(lightPos[0]) + Math.abs(lightPos[2]) < 1e-6 ? [0, 0, -1] : [0, 1, 0],
-      fov: opts.shadowFov ?? 1.6,
+      fov: shadowFov,
       near: 0.1,
       far: 100,
-    }, opts.shadowSize ?? 512)
+    }, shadowSize)
     : null
   const bias = opts.shadowBias ?? 0.03
+  // 表の 1 マスが世界で占める幅(奥行き 1 あたり)。マスの中で奥行きが変わる分だけずらしを足さないと、
+  // 光に対して斜めの面に縞の偽の影(シャドウアクネ)が出る
+  const texelPerDepth = (2 * Math.tan(shadowFov / 2)) / shadowSize
 
   // 背景の光線の向き(カメラの基底)
   const f = normalize(sub(camera.target, eye))
@@ -281,9 +286,14 @@ export function renderScene(scene, camera, opts, out) {
         normalize(sub(eye, p, V), V)
         baseColor(material, p, base)
         let lit = 1
-        if (shadowMap && dot(N, L) > 0) {
+        const nl = dot(N, L)
+        if (shadowMap && nl > 0) {
           const s = shadowLookup(shadowMap, p)
-          if (s && inShadow(s.dC, s.dL, bias)) lit = 0
+          if (s) {
+            // 面の傾き(光の向きとの角の tan)に比例して、1 マス分の奥行きの変化をずらしに足す
+            const slope = Math.min(4, Math.sqrt(Math.max(0, 1 - nl * nl)) / Math.max(nl, 1e-3))
+            if (inShadow(s.dC, s.dL, bias + texelPerDepth * s.dC * (1 + slope))) lit = 0
+          }
         }
         if (material.kind === 'paint') {
           if (shading === 'phong') directLight(model, material, N, L, V, base, tmp)

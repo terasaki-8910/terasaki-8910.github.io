@@ -66,6 +66,8 @@ export default function ShapeStep2() {
 - 世界の座標の絵は、軸の枠（view.frame）の外に描かない（`ctx.save(); ctx.beginPath(); ctx.rect(...frame); ctx.clip()`）。接触円のような大きな形もはみ出させない
 - x と y を同じ縮尺にする絵（`equal: true`）は、見せたい範囲を真ん中に置いたまま、短い方の軸の範囲を canvas の縦横比に合わせて広げる。左右や上下に大きな空白の帯を作らない
 - accent（淡い色）は、意味を伝える線や塗りに使わない（地に対して 1.6:1）。つまみの塗りだけ。今の位置を示す縦線などは ink の破線
+- line は半透明の ink（rgb にすると濃い灰色〜黒）。画素を塗る面（床・地面・背景）には使わない。灰色の面は surface・paper に muted を混ぜて作る（shadingKit.js の mixTokens・groundColor）
+- 角度の軸の目盛りは度（0°・30°・60°・90°）で書く
 - 文字のラベルどうしが重ならないようにずらす（線分の比の数字など）
 - TeX の関数名は `\cos`・`\sin`・`\cosh`・`\sinh`・`\exp`・`\max` で書く（`cos t` と書くと斜体の c・o・s になる）
 - グラフの軸には目盛りを付ける（0・0.5・1 など）
