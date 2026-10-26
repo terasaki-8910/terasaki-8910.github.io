@@ -1,21 +1,21 @@
 {
   "files": {
-    "public/chara-picker/likelihoods.json": "45523055445ce0fd96c60f861a323bbf387cf8de36bbfc5b0863326b4e084b29",
-    "public/chara-picker/questions.runtime.json": "c69990314b1ac3d2385c32646fdca74f166221f0a05eb858cc8e2e5e30396c5b",
-    "src/chara/engine/bayes.ts": "e7fe692915d1e1aed62961fa1c8e7875e259c03ab05e2e407a98a4370d424623",
+    "src/chara/engine/bayes.ts": "a53925e67ac6b5fd619aa8cc38be4f8a1e04ce12c9c13ea39c620b4c52282ed7",
+    "src/chara/hooks/useBayesInterview.ts": "8a15d649033afb9097f74310e845db8e6ac7623e3f60c4dfb911dd3cb6405fed",
     "public/chara-picker/characters.json": "5988777fd60e2f7db7596a800cf99c49d5e904f17d2dd7dc5a57d1d1537b8d51",
     "public/chara-picker/supply.json": "2e1196cf0ae5ccc8ca10206d03a6d1af37a0191483c8f0826950f37ed84582d7",
+    "public/chara-picker/likelihoods.json": "45523055445ce0fd96c60f861a323bbf387cf8de36bbfc5b0863326b4e084b29",
+    "public/chara-picker/questions.runtime.json": "c69990314b1ac3d2385c32646fdca74f166221f0a05eb858cc8e2e5e30396c5b",
     "public/chara-picker/tag-map.json": "3ef7f83ca7663929714f747ac68e35cdabe49d2e4fcd91e03fb26020b21f51c6",
     "src/chara/engine/recommend.ts": "43318be751c830c40b4d46e40873ca59da8bb387bd310b8ed6a5fd02ca234f7e",
     "src/chara/engine/questions.ts": "68500d8e2df80381c65f6df5e0f4c9ca7c2e8d06d8de8d1bcfa69cac65c69e5a",
     "src/chara/engine/supply.ts": "451fb9d1a2dfa365ccb29eab2e1f5d5760ae0e402cef7b381a51b9697d38b927",
     "src/chara/engine/cooldown.ts": "97fec8df4b2b4d7acde284fb402eac91cbdd7e85c0d93cbf3a88e20037c90561",
     "src/chara/data/schema.ts": "bdf8533e57ce34bd1b838bb63e423bc5a9d5d3fdc5874d6a1ebe955c18d52162",
-    "src/chara/hooks/useBayesInterview.ts": "b376b8c90891fc3577d874b773c82b14ce5779366b9b074ce3c666498212abd8",
     "src/chara/hooks/useSessionLog.ts": "5d59ef1fa9ae83638af3088fbe04e89caa997d568de19a94b3269ac1e5e10127"
   },
-  "syncedAt": "2026-10-26T09:40:42.295Z",
-  "upstreamCommit": "b0e84c56783d6ba074ced08c445bec2fbe714c20",
-  "upstreamSubject": "docs: R11 の push とサイトへの反映の回答を決定記録に書く",
+  "syncedAt": "2026-10-26T11:04:10.619Z",
+  "upstreamCommit": "07f0a63085349fe96c968fcf2ec1c3627e05a0d7",
+  "upstreamSubject": "feat(bayes): 質問の出し方を方針(QuestionPolicy)にし、本番は年代を聞かず作品の質問を2問まで・5問目からにする。当てるモードと出会うモードの方針も足す(R12)",
   "upstreamDirty": false
 }

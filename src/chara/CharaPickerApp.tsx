@@ -5,8 +5,10 @@ import { useBayesInterview } from './hooks/useBayesInterview';
 import { useNoticeSeen } from './hooks/useNoticeSeen';
 import { useSessionLog, type SessionLogRecord } from './hooks/useSessionLog';
 import { omakase, type Dataset, type Scored } from './engine/recommend';
+import { QUESTION_POLICIES, type QuestionPolicy } from './engine/bayes';
 import type { Probe } from './engine/questions';
 import { GuessScreen } from './screens/GuessScreen';
+import { ModeScreen, type PlayMode } from './screens/ModeScreen';
 import { NoGuessScreen } from './screens/NoGuessScreen';
 import { NoticeScreen } from './screens/NoticeScreen';
 import { QuestionScreen } from './screens/QuestionScreen';
@@ -43,23 +45,16 @@ function useTargetGuard() {
   return { run, reset };
 }
 
-/**
- * ベイズ推薦エンジンのフロー。移植元の `BayesFlow` をそのまま持ってきたもので、
- * 画面の分岐ロジックは無改造（データを引数で受け取る点だけが違う）。
- * 移植元にあった classic エンジンと `?engine=` による切り替えは持ってきていない。
- */
-function BayesFlow({ dataset }: { dataset: Dataset }) {
-  const interview = useBayesInterview(dataset);
+/** おまかせ(質問なしで1体)。遊び方を選ぶ画面と質問の画面の両方から使う。 */
+function useOmakase(dataset: Dataset) {
   const { log } = useSessionLog();
-  const { seen: noticeSeen, markSeen: markNoticeSeen } = useNoticeSeen();
-  const [omakaseResult, setOmakaseResult] = useState<Scored | null>(null);
-  const { run: guard, reset: resetGuard } = useTargetGuard();
+  const [result, setResult] = useState<Scored | null>(null);
 
-  const handleOmakase = useCallback(() => {
-    const result = omakase(dataset, { seed: Date.now() });
+  const run = useCallback(() => {
+    const picked = omakase(dataset, { seed: Date.now() });
     const record: SessionLogRecord = {
       ts: Date.now(),
-      guessId: result.character.id,
+      guessId: picked.character.id,
       outcome: 'omakase',
       askedCount: 0,
       answers: [],
@@ -67,21 +62,30 @@ function BayesFlow({ dataset }: { dataset: Dataset }) {
       engine: 'bayes',
     };
     log(record);
-    setOmakaseResult(result);
+    setResult(picked);
   }, [dataset, log]);
+
+  const clear = useCallback(() => setResult(null), []);
+  return { result, run, clear };
+}
+
+/**
+ * ベイズ推薦エンジンのフロー。移植元の `BayesFlow` をそのまま持ってきたもので、
+ * 画面の分岐ロジックは無改造（データを引数で受け取る点だけが違う）。
+ * 移植元にあった classic エンジンと `?engine=` による切り替えは持ってきていない。
+ * `policy` は選んだ遊び方の質問の出し方（engine/bayes.ts の QUESTION_POLICIES）。
+ * やり直すと遊び方を選ぶ画面へ戻る（`onRestart`）。
+ */
+function BayesFlow({ dataset, policy, onRestart }: { dataset: Dataset; policy: QuestionPolicy; onRestart(): void }) {
+  const interview = useBayesInterview(dataset, { policy });
+  const { result: omakaseResult, run: handleOmakase, clear: clearOmakase } = useOmakase(dataset);
+  const { run: guard, reset: resetGuard } = useTargetGuard();
 
   const handleRestart = useCallback(() => {
     resetGuard();
-    interview.reset();
-    setOmakaseResult(null);
-  }, [resetGuard, interview]);
-
-  // 初回のみ、質問より前に注意書きを挟む。最初の質問がどの軸になるかはベイズ選択で
-  // 毎回変わりうる（bayesNextProbe が情報量最大の軸を選ぶため、決め打ちの1問目が無い）
-  // ので、特定の質問の手前ではなく「質問そのものの前」に固定で置く。
-  if (!noticeSeen) {
-    return <NoticeScreen onAcknowledge={markNoticeSeen} />;
-  }
+    clearOmakase();
+    onRestart();
+  }, [resetGuard, clearOmakase, onRestart]);
 
   // おまかせは質問・推測ループを経ない独立経路。結果表示中は interview 側の状態
   // （質問の途中経過など）を無視して直接 result 画面へ出す。
@@ -135,6 +139,40 @@ function BayesFlow({ dataset }: { dataset: Dataset }) {
 }
 
 /**
+ * 遊び方を選んでから質問に入る外枠（開発元 R12「モードを分ける」案。2026-10-26、本人の依頼で別に見せる版）。
+ * 遊び方を選ぶたびに BayesFlow を key で作り直し、選んだ方針で1問目から始める。
+ */
+function ModeFlow({ dataset }: { dataset: Dataset }) {
+  const { seen: noticeSeen, markSeen: markNoticeSeen } = useNoticeSeen();
+  const [mode, setMode] = useState<PlayMode | null>(null);
+  const [round, setRound] = useState(0);
+  const { result: omakaseResult, run: handleOmakase, clear: clearOmakase } = useOmakase(dataset);
+  const backToModes = useCallback(() => setMode(null), []);
+
+  // 初回のみ、質問より前に注意書きを挟む。最初の質問がどの軸になるかはベイズ選択で
+  // 毎回変わりうる（bayesNextProbe が情報量最大の軸を選ぶため、決め打ちの1問目が無い）
+  // ので、特定の質問の手前ではなく「質問そのものの前」に固定で置く。
+  if (!noticeSeen) {
+    return <NoticeScreen onAcknowledge={markNoticeSeen} />;
+  }
+  if (omakaseResult !== null) {
+    return <ResultScreen result={omakaseResult} onRestart={clearOmakase} />;
+  }
+  if (mode === null) {
+    return (
+      <ModeScreen
+        onSelect={(selected) => {
+          setMode(selected);
+          setRound((r) => r + 1);
+        }}
+        onOmakase={handleOmakase}
+      />
+    );
+  }
+  return <BayesFlow key={round} dataset={dataset} policy={QUESTION_POLICIES[mode]} onRestart={backToModes} />;
+}
+
+/**
  * データのfetch（public/chara-picker/）を担う外枠。移植元はJSONを静的importして
  * いたためこの層自体が無かった。ローディング/エラーの見せ方は
  * src/components/gomi/GomiCalendar.jsx に揃えてある。
@@ -180,5 +218,5 @@ export default function CharaPickerApp() {
     );
   }
 
-  return <BayesFlow dataset={dataset} />;
+  return <ModeFlow dataset={dataset} />;
 }
