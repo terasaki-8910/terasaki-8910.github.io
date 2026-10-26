@@ -20,6 +20,12 @@ const offsetYView = (view, offset) => ({
   wy: (y) => view.wy(y - offset),
   frame: { ...view.frame, top: view.frame.top + offset, bottom: view.frame.bottom + offset },
 })
+const offsetXView = (view, offset) => ({
+  ...view,
+  sx: (x) => view.sx(x) + offset,
+  wx: (x) => view.wx(x - offset),
+  frame: { ...view.frame, left: view.frame.left + offset, right: view.frame.right + offset },
+})
 
 export default function ShapeStep7() {
   const [points, setPoints] = useState(copyInitial)
@@ -43,14 +49,20 @@ export default function ShapeStep7() {
   const graphLimit = Math.max(0.5, Math.min(6, curvature.reduce((maximum, entry) => Math.max(maximum, Math.abs(entry[1])), 0) * 1.08))
 
   const viewsOf = (width, height) => {
+    if (width >= height * 1.6) {
+      const split = Math.min(width * 0.68, Math.max(180, width * 0.57))
+      const geometry = makeView({ width: split, height, ...rangesForAspect([0, 4.7], [0, 3.5], split, height), margin: STEP_MARGIN })
+      const graphBase = makeView({ width: width - split, height, xRange: [0, 1], yRange: [-graphLimit, graphLimit], equal: false, margin: STEP_MARGIN })
+      return { geometry, graph: offsetXView(graphBase, split), split, sideBySide: true }
+    }
     const split = Math.max(155, Math.min(height * 0.66, height - 105))
     const geometry = makeView({ width, height: split, ...rangesForAspect([0, 4.7], [0, 3.5], width, split), margin: STEP_MARGIN })
     const graphBase = makeView({ width, height: height - split, xRange: [0, 1], yRange: [-graphLimit, graphLimit], equal: false, margin: STEP_MARGIN })
-    return { geometry, graph: offsetYView(graphBase, split), split }
+    return { geometry, graph: offsetYView(graphBase, split), split, sideBySide: false }
   }
 
   const draw = ({ ctx, width, height, colors }) => {
-    const { geometry, graph, split } = viewsOf(width, height)
+    const { geometry, graph, split, sideBySide } = viewsOf(width, height)
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
     drawAxes(ctx, geometry, { colors, xLabel: 'x', yLabel: 'y' })
@@ -77,8 +89,13 @@ export default function ShapeStep7() {
     ctx.strokeStyle = colors.line
     ctx.lineWidth = 1
     ctx.beginPath()
-    ctx.moveTo(14, split)
-    ctx.lineTo(width - 14, split)
+    if (sideBySide) {
+      ctx.moveTo(split, 14)
+      ctx.lineTo(split, height - 14)
+    } else {
+      ctx.moveTo(14, split)
+      ctx.lineTo(width - 14, split)
+    }
     ctx.moveTo(graph.frame.left, graph.sy(0))
     ctx.lineTo(graph.frame.right, graph.sy(0))
     ctx.moveTo(graph.frame.left, graph.frame.bottom)
@@ -93,7 +110,7 @@ export default function ShapeStep7() {
     })
     ;[-graphLimit, 0, graphLimit].forEach((tick) => drawText(ctx, fmt(tick, 1), graph.frame.left - 7, graph.sy(tick), { color: colors.muted, align: 'right', baseline: 'middle' }))
     drawText(ctx, 't', graph.frame.right, graph.frame.bottom + 16, { color: colors.ink, align: 'right' })
-    drawText(ctx, 'κ', graph.frame.left - 8, graph.frame.top, { color: colors.ink, align: 'right' })
+    drawText(ctx, 'κ', graph.frame.left, graph.frame.top - 8, { color: colors.ink, align: 'left', baseline: 'bottom' })
     drawPolyline(ctx, graph, curvature.map(([u, value]) => [u, clamp(value, -graphLimit, graphLimit)]), { color: colors.ink, width: 2 })
     ctx.strokeStyle = colors.ink
     ctx.lineWidth = selectedT ? 3 : 2

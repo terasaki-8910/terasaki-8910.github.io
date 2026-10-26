@@ -22,6 +22,12 @@ const offsetYView = (view, offset) => ({
   wy: (y) => view.wy(y - offset),
   frame: { ...view.frame, top: view.frame.top + offset, bottom: view.frame.bottom + offset },
 })
+const offsetXView = (view, offset) => ({
+  ...view,
+  sx: (x) => view.sx(x) + offset,
+  wx: (x) => view.wx(x - offset),
+  frame: { ...view.frame, left: view.frame.left + offset, right: view.frame.right + offset },
+})
 
 export default function ShapeStep5() {
   const [points, setPoints] = useState(copyInitial)
@@ -36,22 +42,33 @@ export default function ShapeStep5() {
   const bezier = useMemo(() => Array.from({ length: 281 }, (_, i) => bezierPoint(points, i / 280)), [points])
 
   const viewsOf = (width, height) => {
+    if (width >= height * 1.6) {
+      const split = Math.min(width * 0.68, Math.max(180, width * 0.57))
+      const geometry = makeView({ width: split, height, ...rangesForAspect([0, 7], [0, 3.4], split, height), margin: STEP_MARGIN })
+      const graphBase = makeView({ width: width - split, height, xRange: [0, END], yRange: [0, 1], equal: false, margin: STEP_MARGIN })
+      return { geometry, graph: offsetXView(graphBase, split), split, sideBySide: true }
+    }
     const split = Math.max(150, Math.min(height * 0.64, height - 105))
     const geometry = makeView({ width, height: split, ...rangesForAspect([0, 7], [0, 3.4], width, split), margin: STEP_MARGIN })
     const graphBase = makeView({ width, height: height - split, xRange: [0, END], yRange: [0, 1], equal: false, margin: STEP_MARGIN })
-    return { geometry, graph: offsetYView(graphBase, split), split }
+    return { geometry, graph: offsetYView(graphBase, split), split, sideBySide: false }
   }
 
   const draw = ({ ctx, width, height, colors }) => {
-    const { geometry, graph, split } = viewsOf(width, height)
+    const { geometry, graph, split, sideBySide } = viewsOf(width, height)
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
     drawAxes(ctx, geometry, { colors, xLabel: 'x', yLabel: 'y' })
     ctx.strokeStyle = colors.line
     ctx.lineWidth = 1
     ctx.beginPath()
-    ctx.moveTo(14, split)
-    ctx.lineTo(width - 14, split)
+    if (sideBySide) {
+      ctx.moveTo(split, 14)
+      ctx.lineTo(split, height - 14)
+    } else {
+      ctx.moveTo(14, split)
+      ctx.lineTo(width - 14, split)
+    }
     ctx.stroke()
 
     drawPolyline(ctx, geometry, points, { color: colors.muted, width: 1.25, dash: [5, 4] })
@@ -84,7 +101,7 @@ export default function ShapeStep5() {
       drawText(ctx, String(tick), graph.frame.left - 7, graph.sy(tick), { color: colors.muted, align: 'right', baseline: 'middle' })
     })
     drawText(ctx, 't', graph.frame.right, graph.frame.bottom + 16, { color: colors.ink, align: 'right' })
-    drawText(ctx, 'N', graph.frame.left - 8, graph.frame.top, { color: colors.ink, align: 'right' })
+    drawText(ctx, 'N', graph.frame.left, graph.frame.top - 8, { color: colors.ink, align: 'left', baseline: 'bottom' })
     for (let basisIndex = 0; basisIndex < 7; basisIndex++) {
       const values = Array.from({ length: 161 }, (_, i) => {
         const t = END * i / 160

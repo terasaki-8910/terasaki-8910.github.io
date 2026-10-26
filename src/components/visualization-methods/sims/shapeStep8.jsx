@@ -9,7 +9,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { arrowStep, clamp, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { bezierPatch } from '../../../utils/vis/curve'
 import { orbitPose, cameraMatrices } from '../../visualization/sims/transformCamera'
-import { projectPoint, drawLine3d, drawArrow3d, drawAxes3d } from '../../visualization/sims/transformMesh'
+import { projectPoint, drawLine3d, drawArrow3d, drawDot3d, drawText3d } from '../../visualization/sims/transformMesh'
 
 const HEIGHTS = [
   [0, 0.2, -0.1, 0],
@@ -23,6 +23,17 @@ const POINT_R = 6
 const initialPatch = () => GRID.map((x, i) => GRID.map((z, j) => [x, HEIGHTS[i][j], z]))
 const addScaled = (point, vector, scale) => point.map((value, index) => value + vector[index] * scale)
 const dot = (a, b) => a.reduce((sum, value, index) => sum + value * b[index], 0)
+const AXES = { x: [1, 0, 0], y: [0, 1, 0], z: [0, 0, 1] }
+
+const drawAxes = (ctx, VP, rect, colors) => {
+  for (const [name, direction] of Object.entries(AXES)) {
+    const end = direction.map((value) => value * 2)
+    const tip = direction.map((value) => value * 2.35)
+    drawArrow3d(ctx, VP, rect, [0, 0, 0], end, { color: colors.ink, width: 1.5, head: 8 })
+    drawDot3d(ctx, VP, rect, direction, { fill: colors.ink, radius: 2 })
+    drawText3d(ctx, VP, rect, tip, name, { color: colors.ink, size: 12 })
+  }
+}
 
 export default function ShapeStep8() {
   const [patch, setPatch] = useState(initialPatch)
@@ -36,8 +47,10 @@ export default function ShapeStep8() {
 
   const sceneOf = (width, height) => {
     const rect = { left: 24, top: 18, right: width - 18, bottom: height - 20, width: width - 42, height: height - 38 }
-    const pose = orbitPose({ target: [0, 0, 0], yaw, pitch, dist: 6.4 })
-    const { VP } = cameraMatrices(pose, { fov: Math.PI / 4, aspect: rect.width / Math.max(rect.height, 1), near: 0.1, far: 100 })
+    const aspect = rect.width / Math.max(rect.height, 1)
+    const distance = clamp(5.4 - Math.max(0, aspect - 1) * 0.65, 4.2, 5.4)
+    const pose = orbitPose({ target: [0, 0, 0], yaw, pitch, dist: distance })
+    const { VP } = cameraMatrices(pose, { fov: Math.PI / 4, aspect, near: 0.1, far: 100 })
     return { rect, VP }
   }
 
@@ -45,7 +58,7 @@ export default function ShapeStep8() {
     const { rect, VP } = sceneOf(width, height)
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
-    drawAxes3d(ctx, VP, rect, colors, { len: 2, unit: '', axes: ['x', 'y', 'z'] })
+    drawAxes(ctx, VP, rect, colors)
     ctx.save()
     ctx.beginPath()
     ctx.rect(rect.left, rect.top, rect.width, rect.height)

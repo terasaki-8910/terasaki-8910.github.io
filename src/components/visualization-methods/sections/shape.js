@@ -127,7 +127,7 @@ export default {
       formulas: [
         {
           caption: '0 次の基底',
-          tex: 'N_i^0(t)=\\begin{cases}1 & t_i \\le t < t_{i+1}\\\\0 & \\text{otherwise}\\end{cases}',
+          tex: 'N_i^0(t)=\\begin{cases}1 & t_i \\le t < t_{i+1}\\\\0 & \\text{それ以外}\\end{cases}',
           symbols: [{ tex: 't_i', meaning: '節点', unit: '' }],
         },
         {
@@ -164,7 +164,7 @@ export default {
     {
       id: 'curvature',
       title: '曲がり方を測る（接線・法線・曲率）',
-      text: '曲線の進む向きを長さ 1 にしたものが接線 T、その直角で曲がる側が法線 N で、接触円の半径 R の逆数が曲率 κ です。直線では κ = 0 となり、急な曲がりほど値が大きくなります。制御点や曲線上の点をつかみ、矢印と接触円、下の曲率グラフが同時に変わる様子を見てください。',
+      text: '曲線の進む向きを長さ 1 にしたものが接線 T、その直角で曲がる側が法線 N で、接触円の半径 R の逆数が曲率 κ です。直線では κ = 0 となり、急な曲がりほど値が大きくなります。制御点や曲線上の点をつかみ、矢印と接触円、曲率のグラフが同時に変わる様子を見てください。',
       formulas: [
         {
           caption: '弧長で測る接線・法線・曲率',
@@ -198,11 +198,13 @@ export default {
       formulas: [
         {
           caption: '双 3 次ベジエ曲面',
-          tex: 'S(u,v)=\\sum_{i=0}^{3}\\sum_{j=0}^{3}B_i^3(u)B_j^3(v)P_{ij},\\qquad n=S_u\\times S_v',
-          symbols: [
-            { tex: 'u,v', meaning: '曲面上の 2 方向の媒介変数', unit: '' },
-            { tex: 'n', meaning: '接線 2 本の外積で得る法線', unit: '' },
-          ],
+          tex: 'S(u,v)=\\sum_{i=0}^{3}\\sum_{j=0}^{3}B_i^3(u)B_j^3(v)P_{ij}',
+          symbols: [{ tex: 'u,v', meaning: '曲面上の 2 方向の媒介変数', unit: '' }],
+        },
+        {
+          caption: '法線',
+          tex: 'n=S_u\\times S_v',
+          symbols: [{ tex: 'n', meaning: '接線 2 本の外積で得る法線', unit: '' }],
         },
         {
           caption: '曲面の曲率',
