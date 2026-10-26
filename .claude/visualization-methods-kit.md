@@ -102,3 +102,5 @@ export default {
 
 - `node --test "tests/vis/*.test.js" "tests/vis-page/*.test.js"`（落ちてよいのは transformRender.test.js の以前からの 5 件だけ）。Codex の sandbox では子プロセスが作れず node --test と vite が動かないので、テストは Claude が外で流す
 - ビルドの確かめは `npx vite build --outDir dist --emptyOutDir`（`npm run build` は docs/ を書き換えるので使わない）
+- 値の濃淡の画像（CT・ボリュームの断面など）は、ink と surface のうち暗い方を低い値、明るい方を高い値にする灰色（`volumeKit.js` の `valueRamp`）。paper はライトのテーマで黄色なので混ぜない
+- 軌道カメラの右向きは「視線 × 上(+y)」で、+z から −z を見るとき +x（逆にすると絵が 180° 回る）。光線で描く絵は、隅の x・y・z の印の向きで確かめる

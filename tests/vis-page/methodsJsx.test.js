@@ -50,3 +50,21 @@ test('見える canvas に putImageData を直接使わない(dpr 2 で絵が 1/
   }
   assert.deepEqual(bad, [])
 })
+
+test('JS の文字列の中の TeX の命令はバックスラッシュ 2 つ(1 つだと JS が消して「Delta s」の文字になる)', () => {
+  const bad = []
+  for (const file of readdirSync(SIMS).filter((f) => /\.jsx?$/.test(f))) {
+    readFileSync(join(SIMS, file), 'utf8').split('\n').forEach((line, i) => {
+      for (const m of line.matchAll(/'([^'\n]*)'/g)) {
+        const s = m[1]
+        for (let k = 0; k < s.length - 2; k++) {
+          if (s[k] === BS && s[k - 1] !== BS && s[k + 1] !== BS && /[A-Za-z]{2}/.test(s.slice(k + 1, k + 3))) {
+            bad.push(`${file}:${i + 1}: ${s}`)
+            break
+          }
+        }
+      }
+    })
+  }
+  assert.deepEqual(bad, [])
+})

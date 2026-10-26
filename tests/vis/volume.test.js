@@ -126,3 +126,20 @@ test('最近傍は、格子点ではその値、格子の間ではいちばん�
   near(sampleVolumeNearest(vol, n, 0.4, 0, 0), 13) // x の格子点 0 と 1 の間で 0 に近い
   near(sampleVolumeNearest(vol, n, 0.6, 0, 0), 14)
 })
+
+test('出発点のずらし: jitter 0 は今までと同じ、ずらしは 1 歩より小さく、画素ごとの値は 0〜1 で決まっている', async () => {
+  const { pixelJitter } = await import('../../src/utils/vis/volume.js')
+  const n = 9
+  const vol = new Float32Array(n * n * n).fill(0.5)
+  const opts = { mode: 'composite', ds: 0.05, ds0: 0.05, tf: () => ({ alpha: 0.05, t: 0 }), colorOf: () => [1, 1, 1] }
+  const a = castRay(vol, n, [0, 0, 5], [0, 0, -1], opts)
+  const b = castRay(vol, n, [0, 0, 5], [0, 0, -1], { ...opts, jitter: 0 })
+  near(a.alpha, b.alpha)
+  const c = castRay(vol, n, [0, 0, 5], [0, 0, -1], { ...opts, jitter: 0.99 })
+  assert.ok(Math.abs(c.steps - a.steps) <= 1)
+  for (const [i, j] of [[0, 0], [3, 7], [120, 45]]) {
+    const v = pixelJitter(i, j)
+    assert.ok(v >= 0 && v < 1)
+    near(v, pixelJitter(i, j))
+  }
+})

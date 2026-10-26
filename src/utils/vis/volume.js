@@ -160,11 +160,14 @@ export function sampleVolumeNearest(volume, n, x, y, z) {
 //   composite: 伝達関数で色と不透明度にして、前から合成する(不透明度は Δs に合わせて補正。A ≥ stopAt で打ち切る)
 //   mip:       いちばん大きい値(最大値投影)
 //   iso:       値が isoValue を最初に越える所を二分法で詰め、勾配(法線)とランバートで明るさ
-// opts = { mode, ds, ds0, stopAt, tf(value) → { alpha, t }, colorOf(t) → [r, g, b], isoValue, light: 単位ベクトル }
+// opts = { mode, ds, ds0, stopAt, tf(value) → { alpha, t }, colorOf(t) → [r, g, b], isoValue, light: 単位ベクトル,
+//          jitter: 0〜1(出発点のずらし。pixelJitter で画素ごとに決める) }
 export function castRay(volume, n, origin, dir, opts) {
   const hit = rayBox(origin, dir, [-1, -1, -1], [1, 1, 1])
   if (!hit) return { color: [0, 0, 0], alpha: 0, steps: 0, value: 0 }
-  const [t0, t1] = hit
+  // jitter(0〜1)だけ出発点をずらす。隣の光線と標本の位置がそろうと、層の境目が同心円の縞(木目)になるので、
+  // 画素ごとに違うずらしを渡すと、縞が目立たない細かいざらつきに変わる
+  const [t0, t1] = [hit[0] + (opts.jitter ?? 0) * opts.ds, hit[1]]
   const ds = opts.ds
   const mode = opts.mode ?? 'composite'
   let steps = 0
@@ -231,6 +234,12 @@ export function castRay(volume, n, origin, dir, opts) {
   return { color: C, alpha: A, steps }
 }
 // @end
+
+// 画素 (i, j) ごとに決まる 0〜1 の値(同じ画素ならいつも同じ。castRay の jitter に渡す)
+export function pixelJitter(i, j) {
+  const s = Math.sin(i * 12.9898 + j * 78.233) * 43758.5453
+  return s - Math.floor(s)
+}
 
 // @snippet volume-sliceAxis
 // 板を重ねる描き方で、板を並べる軸: 見る向きにいちばん近い軸(成分の絶対値が最大の軸。0 = x、1 = y、2 = z)
