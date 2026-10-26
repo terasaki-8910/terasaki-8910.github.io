@@ -32,7 +32,7 @@ export default {
     {
       id: 'emission-absorption',
       title: '光りながら弱まる（発光と吸収）',
-      text: '光る煙では、各点が出した光に、その点から目までの煙を通り抜ける割合を掛けて足します。すべての点の分と、煙で暗くなった背景光を合計したものが画素の明るさです。二種類の丸を動かして各点の寄与を比べると、散乱で光の向きが変わる場合にはさらに別の項が必要なことも分かります。',
+      text: '光る煙では、各点が出した光に、その点から目までの煙を通り抜ける割合を掛けて足します。すべての点の分と、煙で暗くなった背景光を合計したものが画素の明るさです。発光と吸収の丸を動かし、各点の寄与（グラフの面積）と背景光の割合を比べてください。光が途中で向きを変える（散乱）分を入れると、式に 2 つ目の項が加わります。',
       formulas: [
         { caption: '発光と背景光', tex: 'L=\\int_0^s\\tau(x,x^{\\prime})\\,\\sigma_a(x^{\\prime})L_e(x^{\\prime})\\,dx^{\\prime}+\\tau(x,x_0)L_0,\\quad \\tau(x,x^{\\prime})=\\exp\\left[-\\int(\\sigma_a+\\sigma_s)\\,dt\\right]', symbols: [{ tex: 'L_e', meaning: 'その点が出す光', unit: '' }, { tex: '\\sigma_a', meaning: '吸収係数', unit: '\\mathrm{length}^{-1}' }, { tex: '\\tau', meaning: '二点間の透過率', unit: '' }] },
         { caption: '散乱で加わる光', tex: '\\int\\tau\\,\\sigma_s\\int_{4\\pi}p(x^{\\prime},\\omega^{\\prime},\\omega)L_i(x^{\\prime},\\omega^{\\prime})\\,d\\omega^{\\prime}\\,dx^{\\prime}', symbols: [{ tex: '\\sigma_s', meaning: '散乱係数', unit: '\\mathrm{length}^{-1}' }, { tex: 'p', meaning: '光が向きを変える割合', unit: '' }, { tex: 'L_i', meaning: '入射する光', unit: '' }] },
