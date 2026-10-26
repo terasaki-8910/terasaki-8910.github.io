@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T09:38:01.162Z",
+  "generatedAt": "2026-10-26T23:16:09.299Z",
   "user": "masatoT",
   "watched": [
     {
@@ -29,6 +29,64 @@
       "recordedOrder": 14495528329,
       "rating": 9,
       "ratedAt": "2026-10-05T02:51:29.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 177,
+      "tmdb": 218,
+      "slug": "the-terminator-1984",
+      "year": 1984,
+      "released": "1984-10-26",
+      "traktTitle": "The Terminator",
+      "details": {
+        "poster": "/iK2YBfD7DdaNXZALQhhT9uTN9Rc.jpg",
+        "genres": [
+          "アクション",
+          "スリラー",
+          "サイエンスフィクション"
+        ],
+        "overview": "アメリカのとある街、深夜突如奇怪な放電と共に屈強な肉体をもった男が現れる。同じくして放電の中からもう一人の男カイル・リースが現れる。屈強な肉体を持った男はモラルや常識もない。あるのはただ１つの目的アメリカ人女性サラ・コナーという名の人物の殺害だった。電話帳名簿から「サラ・コナー」の名を持つ女性をかたっぱしから銃殺していく男。その頃カイルは目的のサラ・コナーと接触し間一髪で彼女を救う。カイルはサラに、サラを狙っているのは近未来から送られた人類殺戮ロボット「ターミネーター」であり、未来ではロボットの反乱による機械対人類の最終戦争が起こっている事、そしてサラは人類軍の希望のリーダー　ジョン・コナーの母親である事を告げる。　サラを連れカイルはターミネーターからの逃亡を開始する。",
+        "overviewLang": "ja",
+        "title": "ターミネーター",
+        "originalTitle": "The Terminator",
+        "runtime": 108,
+        "releaseDate": "1984-10-26"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2025-12-29T12:23:00.000Z",
+      "recordedOrder": 14574007595,
+      "rating": 7,
+      "ratedAt": "2026-10-26T10:20:03.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 236,
+      "tmdb": 280,
+      "slug": "terminator-2-judgment-day-1991",
+      "year": 1991,
+      "released": "1991-07-03",
+      "traktTitle": "Terminator 2: Judgment Day",
+      "details": {
+        "poster": "/oCwo7ALD3LftLqy0Oj6U669u4fU.jpg",
+        "genres": [
+          "アクション",
+          "スリラー",
+          "サイエンスフィクション"
+        ],
+        "overview": "未来からの抹殺兵器ターミネーターを破壊し、近未来で恐ろしい戦争が起こる事を知ってしまったサラ・コナー。カイルとの子供ジョンは母親から常にその戦争の話や戦いへの備えの話を聞かされていた。サラは周囲から変人扱いされ精神病院へ収容されジョンは親戚の家で暮らしていた。ある日ジョンの前に執拗にジョンを狙う不審な警官が現る。軌道を逸した警官の行動は明らかにジョンを殺害しようとしていた。殺されるその寸前、見知らぬ屈強な男が現れジョンを救う。彼は自らをターミネーターでありジョンを守るべく再プログラムされ未来から送り込まれたと告げる。ジョンは病院の母親を連れ出し、最終戦争を起こす原因であるコンピューターシステム「スカイネット」を破壊するため、ターミネーターと共にサイバーダイン社へ向かうが・・・",
+        "overviewLang": "ja",
+        "title": "ターミネーター2",
+        "originalTitle": "Terminator 2: Judgment Day",
+        "runtime": 137,
+        "releaseDate": "1991-07-03"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2025-12-29T12:23:00.000Z",
+      "recordedOrder": 14574008161,
+      "rating": 8,
+      "ratedAt": "2026-10-26T10:20:45.000Z"
     },
     {
       "type": "movie",
@@ -2138,6 +2196,35 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 191797,
+      "tmdb": 299536,
+      "slug": "avengers-infinity-war-2018",
+      "year": 2018,
+      "released": "2018-04-25",
+      "traktTitle": "Avengers: Infinity War",
+      "details": {
+        "poster": "/4szrEPRLfw1iqk30tWywoL1uEqG.jpg",
+        "genres": [
+          "アドベンチャー",
+          "アクション",
+          "サイエンスフィクション"
+        ],
+        "overview": "宇宙において最凶・最悪の存在であるサノスが、自身の野望の実現に向けて立ち上がる。それは宇宙で生きている者の半分を葬り去り、“バランスの取れた宇宙”を実現するというもの。サノスはそのために、6つそろえればその野望を叶えることができる“インフィニティ・ストーン”を集め始める。サノスはまず、ソーとハルクが乗ったアスガルドの宇宙船を襲い、やがてドクター・ストレンジらがいる地球のニューヨークにも襲い掛かる。",
+        "overviewLang": "ja",
+        "title": "アベンジャーズ／インフィニティ・ウォー",
+        "originalTitle": "Avengers: Infinity War",
+        "runtime": 150,
+        "releaseDate": "2018-04-25"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-26T08:48:00.000Z",
+      "recordedOrder": 14573874852,
+      "rating": 9,
+      "ratedAt": "2026-10-26T08:48:06.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 286243,
       "tmdb": 440471,
       "slug": "escape-plan-2-hades-2018",
@@ -2193,6 +2280,35 @@
       "recordedOrder": 14495573638,
       "rating": 7,
       "ratedAt": "2026-10-05T03:11:59.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 191798,
+      "tmdb": 299534,
+      "slug": "avengers-endgame-2019",
+      "year": 2019,
+      "released": "2019-04-24",
+      "traktTitle": "Avengers: Endgame",
+      "details": {
+        "poster": "/uNWEDJzeH8VLHrs2iHkosYp2Y6W.jpg",
+        "genres": [
+          "アドベンチャー",
+          "サイエンスフィクション",
+          "アクション"
+        ],
+        "overview": "破格のメガヒットによって映画史を塗り替え続ける「アベンジャーズ」シリーズが、この春ついに完結。最凶最悪の敵\"サノス\"によって、人類の半分が消し去られ、最強チーム\"アベンジャーズ\"も崩壊してしまった。はたして失われた35億の人々と仲間を取り戻す方法はあるのか？ 大逆転へのわずかな希望を信じて再び集結したアイアンマン、キャプテン・アメリカ、ソーたちに残されたのは、最強の絆だけ──。\"今はここにいない\"仲間のために、最後にして最大の逆襲が始まる！",
+        "overviewLang": "ja",
+        "title": "アベンジャーズ／エンドゲーム",
+        "originalTitle": "Avengers: Endgame",
+        "runtime": 182,
+        "releaseDate": "2019-04-24"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-26T08:48:00.000Z",
+      "recordedOrder": 14573875199,
+      "rating": 9,
+      "ratedAt": "2026-10-26T08:48:18.000Z"
     },
     {
       "type": "movie",
@@ -3102,58 +3218,6 @@
         "releaseDate": "2015-07-14"
       },
       "listedAt": "2026-10-11T04:51:40.000Z",
-      "rating": null
-    },
-    {
-      "type": "movie",
-      "kind": "movie",
-      "trakt": 191797,
-      "tmdb": 299536,
-      "slug": "avengers-infinity-war-2018",
-      "year": 2018,
-      "released": "2018-04-25",
-      "traktTitle": "Avengers: Infinity War",
-      "details": {
-        "poster": "/4szrEPRLfw1iqk30tWywoL1uEqG.jpg",
-        "genres": [
-          "アドベンチャー",
-          "アクション",
-          "サイエンスフィクション"
-        ],
-        "overview": "宇宙において最凶・最悪の存在であるサノスが、自身の野望の実現に向けて立ち上がる。それは宇宙で生きている者の半分を葬り去り、“バランスの取れた宇宙”を実現するというもの。サノスはそのために、6つそろえればその野望を叶えることができる“インフィニティ・ストーン”を集め始める。サノスはまず、ソーとハルクが乗ったアスガルドの宇宙船を襲い、やがてドクター・ストレンジらがいる地球のニューヨークにも襲い掛かる。",
-        "overviewLang": "ja",
-        "title": "アベンジャーズ／インフィニティ・ウォー",
-        "originalTitle": "Avengers: Infinity War",
-        "runtime": 150,
-        "releaseDate": "2018-04-25"
-      },
-      "listedAt": "2026-10-07T13:41:50.000Z",
-      "rating": null
-    },
-    {
-      "type": "movie",
-      "kind": "movie",
-      "trakt": 191798,
-      "tmdb": 299534,
-      "slug": "avengers-endgame-2019",
-      "year": 2019,
-      "released": "2019-04-24",
-      "traktTitle": "Avengers: Endgame",
-      "details": {
-        "poster": "/uNWEDJzeH8VLHrs2iHkosYp2Y6W.jpg",
-        "genres": [
-          "アドベンチャー",
-          "サイエンスフィクション",
-          "アクション"
-        ],
-        "overview": "破格のメガヒットによって映画史を塗り替え続ける「アベンジャーズ」シリーズが、この春ついに完結。最凶最悪の敵\"サノス\"によって、人類の半分が消し去られ、最強チーム\"アベンジャーズ\"も崩壊してしまった。はたして失われた35億の人々と仲間を取り戻す方法はあるのか？ 大逆転へのわずかな希望を信じて再び集結したアイアンマン、キャプテン・アメリカ、ソーたちに残されたのは、最強の絆だけ──。\"今はここにいない\"仲間のために、最後にして最大の逆襲が始まる！",
-        "overviewLang": "ja",
-        "title": "アベンジャーズ／エンドゲーム",
-        "originalTitle": "Avengers: Endgame",
-        "runtime": 182,
-        "releaseDate": "2019-04-24"
-      },
-      "listedAt": "2026-10-07T13:42:14.000Z",
       "rating": null
     },
     {
