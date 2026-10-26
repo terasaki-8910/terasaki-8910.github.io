@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-10-26T11:49:59.583Z",
+  "lastUpdated": "2026-10-26T17:51:47.077Z",
   "tracks": [
+    {
+      "id": "0XT65K4AnBTrjq9x32aj8v",
+      "name": "プレパレード",
+      "artist": "逢坂大河・櫛枝実乃梨・川嶋亜美(釘宮理恵、堀江由衣、喜多村英梨)",
+      "album": "プレパレード",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306304207870db2dcd3affc47",
+      "playedAt": "2026-10-26T16:32:31Z",
+      "spotifyUrl": "https://open.spotify.com/track/0XT65K4AnBTrjq9x32aj8v",
+      "duration": 204840,
+      "previewUrl": ""
+    },
     {
       "id": "23HUlzt20YuALl5Q2gWsKu",
       "name": "Summer",
@@ -318,17 +329,6 @@
       "playedAt": "2026-10-26T02:54:28.214Z",
       "spotifyUrl": "https://open.spotify.com/track/6vRkYTrWDzzVrZTqBJFR0u",
       "duration": 282626,
-      "previewUrl": ""
-    },
-    {
-      "id": "7EvzUhU6zpdJxAsjNQZ1gN",
-      "name": "メニメニマニマニ",
-      "artist": "高宮なすの(CV:鳴海杏子)",
-      "album": "メニメニマニマニ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738c5d5a9becf242b34babda0a",
-      "playedAt": "2026-10-26T02:47:50.964Z",
-      "spotifyUrl": "https://open.spotify.com/track/7EvzUhU6zpdJxAsjNQZ1gN",
-      "duration": 269173,
       "previewUrl": ""
     }
   ],
