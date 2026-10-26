@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-25T20:43:54.388Z",
+  "lastUpdated": "2026-10-26T04:29:48.907Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -487,7 +487,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/92b36c71d5eed910a58979f776c1d70a93ab117b.jpg",
           "unlockedAt": "2026-09-13T13:09:22.000Z",
-          "percent": 22.9
+          "percent": 23
         },
         {
           "name": "A Keen Sense of Spell",
@@ -538,14 +538,14 @@
           "description": "Cause 1 fatal error or trigger 128 warnings in the editor.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
           "unlockedAt": "2026-09-06T13:52:37.000Z",
-          "percent": 33.3
+          "percent": 33.2
         },
         {
           "name": "Trying something new",
           "description": "Use 10 different wallpapers from the Workshop.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1c2250cab3953159e542b9ff4bd5be9ec75c9f61.jpg",
           "unlockedAt": "2025-07-20T08:13:17.000Z",
-          "percent": 83.8
+          "percent": 83.7
         }
       ]
     }
