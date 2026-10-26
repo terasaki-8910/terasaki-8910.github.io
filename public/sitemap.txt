@@ -6,4 +6,5 @@ https://fuyuiro.pages.dev/chara-picker/
 https://fuyuiro.pages.dev/gaming-archive/
 https://fuyuiro.pages.dev/movies/
 https://fuyuiro.pages.dev/visualization/
+https://fuyuiro.pages.dev/visualization-methods/
 https://fuyuiro.pages.dev/career/

@@ -9,7 +9,7 @@ import { join } from 'node:path'
 const NEW = 'https://fuyuiro.pages.dev'
 const OUT = 'redirect-site'
 // vite.config.js の入口のページと、public/ にある単独のページ
-const PAGES = ['', 'ascii/', 'spotify/', 'gomi-tsukuba/', 'chara-picker/', 'gaming-archive/', 'movies/', 'visualization/', 'dramas/', 'anime/', 'career/', 'callback.html', 'error.html']
+const PAGES = ['', 'ascii/', 'spotify/', 'gomi-tsukuba/', 'chara-picker/', 'gaming-archive/', 'movies/', 'visualization/', 'visualization-methods/', 'dramas/', 'anime/', 'career/', 'callback.html', 'error.html']
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 const page = (path) => {

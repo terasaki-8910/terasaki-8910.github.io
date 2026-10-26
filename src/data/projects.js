@@ -96,4 +96,14 @@ export const projects = [
     pageKey: 'visualization',
     icon: 'atom',
   },
+  {
+    id: 9,
+    title: 'ビジュアライゼーションの授業における可視化手法の実装例',
+    menuTitle: '可視化手法',
+    description: '計算を 1 つずつ動かして確かめ、組み合わせて全体の可視化になるまでをたどる',
+    tags: ['Canvas', 'KaTeX', 'React'],
+    link: '/visualization-methods/',
+    pageKey: 'visualization-methods',
+    icon: 'cubeFocus',
+  },
 ]
