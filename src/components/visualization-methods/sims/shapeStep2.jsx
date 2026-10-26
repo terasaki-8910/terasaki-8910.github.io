@@ -9,7 +9,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
 import { lerpPoint } from '../../../utils/vis/curve'
-import { drawControlPoints, drawPolyline, hitControlPoint, nearestCurveSample, sampleCurve } from './shapeKit'
+import { drawControlPoints, drawPolyline, hitControlPoint, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
 
 const INITIAL = [[0.8, 0.8], [3.3, 2.3]]
 const POINT_R = 7
@@ -22,7 +22,7 @@ export default function ShapeStep2() {
   const dragging = useRef(null)
   const p = lerpPoint(points[0], points[1], t)
   const samples = useMemo(() => sampleCurve((u) => lerpPoint(points[0], points[1], u), 160), [points])
-  const viewOf = (width, height) => makeView({ width, height, xRange: [0, 4], yRange: [0, 3], margin: STEP_MARGIN })
+  const viewOf = (width, height) => makeView({ width, height, ...rangesForAspect([0, 4], [0, 3], width, height), margin: STEP_MARGIN })
 
   const draw = ({ ctx, width, height, colors }) => {
     const view = viewOf(width, height)
@@ -34,12 +34,16 @@ export default function ShapeStep2() {
     markerCircle(ctx, view.sx(p[0]), view.sy(p[1]), POINT_R, {
       fill: laneColor(colors, 0), stroke: colors.ink, lineWidth: selectedT ? 3 : 1.5,
     })
-    drawText(ctx, 'P(t)', view.sx(p[0]), view.sy(p[1]) - 12, { color: colors.ink, align: 'center' })
+    const screenP0 = [view.sx(points[0][0]), view.sy(points[0][1])]
+    const screenP1 = [view.sx(points[1][0]), view.sy(points[1][1])]
+    const screenLength = Math.hypot(screenP1[0] - screenP0[0], screenP1[1] - screenP0[1]) || 1
+    const normal = [-(screenP1[1] - screenP0[1]) / screenLength, (screenP1[0] - screenP0[0]) / screenLength]
+    drawText(ctx, 'P(t)', view.sx(p[0]) + normal[0] * 34, view.sy(p[1]) + normal[1] * 34, { color: colors.ink, align: 'center' })
     const leftMid = lerpPoint(points[0], p, 0.5)
     const rightMid = lerpPoint(p, points[1], 0.5)
-    drawText(ctx, fmt(t, 2), view.sx(leftMid[0]), view.sy(leftMid[1]) - 8, { color: colors.ink, align: 'center' })
-    drawText(ctx, fmt(1 - t, 2), view.sx(rightMid[0]), view.sy(rightMid[1]) - 8, { color: colors.ink, align: 'center' })
-    drawText(ctx, 't : (1 − t)', view.sx(p[0]), view.sy(p[1]) + 18, { color: colors.muted, align: 'center' })
+    drawText(ctx, fmt(t, 2), view.sx(leftMid[0]) + normal[0] * 14, view.sy(leftMid[1]) + normal[1] * 14, { color: colors.ink, align: 'center' })
+    drawText(ctx, fmt(1 - t, 2), view.sx(rightMid[0]) - normal[0] * 14, view.sy(rightMid[1]) - normal[1] * 14, { color: colors.ink, align: 'center' })
+    drawText(ctx, 't : (1 − t)', view.sx(p[0]) - normal[0] * 34, view.sy(p[1]) - normal[1] * 34, { color: colors.muted, align: 'center' })
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })

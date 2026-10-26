@@ -9,7 +9,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
 import { ellipseImplicit, ellipsePoint, hyperbolaImplicit, hyperbolaPoint } from '../../../utils/vis/curve'
-import { drawPolyline, nearestCurveSample, sampleCurve } from './shapeKit'
+import { drawPolyline, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
 
 const POINT_R = 7
 const ELLIPSE_RANGE = [0, 2 * Math.PI]
@@ -30,7 +30,12 @@ export default function ShapeStep1() {
   const samples = useMemo(() => sampleCurve((u) => pointAtT(tRange[0] + u * (tRange[1] - tRange[0])), 300), [a, b, mode])
   const p = pointAtT(t)
   const fQ = implicit(q[0], q[1])
-  const viewOf = (width, height) => makeView({ width, height, xRange: mode === 'ellipse' ? [-3.5, 3.5] : [-0.5, 5.5], yRange: [-3.2, 3.2], margin: STEP_MARGIN })
+  const viewOf = (width, height) => makeView({
+    width,
+    height,
+    ...rangesForAspect(mode === 'ellipse' ? [-3.5, 3.5] : [-0.5, 5.5], [-3.2, 3.2], width, height),
+    margin: STEP_MARGIN,
+  })
 
   const draw = ({ ctx, width, height, colors }) => {
     const view = viewOf(width, height)

@@ -5,6 +5,10 @@ const ShapeStep1 = lazy(() => import('../sims/shapeStep1.jsx'))
 const ShapeStep2 = lazy(() => import('../sims/shapeStep2.jsx'))
 const ShapeStep3 = lazy(() => import('../sims/shapeStep3.jsx'))
 const ShapeStep4 = lazy(() => import('../sims/shapeStep4.jsx'))
+const ShapeStep5 = lazy(() => import('../sims/shapeStep5.jsx'))
+const ShapeStep6 = lazy(() => import('../sims/shapeStep6.jsx'))
+const ShapeStep7 = lazy(() => import('../sims/shapeStep7.jsx'))
+const ShapeStep8 = lazy(() => import('../sims/shapeStep8.jsx'))
 
 export default {
   id: 'shape',
@@ -116,13 +120,113 @@ export default {
       snippets: ['curve-binomial', 'curve-bernstein', 'curve-bezierPoint'],
       Sim: ShapeStep4,
     },
+    {
+      id: 'b-spline',
+      title: '近くの点だけが効く曲線（B スプライン）',
+      text: '各制御点の重みを Cox–de Boor の式で隣の区間から順に作り、重み付きで足すと B スプラインになります。3 次では 1 点の重みが 4 区間だけで 0 でなく、区分どうしは 2 階微分まで連続して滑らかにつながります。制御点をつかみ、太く示した曲線の一部だけが変わることと、比較用のベジエ曲線は全体が動くことを見てください。曲線は端の制御点を通りません。',
+      formulas: [
+        {
+          caption: '0 次の基底',
+          tex: 'N_i^0(t)=\\begin{cases}1 & t_i \\le t < t_{i+1}\\\\0 & \\text{otherwise}\\end{cases}',
+          symbols: [{ tex: 't_i', meaning: '節点', unit: '' }],
+        },
+        {
+          caption: 'Cox–de Boor の再帰式',
+          tex: 'N_i^n(t)=\\frac{t-t_i}{t_{i+n}-t_i}N_i^{n-1}(t)+\\frac{t_{i+n+1}-t}{t_{i+n+1}-t_{i+1}}N_{i+1}^{n-1}(t)',
+          symbols: [{ tex: 'n', meaning: '基底の次数', unit: '' }],
+        },
+        {
+          caption: '制御点の重み付き和',
+          tex: 'P(t)=\\sum_i N_i^n(t)P_i,\\qquad N_i^n(t)=0\\quad (t\\notin[t_i,t_{i+n+1}))',
+          symbols: [{ tex: 'N_i^n', meaning: 'i 番目の制御点の局所的な重み', unit: '' }],
+        },
+      ],
+      snippets: ['curve-uniformKnots', 'curve-bsplineBasis', 'curve-bsplinePoint'],
+      Sim: ShapeStep5,
+    },
+    {
+      id: 'subdivision',
+      title: 'かどを切り落とす（細分割）',
+      text: '各辺の 1/4 と 3/4 の位置に新しい点を置いて古い角を捨てると、折れ線の角が一段ずつ丸くなります。繰り返した極限は一様 2 次 B スプラインになり、曲面でも同じ考えを使う Catmull–Clark 細分割曲面は双 3 次 B スプライン曲面になります。制御点をつかみ、再生または回数スライダーで点の数が増え、極限までの最大距離が小さくなる様子を見てください。',
+      formulas: [
+        {
+          caption: '各辺に置く 2 点',
+          tex: 'Q_i=\\frac{3}{4}P_i+\\frac{1}{4}P_{i+1},\\qquad R_i=\\frac{1}{4}P_i+\\frac{3}{4}P_{i+1}',
+          symbols: [
+            { tex: 'Q_i', meaning: '辺の 1/4 の点', unit: '' },
+            { tex: 'R_i', meaning: '辺の 3/4 の点', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['curve-chaikinStep', 'curve-chaikin'],
+      Sim: ShapeStep6,
+    },
+    {
+      id: 'curvature',
+      title: '曲がり方を測る（接線・法線・曲率）',
+      text: '曲線の進む向きを長さ 1 にしたものが接線 T、その直角で曲がる側が法線 N で、接触円の半径 R の逆数が曲率 κ です。直線では κ = 0 となり、急な曲がりほど値が大きくなります。制御点や曲線上の点をつかみ、矢印と接触円、下の曲率グラフが同時に変わる様子を見てください。',
+      formulas: [
+        {
+          caption: '弧長で測る接線・法線・曲率',
+          tex: 'T=\\frac{dC}{ds},\\qquad \\kappa N=\\frac{d^2C}{ds^2},\\qquad R=\\frac{1}{\\kappa}',
+          symbols: [
+            { tex: 's', meaning: '曲線に沿った長さ', unit: '' },
+            { tex: 'R', meaning: '接触円の半径', unit: '' },
+          ],
+        },
+        {
+          caption: '一般の媒介変数による曲率',
+          tex: '\\kappa=\\frac{x\'y\'\'-y\'x\'\'}{(x\'^2+y\'^2)^{3/2}}',
+          symbols: [{ tex: "x',y'", meaning: '媒介変数による 1 階微分', unit: '' }],
+        },
+        {
+          caption: '空間曲線の Frenet–Serret 公式',
+          tex: '\\frac{dT}{ds}=\\kappa N,\\quad \\frac{dN}{ds}=-\\kappa T-\\tau B,\\quad \\frac{dB}{ds}=\\tau N,\\quad B=T\\times N',
+          symbols: [
+            { tex: 'B', meaning: '従法線', unit: '' },
+            { tex: '\\tau', meaning: 'ねじれ率', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['curve-bezierDerivative', 'curve-curvature2D', 'curve-frame2D'],
+      Sim: ShapeStep7,
+    },
+    {
+      id: 'surface',
+      title: '曲線を 2 方向に掛ける（曲面と法線）',
+      text: 'u を固定すると v の曲線、v を固定すると u の曲線になり、2 方向の重みを掛けて 16 点を足すと曲面になります。2 本の接線の外積は曲面に垂直な法線で、次のタブ「反射と影」で使う明るさもこの向きから計算できます。制御点を上下にドラッグして高さを変え、空いた場所で視点を回し、u・v スライダーで 2 本の曲線と 3 本の矢印を動かしてください。',
+      formulas: [
+        {
+          caption: '双 3 次ベジエ曲面',
+          tex: 'S(u,v)=\\sum_{i=0}^{3}\\sum_{j=0}^{3}B_i^3(u)B_j^3(v)P_{ij},\\qquad n=S_u\\times S_v',
+          symbols: [
+            { tex: 'u,v', meaning: '曲面上の 2 方向の媒介変数', unit: '' },
+            { tex: 'n', meaning: '接線 2 本の外積で得る法線', unit: '' },
+          ],
+        },
+        {
+          caption: '曲面の曲率',
+          tex: 'K=\\kappa_1\\kappa_2,\\qquad H=\\frac{\\kappa_1+\\kappa_2}{2}',
+          symbols: [
+            { tex: '\\kappa_1,\\kappa_2', meaning: '主曲率', unit: '' },
+            { tex: 'K', meaning: 'ガウス曲率', unit: '' },
+            { tex: 'H', meaning: '平均曲率', unit: '' },
+          ],
+        },
+      ],
+      snippets: ['curve-bezierPatch', 'curve-cross'],
+      Sim: ShapeStep8,
+    },
   ],
   combination: {
-    text: '前半では、点を動かす表現からベジエ曲線の重みまでを順に組み立てます。',
+    text: '全体の 3 つの曲線は、どれも制御点に重みをかけて足したもの。重みの決め方が違う。',
     flow: [
-      { steps: [1, 2], text: '媒介変数で点を置き、まず 2 点間の線形補間として捉えます。' },
-      { steps: [2, 3], text: '同じ線形補間を段ごとに繰り返し、曲線を作ります。' },
-      { steps: [3, 4], text: '繰り返し計算を展開し、制御点の重みの足し合わせとして読み替えます。' },
+      { steps: [2, 3], text: '線形補間を重ねるとベジエ曲線' },
+      { steps: [4], text: '重みの和で書くと、凸包の中に収まり端を通ると分かる' },
+      { steps: [5], text: '重みを近くの区間だけにすると B スプライン' },
+      { steps: [6], text: 'かどを切り続けると 2 次の B スプライン' },
+      { steps: [7], text: 'できた曲線の曲がり方を接触円で測る' },
+      { steps: [1, 8], text: '曲線は媒介変数の式。2 方向に掛けると曲面になり、外積で法線が求まる' },
     ],
   },
   sources: [

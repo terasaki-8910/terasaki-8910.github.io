@@ -3,7 +3,6 @@ import SimShell, { ViewStack } from '../../visualization/SimShell'
 import SimCanvas from '../../visualization/SimCanvas'
 import SimLegend from '../../visualization/SimLegend'
 import ParamSlider from '../../visualization/ParamSlider'
-import ControlGroup from '../../visualization/ControlGroup'
 import { SimToolbar, ResetButton, ToggleButton, ModeSwitch } from '../../visualization/SimButtons'
 import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
@@ -19,7 +18,7 @@ import {
   frame2D,
   uniformKnots,
 } from '../../../utils/vis/curve'
-import { drawControlPoints, drawHull, drawPolyline, hitControlPoint, nearestCurveSample, sampleCurve } from './shapeKit'
+import { drawControlPoints, drawHull, drawPolyline, hitControlPoint, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
 
 const INITIAL_POINTS = [[0.8, 1.2], [1.8, 4.6], [3.2, 4.9], [4.2, 2], [5.4, 1.4], [6.6, 4.4], [7.4, 4.8]]
 const MARKER_R = 7
@@ -35,7 +34,7 @@ export default function ShapeSim() {
   const [u, setU] = useState(0.4)
   const [levels, setLevels] = useState(2)
   const [showPolygon, setShowPolygon] = useState(true)
-  const [showHull, setShowHull] = useState(true)
+  const [showHull, setShowHull] = useState(false)
   const [showCircle, setShowCircle] = useState(true)
   const [selected, setSelected] = useState(0)
   const [curveSelected, setCurveSelected] = useState(false)
@@ -66,12 +65,17 @@ export default function ShapeSim() {
   const radius = Math.abs(kappa) < 1e-8 ? Infinity : 1 / Math.abs(kappa)
   const frame = frame2D(d1)
 
-  const viewOf = (width, height) => makeView({ width, height, xRange: [0, 8], yRange: [0, 6], margin: STEP_MARGIN })
+  const viewOf = (width, height) => makeView({ width, height, ...rangesForAspect([0, 8], [0, 6], width, height), margin: STEP_MARGIN })
   const draw = ({ ctx, width, height, colors }) => {
     const view = viewOf(width, height)
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
     drawAxes(ctx, view, { colors, xLabel: 'x', yLabel: 'y' })
+
+    ctx.save()
+    ctx.beginPath()
+    ctx.rect(view.frame.left, view.frame.top, view.frame.width, view.frame.height)
+    ctx.clip()
 
     if (mode === 'bezier' && showHull) drawHull(ctx, view, points, colors)
     if (showPolygon) drawPolyline(ctx, view, points, { color: colors.muted, width: 1.25, dash: [5, 4] })
@@ -108,6 +112,7 @@ export default function ShapeSim() {
       fill: laneColor(colors, 0), stroke: colors.ink, lineWidth: curveSelected ? 3.5 : 1.5,
     })
     drawControlPoints(ctx, view, points, colors, { selected: curveSelected ? -1 : selected })
+    ctx.restore()
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -179,6 +184,9 @@ export default function ShapeSim() {
     setLevels(2)
     setSelected(0)
     setCurveSelected(false)
+    setShowPolygon(true)
+    setShowHull(false)
+    setShowCircle(true)
   }
   const modeLabel = mode === 'bezier' ? '6 次・1 本' : mode === 'bspline' ? '3 次・4 区分' : `${levels} 回（${chaikin(points, levels).length} 点）`
   const legend = [
@@ -206,11 +214,11 @@ export default function ShapeSim() {
             bspline: null,
             subdivision: <ParamSlider symbol="k" label="細分割の回数" value={levels} min={0} max={6} step={1} onChange={setLevels} format={(value) => value.toFixed(0)} />,
           }} reserve={['subdivision']} />
-          <ControlGroup label="表示">
+          <SimToolbar label="表示">
             <ToggleButton pressed={showPolygon} onChange={setShowPolygon}>制御点の折れ線</ToggleButton>
             <ToggleButton pressed={showHull} onChange={setShowHull} disabled={mode !== 'bezier'}>凸包</ToggleButton>
             <ToggleButton pressed={showCircle} onChange={setShowCircle}>曲率の円</ToggleButton>
-          </ControlGroup>
+          </SimToolbar>
         </>
       }
     />

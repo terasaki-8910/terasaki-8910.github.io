@@ -9,7 +9,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
 import { bernstein, bezierPoint } from '../../../utils/vis/curve'
-import { drawControlPoints, drawHull, drawPolyline, hitControlPoint, sampleCurve } from './shapeKit'
+import { drawControlPoints, drawHull, drawPolyline, hitControlPoint, rangesForAspect, sampleCurve } from './shapeKit'
 
 const INITIAL = [[0.4, 0.5], [1.1, 2.5], [2.7, 2.4], [3.6, 0.6]]
 
@@ -31,7 +31,7 @@ export default function ShapeStep4() {
   const curve = useMemo(() => sampleCurve((u) => bezierPoint(points, u), 240), [points])
   const viewsOf = (width, height) => {
     const split = Math.min(width * 0.68, Math.max(180, width * 0.57))
-    const geometry = makeView({ width: split, height, xRange: [0, 4], yRange: [0, 3], margin: STEP_MARGIN })
+    const geometry = makeView({ width: split, height, ...rangesForAspect([0, 4], [0, 3], split, height), margin: STEP_MARGIN })
     const graphBase = makeView({ width: width - split, height, xRange: [0, 1], yRange: [0, 1], equal: false, margin: STEP_MARGIN })
     return { geometry, graph: offsetView(graphBase, split), split }
   }
@@ -65,18 +65,30 @@ export default function ShapeStep4() {
     ctx.stroke()
     drawText(ctx, 't', graph.frame.right, graph.frame.bottom + 17, { color: colors.ink, align: 'right' })
     drawText(ctx, 'B', graph.frame.left - 8, graph.frame.top, { color: colors.ink, align: 'right' })
+    ;[0, 0.5, 1].forEach((tick) => {
+      ctx.beginPath()
+      ctx.moveTo(graph.sx(tick), graph.frame.bottom)
+      ctx.lineTo(graph.sx(tick), graph.frame.bottom + 4)
+      ctx.moveTo(graph.frame.left - 4, graph.sy(tick))
+      ctx.lineTo(graph.frame.left, graph.sy(tick))
+      ctx.stroke()
+      drawText(ctx, String(tick), graph.sx(tick), graph.frame.bottom + 14, { color: colors.muted, align: 'center' })
+      drawText(ctx, String(tick), graph.frame.left - 7, graph.sy(tick), { color: colors.muted, align: 'right', baseline: 'middle' })
+    })
 
     for (let i = 0; i < 4; i++) {
       const basis = sampleCurve((u) => [u, bernstein(3, i, u)], 120)
       drawPolyline(ctx, graph, basis.map((sample) => sample.point), { color: laneColor(colors, i), width: 2 })
       markerCircle(ctx, graph.sx(t), graph.sy(weights[i]), 3.5, { fill: laneColor(colors, i), stroke: colors.surface, lineWidth: 1 })
     }
-    ctx.strokeStyle = colors.accent
+    ctx.strokeStyle = colors.ink
     ctx.lineWidth = selectedT ? 3 : 2
+    ctx.setLineDash([5, 4])
     ctx.beginPath()
     ctx.moveTo(graph.sx(t), graph.frame.top)
     ctx.lineTo(graph.sx(t), graph.frame.bottom)
     ctx.stroke()
+    ctx.setLineDash([])
     drawText(ctx, `Σ = ${fmt(weights.reduce((sum, value) => sum + value, 0), 2)}`, graph.frame.right, graph.frame.top + 12, { color: colors.ink, align: 'right' })
   }
 

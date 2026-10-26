@@ -1,6 +1,22 @@
-import { GRAB_SLOP_PX, markerCircle } from '../../visualization/sims/rigidKit'
+import { STEP_MARGIN, GRAB_SLOP_PX, markerCircle } from '../../visualization/sims/rigidKit'
 
 export const CONTROL_R = 7
+
+export function rangesForAspect(xRange, yRange, width, height, margin = STEP_MARGIN) {
+  const xCenter = (xRange[0] + xRange[1]) / 2
+  const yCenter = (yRange[0] + yRange[1]) / 2
+  let xSpan = xRange[1] - xRange[0]
+  let ySpan = yRange[1] - yRange[0]
+  const frameWidth = width - (margin.left ?? 0) - (margin.right ?? 0)
+  const frameHeight = height - (margin.top ?? 0) - (margin.bottom ?? 0)
+  const aspect = frameWidth / Math.max(frameHeight, 1)
+  if (xSpan / ySpan < aspect) xSpan = ySpan * aspect
+  else ySpan = xSpan / aspect
+  return {
+    xRange: [xCenter - xSpan / 2, xCenter + xSpan / 2],
+    yRange: [yCenter - ySpan / 2, yCenter + ySpan / 2],
+  }
+}
 
 export function drawPolyline(ctx, view, points, { color, width = 2, dash = [] } = {}) {
   if (points.length < 2) return

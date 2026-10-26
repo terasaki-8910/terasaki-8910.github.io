@@ -10,7 +10,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { deCasteljau } from '../../../utils/vis/curve'
-import { drawControlPoints, drawPolyline, hitControlPoint, nearestCurveSample, sampleCurve } from './shapeKit'
+import { drawControlPoints, drawPolyline, hitControlPoint, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
 
 const QUADRATIC = [[0.6, 0.6], [2, 2.7], [3.5, 0.8]]
 const CUBIC = [[0.5, 0.6], [1.3, 2.7], [2.7, 2.5], [3.6, 0.7]]
@@ -27,7 +27,7 @@ export default function ShapeStep3() {
   const dragging = useRef(null)
   const construction = deCasteljau(points, t)
   const samples = useMemo(() => sampleCurve((u) => deCasteljau(points, u).point, 240), [points])
-  const viewOf = (width, height) => makeView({ width, height, xRange: [0, 4], yRange: [0, 3.2], margin: STEP_MARGIN })
+  const viewOf = (width, height) => makeView({ width, height, ...rangesForAspect([0, 4], [0, 3.2], width, height), margin: STEP_MARGIN })
 
   const draw = ({ ctx, width, height, colors }) => {
     const view = viewOf(width, height)
