@@ -1,11 +1,11 @@
 {
   "files": {
+    "public/chara-picker/likelihoods.json": "45523055445ce0fd96c60f861a323bbf387cf8de36bbfc5b0863326b4e084b29",
+    "public/chara-picker/questions.runtime.json": "c69990314b1ac3d2385c32646fdca74f166221f0a05eb858cc8e2e5e30396c5b",
+    "src/chara/engine/bayes.ts": "e7fe692915d1e1aed62961fa1c8e7875e259c03ab05e2e407a98a4370d424623",
     "public/chara-picker/characters.json": "5988777fd60e2f7db7596a800cf99c49d5e904f17d2dd7dc5a57d1d1537b8d51",
     "public/chara-picker/supply.json": "2e1196cf0ae5ccc8ca10206d03a6d1af37a0191483c8f0826950f37ed84582d7",
-    "public/chara-picker/likelihoods.json": "ec254c4b275dc9df2be6cb3181e045ba92a53b93cc0873da6ae752a2ff9681f0",
-    "public/chara-picker/questions.runtime.json": "f9dfe1956a8c4a891063a06a4d4aef22bf64216b7050944c2a94239ec97644b3",
     "public/chara-picker/tag-map.json": "3ef7f83ca7663929714f747ac68e35cdabe49d2e4fcd91e03fb26020b21f51c6",
-    "src/chara/engine/bayes.ts": "fd6df7f40d0f530121fb4b885a84007d6c5be98513b589cec65419d792d0fdaa",
     "src/chara/engine/recommend.ts": "43318be751c830c40b4d46e40873ca59da8bb387bd310b8ed6a5fd02ca234f7e",
     "src/chara/engine/questions.ts": "68500d8e2df80381c65f6df5e0f4c9ca7c2e8d06d8de8d1bcfa69cac65c69e5a",
     "src/chara/engine/supply.ts": "451fb9d1a2dfa365ccb29eab2e1f5d5760ae0e402cef7b381a51b9697d38b927",
@@ -14,8 +14,8 @@
     "src/chara/hooks/useBayesInterview.ts": "b376b8c90891fc3577d874b773c82b14ce5779366b9b074ce3c666498212abd8",
     "src/chara/hooks/useSessionLog.ts": "5d59ef1fa9ae83638af3088fbe04e89caa997d568de19a94b3269ac1e5e10127"
   },
-  "syncedAt": "2026-10-25T12:46:32.294Z",
-  "upstreamCommit": "e7add966d480f81fd16dfa66f0e9b6df1b00225b",
-  "upstreamSubject": "feat/restore-age-excluded を取り込む: 作中の年齢を理由に外したキャラを戻す(1845 → 2002体)",
+  "syncedAt": "2026-10-26T09:40:42.295Z",
+  "upstreamCommit": "b0e84c56783d6ba074ced08c445bec2fbe714c20",
+  "upstreamSubject": "docs: R11 の push とサイトへの反映の回答を決定記録に書く",
   "upstreamDirty": false
 }
