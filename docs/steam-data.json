@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-27T04:48:52.396Z",
+  "lastUpdated": "2026-10-27T11:59:53.412Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -400,7 +400,7 @@
           "description": "Select a Standing Stone blessing",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/3a7e9d9c4f1142fdddbcc6988f23415d72d41ce0.jpg",
           "unlockedAt": "2025-10-10T12:22:18.000Z",
-          "percent": 62.1
+          "percent": 62
         },
         {
           "name": "Wanted",
@@ -465,7 +465,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/31f82fc3fe2150c4edb78788d0817c59692866ab.jpg",
           "unlockedAt": "2024-01-28T06:05:33.000Z",
-          "percent": 73
+          "percent": 72.9
         },
         {
           "name": "Skilled Pal Tamer",
@@ -501,7 +501,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/5c9e26c4941ae4fc98c6eaf3c023e3a18dc2df51.jpg",
           "unlockedAt": "2026-09-12T04:30:37.000Z",
-          "percent": 76.7
+          "percent": 76.8
         }
       ]
     },
@@ -538,7 +538,7 @@
           "description": "Cause 1 fatal error or trigger 128 warnings in the editor.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
           "unlockedAt": "2026-09-06T13:52:37.000Z",
-          "percent": 33.2
+          "percent": 33.3
         },
         {
           "name": "Trying something new",
