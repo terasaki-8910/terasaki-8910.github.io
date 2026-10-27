@@ -10,7 +10,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { deCasteljau } from '../../../utils/vis/curve'
-import { drawControlPoints, drawPolyline, hitControlPoint, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
+import { cycleSelection, drawControlPoints, drawPolyline, focusOnGrab, hitControlPoint, nearestCurveSample, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
 
 const QUADRATIC = [[0.6, 0.6], [2, 2.7], [3.5, 0.8]]
 const CUBIC = [[0.5, 0.6], [1.3, 2.7], [2.7, 2.5], [3.6, 0.7]]
@@ -66,22 +66,24 @@ export default function ShapeStep3() {
       const info = pointerInfo(position)
       return info.control >= 0 || info.overFinal
     },
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const info = pointerInfo(position)
       if (info.control >= 0) {
+        loop.pause() // 再生中でも、つかんだら止める
         dragging.current = { type: 'control', index: info.control }
         setSelected(info.control)
         setSelectedT(false)
         return
       }
       if (info.overFinal) {
+        loop.pause()
         dragging.current = { type: 't' }
         setSelectedT(true)
         setT(info.curve.u)
         return
       }
       return false
-    },
+    }),
     onMove: (position) => {
       const { view, curve } = pointerInfo(position)
       if (dragging.current?.type === 't') setT(curve.u)
@@ -96,16 +98,19 @@ export default function ShapeStep3() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const move = pageStep(event)
+    if (move) {
       event.preventDefault()
-      const direction = event.key === 'PageUp' ? 1 : -1
-      setSelected((selected + direction + points.length) % points.length)
-      setSelectedT(false)
+      // 制御点 → 最後に残る点 P(t) の順に巡る
+      const next = cycleSelection(selected, selectedT, move, points.length)
+      setSelected(next.selected)
+      setSelectedT(next.onCurve)
       return
     }
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
+    loop.pause()
     if (selectedT) setT((value) => clamp(value + (step.dx + step.dy) * 0.01, 0, 1))
     else setPoints((current) => current.map((point, i) => i === selected
       ? [clamp(point[0] + step.dx * 0.1, 0, 4), clamp(point[1] + step.dy * 0.1, 0, 3.2)]
@@ -128,7 +133,7 @@ export default function ShapeStep3() {
     <SimShell
       label="ド・カステリョのアルゴリズム"
       switcher={<ModeSwitch label="次数" value={degree} options={[{ value: 2, label: '2 次' }, { value: 3, label: '3 次' }]} onChange={changeDegree} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="同じ t の線形補間を繰り返して作るベジエ曲線。制御点または曲線上の点をつかんで動かせる。矢印キーで選択中の点を動かし、PageUp と PageDown で制御点を選べる" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="同じ t の線形補間を繰り返して作るベジエ曲線。制御点と、最後に残る点 P(t) をドラッグで動かせる。ドラッグや矢印キーを使うと、再生は止まる。矢印キー(Shift で 5 倍)で選択中の点を動かし、PageUp と PageDown で制御点と P(t) を順に選べる" />}
       legend={<SimLegend items={[
         { key: 'curve', label: 'ベジエ曲線', swatch: 'var(--color-ink)' },
         { key: 'trace', label: '0 から t まで', swatch: 'var(--lane-0)' },
@@ -138,7 +143,7 @@ export default function ShapeStep3() {
       controls={
         <>
           <SimToolbar><PlayPauseButton running={loop.running} onToggle={loop.toggle} /><ResetButton onClick={reset} /></SimToolbar>
-          <ParamSlider symbol="t" label="共通の内分比" value={t} min={0} max={1} step={0.01} onChange={(value) => { setT(value); setSelectedT(true) }} format={(value) => value.toFixed(2)} />
+          <ParamSlider symbol="t" label="共通の内分比" value={t} min={0} max={1} step={0.01} onChange={(value) => { loop.pause(); setT(value); setSelectedT(true) }} format={(value) => value.toFixed(2)} />
         </>
       }
     />

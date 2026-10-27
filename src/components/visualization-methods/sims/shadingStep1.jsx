@@ -6,14 +6,15 @@ import ParamSlider from '../../visualization/ParamSlider'
 import { SimToolbar, ResetButton, ToggleButton } from '../../visualization/SimButtons'
 import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
-import { arrowStep, clamp, drawText, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
+import { arrowStep, clamp, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { uvSphere } from '../../../utils/vis/mesh'
 import { faceNormal, vertexNormals } from '../../../utils/vis/shading'
 import { cameraViewProjection, projectVertex, renderScene } from '../../../utils/vis/render'
-import { tokenRgb } from './shadingKit'
+import { drawHaloText, isSelectKey, tokenRgb } from './shadingKit'
 
 const CAMERA = { eye: [0, 0.35, 4.2], target: [0, 0, 0], up: [0, 1, 0], fov: 38 * Math.PI / 180 }
 const INITIAL = { segments: 10, yaw: -20 * Math.PI / 180, pitch: 12 * Math.PI / 180 }
+const FACE_JUMP = 5 // Shift を押した PageUp・PageDown で進む面の数
 
 const rotate = (point, yaw, pitch) => {
   const cy = Math.cos(yaw)
@@ -25,22 +26,51 @@ const rotate = (point, yaw, pitch) => {
   return [x, cp * point[1] - sp * z, sp * point[1] + cp * z]
 }
 
-const drawScreenArrow = (ctx, from, to, color, width = 1.5) => {
+// 画面に投影した三角形の向き(面積の符号)。負なら手前を向く表向き
+const screenArea = (p) => (p[1][0] - p[0][0]) * (p[2][1] - p[0][1]) - (p[1][1] - p[0][1]) * (p[2][0] - p[0][0])
+
+// 矢印。halo の色を渡すと、その色の太い縁を下に敷く(球の明るい所・暗い所のどちらの上でも矢印が読める)
+const drawScreenArrow = (ctx, from, to, color, width = 1.5, halo = null) => {
   if (!from || !to) return
   const angle = Math.atan2(to[1] - from[1], to[0] - from[0])
+  const head = [
+    [to[0], to[1]],
+    [to[0] - Math.cos(angle - 0.45) * 7, to[1] - Math.sin(angle - 0.45) * 7],
+    [to[0] - Math.cos(angle + 0.45) * 7, to[1] - Math.sin(angle + 0.45) * 7],
+  ]
+  const shaft = () => {
+    ctx.beginPath()
+    ctx.moveTo(from[0], from[1])
+    ctx.lineTo(to[0], to[1])
+  }
+  const tip = () => {
+    ctx.beginPath()
+    ctx.moveTo(head[0][0], head[0][1])
+    ctx.lineTo(head[1][0], head[1][1])
+    ctx.lineTo(head[2][0], head[2][1])
+    ctx.closePath()
+  }
+  ctx.save()
+  ctx.lineJoin = 'round'
+  ctx.lineCap = 'round'
+  if (halo) {
+    ctx.strokeStyle = halo
+    ctx.fillStyle = halo
+    ctx.lineWidth = width + 3
+    shaft()
+    ctx.stroke()
+    tip()
+    ctx.stroke()
+    ctx.fill()
+  }
   ctx.strokeStyle = color
   ctx.fillStyle = color
   ctx.lineWidth = width
-  ctx.beginPath()
-  ctx.moveTo(from[0], from[1])
-  ctx.lineTo(to[0], to[1])
+  shaft()
   ctx.stroke()
-  ctx.beginPath()
-  ctx.moveTo(to[0], to[1])
-  ctx.lineTo(to[0] - Math.cos(angle - 0.45) * 7, to[1] - Math.sin(angle - 0.45) * 7)
-  ctx.lineTo(to[0] - Math.cos(angle + 0.45) * 7, to[1] - Math.sin(angle + 0.45) * 7)
-  ctx.closePath()
+  tip()
   ctx.fill()
+  ctx.restore()
 }
 
 export default function ShadingStep1() {
@@ -84,20 +114,21 @@ export default function ShadingStep1() {
     bufferCtx.putImageData(new ImageData(pixels, renderWidth, renderHeight), 0, 0)
     ctx.drawImage(offscreen.current, 0, 0, width, height)
 
+    ctx.save()
     const VP = cameraViewProjection(CAMERA, width / height)
     const project = (point) => projectVertex(VP, point, width, height)
+    // 法線の矢印は球の上に重なるので、surface 色の縁を敷く
     const drawNormal = (center, normal, color, length = 0.18) => drawScreenArrow(ctx, project(center), project([
       center[0] + normal[0] * length,
       center[1] + normal[1] * length,
       center[2] + normal[2] * length,
-    ]), color, 1)
+    ]), color, 1, colors.surface)
     if (showFaces) mesh.faces.forEach((face) => {
       const A = mesh.positions[face[0]]
       const B = mesh.positions[face[1]]
       const C = mesh.positions[face[2]]
       const projected = [project(A), project(B), project(C)]
-      const area = (projected[1][0] - projected[0][0]) * (projected[2][1] - projected[0][1]) - (projected[1][1] - projected[0][1]) * (projected[2][0] - projected[0][0])
-      if (area >= 0) return
+      if (screenArea(projected) >= 0) return
       drawNormal([(A[0] + B[0] + C[0]) / 3, (A[1] + B[1] + C[1]) / 3, (A[2] + B[2] + C[2]) / 3], faceNormal(A, B, C), colors.ink)
     })
     if (showVertices) mesh.positions.forEach((point, index) => {
@@ -124,21 +155,35 @@ export default function ShadingStep1() {
     ctx.closePath()
     ctx.fill()
     ctx.stroke()
-    drawScreenArrow(ctx, a, b, laneColor(colors, 0), 2)
-    drawScreenArrow(ctx, a, c, laneColor(colors, 2), 2)
+    drawScreenArrow(ctx, a, b, laneColor(colors, 0), 2, colors.surface)
+    drawScreenArrow(ctx, a, c, laneColor(colors, 2), 2, colors.surface)
     ;[[a, 'A'], [b, 'B'], [c, 'C']].forEach(([point, label]) => {
       markerCircle(ctx, point[0], point[1], 4, { fill: colors.accent, stroke: colors.ink, lineWidth: 1 })
-      drawText(ctx, label, point[0] + 7, point[1] - 7, { color: colors.ink })
+      drawHaloText(ctx, label, point[0] + 7, point[1] - 7, colors)
     })
     const center = [(A[0] + B[0] + C[0]) / 3, (A[1] + B[1] + C[1]) / 3, (A[2] + B[2] + C[2]) / 3]
     const nEnd = [center[0] + selectedNormal[0] * 0.55, center[1] + selectedNormal[1] * 0.55, center[2] + selectedNormal[2] * 0.55]
-    drawScreenArrow(ctx, project(center), project(nEnd), colors.ink, 2.5)
+    drawScreenArrow(ctx, project(center), project(nEnd), colors.ink, 2.5, colors.surface)
     const label = project(nEnd)
-    drawText(ctx, 'n', label[0] + 7, label[1], { color: colors.ink })
+    drawHaloText(ctx, 'n', label[0] + 7, label[1], colors)
+    ctx.restore()
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw, maxDpr: 1 })
   useEffect(() => { redraw() })
+
+  // いまの大きさで、手前を向いている(見えている)面の番号の並び
+  const frontFaces = () => {
+    const { width, height } = sizeRef.current
+    const VP = cameraViewProjection(CAMERA, width / Math.max(height, 1))
+    const list = []
+    mesh.faces.forEach((face, index) => {
+      const projected = face.map((vertex) => projectVertex(VP, mesh.positions[vertex], width, height))
+      if (projected.some((value) => !value)) return
+      if (screenArea(projected) < 0) list.push(index)
+    })
+    return list
+  }
   const pickFace = (point) => {
     const { width, height } = sizeRef.current
     const VP = cameraViewProjection(CAMERA, width / Math.max(height, 1))
@@ -147,8 +192,7 @@ export default function ShadingStep1() {
     mesh.faces.forEach((face, index) => {
       const projected = face.map((vertex) => projectVertex(VP, mesh.positions[vertex], width, height))
       if (projected.some((value) => !value)) return
-      const area = (projected[1][0] - projected[0][0]) * (projected[2][1] - projected[0][1]) - (projected[1][1] - projected[0][1]) * (projected[2][0] - projected[0][0])
-      if (area >= 0) return
+      if (screenArea(projected) >= 0) return
       const x = (projected[0][0] + projected[1][0] + projected[2][0]) / 3
       const y = (projected[0][1] + projected[1][1] + projected[2][1]) / 3
       const d = Math.hypot(point.x - x, point.y - y)
@@ -159,6 +203,21 @@ export default function ShadingStep1() {
     })
     return distance < 34 ? best : -1
   }
+  // PageUp・PageDown: 見えている面を番号順に count 枚ずつ前(次)へ。端では反対側の端へ回る。選んでいる面が後ろ向きでも使える
+  const stepFace = (direction, count) => {
+    const front = frontFaces()
+    if (front.length === 0) return
+    let position
+    if (direction > 0) {
+      position = -1
+      front.forEach((index, i) => { if (index <= safeFace) position = i })
+    } else {
+      position = front.length
+      for (let i = front.length - 1; i >= 0; i--) if (front[i] >= safeFace) position = i
+    }
+    const next = (((position + direction * count) % front.length) + front.length) % front.length
+    setSelectedFace(front[next])
+  }
   usePointerDrag(canvasRef, {
     canGrab: (point) => pickFace(point) >= 0,
     onDown: (point) => {
@@ -166,6 +225,7 @@ export default function ShadingStep1() {
       if (face < 0) return false
       setSelectedFace(face)
       dragging.current = true
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも操作できるように
       redraw()
     },
     onMove: ({ dx, dy }) => {
@@ -178,6 +238,11 @@ export default function ShadingStep1() {
     },
   })
   const onKeyDown = (event) => {
+    if (isSelectKey(event)) {
+      event.preventDefault()
+      stepFace(event.key === 'PageDown' ? 1 : -1, event.shiftKey ? FACE_JUMP : 1)
+      return
+    }
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
@@ -196,7 +261,7 @@ export default function ShadingStep1() {
   return (
     <SimShell
       label="面の向きと法線"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="三角形でできた球と面法線・頂点法線を描いています。球の三角形をクリックして選び、そのままドラッグするか矢印キーで回転できます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="三角形でできた球に、面法線と頂点法線の矢印と、選んだ三角形(頂点 A・B・C と法線 n)を重ねて描いています。球の三角形を押して選び、そのままドラッグすると球が回ります。キーでは、PageUp・PageDown で選ぶ三角形を番号順に前後へ変え(手前を向いた面だけ。Shift を押すと 5 枚ずつ)、矢印キーで球を 5 度ずつ回します(Shift を押すと 5 倍)。" />}
       legend={<SimLegend items={[
         { key: 'face', label: '選択面', value: `#${safeFace}`, minChars: 6 },
         { key: 'normal', symbol: 'n', label: '面法線', value: `(${selectedNormal.map((v) => fmt(v, 3)).join(', ')})`, minChars: 23 },

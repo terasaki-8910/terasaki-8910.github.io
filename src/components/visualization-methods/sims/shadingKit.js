@@ -1,6 +1,7 @@
 import { gridPlane, uvSphere } from '../../../utils/vis/mesh'
 import { blinnPhongSpecular, lambert, phongSpecular } from '../../../utils/vis/shading'
 import { dot, normalize } from '../../../utils/vis/vec3'
+import { monoFont } from '../../visualization/canvasFont'
 import { GRAB_SLOP_PX, markerCircle } from '../../visualization/sims/rigidKit'
 import { blitPixels } from './pixelKit'
 
@@ -92,9 +93,10 @@ export function hitAngleHandle(view, origin, radius, angle, point) {
   return Math.hypot(point.x - x, point.y - y) <= ANGLE_HANDLE_R + GRAB_SLOP_PX
 }
 
+// つまみが動ける半円の道すじ(破線)。道すじも意味のある線なので、line(1.3:1)ではなく muted(4.4:1)
 export function drawSemicircle(ctx, view, origin, radius, colors) {
   ctx.save()
-  ctx.strokeStyle = colors.line
+  ctx.strokeStyle = colors.muted
   ctx.lineWidth = 1.25
   ctx.setLineDash([5, 4])
   ctx.beginPath()
@@ -110,22 +112,53 @@ export function drawSemicircle(ctx, view, origin, radius, colors) {
   ctx.restore()
 }
 
-export function drawAngleHandle(ctx, view, origin, radius, angle, colors, label, lineColor) {
+// 角度のつまみ(原点から半円の上のつまみまでの線と、つまみ、名前)。selected なら、いま矢印キーが動かす方として
+// つまみの縁を太くする(普通 1.5、選択中 3)
+export function drawAngleHandle(ctx, view, origin, radius, angle, colors, label, lineColor, selected = false) {
   const p = directionFromAngle(angle)
   const x = view.sx(origin[0] + p[0] * radius)
   const y = view.sy(origin[1] + p[1] * radius)
+  const gap = ANGLE_HANDLE_R + 5
+  ctx.save()
   ctx.strokeStyle = lineColor
   ctx.lineWidth = 2
   ctx.beginPath()
   ctx.moveTo(view.sx(origin[0]), view.sy(origin[1]))
   ctx.lineTo(x, y)
   ctx.stroke()
-  markerCircle(ctx, x, y, ANGLE_HANDLE_R, { fill: colors.accent, stroke: colors.ink, lineWidth: 1.5 })
+  markerCircle(ctx, x, y, ANGLE_HANDLE_R + (selected ? 1 : 0), { fill: colors.accent, stroke: colors.ink, lineWidth: selected ? 3 : 1.5 })
   ctx.fillStyle = colors.ink
   ctx.font = '12px sans-serif'
   ctx.textAlign = p[0] < -0.15 ? 'right' : 'left'
   ctx.textBaseline = p[1] > 0.8 ? 'bottom' : 'middle'
-  ctx.fillText(label, x + (p[0] < -0.15 ? -10 : 10), y - (p[1] > 0.8 ? 9 : 0))
+  ctx.fillText(label, x + (p[0] < -0.15 ? -gap : gap), y - (p[1] > 0.8 ? gap - 1 : 0))
+  ctx.restore()
+}
+
+// 線や球の上に重なる文字。surface 色の縁を付けて、下の絵が明るくても暗くても ink の文字が読めるようにする
+export function drawHaloText(ctx, text, x, y, colors, { size = 11, align = 'left', baseline = 'alphabetic' } = {}) {
+  ctx.save()
+  ctx.font = monoFont(size)
+  ctx.textAlign = align
+  ctx.textBaseline = baseline
+  ctx.lineJoin = 'round'
+  ctx.lineWidth = 3.5
+  ctx.strokeStyle = colors.surface
+  ctx.strokeText(text, x, y)
+  ctx.fillStyle = colors.ink
+  ctx.fillText(text, x, y)
+  ctx.restore()
+}
+
+// PageUp・PageDown(Alt・Ctrl・Cmd つきは含めない)。選ぶ物を前後に変えるキー
+export function isSelectKey(event) {
+  return (event.key === 'PageUp' || event.key === 'PageDown') && !event.altKey && !event.ctrlKey && !event.metaKey
+}
+
+// 選べる物の並び list の中で、今の current から前(PageUp)・次(PageDown)へ。端では反対側の端へ回る
+export function cycleSelection(list, current, key) {
+  const index = Math.max(0, list.indexOf(current))
+  return list[(index + (key === 'PageUp' ? -1 : 1) + list.length) % list.length]
 }
 
 export function drawPixelSphere(ctx, cx, cy, radius, colors, { L, V = [0, 0, 1], m = 24, mode = 'lambert' }) {
@@ -153,19 +186,27 @@ export function drawPixelSphere(ctx, cx, cy, radius, colors, { L, V = [0, 0, 1],
     }
   }
   blitPixels(ctx, image, size, size, Math.round(cx - size / 2), Math.round(cy - size / 2))
-  ctx.strokeStyle = colors.line
+  // 球の輪郭(暗い側が地に溶けないように)。line(1.3:1)ではなく muted
+  ctx.save()
+  ctx.strokeStyle = colors.muted
   ctx.lineWidth = 1
   ctx.beginPath()
   ctx.arc(cx, cy, radius, 0, Math.PI * 2)
   ctx.stroke()
+  ctx.restore()
 }
+
+// 鏡面反射の分布(極座標の線)。フォンは ink の実線、ブリン-フォンは muted の破線(重なっても 2 本を見分けられる)
+export const LOBE_BLINN_DASH = [5, 4]
 
 export function drawPolarLobe(ctx, view, origin, radius, colors, { L, V, m, matchSpread = false, showBlinn = true }) {
   const N = [0, 1, 0]
   const rAngle = Math.atan2(-L[0], L[1])
-  const draw = (kind, color, exponent) => {
+  const draw = (kind, color, exponent, dash) => {
+    ctx.save()
     ctx.strokeStyle = color
     ctx.lineWidth = 2
+    ctx.setLineDash(dash)
     ctx.beginPath()
     for (let i = 0; i <= 120; i++) {
       const angle = -HALF_PI + (Math.PI * i) / 120
@@ -179,9 +220,10 @@ export function drawPolarLobe(ctx, view, origin, radius, colors, { L, V, m, matc
       else ctx.lineTo(view.sx(x), view.sy(y))
     }
     ctx.stroke()
+    ctx.restore()
   }
-  draw('phong', colors.ink, m)
-  if (showBlinn) draw('blinn', colors.muted, matchSpread ? 4 * m : m)
+  draw('phong', colors.ink, m, [])
+  if (showBlinn) draw('blinn', colors.muted, matchSpread ? 4 * m : m, LOBE_BLINN_DASH)
   return { rAngle, phong: phongSpecular(N, L, V, m), blinn: blinnPhongSpecular(N, L, V, matchSpread ? 4 * m : m) }
 }
 

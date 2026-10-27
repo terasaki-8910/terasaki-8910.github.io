@@ -9,10 +9,12 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { drawAxes, makeView } from '../../visualization/axes'
 import { STEP_MARGIN, arrowStep, clamp, drawText, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { chebyshevUpperBound, inShadow } from '../../../utils/vis/shading'
+import { cycleSelection, drawHaloText, isSelectKey } from './shadingKit'
 
 const INITIAL = { light: [-2.3, 3.25], boxX: 0.35, rays: 32, bias: 0.04, soft: false }
 const BOX = { width: 1.25, height: 1.35 }
 const HALF_FOV = 70 * Math.PI / 180
+const TARGETS = ['light', 'box'] // PageUp・PageDown で選べる物
 
 const viewOf = (width, height) => makeView({ width, height, xRange: [-4.2, 4.2], yRange: [-0.35, 4.25], margin: STEP_MARGIN, equal: true })
 
@@ -69,7 +71,8 @@ export default function ShadingStep8() {
   const [rays, setRays] = useState(INITIAL.rays)
   const [bias, setBias] = useState(INITIAL.bias)
   const [soft, setSoft] = useState(INITIAL.soft)
-  const selected = useRef('light')
+  const [selected, setSelected] = useState('light')
+  const dragging = useRef(null)
   const depths = makeDepths(light, boxX, rays)
 
   const draw = ({ ctx, width, height, colors }) => {
@@ -82,7 +85,8 @@ export default function ShadingStep8() {
     ctx.rect(view.frame.left, view.frame.top, view.frame.width, view.frame.height)
     ctx.clip()
 
-    ctx.strokeStyle = colors.alpha('ink', 0.1)
+    // 光線。本数が多いほど重なって濃くなるので、1 本ずつの濃さは本数に応じて薄くする(32 本で ink 50%、約 3:1)
+    ctx.strokeStyle = colors.alpha('ink', clamp(16 / rays, 0.12, 0.5))
     ctx.lineWidth = 1
     depths.forEach(({ direction, distance }) => {
       ctx.beginPath()
@@ -120,11 +124,14 @@ export default function ShadingStep8() {
     const boxTop = view.sy(BOX.height)
     ctx.fillStyle = laneColor(colors, 1)
     ctx.fillRect(boxLeft, boxTop, boxRight - boxLeft, floorTop - boxTop)
+    // 選んでいる物は縁を太くする(箱は ink の 3px の枠、光源は印の縁 3px)
     ctx.strokeStyle = colors.ink
+    ctx.lineWidth = selected === 'box' ? 3 : 1.5
     ctx.strokeRect(boxLeft, boxTop, boxRight - boxLeft, floorTop - boxTop)
-    drawText(ctx, '箱', (boxLeft + boxRight) / 2, boxTop + 16, { color: colors.ink, align: 'center' })
-    markerCircle(ctx, view.sx(light[0]), view.sy(light[1]), 8, { fill: colors.accent, stroke: colors.ink, lineWidth: 2 })
-    drawText(ctx, '光源', view.sx(light[0]) + 11, view.sy(light[1]) - 10, { color: colors.ink })
+    // 名前は、塗りの上では読めないので、箱の外(上)に書く
+    drawHaloText(ctx, '箱', (boxLeft + boxRight) / 2, boxTop - 8, colors, { align: 'center' })
+    markerCircle(ctx, view.sx(light[0]), view.sy(light[1]), selected === 'light' ? 9 : 8, { fill: colors.accent, stroke: colors.ink, lineWidth: selected === 'light' ? 3 : 1.5 })
+    drawHaloText(ctx, '光源', view.sx(light[0]) + 13, view.sy(light[1]) - 10, colors)
 
     const stripX = view.frame.left + 4
     const stripY = view.frame.top + 5
@@ -159,25 +166,34 @@ export default function ShadingStep8() {
     onDown: (point) => {
       const handle = hit(point)
       if (!handle) return false
-      selected.current = handle
+      dragging.current = handle
+      setSelected(handle)
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも操作できるように
+      return undefined
     },
     onMove: (point) => {
       const view = viewOf(sizeRef.current.width, sizeRef.current.height)
-      if (selected.current === 'light') setLight([clamp(view.wx(point.x), -3.6, 3.6), clamp(view.wy(point.y), 1.7, 4)])
+      if (dragging.current === 'light') setLight([clamp(view.wx(point.x), -3.6, 3.6), clamp(view.wy(point.y), 1.7, 4)])
       else setBoxX(clamp(view.wx(point.x), -3.4, 3.4))
     },
+    onUp: () => { dragging.current = null },
   })
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    if (isSelectKey(event)) {
       event.preventDefault()
-      selected.current = selected.current === 'light' ? 'box' : 'light'
+      setSelected((value) => cycleSelection(TARGETS, value, event.key))
       return
     }
     const step = arrowStep(event)
     if (!step) return
-    event.preventDefault()
-    if (selected.current === 'light') setLight(([x, y]) => [clamp(x + step.dx * 0.1, -3.6, 3.6), clamp(y + step.dy * 0.1, 1.7, 4)])
-    else setBoxX((value) => clamp(value + step.dx * 0.1, -3.4, 3.4))
+    if (selected === 'light') {
+      event.preventDefault()
+      setLight(([x, y]) => [clamp(x + step.dx * 0.1, -3.6, 3.6), clamp(y + step.dy * 0.1, 1.7, 4)])
+    } else {
+      if (step.dx === 0) return // 箱は左右だけ。上下のキーはページのスクロールに残す
+      event.preventDefault()
+      setBoxX((value) => clamp(value + step.dx * 0.1, -3.4, 3.4))
+    }
   }
   const reset = () => {
     setLight(INITIAL.light)
@@ -185,7 +201,7 @@ export default function ShadingStep8() {
     setRays(INITIAL.rays)
     setBias(INITIAL.bias)
     setSoft(INITIAL.soft)
-    selected.current = 'light'
+    setSelected('light')
   }
   const centerIndex = depthCell(light, 0, rays)
   const centerDepth = centerIndex >= 0 ? depths[centerIndex].distance : Infinity
@@ -193,7 +209,7 @@ export default function ShadingStep8() {
   return (
     <SimShell
       label="シャドウマップ"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="点光源から箱と床へ飛ぶ光線、方向ごとの距離表、床の影を描いています。光源または箱をドラッグし、矢印キーで選択中の対象を動かせます。PageUpとPageDownで操作対象を切り替えます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="点光源から箱と床へ飛ぶ光線、方向ごとの距離表、床の影を描いています。光源と箱をドラッグして動かせます。キーでは、PageUp・PageDown で動かす物を光源と箱から選び、矢印キーで 0.1 m ずつ動かします(光源は上下左右、箱は左右だけ。Shift を押すと 5 倍)。" />}
       legend={<SimLegend items={[
         { key: 'light', symbol: 'L', label: '光源位置', value: `(${fmt(light[0], 2)}, ${fmt(light[1], 2)}) m`, minChars: 16 },
         { key: 'box', label: '箱の中心', value: `${fmt(boxX, 2)} m`, minChars: 8 },

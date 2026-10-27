@@ -117,9 +117,11 @@ export default function IsosurfaceStep8() {
     return hit
   }
   usePointerDrag(canvasRef, {
-    canGrab: () => true,
+    canGrab: () => true, // 角のない所のドラッグで回す
+    cursorAt: (point) => hitCorner(point) >= 0 ? 'pointer' : null, // 角は押すだけで切り替わる(つかむ物ではない)
     onDown: (point) => {
       const hit = hitCorner(point)
+      canvasRef.current?.focus({ preventScroll: true }) // 押したあと、キーでも操作できるように
       selectedRef.current = hit
       rotatingRef.current = hit < 0
       if (hit >= 0) setValues((current) => current.map((value, index) => index === hit ? -value : value))
@@ -133,17 +135,19 @@ export default function IsosurfaceStep8() {
     },
     onUp: () => { selectedRef.current = -1; rotatingRef.current = false; redraw() },
   })
+  // 0〜7 は絵の角の番号(立方体のとき、その角の内外を切り替える)。矢印キーはドラッグと同じ向きに回す
   const onKeyDown = (event) => {
-    if (mode === 'cube' && /^[1-8]$/.test(event.key)) {
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    if (mode === 'cube' && /^[0-7]$/.test(event.key)) {
       event.preventDefault()
-      const index = Number(event.key) - 1
+      const index = Number(event.key)
       setValues((current) => current.map((value, i) => i === index ? -value : value))
       return
     }
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
-    cameraRef.current.yaw += step.dx * 0.08
+    cameraRef.current.yaw -= step.dx * 0.08
     cameraRef.current.pitch = clamp(cameraRef.current.pitch + step.dy * 0.08, -1.15, 1.15)
     redraw()
   }
@@ -158,7 +162,7 @@ export default function IsosurfaceStep8() {
     <SimShell
       label="立方体から三角形を作る"
       switcher={<ModeSwitch label="表示" value={mode} options={[{ value: 'cube', label: '立方体 1 つ' }, { value: 'sphere', label: '球を取り出す' }]} onChange={setMode} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label={mode === 'cube' ? '立方体の角をクリックして内外を切り替えられます。空いた所のドラッグまたは矢印キーで回転できます。1 から 8 キーでも角を切り替えられます。' : '格子から取り出した球面です。ドラッグまたは矢印キーで回転できます。'} />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={mode === 'cube' ? '立方体の 8 つの角（番号 0〜7、塗りつぶしが内側）と、そこから作った三角形の絵。角のクリックか 0〜7 キーで内外を切り替えられます。角のない所のドラッグか矢印キーで回転できます（Shift で大きく）。' : '格子から取り出した球面の三角形の絵。ドラッグか矢印キーで回転できます（Shift で大きく）。'} />}
       legend={<SimLegend ref={legendRef} items={[
         ...(mode === 'cube' ? [
           { key: 'case', label: 'case', value: String(currentCase), minChars: 4 },

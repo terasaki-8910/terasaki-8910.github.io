@@ -9,18 +9,20 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawArrow } from '../../visualization/axes'
 import { STEP_MARGIN, arrowStep, clamp, drawText, fmt, laneColor } from '../../visualization/sims/rigidKit'
 import { blinnPhongSpecular, halfVector, phongSpecular, reflect } from '../../../utils/vis/shading'
-import { angleBetween, angleFromPoint, directionFromAngle, drawAngleHandle, drawPolarLobe, drawSemicircle, hitAngleHandle } from './shadingKit'
+import { LOBE_BLINN_DASH, angleBetween, angleFromPoint, cycleSelection, directionFromAngle, drawAngleHandle, drawPolarLobe, drawSemicircle, hitAngleHandle, isSelectKey } from './shadingKit'
 
 const INITIAL = { light: -40 * Math.PI / 180, view: 28 * Math.PI / 180, m: 20 }
 const ORIGIN = [0, 0]
 const RADIUS = 1.55
+const HANDLES = ['light', 'view'] // PageUp・PageDown で選べるつまみ
 
 export default function ShadingStep4() {
   const [lightAngle, setLightAngle] = useState(INITIAL.light)
   const [viewAngle, setViewAngle] = useState(INITIAL.view)
   const [m, setM] = useState(INITIAL.m)
   const [matchSpread, setMatchSpread] = useState(true)
-  const selected = useRef('light')
+  const [selected, setSelected] = useState('light')
+  const dragging = useRef(null)
   const L = directionFromAngle(lightAngle)
   const V = directionFromAngle(viewAngle)
   const N = [0, 1, 0]
@@ -48,16 +50,31 @@ export default function ShadingStep4() {
     drawSemicircle(ctx, view, ORIGIN, RADIUS, colors)
     drawArrow(ctx, view, 0, 0, 0, 1.15, { color: colors.ink, width: 2 })
     drawText(ctx, 'N', view.sx(0) + 8, view.sy(1.15), { color: colors.ink })
-    drawAngleHandle(ctx, view, ORIGIN, RADIUS, lightAngle, colors, 'L', laneColor(colors, 0))
-    drawAngleHandle(ctx, view, ORIGIN, RADIUS, viewAngle, colors, 'V', laneColor(colors, 2))
+    drawAngleHandle(ctx, view, ORIGIN, RADIUS, lightAngle, colors, 'L', laneColor(colors, 0), selected === 'light')
+    drawAngleHandle(ctx, view, ORIGIN, RADIUS, viewAngle, colors, 'V', laneColor(colors, 2), selected === 'view')
     drawArrow(ctx, view, 0, 0, R[0] * 1.3, R[1] * 1.3, { color: colors.ink, width: 1.5 })
     drawText(ctx, 'R', view.sx(R[0] * 1.3) + 8, view.sy(R[1] * 1.3), { color: colors.ink })
     drawArrow(ctx, view, 0, 0, H[0] * 1.2, H[1] * 1.2, { color: colors.muted, width: 2 })
     drawText(ctx, 'H', view.sx(H[0] * 1.2) - 9, view.sy(H[1] * 1.2), { color: colors.ink, align: 'right' })
     drawPolarLobe(ctx, view, ORIGIN, 1.45, colors, { L, V, m, matchSpread })
     ctx.restore()
-    drawText(ctx, 'フォン', view.frame.left + 4, view.frame.top + 13, { color: colors.ink })
-    drawText(ctx, 'ブリン-フォン', view.frame.left + 4, view.frame.top + 30, { color: colors.muted })
+    // 2 本の分布の見分け方(線の見本つきの名前)。文字は ink、線の違い(実線・破線)と色は見本で示す
+    ctx.save()
+    const keyX = view.frame.left + 4
+    ;[
+      { name: 'フォン', y: view.frame.top + 13, color: colors.ink, dash: [] },
+      { name: 'ブリン-フォン', y: view.frame.top + 30, color: colors.muted, dash: LOBE_BLINN_DASH },
+    ].forEach(({ name, y, color, dash }) => {
+      ctx.strokeStyle = color
+      ctx.lineWidth = 2
+      ctx.setLineDash(dash)
+      ctx.beginPath()
+      ctx.moveTo(keyX, y - 4)
+      ctx.lineTo(keyX + 20, y - 4)
+      ctx.stroke()
+      drawText(ctx, name, keyX + 26, y, { color: colors.ink })
+    })
+    ctx.restore()
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -73,24 +90,28 @@ export default function ShadingStep4() {
     onDown: (point) => {
       const handle = hit(point)
       if (!handle) return false
-      selected.current = handle
+      dragging.current = handle
+      setSelected(handle)
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも操作できるように
+      return undefined
     },
     onMove: (point) => {
       const angle = clamp(angleFromPoint(viewOf(sizeRef.current.width, sizeRef.current.height), ORIGIN, point), -Math.PI / 2, Math.PI / 2)
-      if (selected.current === 'light') setLightAngle(angle)
+      if (dragging.current === 'light') setLightAngle(angle)
       else setViewAngle(angle)
     },
+    onUp: () => { dragging.current = null },
   })
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    if (isSelectKey(event)) {
       event.preventDefault()
-      selected.current = selected.current === 'light' ? 'view' : 'light'
+      setSelected((value) => cycleSelection(HANDLES, value, event.key))
       return
     }
     const step = arrowStep(event)
-    if (!step) return
+    if (!step || step.dx === 0) return // 上下のキーは使わない(ページのスクロールに残す)
     event.preventDefault()
-    const update = selected.current === 'light' ? setLightAngle : setViewAngle
+    const update = selected === 'light' ? setLightAngle : setViewAngle
     update((value) => clamp(value + step.dx * 5 * Math.PI / 180, -Math.PI / 2, Math.PI / 2))
   }
   const reset = () => {
@@ -98,13 +119,13 @@ export default function ShadingStep4() {
     setViewAngle(INITIAL.view)
     setM(INITIAL.m)
     setMatchSpread(true)
-    selected.current = 'light'
+    setSelected('light')
   }
 
   return (
     <SimShell
       label="ブリン-フォンのハーフベクトル"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="法線N、光L、視線V、鏡方向R、ハーフベクトルHと二つのハイライト分布を描いています。LまたはVをドラッグし、矢印キーで選択中の向きを動かせます。PageUpとPageDownで操作対象を切り替えます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="法線 N、光 L、視線 V、鏡方向 R、ハーフベクトル H と、フォンとブリン-フォンの 2 つのつやの分布(フォンは実線、ブリン-フォンは破線)を描いています。L と V のつまみをドラッグして向きを変えられます。キーでは、PageUp・PageDown で動かすつまみを L と V から選び、左右の矢印キーで 5 度ずつ動かします(Shift を押すと 5 倍)。" />}
       legend={<SimLegend items={[
         { key: 'rv', symbol: '\\angle(R,V)', label: '鏡方向との差', value: `${fmt(rvAngle * 180 / Math.PI, 1)}°`, minChars: 8 },
         { key: 'nh', symbol: '\\angle(N,H)', label: '法線との差', value: `${fmt(nhAngle * 180 / Math.PI, 1)}°`, minChars: 8 },

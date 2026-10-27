@@ -10,7 +10,7 @@ import { makeView } from '../../visualization/axes'
 import { arrowStep, clamp, drawText, fmt, markerCircle } from '../../visualization/sims/rigidKit'
 import { drawSubLabel } from './labelKit'
 import { edgeCrossing, marchingSquares } from '../../../utils/vis/isosurface'
-import { clipToFrame, rampColor } from './isosurfaceKit'
+import { clipToFrame, cycleIndex, pageStep, rampColor } from './isosurfaceKit'
 
 const RADIUS = 0.72
 
@@ -30,7 +30,8 @@ function circleData(n) {
 export default function IsosurfaceStep5() {
   const [values, setValues] = useState([-0.75, 0.55])
   const [grid, setGrid] = useState(8)
-  const selectedRef = useRef(0)
+  const [selected, setSelected] = useState(0) // 選んでいる端点: 0 が a、1 が b
+  const grabRef = useRef(-1) // ドラッグでつかんでいる端点(なければ -1)
   const crossing = edgeCrossing(values[0], values[1], 0)
   const hasCrossing = (values[0] >= 0) !== (values[1] >= 0)
   const circle = circleData(grid)
@@ -56,8 +57,9 @@ export default function IsosurfaceStep5() {
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
     clipToFrame(ctx, edge, () => {
-      ctx.strokeStyle = colors.line
-      ctx.lineWidth = 1
+      // しきい値 0 の基準線
+      ctx.strokeStyle = colors.muted
+      ctx.lineWidth = 1.5
       ctx.beginPath(); ctx.moveTo(edge.sx(0), edge.sy(0)); ctx.lineTo(edge.sx(1), edge.sy(0)); ctx.stroke()
       ctx.strokeStyle = colors.ink
       ctx.lineWidth = 2.2
@@ -66,7 +68,7 @@ export default function IsosurfaceStep5() {
         ctx.strokeStyle = colors.ink
         ctx.lineWidth = 3
         ctx.beginPath(); ctx.moveTo(edge.sx(index), edge.sy(0)); ctx.lineTo(edge.sx(index), edge.sy(value)); ctx.stroke()
-        markerCircle(ctx, edge.sx(index), edge.sy(value), 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selectedRef.current === index ? 3 : 1.5 })
+        markerCircle(ctx, edge.sx(index), edge.sy(value), 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selected === index ? 3 : 1.5 })
         drawSubLabel(ctx, `f_${index ? 'b' : 'a'} = ${fmt(value, 2)}`, edge.sx(index) + (index ? -9 : 9), edge.sy(value) - 10, { color: colors.ink, size: 11, align: index ? 'right' : 'left' })
       })
       if (hasCrossing) {
@@ -86,22 +88,27 @@ export default function IsosurfaceStep5() {
         ctx.fillStyle = rampColor(colors, average, 0.55)
         ctx.fillRect(circleView.sx(x0), circleView.sy(y1), circleView.sx(x1) - circleView.sx(x0) + 0.5, circleView.sy(y0) - circleView.sy(y1) + 0.5)
       }
-      ctx.strokeStyle = colors.line
-      ctx.lineWidth = 1
-      for (let k = 0; k < n; k++) {
-        const q = -1 + 2 * k / (n - 1)
-        ctx.beginPath(); ctx.moveTo(circleView.sx(q), circleView.sy(-1)); ctx.lineTo(circleView.sx(q), circleView.sy(1)); ctx.stroke()
-        ctx.beginPath(); ctx.moveTo(circleView.sx(-1), circleView.sy(q)); ctx.lineTo(circleView.sx(1), circleView.sy(q)); ctx.stroke()
+      // 格子の線。間隔が詰まりすぎると塗りを隠すだけなので、6px 以上あるときだけ描く
+      if ((circleView.scaleX * 2) / (n - 1) >= 6) {
+        ctx.strokeStyle = colors.muted
+        ctx.lineWidth = 0.8
+        for (let k = 0; k < n; k++) {
+          const q = -1 + 2 * k / (n - 1)
+          ctx.beginPath(); ctx.moveTo(circleView.sx(q), circleView.sy(-1)); ctx.lineTo(circleView.sx(q), circleView.sy(1)); ctx.stroke()
+          ctx.beginPath(); ctx.moveTo(circleView.sx(-1), circleView.sy(q)); ctx.lineTo(circleView.sx(1), circleView.sy(q)); ctx.stroke()
+        }
       }
+      ctx.save()
       ctx.strokeStyle = colors.ink
       ctx.lineWidth = 1.4
       ctx.setLineDash([6, 4])
-      ctx.beginPath(); ctx.arc(circleView.sx(0), circleView.sy(0), RADIUS * circleView.scaleX, 0, 2 * Math.PI); ctx.stroke(); ctx.setLineDash([])
+      ctx.beginPath(); ctx.arc(circleView.sx(0), circleView.sy(0), RADIUS * circleView.scaleX, 0, 2 * Math.PI); ctx.stroke()
+      ctx.restore()
       circle.points.forEach(([x, y]) => markerCircle(ctx, circleView.sx(x), circleView.sy(y), 2.8, { fill: colors.accent, stroke: colors.ink, lineWidth: 0.8 }))
     })
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
-  useEffect(() => { redraw() }, [values, grid, redraw])
+  useEffect(() => { redraw() }, [values, grid, selected, redraw])
   const edgeView = () => views(sizeRef.current.width, sizeRef.current.height).edge
   const hit = (point) => {
     const view = edgeView()
@@ -110,22 +117,36 @@ export default function IsosurfaceStep5() {
   }
   usePointerDrag(canvasRef, {
     canGrab: (point) => hit(point) >= 0,
-    onDown: (point) => { const index = hit(point); if (index < 0) return false; selectedRef.current = index; redraw(); return true },
-    onMove: ({ y }) => setValues((current) => current.map((value, index) => index === selectedRef.current ? clamp(edgeView().wy(y), -1, 1) : value)),
-    onUp: () => {},
+    onDown: (point) => {
+      const index = hit(point)
+      if (index < 0) return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも動かせるように
+      grabRef.current = index
+      setSelected(index)
+      return true
+    },
+    onMove: ({ y }) => setValues((current) => current.map((value, index) => index === grabRef.current ? clamp(edgeView().wy(y), -1, 1) : value)),
+    onUp: () => { grabRef.current = -1 },
   })
+  // PageUp・PageDown で端点 a・b を選び、上下の矢印キーで値を変える
   const onKeyDown = (event) => {
-    if (event.key === '1' || event.key === '2') { selectedRef.current = Number(event.key) - 1; redraw(); return }
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    const page = pageStep(event)
+    if (page) {
+      event.preventDefault()
+      setSelected(cycleIndex(selected, page, 2))
+      return
+    }
     const step = arrowStep(event)
-    if (!step) return
+    if (!step || step.dy === 0) return // 端点の値は上下だけ
     event.preventDefault()
-    setValues((current) => current.map((value, index) => index === selectedRef.current ? clamp(value + step.dy * 0.05, -1, 1) : value))
+    setValues((current) => current.map((value, index) => index === selected ? clamp(value + step.dy * 0.05, -1, 1) : value))
   }
   return (
     <SimShell
       label="辺の上の交点と円の近似"
       height={{ phone: [320, 400], pc: [280, 360] }}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="上の端点の値を上下にドラッグできます。1、2 キーで端点を選び、上下キーでも値を変えられます。下は格子辺の交点と真の円です。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={`辺の両端（端点 a・b）の値を示す縦棒と、両端を結ぶ直線が値 0 を横切る交点の絵。格子の辺での交点と、真の円（破線）も描いています。縦棒の先の丸をドラッグで上下に動かせます。PageUp・PageDown で端点を選び、上下の矢印キーで値を変えます（Shift で大きく）。選択中は端点 ${selected ? 'b' : 'a'}。`} />}
       legend={<SimLegend items={[
         { key: 'line', label: '端の値を結ぶ直線', swatch: 'var(--color-ink)' },
         { key: 'true', label: '真の円', value: '破線', swatch: 'var(--color-ink)' },
@@ -133,7 +154,7 @@ export default function IsosurfaceStep5() {
         { key: 'error', label: '最大距離', value: circle.error.toFixed(5), minChars: 8 },
       ]} />}
       controls={<>
-        <SimToolbar><ResetButton onClick={() => { setValues([-0.75, 0.55]); setGrid(8); selectedRef.current = 0 }} /></SimToolbar>
+        <SimToolbar><ResetButton onClick={() => { setValues([-0.75, 0.55]); setGrid(8); setSelected(0) }} /></SimToolbar>
         <ParamSlider symbol="N" label="格子数" value={grid} min={4} max={40} step={1} onChange={setGrid} />
       </>}
     />

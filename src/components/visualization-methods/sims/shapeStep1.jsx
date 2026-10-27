@@ -9,11 +9,15 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
 import { ellipseImplicit, ellipsePoint, hyperbolaImplicit, hyperbolaPoint } from '../../../utils/vis/curve'
-import { drawPolyline, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
+import { drawPolyline, focusOnGrab, nearestCurveSample, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
 
 const POINT_R = 7
 const ELLIPSE_RANGE = [0, 2 * Math.PI]
 const HYPERBOLA_RANGE = [-1.3, 1.3]
+// 内側(F ≤ 0)と外側(F > 0)の塗りの濃さ。凡例の色見本も同じ割合で混ぜる(0.07 では淡い地にほとんど見えなかった)
+const INSIDE_ALPHA = 0.26
+const OUTSIDE_ALPHA = 0.1
+const regionSwatch = (lane, alpha) => `color-mix(in srgb, var(--${lane}) ${Math.round(alpha * 100)}%, var(--color-surface))`
 
 export default function ShapeStep1() {
   const [mode, setMode] = useState('ellipse')
@@ -46,7 +50,7 @@ export default function ShapeStep1() {
     for (let py = view.frame.top; py < view.frame.bottom; py += cell) {
       for (let px = view.frame.left; px < view.frame.right; px += cell) {
         const value = implicit(view.wx(px + cell / 2), view.wy(py + cell / 2))
-        ctx.fillStyle = colors.alpha(value <= 0 ? 'lane-0' : 'lane-1', 0.07)
+        ctx.fillStyle = value <= 0 ? colors.alpha('lane-0', INSIDE_ALPHA) : colors.alpha('lane-1', OUTSIDE_ALPHA)
         ctx.fillRect(px, py, Math.min(cell, view.frame.right - px), Math.min(cell, view.frame.bottom - py))
       }
     }
@@ -86,7 +90,7 @@ export default function ShapeStep1() {
       const info = pointerInfo(position)
       return info.overP || info.overQ
     },
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const info = pointerInfo(position)
       if (info.overP) {
         dragging.current = 'p'
@@ -99,7 +103,7 @@ export default function ShapeStep1() {
         return
       }
       return false
-    },
+    }),
     onMove: (position) => {
       const { view, curve } = pointerInfo(position)
       if (dragging.current === 'p') setTFromU(curve.u)
@@ -109,7 +113,7 @@ export default function ShapeStep1() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    if (pageStep(event)) {
       event.preventDefault()
       setSelected((value) => value === 'p' ? 'q' : 'p')
       return
@@ -135,6 +139,8 @@ export default function ShapeStep1() {
   }
   const legend = [
     { key: 'curve', label: mode === 'ellipse' ? '楕円' : '双曲線', swatch: 'var(--color-ink)' },
+    { key: 'inside', label: '内側(F ≤ 0)', swatch: regionSwatch('lane-0', INSIDE_ALPHA) },
+    { key: 'outside', label: '外側(F > 0)', swatch: regionSwatch('lane-1', OUTSIDE_ALPHA) },
     { key: 'p', symbol: 'P(t)', label: '媒介変数の点', value: `(${fmt(p[0], 2)}, ${fmt(p[1], 2)})`, minChars: 14 },
     { key: 'q', symbol: 'F(Q)', label: fQ <= 0 ? '内側' : '外側', value: fmt(fQ, 3), minChars: 9 },
   ]
@@ -143,7 +149,7 @@ export default function ShapeStep1() {
     <SimShell
       label="媒介変数表示と陰関数表示"
       switcher={<ModeSwitch label="曲線" value={mode} options={[{ value: 'ellipse', label: '楕円' }, { value: 'hyperbola', label: '双曲線' }]} onChange={changeMode} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="媒介変数で表した曲線と、陰関数の符号で分けた内側と外側。P または Q をつかんで動かせる。矢印キーで選択中の点を動かし、PageUp と PageDown で点を選べる" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="媒介変数で表した曲線と、陰関数の符号で色分けした内側と外側。曲線に沿って動く点 P と、自由に動く点 Q をドラッグで動かせる。矢印キー(Shift で 5 倍)で選択中の点を動かし、PageUp と PageDown で P と Q を切り替える" />}
       legend={<SimLegend items={legend} />}
       controls={
         <>

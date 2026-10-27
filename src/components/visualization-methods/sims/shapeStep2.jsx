@@ -9,7 +9,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
 import { lerpPoint } from '../../../utils/vis/curve'
-import { drawControlPoints, drawPolyline, hitControlPoint, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
+import { cycleSelection, drawControlPoints, drawPolyline, focusOnGrab, hitControlPoint, nearestCurveSample, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
 
 const INITIAL = [[0.8, 0.8], [3.3, 2.3]]
 const POINT_R = 7
@@ -43,7 +43,7 @@ export default function ShapeStep2() {
     const rightMid = lerpPoint(p, points[1], 0.5)
     drawText(ctx, fmt(t, 2), view.sx(leftMid[0]) + normal[0] * 14, view.sy(leftMid[1]) + normal[1] * 14, { color: colors.ink, align: 'center' })
     drawText(ctx, fmt(1 - t, 2), view.sx(rightMid[0]) - normal[0] * 14, view.sy(rightMid[1]) - normal[1] * 14, { color: colors.ink, align: 'center' })
-    drawText(ctx, 't : (1 − t)', view.sx(p[0]) - normal[0] * 34, view.sy(p[1]) - normal[1] * 34, { color: colors.muted, align: 'center' })
+    drawText(ctx, 't : (1 − t)', view.sx(p[0]) - normal[0] * 34, view.sy(p[1]) - normal[1] * 34, { color: colors.ink, align: 'center' })
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -61,7 +61,7 @@ export default function ShapeStep2() {
       const info = pointerInfo(position)
       return info.control >= 0 || info.overP
     },
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const info = pointerInfo(position)
       if (info.control >= 0) {
         dragging.current = { type: 'control', index: info.control }
@@ -76,7 +76,7 @@ export default function ShapeStep2() {
         return
       }
       return false
-    },
+    }),
     onMove: (position) => {
       const { view, curve } = pointerInfo(position)
       if (dragging.current?.type === 't') setT(curve.u)
@@ -91,10 +91,13 @@ export default function ShapeStep2() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const move = pageStep(event)
+    if (move) {
       event.preventDefault()
-      setSelected((value) => value === 0 ? 1 : 0)
-      setSelectedT(false)
+      // P0 → P1 → P(t) の順に巡る
+      const next = cycleSelection(selected, selectedT, move, points.length)
+      setSelected(next.selected)
+      setSelectedT(next.onCurve)
       return
     }
     const step = arrowStep(event)
@@ -112,7 +115,7 @@ export default function ShapeStep2() {
   return (
     <SimShell
       label="線形補間"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="2 点 P0、P1 と、その間を比 t 対 1−t に分ける点 P(t)。3 個の点をつかんで動かせる。矢印キーで選択中の点を動かし、PageUp と PageDown で端点を選べる" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="2 点 P0、P1 と、その間を比 t 対 1−t に分ける点 P(t)。3 個の点をドラッグで動かせる(P(t) は線分に沿って動く)。矢印キー(Shift で 5 倍)で選択中の点を動かし、PageUp と PageDown で P0、P1、P(t) を順に選べる" />}
       legend={<SimLegend items={[
         { key: 'p', symbol: 'P(t)', label: '内分点', value: `(${fmt(p[0], 2)}, ${fmt(p[1], 2)})`, minChars: 14 },
         { key: 'ratio', label: '長さの比', value: `${fmt(t, 2)} : ${fmt(1 - t, 2)}`, minChars: 13 },

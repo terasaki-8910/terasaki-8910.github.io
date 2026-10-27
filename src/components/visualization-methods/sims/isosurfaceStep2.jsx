@@ -9,7 +9,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { drawArrow, drawAxes } from '../../visualization/axes'
 import { arrowStep, clamp, drawText, markerCircle } from '../../visualization/sims/rigidKit'
 import { curvature2D, gradient2D } from '../../../utils/vis/isosurface'
-import { clipToFrame, drawFieldImage, makeIsoView } from './isosurfaceKit'
+import { clipToFrame, drawFieldImage, drawTextPlate, makeIsoView } from './isosurfaceKit'
 
 const CENTER = [0, 0]
 const X_RANGE = [-2, 2]
@@ -30,8 +30,16 @@ export default function IsosurfaceStep2() {
     const view = makeIsoView(width, height, undefined, X_RANGE, Y_RANGE)
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
+    // 文字は場の濃淡の上に載るので、線や矢印より先に板を敷き、描き終えてから文字を重ねる
+    // (ダークで lane-1 の上の ink が沈まないように。板が円周や矢印を隠さない)
+    const valueText = `f = ${field(...probe).toFixed(3)}`
+    const valueAt = [view.sx(probe[0]) + 12, view.sy(probe[1]) - 12]
+    const curvatureText = `κ = ${curvature.toFixed(3)}  /  1/r = ${(1 / radius).toFixed(3)}`
+    const curvatureAt = [view.sx(CENTER[0] + radius), view.sy(CENTER[1]) - 14]
     clipToFrame(ctx, view, () => {
       drawFieldImage(ctx, view, colors, field, { scale: 2, invert: true, xRange: X_RANGE, yRange: Y_RANGE })
+      drawTextPlate(ctx, colors, valueText, valueAt[0], valueAt[1], { size: 12 })
+      drawTextPlate(ctx, colors, curvatureText, curvatureAt[0], curvatureAt[1], { size: 12, align: 'center' })
       ctx.strokeStyle = colors.ink
       ctx.lineWidth = 2.5
       ctx.beginPath()
@@ -49,8 +57,8 @@ export default function IsosurfaceStep2() {
       drawArrow(ctx, view, probe[0], probe[1], probe[0] + vectorScale * gradient[0], probe[1] + vectorScale * gradient[1], { color: colors.ink, width: 2, head: 7 })
       drawArrow(ctx, view, probe[0], probe[1], probe[0] + 0.52 * normal[0], probe[1] + 0.52 * normal[1], { color: colors.alpha('lane-0', 1), width: 2.5, head: 8 })
       markerCircle(ctx, view.sx(probe[0]), view.sy(probe[1]), 7, { fill: colors.accent, stroke: colors.ink, lineWidth: draggingRef.current ? 3 : 1.5 })
-      drawText(ctx, `f = ${field(...probe).toFixed(3)}`, view.sx(probe[0]) + 12, view.sy(probe[1]) - 12, { color: colors.ink, size: 12 })
-      drawText(ctx, `κ = ${curvature.toFixed(3)}  /  1/r = ${(1 / radius).toFixed(3)}`, view.sx(CENTER[0] + radius), view.sy(CENTER[1]) - 14, { color: colors.ink, size: 12, align: 'center' })
+      drawText(ctx, valueText, valueAt[0], valueAt[1], { color: colors.ink, size: 12 })
+      drawText(ctx, curvatureText, curvatureAt[0], curvatureAt[1], { color: colors.ink, size: 12, align: 'center' })
     })
     drawAxes(ctx, view, { colors, xLabel: 'x', yLabel: 'y' })
   }
@@ -60,7 +68,13 @@ export default function IsosurfaceStep2() {
   const hitProbe = (point) => Math.hypot(point.x - viewFor().sx(probe[0]), point.y - viewFor().sy(probe[1])) <= 19
   usePointerDrag(canvasRef, {
     canGrab: hitProbe,
-    onDown: (point) => { if (!hitProbe(point)) return false; draggingRef.current = true; redraw(); return true },
+    onDown: (point) => {
+      if (!hitProbe(point)) return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも動かせるように
+      draggingRef.current = true
+      redraw()
+      return true
+    },
     onMove: ({ x, y }) => { const view = viewFor(); setProbe([clamp(view.wx(x), X_RANGE[0], X_RANGE[1]), clamp(view.wy(y), Y_RANGE[0], Y_RANGE[1])]) },
     onUp: () => { draggingRef.current = false; redraw() },
   })
@@ -73,7 +87,7 @@ export default function IsosurfaceStep2() {
   return (
     <SimShell
       label="陰関数の値、法線、曲率"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="円の陰関数。点をドラッグまたは矢印キーで動かすと、値、勾配、単位法線が変わります。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="円の陰関数の値を濃淡で示し、円周と、点での勾配と単位法線の矢印を描いた絵。点をドラッグするか矢印キーで動かすと、値、勾配、単位法線が変わります（Shift で大きく）。" />}
       legend={<SimLegend items={[
         { key: 'field', label: '−f の色（内側を濃く表示）', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--color-surface), var(--lane-1))' },
         { key: 'gradient', symbol: '\\nabla f', label: '勾配', value: `(${gradient[0].toFixed(2)}, ${gradient[1].toFixed(2)})`, swatch: 'var(--color-ink)' },

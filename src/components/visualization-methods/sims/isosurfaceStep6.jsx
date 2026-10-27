@@ -8,15 +8,19 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView } from '../../visualization/axes'
 import { arrowStep, clamp, drawText, markerCircle } from '../../visualization/sims/rigidKit'
 import { marchingSquares, squareCase, squareSegments } from '../../../utils/vis/isosurface'
-import { clipToFrame, rampColor } from './isosurfaceKit'
+import { clipToFrame, cycleIndex, inkOn, pageStep, rampRgb } from './isosurfaceKit'
 
 const N = 10
 const INITIAL_CORNERS = [true, false, true, false]
+const CORNER_POSITIONS = [[0, 0], [1, 0], [1, 1], [0, 1]]
+const CIRCLE = 4 // 選べる物のうち、四隅(0〜3。絵の番号は 1〜4)ではなく円の中心
+const INITIAL_CENTER = [0.56, 0.52]
 
 export default function IsosurfaceStep6() {
   const [corners, setCorners] = useState(INITIAL_CORNERS)
-  const [center, setCenter] = useState([0.56, 0.52])
-  const selectedRef = useRef({ kind: 'corner', index: 0 })
+  const [center, setCenter] = useState(INITIAL_CENTER)
+  const [selected, setSelected] = useState(0) // 選んでいる物: 0〜3 は四隅、CIRCLE は円の中心
+  const grabRef = useRef(-1) // ドラッグでつかんでいる物(なければ -1)
   const values = corners.map((inside) => inside ? 1 : -1)
   const cellCase = squareCase(values[0], values[1], values[2], values[3], 0)
   const cellSegments = squareSegments(values[0], values[1], values[2], values[3], 0)
@@ -54,7 +58,7 @@ export default function IsosurfaceStep6() {
     clipToFrame(ctx, cell, () => {
       ctx.fillStyle = colors.paper
       ctx.fillRect(cell.sx(0), cell.sy(1), cell.sx(1) - cell.sx(0), cell.sy(0) - cell.sy(1))
-      ctx.strokeStyle = colors.line
+      ctx.strokeStyle = colors.muted
       ctx.lineWidth = 1.5
       ctx.strokeRect(cell.sx(0), cell.sy(1), cell.sx(1) - cell.sx(0), cell.sy(0) - cell.sy(1))
       cellSegments.forEach(([a, b]) => {
@@ -62,12 +66,11 @@ export default function IsosurfaceStep6() {
         ctx.lineWidth = 3
         ctx.beginPath(); ctx.moveTo(cell.sx(a[0]), cell.sy(a[1])); ctx.lineTo(cell.sx(b[0]), cell.sy(b[1])); ctx.stroke()
       })
-      const positions = [[0, 0], [1, 0], [1, 1], [0, 1]]
-      positions.forEach(([x, y], index) => {
-        markerCircle(ctx, cell.sx(x), cell.sy(y), 8, { fill: corners[index] ? colors.ink : colors.surface, stroke: colors.ink, lineWidth: selectedRef.current.kind === 'corner' && selectedRef.current.index === index ? 3 : 1.5 })
+      CORNER_POSITIONS.forEach(([x, y], index) => {
+        markerCircle(ctx, cell.sx(x), cell.sy(y), 8, { fill: corners[index] ? colors.ink : colors.surface, stroke: colors.ink, lineWidth: selected === index ? 3 : 1.5 })
         drawText(ctx, String(index + 1), cell.sx(x) + (x ? -12 : 12), cell.sy(y) + (y ? 12 : -12), { color: colors.ink, size: 11, align: x ? 'right' : 'left' })
       })
-      drawText(ctx, `case ${cellCase}`, cell.sx(0.5), cell.sy(0.5), { color: colors.muted, size: 16, align: 'center', baseline: 'middle' })
+      drawText(ctx, `case ${cellCase}`, cell.sx(0.5), cell.sy(0.5), { color: colors.ink, size: 16, align: 'center', baseline: 'middle' })
     })
 
     clipToFrame(ctx, field, () => {
@@ -76,9 +79,11 @@ export default function IsosurfaceStep6() {
         const f10 = data.samples[i + 1 + N * j]
         const f01 = data.samples[i + N * (j + 1)]
         const f11 = data.samples[i + 1 + N * (j + 1)]
-        ctx.fillStyle = rampColor(colors, (f00 + f10 + f01 + f11) / 4, 0.12)
+        const fill = rampRgb(colors, (f00 + f10 + f01 + f11) / 4, 0.12)
+        ctx.fillStyle = `rgb(${fill.join(' ')})`
         ctx.fillRect(field.sx(i / (N - 1)), field.sy((j + 1) / (N - 1)), field.sx((i + 1) / (N - 1)) - field.sx(i / (N - 1)) + 0.5, field.sy(j / (N - 1)) - field.sy((j + 1) / (N - 1)) + 0.5)
-        drawText(ctx, String(squareCase(f00, f10, f11, f01, 0)), field.sx((i + 0.5) / (N - 1)), field.sy((j + 0.5) / (N - 1)), { color: colors.muted, size: 8, align: 'center', baseline: 'middle' })
+        // マスの case 番号。マスの色(内側は lane-1 に近づく)の上で読める色(ink か surface)にする
+        drawText(ctx, String(squareCase(f00, f10, f11, f01, 0)), field.sx((i + 0.5) / (N - 1)), field.sy((j + 0.5) / (N - 1)), { color: inkOn(colors, fill), size: 11, align: 'center', baseline: 'middle' })
       }
       ctx.strokeStyle = colors.line
       ctx.lineWidth = 0.8
@@ -95,57 +100,77 @@ export default function IsosurfaceStep6() {
         ctx.lineTo(field.sx(b[0] / (N - 1)), field.sy(b[1] / (N - 1)))
       })
       ctx.stroke()
-      markerCircle(ctx, field.sx(center[0]), field.sy(center[1]), 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selectedRef.current.kind === 'circle' ? 3 : 1.5 })
+      markerCircle(ctx, field.sx(center[0]), field.sy(center[1]), 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selected === CIRCLE ? 3 : 1.5 })
     })
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
-  useEffect(() => { redraw() }, [corners, center, redraw])
+  useEffect(() => { redraw() }, [corners, center, selected, redraw])
   const currentLayouts = () => layouts(sizeRef.current.width, sizeRef.current.height)
   const hit = (point) => {
     const { cell, field } = currentLayouts()
-    const positions = [[0, 0], [1, 0], [1, 1], [0, 1]]
-    for (let index = 0; index < 4; index++) if (Math.hypot(point.x - cell.sx(positions[index][0]), point.y - cell.sy(positions[index][1])) <= 18) return { kind: 'corner', index }
-    if (Math.hypot(point.x - field.sx(center[0]), point.y - field.sy(center[1])) <= 20) return { kind: 'circle', index: -1 }
-    return null
+    for (let index = 0; index < 4; index++) if (Math.hypot(point.x - cell.sx(CORNER_POSITIONS[index][0]), point.y - cell.sy(CORNER_POSITIONS[index][1])) <= 18) return index
+    if (Math.hypot(point.x - field.sx(center[0]), point.y - field.sy(center[1])) <= 20) return CIRCLE
+    return -1
   }
   const toggleCorner = (index) => setCorners((current) => current.map((inside, i) => i === index ? !inside : inside))
   usePointerDrag(canvasRef, {
-    canGrab: (point) => Boolean(hit(point)),
-    onDown: (point) => { const target = hit(point); if (!target) return false; selectedRef.current = target; if (target.kind === 'corner') toggleCorner(target.index); redraw(); return true },
+    canGrab: (point) => hit(point) === CIRCLE, // 四隅は押すだけで切り替わる(つかむ物ではない)
+    cursorAt: (point) => { const target = hit(point); return target >= 0 && target < CIRCLE ? 'pointer' : null },
+    onDown: (point) => {
+      const target = hit(point)
+      if (target < 0) return false
+      canvasRef.current?.focus({ preventScroll: true }) // 押したあと、キーでも操作できるように
+      grabRef.current = target
+      setSelected(target)
+      if (target < CIRCLE) toggleCorner(target)
+      return true
+    },
     onMove: ({ x, y }) => {
-      if (selectedRef.current.kind !== 'circle') return
+      if (grabRef.current !== CIRCLE) return
       const { field } = currentLayouts()
       setCenter([clamp(field.wx(x), 0.28, 0.72), clamp(field.wy(y), 0.28, 0.72)])
     },
-    onUp: () => {},
+    onUp: () => { grabRef.current = -1 },
   })
+  // 1〜4 は絵の角の番号。PageUp・PageDown で四隅と円を順に選ぶ。Space・Enter で選んだ角を切り替え、矢印キーで円を動かす
   const onKeyDown = (event) => {
-    if (/^[1-4]$/.test(event.key)) { event.preventDefault(); const index = Number(event.key) - 1; selectedRef.current = { kind: 'corner', index }; toggleCorner(index); return }
-    if ((event.key === ' ' || event.key === 'Enter') && selectedRef.current.kind === 'corner') { event.preventDefault(); toggleCorner(selectedRef.current.index); return }
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    if (/^[1-4]$/.test(event.key)) {
+      event.preventDefault()
+      const index = Number(event.key) - 1
+      setSelected(index)
+      toggleCorner(index)
+      return
+    }
+    const page = pageStep(event)
+    if (page) {
+      event.preventDefault()
+      setSelected(cycleIndex(selected, page, CIRCLE + 1))
+      return
+    }
+    if ((event.key === ' ' || event.key === 'Enter') && selected < CIRCLE) {
+      event.preventDefault()
+      toggleCorner(selected)
+      return
+    }
     const step = arrowStep(event)
-    if (!step) return
+    if (!step || selected !== CIRCLE) return
     event.preventDefault()
-    if (selectedRef.current.kind === 'corner') {
-      const positions = [[0, 0], [1, 0], [1, 1], [0, 1]]
-      const [x, y] = positions[selectedRef.current.index]
-      const nextX = clamp(x + step.dx, 0, 1)
-      const nextY = clamp(y + step.dy, 0, 1)
-      selectedRef.current = { kind: 'corner', index: positions.findIndex(([px, py]) => px === nextX && py === nextY) }
-    } else setCenter(([x, y]) => [clamp(x + step.dx * 0.02, 0.28, 0.72), clamp(y + step.dy * 0.02, 0.28, 0.72)])
-    redraw()
+    setCenter(([x, y]) => [clamp(x + step.dx * 0.02, 0.28, 0.72), clamp(y + step.dy * 0.02, 0.28, 0.72)])
   }
+  const selectedName = selected === CIRCLE ? '円の中心' : `角 ${selected + 1}`
   return (
     <SimShell
       label="マーチングスクエアの 16 通り"
       height={{ phone: [330, 410], pc: [280, 360] }}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="左の四隅をクリック、または 1 から 4 キーで切り替えられます。右の円の中心をドラッグでき、矢印キーでも選択中の対象を操作できます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={`1 マスの四隅（番号 1〜4、塗りつぶしが内側）と、そのマスに引かれる線分と case 番号の絵。円から作った場の、マスごとの case 番号と等値線、円の中心の丸も描いています。四隅はクリックか 1〜4 キーで内外を切り替え、円の中心はドラッグで動かせます。PageUp・PageDown で四隅と円を選び、Space か Enter で選んだ角を切り替え、矢印キーで円を動かします（Shift で大きく）。選択中は${selectedName}。`} />}
       legend={<SimLegend items={[
         { key: 'outside', label: '外側の角', swatch: 'var(--color-surface)' },
         { key: 'inside', label: '内側の角', swatch: 'var(--color-ink)' },
-        { key: 'case', label: '左の case', value: String(cellCase), minChars: 3 },
-        { key: 'segments', label: '右の線分', value: String(fieldData().contour.segments.length), minChars: 4 },
+        { key: 'case', label: '1 マスの case', value: String(cellCase), minChars: 3 },
+        { key: 'segments', label: '円の等値線の線分', value: String(fieldData().contour.segments.length), minChars: 4 },
       ]} />}
-      controls={<SimToolbar><ResetButton onClick={() => { setCorners(INITIAL_CORNERS); setCenter([0.56, 0.52]); selectedRef.current = { kind: 'corner', index: 0 } }} /></SimToolbar>}
+      controls={<SimToolbar><ResetButton onClick={() => { setCorners(INITIAL_CORNERS); setCenter(INITIAL_CENTER); setSelected(0) }} /></SimToolbar>}
     />
   )
 }

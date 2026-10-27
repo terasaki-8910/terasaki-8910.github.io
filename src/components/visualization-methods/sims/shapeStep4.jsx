@@ -9,9 +9,16 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
 import { bernstein, bezierPoint } from '../../../utils/vis/curve'
-import { drawControlPoints, drawHull, drawPolyline, hitControlPoint, rangesForAspect, sampleCurve } from './shapeKit'
+import { cycleSelection, drawControlPoints, drawDivider, drawGraphAxes, drawHaloText, drawHull, drawPolyline, focusOnGrab, hitControlPoint, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
 
 const INITIAL = [[0.4, 0.5], [1.1, 2.5], [2.7, 2.4], [3.6, 0.6]]
+// 基底の曲線の名前を書く位置(t)。色だけで区別しないため。端の 2 本は急なので曲線の横に、中の 2 本は山の上に書く
+const BASIS_NAMES = [
+  { index: 0, t: 0.1, dx: 5, dy: 0, align: 'left', baseline: 'middle' },
+  { index: 1, t: 1 / 3, dx: 0, dy: -6, align: 'center', baseline: 'alphabetic' },
+  { index: 2, t: 2 / 3, dx: 0, dy: -6, align: 'center', baseline: 'alphabetic' },
+  { index: 3, t: 0.9, dx: -5, dy: 0, align: 'right', baseline: 'middle' },
+]
 
 const offsetView = (view, offset) => ({
   ...view,
@@ -41,12 +48,7 @@ export default function ShapeStep4() {
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
     drawAxes(ctx, geometry, { colors, xLabel: 'x', yLabel: 'y' })
-    ctx.strokeStyle = colors.line
-    ctx.lineWidth = 1
-    ctx.beginPath()
-    ctx.moveTo(split, 14)
-    ctx.lineTo(split, height - 14)
-    ctx.stroke()
+    drawDivider(ctx, colors, split, 14, split, height - 14)
 
     drawHull(ctx, geometry, points, colors)
     drawPolyline(ctx, geometry, points, { color: colors.muted, width: 1.25, dash: [5, 4] })
@@ -55,41 +57,28 @@ export default function ShapeStep4() {
     points.forEach(([x, y], i) => drawText(ctx, `P${i}  ${fmt(weights[i], 2)}`, geometry.sx(x), geometry.sy(y) - 11, { color: colors.ink, align: 'center' }))
     markerCircle(ctx, geometry.sx(point[0]), geometry.sy(point[1]), 6, { fill: laneColor(colors, 4), stroke: colors.ink, lineWidth: 1.5 })
 
-    ctx.strokeStyle = colors.line
-    ctx.lineWidth = 1
-    ctx.beginPath()
-    ctx.moveTo(graph.frame.left, graph.frame.bottom)
-    ctx.lineTo(graph.frame.right, graph.frame.bottom)
-    ctx.moveTo(graph.frame.left, graph.frame.bottom)
-    ctx.lineTo(graph.frame.left, graph.frame.top)
-    ctx.stroke()
-    drawText(ctx, 't', graph.frame.right, graph.frame.bottom + 17, { color: colors.ink, align: 'right' })
-    drawText(ctx, 'B', graph.frame.left - 8, graph.frame.top, { color: colors.ink, align: 'right' })
-    ;[0, 0.5, 1].forEach((tick) => {
-      ctx.beginPath()
-      ctx.moveTo(graph.sx(tick), graph.frame.bottom)
-      ctx.lineTo(graph.sx(tick), graph.frame.bottom + 4)
-      ctx.moveTo(graph.frame.left - 4, graph.sy(tick))
-      ctx.lineTo(graph.frame.left, graph.sy(tick))
-      ctx.stroke()
-      drawText(ctx, String(tick), graph.sx(tick), graph.frame.bottom + 14, { color: colors.muted, align: 'center' })
-      drawText(ctx, String(tick), graph.frame.left - 7, graph.sy(tick), { color: colors.muted, align: 'right', baseline: 'middle' })
-    })
+    drawGraphAxes(ctx, graph, { colors, xTicks: [0, 0.5, 1], yTicks: [0, 0.5, 1], xLabel: 't', yLabel: 'B' })
 
     for (let i = 0; i < 4; i++) {
       const basis = sampleCurve((u) => [u, bernstein(3, i, u)], 120)
       drawPolyline(ctx, graph, basis.map((sample) => sample.point), { color: laneColor(colors, i), width: 2 })
       markerCircle(ctx, graph.sx(t), graph.sy(weights[i]), 3.5, { fill: laneColor(colors, i), stroke: colors.surface, lineWidth: 1 })
     }
+    ctx.save()
     ctx.strokeStyle = colors.ink
-    ctx.lineWidth = selectedT ? 3 : 2
+    ctx.lineWidth = selectedT ? 4 : 2 // 選んでいるときは太く(縁の太さで選択を示す)
     ctx.setLineDash([5, 4])
     ctx.beginPath()
     ctx.moveTo(graph.sx(t), graph.frame.top)
     ctx.lineTo(graph.sx(t), graph.frame.bottom)
     ctx.stroke()
-    ctx.setLineDash([])
-    drawText(ctx, `Σ = ${fmt(weights.reduce((sum, value) => sum + value, 0), 2)}`, graph.frame.right, graph.frame.top + 12, { color: colors.ink, align: 'right' })
+    ctx.restore()
+    // 曲線の名前と Σ は、縦線や曲線が文字を横切っても読めるように、地の色で縁どる
+    const halo = { color: colors.ink, halo: colors.surface }
+    BASIS_NAMES.forEach(({ index, t: at, dx, dy, align, baseline }) => {
+      drawHaloText(ctx, `B${index}`, graph.sx(at) + dx, graph.sy(bernstein(3, index, at)) + dy, { ...halo, align, baseline })
+    })
+    drawHaloText(ctx, `Σ = ${fmt(weights.reduce((sum, value) => sum + value, 0), 2)}`, graph.frame.right, graph.frame.top + 12, { ...halo, align: 'right' })
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -108,7 +97,7 @@ export default function ShapeStep4() {
       const info = pointerInfo(position)
       return info.control >= 0 || info.overT
     },
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const info = pointerInfo(position)
       if (info.control >= 0) {
         dragging.current = { type: 'control', index: info.control }
@@ -122,7 +111,7 @@ export default function ShapeStep4() {
         return
       }
       return false
-    },
+    }),
     onMove: (position) => {
       const { geometry, graph } = pointerInfo(position)
       if (dragging.current?.type === 't') setT(clamp(graph.wx(position.x), 0, 1))
@@ -137,11 +126,13 @@ export default function ShapeStep4() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const move = pageStep(event)
+    if (move) {
       event.preventDefault()
-      const direction = event.key === 'PageUp' ? 1 : -1
-      setSelected((selected + direction + points.length) % points.length)
-      setSelectedT(false)
+      // 制御点 → グラフの t の縦線の順に巡る
+      const next = cycleSelection(selected, selectedT, move, points.length)
+      setSelected(next.selected)
+      setSelectedT(next.onCurve)
       return
     }
     const step = arrowStep(event)
@@ -162,7 +153,7 @@ export default function ShapeStep4() {
   return (
     <SimShell
       label="バーンスタイン基底"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="3 次ベジエ曲線と、4 個のバーンスタイン基底のグラフ。制御点またはグラフの縦線をつかんで動かせる。矢印キーで選択中のものを動かし、PageUp と PageDown で制御点を選べる" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="3 次ベジエ曲線と、4 個のバーンスタイン基底 B0 から B3 のグラフ。制御点と、グラフの t の縦線をドラッグで動かせる。矢印キー(Shift で 5 倍)で選択中のものを動かし、PageUp と PageDown で 4 個の制御点と t の縦線を順に選べる" />}
       legend={<SimLegend items={[
         { key: 'curve', label: 'ベジエ曲線', swatch: 'var(--color-ink)' },
         ...weights.map((weight, i) => ({ key: `b${i}`, symbol: `B_${i}^3`, label: `P${i} の重み`, value: fmt(weight, 3), swatch: `var(--lane-${i})`, minChars: 7 })),

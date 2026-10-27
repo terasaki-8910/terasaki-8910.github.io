@@ -18,7 +18,7 @@ import {
   frame2D,
   uniformKnots,
 } from '../../../utils/vis/curve'
-import { drawControlPoints, drawHull, drawPolyline, hitControlPoint, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
+import { cycleSelection, drawControlPoints, drawHull, drawPolyline, focusOnGrab, hitControlPoint, nearestCurveSample, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
 
 const INITIAL_POINTS = [[0.8, 1.2], [1.8, 4.6], [3.2, 4.9], [4.2, 2], [5.4, 1.4], [6.6, 4.4], [7.4, 4.8]]
 const MARKER_R = 7
@@ -111,8 +111,9 @@ export default function ShapeSim() {
     markerCircle(ctx, view.sx(current[0]), view.sy(current[1]), MARKER_R, {
       fill: laneColor(colors, 0), stroke: colors.ink, lineWidth: curveSelected ? 3.5 : 1.5,
     })
-    drawControlPoints(ctx, view, points, colors, { selected: curveSelected ? -1 : selected })
     ctx.restore()
+    // 制御点は枠の端まで動かせて、名前は枠の外に出るので、切り取りの外で描く
+    drawControlPoints(ctx, view, points, colors, { selected: curveSelected ? -1 : selected })
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -130,7 +131,7 @@ export default function ShapeSim() {
       const { control, curve } = pointerInfo(position)
       return control >= 0 || curve.distance <= MARKER_R + GRAB_SLOP_PX
     },
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const { control, curve } = pointerInfo(position)
       if (control >= 0) {
         dragging.current = { type: 'control', index: control }
@@ -145,7 +146,7 @@ export default function ShapeSim() {
         return
       }
       return false
-    },
+    }),
     onMove: (position) => {
       const { view, curve } = pointerInfo(position)
       if (dragging.current?.type === 'curve') setU(curve.u)
@@ -159,11 +160,13 @@ export default function ShapeSim() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const move = pageStep(event)
+    if (move) {
       event.preventDefault()
-      const direction = event.key === 'PageUp' ? 1 : -1
-      setSelected((selected + direction + points.length) % points.length)
-      setCurveSelected(false)
+      // 制御点 7 個 → 曲線上の点の順に巡る(曲線上の点は、u のスライダーに触れなくてもキーで選べる)
+      const next = cycleSelection(selected, curveSelected, move, points.length)
+      setSelected(next.selected)
+      setCurveSelected(next.onCurve)
       return
     }
     const step = arrowStep(event)
@@ -191,9 +194,13 @@ export default function ShapeSim() {
   const modeLabel = mode === 'bezier' ? '6 次・1 本' : mode === 'bspline' ? '3 次・4 区分' : `${levels} 回（${chaikin(points, levels).length} 点）`
   const legend = [
     { key: 'controls', label: '制御点', swatch: 'rgb(var(--color-accent))' },
-    { key: 'curve', label: '曲線', swatch: 'var(--color-ink)' },
+    { key: 'curve', label: mode === 'subdivision' ? '細分割した折れ線' : '曲線', swatch: 'var(--color-ink)' },
     { key: 'polygon', label: '制御点の折れ線', swatch: 'var(--color-muted)' },
+    { key: 'point', label: '曲線上の点', swatch: 'var(--lane-0)' },
+    { key: 'tangent', symbol: 'T', label: '単位接線', swatch: 'var(--lane-3)' },
+    { key: 'normal', symbol: 'N', label: '単位法線', swatch: 'var(--lane-4)' },
     { key: 'circle', label: '曲率の円', swatch: 'var(--lane-1)' },
+    ...(mode === 'bspline' ? [{ key: 'joint', label: '区分のつなぎ目', swatch: 'var(--lane-2)' }] : []),
     { key: 'kappa', symbol: '\\kappa', label: '曲率', value: fmt(kappa, 3), minChars: 8 },
     { key: 'radius', symbol: 'R', label: '曲率半径', value: Number.isFinite(radius) ? fmt(radius, 2) : '∞', minChars: 8 },
     { key: 'degree', label: '次数・区分', value: modeLabel, minChars: 12 },
@@ -203,7 +210,7 @@ export default function ShapeSim() {
     <SimShell
       label="制御点から作る曲線"
       switcher={<ModeSwitch label="曲線の作り方" value={mode} options={[{ value: 'bezier', label: 'ベジエ' }, { value: 'bspline', label: 'B スプライン' }, { value: 'subdivision', label: '細分割' }]} onChange={setMode} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="7 個の制御点から作る曲線。制御点または曲線上の点をつかんで動かせる。矢印キーで選択中の点を動かし、PageUp と PageDown で制御点を選べる" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="7 個の制御点から作る曲線と、曲線上の点での接線・法線・曲率の円。制御点と曲線上の点をドラッグで動かせる。矢印キー(Shift で 5 倍)で選択中のものを動かし、PageUp と PageDown で 7 個の制御点と曲線上の点を順に選べる" />}
       legend={<SimLegend items={legend} />}
       controls={
         <>

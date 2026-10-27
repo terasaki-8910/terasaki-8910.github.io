@@ -6,10 +6,11 @@ import ParamSlider from '../../visualization/ParamSlider'
 import { SimToolbar, ResetButton } from '../../visualization/SimButtons'
 import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
-import { arrowStep, clamp, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
+import { GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { bezierPatch } from '../../../utils/vis/curve'
 import { orbitPose, cameraMatrices } from '../../visualization/sims/transformCamera'
 import { projectPoint, drawLine3d, drawArrow3d, drawDot3d, drawText3d } from '../../visualization/sims/transformMesh'
+import { focusOnGrab, pageStep } from './shapeKit'
 
 const HEIGHTS = [
   [0, 0.2, -0.1, 0],
@@ -19,6 +20,10 @@ const HEIGHTS = [
 ]
 const GRID = [-1.5, -0.5, 0.5, 1.5]
 const POINT_R = 6
+// 選ぶ物の輪: 制御点 0 〜 15 のあとに「視点」が 1 つ続く(選んでいるときは矢印キーで視点を回す)
+const VIEW = 16
+const VIEW_KEY_STEP = 0.05 // 矢印キー 1 回で回す角度(rad。約 3°)
+const toDegrees = (radians) => Math.round((radians * 180) / Math.PI)
 
 const initialPatch = () => GRID.map((x, i) => GRID.map((z, j) => [x, HEIGHTS[i][j], z]))
 const addScaled = (point, vector, scale) => point.map((value, index) => value + vector[index] * scale)
@@ -126,6 +131,15 @@ export default function ShapeStep8() {
       })
     })
     ctx.restore()
+
+    if (selected === VIEW) {
+      // 視点を選んでいるときは、絵の縁に ink の枠を出す(フォーカスの輪郭は縁の 2〜4px 内側なので、その内側に離して描く)
+      ctx.save()
+      ctx.strokeStyle = colors.ink
+      ctx.lineWidth = 2
+      ctx.strokeRect(6, 6, width - 12, height - 12)
+      ctx.restore()
+    }
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -137,7 +151,7 @@ export default function ShapeStep8() {
   const hitControl = (position) => {
     const { width, height } = sizeRef.current
     let hit = -1
-    let distance = POINT_R + 7
+    let distance = POINT_R + GRAB_SLOP_PX
     projectedControls(width, height).forEach((point) => {
       const candidate = Math.hypot(position.x - point.x, position.y - point.y)
       if (candidate <= distance) {
@@ -149,15 +163,16 @@ export default function ShapeStep8() {
   }
   usePointerDrag(canvasRef, {
     canGrab: () => true,
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const index = hitControl(position)
       if (index >= 0) {
         setSelected(index)
         dragging.current = { type: 'height', index, startY: position.y, startHeight: patch[Math.floor(index / 4)][index % 4][1] }
       } else {
+        setSelected(VIEW)
         dragging.current = { type: 'orbit', startX: position.x, startY: position.y, startYaw: yaw, startPitch: pitch }
       }
-    },
+    }),
     onMove: (position) => {
       if (dragging.current?.type === 'height') {
         const { index, startY, startHeight } = dragging.current
@@ -175,15 +190,21 @@ export default function ShapeStep8() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const move = pageStep(event)
+    if (move) {
       event.preventDefault()
-      const direction = event.key === 'PageUp' ? 1 : -1
-      setSelected((selected + direction + 16) % 16)
+      setSelected((selected + move + VIEW + 1) % (VIEW + 1))
       return
     }
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
+    if (selected === VIEW) {
+      // ポインタのドラッグと同じ向き: 右で yaw が増え、上で pitch が増える
+      setYaw((value) => value + step.dx * VIEW_KEY_STEP)
+      setPitch((value) => clamp(value + step.dy * VIEW_KEY_STEP, -1.1, 1.1))
+      return
+    }
     const row = Math.floor(selected / 4)
     const column = selected % 4
     const delta = (step.dx + step.dy) * 0.08
@@ -199,18 +220,25 @@ export default function ShapeStep8() {
     setYaw(0.68)
     setPitch(0.42)
   }
-  const selectedPoint = patch[Math.floor(selected / 4)][selected % 4]
+  const onView = selected === VIEW
+  const selectedPoint = onView ? null : patch[Math.floor(selected / 4)][selected % 4]
+  const yawDegrees = ((toDegrees(yaw) % 360) + 360) % 360
 
   return (
     <SimShell
       label="双 3 次ベジエ曲面"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="4 掛ける 4 個の制御点で作るベジエ曲面。制御点を上下にドラッグすると高さが変わり、空いている場所をドラッグすると視点が回る。矢印キーで選択点の高さを変え、PageUp と PageDown で点を選べる" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="4 掛ける 4 個の制御点で作るベジエ曲面。制御点を上下にドラッグすると高さが変わり、空いている場所をドラッグすると視点が回る。PageUp と PageDown で 16 個の制御点と視点を順に選べる。矢印キー(Shift で 5 倍)は、制御点を選んでいれば高さを変え(右・上で上がる)、視点を選んでいれば左右で向きを、上下で見下ろす角度を変える" />}
       legend={<SimLegend items={[
         { key: 'surface', label: 'ベジエ曲面', swatch: 'var(--lane-0)' },
         { key: 'u', symbol: 'S_u', label: 'u 方向の接線', swatch: 'var(--lane-2)' },
         { key: 'v', symbol: 'S_v', label: 'v 方向の接線', swatch: 'var(--lane-3)' },
         { key: 'normal', symbol: 'n', label: '法線', swatch: 'var(--lane-4)' },
-        { key: 'height', label: `P${Math.floor(selected / 4)}${selected % 4} の高さ`, value: fmt(selectedPoint[1], 2), minChars: 7 },
+        {
+          key: 'selected',
+          label: onView ? '選択中の視点' : `選択中の P${Math.floor(selected / 4)}${selected % 4}`,
+          value: onView ? `向き ${yawDegrees}°・見下ろし ${fmt(toDegrees(pitch), 0)}°` : `高さ ${fmt(selectedPoint[1], 2)}`,
+          minChars: 17,
+        },
       ]} />}
       controls={
         <>

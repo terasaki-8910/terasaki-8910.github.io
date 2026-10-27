@@ -13,7 +13,7 @@ import { arrowStep, clamp, markerCircle } from '../../visualization/sims/rigidKi
 import { marchingCubes, marchingSquares, metaballField, squareCase } from '../../../utils/vis/isosurface'
 import { cameraViewProjection, projectVertex, renderScene } from '../../../utils/vis/render'
 import { flatEnvironment, tokenRgb } from './shadingKit'
-import { clipToFrame, drawBallHandles, drawFieldCells, drawSegments, hitBall, makeIsoView } from './isosurfaceKit'
+import { clipToFrame, cycleIndex, drawBallHandles, drawFieldCells, drawSegments, drawViewMark, hitBall, makeIsoView, pageStep } from './isosurfaceKit'
 import { blitPixels } from './pixelKit'
 
 const INITIAL_BALLS = [
@@ -24,7 +24,20 @@ const INITIAL_BALLS = [
   { x: 3.45, y: 0.72, z: 0.95, b: 1 },
 ]
 
-const cloneBalls = (balls, radius) => balls.map((ball) => ({ ...ball, R: radius }))
+// 3 次元の絵で、粒子のほかに選べる物「視点(回転)」の番号(粒子は 0〜4)
+const VIEW = INITIAL_BALLS.length
+
+const copyBalls = (balls) => balls.map((ball) => ({ ...ball }))
+
+// 粒子の揺れ(位相 phase での、中心からのずれ)。位置そのものは持たず、フレームごとの変化分だけを足すので、
+// ドラッグやキーで動かした位置から揺れが続く(動かした位置が次のフレームで元に戻らない)
+function wobble(index, phase) {
+  return {
+    x: 0.12 * Math.sin(0.32 * phase + index * 1.3),
+    y: 0.1 * Math.cos(0.27 * phase + index * 0.9),
+    z: 0.12 * Math.sin(0.23 * phase + index * 1.7),
+  }
+}
 
 const CUBE_FACES = [
   [0, 2, 6, 4], [1, 3, 7, 5],
@@ -72,11 +85,13 @@ export default function IsosurfaceSim() {
   const [ambiguity, setAmbiguity] = useState('asymptotic')
   const [showValues, setShowValues] = useState(true)
   const [showPoints, setShowPoints] = useState(true)
-  const [balls, setBalls] = useState(() => cloneBalls(INITIAL_BALLS, radius))
-  const ballsRef = useRef(balls)
-  const selectedRef = useRef(-1)
+  const [selected, setSelected] = useState(0) // 選んでいる物: 0〜4 は粒子、VIEW は 3 次元の視点
+  // 粒子の位置は ref が唯一の持ち主(再生中は毎フレーム変わる)。動かしたら redraw() で描き直す
+  const ballsRef = useRef(null)
+  if (ballsRef.current === null) ballsRef.current = copyBalls(INITIAL_BALLS)
   const cameraRef = useRef({ yaw: -0.72, pitch: 0.34 })
-  const rotateRef = useRef(false)
+  const grabRef = useRef(-1) // ドラッグでつかんでいる粒子(なければ -1)
+  const rotateRef = useRef(false) // ドラッグで視点を回しているか
   const legendRef = useRef(null)
   const phaseRef = useRef(0)
 
@@ -105,7 +120,7 @@ export default function IsosurfaceSim() {
           }
         }
         drawSegments(ctx, view, result.segments, n, n, colors.ink)
-        drawBallHandles(ctx, view, activeBalls, colors, selectedRef.current)
+        drawBallHandles(ctx, view, activeBalls, colors, selected)
       })
       drawAxes(ctx, view, { colors, xLabel: 'x', yLabel: 'y' })
       legendRef.current?.update({ count: String(result.segments.length), ambiguous: String(result.ambiguous) })
@@ -143,30 +158,45 @@ export default function IsosurfaceSim() {
       markerCircle(ctx, point[0], point[1], 7, {
         fill: colors.accent,
         stroke: colors.ink,
-        lineWidth: index === selectedRef.current ? 3.5 : 1.5,
+        lineWidth: index === selected ? 3.5 : 1.5,
       })
     })
+    if (selected === VIEW) drawViewMark(ctx, colors, width, height)
     legendRef.current?.update({ count: String(mesh.triangles.length), ambiguous: String(ambiguous) })
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw, maxDpr: 1 })
 
   useEffect(() => {
-    ballsRef.current = balls.map((ball) => ({ ...ball, R: radius }))
     redraw()
-  }, [balls, radius, mode, threshold, grid2d, grid3d, interpolate, ambiguity, showValues, showPoints, redraw])
+  }, [mode, threshold, radius, grid2d, grid3d, interpolate, ambiguity, showValues, showPoints, selected, redraw])
 
+  // 再生: 粒子は今の位置から、揺れの変化分だけ動く(つかんで動かした位置から続く)
   const loop = useSimLoop((dt) => {
+    const before = phaseRef.current
     phaseRef.current += Math.min(dt, 0.05)
-    const phase = phaseRef.current
-    ballsRef.current = INITIAL_BALLS.map((ball, index) => ({
-      ...ball,
-      x: ball.x + 0.12 * Math.sin(0.32 * phase + index * 1.3),
-      y: ball.y + 0.1 * Math.cos(0.27 * phase + index * 0.9),
-      z: ball.z + 0.12 * Math.sin(0.23 * phase + index * 1.7),
-      R: radius,
-    }))
+    const after = phaseRef.current
+    ballsRef.current = ballsRef.current.map((ball, index) => {
+      const from = wobble(index, before)
+      const to = wobble(index, after)
+      return {
+        ...ball,
+        x: clamp(ball.x + to.x - from.x, 0, 4),
+        y: clamp(ball.y + to.y - from.y, 0, 3),
+        z: clamp(ball.z + to.z - from.z, 0, 3),
+      }
+    })
     redraw()
   }, { targetRef: canvasRef, autoStart: true })
+
+  const moveBall = (index, next) => {
+    ballsRef.current = ballsRef.current.map((ball, i) => (i === index ? { ...ball, ...next } : ball))
+    redraw()
+  }
+  const rotateView = (dyaw, dpitch) => {
+    cameraRef.current.yaw += dyaw
+    cameraRef.current.pitch = clamp(cameraRef.current.pitch + dpitch, -1.1, 1.1)
+    redraw()
+  }
 
   const viewFor = () => makeIsoView(sizeRef.current.width, sizeRef.current.height)
   const projectedBall = (point) => {
@@ -187,45 +217,55 @@ export default function IsosurfaceSim() {
     canGrab: (point) => mode === '2d' ? hitBall(viewFor(), ballsRef.current, point) >= 0 : true,
     onDown: (point) => {
       const hit = mode === '2d' ? hitBall(viewFor(), ballsRef.current, point) : projectedBall(point)
-      if (hit >= 0) loop.pause()
-      selectedRef.current = hit
-      rotateRef.current = mode === '3d' && hit < 0
-      return mode === '3d' || hit >= 0
+      if (hit < 0 && mode === '2d') return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも動かせるように
+      grabRef.current = hit
+      rotateRef.current = hit < 0
+      if (hit >= 0) loop.pause() // 粒子を動かすあいだは揺れを止める(動かした位置から続く)
+      setSelected(hit >= 0 ? hit : VIEW)
+      return true
     },
     onMove: ({ x, y, dx, dy }) => {
       if (rotateRef.current) {
-        cameraRef.current.yaw -= dx * 0.008
-        cameraRef.current.pitch = clamp(cameraRef.current.pitch - dy * 0.008, -1.1, 1.1)
-        redraw()
+        rotateView(-dx * 0.008, -dy * 0.008)
         return
       }
-      const index = selectedRef.current
+      const index = grabRef.current
       if (index < 0) return
-      const next = ballsRef.current.map((ball) => ({ ...ball }))
       if (mode === '2d') {
         const view = viewFor()
-        next[index].x = clamp(view.wx(x), 0, 4)
-        next[index].y = clamp(view.wy(y), 0, 3)
+        moveBall(index, { x: clamp(view.wx(x), 0, 4), y: clamp(view.wy(y), 0, 3) })
       } else {
-        next[index].x = clamp(next[index].x + dx * 0.008, 0, 4)
-        next[index].y = clamp(next[index].y - dy * 0.008, 0, 3)
+        const ball = ballsRef.current[index]
+        moveBall(index, { x: clamp(ball.x + dx * 0.008, 0, 4), y: clamp(ball.y - dy * 0.008, 0, 3) })
       }
-      ballsRef.current = next
-      setBalls(next)
     },
-    onUp: () => { selectedRef.current = -1; rotateRef.current = false; redraw() },
+    onUp: () => { grabRef.current = -1; rotateRef.current = false },
   })
 
+  // PageUp・PageDown で選ぶ物を変え(3 次元では粒子 5 個と視点)、矢印キーで選んだ物を動かす(視点は回す)
   const onKeyDown = (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    const page = pageStep(event)
+    if (page) {
+      event.preventDefault()
+      setSelected(cycleIndex(selected, page, mode === '3d' ? VIEW + 1 : VIEW))
+      return
+    }
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
-    const index = selectedRef.current >= 0 ? selectedRef.current : 0
-    const next = ballsRef.current.map((ball) => ({ ...ball }))
-    next[index].x = clamp(next[index].x + step.dx * 0.05, 0, 4)
-    next[index].y = clamp(next[index].y + step.dy * 0.05, 0, 3)
-    ballsRef.current = next
-    setBalls(next)
+    if (selected === VIEW) {
+      rotateView(-step.dx * 0.08, step.dy * 0.08)
+      return
+    }
+    loop.pause()
+    const ball = ballsRef.current[selected]
+    moveBall(selected, { x: clamp(ball.x + step.dx * 0.05, 0, 4), y: clamp(ball.y + step.dy * 0.05, 0, 3) })
+  }
+  const changeMode = (value) => {
+    setMode(value)
+    if (value === '2d' && selected === VIEW) setSelected(0) // 2 次元には視点がない
   }
   const reset = () => {
     loop.pause()
@@ -237,20 +277,25 @@ export default function IsosurfaceSim() {
     setAmbiguity('asymptotic')
     setShowValues(true)
     setShowPoints(true)
+    setSelected(0)
     cameraRef.current = { yaw: -0.72, pitch: 0.34 }
     phaseRef.current = 0
-    const next = cloneBalls(INITIAL_BALLS, 0.85)
-    ballsRef.current = next
-    setBalls(next)
+    ballsRef.current = copyBalls(INITIAL_BALLS)
+    redraw()
   }
+
+  const selectedName = selected === VIEW ? '視点' : `粒子 ${selected + 1}`
+  const label = mode === '2d'
+    ? `5 個の粒子から取り出した等値線と、格子の値の絵。粒子をドラッグで動かせます。PageUp・PageDown で粒子を選び、矢印キーで動かします（Shift で大きく）。選択中は${selectedName}。`
+    : `5 個の粒子から取り出した等値面の絵。粒子をドラッグで動かし、粒子のない所のドラッグで視点を回せます。PageUp・PageDown で粒子か視点を選び、矢印キーで粒子を動かすか視点を回します（Shift で大きく）。選択中は${selectedName}。`
 
   return (
     <SimShell
       label="等値線と等値面"
-      switcher={<ModeSwitch label="次元" value={mode} options={[{ value: '2d', label: '2 次元' }, { value: '3d', label: '3 次元' }]} onChange={setMode} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label={mode === '2d' ? '5 個の粒子から作る等値線。粒子をドラッグまたは矢印キーで動かせます。' : '5 個の粒子から作る等値面。粒子をドラッグでき、空いた所のドラッグで視点を回せます。'} />}
+      switcher={<ModeSwitch label="次元" value={mode} options={[{ value: '2d', label: '2 次元' }, { value: '3d', label: '3 次元' }]} onChange={changeMode} variant="tabs" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={label} />}
       legend={<SimLegend ref={legendRef} items={[
-        { key: 'field', label: '場', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--color-paper), var(--lane-1))' },
+        { key: 'field', label: '場', value: '外 → 内', swatch: 'linear-gradient(90deg, var(--color-surface), var(--lane-1))' },
         { key: 'contour', label: mode === '2d' ? '等値線' : '等値面', swatch: mode === '2d' ? 'var(--color-ink)' : 'var(--lane-1)' },
         { key: 'threshold', symbol: 'T', label: 'しきい値', value: threshold.toFixed(2) },
         { key: 'grid', symbol: mode === '2d' ? 'N\\times N' : 'N\\times N\\times N', label: '格子', value: mode === '2d' ? `${grid2d} × ${grid2d}` : `${grid3d} × ${grid3d} × ${grid3d}` },

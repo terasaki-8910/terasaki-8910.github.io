@@ -7,13 +7,15 @@ import { SimToolbar, ResetButton } from '../../visualization/SimButtons'
 import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes, drawArrow } from '../../visualization/axes'
-import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
+import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { bezierDerivative, bezierPoint, curvature2D, frame2D } from '../../../utils/vis/curve'
-import { drawControlPoints, drawPolyline, hitControlPoint, nearestCurveSample, rangesForAspect, sampleCurve } from './shapeKit'
+import { cycleSelection, drawControlPoints, drawDivider, drawGraphAxes, drawPolyline, focusOnGrab, hitControlPoint, nearestCurveSample, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
 
 const INITIAL = [[0.45, 0.7], [1.15, 3], [3.2, 2.7], [4.2, 0.8]]
 const POINT_R = 7
 const copyInitial = () => INITIAL.map((point) => point.slice())
+// 縦に並べるときのグラフの余白。絵より詰める(上は軸の名前の分、下は目盛りの文字の分だけ)
+const STACKED_GRAPH_MARGIN = { ...STEP_MARGIN, top: 20, bottom: 24 }
 const offsetYView = (view, offset) => ({
   ...view,
   sy: (y) => view.sy(y) + offset,
@@ -55,9 +57,9 @@ export default function ShapeStep7() {
       const graphBase = makeView({ width: width - split, height, xRange: [0, 1], yRange: [-graphLimit, graphLimit], equal: false, margin: STEP_MARGIN })
       return { geometry, graph: offsetXView(graphBase, split), split, sideBySide: true }
     }
-    const split = Math.max(155, Math.min(height * 0.66, height - 105))
+    const split = Math.max(155, Math.round(height * 0.6))
     const geometry = makeView({ width, height: split, ...rangesForAspect([0, 4.7], [0, 3.5], width, split), margin: STEP_MARGIN })
-    const graphBase = makeView({ width, height: height - split, xRange: [0, 1], yRange: [-graphLimit, graphLimit], equal: false, margin: STEP_MARGIN })
+    const graphBase = makeView({ width, height: height - split, xRange: [0, 1], yRange: [-graphLimit, graphLimit], equal: false, margin: STACKED_GRAPH_MARGIN })
     return { geometry, graph: offsetYView(graphBase, split), split, sideBySide: false }
   }
 
@@ -83,43 +85,31 @@ export default function ShapeStep7() {
     drawArrow(ctx, geometry, current[0], current[1], current[0] + frame.tangent[0], current[1] + frame.tangent[1], { color: laneColor(colors, 3), width: 2 })
     drawArrow(ctx, geometry, current[0], current[1], current[0] + normal[0], current[1] + normal[1], { color: laneColor(colors, 4), width: 2 })
     markerCircle(ctx, geometry.sx(current[0]), geometry.sy(current[1]), POINT_R, { fill: laneColor(colors, 0), stroke: colors.ink, lineWidth: selectedT ? 3 : 1.5 })
-    drawControlPoints(ctx, geometry, points, colors, { selected: selectedT ? -1 : selected })
     ctx.restore()
+    // 制御点の名前は絵の枠の外に出ることがある(上の端に近い点)ので、切り取りの外で描く
+    drawControlPoints(ctx, geometry, points, colors, { selected: selectedT ? -1 : selected })
 
-    ctx.strokeStyle = colors.line
-    ctx.lineWidth = 1
-    ctx.beginPath()
-    if (sideBySide) {
-      ctx.moveTo(split, 14)
-      ctx.lineTo(split, height - 14)
-    } else {
-      ctx.moveTo(14, split)
-      ctx.lineTo(width - 14, split)
-    }
-    ctx.moveTo(graph.frame.left, graph.sy(0))
-    ctx.lineTo(graph.frame.right, graph.sy(0))
-    ctx.moveTo(graph.frame.left, graph.frame.bottom)
-    ctx.lineTo(graph.frame.left, graph.frame.top)
-    ctx.stroke()
-    ;[0, 0.5, 1].forEach((tick) => {
-      ctx.beginPath()
-      ctx.moveTo(graph.sx(tick), graph.frame.bottom)
-      ctx.lineTo(graph.sx(tick), graph.frame.bottom + 4)
-      ctx.stroke()
-      drawText(ctx, String(tick), graph.sx(tick), graph.frame.bottom + 14, { color: colors.muted, align: 'center' })
+    if (sideBySide) drawDivider(ctx, colors, split, 14, split, height - 14)
+    else drawDivider(ctx, colors, 14, split, width - 14, split)
+    drawGraphAxes(ctx, graph, {
+      colors,
+      xTicks: [0, 0.5, 1],
+      yTicks: [-graphLimit, 0, graphLimit],
+      yFormat: (value) => fmt(value, 1),
+      xLabel: 't',
+      yLabel: 'κ',
+      xAxisY: graph.sy(0),
     })
-    ;[-graphLimit, 0, graphLimit].forEach((tick) => drawText(ctx, fmt(tick, 1), graph.frame.left - 7, graph.sy(tick), { color: colors.muted, align: 'right', baseline: 'middle' }))
-    drawText(ctx, 't', graph.frame.right, graph.frame.bottom + 16, { color: colors.ink, align: 'right' })
-    drawText(ctx, 'κ', graph.frame.left, graph.frame.top - 8, { color: colors.ink, align: 'left', baseline: 'bottom' })
     drawPolyline(ctx, graph, curvature.map(([u, value]) => [u, clamp(value, -graphLimit, graphLimit)]), { color: colors.ink, width: 2 })
+    ctx.save()
     ctx.strokeStyle = colors.ink
-    ctx.lineWidth = selectedT ? 3 : 2
+    ctx.lineWidth = selectedT ? 4 : 2 // 選んでいるときは太く(縁の太さで選択を示す)
     ctx.setLineDash([5, 4])
     ctx.beginPath()
     ctx.moveTo(graph.sx(t), graph.frame.top)
     ctx.lineTo(graph.sx(t), graph.frame.bottom)
     ctx.stroke()
-    ctx.setLineDash([])
+    ctx.restore()
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -137,7 +127,7 @@ export default function ShapeStep7() {
       const info = pointerInfo(position)
       return info.control >= 0 || info.overPoint
     },
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const info = pointerInfo(position)
       if (info.control >= 0) {
         dragging.current = { type: 'control', index: info.control }
@@ -152,7 +142,7 @@ export default function ShapeStep7() {
         return
       }
       return false
-    },
+    }),
     onMove: (position) => {
       const info = pointerInfo(position)
       if (dragging.current?.type === 't') setT(info.nearest.u)
@@ -167,11 +157,13 @@ export default function ShapeStep7() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const move = pageStep(event)
+    if (move) {
       event.preventDefault()
-      const direction = event.key === 'PageUp' ? 1 : -1
-      setSelected((selected + direction + points.length) % points.length)
-      setSelectedT(false)
+      // 制御点 → 曲線上の点の順に巡る
+      const next = cycleSelection(selected, selectedT, move, points.length)
+      setSelected(next.selected)
+      setSelectedT(next.onCurve)
       return
     }
     const step = arrowStep(event)
@@ -192,7 +184,8 @@ export default function ShapeStep7() {
   return (
     <SimShell
       label="接線・法線・曲率"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="3 次ベジエ曲線の接線、曲がる側の法線、接触円と曲率グラフ。制御点または曲線上の点をつかんで動かせる。矢印キーで選択中のものを動かし、PageUp と PageDown で制御点を選べる" />}
+      height={{ phone: [320, 400], pc: [280, 360] }}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="3 次ベジエ曲線の接線、曲がる側の法線、接触円と、曲率のグラフ。制御点と曲線上の点をドラッグで動かせる。矢印キー(Shift で 5 倍)で選択中のものを動かし、PageUp と PageDown で 4 個の制御点と曲線上の点を順に選べる" />}
       legend={<SimLegend items={[
         { key: 'curve', label: 'ベジエ曲線', swatch: 'var(--color-ink)' },
         { key: 'tangent', symbol: 'T', label: '単位接線', swatch: 'var(--lane-3)' },

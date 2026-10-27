@@ -50,17 +50,22 @@ export default function ShadingStep2() {
       intersections.push(end[0])
       drawArrow(ctx, view, start[0], start[1], end[0], end[1], { color: colors.muted, width: 1.5 })
     })
-    ctx.fillStyle = colors.alpha('lane-0', 0.18)
+    // 照射幅(平面に光が当たる範囲)。塗りだけだと地との差が小さいので、縁を lane-0 の線で引く
     const left = Math.min(...intersections)
     const right = Math.max(...intersections)
+    ctx.fillStyle = colors.alpha('lane-0', 0.18)
     ctx.fillRect(view.sx(left), view.sy(0) - 5, view.sx(right) - view.sx(left), 10)
+    ctx.strokeStyle = laneColor(colors, 0)
+    ctx.lineWidth = 1.5
+    ctx.strokeRect(view.sx(left), view.sy(0) - 5, view.sx(right) - view.sx(left), 10)
     drawText(ctx, `幅 ${fmt(1 / Math.max(brightness, 0.01), 2)} 倍`, view.sx((left + right) / 2), view.sy(0) + 18, { color: colors.ink, align: 'center' })
 
+    // 余弦グラフ。右の 12px は、90° の目盛りの文字と軸の名前 θ が枠(clip)で切れない余白
     const graphLeft = view.sx(1.7)
     const graphTop = view.sy(2.25)
-    const graphWidth = Math.max(70, view.frame.right - graphLeft)
+    const graphWidth = Math.max(60, view.frame.right - graphLeft - 12)
     const graphHeight = 64
-    ctx.strokeStyle = colors.line
+    ctx.strokeStyle = colors.muted
     ctx.lineWidth = 1
     ctx.beginPath()
     ctx.moveTo(graphLeft, graphTop + graphHeight)
@@ -74,7 +79,7 @@ export default function ShadingStep2() {
       ctx.moveTo(x, graphTop + graphHeight)
       ctx.lineTo(x, graphTop + graphHeight + 4)
       ctx.stroke()
-      drawText(ctx, `${index * 30}°`, x, graphTop + graphHeight + 14, { color: colors.muted, align: 'center' })
+      drawText(ctx, `${index * 30}°`, x, graphTop + graphHeight + 14, { color: colors.ink, align: 'center' })
     })
     ;[0, 0.5, 1].forEach((tick) => {
       const y = graphTop + graphHeight * (1 - tick)
@@ -82,7 +87,7 @@ export default function ShadingStep2() {
       ctx.moveTo(graphLeft - 4, y)
       ctx.lineTo(graphLeft, y)
       ctx.stroke()
-      drawText(ctx, String(tick), graphLeft - 7, y, { color: colors.muted, align: 'right', baseline: 'middle' })
+      drawText(ctx, String(tick), graphLeft - 7, y, { color: colors.ink, align: 'right', baseline: 'middle' })
     })
     ctx.strokeStyle = colors.ink
     ctx.lineWidth = 2
@@ -96,18 +101,20 @@ export default function ShadingStep2() {
     }
     ctx.stroke()
     markerCircle(ctx, graphLeft + graphWidth * Math.abs(angle) / (Math.PI / 2), graphTop + graphHeight * (1 - brightness), 4, { fill: colors.accent, stroke: colors.ink, lineWidth: 1.25 })
-    drawText(ctx, 'θ', graphLeft + graphWidth, graphTop + graphHeight + 14, { color: colors.ink, align: 'right' })
+    drawText(ctx, 'θ', graphLeft + graphWidth + 5, graphTop + graphHeight, { color: colors.ink, baseline: 'middle' })
 
     drawPixelSphere(ctx, view.sx(-2.35), view.sy(1.45), Math.min(38, view.scaleX * 0.48), colors, { L: [direction[0], 0, direction[1]], mode: 'lambert' })
     ctx.restore()
 
+    // 明るさの棒: 枠が満点(1.0)の長さ、中の塗りが今の明るさ
     const barX = view.frame.left
     const barY = view.frame.top + 8
     const barW = Math.min(110, view.frame.width * 0.24)
-    ctx.fillStyle = colors.line
-    ctx.fillRect(barX, barY, barW, 10)
     ctx.fillStyle = laneColor(colors, 1)
     ctx.fillRect(barX, barY, barW * brightness, 10)
+    ctx.strokeStyle = colors.muted
+    ctx.lineWidth = 1
+    ctx.strokeRect(barX + 0.5, barY + 0.5, barW - 1, 9)
     drawText(ctx, '明るさ', barX, barY + 24, { color: colors.ink })
   }
 
@@ -118,12 +125,14 @@ export default function ShadingStep2() {
     canGrab: hit,
     onDown: (point) => {
       if (!hit(point)) return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも操作できるように
+      return undefined
     },
     onMove: (point) => setAngle(clamp(angleFromPoint(viewOf(sizeRef.current.width, sizeRef.current.height), ORIGIN, point), -Math.PI / 2, Math.PI / 2)),
   })
   const onKeyDown = (event) => {
     const step = arrowStep(event)
-    if (!step) return
+    if (!step || step.dx === 0) return // 上下のキーは使わない(ページのスクロールに残す)
     event.preventDefault()
     setAngle((value) => clamp(value + step.dx * 5 * Math.PI / 180, -Math.PI / 2, Math.PI / 2))
   }
@@ -131,7 +140,7 @@ export default function ShadingStep2() {
   return (
     <SimShell
       label="光が当たる角度"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="平面へ当たる光線、広がる照射範囲、余弦グラフと球を描いています。Lのつまみをドラッグするか左右の矢印キーで光の角度を変えられます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="平面へ当たる 2 本の光線と、その光が広がる照射幅、余弦のグラフ、明るさの棒、明暗のついた球を描いています。光 L のつまみをドラッグするか、左右の矢印キーで光の角度を 5 度ずつ変えられます(Shift を押すと 5 倍)。" />}
       legend={<SimLegend items={[
         { key: 'theta', symbol: '\\theta', label: '入射角', value: `${fmt(Math.abs(angle) * 180 / Math.PI, 1)}°`, minChars: 7 },
         { key: 'cos', symbol: '\\cos\\theta', label: '明るさ', value: fmt(brightness, 3), minChars: 6 },

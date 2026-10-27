@@ -6,15 +6,17 @@ import { SimToolbar, ResetButton, ToggleButton } from '../../visualization/SimBu
 import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
-import { STEP_MARGIN, arrowStep, clamp, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
+import { STEP_MARGIN, arrowStep, clamp, laneColor } from '../../visualization/sims/rigidKit'
 import { bezierPoint, bsplineBasis, bsplinePoint, uniformKnots } from '../../../utils/vis/curve'
-import { drawControlPoints, drawPolyline, hitControlPoint, rangesForAspect } from './shapeKit'
+import { drawControlPoints, drawDivider, drawGraphAxes, drawPolyline, focusOnGrab, hitControlPoint, pageStep, rangesForAspect } from './shapeKit'
 
 const INITIAL = [[0.5, 0.8], [1.35, 2.65], [2.25, 2.25], [3.2, 0.75], [4.2, 1.25], [5.2, 2.7], [6.35, 1.1]]
 const KNOTS = uniformKnots(7, 3)
 const END = 4
 const safeT = (t) => t === END ? END - 1e-7 : t
 const copyInitial = () => INITIAL.map((point) => point.slice())
+// 縦に並べるときのグラフの余白。絵より詰める(上は軸の名前の分、下は目盛りの文字の分だけ)
+const STACKED_GRAPH_MARGIN = { ...STEP_MARGIN, top: 20, bottom: 24 }
 
 const offsetYView = (view, offset) => ({
   ...view,
@@ -48,9 +50,9 @@ export default function ShapeStep5() {
       const graphBase = makeView({ width: width - split, height, xRange: [0, END], yRange: [0, 1], equal: false, margin: STEP_MARGIN })
       return { geometry, graph: offsetXView(graphBase, split), split, sideBySide: true }
     }
-    const split = Math.max(150, Math.min(height * 0.64, height - 105))
+    const split = Math.max(150, Math.round(height * 0.6))
     const geometry = makeView({ width, height: split, ...rangesForAspect([0, 7], [0, 3.4], width, split), margin: STEP_MARGIN })
-    const graphBase = makeView({ width, height: height - split, xRange: [0, END], yRange: [0, 1], equal: false, margin: STEP_MARGIN })
+    const graphBase = makeView({ width, height: height - split, xRange: [0, END], yRange: [0, 1], equal: false, margin: STACKED_GRAPH_MARGIN })
     return { geometry, graph: offsetYView(graphBase, split), split, sideBySide: false }
   }
 
@@ -59,17 +61,8 @@ export default function ShapeStep5() {
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
     drawAxes(ctx, geometry, { colors, xLabel: 'x', yLabel: 'y' })
-    ctx.strokeStyle = colors.line
-    ctx.lineWidth = 1
-    ctx.beginPath()
-    if (sideBySide) {
-      ctx.moveTo(split, 14)
-      ctx.lineTo(split, height - 14)
-    } else {
-      ctx.moveTo(14, split)
-      ctx.lineTo(width - 14, split)
-    }
-    ctx.stroke()
+    if (sideBySide) drawDivider(ctx, colors, split, 14, split, height - 14)
+    else drawDivider(ctx, colors, 14, split, width - 14, split)
 
     drawPolyline(ctx, geometry, points, { color: colors.muted, width: 1.25, dash: [5, 4] })
     if (compare) drawPolyline(ctx, geometry, bezier, { color: laneColor(colors, 4), width: 1.5, dash: [6, 4] })
@@ -78,30 +71,7 @@ export default function ShapeStep5() {
     drawPolyline(ctx, geometry, affected, { color: laneColor(colors, selected % 5), width: 3.5 })
     drawControlPoints(ctx, geometry, points, colors, { selected })
 
-    ctx.strokeStyle = colors.line
-    ctx.lineWidth = 1
-    ctx.beginPath()
-    ctx.moveTo(graph.frame.left, graph.frame.bottom)
-    ctx.lineTo(graph.frame.right, graph.frame.bottom)
-    ctx.moveTo(graph.frame.left, graph.frame.bottom)
-    ctx.lineTo(graph.frame.left, graph.frame.top)
-    ctx.stroke()
-    ;[0, 1, 2, 3, 4].forEach((tick) => {
-      ctx.beginPath()
-      ctx.moveTo(graph.sx(tick), graph.frame.bottom)
-      ctx.lineTo(graph.sx(tick), graph.frame.bottom + 4)
-      ctx.stroke()
-      drawText(ctx, String(tick), graph.sx(tick), graph.frame.bottom + 14, { color: colors.muted, align: 'center' })
-    })
-    ;[0, 0.5, 1].forEach((tick) => {
-      ctx.beginPath()
-      ctx.moveTo(graph.frame.left - 4, graph.sy(tick))
-      ctx.lineTo(graph.frame.left, graph.sy(tick))
-      ctx.stroke()
-      drawText(ctx, String(tick), graph.frame.left - 7, graph.sy(tick), { color: colors.muted, align: 'right', baseline: 'middle' })
-    })
-    drawText(ctx, 't', graph.frame.right, graph.frame.bottom + 16, { color: colors.ink, align: 'right' })
-    drawText(ctx, 'N', graph.frame.left, graph.frame.top - 8, { color: colors.ink, align: 'left', baseline: 'bottom' })
+    drawGraphAxes(ctx, graph, { colors, xTicks: [0, 1, 2, 3, 4], yTicks: [0, 0.5, 1], xLabel: 't', yLabel: 'N' })
     for (let basisIndex = 0; basisIndex < 7; basisIndex++) {
       const values = Array.from({ length: 161 }, (_, i) => {
         const t = END * i / 160
@@ -121,13 +91,13 @@ export default function ShapeStep5() {
       const { width, height } = sizeRef.current
       return hitControlPoint(viewsOf(width, height).geometry, points, position) >= 0
     },
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const { width, height } = sizeRef.current
       const index = hitControlPoint(viewsOf(width, height).geometry, points, position)
       if (index < 0) return false
       dragging.current = index
       setSelected(index)
-    },
+    }),
     onMove: (position) => {
       if (dragging.current === null) return
       const { width, height } = sizeRef.current
@@ -141,10 +111,10 @@ export default function ShapeStep5() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const move = pageStep(event)
+    if (move) {
       event.preventDefault()
-      const direction = event.key === 'PageUp' ? 1 : -1
-      setSelected((selected + direction + points.length) % points.length)
+      setSelected((selected + move + points.length) % points.length)
       return
     }
     const step = arrowStep(event)
@@ -163,7 +133,8 @@ export default function ShapeStep5() {
   return (
     <SimShell
       label="一様 3 次 B スプライン"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="7 個の制御点で作る一様 3 次 B スプラインと、その下の基底関数。制御点をつかんで動かせる。矢印キーで選択中の点を動かし、PageUp と PageDown で点を選べる" />}
+      height={{ phone: [320, 400], pc: [280, 360] }}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="7 個の制御点で作る一様 3 次 B スプラインと、基底関数のグラフ。制御点をドラッグで動かせる。矢印キー(Shift で 5 倍)で選択中の点を動かし、PageUp と PageDown で点を順に選べる" />}
       legend={<SimLegend items={[
         { key: 'curve', label: 'B スプライン', swatch: 'var(--color-ink)' },
         { key: 'basis', symbol: `N_${selected}^3`, label: `P${selected} の重み`, swatch: `var(--lane-${selected % 5})` },

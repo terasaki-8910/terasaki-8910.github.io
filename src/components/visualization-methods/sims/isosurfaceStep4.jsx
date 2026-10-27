@@ -3,7 +3,7 @@ import SimShell from '../../visualization/SimShell'
 import SimCanvas from '../../visualization/SimCanvas'
 import SimLegend from '../../visualization/SimLegend'
 import ParamSlider from '../../visualization/ParamSlider'
-import { ResetButton, SimToolbar, ToggleButton } from '../../visualization/SimButtons'
+import { ResetButton, SimToolbar } from '../../visualization/SimButtons'
 import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
 import { drawAxes } from '../../visualization/axes'
@@ -73,10 +73,12 @@ export default function IsosurfaceStep4() {
           lineWidth: 0.8,
         })
       })
+      ctx.save()
       ctx.strokeStyle = colors.ink
       ctx.lineWidth = 1.4
       ctx.setLineDash([6, 4])
-      ctx.beginPath(); ctx.moveTo(view.sx(query), view.frame.top); ctx.lineTo(view.sx(query), view.frame.bottom); ctx.stroke(); ctx.setLineDash([])
+      ctx.beginPath(); ctx.moveTo(view.sx(query), view.frame.top); ctx.lineTo(view.sx(query), view.frame.bottom); ctx.stroke()
+      ctx.restore()
       if (fit) markerCircle(ctx, view.sx(query), view.sy(fit.value), 7, { fill: colors.accent, stroke: colors.ink, lineWidth: draggingRef.current ? 3 : 1.5 })
     })
     drawAxes(ctx, view, { colors, xLabel: 'x', yLabel: 'y' })
@@ -87,13 +89,19 @@ export default function IsosurfaceStep4() {
   const hitQuery = (point) => Math.abs(point.x - viewFor().sx(query)) <= 18 && point.y >= viewFor().frame.top && point.y <= viewFor().frame.bottom
   usePointerDrag(canvasRef, {
     canGrab: hitQuery,
-    onDown: (point) => { if (!hitQuery(point)) return false; draggingRef.current = true; redraw(); return true },
+    onDown: (point) => {
+      if (!hitQuery(point)) return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、左右キーでも動かせるように
+      draggingRef.current = true
+      redraw()
+      return true
+    },
     onMove: ({ x }) => setQuery(clamp(viewFor().wx(x), 0, 4)),
     onUp: () => { draggingRef.current = false; redraw() },
   })
   const onKeyDown = (event) => {
     const step = arrowStep(event)
-    if (!step) return
+    if (!step || step.dx === 0) return // 照会位置は左右だけ
     event.preventDefault()
     setQuery((value) => clamp(value + step.dx * 0.05, 0, 4))
   }
@@ -101,7 +109,7 @@ export default function IsosurfaceStep4() {
   return (
     <SimShell
       label="移動最小二乗による局所近似"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="散らばった点と移動最小二乗曲線。縦の照会位置をドラッグまたは左右キーで動かせます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="散らばった測定点と、移動最小二乗で作った曲線、照会位置での局所 2 次式の絵。縦の破線の照会位置 q を、ドラッグするか左右の矢印キーで動かせます（Shift で大きく）。" />}
       legend={<SimLegend items={[
         { key: 'samples', label: '測定点（重みで大きさ・濃さが変化）', swatch: 'var(--lane-0)' },
         { key: 'local', label: '局所 2 次式', swatch: 'var(--lane-1)' },
@@ -111,7 +119,9 @@ export default function IsosurfaceStep4() {
       controls={<>
         <SimToolbar>
           <ResetButton onClick={() => { setSeed(8910); setQuery(2); setBandwidth(0.55) }} />
-          <ToggleButton pressed={false} onChange={() => setSeed((value) => value + 1)}>点を作り直す</ToggleButton>
+          <button type="button" className="vis-btn" onClick={() => setSeed((value) => value + 1)}>
+            <span>点を作り直す</span>
+          </button>
         </SimToolbar>
         <ParamSlider symbol="h" label="重みの幅" value={bandwidth} min={0.1} max={2} step={0.01} onChange={setBandwidth} format={(v) => v.toFixed(2)} />
       </>}

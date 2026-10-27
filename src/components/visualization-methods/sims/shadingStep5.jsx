@@ -9,10 +9,11 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { arrowStep, clamp, drawText, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { beckmannD, blinnPhongSpecular, cookTorranceSpecular, fresnelSchlick, geometryG, halfVector } from '../../../utils/vis/shading'
 import { dot, normalize } from '../../../utils/vis/vec3'
-import { directionFromAngle } from './shadingKit'
+import { LOBE_BLINN_DASH, cycleSelection, directionFromAngle, isSelectKey } from './shadingKit'
 
 const INITIAL = { light: -34 * Math.PI / 180, view: 32 * Math.PI / 180, m: 0.28, F0: 0.06 }
 const FACET_COUNT = 25
+const HANDLES = ['light', 'view'] // PageUp・PageDown で選べるつまみ
 
 const randomSlopes = (() => {
   let seed = 8910
@@ -46,18 +47,20 @@ function handlePoint(rect, angle) {
   return [cx + Math.sin(angle) * radius, cy - Math.cos(angle) * radius]
 }
 
-function drawHandle(ctx, rect, angle, label, color, colors) {
+function drawHandle(ctx, rect, angle, label, color, colors, selected) {
   const [x, y] = handlePoint(rect, angle)
   const cx = rect.left + rect.width / 2
   const cy = rect.top + rect.height * 0.53
+  ctx.save()
   ctx.strokeStyle = color
   ctx.lineWidth = 2
   ctx.beginPath()
   ctx.moveTo(cx, cy)
   ctx.lineTo(x, y)
   ctx.stroke()
-  markerCircle(ctx, x, y, 7, { fill: colors.accent, stroke: colors.ink, lineWidth: 1.5 })
-  drawText(ctx, label, x + (x < cx ? -10 : 10), y - 7, { color: colors.ink, align: x < cx ? 'right' : 'left' })
+  markerCircle(ctx, x, y, selected ? 8 : 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selected ? 3 : 1.5 })
+  ctx.restore()
+  drawText(ctx, label, x + (x < cx ? -12 : 12), y - 7, { color: colors.ink, align: x < cx ? 'right' : 'left' })
 }
 
 export default function ShadingStep5() {
@@ -65,7 +68,8 @@ export default function ShadingStep5() {
   const [viewAngle, setViewAngle] = useState(INITIAL.view)
   const [m, setM] = useState(INITIAL.m)
   const [F0, setF0] = useState(INITIAL.F0)
-  const selected = useRef('light')
+  const [selected, setSelected] = useState('light')
+  const dragging = useRef(null)
   const N = [0, 1, 0]
   const L = directionFromAngle(lightAngle)
   const V = directionFromAngle(viewAngle)
@@ -89,16 +93,17 @@ export default function ShadingStep5() {
     drawText(ctx, '微小面', rect.left + 4, rect.top + 13, { color: colors.ink })
     const cx = rect.left + rect.width / 2
     const cy = rect.top + rect.height * 0.53
-    ctx.strokeStyle = colors.line
+    ctx.save()
+    ctx.strokeStyle = colors.muted
     ctx.setLineDash([4, 4])
     ctx.beginPath()
     ctx.moveTo(cx, cy)
     ctx.lineTo(cx, rect.top + 18)
     ctx.stroke()
-    ctx.setLineDash([])
+    ctx.restore()
     drawText(ctx, 'N', cx + 7, rect.top + 28, { color: colors.ink })
-    drawHandle(ctx, rect, lightAngle, 'L', laneColor(colors, 0), colors)
-    drawHandle(ctx, rect, viewAngle, 'V', laneColor(colors, 2), colors)
+    drawHandle(ctx, rect, lightAngle, 'L', laneColor(colors, 0), colors, selected === 'light')
+    drawHandle(ctx, rect, viewAngle, 'V', laneColor(colors, 2), colors, selected === 'view')
 
     const startX = rect.left + 8
     const endX = rect.left + rect.width - 8
@@ -129,7 +134,17 @@ export default function ShadingStep5() {
         ctx.stroke()
       }
     }
-    drawText(ctx, 'H を向く面', rect.left + 4, rect.top + rect.height - 7, { color: laneColor(colors, 1) })
+    // 名前は ink(lane-1 の文字は地に 3.25:1)。H を向く面の線の色は、短い見本の線で示す
+    const noteY = rect.top + rect.height - 7
+    ctx.save()
+    ctx.strokeStyle = laneColor(colors, 1)
+    ctx.lineWidth = 4
+    ctx.beginPath()
+    ctx.moveTo(rect.left + 4, noteY - 4)
+    ctx.lineTo(rect.left + 20, noteY - 4)
+    ctx.stroke()
+    ctx.restore()
+    drawText(ctx, 'H を向く面', rect.left + 26, noteY, { color: colors.ink })
     ctx.restore()
 
     const graph = panes.graph
@@ -148,7 +163,9 @@ export default function ShadingStep5() {
       maxD = Math.max(maxD, sampleD)
       maxSpec = Math.max(maxSpec, sampleSpec, blinn)
     }
-    ctx.strokeStyle = colors.line
+    // 軸と目盛りの線は muted、目盛りの文字は ink(line は 1.3:1 で軸が見えない)
+    ctx.save()
+    ctx.strokeStyle = colors.muted
     ctx.lineWidth = 1
     ctx.beginPath()
     ctx.moveTo(graph.left, graph.top)
@@ -161,7 +178,7 @@ export default function ShadingStep5() {
       ctx.moveTo(x, graph.top + graph.height)
       ctx.lineTo(x, graph.top + graph.height + 4)
       ctx.stroke()
-      drawText(ctx, `${degree}°`, x, graph.top + graph.height + 15, { color: colors.muted, align: 'center' })
+      drawText(ctx, `${degree}°`, x, graph.top + graph.height + 15, { color: colors.ink, align: 'center' })
     })
     ;[0, 0.5, 1].forEach((tick) => {
       const y = graph.top + graph.height * (1 - tick)
@@ -169,14 +186,15 @@ export default function ShadingStep5() {
       ctx.moveTo(graph.left - 4, y)
       ctx.lineTo(graph.left, y)
       ctx.stroke()
-      drawText(ctx, String(tick), graph.left - 7, y, { color: colors.muted, align: 'right', baseline: 'middle' })
+      drawText(ctx, String(tick), graph.left - 7, y, { color: colors.ink, align: 'right', baseline: 'middle' })
     })
+    // 系列の色は凡例の色見本と同じ。F は lane-4、ブリン-フォンは muted の破線(muted は軸と同じ色だが、系列では F と区別して破線)
     const series = [
       { index: 0, color: laneColor(colors, 0), scale: maxD || 1 },
       { index: 1, color: laneColor(colors, 2), scale: 1 },
-      { index: 2, color: colors.muted, scale: 1 },
+      { index: 2, color: laneColor(colors, 4), scale: 1 },
       { index: 3, color: colors.ink, scale: maxSpec || 1 },
-      { index: 4, color: colors.line, scale: maxSpec || 1, dash: [5, 4] },
+      { index: 4, color: colors.muted, scale: maxSpec || 1, dash: LOBE_BLINN_DASH },
     ]
     series.forEach(({ index, color, scale, dash }) => {
       ctx.strokeStyle = color
@@ -191,8 +209,8 @@ export default function ShadingStep5() {
       })
       ctx.stroke()
     })
-    ctx.setLineDash([])
-    drawText(ctx, '目の角度', graph.left + graph.width, graph.top + graph.height + 29, { color: colors.ink, align: 'right' })
+    ctx.restore()
+    drawText(ctx, '目の角度', graph.left + graph.width, graph.top + graph.height + 27, { color: colors.ink, align: 'right' })
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -210,27 +228,31 @@ export default function ShadingStep5() {
     onDown: (point) => {
       const handle = hit(point)
       if (!handle) return false
-      selected.current = handle
+      dragging.current = handle
+      setSelected(handle)
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも操作できるように
+      return undefined
     },
     onMove: (point) => {
       const rect = layout(sizeRef.current.width, sizeRef.current.height).surface
       const cx = rect.left + rect.width / 2
       const cy = rect.top + rect.height * 0.53
       const angle = clamp(Math.atan2(point.x - cx, cy - point.y), -Math.PI / 2, Math.PI / 2)
-      if (selected.current === 'light') setLightAngle(angle)
+      if (dragging.current === 'light') setLightAngle(angle)
       else setViewAngle(angle)
     },
+    onUp: () => { dragging.current = null },
   })
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    if (isSelectKey(event)) {
       event.preventDefault()
-      selected.current = selected.current === 'light' ? 'view' : 'light'
+      setSelected((value) => cycleSelection(HANDLES, value, event.key))
       return
     }
     const step = arrowStep(event)
-    if (!step) return
+    if (!step || step.dx === 0) return // 上下のキーは使わない(ページのスクロールに残す)
     event.preventDefault()
-    const update = selected.current === 'light' ? setLightAngle : setViewAngle
+    const update = selected === 'light' ? setLightAngle : setViewAngle
     update((value) => clamp(value + step.dx * 5 * Math.PI / 180, -Math.PI / 2, Math.PI / 2))
   }
   const reset = () => {
@@ -238,19 +260,19 @@ export default function ShadingStep5() {
     setViewAngle(INITIAL.view)
     setM(INITIAL.m)
     setF0(INITIAL.F0)
-    selected.current = 'light'
+    setSelected('light')
   }
 
   return (
     <SimShell
       label="クック-トランスの微小面"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="粗い面の微小面と、角度に対するD、G、F、クック-トランスとブリン-フォンのつやを描いています。LまたはVをドラッグし、矢印キーで選択中の向きを動かせます。PageUpとPageDownで操作対象を切り替えます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="粗い面の微小面と、目の角度に対する D・G・F、クック-トランスとブリン-フォン(破線)のつやのグラフを描いています。微小面の中の L と V のつまみをドラッグして向きを変えられます。キーでは、PageUp・PageDown で動かすつまみを L と V から選び、左右の矢印キーで 5 度ずつ動かします(Shift を押すと 5 倍)。" />}
       legend={<SimLegend items={[
         { key: 'D', symbol: 'D', label: '微小面分布', value: fmt(D, 3), swatch: 'var(--lane-0)', minChars: 7 },
         { key: 'G', symbol: 'G', label: '幾何減衰', value: fmt(G, 3), swatch: 'var(--lane-2)', minChars: 6 },
-        { key: 'F', symbol: 'F', label: 'フレネル', value: fmt(F, 3), swatch: 'var(--color-muted)', minChars: 6 },
+        { key: 'F', symbol: 'F', label: 'フレネル', value: fmt(F, 3), swatch: 'var(--lane-4)', minChars: 6 },
         { key: 'specular', symbol: 'R_s', label: '鏡面反射', value: fmt(specular, 3), swatch: 'var(--color-ink)', minChars: 7 },
-        { key: 'blinn', label: 'ブリン-フォン', value: fmt(blinn, 3), swatch: 'var(--color-line)', minChars: 7 },
+        { key: 'blinn', label: 'ブリン-フォン', value: fmt(blinn, 3), swatch: 'var(--color-muted)', minChars: 7 },
       ]} />}
       controls={<><SimToolbar><ResetButton onClick={reset} /></SimToolbar><ParamSlider symbol="m" label="粗さ" value={m} min={0.05} max={0.8} step={0.01} onChange={setM} format={(v) => v.toFixed(2)} /><ParamSlider symbol="F_0" label="正面反射率" value={F0} min={0.02} max={1} step={0.01} onChange={setF0} format={(v) => v.toFixed(2)} /></>}
     />

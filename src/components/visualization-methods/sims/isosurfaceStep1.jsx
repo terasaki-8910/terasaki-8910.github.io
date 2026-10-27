@@ -10,29 +10,38 @@ import { makeView } from '../../visualization/axes'
 import { arrowStep, clamp, drawText, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { drawSubLabel } from './labelKit'
 import { bilinear, trilinear } from '../../../utils/vis/isosurface'
-import { rampColor } from './isosurfaceKit'
+import { cycleIndex, drawTextPlate, pageStep, rampColor } from './isosurfaceKit'
 
 const INITIAL_VALUES = [-0.7, 0.65, 0.25, 0.95, -0.35, 0.85, 0.55, -0.6]
+const PROBE = -1 // 選べる物のうち、角の値(0〜7)ではなく点
+const BAR = 42 // 値 1 あたりの縦棒の長さ(px)
+
+// 角の値の縦棒と点を描く枠(世界 → 画面)。奥の面は右上へずらして描く
+function geometryOf(mode, width, height) {
+  const view = makeView({
+    width,
+    height,
+    xRange: mode === '2d' ? [-0.42, 1.42] : [-0.3, 1.65],
+    yRange: mode === '2d' ? [-0.25, 1.28] : [-0.25, 1.5],
+    margin: { left: 38, right: 24, top: 22, bottom: 34 },
+    equal: true,
+  })
+  return { view, project: (x, y, z = 0) => [view.sx(x + 0.34 * z), view.sy(y + 0.24 * z)] }
+}
 
 export default function IsosurfaceStep1() {
   const [mode, setMode] = useState('2d')
   const [values, setValues] = useState(INITIAL_VALUES)
   const [probe, setProbe] = useState([0.42, 0.58])
   const [depth, setDepth] = useState(0.45)
-  const selectedRef = useRef({ kind: 'probe', index: -1 })
+  const [selected, setSelected] = useState(PROBE) // 選んでいる物: 0〜7 は角の値 f0〜f7、PROBE は点
+  const grabRef = useRef(null) // ドラッグでつかんでいる物(角の番号か PROBE)
+  const count = mode === '2d' ? 4 : 8
 
   const draw = ({ ctx, width, height, colors }) => {
     ctx.fillStyle = colors.surface
     ctx.fillRect(0, 0, width, height)
-    const view = makeView({
-      width,
-      height,
-      xRange: mode === '2d' ? [-0.42, 1.42] : [-0.3, 1.65],
-      yRange: mode === '2d' ? [-0.25, 1.28] : [-0.25, 1.5],
-      margin: { left: 38, right: 24, top: 22, bottom: 34 },
-      equal: true,
-    })
-    const project = (x, y, z = 0) => [view.sx(x + 0.34 * z), view.sy(y + 0.24 * z)]
+    const { view, project } = geometryOf(mode, width, height)
     const faces = mode === '2d' ? [0] : [0, 1]
     for (const z of faces) {
       const resolution = 34
@@ -60,7 +69,14 @@ export default function IsosurfaceStep1() {
     }
     ctx.stroke()
 
-    const count = mode === '2d' ? 4 : 8
+    const [a, b] = probe
+    const z = mode === '3d' ? depth : 0
+    const f = mode === '2d' ? bilinear(values[0], values[1], values[2], values[3], a, b) : trilinear(values, a, b, depth)
+    const pp = project(a, b, z)
+    // 点の値の文字は、場の濃淡の上に載るので、線より先に板を敷く(ダークで lane-1 の上の ink が沈まないように)
+    const readout = `f = ${f.toFixed(3)}`
+    drawTextPlate(ctx, colors, readout, pp[0] + 12, pp[1] - 12, { size: 12 })
+
     const barTops = []
     for (let index = 0; index < count; index++) {
       const z = index >= 4 ? 1 : 0
@@ -68,12 +84,12 @@ export default function IsosurfaceStep1() {
       const x = local % 2
       const y = local >= 2 ? 1 : 0
       const base = project(x, y, z)
-      const top = [base[0], base[1] - values[index] * 42]
+      const top = [base[0], base[1] - values[index] * BAR]
       barTops.push(top)
       ctx.strokeStyle = laneColor(colors, z ? 2 : 0)
       ctx.lineWidth = 3
       ctx.beginPath(); ctx.moveTo(...base); ctx.lineTo(...top); ctx.stroke()
-      markerCircle(ctx, top[0], top[1], 6, { fill: colors.accent, stroke: colors.ink, lineWidth: selectedRef.current.index === index ? 3 : 1.5 })
+      markerCircle(ctx, top[0], top[1], 6, { fill: colors.accent, stroke: colors.ink, lineWidth: selected === index ? 3 : 1.5 })
       drawText(ctx, `f${index} = ${values[index].toFixed(2)}`, top[0] + (x ? 10 : -10), top[1] + (y ? -8 : 10), {
         color: colors.ink,
         size: 11,
@@ -88,16 +104,16 @@ export default function IsosurfaceStep1() {
       ctx.beginPath(); ctx.moveTo(...barTops[left]); ctx.lineTo(...barTops[right]); ctx.stroke()
     }
 
-    const [a, b] = probe
-    const z = mode === '3d' ? depth : 0
     const frontA = bilinear(values[0], values[1], values[2], values[3], a, 0)
     const frontB = bilinear(values[0], values[1], values[2], values[3], a, 1)
     const backA = bilinear(values[4], values[5], values[6], values[7], a, 0)
     const backB = bilinear(values[4], values[5], values[6], values[7], a, 1)
     const drawInterpolation = (p, value, color, label) => {
-      const q = [p[0], p[1] - value * 42]
+      const q = [p[0], p[1] - value * BAR]
+      ctx.save()
       ctx.strokeStyle = color; ctx.lineWidth = 1.7; ctx.setLineDash([4, 3])
-      ctx.beginPath(); ctx.moveTo(...p); ctx.lineTo(...q); ctx.stroke(); ctx.setLineDash([])
+      ctx.beginPath(); ctx.moveTo(...p); ctx.lineTo(...q); ctx.stroke()
+      ctx.restore()
       markerCircle(ctx, q[0], q[1], 3.5, { fill: color, stroke: colors.ink, lineWidth: 0.8 })
       if (label) drawSubLabel(ctx, label, q[0] + 7, q[1], { color: colors.ink, size: 11 })
       return q
@@ -115,74 +131,93 @@ export default function IsosurfaceStep1() {
       const v = drawInterpolation(project(a, b, 1), back, laneColor(colors, 1), 'f_D')
       ctx.strokeStyle = colors.ink; ctx.lineWidth = 2.4; ctx.beginPath(); ctx.moveTo(...u); ctx.lineTo(...v); ctx.stroke()
     }
-    const f = mode === '2d' ? bilinear(values[0], values[1], values[2], values[3], a, b) : trilinear(values, a, b, depth)
-    const pp = project(a, b, z)
-    markerCircle(ctx, pp[0], pp[1], 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selectedRef.current.kind === 'probe' ? 3 : 1.5 })
-    drawText(ctx, `f = ${f.toFixed(3)}`, pp[0] + 12, pp[1] - 12, { color: colors.ink, size: 12 })
+    markerCircle(ctx, pp[0], pp[1], 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selected === PROBE ? 3 : 1.5 })
+    drawText(ctx, readout, pp[0] + 12, pp[1] - 12, { color: colors.ink, size: 12 })
     drawText(ctx, 'x', view.sx(1.2), view.sy(-0.02), { color: colors.ink, size: 12 })
     drawText(ctx, 'y', view.sx(-0.03), view.sy(1.22), { color: colors.ink, size: 12 })
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
-  useEffect(() => { redraw() }, [mode, values, probe, depth, redraw])
+  useEffect(() => { redraw() }, [mode, values, probe, depth, selected, redraw])
 
-  const geometry = () => {
-    const { width, height } = sizeRef.current
-    const view = makeView({
-      width,
-      height,
-      xRange: mode === '2d' ? [-0.42, 1.42] : [-0.3, 1.65],
-      yRange: mode === '2d' ? [-0.25, 1.28] : [-0.25, 1.5],
-      margin: { left: 38, right: 24, top: 22, bottom: 34 },
-      equal: true,
-    })
-    return { view, project: (x, y, z = 0) => [view.sx(x + 0.34 * z), view.sy(y + 0.24 * z)] }
-  }
   const hit = (point) => {
-    const { project } = geometry()
-    const count = mode === '2d' ? 4 : 8
+    const { project } = geometryOf(mode, sizeRef.current.width, sizeRef.current.height)
     for (let index = 0; index < count; index++) {
       const local = index % 4
       const base = project(local % 2, local >= 2 ? 1 : 0, index >= 4 ? 1 : 0)
-      if (Math.hypot(point.x - base[0], point.y - (base[1] - values[index] * 42)) < 18) return { kind: 'value', index }
+      if (Math.hypot(point.x - base[0], point.y - (base[1] - values[index] * BAR)) < 18) return index
     }
     const p = project(probe[0], probe[1], mode === '3d' ? depth : 0)
-    return Math.hypot(point.x - p[0], point.y - p[1]) < 20 ? { kind: 'probe', index: -1 } : null
+    return Math.hypot(point.x - p[0], point.y - p[1]) < 20 ? PROBE : null
   }
   usePointerDrag(canvasRef, {
-    canGrab: (point) => Boolean(hit(point)),
-    onDown: (point) => { const target = hit(point); if (!target) return false; selectedRef.current = target; redraw(); return true },
+    canGrab: (point) => hit(point) !== null,
+    onDown: (point) => {
+      const target = hit(point)
+      if (target === null) return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも動かせるように
+      grabRef.current = target
+      setSelected(target)
+      return true
+    },
     onMove: ({ x, y, dy }) => {
-      if (selectedRef.current.kind === 'value') {
-        setValues((current) => current.map((value, index) => index === selectedRef.current.index ? clamp(value - dy / 42, -1, 1) : value))
+      const target = grabRef.current
+      if (target === null) return
+      if (target >= 0) {
+        setValues((current) => current.map((value, index) => index === target ? clamp(value - dy / BAR, -1, 1) : value))
       } else {
-        const { view } = geometry()
+        const { view } = geometryOf(mode, sizeRef.current.width, sizeRef.current.height)
         setProbe([clamp(view.wx(x) - (mode === '3d' ? 0.34 * depth : 0), 0, 1), clamp(view.wy(y) - (mode === '3d' ? 0.24 * depth : 0), 0, 1)])
       }
     },
-    onUp: () => {},
+    onUp: () => { grabRef.current = null },
   })
+
+  // PageUp・PageDown で、角の値 f0〜f(n-1) と点を順に選ぶ。上下の矢印キーで角の値、矢印キーで点を動かす
   const onKeyDown = (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    const page = pageStep(event)
+    if (page) {
+      event.preventDefault()
+      const order = [...Array(count).keys(), PROBE]
+      setSelected(order[cycleIndex(order.indexOf(selected), page, order.length)])
+      return
+    }
     const step = arrowStep(event)
     if (!step) return
-    event.preventDefault()
-    if (selectedRef.current.kind === 'value' && selectedRef.current.index >= 0) {
-      setValues((current) => current.map((value, index) => index === selectedRef.current.index ? clamp(value + step.dy * 0.05, -1, 1) : value))
-    } else setProbe(([x, y]) => [clamp(x + step.dx * 0.02, 0, 1), clamp(y + step.dy * 0.02, 0, 1)])
+    if (selected >= 0) {
+      if (step.dy === 0) return // 角の値は上下だけ
+      event.preventDefault()
+      setValues((current) => current.map((value, index) => index === selected ? clamp(value + step.dy * 0.05, -1, 1) : value))
+    } else {
+      event.preventDefault()
+      setProbe(([x, y]) => [clamp(x + step.dx * 0.02, 0, 1), clamp(y + step.dy * 0.02, 0, 1)])
+    }
+  }
+  const changeMode = (value) => {
+    setMode(value)
+    if (value === '2d' && selected >= 4) setSelected(PROBE) // 2 次元には f4〜f7 がない
   }
   const value = mode === '2d' ? bilinear(values[0], values[1], values[2], values[3], probe[0], probe[1]) : trilinear(values, probe[0], probe[1], depth)
+
+  const selectedName = selected === PROBE ? '点' : `角の値 f${selected}`
+  const label = `格子の ${count} つの角に立つ縦棒（角の値 f0〜f${count - 1}）と、その間を補間した線と点の絵。縦棒の先を上下にドラッグすると角の値が、点をドラッグすると位置が変わります。PageUp・PageDown で角の値か点を選び、上下の矢印キーで角の値を、矢印キーで点を動かします（Shift で大きく）。選択中は${selectedName}。`
 
   return (
     <SimShell
       label="格子内の線形補間"
-      switcher={<ModeSwitch label="次元" value={mode} options={[{ value: '2d', label: '2 次元' }, { value: '3d', label: '3 次元' }]} onChange={setMode} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="角の縦棒を上下にドラッグして値を変え、点をドラッグまたは矢印キーで動かせます。" />}
+      switcher={<ModeSwitch label="次元" value={mode} options={[{ value: '2d', label: '2 次元' }, { value: '3d', label: '3 次元' }]} onChange={changeMode} variant="tabs" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={label} />}
       legend={<SimLegend items={[
-        { key: 'front', label: mode === '2d' ? '横の補間' : '手前の補間', swatch: 'var(--lane-0)' },
-        { key: 'back', label: mode === '2d' ? '縦の補間' : '奥の補間', swatch: 'var(--lane-3)' },
+        ...(mode === '2d'
+          ? [{ key: 'front', label: '横 → 縦の補間', swatch: 'var(--lane-2)' }]
+          : [
+            { key: 'front', label: '手前の補間', swatch: 'var(--lane-2)' },
+            { key: 'back', label: '奥の補間', swatch: 'var(--lane-3)' },
+          ]),
         { key: 'value', symbol: 'f', label: '点の値', value: value.toFixed(3), minChars: 7 },
       ]} />}
       controls={<>
-        <SimToolbar><ResetButton onClick={() => { setValues(INITIAL_VALUES); setProbe([0.42, 0.58]); setDepth(0.45) }} /></SimToolbar>
+        <SimToolbar><ResetButton onClick={() => { setValues(INITIAL_VALUES); setProbe([0.42, 0.58]); setDepth(0.45); setSelected(PROBE) }} /></SimToolbar>
         {mode === '3d' && <ParamSlider symbol="\gamma" label="点の奥行き" value={depth} min={0} max={1} step={0.01} onChange={setDepth} format={(v) => v.toFixed(2)} />}
       </>}
     />

@@ -10,6 +10,7 @@ import { barycentric, rasterTriangle } from '../../../utils/vis/raster'
 import { blinnPhongSpecular, lambert } from '../../../utils/vis/shading'
 import { normalize } from '../../../utils/vis/vec3'
 import { blitPixels } from './pixelKit'
+import { cycleSelection, drawHaloText, isSelectKey } from './shadingKit'
 
 const INITIAL = { angle: 0, weights: [0.28, 0.34, 0.38] }
 const NORMALS = [
@@ -18,6 +19,8 @@ const NORMALS = [
   normalize([0, 0.78, 0.63]),
 ]
 const V = [0, 0, 1]
+// PageUp・PageDown で選べる物。2 つの三角形の点は同じ重み λ を共有していて、どちらを動かしても両方が動くので 1 つにまとめる
+const TARGETS = ['light', 'probe']
 
 function triangles(width, height) {
   const half = width / 2
@@ -56,7 +59,8 @@ function shade(normal, light) {
 export default function ShadingStep6() {
   const [angle, setAngle] = useState(INITIAL.angle)
   const [weights, setWeights] = useState(INITIAL.weights)
-  const selected = useRef('light')
+  const [selected, setSelected] = useState('light')
+  const dragging = useRef(null) // つかんでいる物: 'light'、または点をつかんだ三角形の番号(0・1)
   const L = normalize([Math.sin(angle), -0.08, Math.cos(angle)])
   const vertexValues = NORMALS.map((normal) => shade(normal, L))
   const interpolatedNormal = normalize([
@@ -99,6 +103,7 @@ export default function ShadingStep6() {
     })
     blitPixels(ctx, image, image.width, image.height)
 
+    ctx.save()
     ctx.strokeStyle = colors.ink
     ctx.lineWidth = 1.5
     tris.forEach((vertices) => {
@@ -112,26 +117,31 @@ export default function ShadingStep6() {
         markerCircle(ctx, vertex[0], vertex[1], 4, { fill: laneColor(colors, i), stroke: colors.ink, lineWidth: 1 })
       })
       const probe = pointFromWeights(vertices, weights)
-      markerCircle(ctx, probe[0], probe[1], 7, { fill: colors.accent, stroke: colors.ink, lineWidth: 1.5 })
+      markerCircle(ctx, probe[0], probe[1], selected === 'probe' ? 8 : 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selected === 'probe' ? 3 : 1.5 })
     })
     drawText(ctx, 'グロー', width * 0.25, 17, { color: colors.ink, align: 'center' })
     drawText(ctx, 'フォン', width * 0.75, 17, { color: colors.ink, align: 'center' })
 
+    // 光の道すじ(破線)。line(1.3:1)ではなく muted
     const radius = Math.min(52, width * 0.13)
-    ctx.strokeStyle = colors.line
+    ctx.save()
+    ctx.strokeStyle = colors.muted
+    ctx.lineWidth = 1.25
     ctx.setLineDash([4, 4])
     ctx.beginPath()
     ctx.ellipse(width / 2, 60, radius, radius * 0.55, 0, Math.PI, Math.PI * 2)
     ctx.stroke()
-    ctx.setLineDash([])
+    ctx.restore()
     const light = lightPoint(width, angle)
     ctx.strokeStyle = laneColor(colors, 0)
+    ctx.lineWidth = 2
     ctx.beginPath()
     ctx.moveTo(width / 2, 63)
     ctx.lineTo(light[0], light[1])
     ctx.stroke()
-    markerCircle(ctx, light[0], light[1], 7, { fill: colors.accent, stroke: colors.ink, lineWidth: 1.5 })
-    drawText(ctx, 'L', light[0] + 10, light[1], { color: colors.ink, baseline: 'middle' })
+    markerCircle(ctx, light[0], light[1], selected === 'light' ? 8 : 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selected === 'light' ? 3 : 1.5 })
+    drawHaloText(ctx, 'L', light[0] + 13, light[1], colors, { baseline: 'middle' })
+    ctx.restore()
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw, maxDpr: 1 })
@@ -142,39 +152,44 @@ export default function ShadingStep6() {
     if (Math.hypot(point.x - light[0], point.y - light[1]) <= 20) return 'light'
     const probes = triangles(width, height).map((vertices) => pointFromWeights(vertices, weights))
     const probeIndex = probes.findIndex((probe) => Math.hypot(point.x - probe[0], point.y - probe[1]) <= 20)
-    return probeIndex >= 0 ? `probe-${probeIndex}` : null
+    return probeIndex >= 0 ? probeIndex : null
   }
   usePointerDrag(canvasRef, {
-    canGrab: (point) => Boolean(hit(point)),
+    canGrab: (point) => hit(point) !== null,
     onDown: (point) => {
-      const handle = hit(point)
-      if (!handle) return false
-      selected.current = handle
+      const target = hit(point)
+      if (target === null) return false
+      dragging.current = target
+      setSelected(target === 'light' ? 'light' : 'probe')
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも操作できるように
+      return undefined
     },
     onMove: (point) => {
       const { width, height } = sizeRef.current
-      if (selected.current === 'light') {
+      if (dragging.current === 'light') {
         setAngle(clamp(Math.asin(clamp((point.x - width / 2) / Math.min(52, width * 0.13), -1, 1)), -Math.PI / 2, Math.PI / 2))
       } else {
-        const index = selected.current === 'probe-1' ? 1 : 0
-        setWeights(constrainedWeights([point.x, point.y], triangles(width, height)[index]))
+        setWeights(constrainedWeights([point.x, point.y], triangles(width, height)[dragging.current === 1 ? 1 : 0]))
       }
     },
+    onUp: () => { dragging.current = null },
   })
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    if (isSelectKey(event)) {
       event.preventDefault()
-      selected.current = selected.current === 'light' ? 'probe-0' : 'light'
+      setSelected((value) => cycleSelection(TARGETS, value, event.key))
       return
     }
     const step = arrowStep(event)
     if (!step) return
-    event.preventDefault()
-    if (selected.current === 'light') setAngle((value) => clamp(value + step.dx * 5 * Math.PI / 180, -Math.PI / 2, Math.PI / 2))
-    else {
+    if (selected === 'light') {
+      if (step.dx === 0) return // 光は左右だけ。上下のキーはページのスクロールに残す
+      event.preventDefault()
+      setAngle((value) => clamp(value + step.dx * 5 * Math.PI / 180, -Math.PI / 2, Math.PI / 2))
+    } else {
+      event.preventDefault()
       const { width, height } = sizeRef.current
-      const index = selected.current === 'probe-1' ? 1 : 0
-      const vertices = triangles(width, height)[index]
+      const vertices = triangles(width, height)[0]
       const point = pointFromWeights(vertices, weights)
       setWeights(constrainedWeights([point[0] + step.dx * 4, point[1] - step.dy * 4], vertices))
     }
@@ -182,13 +197,13 @@ export default function ShadingStep6() {
   const reset = () => {
     setAngle(INITIAL.angle)
     setWeights(INITIAL.weights)
-    selected.current = 'light'
+    setSelected('light')
   }
 
   return (
     <SimShell
       label="グローとフォンシェーディング"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="同じ頂点法線を使い、左は頂点の色、右は画素の法線を補間した三角形です。Lまたは三角形内の点をドラッグし、矢印キーで選択中の対象を動かせます。PageUpとPageDownで操作対象を切り替えます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="同じ頂点法線を持つ 2 つの三角形を描いています。グローは頂点の色を混ぜ、フォンは画素ごとに法線を混ぜた色です。光 L のつまみと、三角形の中の点(2 つの三角形で同じ位置)をドラッグして動かせます。キーでは、PageUp・PageDown で動かす物を光と点から選び、矢印キーで動かします(光は左右へ 5 度ずつ、点は 4 ピクセルずつ。Shift を押すと 5 倍)。" />}
       legend={<SimLegend items={[
         { key: 'l0', symbol: '\\lambda_0', label: '左下の重み', value: fmt(weights[0], 3), swatch: 'var(--lane-0)', minChars: 6 },
         { key: 'l1', symbol: '\\lambda_1', label: '右下の重み', value: fmt(weights[1], 3), swatch: 'var(--lane-1)', minChars: 6 },

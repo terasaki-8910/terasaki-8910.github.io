@@ -8,15 +8,18 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView } from '../../visualization/axes'
 import { arrowStep, clamp, drawText, markerCircle } from '../../visualization/sims/rigidKit'
 import { bilinear, marchingSquares, saddlePoint, saddleValue, squareCase, squareSegments } from '../../../utils/vis/isosurface'
-import { clipToFrame, rampColor } from './isosurfaceKit'
+import { clipToFrame, cycleIndex, pageStep, rampColor } from './isosurfaceKit'
 
 const INITIAL = [0.83, -1, -0.66, 0.82]
 const FINE = 65
+const POSITIONS = [[0, 0], [1, 0], [0, 1], [1, 1]]
+const NAMES = ['f00', 'f10', 'f01', 'f11']
 
 export default function IsosurfaceStep7() {
   const [values, setValues] = useState(INITIAL)
   const [rule, setRule] = useState('asymptotic')
-  const selectedRef = useRef(0)
+  const [selected, setSelected] = useState(0) // 選んでいる縦棒(0〜3。絵の f00・f10・f01・f11 の順)
+  const grabRef = useRef(-1) // ドラッグでつかんでいる縦棒(なければ -1)
   const cellCase = squareCase(values[0], values[1], values[3], values[2], 0)
   const saddle = saddlePoint(values[0], values[1], values[2], values[3])
   const fs = saddleValue(values[0], values[1], values[2], values[3])
@@ -44,7 +47,8 @@ export default function IsosurfaceStep7() {
         ctx.fillStyle = rampColor(colors, bilinear(values[0], values[1], values[2], values[3], u, v), 1)
         ctx.fillRect(view.sx(i / resolution), view.sy((j + 1) / resolution), view.sx((i + 1) / resolution) - view.sx(i / resolution) + 0.5, view.sy(j / resolution) - view.sy((j + 1) / resolution) + 0.5)
       }
-      ctx.strokeStyle = colors.line
+      // マスの外周
+      ctx.strokeStyle = colors.muted
       ctx.lineWidth = 1.5
       ctx.strokeRect(view.sx(0), view.sy(1), view.sx(1) - view.sx(0), view.sy(0) - view.sy(1))
 
@@ -52,17 +56,20 @@ export default function IsosurfaceStep7() {
       const central = squareSegments(values[0], values[1], values[3], values[2], 0, { ambiguity: 'center' })
       const chosen = rule === 'asymptotic' ? asymptotic : central
       const rejected = rule === 'asymptotic' ? central : asymptotic
+      ctx.save()
+      ctx.strokeStyle = colors.muted
+      ctx.lineWidth = 2
+      ctx.setLineDash([5, 4])
       rejected.forEach(([a, b]) => {
-        ctx.strokeStyle = colors.muted
-        ctx.lineWidth = 2
-        ctx.setLineDash([5, 4])
-        ctx.beginPath(); ctx.moveTo(view.sx(a[0]), view.sy(a[1])); ctx.lineTo(view.sx(b[0]), view.sy(b[1])); ctx.stroke(); ctx.setLineDash([])
+        ctx.beginPath(); ctx.moveTo(view.sx(a[0]), view.sy(a[1])); ctx.lineTo(view.sx(b[0]), view.sy(b[1])); ctx.stroke()
       })
+      ctx.restore()
       chosen.forEach(([a, b]) => {
         ctx.strokeStyle = colors.ink
         ctx.lineWidth = 3.2
         ctx.beginPath(); ctx.moveTo(view.sx(a[0]), view.sy(a[1])); ctx.lineTo(view.sx(b[0]), view.sy(b[1])); ctx.stroke()
       })
+      ctx.save()
       ctx.strokeStyle = colors.ink
       ctx.lineWidth = 1.25
       ctx.setLineDash([2, 3])
@@ -71,57 +78,69 @@ export default function IsosurfaceStep7() {
         ctx.moveTo(view.sx(a[0] / (FINE - 1)), view.sy(a[1] / (FINE - 1)))
         ctx.lineTo(view.sx(b[0] / (FINE - 1)), view.sy(b[1] / (FINE - 1)))
       })
-      ctx.stroke(); ctx.setLineDash([])
+      ctx.stroke()
+      ctx.restore()
 
       if (saddle && saddle.u >= 0 && saddle.u <= 1 && saddle.v >= 0 && saddle.v <= 1) {
         markerCircle(ctx, view.sx(saddle.u), view.sy(saddle.v), 5, { fill: colors.accent, stroke: colors.ink, lineWidth: 1.2 })
         drawText(ctx, `(${saddle.u.toFixed(2)}, ${saddle.v.toFixed(2)})`, view.sx(saddle.u) + 8, view.sy(saddle.v) - 8, { color: colors.ink, size: 10 })
       }
-      const positions = [[0, 0], [1, 0], [0, 1], [1, 1]]
-      const labels = ['f00', 'f10', 'f01', 'f11']
-      positions.forEach(([u, v], index) => {
+      POSITIONS.forEach(([u, v], index) => {
         const base = [view.sx(u), view.sy(v)]
         const top = [base[0], base[1] - values[index] * barScale]
         ctx.strokeStyle = colors.ink
         ctx.lineWidth = 3
         ctx.beginPath(); ctx.moveTo(...base); ctx.lineTo(...top); ctx.stroke()
-        markerCircle(ctx, top[0], top[1], 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selectedRef.current === index ? 3 : 1.5 })
-        drawText(ctx, `${labels[index]} ${values[index].toFixed(2)}`, top[0] + (u ? -9 : 9), top[1] + (v ? -9 : 13), { color: colors.ink, size: 10, align: u ? 'right' : 'left' })
+        markerCircle(ctx, top[0], top[1], 7, { fill: colors.accent, stroke: colors.ink, lineWidth: selected === index ? 3 : 1.5 })
+        drawText(ctx, `${NAMES[index]} ${values[index].toFixed(2)}`, top[0] + (u ? -9 : 9), top[1] + (v ? -9 : 13), { color: colors.ink, size: 10, align: u ? 'right' : 'left' })
       })
     })
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
-  useEffect(() => { redraw() }, [values, rule, redraw])
+  useEffect(() => { redraw() }, [values, rule, selected, redraw])
   const hit = (point) => {
     const { view, barScale } = geometry(sizeRef.current.width, sizeRef.current.height)
-    const positions = [[0, 0], [1, 0], [0, 1], [1, 1]]
     for (let index = 0; index < 4; index++) {
-      const [u, v] = positions[index]
+      const [u, v] = POSITIONS[index]
       if (Math.hypot(point.x - view.sx(u), point.y - (view.sy(v) - values[index] * barScale)) <= 19) return index
     }
     return -1
   }
   usePointerDrag(canvasRef, {
     canGrab: (point) => hit(point) >= 0,
-    onDown: (point) => { const index = hit(point); if (index < 0) return false; selectedRef.current = index; redraw(); return true },
+    onDown: (point) => {
+      const index = hit(point)
+      if (index < 0) return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも動かせるように
+      grabRef.current = index
+      setSelected(index)
+      return true
+    },
     onMove: ({ dy }) => {
       const { barScale } = geometry(sizeRef.current.width, sizeRef.current.height)
-      setValues((current) => current.map((value, index) => index === selectedRef.current ? clamp(value - dy / barScale, -1, 1) : value))
+      setValues((current) => current.map((value, index) => index === grabRef.current ? clamp(value - dy / barScale, -1, 1) : value))
     },
-    onUp: () => {},
+    onUp: () => { grabRef.current = -1 },
   })
+  // PageUp・PageDown で縦棒(f00・f10・f01・f11)を順に選び、上下の矢印キーで値を変える
   const onKeyDown = (event) => {
-    if (/^[1-4]$/.test(event.key)) { selectedRef.current = Number(event.key) - 1; redraw(); return }
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    const page = pageStep(event)
+    if (page) {
+      event.preventDefault()
+      setSelected(cycleIndex(selected, page, 4))
+      return
+    }
     const step = arrowStep(event)
-    if (!step) return
+    if (!step || step.dy === 0) return // 縦棒の値は上下だけ
     event.preventDefault()
-    setValues((current) => current.map((value, index) => index === selectedRef.current ? clamp(value + step.dy * 0.05, -1, 1) : value))
+    setValues((current) => current.map((value, index) => index === selected ? clamp(value + step.dy * 0.05, -1, 1) : value))
   }
   return (
     <SimShell
       label="双線形場のあいまいなマス"
       switcher={<ModeSwitch label="判定" value={rule} options={[{ value: 'asymptotic', label: '漸近線判定' }, { value: 'center', label: '中心の値' }]} onChange={setRule} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="四隅の縦棒を上下にドラッグできます。1 から 4 キーで棒を選び、上下キーでも値を変えられます。点線の双曲線と、選んだ接続を比べられます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={`マスの四隅の縦棒（f00・f10・f01・f11）と、そこから引かれる等値線の絵。実線が選んだ接続、破線が選ばなかった接続、細い点線が双線形関数の真の等値線です。縦棒の先の丸をドラッグで上下に動かせます。PageUp・PageDown で縦棒を選び、上下の矢印キーで値を変えます（Shift で大きく）。選択中は縦棒 ${NAMES[selected]}。`} />}
       legend={<SimLegend items={[
         { key: 'true', label: '双線形関数の真の等値線', value: '細い点線', swatch: 'var(--color-ink)' },
         { key: 'chosen', label: '選んだ接続', value: '実線', swatch: 'var(--color-ink)' },
@@ -131,7 +150,7 @@ export default function IsosurfaceStep7() {
         { key: 'disagree', label: '2 つの判定', value: disagree ? '不一致' : '一致', swatch: disagree ? 'rgb(var(--color-accent))' : undefined },
         { key: 'case', label: 'case', value: String(cellCase) },
       ]} />}
-      controls={<SimToolbar><ResetButton onClick={() => { setValues(INITIAL); setRule('asymptotic'); selectedRef.current = 0 }} /></SimToolbar>}
+      controls={<SimToolbar><ResetButton onClick={() => { setValues(INITIAL); setRule('asymptotic'); setSelected(0) }} /></SimToolbar>}
     />
   )
 }

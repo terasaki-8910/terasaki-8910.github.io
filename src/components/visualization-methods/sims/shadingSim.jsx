@@ -69,6 +69,7 @@ export default function ShadingSim() {
     ctx.imageSmoothingEnabled = true
     ctx.drawImage(bufferCanvas, 0, 0, width, height)
 
+    ctx.save()
     const VP = cameraViewProjection(CAMERA, width / height)
     const axesSize = Math.min(82, height * 0.27)
     drawAxes3d(ctx, VP, { left: 8, top: height - axesSize - 8, right: 8 + axesSize, bottom: height - 8, width: axesSize, height: axesSize }, colors, { unit: 'm' })
@@ -100,6 +101,7 @@ export default function ShadingSim() {
         }
       }
     }
+    ctx.restore()
     legendRef.current?.update({ triangles: String(result.triangles) })
   }
 
@@ -112,6 +114,7 @@ export default function ShadingSim() {
     onDown: () => {
       dragging.current = true
       loop.pause()
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも操作できるように
       redraw()
     },
     onMove: ({ dx, dy }) => {
@@ -152,7 +155,7 @@ export default function ShadingSim() {
     <SimShell
       label="反射モデルと影"
       switcher={<ModeSwitch label="反射モデル" value={model} options={MODEL_OPTIONS} onChange={setModel} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="球と床、光源、影を描いた三次元の場面。絵のどこからでもドラッグし、または矢印キーで光源の方位角と仰角を動かせます。画面外の光源は端の太陽印と矢印で方向を示します。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="球と床、光源、影を描いた三次元の場面。絵のどこからでもドラッグして、光源の方位角と仰角を動かせます。矢印キーでも動かせます(左右が方位角、上下が仰角で、5 度ずつ。Shift を押すと 5 倍)。再生中に操作すると止まります。画面の外へ出た光源は、端の太陽印と矢印で方向を示します。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'light', symbol: 'L', label: '光源位置', value: `(${light.map((v) => fmt(v, 2)).join(', ')}) m`, minChars: 23 },
         { key: 'mode', label: 'モデル・陰影', value: `${modelLabel}・${shadingLabel}`, minChars: 19 },
@@ -167,12 +170,12 @@ export default function ShadingSim() {
             <ToggleButton pressed={shadows} onChange={setShadows}>影</ToggleButton>
           </SimToolbar>
           <ControlGroup label="陰影">
-            <ModeSwitch label="陰影" value={shading} options={[
+            <ModeSwitch label="陰影の方式" value={shading} options={[
               { value: 'flat', label: 'フラット' }, { value: 'gouraud', label: 'グロー' }, { value: 'phong', label: 'フォン' },
             ]} onChange={setShading} variant="quiet" />
           </ControlGroup>
           <ControlGroup label="材質">
-            <ModeSwitch label="材質" value={material} options={[
+            <ModeSwitch label="材質の種類" value={material} options={[
               { value: 'paint', label: '塗り' }, { value: 'mirror', label: '映り込み' }, { value: 'glass', label: 'ガラス' },
             ]} onChange={setMaterial} variant="quiet" />
           </ControlGroup>

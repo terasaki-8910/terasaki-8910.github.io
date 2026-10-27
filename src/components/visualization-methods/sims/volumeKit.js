@@ -1,39 +1,34 @@
+import { useEffect, useState } from 'react'
 import { headPhantom3D, transferFunction } from '../../../utils/vis/volume'
+import { readColors } from '../../visualization/useCanvas'
+
+export { TF_PRESETS, cloneTfPoints } from './tfEditorKit' // プリセットと点の操作は、node のテストで読める tfEditorKit.js にある
 
 export const VOLUME_N = 64
 export const PHANTOM_VOLUME = headPhantom3D(VOLUME_N)
 export const VOXEL_DS = 2 / (VOLUME_N - 1)
 
-export const TF_PRESETS = {
-  '骨': [
-    { value: 0, alpha: 0, t: 0 },
-    { value: 0.72, alpha: 0, t: 0.7 },
-    { value: 0.88, alpha: 0.08, t: 0.88 },
-    { value: 1, alpha: 0.82, t: 1 },
-  ],
-  // 中(値 0.2)はごく薄く、小さな塊(0.3)を濃く、空洞(0)は透明、外の殻(1)は輪郭が分かる程度に
-  '中身': [
-    { value: 0, alpha: 0, t: 0 },
-    { value: 0.16, alpha: 0, t: 0.2 },
-    { value: 0.2, alpha: 0.006, t: 0.3 },
-    { value: 0.25, alpha: 0.01, t: 0.45 },
-    { value: 0.3, alpha: 0.4, t: 0.7 },
-    { value: 0.36, alpha: 0, t: 0.75 },
-    { value: 0.85, alpha: 0, t: 0.85 },
-    { value: 1, alpha: 0.18, t: 1 },
-  ],
-  '全部': [
-    { value: 0, alpha: 0, t: 0 },
-    { value: 0.12, alpha: 0.015, t: 0.12 },
-    { value: 0.26, alpha: 0.11, t: 0.38 },
-    { value: 0.55, alpha: 0.18, t: 0.67 },
-    { value: 0.82, alpha: 0.36, t: 0.86 },
-    { value: 1, alpha: 0.72, t: 1 },
-  ],
+export const evaluateTf = (points) => (value) => transferFunction(points, value)
+
+// テーマ(data-theme)が変わるたびに読み直す色(useCanvas の readColors と同じもの)。凡例の色見本のように、
+// 描画(draw)の外の render で色が要るとき用。テーマを切り替えても、次の操作まで古い色のままにならない
+export function useThemeColors() {
+  const [colors, setColors] = useState(readColors)
+  useEffect(() => {
+    const observer = new MutationObserver(() => setColors(readColors()))
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+    return () => observer.disconnect()
+  }, [])
+  return colors
 }
 
-export const cloneTfPoints = (points) => points.map((point) => ({ ...point }))
-export const evaluateTf = (points) => (value) => transferFunction(points, value)
+// 色(0〜1 の [r, g, b])を CSS の色の文字列にする(凡例の色見本・ImageData の外で使う)
+export const cssRgb = (color) => `rgb(${color.map((value) => Math.round(value * 255)).join(' ')})`
+
+// 灰色の濃淡の凡例用の色見本(低い値 → 高い値。valueRamp と同じ向き。ライトは ink → surface、ダークは surface → ink)
+export const graySwatch = (dark) => (dark
+  ? 'linear-gradient(90deg, var(--color-surface), var(--color-ink))'
+  : 'linear-gradient(90deg, var(--color-ink), var(--color-surface))')
 
 export function colorRamp(colors, t) {
   const stops = ['lane-0', 'lane-1', 'lane-3']

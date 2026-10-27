@@ -10,14 +10,17 @@ import useSimLoop from '../../visualization/useSimLoop'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, arrowStep, clamp, fmt, markerCircle } from '../../visualization/sims/rigidKit'
 import { bsplinePoint, chaikin, uniformKnots } from '../../../utils/vis/curve'
-import { drawControlPoints, drawPolyline, hitControlPoint, rangesForAspect, sampleCurve } from './shapeKit'
+import { drawControlPoints, drawPolyline, focusOnGrab, hitControlPoint, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
 
 const INITIAL = [[0.45, 0.65], [1.3, 2.75], [2.35, 0.95], [3.5, 2.55], [4.75, 0.7], [5.9, 2.15]]
 const KNOTS = uniformKnots(6, 2)
 const END = 4
 const copyInitial = () => INITIAL.map((point) => point.slice())
 
-function sampledPolyline(points, perEdge = 10) {
+// 折れ線の各辺を perEdge 個に分けた点(辺の途中も、極限の曲線までの距離に数える)。辺が多い(回数が大きい)ときは
+// 分け方を粗くして、点の数がおよそ 256 個に収まるようにする(極限の曲線 321 点との距離を、制御点を動かすたびに測り直すため)
+function sampledPolyline(points) {
+  const perEdge = clamp(Math.ceil(256 / Math.max(points.length - 1, 1)), 1, 10)
   const result = []
   for (let i = 0; i < points.length - 1; i++) {
     for (let j = 0; j < perEdge; j++) {
@@ -71,13 +74,14 @@ export default function ShapeStep6() {
       const { width, height } = sizeRef.current
       return hitControlPoint(viewOf(width, height), points, position) >= 0
     },
-    onDown: (position) => {
+    onDown: focusOnGrab(canvasRef, (position) => {
       const { width, height } = sizeRef.current
       const index = hitControlPoint(viewOf(width, height), points, position)
       if (index < 0) return false
+      loop.pause() // 再生中でも、つかんだら止める
       dragging.current = index
       setSelected(index)
-    },
+    }),
     onMove: (position) => {
       if (dragging.current === null) return
       const { width, height } = sizeRef.current
@@ -91,15 +95,16 @@ export default function ShapeStep6() {
   })
 
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const move = pageStep(event)
+    if (move) {
       event.preventDefault()
-      const direction = event.key === 'PageUp' ? 1 : -1
-      setSelected((selected + direction + points.length) % points.length)
+      setSelected((selected + move + points.length) % points.length)
       return
     }
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
+    loop.pause()
     setPoints((currentPoints) => currentPoints.map((point, i) => i === selected
       ? [clamp(point[0] + step.dx * 0.1, 0, 6.4), clamp(point[1] + step.dy * 0.1, 0, 3.4)]
       : point))
@@ -114,7 +119,7 @@ export default function ShapeStep6() {
   return (
     <SimShell
       label="Chaikin の細分割"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="6 個の制御点を繰り返しかど切りした折れ線と、極限の 2 次 B スプライン。制御点をつかんで動かせる。矢印キーで選択中の点を動かし、PageUp と PageDown で点を選べる" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="6 個の制御点を繰り返しかど切りした折れ線と、極限の 2 次 B スプライン。制御点をドラッグで動かせる。ドラッグや矢印キーを使うと、再生は止まる。矢印キー(Shift で 5 倍)で選択中の点を動かし、PageUp と PageDown で点を順に選べる" />}
       legend={<SimLegend items={[
         { key: 'current', label: '現在の折れ線', swatch: 'var(--color-ink)' },
         { key: 'limit', label: '極限の B スプライン', swatch: 'var(--color-muted)' },
@@ -124,7 +129,7 @@ export default function ShapeStep6() {
       controls={
         <>
           <SimToolbar><PlayPauseButton running={loop.running} onToggle={loop.toggle} /><ResetButton onClick={reset} /></SimToolbar>
-          <ParamSlider symbol="k" label="細分割の回数" value={levels} min={0} max={6} step={1} onChange={(value) => { setLevels(value); elapsed.current = 0 }} format={(value) => value.toFixed(0)} />
+          <ParamSlider symbol="k" label="細分割の回数" value={levels} min={0} max={6} step={1} onChange={(value) => { loop.pause(); setLevels(value); elapsed.current = 0 }} format={(value) => value.toFixed(0)} />
         </>
       }
     />

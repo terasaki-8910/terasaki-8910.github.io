@@ -411,3 +411,21 @@ intro：体の断面を、いろいろな向きから X 線で撮った影（投
 
 - 2026-10-26：土台（登録・6 タブの枠・データの検査）済み。計算は 6 タブ分すべて済み（curve・vec3・shading・raster・mesh・render・isosurface・volume・flow・fft・ct・imageFilter とテスト。Codex の使用量を抑えるため、計算とテストは Claude が書き、画面は Codex）。形状のタブは全体と段階 1〜8 済み（画面で確かめて直した）。反射と影は全体と段階 1〜4 済み、5〜8 を作っている
 - シミュレーションを書くときの部品の使い方と、画面で決めた見た目の決まりは `.claude/visualization-methods-kit.md`
+- 2026-10-27（利用制限でエージェントが途中で止まった。止まった時点の作業を wip としてコミットし、ブランチを push）：形状・反射と影・等値面・ボリュームは、全体と全段階の作成、画面での確かめと直し、説明文の読み直しまで済んでいた。そのあとキーボード操作・読み上げの見直し（報告は `.claude/visualization-methods-a11y-review.md`）を受けて 4 タブを並行で直し始めた。同時に、流れと CT の画面も作り始めた。wip の時点で、テストは 707 件中 702 件が通る（落ちるのは transformRender の既知の 5 件だけ）。ビルドも通る。画面はまだ見ていない
+
+### 残りの作業（上から順に。1 件終えるごとにここを直してコミット）
+
+直しの決まりは `.claude/visualization-methods-fix-brief.md`（キー操作・選択の表示・label・再生中の操作・色・save/restore・scroll・ボタン）。画面の道具は `.claude/visualization-methods-tools/`（shoot.mjs：タブの全体と段階を撮る。check-all.mjs：タブ × 幅 × テーマでエラーとはみ出しを調べる。dump-sections.mjs：説明文と式を並べて読み直す）。
+
+1. [ ] 4 タブのキーボード・読み上げの直しの仕上げ。wip の差分を報告の項目と照らし合わせ、直っていない [高]・[中] を直す。直しの途中で止まっていることがあるので、まず各ファイルを読む。止まった時点の様子：
+   - 形状：shapeKit から直し始めたところで止まった
+   - 反射と影：段階の大半を直し、段階 1・6・8 と段階 5 の軸の名前が途中だった
+   - 等値面、ボリューム：全部のファイルに手が入っている。どこまで済んだかは差分で確かめる。ボリュームは tfEditorKit.js・volumeKeys.js とテスト 2 本が増えた
+2. [ ] 流れのタブ：全体と段階 1〜6 はできている。段階 3 で、選んでいる渦を PageUp・PageDown で替え、凡例と label に出す直しの途中だった。仕様 4.5 と照らし合わせ、直しの手引きの決まりで仕上げる
+3. [ ] CT のタブ：前半（全体と段階 1〜5、`sections/ct.js`）と後半（段階 6〜10、`sections/ctLater.js` の `CT_LATER_STEPS`・`CT_COMBINATION`）は別々に作った。ctLater.js の段階を ct.js の steps の後ろに足し、組み合わせを `CT_COMBINATION` に置き換えて、ctLater.js を消す。仕様 4.6 と照らし合わせる
+4. [ ] 6 タブの画面の見直し：幅 375・768・820×1180・1180×820・1024・1280・1440、ライトとダーク、dpr 2。check-all でエラーとはみ出しを調べ、撮った絵を実際に見る（10-26 の画面の見直しは、利用制限で報告の前に止まった）。流れと CT の説明文を dump-sections で読み直す
+5. [ ] 流れと CT のキーボード・読み上げを、直しの手引きの決まりで見直す
+6. [ ] `npm run build-font-subset`（ネットワークが要る）、テスト、ビルド、仕様の進み具合と科目の handoff.md を更新してコミット
+7. [ ] 本人に見せて GO をもらう（AskUserQuestion。開発サーバーの URL と画面の絵）。ホームのプレビューと、/visualization/ との相互リンクを付けるかもそこで聞く
+8. [ ] GO のあと：origin/main を取り込み、main へ --no-ff で取り込み、`git ls-files --eol` で CRLF を確かめてから `npm run build`、`build: docs/を最新のsrc/内容で再ビルド` をコミット。push は言われたときだけ
+9. [ ] そのあと `.claude/visualization-tasks.md` の 1〜4（2・3 はこのページの段階も対象）と、共有部品の直しの候補

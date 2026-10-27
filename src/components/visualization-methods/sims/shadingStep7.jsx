@@ -8,6 +8,7 @@ import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
 import { arrowStep, clamp, drawText, fmt, laneColor, markerCircle } from '../../visualization/sims/rigidKit'
 import { fresnelSchlick, reflectIncident, refract } from '../../../utils/vis/shading'
+import { drawSubLabel } from './labelKit'
 
 const INITIAL = { theta: 42 * Math.PI / 180, eta1: 1, eta2: 1.5 }
 
@@ -63,13 +64,16 @@ export default function ShadingStep7() {
     ctx.moveTo(12, center[1])
     ctx.lineTo(width - 12, center[1])
     ctx.stroke()
-    ctx.strokeStyle = colors.line
+    // 法線(破線)。line(1.3:1)ではなく muted
+    ctx.save()
+    ctx.strokeStyle = colors.muted
+    ctx.lineWidth = 1.25
     ctx.setLineDash([5, 4])
     ctx.beginPath()
     ctx.moveTo(center[0], center[1] - radius - 12)
     ctx.lineTo(center[0], center[1] + radius + 12)
     ctx.stroke()
-    ctx.setLineDash([])
+    ctx.restore()
 
     drawRay(ctx, source, center, laneColor(colors, 0), 2.5)
     const reflectedEnd = [center[0] + R[0] * radius, center[1] - R[1] * radius]
@@ -88,9 +92,9 @@ export default function ShadingStep7() {
     drawText(ctx, 'θ', center[0] - 30 * Math.sin(theta / 2), center[1] - 30 * Math.cos(theta / 2), { color: colors.ink, align: 'right' })
     markerCircle(ctx, source[0], source[1], 7, { fill: colors.accent, stroke: colors.ink, lineWidth: 1.5 })
     drawText(ctx, 'I', source[0] - 10, source[1], { color: colors.ink, align: 'right', baseline: 'middle' })
-    drawText(ctx, `上 η₁=${eta1.toFixed(2)}`, 16, center[1] - 12, { color: colors.ink })
-    drawText(ctx, `下 η₂=${eta2.toFixed(2)}`, 16, center[1] + 18, { color: colors.ink })
-    drawText(ctx, '目安  空気 1.00・水 1.33・ガラス 1.50', width - 14, height - 10, { color: colors.muted, align: 'right' })
+    drawSubLabel(ctx, `上 η_1 = ${eta1.toFixed(2)}`, 16, center[1] - 12, { color: colors.ink })
+    drawSubLabel(ctx, `下 η_2 = ${eta2.toFixed(2)}`, 16, center[1] + 18, { color: colors.ink })
+    drawText(ctx, '目安  空気 1.00・水 1.33・ガラス 1.50', width - 14, height - 10, { color: colors.ink, align: 'right' })
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
@@ -103,17 +107,20 @@ export default function ShadingStep7() {
     canGrab: hit,
     onDown: (point) => {
       if (!hit(point)) return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、キーでも操作できるように
+      return undefined
     },
     onMove: (point) => {
       const { center } = geometry(sizeRef.current.width, sizeRef.current.height, theta)
       setTheta(clamp(Math.atan2(center[0] - point.x, center[1] - point.y), 0, 89 * Math.PI / 180))
     },
   })
+  // つまみは法線の左にあり、入射角が大きいほど左へ寄る。キーはつまみが動く向き(→ で右、つまり入射角が小さく)にそろえる
   const onKeyDown = (event) => {
     const step = arrowStep(event)
-    if (!step) return
+    if (!step || step.dx === 0) return // 上下のキーは使わない(ページのスクロールに残す)
     event.preventDefault()
-    setTheta((value) => clamp(value + step.dx * 2 * Math.PI / 180, 0, 89 * Math.PI / 180))
+    setTheta((value) => clamp(value - step.dx * 2 * Math.PI / 180, 0, 89 * Math.PI / 180))
   }
   const reset = () => {
     setTheta(INITIAL.theta)
@@ -124,7 +131,7 @@ export default function ShadingStep7() {
   return (
     <SimShell
       label="反射と屈折"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="水平な境界へ入る光、その反射光と屈折光を描いています。入射光Iのつまみをドラッグするか左右の矢印キーで入射角を変えられます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="水平な境界へ入る光 I と、その反射光 R、屈折光 T を描いています。入射光 I のつまみをドラッグするか、左右の矢印キーでつまみを動かして入射角を変えられます(2 度ずつ。Shift を押すと 5 倍)。右へ動かすと入射角は小さくなります。" />}
       legend={<SimLegend items={[
         { key: 'theta', symbol: '\\theta', label: '入射角', value: `${fmt(theta * 180 / Math.PI, 1)}°`, minChars: 7 },
         { key: 'phi', symbol: '\\phi', label: '屈折角', value: phi === null ? '全反射' : `${fmt(phi * 180 / Math.PI, 1)}°`, minChars: 7 },

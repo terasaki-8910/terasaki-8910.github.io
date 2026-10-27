@@ -34,7 +34,7 @@ export default function VolumeStep4() {
   const { canvasRef, redraw } = useCanvas({ draw })
   useEffect(() => { redraw() }, [z, points])
   const choosePreset = (name) => { setPreset(name); setPoints(cloneTfPoints(TF_PRESETS[name])) }
-  return <SimShell label="伝達関数を適用した断面" stage={<SimCanvas ref={canvasRef} label="頭部ファントムの断面。透明部分は市松模様" />} controls={<>
+  return <SimShell label="伝達関数を適用した断面" stage={<SimCanvas ref={canvasRef} label="頭部ファントムの断面を、伝達関数で決めた色と不透明度で塗った画像。透明な部分は市松模様に見える" scroll />} controls={<>
     <ParamSlider symbol="z" label="断面の位置" value={z} min={-1} max={1} step={0.02} onChange={setZ} />
     <ControlGroup label="伝達関数">
       <TransferFunctionEditor points={points} onChange={(next) => { setPreset(''); setPoints(next) }} />

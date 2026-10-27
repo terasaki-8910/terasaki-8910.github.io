@@ -11,6 +11,7 @@ import { arrowStep, clamp, markerCircle } from '../../visualization/sims/rigidKi
 import { interfaceGradientStats, marchingSquares, reinitStep, signedDistanceSlottedDisk } from '../../../utils/vis/isosurface'
 import { advectSemiLagrangian2D } from '../../../utils/vis/grid'
 import { clipToFrame } from './isosurfaceKit'
+import { blitPixels } from './pixelKit'
 
 const N = 96
 const DX = 1 / N
@@ -40,8 +41,13 @@ const VELOCITY = velocity()
 export default function IsosurfaceStep9() {
   const [autoReinit, setAutoReinit] = useState(false)
   const [revision, setRevision] = useState(0)
-  const phiRef = useRef(exactDistance(INITIAL_DISK))
-  const scratchRef = useRef(new Float64Array(N * N))
+  // 重い初期値は最初の 1 回だけ作る(useRef(式) は描き直しのたびに式を評価する)
+  const phiRef = useRef(null)
+  if (phiRef.current === null) phiRef.current = exactDistance(INITIAL_DISK)
+  const scratchRef = useRef(null)
+  if (scratchRef.current === null) scratchRef.current = new Float64Array(N * N)
+  const pixelsRef = useRef(null) // 距離の濃淡の画素(RGBA)。毎フレーム作り直さない
+  if (pixelsRef.current === null) pixelsRef.current = new Uint8ClampedArray(N * N * 4)
   const diskRef = useRef({ ...INITIAL_DISK })
   const selectedRef = useRef(false)
   const legendRef = useRef(null)
@@ -55,7 +61,7 @@ export default function IsosurfaceStep9() {
     drawAxes(ctx, view, { colors, xLabel: 'x', yLabel: 'y' })
     clipToFrame(ctx, view, () => {
       // 正方形の領域全体を、距離の値で塗る: 内側(φ < 0)は lane-1 へ、外側は表面から離れるほど muted へ
-      const image = ctx.createImageData(N, N)
+      const pixels = pixelsRef.current
       const near = colors.rgb.surface
       const inside = colors.rgb['lane-1']
       const far = colors.rgb.muted
@@ -63,16 +69,13 @@ export default function IsosurfaceStep9() {
         const value = phi[px + N * (N - 1 - py)]
         const offset = 4 * (px + N * py)
         const [target, t] = value < 0 ? [inside, 0.35 + 0.65 * clamp(-value / 0.15, 0, 1)] : [far, 0.5 * clamp(value / 0.5, 0, 1)]
-        for (let channel = 0; channel < 3; channel++) image.data[offset + channel] = Math.round(near[channel] * (1 - t) + target[channel] * t)
-        image.data[offset + 3] = 255
+        for (let channel = 0; channel < 3; channel++) pixels[offset + channel] = Math.round(near[channel] * (1 - t) + target[channel] * t)
+        pixels[offset + 3] = 255
       }
-      const buffer = document.createElement('canvas')
-      buffer.width = N
-      buffer.height = N
-      buffer.getContext('2d').putImageData(image, 0, 0)
-      ctx.drawImage(buffer, view.sx(0), view.sy(1), view.sx(1) - view.sx(0), view.sy(0) - view.sy(1))
-      // 距離の等しい線(φ = −0.06, 0.06, 0.12, 0.2, 0.3)。距離の場なら、表面と平行に等間隔に並ぶ
-      ctx.strokeStyle = colors.muted
+      blitPixels(ctx, pixels, N, N, view.sx(0), view.sy(1), view.sx(1) - view.sx(0), view.sy(0) - view.sy(1))
+      // 距離の等しい線(φ = −0.06, 0.06, 0.12, 0.2, 0.3)。距離の場なら、表面と平行に等間隔に並ぶ。
+      // 背景は muted へ混ざり、内側は lane-1 に近づくので、muted の線は沈む(ダークの内側で 1.4:1)。ink の細い線にする
+      ctx.strokeStyle = colors.ink
       ctx.lineWidth = 1
       ctx.beginPath()
       for (const level of [-0.06, 0.06, 0.12, 0.2, 0.3]) {
@@ -146,7 +149,13 @@ export default function IsosurfaceStep9() {
   }
   usePointerDrag(canvasRef, {
     canGrab: hit,
-    onDown: (point) => { if (!hit(point)) return false; selectedRef.current = true; redraw(); return true },
+    onDown: (point) => {
+      if (!hit(point)) return false
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも動かせるように
+      selectedRef.current = true
+      redraw()
+      return true
+    },
     onMove: ({ x, y }) => {
       const view = viewFor(sizeRef.current.width, sizeRef.current.height)
       resetAt(clamp(view.wx(x), 0.18, 0.82), clamp(view.wy(y), 0.18, 0.82))
@@ -171,11 +180,11 @@ export default function IsosurfaceStep9() {
   return (
     <SimShell
       label="回転流で運ぶレベルセット"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="切れ込みのある円板の符号付き距離とゼロ等値線です。停止中は中心の印をドラッグまたは矢印キーで動かせます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="切れ込みのある円板の符号付き距離（濃淡）と、ゼロ等値線、距離の等しい線の絵。停止中は、円板の中心の丸をドラッグするか矢印キーで動かせます（Shift で大きく）。再生中は動かせません。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'field', symbol: '\\phi', label: '符号付き距離', value: '内 − / 外 ＋', swatch: 'linear-gradient(90deg, var(--lane-1), var(--color-surface), var(--color-muted))' },
         { key: 'contour', symbol: '\\phi=0', label: '表面', swatch: 'var(--color-ink)' },
-        { key: 'levels', label: '距離の等しい線（−0.06・0.06・0.12・0.2・0.3）', swatch: 'var(--color-muted)' },
+        { key: 'levels', label: '距離の等しい線（−0.06・0.06・0.12・0.2・0.3）', swatch: 'linear-gradient(var(--color-ink), var(--color-ink)) center / 100% 1px no-repeat' },
         { key: 'mean', symbol: '|\\nabla\\phi|', label: '表面近くの平均', value: '1.000', minChars: 7 },
         { key: 'deviation', label: '1 からの平均ずれ', value: '0.000', minChars: 7 },
         { key: 'position', label: '円板の中心', value: '(0.50, 0.72)', minChars: 14 },
@@ -184,7 +193,9 @@ export default function IsosurfaceStep9() {
         <PlayPauseButton running={loop.running} onToggle={loop.toggle} />
         <ResetButton onClick={reset} />
         <ToggleButton pressed={autoReinit} onChange={setAutoReinit}>毎回直す</ToggleButton>
-        <ToggleButton pressed={false} onChange={() => reinitialize(20)}>距離に直す（再初期化）</ToggleButton>
+        <button type="button" className="vis-btn" onClick={() => reinitialize(20)}>
+          <span>距離に直す（再初期化）</span>
+        </button>
       </SimToolbar>}
     />
   )
