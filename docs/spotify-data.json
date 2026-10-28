@@ -1,6 +1,105 @@
 {
-  "lastUpdated": "2026-10-28T02:58:27.372Z",
+  "lastUpdated": "2026-10-28T11:48:49.362Z",
   "tracks": [
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-10-28T11:32:49.226Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-10-28T11:29:20.218Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ozF0VkZiDgXPt4Hwuao4i",
+      "name": "仮装狂騒曲",
+      "artist": "初星学園, 倉本千奈, 篠澤 広, 月村手毬",
+      "album": "仮装狂騒曲",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b4566fd149430f2cafb34c2",
+      "playedAt": "2026-10-28T11:21:44.927Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ozF0VkZiDgXPt4Hwuao4i",
+      "duration": 193666,
+      "previewUrl": ""
+    },
+    {
+      "id": "0T4AitQuq8IJhWBWuZwkFA",
+      "name": "群青",
+      "artist": "YOASOBI",
+      "album": "群青",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735235b1b2b4feb3783e12a434",
+      "playedAt": "2026-10-28T11:20:01.531Z",
+      "spotifyUrl": "https://open.spotify.com/track/0T4AitQuq8IJhWBWuZwkFA",
+      "duration": 248444,
+      "previewUrl": ""
+    },
+    {
+      "id": "62Lv9WcrfzJqhvYDbilJy3",
+      "name": "たぶん",
+      "artist": "YOASOBI",
+      "album": "たぶん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737b7d90956f81e0cc3f39d0b8",
+      "playedAt": "2026-10-28T09:45:28.981Z",
+      "spotifyUrl": "https://open.spotify.com/track/62Lv9WcrfzJqhvYDbilJy3",
+      "duration": 258666,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-10-28T07:11:21.858Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "76kJA3LUe1uREGjlaOypkL",
+      "name": "テレパシ",
+      "artist": "DECO*27",
+      "album": "テレパシ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cc28a2751b6be6d4ef842e9",
+      "playedAt": "2026-10-28T07:02:32.127Z",
+      "spotifyUrl": "https://open.spotify.com/track/76kJA3LUe1uREGjlaOypkL",
+      "duration": 137746,
+      "previewUrl": ""
+    },
+    {
+      "id": "7HneEBTvTra2CRYsxgMOAi",
+      "name": "ハルジオン",
+      "artist": "YOASOBI",
+      "album": "ハルジオン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734d9235ec4a344028f6c5876c",
+      "playedAt": "2026-10-28T05:22:35.856Z",
+      "spotifyUrl": "https://open.spotify.com/track/7HneEBTvTra2CRYsxgMOAi",
+      "duration": 198000,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ptl2PXkiSth54HCuGO7vN",
+      "name": "あの夢をなぞって",
+      "artist": "YOASOBI",
+      "album": "THE BOOK",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339917845c74c9e64320fbed9",
+      "playedAt": "2026-10-28T05:19:17.328Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ptl2PXkiSth54HCuGO7vN",
+      "duration": 240746,
+      "previewUrl": ""
+    },
     {
       "id": "3KIcKiftxner9luU8Na5KZ",
       "name": "AIAIAI (feat. 中田ヤスタカ)",
@@ -43,6 +142,17 @@
       "playedAt": "2026-10-27T09:03:23.329Z",
       "spotifyUrl": "https://open.spotify.com/track/1AKIi40li4kyJHQKOuF3Qz",
       "duration": 762216,
+      "previewUrl": ""
+    },
+    {
+      "id": "7lUaEsQVwvNEjaJNcvc1CN",
+      "name": "サウダージ",
+      "artist": "PornoGraffitti",
+      "album": "PORNO GRAFFITTI BEST RED'S",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2738770cf0b8d9ddacf4f286688",
+      "playedAt": "2026-10-27T05:56:01.141Z",
+      "spotifyUrl": "https://open.spotify.com/track/7lUaEsQVwvNEjaJNcvc1CN",
+      "duration": 261239,
       "previewUrl": ""
     },
     {
@@ -219,116 +329,6 @@
       "playedAt": "2026-10-26T06:12:38.351Z",
       "spotifyUrl": "https://open.spotify.com/track/0vHEbPUFdhGmH0kMA0J39X",
       "duration": 17327,
-      "previewUrl": ""
-    },
-    {
-      "id": "6RxsExIM2y163Iy1Qst36S",
-      "name": "あの夏へ",
-      "artist": "Joe Hisaishi",
-      "album": "千と千尋の神隠し サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27326174e356765f36b1ba996be",
-      "playedAt": "2026-10-26T06:12:20.452Z",
-      "spotifyUrl": "https://open.spotify.com/track/6RxsExIM2y163Iy1Qst36S",
-      "duration": 189800,
-      "previewUrl": ""
-    },
-    {
-      "id": "4LlCnZLrF6Ri7bK5gwrpG5",
-      "name": "呪われた海賊たち",
-      "artist": "Antoine Barry",
-      "album": "パイレーツ・オブ・カリビアン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27359bd349ad0b72ea53d9cfcee",
-      "playedAt": "2026-10-26T06:09:10.155Z",
-      "spotifyUrl": "https://open.spotify.com/track/4LlCnZLrF6Ri7bK5gwrpG5",
-      "duration": 94418,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tE3p4vIwoqUZLkKF2PNeB",
-      "name": "Interstellar Main Theme (From \"Interstellar\")",
-      "artist": "Geek Music",
-      "album": "Interstellar Main Theme (From \"Interstellar\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f72550703b6302addfc9959",
-      "playedAt": "2026-10-26T06:07:35.187Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tE3p4vIwoqUZLkKF2PNeB",
-      "duration": 243209,
-      "previewUrl": ""
-    },
-    {
-      "id": "5EbGCyliRgdpX00MtNOPvT",
-      "name": "Back to the Future",
-      "artist": "Alan Silvestri, Cincinnati Pops Orchestra, Erich Kunzel",
-      "album": "Star Tracks II",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b671103145207b745ba0ad01",
-      "playedAt": "2026-10-26T06:00:12.186Z",
-      "spotifyUrl": "https://open.spotify.com/track/5EbGCyliRgdpX00MtNOPvT",
-      "duration": 199733,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LChvDjlhPXmp1DhIfejxv",
-      "name": "スラッグ溪谷の朝",
-      "artist": "Joe Hisaishi",
-      "album": "天空の城ラピュタ サウンドトラック ～飛行石の謎～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6bafda9334bda20e2e5e447",
-      "playedAt": "2026-10-26T05:56:51.884Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LChvDjlhPXmp1DhIfejxv",
-      "duration": 184293,
-      "previewUrl": ""
-    },
-    {
-      "id": "5VZn5Gsn2ckFJ2bmRo9GPe",
-      "name": "ルパン三世のテーマ - 「ルパン三世のテーマ'78」シングル・ヴァージョン",
-      "artist": "Yuji Ohno, ユー & ザ・エクスプロージョン・バンド",
-      "album": "ルパン三世 オリジナル・サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d84206cdf9b755537f3123c8",
-      "playedAt": "2026-10-26T05:53:47.087Z",
-      "spotifyUrl": "https://open.spotify.com/track/5VZn5Gsn2ckFJ2bmRo9GPe",
-      "duration": 204626,
-      "previewUrl": ""
-    },
-    {
-      "id": "4Z9n913mHKPWbsD0n5gEwF",
-      "name": "20th Century Fox Fanfare",
-      "artist": "Geek Music",
-      "album": "20th Century Fox Fanfare",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b850000d705e1d77408e60ec",
-      "playedAt": "2026-10-26T05:50:21.985Z",
-      "spotifyUrl": "https://open.spotify.com/track/4Z9n913mHKPWbsD0n5gEwF",
-      "duration": 58189,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Ab4eiURISCPq2ig7XPYcN",
-      "name": "The Imperial March (Darth Vader's Theme)",
-      "artist": "John Williams, London Symphony Orchestra",
-      "album": "Star Wars: The Empire Strikes Back (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315f47ee015397b51b2330600",
-      "playedAt": "2026-10-26T05:49:23.288Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Ab4eiURISCPq2ig7XPYcN",
-      "duration": 179573,
-      "previewUrl": ""
-    },
-    {
-      "id": "08QaHlMPWuO5PUxjl61bXn",
-      "name": "He's a Pirate",
-      "artist": "Klaus Badelt",
-      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27338786c7492ac252797bb2648",
-      "playedAt": "2026-10-26T05:46:23.133Z",
-      "spotifyUrl": "https://open.spotify.com/track/08QaHlMPWuO5PUxjl61bXn",
-      "duration": 90426,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FL7eUG80aeUeyMO2N4btN",
-      "name": "Mission: Impossible Theme",
-      "artist": "Michael Giacchino",
-      "album": "Mission: Impossible III (Music From The Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b85f6d3142ef01d48b94480e",
-      "playedAt": "2026-10-26T05:44:52.235Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FL7eUG80aeUeyMO2N4btN",
-      "duration": 51800,
       "previewUrl": ""
     }
   ],
