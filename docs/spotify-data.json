@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-10-28T11:48:49.362Z",
+  "lastUpdated": "2026-10-28T17:36:13.085Z",
   "tracks": [
+    {
+      "id": "1tzj2vY4twkNmZ5K3DUOPp",
+      "name": "Theme (from \"Spider Man\") [Original Television Series]",
+      "artist": "Michael Giacchino",
+      "album": "Spider-Man: Homecoming (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f69096c612e959561abe32f4",
+      "playedAt": "2026-10-28T15:49:29.145Z",
+      "spotifyUrl": "https://open.spotify.com/track/1tzj2vY4twkNmZ5K3DUOPp",
+      "duration": 39960,
+      "previewUrl": ""
+    },
+    {
+      "id": "0cm6cAtRu0C0sEZzDjZFsx",
+      "name": "Discombobulate",
+      "artist": "Hans Zimmer",
+      "album": "Sherlock Holmes (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273796560c266f28ba4841a8df4",
+      "playedAt": "2026-10-28T12:12:56.466Z",
+      "spotifyUrl": "https://open.spotify.com/track/0cm6cAtRu0C0sEZzDjZFsx",
+      "duration": 145080,
+      "previewUrl": ""
+    },
+    {
+      "id": "7xrXFTJXQnv7S9IGq0OBUk",
+      "name": "HoYoHoYoにしてあげる♪ (feat. 初音ミク)",
+      "artist": "inosoo, Hatsune Miku",
+      "album": "HoYoHoYoにしてあげる♪",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dc74bfd403df2d8a92efe4be",
+      "playedAt": "2026-10-28T12:04:37.090Z",
+      "spotifyUrl": "https://open.spotify.com/track/7xrXFTJXQnv7S9IGq0OBUk",
+      "duration": 115041,
+      "previewUrl": ""
+    },
     {
       "id": "2le4lZquBURJYS6TcdAZdx",
       "name": "絶対王者チョコレート",
@@ -296,39 +329,6 @@
       "playedAt": "2026-10-26T06:22:36.201Z",
       "spotifyUrl": "https://open.spotify.com/track/110uH4IxKOINJBWCy9J23k",
       "duration": 120212,
-      "previewUrl": ""
-    },
-    {
-      "id": "39uLYYZytVUwcjgeYLI409",
-      "name": "Merry-Go-Round of Life - from 'Howl's Moving Castle'",
-      "artist": "Joe Hisaishi",
-      "album": "FREEDOM PIANO STORIES 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27333ea9fb3fd69bca55a015229",
-      "playedAt": "2026-10-26T06:20:35.454Z",
-      "spotifyUrl": "https://open.spotify.com/track/39uLYYZytVUwcjgeYLI409",
-      "duration": 311106,
-      "previewUrl": ""
-    },
-    {
-      "id": "4IXpj0463g2HAjiDaMHLk9",
-      "name": "So Was Red",
-      "artist": "Thomas Newman, Tom Newton",
-      "album": "The Shawshank Redemption",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e710c1f5b228046932790031",
-      "playedAt": "2026-10-26T06:15:23.452Z",
-      "spotifyUrl": "https://open.spotify.com/track/4IXpj0463g2HAjiDaMHLk9",
-      "duration": 164493,
-      "previewUrl": ""
-    },
-    {
-      "id": "0vHEbPUFdhGmH0kMA0J39X",
-      "name": "Warner Bros. - Cover Version",
-      "artist": "Cinescore",
-      "album": "The Film Studio Fanfare Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
-      "playedAt": "2026-10-26T06:12:38.351Z",
-      "spotifyUrl": "https://open.spotify.com/track/0vHEbPUFdhGmH0kMA0J39X",
-      "duration": 17327,
       "previewUrl": ""
     }
   ],
