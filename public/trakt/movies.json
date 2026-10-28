@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T23:16:09.299Z",
+  "generatedAt": "2026-10-28T23:26:40.075Z",
   "user": "masatoT",
   "watched": [
     {
@@ -2196,6 +2196,35 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 293955,
+      "tmdb": 447332,
+      "slug": "a-quiet-place-2018",
+      "year": 2018,
+      "released": "2018-04-03",
+      "traktTitle": "A Quiet Place",
+      "details": {
+        "poster": "/nZkSOMUQwg2OeVrRt8WivFJOHX3.jpg",
+        "genres": [
+          "ホラー",
+          "ドラマ",
+          "サイエンスフィクション"
+        ],
+        "overview": "音に反応し人間を襲う”何か”によって荒廃した世界で、生き残った1組の家族がいた。その”何か”は、呼吸の音さえ逃さない。誰かが一瞬でも音を立てると、即死する。手話を使い、裸足で歩き、道には砂を敷き詰め、静寂と共に暮らすエヴリン＆リーの夫婦と子供たちだが、なんとエヴリンは出産を目前に控えているのであった。果たして彼らは、無事最後まで沈黙を貫けるのか？",
+        "overviewLang": "ja",
+        "title": "クワイエット・プレイス",
+        "originalTitle": "A Quiet Place",
+        "runtime": 90,
+        "releaseDate": "2018-04-03"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2023-09-08T21:30:00.000Z",
+      "recordedOrder": 14580381144,
+      "rating": 7,
+      "ratedAt": "2026-10-28T12:14:34.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 191797,
       "tmdb": 299536,
       "slug": "avengers-infinity-war-2018",
@@ -2338,6 +2367,35 @@
       "recordedOrder": 14495443962,
       "rating": 8,
       "ratedAt": "2026-10-05T02:20:28.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 273537,
+      "tmdb": 429617,
+      "slug": "spider-man-far-from-home-2019",
+      "year": 2019,
+      "released": "2019-06-28",
+      "traktTitle": "Spider-Man: Far From Home",
+      "details": {
+        "poster": "/tUzyW3leKzGeIcsMWld6cYhcO4b.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "高校生のピーター・パーカー(トム・ホランド)は夏休みを迎え、親友のネッド(ジェイコブ・バタロン)やMJ(ゼンデイヤ)たちとヨーロッパへ旅行に行く。ところが、ピーターの前にS.H.I.E.L.D.の長官ニック・フューリー(サミュエル・L・ジャクソン)が現れ、彼にある任務を与える。",
+        "overviewLang": "ja",
+        "title": "スパイダーマン：ファー・フロム・ホーム",
+        "originalTitle": "Spider-Man: Far From Home",
+        "runtime": 129,
+        "releaseDate": "2019-06-28"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-28T11:01:00.000Z",
+      "recordedOrder": 14580252129,
+      "rating": 8,
+      "ratedAt": "2026-10-28T11:01:34.000Z"
     },
     {
       "type": "show",
@@ -2484,6 +2542,35 @@
       "recordedOrder": 14495733312,
       "rating": 9,
       "ratedAt": "2026-10-05T04:29:27.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 299910,
+      "tmdb": 453395,
+      "slug": "doctor-strange-in-the-multiverse-of-madness-2022",
+      "year": 2022,
+      "released": "2022-05-04",
+      "traktTitle": "Doctor Strange in the Multiverse of Madness",
+      "details": {
+        "poster": "/uIBieATCKY8fnnCnDYoIffUMqP5.jpg",
+        "genres": [
+          "ファンタジー",
+          "アクション",
+          "アドベンチャー"
+        ],
+        "overview": "何もかもが変わりつつある世界を元に戻すため、ストレンジはかつてアベンジャーズを脅かすほど強大な力を見せたスカーレット・ウィッチことワンダに助けを求める。 しかし、もはや彼らの力だけではどうすることもできない恐るべき脅威が人類、そして全宇宙に迫っていた。 さらに驚くべきことに、その宇宙最大の脅威はドクター・ストレンジと全く同じ姿をしていて…。",
+        "overviewLang": "ja",
+        "title": "ドクター・ストレンジ/マルチバース・オブ・マッドネス",
+        "originalTitle": "Doctor Strange in the Multiverse of Madness",
+        "runtime": 126,
+        "releaseDate": "2022-05-04"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-10-28T15:52:00.000Z",
+      "recordedOrder": 14580808468,
+      "rating": 7,
+      "ratedAt": "2026-10-28T15:52:10.000Z"
     },
     {
       "type": "movie",
@@ -3271,32 +3358,6 @@
         "overviewLang": "ja"
       },
       "listedAt": "2026-10-05T03:01:11.000Z",
-      "rating": null
-    },
-    {
-      "type": "movie",
-      "kind": "movie",
-      "trakt": 299910,
-      "tmdb": 453395,
-      "slug": "doctor-strange-in-the-multiverse-of-madness-2022",
-      "year": 2022,
-      "released": "2022-05-04",
-      "traktTitle": "Doctor Strange in the Multiverse of Madness",
-      "details": {
-        "poster": "/uIBieATCKY8fnnCnDYoIffUMqP5.jpg",
-        "genres": [
-          "ファンタジー",
-          "アクション",
-          "アドベンチャー"
-        ],
-        "overview": "何もかもが変わりつつある世界を元に戻すため、ストレンジはかつてアベンジャーズを脅かすほど強大な力を見せたスカーレット・ウィッチことワンダに助けを求める。 しかし、もはや彼らの力だけではどうすることもできない恐るべき脅威が人類、そして全宇宙に迫っていた。 さらに驚くべきことに、その宇宙最大の脅威はドクター・ストレンジと全く同じ姿をしていて…。",
-        "overviewLang": "ja",
-        "title": "ドクター・ストレンジ/マルチバース・オブ・マッドネス",
-        "originalTitle": "Doctor Strange in the Multiverse of Madness",
-        "runtime": 126,
-        "releaseDate": "2022-05-04"
-      },
-      "listedAt": "2026-10-07T16:09:12.000Z",
       "rating": null
     },
     {
