@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-10-27T11:14:10.440Z",
+  "lastUpdated": "2026-10-28T02:58:27.372Z",
   "tracks": [
+    {
+      "id": "3KIcKiftxner9luU8Na5KZ",
+      "name": "AIAIAI (feat. 中田ヤスタカ)",
+      "artist": "Kizuna AI, Yasutaka Nakata",
+      "album": "AIAIAI (feat. 中田ヤスタカ)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732afbeb724be112ac5ea10cf9",
+      "playedAt": "2026-10-28T00:41:16.904Z",
+      "spotifyUrl": "https://open.spotify.com/track/3KIcKiftxner9luU8Na5KZ",
+      "duration": 193385,
+      "previewUrl": ""
+    },
+    {
+      "id": "3dPtXHP0oXQ4HCWHsOA9js",
+      "name": "夜に駆ける",
+      "artist": "YOASOBI",
+      "album": "夜に駆ける",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5716278abba6a103ad13aa7",
+      "playedAt": "2026-10-28T00:37:58.756Z",
+      "spotifyUrl": "https://open.spotify.com/track/3dPtXHP0oXQ4HCWHsOA9js",
+      "duration": 261013,
+      "previewUrl": ""
+    },
+    {
+      "id": "33CYRE35EDSvNGjuDFV8Qp",
+      "name": "オリオン",
+      "artist": "YOASOBI",
+      "album": "オリオン",
+      "albumArt": "https://i.scdn.co/image/ab6742d3000053b755ed7558bcecfd42c84ddf74",
+      "playedAt": "2026-10-28T00:37:58.756Z",
+      "spotifyUrl": "https://open.spotify.com/track/33CYRE35EDSvNGjuDFV8Qp",
+      "duration": 224984,
+      "previewUrl": ""
+    },
     {
       "id": "1AKIi40li4kyJHQKOuF3Qz",
       "name": "POSTERITY",
@@ -296,39 +329,6 @@
       "playedAt": "2026-10-26T05:44:52.235Z",
       "spotifyUrl": "https://open.spotify.com/track/1FL7eUG80aeUeyMO2N4btN",
       "duration": 51800,
-      "previewUrl": ""
-    },
-    {
-      "id": "0YGPxxFKlNde0V2nSq6FJi",
-      "name": "The Throne Room and End Title (From \"Star Wars\")",
-      "artist": "John Williams, Charles Gerhardt, National Philharmonic Orchestra",
-      "album": "Star Wars & Return of the Jedi",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27380f0183e95d1ab70eec8702c",
-      "playedAt": "2026-10-26T05:43:59.947Z",
-      "spotifyUrl": "https://open.spotify.com/track/0YGPxxFKlNde0V2nSq6FJi",
-      "duration": 483293,
-      "previewUrl": ""
-    },
-    {
-      "id": "30lXCrnKs5TJJOuSVwiQn1",
-      "name": "Zoltraak",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
-      "playedAt": "2026-10-26T05:35:56.065Z",
-      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
-      "duration": 140664,
-      "previewUrl": ""
-    },
-    {
-      "id": "7u5XBHnht6dyoRXRBb5soK",
-      "name": "Iron Man 3",
-      "artist": "Brian Tyler",
-      "album": "Iron Man 3 (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c28c36e39012cc8edf813196",
-      "playedAt": "2026-10-26T05:33:34.943Z",
-      "spotifyUrl": "https://open.spotify.com/track/7u5XBHnht6dyoRXRBb5soK",
-      "duration": 143453,
       "previewUrl": ""
     }
   ],
