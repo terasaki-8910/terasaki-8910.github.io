@@ -143,7 +143,6 @@ export default function IsosurfaceStep9() {
     setRevision((value) => value + 1)
   }
   const hit = (point) => {
-    if (loop.running) return false
     const view = viewFor(sizeRef.current.width, sizeRef.current.height)
     return Math.hypot(point.x - view.sx(diskRef.current.cx), point.y - view.sy(diskRef.current.cy)) <= 22
   }
@@ -151,6 +150,7 @@ export default function IsosurfaceStep9() {
     canGrab: hit,
     onDown: (point) => {
       if (!hit(point)) return false
+      loop.pause() // 再生中でも、つかんだら止める(動かすと、その位置の新しい円板から始まる)
       canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも動かせるように
       selectedRef.current = true
       redraw()
@@ -163,10 +163,10 @@ export default function IsosurfaceStep9() {
     onUp: () => { selectedRef.current = false; redraw() },
   })
   const onKeyDown = (event) => {
-    if (loop.running) return
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
+    loop.pause()
     resetAt(clamp(diskRef.current.cx + step.dx * 0.02, 0.18, 0.82), clamp(diskRef.current.cy + step.dy * 0.02, 0.18, 0.82))
   }
   const reset = () => {
@@ -180,7 +180,7 @@ export default function IsosurfaceStep9() {
   return (
     <SimShell
       label="回転流で運ぶレベルセット"
-      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="切れ込みのある円板の符号付き距離（濃淡）と、ゼロ等値線、距離の等しい線の絵。停止中は、円板の中心の丸をドラッグするか矢印キーで動かせます（Shift で大きく）。再生中は動かせません。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="切れ込みのある円板の符号付き距離（濃淡）と、ゼロ等値線、距離の等しい線の絵。円板の中心の丸をドラッグするか矢印キーで動かせます（Shift で大きく）。動かすと再生は止まり、その位置に新しい円板を置き直します。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'field', symbol: '\\phi', label: '符号付き距離', value: '内 − / 外 ＋', swatch: 'linear-gradient(90deg, var(--lane-1), var(--color-surface), var(--color-muted))' },
         { key: 'contour', symbol: '\\phi=0', label: '表面', swatch: 'var(--color-ink)' },
