@@ -4,6 +4,7 @@ import { LoadingMark } from '../components/CharacterImage';
 import { fetchQuote } from '../data/quotes';
 import type { Scored } from '../engine/recommend';
 import { loadPhoto, makeSparkles, NameArt, RainbowText, Sparkles, StarRow, useWidth, type Photo } from './parts';
+import { loadPhraseParser } from './phrases';
 import { gachaBgUrl, gachaEnabled, GACHA_FONT_FAMILY } from './prefetch';
 import './mini.css';
 import './quote.css';
@@ -53,7 +54,8 @@ export default function GachaMini(props: { scored: Scored }) {
       setQuote(found);
       if (!animate) return;
       const text = `${found ?? ''}${character.name}`;
-      await Promise.race([document.fonts.load(`800 16px "${GACHA_FONT_FAMILY}"`, text).catch(() => undefined), wait(FONT_WAIT_MAX_MS)]);
+      const ready = Promise.all([document.fonts.load(`800 16px "${GACHA_FONT_FAMILY}"`, text).catch(() => undefined), loadPhraseParser()]);
+      await Promise.race([ready, wait(FONT_WAIT_MAX_MS)]);
       if (cancelled) return;
       setStep('quote');
       await wait(found ? QUOTE_MS : NO_QUOTE_MS);

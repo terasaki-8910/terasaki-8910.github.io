@@ -1,4 +1,5 @@
 import { loadQuotes } from '../data/quotes';
+import { loadPhraseParser } from './phrases';
 
 /**
  * セリフ背景の素材(ニコニ・コモンズ nc296436。インターネット上での利用可、クレジット表記の義務なし)。
@@ -20,7 +21,8 @@ let started = false;
 let miniStarted = false;
 
 /**
- * 推しガチャ・おまかせのボタンに指が触れた時点で、演出に要るもの(コード・背景・台詞・書体)を先に取りに行く。
+ * 推しガチャ・おまかせのボタンに指が触れた時点で、演出に要るもの(コード・背景・台詞・書体・台詞を文節に
+ * 区切る部品)を先に取りに行く。
  * 押してから全部を取りに行くと、最初の画面が出るまで待たせるため。
  * 押さない人には何も読ませない(ページを開いただけでは呼ばない)。
  */
@@ -48,4 +50,5 @@ function prefetchCommon() {
   const bg = new Image();
   bg.src = gachaBgUrl();
   loadQuotes().catch(() => undefined);
+  void loadPhraseParser();
 }

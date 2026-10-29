@@ -1,6 +1,7 @@
-import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { Fragment, useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
 import { fetchCharaImage, nextCharaImage, type CharaImage } from '../data/danbooru';
+import { splitPhrases } from './phrases';
 import { GACHA_FONT_FAMILY } from './prefetch';
 
 /*
@@ -30,16 +31,26 @@ export function pickRainbow(): RainbowVariant {
 
 /**
  * 台詞の字。白い字に虹の縁とにじみを付けるため、同じ文を2枚重ねる(見た目は quote.css)。
- * 読み上げるのは上の1枚だけ。
+ * 読み上げるのは上の1枚だけ。文節に区切ったときは、2枚とも同じ切れ目で折り返す(phrases.ts)。
  */
 export function RainbowText(props: { text: string; className?: string; style?: CSSProperties }) {
   const { text, className, style } = props;
+  const phrases = splitPhrases(text);
+  const content = () =>
+    phrases
+      ? phrases.map((phrase, i) => (
+          <Fragment key={i}>
+            {i > 0 && <wbr />}
+            {phrase}
+          </Fragment>
+        ))
+      : text;
   return (
-    <span className={className ? `qt ${className}` : 'qt'} style={style}>
+    <span className={className ? `qt ${className}` : 'qt'} style={style} data-phrased={phrases ? '' : undefined}>
       <span className="qt-glow" aria-hidden="true">
-        {text}
+        {content()}
       </span>
-      <span className="qt-text">{text}</span>
+      <span className="qt-text">{content()}</span>
     </span>
   );
 }

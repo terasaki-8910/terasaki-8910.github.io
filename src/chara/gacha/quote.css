@@ -14,6 +14,12 @@
   display: grid;
 }
 
+/* 文節に区切った台詞(phrases.ts)は、区切りの <wbr> でだけ折り返す。1行に入りきらない文節だけは字の途中で折る */
+.qt[data-phrased] {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 .qt > span {
   grid-area: 1 / 1;
   /* 虹を塗る範囲を字の外まで広げる(縁とにじみが箱の端で切れないように)。並びは変えない */

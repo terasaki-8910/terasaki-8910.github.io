@@ -19,6 +19,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@studio-freight/lenis": "^1.0.29",
+    "budoux": "^0.9.3",
     "dotenv": "^17.2.3",
     "gsap": "^3.12.4",
     "katex": "^0.16.47",
