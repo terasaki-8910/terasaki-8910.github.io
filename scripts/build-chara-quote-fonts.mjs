@@ -17,8 +17,9 @@
  * 前提: build-font-subset.mjs と同じ(python3 + fonttools + brotli、ネットワーク)。
  * 使い方:
  *   node scripts/build-chara-quote-fonts.mjs
- * characters.json(同期)か quotes.json を変えたら作り直すこと。本文のサブセットを作り直した
- * ときも 2. を作り直す(足りない字の集合が変わるため)。
+ * characters.json か quotes.json が変わったとき(どちらも同期 sync-chara-picker.mjs で入る)と、
+ * 本文のサブセットを作り直したとき(2. の足りない字の集合が変わるため)に作り直す。
+ * 同期はそのどれかがあればこれを呼ぶ。
  */
 
 import { execFileSync } from 'child_process';

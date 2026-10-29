@@ -1,6 +1,7 @@
 /*
  * キャラの名台詞(public/chara-picker/quotes.json)。おまかせのガチャ演出の最初の画面と、
- * キャラを見せる画面(CharacterReveal)に出す。
+ * キャラを見せる画面(CharacterReveal)に出す。中身は開発元の data/quotes.json から
+ * 同期(scripts/sync-chara-picker.mjs)で作る。
  *
  * 1キャラに数個あり、表示するときに1つ選ぶ。選んだものはキャラごとに覚えておき、
  * ガチャ演出と、閉じたあとの結果画面で同じ台詞になるようにする
