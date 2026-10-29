@@ -17,9 +17,9 @@ const INITIAL = { win: 'ram-lak', angles: 60, noise: 0 }
 // 中心を動かせる範囲(脳の内側の楕円の 85%)
 const HEAD = { a: 0.56, b: 0.74, cy: -0.0184 }
 const WINDOW_OPTIONS = [
-  { value: 'ram-lak', label: 'Ram-Lak' },
-  { value: 'shepp-logan', label: 'Shepp-Logan' },
-  { value: 'hann', label: 'Hann' },
+  { value: 'ram-lak', label: 'ランプ' },
+  { value: 'shepp-logan', label: 'シェップ-ローガン' },
+  { value: 'hann', label: 'ハン' },
 ]
 const TITLE_H = 18
 const FOOT_H = 16
@@ -180,7 +180,7 @@ export default function CtStep7() {
     <SimShell
       label="フィルタ補正逆投影"
       height={fixedHeight(stageHeight(stageWidth))}
-      switcher={<ModeSwitch label="フィルタの窓" value={win} options={WINDOW_OPTIONS} onChange={setWin} variant="tabs" />}
+      switcher={<ModeSwitch label="フィルタ" value={win} options={WINDOW_OPTIONS} onChange={setWin} variant="tabs" />}
       stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="模型と、その投影を並べたサイノグラム、フィルタ補正逆投影、フィルタなしの逆投影。模型の中の丸い取っ手（1 から 6）をドラッグすると、その楕円が動いて作り直した断面が変わります。数字キーで取っ手を選び、矢印キーで動かせます。" />}
       legend={<SimLegend items={[
         { key: 'ramp', label: '模型と断面の値', value: '0 → 0.6', swatch },

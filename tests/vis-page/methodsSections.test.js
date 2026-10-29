@@ -1,19 +1,44 @@
-// 可視化手法ページの節データが、既存ページと同じ形になっていることを検査する。
+// 可視化手法ページの節データが、既存ページと同じ形になっていることを検査する
+// (tests/vis-page/sections.test.js と同じ検査。式は KaTeX で組めること、抜粋は src/utils/vis/ にあること)。
 import { test, before } from 'node:test'
 import assert from 'node:assert/strict'
+import { readdirSync, readFileSync } from 'node:fs'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { join } from 'node:path'
+import katex from 'katex'
+import { listSnippets } from '../../src/components/visualization/snippets.js'
 
 const ROOT = fileURLToPath(new URL('../../', import.meta.url))
 const SECTIONS_ENTRY = join(ROOT, 'src/components/visualization-methods/sections/index.js')
 const SECTIONS_URL = pathToFileURL(SECTIONS_ENTRY)
+const VIS_DIR = join(ROOT, 'src/utils/vis')
 
 let SECTIONS
+let KNOWN_SNIPPETS
 
 before(async () => {
   const module = await import(SECTIONS_URL.href)
   SECTIONS = module.SECTIONS
+  KNOWN_SNIPPETS = new Set()
+  for (const file of readdirSync(VIS_DIR).filter((f) => f.endsWith('.js'))) {
+    for (const s of listSnippets(readFileSync(join(VIS_DIR, file), 'utf8'))) KNOWN_SNIPPETS.add(s.name)
+  }
 })
+
+const renderTex = (tex) => katex.renderToString(tex, { output: 'mathml', throwOnError: true, strict: false })
+
+function checkFormulas(where, formulas) {
+  for (const [i, f] of formulas.entries()) {
+    assert.ok(typeof f.tex === 'string' && f.tex.trim(), `${where}: formulas[${i}].tex が空`)
+    assert.doesNotThrow(() => renderTex(f.tex), `${where}: formulas[${i}].tex を KaTeX で組めない`)
+    for (const [j, s] of (f.symbols ?? []).entries()) {
+      assert.ok(typeof s.tex === 'string' && s.tex.trim(), `${where}: formulas[${i}].symbols[${j}].tex が空`)
+      assert.ok(typeof s.meaning === 'string' && s.meaning.trim(), `${where}: formulas[${i}].symbols[${j}].meaning が空`)
+      assert.doesNotThrow(() => renderTex(s.tex), `${where}: formulas[${i}].symbols[${j}].tex を KaTeX で組めない`)
+      if (s.unit) assert.doesNotThrow(() => renderTex(s.unit), `${where}: formulas[${i}].symbols[${j}].unit を KaTeX で組めない`)
+    }
+  }
+}
 
 const isString = (value) => typeof value === 'string' && value.trim().length > 0
 const isComponent = (value) =>
@@ -54,6 +79,8 @@ for (const id of IDS) {
       assert.ok(isComponent(step.Sim), `${where}: Sim がコンポーネントでない`)
       assert.ok(Array.isArray(step.formulas ?? []), `${where}: formulas は配列`)
       assert.ok(Array.isArray(step.snippets ?? []), `${where}: snippets は配列`)
+      checkFormulas(where, step.formulas ?? [])
+      for (const name of step.snippets ?? []) assert.ok(KNOWN_SNIPPETS.has(name), `${where}: 抜粋「${name}」が src/utils/vis/ にない`)
     }
   })
 

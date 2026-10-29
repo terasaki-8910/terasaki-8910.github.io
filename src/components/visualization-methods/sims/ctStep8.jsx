@@ -158,7 +158,7 @@ function drawReadout(ctx, colors, rect, info) {
           ctx.lineWidth = 1
           ctx.strokeRect(x + 0.5, yy + 0.5, GRID_CELL_W - 1, GRID_CELL_H - 1)
         }
-        drawText(ctx, v.toFixed(2), x + GRID_CELL_W / 2, yy + GRID_CELL_H / 2 + 0.5, { color: i === 4 ? colors.surface : colors.ink, size: 11, align: 'center', baseline: 'middle' })
+        drawText(ctx, fmt(v, 2), x + GRID_CELL_W / 2, yy + GRID_CELL_H / 2 + 0.5, { color: i === 4 ? colors.surface : colors.ink, size: 11, align: 'center', baseline: 'middle' })
       })
       y += Math.ceil(9 / perRow) * (GRID_CELL_H + 2) + 4
     } else {

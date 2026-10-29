@@ -21,9 +21,9 @@ const STEM_N = 7 // カーネルの棒は n = −7〜7
 const PHANTOM_N = 64
 const INITIAL = { theta: 30, win: 'ram-lak', noise: 0 }
 const WINDOW_OPTIONS = [
-  { value: 'ram-lak', label: 'Ram-Lak' },
-  { value: 'shepp-logan', label: 'Shepp-Logan' },
-  { value: 'hann', label: 'Hann' },
+  { value: 'ram-lak', label: 'ランプ' },
+  { value: 'shepp-logan', label: 'シェップ-ローガン' },
+  { value: 'hann', label: 'ハン' },
 ]
 const PHANTOM = rasterizePhantom(PHANTOM_N)
 
@@ -276,7 +276,7 @@ export default function CtStep6() {
     <SimShell
       label="ランプフィルタ"
       height={fixedHeight(stageHeight(stageWidth))}
-      switcher={<ModeSwitch label="フィルタの窓" value={win} options={WINDOW_OPTIONS} onChange={setWin} variant="tabs" />}
+      switcher={<ModeSwitch label="フィルタ" value={win} options={WINDOW_OPTIONS} onChange={setWin} variant="tabs" />}
       stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="模型を撮る向き θ の図と、その向きの投影 p(s)、周波数成分、フィルタ、フィルタ後の投影 Q(s)、カーネル h(n) のグラフ。模型の図の取っ手をドラッグするか、矢印キーで向きを 1° ずつ（Shift で 10° ずつ）変えられます。" />}
       legend={<SimLegend items={[
         { key: 'theta', symbol: '\\theta', label: '向き', value: `${theta}°`, minChars: 5 },

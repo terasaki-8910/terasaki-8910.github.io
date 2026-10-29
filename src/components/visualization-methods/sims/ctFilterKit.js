@@ -267,7 +267,7 @@ export function drawLens(ctx, colors, rect, w, h, cx, cy, r) {
   ctx.restore()
 }
 
-export const GRID_CELL_W = 31
+export const GRID_CELL_W = 36 // 「−0.19」(5 文字、11px の等幅で約 33px)が隣の数とくっつかない幅
 export const GRID_CELL_H = 16
 
 // 数の格子。values は cols 列の並び。region(番号の集合)は薄く塗って、まわりを太い線で囲む。center の番号は枠で囲む。
