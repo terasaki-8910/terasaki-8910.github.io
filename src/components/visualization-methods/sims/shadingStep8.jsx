@@ -147,7 +147,8 @@ export default function ShadingStep8() {
     ctx.strokeStyle = colors.ink
     ctx.lineWidth = 1
     ctx.strokeRect(stripX, stripY, stripWidth, 12)
-    drawText(ctx, '距離表 dL', stripX, stripY + 27, { color: colors.ink })
+    // 名前は帯の右端の下に置く(光源の初めの位置は左寄りで、狭い幅では左に置くと光源の印と重なる)
+    drawHaloText(ctx, '距離表 dL', stripX + stripWidth, stripY + 27, colors, { align: 'right' })
     ctx.restore()
   }
 

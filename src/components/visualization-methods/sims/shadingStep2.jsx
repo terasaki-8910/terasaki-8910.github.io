@@ -13,12 +13,34 @@ import { angleFromPoint, directionFromAngle, drawAngleHandle, drawPixelSphere, d
 const INITIAL = 35 * Math.PI / 180
 const ORIGIN = [0, 0]
 const RADIUS = 1.55
+const X_RANGE = [-3.2, 3.2]
+const Y_RANGE = [-0.55, 2.55]
+const TOP_BAND = 1.6 // 縦長の絵(スマホ)で、余弦グラフを置く上の帯の高さ(世界の長さ)。これだけ空けば帯に置く
+
+// 縦長の絵では、上下の空白の帯を作らず、世界の範囲を上へ広げる(下の端はそのまま)。広がった上の帯に余弦グラフを置く
+function viewOf(width, height) {
+  const plotWidth = width - STEP_MARGIN.left - STEP_MARGIN.right
+  const plotHeight = height - STEP_MARGIN.top - STEP_MARGIN.bottom
+  const ySpan = plotHeight / (plotWidth / (X_RANGE[1] - X_RANGE[0]))
+  const yRange = ySpan > Y_RANGE[1] - Y_RANGE[0] ? [Y_RANGE[0], Y_RANGE[0] + ySpan] : Y_RANGE
+  return makeView({ width, height, xRange: X_RANGE, yRange, margin: STEP_MARGIN, equal: true })
+}
+
+// 余弦グラフの枠(画面の px)。上の帯があれば帯の右上に、なければ半円の右上(世界の座標の右上の空き)に置く
+function graphRect(view) {
+  const band = view.yRange[1] - Y_RANGE[1] >= TOP_BAND
+  if (band) {
+    const width = Math.min(130, view.frame.width * 0.4)
+    return { left: view.frame.right - width - 14, top: view.frame.top + 12, width, height: 52 }
+  }
+  const left = view.sx(1.7)
+  return { left, top: view.sy(2.25), width: Math.max(60, view.frame.right - left - 12), height: 64 }
+}
 
 export default function ShadingStep2() {
   const [angle, setAngle] = useState(INITIAL)
   const direction = directionFromAngle(angle)
   const brightness = lambert([0, 1, 0], direction)
-  const viewOf = (width, height) => makeView({ width, height, xRange: [-3.2, 3.2], yRange: [-0.55, 2.55], margin: STEP_MARGIN, equal: true })
 
   const draw = ({ ctx, width, height, colors }) => {
     const view = viewOf(width, height)
@@ -60,11 +82,8 @@ export default function ShadingStep2() {
     ctx.strokeRect(view.sx(left), view.sy(0) - 5, view.sx(right) - view.sx(left), 10)
     drawText(ctx, `幅 ${fmt(1 / Math.max(brightness, 0.01), 2)} 倍`, view.sx((left + right) / 2), view.sy(0) + 18, { color: colors.ink, align: 'center' })
 
-    // 余弦グラフ。右の 12px は、90° の目盛りの文字と軸の名前 θ が枠(clip)で切れない余白
-    const graphLeft = view.sx(1.7)
-    const graphTop = view.sy(2.25)
-    const graphWidth = Math.max(60, view.frame.right - graphLeft - 12)
-    const graphHeight = 64
+    // 余弦グラフ。右の余白は、90° の目盛りの文字と軸の名前 θ が枠(clip)で切れないため
+    const { left: graphLeft, top: graphTop, width: graphWidth, height: graphHeight } = graphRect(view)
     ctx.strokeStyle = colors.muted
     ctx.lineWidth = 1
     ctx.beginPath()
@@ -140,6 +159,7 @@ export default function ShadingStep2() {
   return (
     <SimShell
       label="光が当たる角度"
+      height={{ phone: [320, 400], pc: [280, 360] }}
       stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="平面へ当たる 2 本の光線と、その光が広がる照射幅、余弦のグラフ、明るさの棒、明暗のついた球を描いています。光 L のつまみをドラッグするか、左右の矢印キーで光の角度を 5 度ずつ変えられます(Shift を押すと 5 倍)。" />}
       legend={<SimLegend items={[
         { key: 'theta', symbol: '\\theta', label: '入射角', value: `${fmt(Math.abs(angle) * 180 / Math.PI, 1)}°`, minChars: 7 },

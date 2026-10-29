@@ -205,6 +205,7 @@ export default function IsosurfaceStep1() {
   return (
     <SimShell
       label="格子内の線形補間"
+      height={{ phone: [320, 400], pc: [280, 360] }}
       switcher={<ModeSwitch label="次元" value={mode} options={[{ value: '2d', label: '2 次元' }, { value: '3d', label: '3 次元' }]} onChange={changeMode} variant="tabs" />}
       stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={label} />}
       legend={<SimLegend items={[

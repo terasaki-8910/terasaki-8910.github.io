@@ -1,5 +1,5 @@
 // 全部のタブ × 幅 × テーマで、コンソールのエラー・横のはみ出し・段階の数を調べ、全体の絵を撮る(確かめ用)。
-//   node check-all.mjs <url> <outDir> [--tabs shape,shading] [--widths 375,768,1024,1280,1440] [--themes light,dark] [--shots]
+//   node check-all.mjs <url> <outDir> [--tabs shape,shading] [--widths 375x800,1280x900] [--themes light,dark] [--dpr 2] [--shots]
 import { createRequire } from 'node:module'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
@@ -18,13 +18,14 @@ const tabs = opt('tabs', 'shape,shading,isosurface,volume,flow,ct').split(',')
 const sizes = opt('widths', '375x800,768x1024,820x1180,1180x820,1024x768,1280x900,1440x900').split(',').map((s) => s.split('x').map(Number))
 const themes = opt('themes', 'light,dark').split(',')
 const shots = args.includes('--shots')
+const dpr = Number(opt('dpr', '1'))
 mkdirSync(outDir, { recursive: true })
 
 const browser = await chromium.launch({ channel: 'chrome', headless: true })
 const rows = []
 for (const [w, h] of sizes) {
   for (const theme of themes) {
-    const context = await browser.newContext({ viewport: { width: w, height: h || 900 }, deviceScaleFactor: 1 })
+    const context = await browser.newContext({ viewport: { width: w, height: h || 900 }, deviceScaleFactor: dpr })
     const page = await context.newPage()
     for (const tab of tabs) {
       const errors = []

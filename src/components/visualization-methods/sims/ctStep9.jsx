@@ -20,6 +20,7 @@ const TITLE_H = 18
 const PLOT_H = 118
 const READOUT_H = 128 // 狭いときの、画像の下の欄の高さ
 const WIDE_FROM = 600
+const READOUT_W = 6 * GRID_CELL_W + 18 + 10 // 広いときの欄の幅: 3 × 3 の重みと値の格子 2 つと、その間
 const SIGNAL_N = 31
 const KERNELS = [
   { value: 'l4', label: '4 近傍', kernel: LAPLACIAN4, laplacian: 'l4' },
@@ -59,7 +60,7 @@ function layout(width) {
     const readout = { x: PAD, y: top + TITLE_H + side + GAP, w: width - 2 * PAD, h: READOUT_H }
     return { plots, images, readout, titleY: top + 12, height: readout.y + READOUT_H + PAD }
   }
-  const side = clamp(Math.floor((width - 2 * PAD - 3 * GAP - 214) / 3), 100, 200)
+  const side = clamp(Math.floor((width - 2 * PAD - 3 * GAP - READOUT_W) / 3), 100, 200)
   const images = [0, 1, 2].map((i) => ({ x: PAD + i * (side + GAP), y: top + TITLE_H, w: side, h: side }))
   const left = PAD + 3 * (side + GAP) + 6
   const readout = { x: left, y: top + TITLE_H, w: width - PAD - left, h: side }

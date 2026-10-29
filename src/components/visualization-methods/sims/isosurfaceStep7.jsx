@@ -27,7 +27,8 @@ export default function IsosurfaceStep7() {
   const disagree = (fs >= 0) !== (centerValue >= 0)
 
   const geometry = (width, height) => {
-    const view = makeView({ width, height, xRange: [-0.28, 1.28], yRange: [-0.3, 1.32], margin: { left: 38, right: 24, top: 18, bottom: 32 }, equal: true })
+    // 上下には、縦棒(値 ±1 で barScale)とその先の文字が入るだけ空ける(狭い幅で文字が枠で切れないように)
+    const view = makeView({ width, height, xRange: [-0.3, 1.3], yRange: [-0.5, 1.5], margin: { left: 38, right: 24, top: 18, bottom: 32 }, equal: true })
     return { view, barScale: Math.min(42, view.scaleY * 0.23) }
   }
   const fineContour = () => {
@@ -139,6 +140,7 @@ export default function IsosurfaceStep7() {
   return (
     <SimShell
       label="双線形場のあいまいなマス"
+      height={{ phone: [320, 400], pc: [280, 360] }}
       switcher={<ModeSwitch label="判定" value={rule} options={[{ value: 'asymptotic', label: '漸近線判定' }, { value: 'center', label: '中心の値' }]} onChange={setRule} variant="tabs" />}
       stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={`マスの四隅の縦棒（f00・f10・f01・f11）と、そこから引かれる等値線の絵。実線が選んだ接続、破線が選ばなかった接続、細い点線が双線形関数の真の等値線です。縦棒の先の丸をドラッグで上下に動かせます。PageUp・PageDown で縦棒を選び、上下の矢印キーで値を変えます（Shift で大きく）。選択中は縦棒 ${NAMES[selected]}。`} />}
       legend={<SimLegend items={[

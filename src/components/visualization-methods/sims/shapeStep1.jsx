@@ -9,7 +9,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { makeView, drawAxes } from '../../visualization/axes'
 import { STEP_MARGIN, GRAB_SLOP_PX, arrowStep, clamp, fmt, laneColor, markerCircle, drawText } from '../../visualization/sims/rigidKit'
 import { ellipseImplicit, ellipsePoint, hyperbolaImplicit, hyperbolaPoint } from '../../../utils/vis/curve'
-import { drawPolyline, focusOnGrab, nearestCurveSample, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
+import { drawHaloText, drawPolyline, focusOnGrab, nearestCurveSample, pageStep, rangesForAspect, sampleCurve } from './shapeKit'
 
 const POINT_R = 7
 const ELLIPSE_RANGE = [0, 2 * Math.PI]
@@ -70,7 +70,8 @@ export default function ShapeStep1() {
     markerCircle(ctx, view.sx(q[0]), view.sy(q[1]), POINT_R, {
       fill: laneColor(colors, 2), stroke: colors.ink, lineWidth: selected === 'q' ? 3 : 1.5,
     })
-    drawText(ctx, `Q  F=${fmt(fQ, 2)}  ${fQ <= 0 ? '内側' : '外側'}`, view.sx(q[0]) + 10, view.sy(q[1]) - 10, { color: colors.ink })
+    // Q の文字は印の下に置く(P(t) の文字は印の上。狭い幅で Q の文字が P の印に重ならないように)。塗りや曲線の上でも読めるよう縁どる
+    drawHaloText(ctx, `Q  F=${fmt(fQ, 2)}  ${fQ <= 0 ? '内側' : '外側'}`, view.sx(q[0]) + 10, view.sy(q[1]) + 11, { color: colors.ink, halo: colors.surface, baseline: 'top' })
   }
 
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
