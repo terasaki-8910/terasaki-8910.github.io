@@ -1,18 +1,18 @@
-import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
-import { fetchCharaImage, nextCharaImage, type CharaImage } from '../data/danbooru';
 import { fetchQuote } from '../data/quotes';
 import type { Scored } from '../engine/recommend';
-import { GACHA_BG_URL, GACHA_FONT_FAMILY } from './prefetch';
+import { loadPhoto, makeSparkles, NameArt, Sparkles, splitQuote, StarRow, useWidth, type Photo } from './parts';
+import { gachaBgUrl, GACHA_FONT_FAMILY } from './prefetch';
 import './gacha.css';
 
 /*
  * おまかせの結果を、ソシャゲのガチャの演出のように見せる全画面の重ね絵
  * (本人の依頼 2026-10-29。見本はウマ娘のガチャ)。
  *   1. 台詞: セリフ背景の素材(ニコニ・コモンズ nc296436)の上に、名台詞を数秒
- *   2. 虹: 虹の帯が流れて、画面が白く飛ぶ(明転)
+ *   2. 虹: 虹が流れて、画面が白く飛ぶ(明転)。見せ方は5通り(RainbowVariant)
  *   3. 絵: キャラの絵がドーンと出る
- *   4. 名前: 作品名の帯と、名前が勢いよく出る
+ *   4. 名前: 作品名の帯と、名前が勢いよく出て、星3が1つずつ重く付く
  * 出し切ったら、押すと閉じて下の結果画面(ResultScreen)になる。途中で押すと最後まで飛ばす。
  * 動きを減らす設定の人には出さない(呼ぶ側で結果画面へ直行する)。
  *
@@ -33,8 +33,8 @@ const RAINBOW_MS = 950;
 const IMAGE_WAIT_MAX_MS = 4000;
 /** 絵が出てから名前を出すまで。 */
 const REVEAL_MS = 600;
-/** 名前が出てから、押して閉じられるようになるまで。 */
-const NAME_MS = 1100;
+/** 名前が出てから、星3が付き終わり、押して閉じられるようになるまで(CSS の星の時刻と合わせる)。 */
+const NAME_MS = 2100;
 /** フォントを待つ上限。超えたら代わりの書体のまま始める。 */
 const FONT_WAIT_MAX_MS = 1500;
 
@@ -42,7 +42,20 @@ const FONT_WAIT_MAX_MS = 1500;
 const SEEN_KEY = 'chara-gacha-seen';
 const SEEN_MAX = 3000;
 
-type Photo = { image: CharaImage; width: number; height: number };
+/**
+ * 虹の段の見せ方(2回目の見本。本人に選んでもらう)。
+ *   a 背景の色がそのまま上へ流れて虹色に変わる / b 中心から虹の光が放射 / c 虹の輪が広がる
+ *   d 下から虹色の光の粒が昇る / e 斜めの虹の帯(1回目)を背景の色になじませたもの
+ * 開発中は ?rainbow=a〜e で切り替える。
+ */
+type RainbowVariant = 'a' | 'b' | 'c' | 'd' | 'e';
+const DEFAULT_RAINBOW: RainbowVariant = 'e';
+
+function pickRainbow(): RainbowVariant {
+  if (!import.meta.env.DEV) return DEFAULT_RAINBOW;
+  const v = new URLSearchParams(window.location.search).get('rainbow');
+  return v === 'a' || v === 'b' || v === 'c' || v === 'd' || v === 'e' ? v : DEFAULT_RAINBOW;
+}
 
 export default function GachaReveal(props: { scored: Scored; onClose(): void }) {
   const { scored, onClose } = props;
@@ -53,6 +66,7 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
   const [quote, setQuote] = useState<string | null>(null);
   const [photo, setPhoto] = useState<Photo | null | 'none'>(null);
   const [isNew] = useState(() => !readSeen().includes(character.id));
+  const [rainbow] = useState(pickRainbow);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const viewport = useViewport();
 
@@ -142,6 +156,7 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
   const fit = photo && photo !== 'none' ? chooseFit(photo.width / photo.height, viewport.width / viewport.height) : 'cover';
   const sparkles = useMemo(() => makeSparkles(18), []);
   const bursts = useMemo(() => makeSparkles(12), []);
+  const motes = useMemo(() => makeMotes(40), []);
   const quoteLines = useMemo(() => (quote ? splitQuote(quote) : []), [quote]);
 
   return (
@@ -152,10 +167,11 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
       aria-label="おまかせの結果"
       data-testid="gacha"
       data-step={step ?? 'loading'}
+      data-rainbow={rainbow}
       onClick={advance}
     >
       <div className="gacha-bg" aria-hidden="true">
-        <img src={GACHA_BG_URL} alt="" decoding="async" />
+        <img src={gachaBgUrl()} alt="" decoding="async" />
         <div className="gacha-bokeh">
           {[0, 1, 2, 3, 4, 5].map((i) => (
             <span key={i} style={{ '--i': i } as CSSProperties} />
@@ -174,29 +190,40 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
         </p>
       )}
 
-      <div className="gacha-stage" data-fit={fit} aria-hidden="true">
-        {photo && photo !== 'none' ? (
-          <>
-            {fit === 'contain' && <img className="gacha-backdrop" src={photo.image.imageUrl} alt="" />}
-            <img className="gacha-photo" src={photo.image.imageUrl} alt="" />
-          </>
-        ) : (
-          <div className="gacha-photo gacha-photo-none" />
-        )}
-        <div className="gacha-rays" />
-        <Streaks width={viewport.width} height={viewport.height} />
-        <Sparkles items={bursts} className="gacha-burst" />
-        <div className="gacha-scrim" />
+      {/* 星が付くたびに、絵と名前をまとめて揺らす(g-thud) */}
+      <div className="gacha-scene">
+        <div className="gacha-stage" data-fit={fit} aria-hidden="true">
+          {photo && photo !== 'none' ? (
+            <>
+              {fit === 'contain' && <img className="gacha-backdrop" src={photo.image.imageUrl} alt="" />}
+              <img className="gacha-photo" src={photo.image.imageUrl} alt="" />
+            </>
+          ) : (
+            <div className="gacha-photo gacha-photo-none" />
+          )}
+          <div className="gacha-rays" />
+          <Streaks width={viewport.width} height={viewport.height} />
+          <Sparkles items={bursts} className="gacha-burst" />
+          <div className="gacha-scrim" />
+        </div>
+
+        <Nameplate name={character.name} series={character.series} isNew={isNew} />
+        <StarRow className="gacha-stars" />
       </div>
 
       <div className="gacha-rainbow" aria-hidden="true">
-        {RIBBONS.map((ribbon, i) => (
-          <span key={i} className="gacha-ribbon" style={ribbon} />
-        ))}
+        {rainbow === 'a' && <span className="gacha-flow" />}
+        {rainbow === 'b' && (
+          <>
+            <span className="gacha-spokes" />
+            <span className="gacha-core" />
+          </>
+        )}
+        {rainbow === 'c' && [0, 1, 2, 3].map((i) => <span key={i} className="gacha-ring" style={{ '--i': i } as CSSProperties} />)}
+        {rainbow === 'd' && motes.map((style, i) => <span key={i} className="gacha-mote" style={style} />)}
+        {rainbow === 'e' && RIBBONS.map((style, i) => <span key={i} className="gacha-ribbon" style={style} />)}
       </div>
       <div className="gacha-white" aria-hidden="true" />
-
-      <Nameplate name={character.name} series={character.series} isNew={isNew} />
 
       {photo && photo !== 'none' && (
         <p className="gacha-credit" onClick={(event) => event.stopPropagation()}>
@@ -232,20 +259,10 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
   );
 }
 
-/** 作品名の帯と名前。名前は幅に合わせて大きさを決め、長い名前は横に詰める。 */
+/** 作品名の帯と名前。名前は幅に合わせて大きさを決める(NameArt)。 */
 function Nameplate(props: { name: string; series: string; isNew: boolean }) {
   const { name, series, isNew } = props;
-  const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
-
-  useLayoutEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width));
-    observer.observe(el);
-    setWidth(el.getBoundingClientRect().width);
-    return () => observer.disconnect();
-  }, []);
+  const { ref, width } = useWidth<HTMLDivElement>();
 
   const bandText = `[${series}]`;
   const bandSize = Math.min(width * 0.062, 30, (width * 0.86) / emWidth(bandText));
@@ -260,120 +277,9 @@ function Nameplate(props: { name: string; series: string; isNew: boolean }) {
         <span className="sr-only">
           {name}({series})
         </span>
-        {width > 0 && <NameArt name={name} width={width} />}
+        {/* 短い名前ほど大きく(見本は名前が画面の幅いっぱい) */}
+        {width > 0 && <NameArt className="gacha-name" name={name} width={width} maxSize={Math.min(width * 0.27, 160)} />}
       </h2>
-    </div>
-  );
-}
-
-/**
- * 名前の文字。白い字に、色の移り変わる縁取りを付ける。HTML の文字では縁取りに
- * グラデーションを付けられないので SVG で描く(stroke に linearGradient、paint-order で縁を字の下へ)。
- */
-function NameArt(props: { name: string; width: number }) {
-  const { name, width } = props;
-  const id = useId().replace(/:/g, '');
-  const textRef = useRef<SVGTextElement>(null);
-  // 短い名前ほど大きく(見本は名前が画面の幅いっぱい)。長い名前は下で詰めるか小さくする
-  const maxSize = Math.min(width * 0.27, 160);
-  const [fit, setFit] = useState<{ size: number; length: number | null }>({ size: maxSize, length: null });
-
-  useLayoutEffect(() => {
-    const el = textRef.current;
-    if (!el) return;
-    el.setAttribute('font-size', String(maxSize));
-    el.removeAttribute('textLength');
-    const natural = el.getComputedTextLength();
-    const avail = width - maxSize * 0.3;
-    if (natural <= avail) {
-      setFit({ size: maxSize, length: null });
-      return;
-    }
-    // 少しなら横に詰め、詰めすぎになるなら字を小さくする
-    const ratio = avail / natural;
-    const size = ratio >= 0.72 ? maxSize : (maxSize * ratio) / 0.72;
-    setFit({ size, length: width - size * 0.3 });
-  }, [name, width, maxSize]);
-
-  const { size, length } = fit;
-  const stroke = size * 0.15;
-  const height = size * 1.28;
-  const x = size * 0.15;
-  const y = size * 1.0;
-  const textProps = {
-    x,
-    y,
-    fontSize: size,
-    ...(length ? { textLength: length, lengthAdjust: 'spacingAndGlyphs' as const } : {}),
-  };
-
-  return (
-    <svg className="gacha-name" width={width} height={height} viewBox={`0 0 ${width} ${height}`} aria-hidden="true">
-      <defs>
-        <linearGradient id={`${id}-edge`} x1="0" x2="1" y1="0" y2="0.3">
-          <stop offset="0" stopColor="#ff6fc4" />
-          <stop offset="0.35" stopColor="#a587ff" />
-          <stop offset="0.7" stopColor="#4fc3ff" />
-          <stop offset="1" stopColor="#5ce8c4" />
-        </linearGradient>
-        <linearGradient id={`${id}-shine`} x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0" stopColor="#fff" stopOpacity="0" />
-          <stop offset="0.5" stopColor="#fff" stopOpacity="0.95" />
-          <stop offset="1" stopColor="#fff" stopOpacity="0" />
-        </linearGradient>
-        <clipPath id={`${id}-clip`}>
-          <text {...textProps}>{name}</text>
-        </clipPath>
-      </defs>
-      <text
-        ref={textRef}
-        {...textProps}
-        fill="#fff"
-        stroke={`url(#${id}-edge)`}
-        strokeWidth={stroke}
-        strokeLinejoin="round"
-        paintOrder="stroke"
-      >
-        {name}
-      </text>
-      <g clipPath={`url(#${id}-clip)`}>
-        <rect
-          className="gacha-name-shine"
-          x={-width * 0.35}
-          y={0}
-          width={width * 0.35}
-          height={height}
-          fill={`url(#${id}-shine)`}
-          style={{ '--shine-to': `${width * 1.4}px` } as CSSProperties}
-        />
-      </g>
-    </svg>
-  );
-}
-
-type Sparkle = { x: number; y: number; size: number; delay: number; duration: number };
-
-function Sparkles(props: { items: Sparkle[]; className: string }) {
-  return (
-    <div className={props.className} aria-hidden="true">
-      {props.items.map((s, i) => (
-        <svg
-          key={i}
-          viewBox="0 0 24 24"
-          style={
-            {
-              left: `${s.x}%`,
-              top: `${s.y}%`,
-              width: s.size,
-              height: s.size,
-              '--delay': `${s.delay}ms`,
-              '--duration': `${s.duration}ms`,
-            } as CSSProperties
-          }
-        >
-          <path d="M12 0C12.9 7.6 16.4 11.1 24 12C16.4 12.9 12.9 16.4 12 24C11.1 16.4 7.6 12.9 0 12C7.6 11.1 11.1 7.6 12 0Z" />
-        </svg>
-      ))}
     </div>
   );
 }
@@ -406,7 +312,7 @@ function Streaks(props: { width: number; height: number }) {
   );
 }
 
-/** 虹の帯。位置・太さ・出る順をずらして、流れていくように見せる。 */
+/** e: 虹の帯。位置・太さ・角度・出る順をずらして、流れていくように見せる。 */
 const RIBBONS = [
   { '--y': '64%', '--h': '22vmin', '--d': '0ms', '--a': '-24deg' },
   { '--y': '36%', '--h': '30vmin', '--d': '70ms', '--a': '-28deg' },
@@ -417,6 +323,22 @@ const RIBBONS = [
   { '--y': '74%', '--h': '34vmin', '--d': '320ms', '--a': '-22deg' },
   { '--y': '28%', '--h': '44vmin', '--d': '360ms', '--a': '-25deg' },
 ] as unknown as CSSProperties[];
+
+/** d: 下から昇る虹色の光の粒。色相を一巡させ、位置・長さ・速さをばらす。 */
+function makeMotes(count: number): CSSProperties[] {
+  return Array.from(
+    { length: count },
+    (_, i) =>
+      ({
+        '--x': `${Math.random() * 100}%`,
+        '--hue': `${Math.round((i / count) * 360)}`,
+        '--len': `${14 + Math.random() * 26}vh`,
+        '--w': `${3 + Math.random() * 5}px`,
+        '--d': `${Math.round(Math.random() * 420)}ms`,
+        '--dur': `${420 + Math.round(Math.random() * 260)}ms`,
+      }) as CSSProperties,
+  );
+}
 
 function SkipIcon() {
   return (
@@ -435,36 +357,6 @@ function CloseIcon() {
   );
 }
 
-/** 絵の候補を順に読み、読めた最初の1枚と大きさを返す。読めなければ null。 */
-async function loadPhoto(characterId: string): Promise<Photo | null> {
-  let image = await fetchCharaImage(characterId).catch(() => null);
-  while (image) {
-    try {
-      const size = await preload(image.imageUrl);
-      return { image, ...size };
-    } catch {
-      // 消えた投稿など。結果画面の CharacterImage と同じく、残りの候補へ移る
-      image = nextCharaImage(characterId);
-    }
-  }
-  return null;
-}
-
-function preload(url: string): Promise<{ width: number; height: number }> {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => {
-      const size = { width: img.naturalWidth, height: img.naturalHeight };
-      img.decode().then(
-        () => resolve(size),
-        () => resolve(size),
-      );
-    };
-    img.onerror = () => reject(new Error(`画像を読めませんでした: ${url}`));
-    img.src = url;
-  });
-}
-
 /**
  * 絵の縦横比が画面に近ければ画面いっぱいに(見本と同じ)、離れていれば絵を丸ごと見せて
  * 後ろをぼかした同じ絵で埋める。横長の絵を縦長の画面いっぱいにすると、キャラが切れるため。
@@ -474,27 +366,11 @@ function chooseFit(imageRatio: number, screenRatio: number): 'cover' | 'contain'
   return r >= 0.62 && r <= 1.6 ? 'cover' : 'contain';
 }
 
-/** 文の終わり(。!?…)で行を分ける。見本も1文ずつ行を分けている。 */
-function splitQuote(quote: string): string[] {
-  const parts = quote.match(/[^。！？!?…]+[。！？!?…]*[」』)]?/g) ?? [quote];
-  return parts.map((p) => p.trim()).filter(Boolean);
-}
-
 /** 全角を1、半角を0.55として、文字列の幅を em で見積もる。 */
 function emWidth(text: string): number {
   let w = 0;
   for (const ch of text) w += /[ -~｡-ﾟ]/.test(ch) ? 0.55 : 1;
   return Math.max(w, 1);
-}
-
-function makeSparkles(count: number): Sparkle[] {
-  return Array.from({ length: count }, () => ({
-    x: Math.random() * 96 + 2,
-    y: Math.random() * 92 + 2,
-    size: 8 + Math.random() * 16,
-    delay: Math.random() * 2400,
-    duration: 1400 + Math.random() * 1600,
-  }));
 }
 
 function useViewport() {
