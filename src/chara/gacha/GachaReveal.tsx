@@ -6,8 +6,10 @@ import {
   loadPhoto,
   makeSparkles,
   NameArt,
+  pickQuoteEdge,
   pickRainbow,
   RainbowLayer,
+  RainbowText,
   readSeen,
   Sparkles,
   splitQuote,
@@ -19,6 +21,7 @@ import {
 } from './parts';
 import { gachaBgUrl, GACHA_FONT_FAMILY } from './prefetch';
 import './gacha.css';
+import './quote.css';
 
 /*
  * おまかせの結果を、ソシャゲのガチャの演出のように見せる全画面の重ね絵
@@ -71,6 +74,7 @@ export default function GachaReveal(props: {
   const [photo, setPhoto] = useState<Photo | null | 'none'>(null);
   const [isNew] = useState(() => props.isNew ?? !readSeen().includes(character.id));
   const [rainbow] = useState(pickRainbow);
+  const [edge] = useState(pickQuoteEdge);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const viewport = useViewport();
 
@@ -173,6 +177,7 @@ export default function GachaReveal(props: {
       data-testid="gacha"
       data-step={step ?? 'loading'}
       data-rainbow={rainbow}
+      data-edge={edge}
       onClick={advance}
     >
       <div className="gacha-bg" aria-hidden="true">
@@ -187,11 +192,11 @@ export default function GachaReveal(props: {
 
       {quoteLines.length > 0 && (
         <p className="gacha-quote" data-testid="gacha-quote">
-          {quoteLines.map((line, i) => (
-            <span key={i} style={{ '--i': i } as CSSProperties}>
-              {line}
-            </span>
-          ))}
+          <span className="gacha-quote-lines">
+            {quoteLines.map((line, i) => (
+              <RainbowText key={i} className="gacha-quote-line" style={{ '--i': i } as CSSProperties} text={line} />
+            ))}
+          </span>
         </p>
       )}
 

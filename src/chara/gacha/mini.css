@@ -72,12 +72,13 @@
   color: #fff;
   word-break: auto-phrase;
   text-wrap: balance;
-  text-shadow:
-    0 0 1px #b38aff,
-    0 0 2px #b38aff,
-    0 0 6px rgba(255, 255, 255, .95),
-    0 0 12px rgba(255, 255, 255, .7);
   opacity: 0;
+}
+
+/* 字の縁は quote.css。虹のかけ方 b の虹は、この箱(字の幅に縮める)にかかる */
+.gmini-quote .qt {
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .gmini.s-quote .gmini-quote {

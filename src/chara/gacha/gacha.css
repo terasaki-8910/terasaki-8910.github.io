@@ -102,28 +102,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .1em;
   text-align: center;
   font-size: clamp(19px, 5.3vw, 40px);
   line-height: 1.45;
   letter-spacing: .05em;
   word-break: auto-phrase;
   text-wrap: balance;
-  /* 白い字に、薄い紫と青の縁と白いにじみ(見本の1枚目) */
-  text-shadow:
-    0 0 1px #b38aff,
-    0 0 2px #b38aff,
-    0 0 3px #8fb2ff,
-    0 0 9px rgba(255, 255, 255, .95),
-    0 0 20px rgba(255, 255, 255, .7);
 }
 
-.gacha-quote span {
-  display: block;
+/* 行のかたまり。幅はいちばん長い行に合わせる(虹のかけ方 b は、この幅に1本の虹をかける)。字の縁は quote.css */
+.gacha-quote-lines {
+  display: grid;
+  row-gap: .1em;
+}
+
+.gacha-quote-line {
   opacity: 0;
 }
 
-.gacha.s-quote .gacha-quote span {
+.gacha.s-quote .gacha-quote-line {
   animation: g-line-in 720ms cubic-bezier(.2, .8, .2, 1) calc(var(--i) * 170ms + 120ms) both;
 }
 

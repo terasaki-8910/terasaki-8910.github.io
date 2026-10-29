@@ -3,9 +3,10 @@ import { useEffect, useMemo, useState } from 'react';
 import { LoadingMark } from '../components/CharacterImage';
 import { fetchQuote } from '../data/quotes';
 import type { Scored } from '../engine/recommend';
-import { loadPhoto, makeSparkles, NameArt, Sparkles, StarRow, useWidth, type Photo } from './parts';
+import { loadPhoto, makeSparkles, NameArt, pickQuoteEdge, RainbowText, Sparkles, StarRow, useWidth, type Photo } from './parts';
 import { gachaBgUrl, gachaEnabled, GACHA_FONT_FAMILY } from './prefetch';
 import './mini.css';
+import './quote.css';
 
 /*
  * トップページの「おまかせで見る」の小さい演出(本人の依頼 2026-10-29「ホームページにも小さめのエフェクト」)。
@@ -32,6 +33,7 @@ const FONT_WAIT_MAX_MS = 1200;
 export default function GachaMini(props: { scored: Scored }) {
   const { character } = props.scored;
   const [animate] = useState(gachaEnabled);
+  const [edge] = useState(pickQuoteEdge);
   const [step, setStep] = useState<Step | null>(animate ? null : 'done');
   const [quote, setQuote] = useState<string | null>(null);
   const [photo, setPhoto] = useState<Photo | null | 'none'>(null);
@@ -84,12 +86,16 @@ export default function GachaMini(props: { scored: Scored }) {
   if (!animate) classes.push('is-still');
 
   return (
-    <div className={classes.join(' ')} data-testid="gacha-mini" data-step={step ?? 'loading'}>
+    <div className={classes.join(' ')} data-testid="gacha-mini" data-step={step ?? 'loading'} data-edge={edge}>
       {animate && (
         <div className="gmini-strip" aria-hidden="true">
           <img src={gachaBgUrl()} alt="" decoding="async" />
           <Sparkles items={twinkles} className="gmini-twinkle" />
-          {quote && <p className="gmini-quote">{quote}</p>}
+          {quote && (
+            <p className="gmini-quote">
+              <RainbowText text={quote} />
+            </p>
+          )}
           <span className="gmini-sweep" />
           <span className="gmini-white" />
         </div>
