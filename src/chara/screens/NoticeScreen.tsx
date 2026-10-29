@@ -7,8 +7,8 @@ import { PRIMARY_BUTTON } from '../components/styles';
  *
  * 内容は2点: (1)外見・体型に関する質問も含むこと、(2)回答の当てはめは
  * Danbooruのタグ統計等からの機械的な推定であり、人がキャラごとに見て判断した
- * ものではないこと。あわせて「わからない」「おまかせで見る」という既存の
- * 逃げ道も添える。
+ * ものではないこと。あわせて「わからない」「推しガチャ」という既存の
+ * 逃げ道も添える(推しガチャの文言は本人 2026-10-29「推しガチャで決めることができます」)。
  */
 export function NoticeScreen(props: { onAcknowledge(): void }) {
   const { onAcknowledge } = props;
@@ -24,8 +24,7 @@ export function NoticeScreen(props: { onAcknowledge(): void }) {
       </p>
 
       <p className="mt-4 text-muted">
-        答えにくい質問は「わからない」で構いません。質問自体を避けたい場合は、次の画面から
-        「おまかせで見る」を選ぶと質問なしで1体決まります。
+        答えにくい質問は「わからない」で構いません。質問自体を避けたい場合は、次の画面の「推しガチャ」で決めることができます。
       </p>
 
       <div className="mt-8 max-w-xs">
