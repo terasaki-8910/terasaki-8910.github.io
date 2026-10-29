@@ -18,6 +18,7 @@ import {
   writeSeen,
   type Photo,
 } from './parts';
+import { loadPhraseParser } from './phrases';
 import { gachaBgUrl, GACHA_FONT_FAMILY } from './prefetch';
 import './gacha.css';
 import './quote.css';
@@ -91,7 +92,9 @@ export default function GachaReveal(props: {
     (async () => {
       const found = await fetchQuote(character.id);
       const text = `${found ?? ''}${character.name}[${character.series}]NEW`;
-      await Promise.race([document.fonts.load(`800 32px "${GACHA_FONT_FAMILY}"`, text).catch(() => undefined), wait(FONT_WAIT_MAX_MS)]);
+      // 書体と、台詞を文節に区切る部品(phrases.ts)がそろってから出す(出したあとで折り返しが変わらないように)
+      const ready = Promise.all([document.fonts.load(`800 32px "${GACHA_FONT_FAMILY}"`, text).catch(() => undefined), loadPhraseParser()]);
+      await Promise.race([ready, wait(FONT_WAIT_MAX_MS)]);
       if (!alive()) return;
       setQuote(found);
       setStep('quote');
