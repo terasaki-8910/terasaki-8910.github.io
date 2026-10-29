@@ -165,7 +165,7 @@ export default function FlowStep5() {
     <SimShell
       label="ノイズを流れに沿って平均する（LIC）"
       switcher={<ModeSwitch variant="tabs" label="描き方" value={mode} onChange={setMode} options={MODES} />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label={mode === 'noise' ? 'でたらめなノイズの濃淡の画像。流れとは関係せず、ノイズを流れに沿って平均する LIC や、楕円を重ねるスポットノイズとの見比べに使います。' : `3 つの渦がある流れを、${mode === 'lic' ? 'ノイズを流線に沿って平均した LIC' : '流れの向きに伸ばした楕円を重ねたスポットノイズ'}の濃淡の画像で描いた図。渦の中心の丸をドラッグで動かせます。PageUp・PageDown で渦を選び、矢印キーで動かします（Shift で大きく）。選択中は渦 ${selected + 1}。`} />}
+      stage={<SimCanvas ref={canvasRef} role={mode === 'noise' ? 'img' : 'application'} tabIndex={mode === 'noise' ? undefined : 0} scroll={mode === 'noise'} onKeyDown={onKeyDown} label={mode === 'noise' ? 'でたらめなノイズの濃淡の画像。流れとは関係せず、ノイズを流れに沿って平均する LIC や、楕円を重ねるスポットノイズとの見比べに使います。' : `3 つの渦がある流れを、${mode === 'lic' ? 'ノイズを流線に沿って平均した LIC' : '流れの向きに伸ばした楕円を重ねたスポットノイズ'}の濃淡の画像で描いた図。渦の中心の丸をドラッグで動かせます。PageUp・PageDown で渦を選び、矢印キーで動かします（Shift で大きく）。選択中は渦 ${selected + 1}。`} />}
       legend={(
         <SimLegend
           ref={legend}

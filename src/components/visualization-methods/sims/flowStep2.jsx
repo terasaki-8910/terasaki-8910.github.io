@@ -143,7 +143,7 @@ export default function FlowStep2() {
   return (
     <SimShell
       label="流線を数値積分でたどる"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="原点のまわりを回る流れで、出発点から 1 周ぶん、オイラー法と RK4 で流線をたどった図。出発点の丸をドラッグするか矢印キーで動かせます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="原点のまわりを回る流れで、出発点から 1 周ぶん、オイラー法と RK4 で流線をたどった図。出発点の丸をドラッグするか、矢印キーで動かせます（Shift で大きく）。" />}
       legend={(
         <SimLegend
           ref={legend}

@@ -163,10 +163,11 @@ export default function CtStep7() {
       setFast(false)
     },
   })
+  // PageUp・PageDown で取っ手を選び(取っ手には番号を描いていないので、数字キーは使わない)、矢印キーで動かす
   const onKeyDown = (event) => {
-    if (/^[1-6]$/.test(event.key)) {
-      setSelected(Number(event.key) - 1)
+    if ((event.key === 'PageUp' || event.key === 'PageDown') && !event.altKey && !event.ctrlKey && !event.metaKey) {
       event.preventDefault()
+      setSelected((k) => (k + (event.key === 'PageUp' ? -1 : 1) + GRABBABLE.length) % GRABBABLE.length)
       return
     }
     const step = arrowStep(event)
@@ -181,7 +182,7 @@ export default function CtStep7() {
       label="フィルタ補正逆投影"
       height={fixedHeight(stageHeight(stageWidth))}
       switcher={<ModeSwitch label="フィルタ" value={win} options={WINDOW_OPTIONS} onChange={setWin} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="模型と、その投影を並べたサイノグラム、フィルタ補正逆投影、フィルタなしの逆投影。模型の中の丸い取っ手（1 から 6）をドラッグすると、その楕円が動いて作り直した断面が変わります。数字キーで取っ手を選び、矢印キーで動かせます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="模型と、その投影を並べたサイノグラム、フィルタ補正逆投影、フィルタなしの逆投影。模型の中の丸い取っ手をドラッグすると、その楕円が動いて作り直した断面が変わります。PageUp と PageDown で取っ手を選び、矢印キーで動かします（Shift で大きく）。" />}
       legend={<SimLegend items={[
         { key: 'ramp', label: '模型と断面の値', value: '0 → 0.6', swatch },
         { key: 'bp', label: '逆投影のみの値', value: '0 → 最大', swatch },

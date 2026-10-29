@@ -7,6 +7,7 @@ import { PlayPauseButton, ResetButton, SimToolbar } from '../../visualization/Si
 import useCanvas from '../../visualization/useCanvas'
 import useSimLoop, { prefersReducedMotion } from '../../visualization/useSimLoop'
 import usePointerDrag from '../../visualization/usePointerDrag'
+import { arrowStep } from '../../visualization/sims/rigidKit'
 import { SHEPP_LOGAN } from '../../../utils/vis/ct'
 import {
   VALUE_MAX, clampNumber, createPipeline, drawBottomTicks, drawFrame, drawGrayImage, drawImageTitle, drawLeftTicks, grayRampSwatch,
@@ -105,6 +106,7 @@ export default function CtStep3() {
       if (!overPanel(p)) return false
       loop.pause()
       scrubRef.current = countRef.current
+      canvasRef.current?.focus({ preventScroll: true }) // なぞったあと、矢印キーでも変えられるように
       return true
     },
     onMove: ({ dx }) => {
@@ -114,18 +116,19 @@ export default function CtStep3() {
     },
     onUp: () => { scrubRef.current = null },
   })
+  // → ↑ で 1 つ増やし、← ↓ で減らす(Shift で 5 つ。Alt・Ctrl・Cmd つきは arrowStep が null を返すので、ブラウザの操作に残る)
   const onKeyDown = (event) => {
-    const delta = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 }[event.key]
-    if (!delta) return
+    const step = arrowStep(event)
+    if (!step) return
     event.preventDefault()
-    scrub(countRef.current + delta * (event.shiftKey ? 10 : 1))
+    scrub(countRef.current + step.dx + step.dy)
   }
 
   return (
     <SimShell
       label="逆投影"
       height={{ phone: [250, 320], pc: [280, 360] }}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="向きごとの投影を並べたサイノグラムと、それを塗り戻して足した逆投影の像。サイノグラムと逆投影の上を横になぞるか、左右の矢印キーで角度の数を変えます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="向きごとの投影を並べたサイノグラムと、それを塗り戻して足した逆投影の像。サイノグラムと逆投影の上を横になぞるか、左右の矢印キーで角度の数を変えます（Shift で大きく）。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'count', symbol: 'N', label: '角度の数', value: '1', minChars: 3 },
         { key: 'step', label: '角度の間隔', value: '180°', minChars: 5 },

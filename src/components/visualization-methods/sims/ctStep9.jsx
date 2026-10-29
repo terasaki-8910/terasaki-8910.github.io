@@ -100,6 +100,7 @@ export default function CtStep9() {
   const [k, setK] = useState(INITIAL.k)
   const [kernel, setKernel] = useState(INITIAL.kernel)
   const [lens, setLens] = useState(INITIAL.lens)
+  const [target, setTarget] = useState('lens') // キーで動かす物: 'lens'(虫めがね)か 'signal'(段差の点)
   const dragRef = useRef(null)
   const base = sliceImage()
   const swatch = useGraySwatch()
@@ -137,6 +138,8 @@ export default function CtStep9() {
       strokeSeries(ctx, viewA, SIGNAL_X, sharp1D, { color: laneColor(colors, 1), width: 2 })
       drawDots(ctx, viewA, sharp1D, laneColor(colors, 1), 2)
       signal.forEach((v, i) => markerCircle(ctx, viewA.sx(i), viewA.sy(v), i === selected ? 4.5 : 2.8, { fill: colors.ink, stroke: i === selected ? colors.surface : undefined, lineWidth: 1.5 }))
+      // キーで段差の点を動かすときは、選んでいる点を太い輪で囲む
+      if (target === 'signal') markerCircle(ctx, viewA.sx(selected), viewA.sy(signal[selected]), 8, { stroke: colors.ink, lineWidth: 3 })
     })
     // 1 次元: 1 回の差分と 2 回の差分
     drawPlotAxes(ctx, colors, viewB, { title: '差分', xTicks: ticks([0, 10, 20, 30], 10), yTicks: ticks([-0.4, 0, 0.4], 0.4) })
@@ -156,7 +159,7 @@ export default function CtStep9() {
     drawGrayImage(ctx, colors, base, N, N, imgF, { lo, hi, smooth })
     drawGrayImage(ctx, colors, edge.img, N, N, imgEdge, { lo: -edge.max, hi: edge.max, smooth })
     drawGrayImage(ctx, colors, sharpImg, N, N, imgG, { lo, hi, smooth })
-    for (const rect of L.images) drawLens(ctx, colors, rect, N, N, lens[0], lens[1], r)
+    for (const rect of L.images) drawLens(ctx, colors, rect, N, N, lens[0], lens[1], r, { selected: target === 'lens' })
     drawText(ctx, '断面 f', imgF.x, L.titleY, { color: colors.ink, size: 12 })
     drawText(ctx, '輪郭', imgEdge.x, L.titleY, { color: colors.ink, size: 12 })
     drawText(ctx, '鮮鋭化 g', imgG.x, L.titleY, { color: colors.ink, size: 12 })
@@ -164,7 +167,7 @@ export default function CtStep9() {
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
   const width = useStageWidth(canvasRef)
-  useEffect(() => { redraw() }, [signal, selected, k, kernel, lens, sharp1D, sharpImg, edge, redraw])
+  useEffect(() => { redraw() }, [signal, selected, target, k, kernel, lens, sharp1D, sharpImg, edge, redraw])
 
   const layoutNow = () => layout(sizeRef.current.width)
   const pixelAt = (rect, p) => [clamp(Math.floor(((p.x - rect.x) / rect.w) * N), 0, N - 1), clamp(Math.floor(((p.y - rect.y) / rect.h) * N), 0, N - 1)]
@@ -190,9 +193,11 @@ export default function CtStep9() {
         const i = clamp(Math.round(viewA().wx(p.x)), 0, SIGNAL_N - 1)
         dragRef.current = { kind: 'signal', i }
         setSelected(i)
+        setTarget('signal')
         setSampleFromY(i, p.y)
       } else {
         dragRef.current = target
+        setTarget('lens')
         setLens(pixelAt(target.rect, p))
       }
       return true
@@ -205,27 +210,35 @@ export default function CtStep9() {
     },
     onUp: () => { dragRef.current = null },
   })
+  // PageUp・PageDown で、キーで動かす物を「虫めがね」と「段差の点」で切り替える。矢印キーは、虫めがねなら枠を 1 画素ずつ、
+  // 段差の点なら左右で隣の点を選び、上下で値を変える(Shift で 5 倍)。Home・End は最初・最後の点。Alt・Ctrl・Cmd つきは使わない
   const onKeyDown = (event) => {
-    const step = arrowStep(event)
-    if (step) {
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    if (event.key === 'PageUp' || event.key === 'PageDown') {
       event.preventDefault()
-      setLens(([x, y]) => [clamp(x + step.dx, 0, N - 1), clamp(y - step.dy, 0, N - 1)])
-    } else if (event.key === 'Home' || event.key === 'End') {
-      event.preventDefault()
-      setSelected((i) => clamp(i + (event.key === 'End' ? 1 : -1), 0, SIGNAL_N - 1))
-    } else if (event.key === 'PageUp' || event.key === 'PageDown') {
-      event.preventDefault()
-      setSignal((current) => Float64Array.from(current, (v, j) => (j === selected ? clamp(v + (event.key === 'PageUp' ? 0.05 : -0.05), -0.2, 1.2) : v)))
+      setTarget((value) => (value === 'lens' ? 'signal' : 'lens'))
+      return
     }
+    if (target === 'signal' && (event.key === 'Home' || event.key === 'End')) {
+      event.preventDefault()
+      setSelected(event.key === 'Home' ? 0 : SIGNAL_N - 1)
+      return
+    }
+    const step = arrowStep(event)
+    if (!step) return
+    event.preventDefault()
+    if (target === 'lens') setLens(([x, y]) => [clamp(x + step.dx, 0, N - 1), clamp(y - step.dy, 0, N - 1)])
+    else if (step.dx) setSelected((i) => clamp(i + step.dx, 0, SIGNAL_N - 1))
+    else setSignal((current) => Float64Array.from(current, (v, j) => (j === selected ? clamp(v + step.dy * 0.05, -0.2, 1.2) : v)))
   }
-  const reset = () => { setSignal(SIGNAL_INITIAL); setSelected(14); setK(INITIAL.k); setKernel(INITIAL.kernel); setLens(INITIAL.lens) }
+  const reset = () => { setSignal(SIGNAL_INITIAL); setSelected(14); setTarget('lens'); setK(INITIAL.k); setKernel(INITIAL.kernel); setLens(INITIAL.lens) }
 
   return (
     <SimShell
       label="輪郭を強める"
       height={fixedHeight(layout(width).height)}
       switcher={<ModeSwitch label="輪郭の重み" value={kernel} options={KERNELS} onChange={setKernel} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="1 次元のぼけた段差の点を上下にドラッグすると、1 回の差分、2 回の差分、鮮鋭化した線が変わります。断面の画像の上をドラッグするか矢印キーを押すと虫めがねの枠が動き、枠の中の 3 × 3 の重みと値から輪郭の値と鮮鋭化の値が計算されます。Home と End で段差の点を選び、PageUp と PageDown で値を変えられます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="1 次元のぼけた段差と鮮鋭化した線、1 回と 2 回の差分のグラフ、断面と輪郭の絵と鮮鋭化した断面、虫めがねの枠の中の 3 × 3 の重みと値と計算。段差の点を上下にドラッグすると値が、断面の上をドラッグすると虫めがねの枠が動きます。PageUp と PageDown で、キーで動かす物を虫めがねと段差の点で切り替え、矢印キーで動かします（段差の点は左右で隣の点を選び、上下で値を変えます。Shift で大きく）。" />}
       legend={<SimLegend items={[
         { key: 'f', symbol: 'f', label: 'ぼけた段差', swatch: 'var(--color-ink)' },
         { key: 'g', symbol: 'g', label: '鮮鋭化', swatch: 'var(--lane-1)' },

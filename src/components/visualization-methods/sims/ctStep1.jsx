@@ -148,6 +148,7 @@ export default function CtStep1() {
       const kind = hitOf(p)
       if (!kind) return false
       grabRef.current = kind
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも動かせるように
       moveTo(kind, p)
       return true
     },
@@ -166,7 +167,7 @@ export default function CtStep1() {
     <SimShell
       label="投影を撮る"
       height={{ phone: [430, 470], pc: [300, 380] }}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="断面に X 線を当て、検出器で投影を測る絵と、投影のグラフ。線源の丸をドラッグするか左右の矢印キーで X 線の向きを、検出器の丸をドラッグするか上下の矢印キーで調べる光線の位置を動かします。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="断面に X 線を当て、検出器で投影を測る絵と、投影のグラフ。線源の丸をドラッグするか左右の矢印キーで X 線の向きを、検出器の丸をドラッグするか上下の矢印キーで調べる光線の位置を動かします（Shift で大きく）。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'theta', symbol: '\\theta', label: 'X 線の向き', value: '0°', minChars: 5 },
         { key: 's', symbol: 's', label: '調べる光線の位置', value: '0.00', minChars: 5 },

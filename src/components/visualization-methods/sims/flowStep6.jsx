@@ -296,7 +296,7 @@ export default function FlowStep6() {
     <SimShell
       label="特異点の分類"
       height={{ phone: [300, 360], pc: [320, 380] }}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="左は、速度の変わり方を表す行列のトレースと行列式の平面で、点の位置で特異点の種類が決まります。右は、その行列で表される流れの流線です。平面の点をドラッグするか矢印キーで動かせます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="左は、速度の変わり方を表す行列のトレースと行列式の平面で、点の位置で特異点の種類が決まります。右は、その行列で表される流れの流線です。平面の点をドラッグするか、矢印キーで動かせます（Shift で大きく）。" />}
       legend={(
         <SimLegend
           ref={legend}

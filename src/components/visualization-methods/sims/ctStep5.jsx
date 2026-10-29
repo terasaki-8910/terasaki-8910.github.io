@@ -183,6 +183,7 @@ export default function CtStep5() {
       if (!hit(p)) return false
       loop.pause()
       grabRef.current = true
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも回せるように
       return true
     },
     onMove: (p) => grabRef.current && turnTo(p),
@@ -205,7 +206,7 @@ export default function CtStep5() {
     <SimShell
       label="中央断面定理"
       height={{ phone: [420, 470], pc: [300, 380] }}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="断面の 2 次元フーリエ変換の大きさ(対数)と、その中心を通る向き θ の線。線の端の丸をドラッグするか矢印キーで θ を変えます。グラフは、向き θ の投影の 1 次元フーリエ変換の大きさ(線)と、2 次元のフーリエ変換のその線に沿った値(点)で、重なります。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="断面の 2 次元フーリエ変換の大きさ(対数)と、その中心を通る向き θ の線。線の端の丸をドラッグするか、矢印キーで θ を変えます（Shift で大きく）。グラフは、向き θ の投影の 1 次元フーリエ変換の大きさ(線)と、2 次元のフーリエ変換のその線に沿った値(点)で、重なります。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'theta', symbol: '\\theta', label: '線の向き', value: '0°', minChars: 5 },
         { key: 'one', symbol: '|P_\\theta(w)|', label: '投影の 1 次元 FFT', swatch: 'var(--color-ink)' },

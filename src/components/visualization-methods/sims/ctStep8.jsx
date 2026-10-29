@@ -175,6 +175,7 @@ export default function CtStep8() {
   const [filter, setFilter] = useState(INITIAL.filter)
   const [rate, setRate] = useState(INITIAL.rate)
   const [lens, setLens] = useState(INITIAL.lens)
+  const [target, setTarget] = useState('lens') // キーで動かす物: 'lens'(虫めがね)か 'signal'(信号の点)
   const dragRef = useRef(null)
   const ma = useMemo(() => movingAverage1D(signal, n), [signal, n])
   const md = useMemo(() => median1D(signal, n), [signal, n])
@@ -197,6 +198,8 @@ export default function CtStep8() {
       strokeSeries(ctx, view, xs, ma, { color: laneColor(colors, 1), width: 2 })
       strokeSeries(ctx, view, xs, md, { color: laneColor(colors, 3), width: 2 })
       signal.forEach((v, i) => markerCircle(ctx, view.sx(i), view.sy(v), i === selected ? 4.5 : 3, { fill: colors.ink, stroke: i === selected ? colors.surface : undefined, lineWidth: 1.5 }))
+      // キーで信号の点を動かすときは、選んでいる点を太い輪で囲む
+      if (target === 'signal') markerCircle(ctx, view.sx(selected), view.sy(signal[selected]), 8, { stroke: colors.ink, lineWidth: 3 })
     })
 
     // 画像: 雑音の入った断面と、フィルタをかけた断面(同じ所に虫めがねの枠)
@@ -204,15 +207,15 @@ export default function CtStep8() {
     const smooth = L.imgIn.w / N < 2.2 // 小さく見せるときは、画素の境をぼかして、そろわない画素の大きさが目立たないようにする
     drawGrayImage(ctx, colors, noisy, N, N, L.imgIn, { lo: SLICE_WINDOW[0], hi: SLICE_WINDOW[1], smooth })
     drawGrayImage(ctx, colors, filtered, N, N, L.imgOut, { lo: SLICE_WINDOW[0], hi: SLICE_WINDOW[1], smooth })
-    drawLens(ctx, colors, L.imgIn, N, N, lens[0], lens[1], r)
-    drawLens(ctx, colors, L.imgOut, N, N, lens[0], lens[1], r)
+    drawLens(ctx, colors, L.imgIn, N, N, lens[0], lens[1], r, { selected: target === 'lens' })
+    drawLens(ctx, colors, L.imgOut, N, N, lens[0], lens[1], r, { selected: target === 'lens' })
     drawText(ctx, '雑音の入った断面', L.imgIn.x, L.titleY, { color: colors.ink, size: 12 })
     drawText(ctx, FILTERS.find((f) => f.value === filter).label, L.imgOut.x, L.titleY, { color: colors.ink, size: 12 })
     drawReadout(ctx, colors, L.readout, readoutFor(filter, noisy, filtered[lens[1] * N + lens[0]], lens[0], lens[1]))
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
   const width = useStageWidth(canvasRef)
-  useEffect(() => { redraw() }, [signal, selected, ma, md, noisy, filtered, filter, lens, redraw])
+  useEffect(() => { redraw() }, [signal, selected, target, ma, md, noisy, filtered, filter, lens, redraw])
 
   const layoutNow = () => layout(sizeRef.current.width)
   const pixelAt = (rect, p) => [clamp(Math.floor(((p.x - rect.x) / rect.w) * N), 0, N - 1), clamp(Math.floor(((p.y - rect.y) / rect.h) * N), 0, N - 1)]
@@ -239,9 +242,11 @@ export default function CtStep8() {
         const i = clamp(Math.round(view.wx(p.x)), 0, SIGNAL_N - 1)
         dragRef.current = { kind: 'signal', i }
         setSelected(i)
+        setTarget('signal')
         setSampleFromY(i, p.y)
       } else {
         dragRef.current = target
+        setTarget('lens')
         setLens(pixelAt(target.rect, p))
       }
       return true
@@ -254,27 +259,35 @@ export default function CtStep8() {
     },
     onUp: () => { dragRef.current = null },
   })
+  // PageUp・PageDown で、キーで動かす物を「虫めがね」と「信号の点」で切り替える。矢印キーは、虫めがねなら枠を 1 画素ずつ、
+  // 信号の点なら左右で隣の点を選び、上下で値を変える(Shift で 5 倍)。Home・End は最初・最後の点。Alt・Ctrl・Cmd つきは使わない
   const onKeyDown = (event) => {
-    const step = arrowStep(event)
-    if (step) {
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    if (event.key === 'PageUp' || event.key === 'PageDown') {
       event.preventDefault()
-      setLens(([x, y]) => [clamp(x + step.dx, 0, N - 1), clamp(y - step.dy, 0, N - 1)])
-    } else if (event.key === 'Home' || event.key === 'End') {
-      event.preventDefault()
-      setSelected((i) => clamp(i + (event.key === 'End' ? 1 : -1), 0, SIGNAL_N - 1))
-    } else if (event.key === 'PageUp' || event.key === 'PageDown') {
-      event.preventDefault()
-      setSignal((current) => Float64Array.from(current, (v, k) => (k === selected ? clamp(v + (event.key === 'PageUp' ? 0.05 : -0.05), SIGNAL_RANGE[0] + 0.05, SIGNAL_RANGE[1] - 0.05) : v)))
+      setTarget((value) => (value === 'lens' ? 'signal' : 'lens'))
+      return
     }
+    if (target === 'signal' && (event.key === 'Home' || event.key === 'End')) {
+      event.preventDefault()
+      setSelected(event.key === 'Home' ? 0 : SIGNAL_N - 1)
+      return
+    }
+    const step = arrowStep(event)
+    if (!step) return
+    event.preventDefault()
+    if (target === 'lens') setLens(([x, y]) => [clamp(x + step.dx, 0, N - 1), clamp(y - step.dy, 0, N - 1)])
+    else if (step.dx) setSelected((i) => clamp(i + step.dx, 0, SIGNAL_N - 1))
+    else setSignal((current) => Float64Array.from(current, (v, k) => (k === selected ? clamp(v + step.dy * 0.05, SIGNAL_RANGE[0] + 0.05, SIGNAL_RANGE[1] - 0.05) : v)))
   }
-  const reset = () => { setSignal(SIGNAL_INITIAL); setSelected(6); setN(INITIAL.n); setFilter(INITIAL.filter); setRate(INITIAL.rate); setLens(INITIAL.lens) }
+  const reset = () => { setSignal(SIGNAL_INITIAL); setSelected(6); setTarget('lens'); setN(INITIAL.n); setFilter(INITIAL.filter); setRate(INITIAL.rate); setLens(INITIAL.lens) }
 
   return (
     <SimShell
       label="雑音を減らす"
       height={fixedHeight(layout(width).height)}
       switcher={<ModeSwitch label="断面のフィルタ" value={filter} options={FILTERS} onChange={setFilter} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="1 次元の信号の点を上下にドラッグすると、移動平均とメディアンの線が変わります。雑音の入った断面とフィルタをかけた断面の上をドラッグするか矢印キーを押すと、虫めがねの枠が動き、枠の中の値と出力の計算が表示されます。Home と End で信号の点を選び、PageUp と PageDown で値を変えられます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="1 次元の信号と、その移動平均とメディアンの線、雑音の入った断面とフィルタをかけた断面、虫めがねの枠の中の値と出力の計算。信号の点を上下にドラッグすると値が、断面の上をドラッグすると虫めがねの枠が動きます。PageUp と PageDown で、キーで動かす物を虫めがねと信号の点で切り替え、矢印キーで動かします（信号の点は左右で隣の点を選び、上下で値を変えます。Shift で大きく）。" />}
       legend={<SimLegend items={[
         { key: 'raw', label: '元の信号', swatch: 'var(--color-ink)' },
         { key: 'ma', label: '移動平均', swatch: 'var(--lane-1)' },

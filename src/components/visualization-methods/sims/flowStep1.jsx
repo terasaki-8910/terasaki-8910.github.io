@@ -135,7 +135,7 @@ export default function FlowStep1() {
   return (
     <SimShell
       label="格子点ごとの速度を矢印で描く"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="一様な流れの中に渦がある速度の場を、格子点ごとの矢印で描いた図。渦の中心の丸をドラッグするか矢印キーで動かせます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="一様な流れの中に渦がある速度の場を、格子点ごとの矢印で描いた図。渦の中心の丸をドラッグするか、矢印キーで動かせます（Shift で大きく）。" />}
       legend={(
         <SimLegend
           ref={legend}

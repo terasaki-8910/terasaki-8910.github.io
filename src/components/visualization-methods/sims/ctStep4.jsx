@@ -7,7 +7,7 @@ import { PlayPauseButton, ResetButton, SimToolbar } from '../../visualization/Si
 import useCanvas from '../../visualization/useCanvas'
 import useSimLoop, { prefersReducedMotion } from '../../visualization/useSimLoop'
 import usePointerDrag from '../../visualization/usePointerDrag'
-import { drawText, markerCircle } from '../../visualization/sims/rigidKit'
+import { arrowStep, drawText, markerCircle } from '../../visualization/sims/rigidKit'
 import { squareWavePartialSum } from '../../../utils/vis/ct'
 import { fft } from '../../../utils/vis/fft'
 import { clampNumber, drawPlotAxes, plotMap, squareWaveAmplitude, squareWaveComponent } from './ctKit'
@@ -188,24 +188,26 @@ export default function CtStep4() {
       if (!inBars(p)) return false
       loop.pause()
       grabRef.current = true
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも変えられるように
       setOdd(kAt(p))
       return true
     },
     onMove: (p) => grabRef.current && setOdd(kAt(p)),
     onUp: () => { grabRef.current = false },
   })
+  // → ↑ で次の奇数、← ↓ で前の奇数(Shift で 5 つ先。Alt・Ctrl・Cmd つきは arrowStep が null を返すので、ブラウザの操作に残る)
   const onKeyDown = (event) => {
-    const delta = { ArrowRight: 2, ArrowUp: 2, ArrowLeft: -2, ArrowDown: -2 }[event.key]
-    if (!delta) return
+    const step = arrowStep(event)
+    if (!step) return
     event.preventDefault()
-    scrub(kRef.current + delta * (event.shiftKey ? 5 : 1))
+    scrub(kRef.current + 2 * (step.dx + step.dy))
   }
 
   return (
     <SimShell
       label="フーリエ変換"
       height={{ phone: [330, 380], pc: [300, 380] }}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="矩形波と、奇数倍の周波数の正弦波を K まで足した和、その正弦波の振れ幅の棒グラフ。棒グラフの上をドラッグするか左右の矢印キーで K を変えます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="矩形波と、奇数倍の周波数の正弦波を K まで足した和、その正弦波の振れ幅の棒グラフ。棒グラフの上をドラッグするか、左右の矢印キーで K を変えます（Shift で大きく）。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'sum', label: '足した和', swatch: 'var(--color-ink)' },
         { key: 'parts', label: '1 つ 1 つの正弦波', swatch: 'var(--lane-1)' },

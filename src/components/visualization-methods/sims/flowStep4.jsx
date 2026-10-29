@@ -132,7 +132,7 @@ export default function FlowStep4() {
   return (
     <SimShell
       label="時間で変わる流れの流線・流跡線・流脈線"
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="2 つの渦が揺れ動く流れで、出発点を通る流線、そこから放した粒子の流跡線、出し続けた染料の流脈線を重ねた図。出発点の丸をドラッグするか矢印キーで動かせます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="2 つの渦が揺れ動く流れで、出発点を通る流線、そこから放した粒子の流跡線、出し続けた染料の流脈線を重ねた図。出発点の丸をドラッグするか、矢印キーで動かせます（Shift で大きく）。動かすと再生は止まります。" />}
       legend={(
         <SimLegend
           items={[

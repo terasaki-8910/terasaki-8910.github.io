@@ -3,6 +3,7 @@ import SimShell from '../../visualization/SimShell'
 import SimCanvas from '../../visualization/SimCanvas'
 import SimLegend from '../../visualization/SimLegend'
 import ParamSlider from '../../visualization/ParamSlider'
+import ControlGroup from '../../visualization/ControlGroup'
 import { ModeSwitch, ResetButton, SimToolbar, ToggleButton } from '../../visualization/SimButtons'
 import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
@@ -164,10 +165,10 @@ export default function CtStep10() {
       ctx.rect(L.input.x, L.input.y, L.input.w, L.input.h)
       ctx.clip()
       ctx.strokeStyle = colors.surface
-      ctx.lineWidth = 3.5
+      ctx.lineWidth = 4
       ctx.strokeRect(L.input.x + cursor[0] * sx, L.input.y + cursor[1] * sx, sx, sx)
       ctx.strokeStyle = colors.ink
-      ctx.lineWidth = 1.5
+      ctx.lineWidth = 2
       ctx.strokeRect(L.input.x + cursor[0] * sx, L.input.y + cursor[1] * sx, sx, sx)
       ctx.restore()
     }
@@ -220,6 +221,7 @@ export default function CtStep10() {
     onUp: () => { dragRef.current = null },
   })
   const onKeyDown = (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return // ブラウザの操作に残す
     const step = arrowStep(event)
     if (step) {
       event.preventDefault()
@@ -251,7 +253,7 @@ export default function CtStep10() {
       label="形を整える"
       height={fixedHeight(layout(width).height)}
       switcher={<ModeSwitch label="操作" value={op} options={OPERATIONS} onChange={setOp} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} onFocus={() => setFocused(true)} onBlur={() => setFocused(false)} label="白黒の形 X と、構造化要素 B で整えた結果。形 X の上をドラッグすると描き足せます（消すを押すと消せます）。矢印キーで画素を選び、スペースキーで描き足すか消します。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} onFocus={() => setFocused(true)} onBlur={() => setFocused(false)} label="白黒の形 X と、構造化要素 B で整えた結果。形 X の上をドラッグすると描き足せます（「消す」を押しているときは消せます）。矢印キーで画素を選び（Shift で大きく）、スペースキーか Enter キーで描き足すか消します。" />}
       legend={<SimLegend items={[
         { key: 'kept', label: '残った画素', swatch: 'var(--color-ink)' },
         { key: 'added', label: '増えた画素', value: String(counts.added), swatch: 'var(--diff-insert)', minChars: 4 },
@@ -263,9 +265,9 @@ export default function CtStep10() {
           <button type="button" className="vis-btn" onClick={sprinkle}><span>点を散らす</span></button>
           <ResetButton onClick={reset} />
         </SimToolbar>
-        <SimToolbar label="構造化要素">
-          <ModeSwitch label="構造化要素" value={element} options={ELEMENTS} onChange={setElement} variant="quiet" />
-        </SimToolbar>
+        <ControlGroup label="構造化要素 B">
+          <ModeSwitch label="B の形" value={element} options={ELEMENTS} onChange={setElement} variant="quiet" />
+        </ControlGroup>
         <ParamSlider label="ブラシの太さ" value={brush} min={1} max={7} step={2} unit=" 画素" onChange={setBrush} />
       </>}
     />

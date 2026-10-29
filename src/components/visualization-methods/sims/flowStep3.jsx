@@ -144,7 +144,7 @@ export default function FlowStep3() {
     <SimShell
       label="流線の出発点の置き方"
       switcher={<ModeSwitch variant="tabs" label="出発点の置き方" value={mode} onChange={setMode} options={MODES} />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label={`3 つの渦がある流れの流線と、その出発点の図。出発点の置き方を 3 通りに切り替えられます。渦の中心の丸をドラッグで動かせます。PageUp・PageDown で渦を選び、矢印キーで動かします（Shift で大きく）。選択中は渦 ${selected + 1}。`} />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label={`3 つの渦がある流れの流線と、その出発点の図。出発点の置き方を 3 通りに切り替えられます。渦の中心の丸をドラッグで動かせます。PageUp・PageDown で渦を選び、矢印キーで動かします（Shift で大きく）。選択中は渦 ${selected + 1}。`} />}
       legend={(
         <SimLegend
           ref={legend}

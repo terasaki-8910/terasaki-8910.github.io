@@ -248,8 +248,9 @@ export function neighborhood(img, w, h, cx, cy, r) {
   return out
 }
 
-// 画像の枠(rect)の上に、(cx, cy) を中心にした (2r+1) 画素四方の虫めがねの枠を描く(surface のふち取りの上に ink の線)
-export function drawLens(ctx, colors, rect, w, h, cx, cy, r) {
+// 画像の枠(rect)の上に、(cx, cy) を中心にした (2r+1) 画素四方の虫めがねの枠を描く(surface のふち取りの上に ink の線)。
+// selected(キーで動かす物として選んでいる)なら線を太くする
+export function drawLens(ctx, colors, rect, w, h, cx, cy, r, { selected = false } = {}) {
   const sx = rect.w / w
   const sy = rect.h / h
   const x = rect.x + (cx - r) * sx
@@ -259,10 +260,10 @@ export function drawLens(ctx, colors, rect, w, h, cx, cy, r) {
   ctx.rect(rect.x, rect.y, rect.w, rect.h)
   ctx.clip()
   ctx.strokeStyle = colors.surface
-  ctx.lineWidth = 3.5
+  ctx.lineWidth = selected ? 5 : 3.5
   ctx.strokeRect(x, y, (2 * r + 1) * sx, (2 * r + 1) * sy)
   ctx.strokeStyle = colors.ink
-  ctx.lineWidth = 1.5
+  ctx.lineWidth = selected ? 3 : 1.5
   ctx.strokeRect(x, y, (2 * r + 1) * sx, (2 * r + 1) * sy)
   ctx.restore()
 }

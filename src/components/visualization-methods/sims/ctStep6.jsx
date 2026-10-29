@@ -6,7 +6,7 @@ import ParamSlider from '../../visualization/ParamSlider'
 import { ModeSwitch, ResetButton, SimToolbar } from '../../visualization/SimButtons'
 import useCanvas from '../../visualization/useCanvas'
 import usePointerDrag from '../../visualization/usePointerDrag'
-import { clamp, drawText, fmt, markerCircle } from '../../visualization/sims/rigidKit'
+import { arrowStep, clamp, drawText, fmt, markerCircle } from '../../visualization/sims/rigidKit'
 import { SHEPP_LOGAN, addNoise, detectorPosition, filterProjection, frequencyWindow, projectPhantom, rampKernel, rasterizePhantom } from '../../../utils/vis/ct'
 import { fft, nextPow2 } from '../../../utils/vis/fft'
 import {
@@ -255,16 +255,17 @@ export default function CtStep6() {
     canGrab: (p) => insideRect(dialGeometry(dialCell()).area, p),
     onDown: (p) => {
       if (!insideRect(dialGeometry(dialCell()).area, p)) return false
-      canvasRef.current?.focus({ preventScroll: true })
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも回せるように
       setFromPoint(p)
       return true
     },
     onMove: (p) => setFromPoint(p),
   })
+  // → ↑ で 1° 増やし、← ↓ で減らす(Shift で 5°)。Home・End で 0°・179°。Alt・Ctrl・Cmd つきはブラウザの操作に残す
   const onKeyDown = (event) => {
-    const big = event.shiftKey ? 10 : 1
-    if (event.key === 'ArrowRight' || event.key === 'ArrowUp') setTheta((v) => clamp(v + big, 0, 179))
-    else if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') setTheta((v) => clamp(v - big, 0, 179))
+    if (event.altKey || event.ctrlKey || event.metaKey) return
+    const step = arrowStep(event)
+    if (step) setTheta((v) => clamp(v + step.dx + step.dy, 0, 179))
     else if (event.key === 'Home') setTheta(0)
     else if (event.key === 'End') setTheta(179)
     else return
@@ -277,13 +278,13 @@ export default function CtStep6() {
       label="ランプフィルタ"
       height={fixedHeight(stageHeight(stageWidth))}
       switcher={<ModeSwitch label="フィルタ" value={win} options={WINDOW_OPTIONS} onChange={setWin} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="模型を撮る向き θ の図と、その向きの投影 p(s)、周波数成分、フィルタ、フィルタ後の投影 Q(s)、カーネル h(n) のグラフ。模型の図の取っ手をドラッグするか、矢印キーで向きを 1° ずつ（Shift で 10° ずつ）変えられます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="模型を撮る向き θ の図と、その向きの投影 p(s)、周波数成分、フィルタ、フィルタ後の投影 Q(s)、カーネル h(n) のグラフ。模型の図の取っ手をドラッグするか、矢印キーで向きを 1° ずつ（Shift で 5° ずつ）変えられます。Home と End で 0° と 179° にします。" />}
       legend={<SimLegend items={[
         { key: 'theta', symbol: '\\theta', label: '向き', value: `${theta}°`, minChars: 5 },
         { key: 'before', label: '投影 p(s)', swatch: 'var(--color-ink)' },
         { key: 'after', label: 'フィルタ後 Q(s)', swatch: 'var(--lane-1)' },
         { key: 'dip', symbol: 'Q_{\\min}', label: '最小値', value: fmt(data.qMin, 2), minChars: 6 },
-        { key: 'w', symbol: 'w', label: '周波数の単位', value: '最大 = 1', minChars: 8 },
+        { key: 'w', symbol: 'w', label: '周波数の目盛り', value: '最大の周波数 = 1', minChars: 8 },
       ]} />}
       controls={<>
         <SimToolbar><ResetButton onClick={reset} /></SimToolbar>

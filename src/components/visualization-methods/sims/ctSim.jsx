@@ -155,6 +155,7 @@ export default function CtSim() {
       setSelected(index)
       setDragging(true)
       finishSweep()
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも動かせるように
       return true
     },
     onMove: ({ x, y }) => {
@@ -170,7 +171,8 @@ export default function CtSim() {
     },
   })
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
+    // Alt・Ctrl・Cmd つきはブラウザの操作(Ctrl+PageDown でタブを移るなど)に残す
+    if ((event.key === 'PageUp' || event.key === 'PageDown') && !event.altKey && !event.ctrlKey && !event.metaKey) {
       event.preventDefault()
       const at = DRAGGABLE.indexOf(selected)
       setSelected(DRAGGABLE[(at + (event.key === 'PageUp' ? -1 : 1) + DRAGGABLE.length) % DRAGGABLE.length])
@@ -195,7 +197,7 @@ export default function CtSim() {
       label="CT の再構成"
       aspect={aspect}
       switcher={<ModeSwitch label="フィルタ" value={filter} options={FILTER_TAB_OPTIONS} onChange={setParam('filter')} variant="tabs" />}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="模型・サイノグラム・再構成の 3 つの絵。模型の小さな楕円をドラッグまたは矢印キーで動かすと、サイノグラムと再構成が追従します。PageUp と PageDown で動かす楕円を選べます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="模型・サイノグラム・再構成の 3 つの絵。模型の小さな楕円をドラッグするか、矢印キーで動かすと（Shift で大きく）、サイノグラムと再構成が追従します。PageUp と PageDown で動かす楕円を選べます。動かすと再生は止まり、全部の向きの投影で作り直します。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'theta', symbol: '\\theta', label: '今の角度', value: '0°', minChars: 5 },
         { key: 'angles', label: '使った投影', value: `${nAngles}`, minChars: 8 },

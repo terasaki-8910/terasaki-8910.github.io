@@ -10,7 +10,7 @@ import usePointerDrag from '../../visualization/usePointerDrag'
 import { GRAB_SLOP_PX, arrowStep, fmt, markerCircle } from '../../visualization/sims/rigidKit'
 import { SHEPP_LOGAN, sinogram } from '../../../utils/vis/ct'
 import {
-  ANGLE_RATE, clampNumber, deg, drawBeam, drawBottomTicks, drawFrame, drawGrayImage, drawHatch, drawImageTitle,
+  ANGLE_RATE, deg, drawBeam, drawBottomTicks, drawFrame, drawGrayImage, drawHatch, drawImageTitle,
   drawLeftTicks, phantomValues, rad, strokeHalo, worldView,
 } from './ctKit'
 
@@ -133,7 +133,9 @@ export default function CtStep2() {
     canGrab: hit,
     onDown: (p) => {
       if (!hit(p)) return false
+      loop.pause() // 再生中でも、つかんだら止める
       grabRef.current = true
+      canvasRef.current?.focus({ preventScroll: true }) // つかんだあと、矢印キーでも動かせるように
       return true
     },
     onMove: (p) => {
@@ -144,14 +146,10 @@ export default function CtStep2() {
     onUp: () => { grabRef.current = false },
   })
   const onKeyDown = (event) => {
-    if (event.key === 'PageUp' || event.key === 'PageDown') {
-      event.preventDefault()
-      scrub(clampNumber(Math.round(deg(thetaRef.current)) + (event.key === 'PageUp' ? 5 : -5), 0, 180))
-      return
-    }
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
+    loop.pause()
     moveDot(dot[0] + step.dx * 0.02, dot[1] + step.dy * 0.02)
   }
   // 凡例の点の位置(つかんだときだけ変わる値は、props で渡す)
@@ -161,7 +159,7 @@ export default function CtStep2() {
     <SimShell
       label="サイノグラム"
       height={{ phone: [420, 460], pc: [300, 380] }}
-      stage={<SimCanvas ref={canvasRef} tabIndex={0} onKeyDown={onKeyDown} label="断面の上の点と、向きごとの投影を縦に積んだサイノグラム。点をドラッグするか矢印キーで動かすと、点が描く正弦波の形が変わります。PageUp と PageDown で X 線の向きを 5° ずつ変えられます。" />}
+      stage={<SimCanvas ref={canvasRef} role="application" tabIndex={0} onKeyDown={onKeyDown} label="断面の上の点と、向きごとの投影を縦に積んだサイノグラム。点をドラッグするか、矢印キーで動かすと（Shift で大きく）、点が描く正弦波の形が変わります。動かすと再生は止まります。" />}
       legend={<SimLegend ref={legendRef} items={[
         { key: 'theta', symbol: '\\theta', label: 'X 線の向き', value: '0°', minChars: 5 },
         { key: 'point', symbol: '(x,\\ y)', label: '点の位置', value: position, minChars: 12 },
