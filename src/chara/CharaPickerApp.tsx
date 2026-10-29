@@ -1,12 +1,13 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react';
 
 import { loadCharaData } from './data/loadCharaData';
 import { useBayesInterview } from './hooks/useBayesInterview';
 import { useNoticeSeen } from './hooks/useNoticeSeen';
 import { useSessionLog, type SessionLogRecord } from './hooks/useSessionLog';
-import { omakase, type Dataset, type Scored } from './engine/recommend';
+import { combinedRankFor, omakase, type Dataset, type Scored } from './engine/recommend';
 import { QUESTION_POLICIES, type QuestionPolicy } from './engine/bayes';
 import type { Probe } from './engine/questions';
+import { gachaEnabled } from './gacha/prefetch';
 import { GuessScreen } from './screens/GuessScreen';
 import { ModeScreen, type PlayMode } from './screens/ModeScreen';
 import { NoGuessScreen } from './screens/NoGuessScreen';
@@ -45,13 +46,20 @@ function useTargetGuard() {
   return { run, reset };
 }
 
-/** おまかせ(質問なしで1体)。遊び方を選ぶ画面と質問の画面の両方から使う。 */
+/** ガチャの演出(初めて引いたときに読み込む)。 */
+const GachaReveal = lazy(() => import('./gacha/GachaReveal'));
+
+/**
+ * おまかせ(質問なしで1体)。遊び方を選ぶ画面と質問の画面の両方から使う。
+ * 引いたときはガチャの演出を重ねる(`gacha`)。閉じると結果画面になる。
+ */
 function useOmakase(dataset: Dataset) {
   const { log } = useSessionLog();
   const [result, setResult] = useState<Scored | null>(null);
+  const [gacha, setGacha] = useState(false);
 
   const run = useCallback(() => {
-    const picked = omakase(dataset, { seed: Date.now() });
+    const picked = devPick(dataset) ?? omakase(dataset, { seed: Date.now() });
     const record: SessionLogRecord = {
       ts: Date.now(),
       guessId: picked.character.id,
@@ -63,10 +71,65 @@ function useOmakase(dataset: Dataset) {
     };
     log(record);
     setResult(picked);
+    setGacha(gachaEnabled());
   }, [dataset, log]);
 
-  const clear = useCallback(() => setResult(null), []);
-  return { result, run, clear };
+  const clear = useCallback(() => {
+    setResult(null);
+    setGacha(false);
+  }, []);
+  const closeGacha = useCallback(() => setGacha(false), []);
+  return { result, gacha, run, clear, closeGacha };
+}
+
+/**
+ * 開発用: `?gacha=<キャラのid>` で、おまかせの結果をそのキャラにする(演出の確かめ用)。
+ * 本番のビルドでは何もしない。
+ */
+function devPick(dataset: Dataset): Scored | null {
+  if (!import.meta.env.DEV) return null;
+  const id = new URLSearchParams(window.location.search).get('gacha');
+  const character = id ? dataset.characters.find((c) => c.id === id) : undefined;
+  if (!character) return null;
+  const rank = combinedRankFor(character.id, dataset.supply);
+  return { character, score: 0, supplyRank: rank, reasons: [{ kind: 'supply', rank, label: rank }] };
+}
+
+/** 演出のコードを読み込む間に、後ろのページが一瞬見えないよう、演出と同じ地の色で覆う。 */
+const GACHA_LOADING_STYLE = {
+  position: 'fixed',
+  inset: 0,
+  zIndex: 10000,
+  background: 'linear-gradient(180deg, #d2fda9, #9ad8f2 42%, #dd9ffa 80%, #f29bd7)',
+} as const;
+
+/**
+ * おまかせの結果。演出を見ている間は結果画面を出さない(演出の前に名前が見えてしまうため)。
+ * 演出を閉じたら、結果画面へ読み上げの位置を移す。
+ */
+function OmakaseResult(props: { result: Scored; gacha: boolean; onCloseGacha(): void; onRestart(): void }) {
+  const { result, gacha, onCloseGacha, onRestart } = props;
+  const closedRef = useRef(false);
+
+  useEffect(() => {
+    if (gacha) {
+      closedRef.current = true;
+      return;
+    }
+    if (!closedRef.current) return;
+    closedRef.current = false;
+    document.querySelector<HTMLElement>('[data-testid="result"]')?.focus({ preventScroll: true });
+    window.scrollTo({ top: 0 });
+  }, [gacha]);
+
+  if (gacha) {
+    return (
+      <Suspense fallback={<div style={GACHA_LOADING_STYLE} aria-hidden="true" />}>
+        <GachaReveal scored={result} onClose={onCloseGacha} />
+      </Suspense>
+    );
+  }
+  return <ResultScreen result={result} onRestart={onRestart} />;
 }
 
 /**
@@ -78,7 +141,13 @@ function useOmakase(dataset: Dataset) {
  */
 function BayesFlow({ dataset, policy, onRestart }: { dataset: Dataset; policy: QuestionPolicy; onRestart(): void }) {
   const interview = useBayesInterview(dataset, { policy });
-  const { result: omakaseResult, run: handleOmakase, clear: clearOmakase } = useOmakase(dataset);
+  const {
+    result: omakaseResult,
+    gacha,
+    run: handleOmakase,
+    clear: clearOmakase,
+    closeGacha,
+  } = useOmakase(dataset);
   const { run: guard, reset: resetGuard } = useTargetGuard();
 
   const handleRestart = useCallback(() => {
@@ -90,7 +159,7 @@ function BayesFlow({ dataset, policy, onRestart }: { dataset: Dataset; policy: Q
   // おまかせは質問・推測ループを経ない独立経路。結果表示中は interview 側の状態
   // （質問の途中経過など）を無視して直接 result 画面へ出す。
   if (omakaseResult !== null) {
-    return <ResultScreen result={omakaseResult} onRestart={handleRestart} />;
+    return <OmakaseResult result={omakaseResult} gacha={gacha} onCloseGacha={closeGacha} onRestart={handleRestart} />;
   }
 
   switch (interview.phase) {
@@ -146,7 +215,13 @@ function ModeFlow({ dataset }: { dataset: Dataset }) {
   const { seen: noticeSeen, markSeen: markNoticeSeen } = useNoticeSeen();
   const [mode, setMode] = useState<PlayMode | null>(null);
   const [round, setRound] = useState(0);
-  const { result: omakaseResult, run: handleOmakase, clear: clearOmakase } = useOmakase(dataset);
+  const {
+    result: omakaseResult,
+    gacha,
+    run: handleOmakase,
+    clear: clearOmakase,
+    closeGacha,
+  } = useOmakase(dataset);
   const backToModes = useCallback(() => setMode(null), []);
 
   // 初回のみ、質問より前に注意書きを挟む。最初の質問がどの軸になるかはベイズ選択で
@@ -156,7 +231,7 @@ function ModeFlow({ dataset }: { dataset: Dataset }) {
     return <NoticeScreen onAcknowledge={markNoticeSeen} />;
   }
   if (omakaseResult !== null) {
-    return <ResultScreen result={omakaseResult} onRestart={clearOmakase} />;
+    return <OmakaseResult result={omakaseResult} gacha={gacha} onCloseGacha={closeGacha} onRestart={clearOmakase} />;
   }
   if (mode === null) {
     return (

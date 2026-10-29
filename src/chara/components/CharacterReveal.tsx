@@ -1,7 +1,11 @@
+import { useEffect, useState } from 'react';
+
 import { CharacterImage } from './CharacterImage';
+import { fetchQuote, peekQuote } from '../data/quotes';
 import type { AxisKey } from '../data/schema';
 import { profileEntriesFor } from '../engine/questions';
 import type { Reason, Scored } from '../engine/recommend';
+import './quote.css';
 
 /**
  * 「このキャラを見せる」画面（推測確認・確定結果・おまかせ結果）に共通する中身。
@@ -27,6 +31,7 @@ export function CharacterReveal(props: { scored: Scored; imageTestId: string }) 
   const { character, reasons } = props.scored;
   const traitReasons = reasons.filter((r): r is Extract<Reason, { kind: 'trait' }> => r.kind === 'trait');
   const profile = profileEntriesFor(character, { exclude: new Set<AxisKey>(traitReasons.map((r) => r.axis)) });
+  const quote = useQuote(character.id);
 
   return (
     <>
@@ -39,6 +44,13 @@ export function CharacterReveal(props: { scored: Scored; imageTestId: string }) 
 
       <h2 className="mt-6 text-2xl md:text-3xl font-display text-ink">{character.name}</h2>
       <p className="mt-1 text-muted">{character.series}</p>
+
+      {/* 名台詞(本人の依頼 2026-10-29)。性格や特徴が一言で伝わる。台詞の無いキャラは出さない */}
+      {quote && (
+        <p data-testid="reveal-quote" className="chara-quote mt-4 max-w-sm text-ink leading-relaxed">
+          「{quote}」
+        </p>
+      )}
 
       {traitReasons.length > 0 && (
         <ul data-testid="reveal-reasons" className="mt-5 flex flex-wrap justify-center gap-2">
@@ -64,4 +76,22 @@ export function CharacterReveal(props: { scored: Scored; imageTestId: string }) 
       )}
     </>
   );
+}
+
+/** キャラの台詞。ガチャ演出で選んだものがあれば同じものを、無ければここで選ぶ(data/quotes.ts)。 */
+function useQuote(characterId: string): string | null {
+  const [quote, setQuote] = useState<string | null>(() => peekQuote(characterId) ?? null);
+
+  useEffect(() => {
+    let cancelled = false;
+    setQuote(peekQuote(characterId) ?? null);
+    fetchQuote(characterId).then((found) => {
+      if (!cancelled) setQuote(found);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [characterId]);
+
+  return quote;
 }

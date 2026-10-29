@@ -1,0 +1,15 @@
+/*
+ * 名台詞の字(CharacterReveal)。本文の Zen Kurenaido はサイト全体で読むサブセットなので、
+ * 台詞にしか出てこない字は入っていない。それらだけを集めた別のファイルを、同じ書体の続きとして置く。
+ * 台詞を表示したときにだけ読まれる(足りない字が出てこなければ取りに行かない)。
+ * 作り方は scripts/build-chara-quote-fonts.mjs。
+ */
+@font-face {
+  font-family: 'Zen Kurenaido Quotes';
+  src: url('/fonts/zen-kurenaido-quotes.woff2') format('woff2');
+  font-display: swap;
+}
+
+.chara-quote {
+  font-family: 'Zen Kurenaido', 'Zen Kurenaido Quotes', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+}

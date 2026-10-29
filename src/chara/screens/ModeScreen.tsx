@@ -1,4 +1,5 @@
 import { OUTLINE_BUTTON, PRIMARY_BUTTON, QUIET_LINK_BUTTON } from '../components/styles';
+import { prefetchGacha } from '../gacha/prefetch';
 
 export type PlayMode = 'discover' | 'guess';
 
@@ -25,7 +26,15 @@ export function ModeScreen(props: { onSelect(mode: PlayMode): void; onOmakase():
       </div>
 
       <div className="mt-8">
-        <button type="button" data-testid="omakase" onClick={onOmakase} className={QUIET_LINK_BUTTON}>
+        <button
+          type="button"
+          data-testid="omakase"
+          onClick={onOmakase}
+          onPointerEnter={prefetchGacha}
+          onPointerDown={prefetchGacha}
+          onFocus={prefetchGacha}
+          className={QUIET_LINK_BUTTON}
+        >
           おまかせで見る
         </button>
       </div>

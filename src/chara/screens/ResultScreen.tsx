@@ -17,7 +17,13 @@ export function ResultScreen(props: { result: Scored; onRestart(): void }) {
   );
 
   return (
-    <div data-testid="result" data-supply-rank={supplyRank} className="flex min-w-0 flex-col items-center text-center">
+    // tabIndex: おまかせの演出を閉じたとき、読み上げの位置をここへ移す(CharaPickerApp の OmakaseResult)
+    <div
+      data-testid="result"
+      data-supply-rank={supplyRank}
+      tabIndex={-1}
+      className="flex min-w-0 flex-col items-center text-center outline-none"
+    >
       <p className="font-mono text-xs tracking-wider text-muted">今日のおすすめ</p>
 
       <CharacterReveal scored={result} imageTestId="result-image" />
