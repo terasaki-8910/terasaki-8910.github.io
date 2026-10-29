@@ -1083,3 +1083,335 @@
     transform: scale(2.2);
   }
 }
+
+/* ---- 十連(GachaTen.tsx) ----
+ * 段階: s-quote 溜め(真ん中の光がふくらむ) → s-rainbow 虹と白(単発と同じ) → s-reveal カードが1枚ずつ着地 → s-done
+ * カードの番号は --ci(0〜9)。落ち始め = --ci × 220ms、着地 = そこから 560ms の 55%(308ms)。
+ * GachaTen.tsx の CARD_GAP_MS・CARD_LAND_MS と合わせる。
+ */
+
+.gten-glow {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 46%;
+  width: 78vmin;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, .95) 0%, rgba(255, 250, 222, .6) 26%, rgba(255, 255, 255, 0) 66%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.2);
+  pointer-events: none;
+}
+
+.gacha-ten.s-quote .gten-glow {
+  animation:
+    gt-charge 1300ms cubic-bezier(.3, 0, .2, 1) both,
+    gt-pulse 800ms ease-in-out 1300ms infinite alternate;
+}
+
+.gacha-ten.s-rainbow .gten-glow {
+  animation: gt-glow-out 520ms ease-in both;
+}
+
+/* 虹で明るく色の変わった背景を、カードの後ろでは元に戻す(a の背景の色相の回転にも勝つよう、クラスを4つ重ねる) */
+.gacha.gacha-ten.s-reveal .gacha-bg {
+  animation: gt-bg-settle 800ms ease-out both;
+}
+
+.gten-field {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.gten-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+}
+
+/* 最後の1枚の着地で、全体をどすんと揺らす */
+.gacha-ten.s-reveal .gten-grid {
+  animation: gt-thud 560ms linear calc(9 * 220ms + 300ms) both;
+}
+
+.gten-row {
+  display: flex;
+  gap: var(--gap);
+}
+
+.gten-card {
+  position: relative;
+  width: var(--card);
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  border: 0;
+  border-radius: calc(var(--card) * .08);
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 0;
+}
+
+/* 白く光ったまま手前から落ちてきて、着地でつぶれ、跳ね返って収まる(星3の押し付けと同じ形) */
+.gacha-ten.s-reveal .gten-card {
+  animation: gt-land 560ms linear calc(var(--ci) * 220ms) both;
+}
+
+.gten-card:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.gten-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-radius: inherit;
+  /* 名前と同じ虹色の縁 */
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, #ff6fc4, #a587ff 35%, #4fc3ff 70%, #5ce8c4) border-box;
+  box-shadow: 0 4px 14px rgba(90, 60, 160, .3);
+  transition: transform 160ms ease-out;
+}
+
+.gacha-ten.s-done .gten-card:hover .gten-frame {
+  transform: translateY(-3px);
+}
+
+.gten-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
+}
+
+.gten-photo-none {
+  background: radial-gradient(circle at 50% 40%, #fff, #e8dcff 55%, #b9a7f5);
+}
+
+.gten-scrim {
+  position: absolute;
+  inset: 52% 0 0;
+  background: linear-gradient(to top, rgba(50, 25, 100, .6), rgba(50, 25, 100, 0));
+}
+
+.gten-stars {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  display: flex;
+  --star: calc(var(--card) * .16);
+}
+
+.gacha-ten.s-reveal .gten-stars .gacha-star {
+  animation: gt-star-pop 320ms cubic-bezier(.3, 1.6, .5, 1) calc(var(--ci) * 220ms + 380ms + var(--i) * 70ms) both;
+}
+
+.gten-new {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding: .02em .4em .08em;
+  font-size: max(10px, calc(var(--card) * .1));
+  line-height: 1.15;
+  color: #fff;
+  background: linear-gradient(100deg, #ff4f9e, #ff8cc6);
+  text-shadow: 0 1px 0 rgba(190, 30, 110, .55);
+  box-shadow: 0 2px 0 rgba(170, 30, 100, .35);
+  transform: skewX(-14deg);
+}
+
+.gten-name {
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  overflow: visible;
+  font-family: inherit;
+  font-weight: 800;
+  transform: skewX(-8deg);
+  transform-origin: left bottom;
+  filter: drop-shadow(0 2px 0 rgba(90, 60, 170, .35));
+}
+
+.gacha-ten.s-reveal .gten-card .gacha-name-shine {
+  animation: g-shine 800ms ease-in-out calc(var(--ci) * 220ms + 420ms) both;
+}
+
+.gten-flash {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+}
+
+.gacha-ten.s-reveal .gten-flash {
+  animation: gt-flash 440ms ease-out calc(var(--ci) * 220ms + 300ms) both;
+}
+
+.gten-ring {
+  position: absolute;
+  inset: -5px;
+  border: 3px solid rgba(255, 244, 190, .95);
+  border-radius: calc(var(--card) * .1);
+  box-shadow: 0 0 14px rgba(255, 210, 90, .9);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gacha-ten.s-reveal .gten-ring {
+  animation: gt-ring 520ms ease-out calc(var(--ci) * 220ms + 308ms) both;
+}
+
+/* 10枚分の絵の出典。下の左、閉じるボタンの手前に並べる */
+.gten-credit {
+  position: absolute;
+  z-index: 8;
+  left: 12px;
+  right: 72px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
+  margin: 0;
+  font: 500 11px/1.5 system-ui, sans-serif;
+  color: rgba(255, 255, 255, .95);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .7);
+  cursor: auto;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.gacha-ten.s-done .gten-credit {
+  opacity: 1;
+}
+
+.gten-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@keyframes gt-charge {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.2);
+  }
+  to {
+    opacity: .9;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes gt-pulse {
+  from {
+    opacity: .9;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+}
+
+@keyframes gt-glow-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.6);
+  }
+}
+
+@keyframes gt-bg-settle {
+  from {
+    filter: brightness(1.7) saturate(1.5) hue-rotate(35deg);
+  }
+  to {
+    filter: none;
+  }
+}
+
+@keyframes gt-land {
+  0% {
+    opacity: 0;
+    transform: translateY(-26%) scale(1.9) rotate(-5deg);
+    animation-timing-function: cubic-bezier(.55, 0, .85, .35);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(0) scale(1.08, .92);
+    animation-timing-function: cubic-bezier(.2, .7, .4, 1);
+  }
+  74% {
+    transform: translateY(-4%) scale(.97, 1.03);
+    animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+  }
+  88% {
+    transform: translateY(0) scale(1.01, .99);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes gt-flash {
+  from {
+    opacity: .95;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes gt-ring {
+  from {
+    opacity: 1;
+    transform: scale(.94);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.22);
+  }
+}
+
+@keyframes gt-star-pop {
+  from {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes gt-thud {
+  0%,
+  100% {
+    transform: none;
+  }
+  14% {
+    transform: translateY(10px);
+  }
+  32% {
+    transform: translateY(-4px);
+  }
+  52% {
+    transform: translateY(2px);
+  }
+  70% {
+    transform: none;
+  }
+}

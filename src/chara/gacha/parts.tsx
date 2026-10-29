@@ -1,13 +1,113 @@
-import { useId, useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
 import { fetchCharaImage, nextCharaImage, type CharaImage } from '../data/danbooru';
 
 /*
- * ガチャの演出の部品。全画面の演出(GachaReveal.tsx)と、トップページの小さい演出
- * (GachaMini.tsx)の両方で使う。見た目は gacha.css / mini.css 側にある。
+ * ガチャの演出の部品。全画面の演出(GachaReveal.tsx・十連の GachaTen.tsx)と、トップページの
+ * 小さい演出(GachaMini.tsx)で使う。見た目は gacha.css / mini.css 側にある。
  */
 
 export type Photo = { image: CharaImage; width: number; height: number };
+
+/**
+ * 虹の段の見せ方。毎回5通りからランダム(本人 2026-10-29「重くないなら全部良いのでA~Eのランダム」)。
+ *   a 背景の色がそのまま上へ流れて虹色に変わる / b 中心から虹の光が放射 / c 虹の輪が広がる
+ *   d 下から虹色の光の粒が昇る / e 斜めの虹の帯を背景の色になじませたもの
+ * 開発中は ?rainbow=a〜e で固定できる。
+ */
+const RAINBOWS = ['a', 'b', 'c', 'd', 'e'] as const;
+export type RainbowVariant = (typeof RAINBOWS)[number];
+
+export function pickRainbow(): RainbowVariant {
+  if (import.meta.env.DEV) {
+    const v = new URLSearchParams(window.location.search).get('rainbow');
+    const forced = RAINBOWS.find((r) => r === v);
+    if (forced) return forced;
+  }
+  return RAINBOWS[Math.floor(Math.random() * RAINBOWS.length)];
+}
+
+/** 虹の層。動きは gacha.css(ルートの data-rainbow と s-rainbow)。 */
+export function RainbowLayer(props: { variant: RainbowVariant }) {
+  const { variant } = props;
+  const motes = useMemo(() => (variant === 'd' ? makeMotes(40) : []), [variant]);
+  return (
+    <div className="gacha-rainbow" aria-hidden="true">
+      {variant === 'a' && <span className="gacha-flow" />}
+      {variant === 'b' && (
+        <>
+          <span className="gacha-spokes" />
+          <span className="gacha-core" />
+        </>
+      )}
+      {variant === 'c' && [0, 1, 2, 3].map((i) => <span key={i} className="gacha-ring" style={{ '--i': i } as CSSProperties} />)}
+      {variant === 'd' && motes.map((style, i) => <span key={i} className="gacha-mote" style={style} />)}
+      {variant === 'e' && RIBBONS.map((style, i) => <span key={i} className="gacha-ribbon" style={style} />)}
+    </div>
+  );
+}
+
+/** e: 虹の帯。位置・太さ・角度・出る順をずらして、流れていくように見せる。 */
+const RIBBONS = [
+  { '--y': '64%', '--h': '22vmin', '--d': '0ms', '--a': '-24deg' },
+  { '--y': '36%', '--h': '30vmin', '--d': '70ms', '--a': '-28deg' },
+  { '--y': '84%', '--h': '14vmin', '--d': '120ms', '--a': '-20deg' },
+  { '--y': '18%', '--h': '18vmin', '--d': '170ms', '--a': '-26deg' },
+  { '--y': '52%', '--h': '40vmin', '--d': '230ms', '--a': '-24deg' },
+  { '--y': '6%', '--h': '24vmin', '--d': '280ms', '--a': '-30deg' },
+  { '--y': '74%', '--h': '34vmin', '--d': '320ms', '--a': '-22deg' },
+  { '--y': '28%', '--h': '44vmin', '--d': '360ms', '--a': '-25deg' },
+] as unknown as CSSProperties[];
+
+/** d: 下から昇る虹色の光の粒。色相を一巡させ、位置・長さ・速さをばらす。 */
+function makeMotes(count: number): CSSProperties[] {
+  return Array.from(
+    { length: count },
+    (_, i) =>
+      ({
+        '--x': `${Math.random() * 100}%`,
+        '--hue': `${Math.round((i / count) * 360)}`,
+        '--len': `${14 + Math.random() * 26}vh`,
+        '--w': `${3 + Math.random() * 5}px`,
+        '--d': `${Math.round(Math.random() * 420)}ms`,
+        '--dur': `${420 + Math.round(Math.random() * 260)}ms`,
+      }) as CSSProperties,
+  );
+}
+
+/** 「NEW」を出すために、このブラウザで出たことのあるキャラを覚えておく。 */
+const SEEN_KEY = 'chara-gacha-seen';
+const SEEN_MAX = 3000;
+
+export function readSeen(): string[] {
+  try {
+    const raw = localStorage.getItem(SEEN_KEY);
+    const list: unknown = raw ? JSON.parse(raw) : [];
+    return Array.isArray(list) ? list.filter((x): x is string => typeof x === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+export function writeSeen(ids: readonly string[]) {
+  try {
+    const list = readSeen().filter((x) => !ids.includes(x));
+    list.push(...ids);
+    localStorage.setItem(SEEN_KEY, JSON.stringify(list.slice(-SEEN_MAX)));
+  } catch {
+    // 保存できない環境(プライベートモード等)では毎回 NEW になるだけ
+  }
+}
+
+export function useViewport() {
+  const [size, setSize] = useState(() => ({ width: window.innerWidth, height: window.innerHeight }));
+  useEffect(() => {
+    const onResize = () => setSize({ width: window.innerWidth, height: window.innerHeight });
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  return size;
+}
 
 /**
  * 名前の文字。白い字に、色の移り変わる縁取りを付ける。HTML の文字では縁取りに

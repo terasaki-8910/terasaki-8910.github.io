@@ -20,9 +20,10 @@ type Step = (typeof STEPS)[number];
 
 const QUOTE_MS = 1800;
 const NO_QUOTE_MS = 500;
+/** 台詞の時間が過ぎても絵が届いていなければ、届くまで台詞を出したまま待つ上限(GachaReveal と同じ考え方)。 */
+const QUOTE_HOLD_MAX_MS = 4000;
 /** 虹が横切って白くなるまで(mini.css の gm-white-in の終わりと合わせる)。 */
 const RAINBOW_MS = 600;
-const IMAGE_WAIT_MAX_MS = 3000;
 const REVEAL_MS = 350;
 /** 名前が出てから星3が付き終わるまで(mini.css の星の時刻と合わせる)。 */
 const NAME_MS = 1400;
@@ -56,8 +57,10 @@ export default function GachaMini(props: { scored: Scored }) {
       setStep('quote');
       await wait(found ? QUOTE_MS : NO_QUOTE_MS);
       if (cancelled) return;
+      await Promise.race([photoPromise, wait(QUOTE_HOLD_MAX_MS)]);
+      if (cancelled) return;
       setStep('rainbow');
-      await Promise.all([wait(RAINBOW_MS), Promise.race([photoPromise, wait(IMAGE_WAIT_MAX_MS)])]);
+      await wait(RAINBOW_MS);
       if (cancelled) return;
       setStep('reveal');
       await wait(REVEAL_MS);

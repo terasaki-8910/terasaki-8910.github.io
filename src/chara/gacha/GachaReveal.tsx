@@ -2,7 +2,21 @@ import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties }
 
 import { fetchQuote } from '../data/quotes';
 import type { Scored } from '../engine/recommend';
-import { loadPhoto, makeSparkles, NameArt, Sparkles, splitQuote, StarRow, useWidth, type Photo } from './parts';
+import {
+  loadPhoto,
+  makeSparkles,
+  NameArt,
+  pickRainbow,
+  RainbowLayer,
+  readSeen,
+  Sparkles,
+  splitQuote,
+  StarRow,
+  useViewport,
+  useWidth,
+  writeSeen,
+  type Photo,
+} from './parts';
 import { gachaBgUrl, GACHA_FONT_FAMILY } from './prefetch';
 import './gacha.css';
 
@@ -10,10 +24,11 @@ import './gacha.css';
  * おまかせの結果を、ソシャゲのガチャの演出のように見せる全画面の重ね絵
  * (本人の依頼 2026-10-29。見本はウマ娘のガチャ)。
  *   1. 台詞: セリフ背景の素材(ニコニ・コモンズ nc296436)の上に、名台詞を数秒
- *   2. 虹: 虹が流れて、画面が白く飛ぶ(明転)。見せ方は5通り(RainbowVariant)
+ *   2. 虹: 虹が流れて、画面が白く飛ぶ(明転)。見せ方は5通りから毎回ランダム(RainbowLayer)
  *   3. 絵: キャラの絵がドーンと出る
  *   4. 名前: 作品名の帯と、名前が勢いよく出て、星3が1つずつ重く付く
  * 出し切ったら、押すと閉じて下の結果画面(ResultScreen)になる。途中で押すと最後まで飛ばす。
+ * 十連(GachaTen)では、カードを押したときにその1体の分をこれで見せる。
  * 動きを減らす設定の人には出さない(呼ぶ側で結果画面へ直行する)。
  *
  * 段階は CSS のクラス(s-quote, s-rainbow …)で表し、通った段階のクラスは付けたままにする。
@@ -27,10 +42,13 @@ type Step = (typeof STEPS)[number];
 /** 台詞を見せる長さ。台詞の無いキャラは背景だけ短く見せる。 */
 const QUOTE_MS = 3000;
 const NO_QUOTE_MS = 900;
+/**
+ * 台詞の時間が過ぎても絵が届いていなければ、届くまで台詞を出したまま待つ(本人 2026-10-29)。
+ * その上限。超えたら絵なしで進める。待つ間も右下のボタンと画面を押せば飛ばせる。
+ */
+const QUOTE_HOLD_MAX_MS = 5000;
 /** 虹が流れて真っ白になるまで(CSS の g-white-in の終わりと合わせる)。 */
 const RAINBOW_MS = 950;
-/** 真っ白のまま絵の読み込みを待つ上限。超えたら絵なしで進める。 */
-const IMAGE_WAIT_MAX_MS = 4000;
 /** 絵が出てから名前を出すまで。 */
 const REVEAL_MS = 600;
 /** 名前が出てから、星3が付き終わり、押して閉じられるようになるまで(CSS の星の時刻と合わせる)。 */
@@ -38,26 +56,12 @@ const NAME_MS = 2100;
 /** フォントを待つ上限。超えたら代わりの書体のまま始める。 */
 const FONT_WAIT_MAX_MS = 1500;
 
-/** 「NEW」を出すために、このブラウザで出たことのあるキャラを覚えておく。 */
-const SEEN_KEY = 'chara-gacha-seen';
-const SEEN_MAX = 3000;
-
-/**
- * 虹の段の見せ方(2回目の見本。本人に選んでもらう)。
- *   a 背景の色がそのまま上へ流れて虹色に変わる / b 中心から虹の光が放射 / c 虹の輪が広がる
- *   d 下から虹色の光の粒が昇る / e 斜めの虹の帯(1回目)を背景の色になじませたもの
- * 開発中は ?rainbow=a〜e で切り替える。
- */
-type RainbowVariant = 'a' | 'b' | 'c' | 'd' | 'e';
-const DEFAULT_RAINBOW: RainbowVariant = 'e';
-
-function pickRainbow(): RainbowVariant {
-  if (!import.meta.env.DEV) return DEFAULT_RAINBOW;
-  const v = new URLSearchParams(window.location.search).get('rainbow');
-  return v === 'a' || v === 'b' || v === 'c' || v === 'd' || v === 'e' ? v : DEFAULT_RAINBOW;
-}
-
-export default function GachaReveal(props: { scored: Scored; onClose(): void }) {
+export default function GachaReveal(props: {
+  scored: Scored;
+  onClose(): void;
+  /** 十連から開いたとき、十連の側で決めた NEW をそのまま使う(先に「出た」と覚えてしまうため)。 */
+  isNew?: boolean;
+}) {
   const { scored, onClose } = props;
   const { character } = scored;
 
@@ -65,7 +69,7 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
   const [skipped, setSkipped] = useState(false);
   const [quote, setQuote] = useState<string | null>(null);
   const [photo, setPhoto] = useState<Photo | null | 'none'>(null);
-  const [isNew] = useState(() => !readSeen().includes(character.id));
+  const [isNew] = useState(() => props.isNew ?? !readSeen().includes(character.id));
   const [rainbow] = useState(pickRainbow);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const viewport = useViewport();
@@ -91,8 +95,10 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
       setStep('quote');
       await wait(found ? QUOTE_MS : NO_QUOTE_MS);
       if (!alive()) return;
+      await Promise.race([photoPromise, wait(QUOTE_HOLD_MAX_MS)]);
+      if (!alive()) return;
       setStep('rainbow');
-      await Promise.all([wait(RAINBOW_MS), Promise.race([photoPromise, wait(IMAGE_WAIT_MAX_MS)])]);
+      await wait(RAINBOW_MS);
       if (!alive()) return;
       setStep('reveal');
       await wait(REVEAL_MS);
@@ -111,7 +117,7 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
 
   // 出たキャラを覚える(次からは NEW を付けない)
   useEffect(() => {
-    writeSeen(character.id);
+    writeSeen([character.id]);
   }, [character.id]);
 
   // 開いている間は後ろのページを動かさない
@@ -156,7 +162,6 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
   const fit = photo && photo !== 'none' ? chooseFit(photo.width / photo.height, viewport.width / viewport.height) : 'cover';
   const sparkles = useMemo(() => makeSparkles(18), []);
   const bursts = useMemo(() => makeSparkles(12), []);
-  const motes = useMemo(() => makeMotes(40), []);
   const quoteLines = useMemo(() => (quote ? splitQuote(quote) : []), [quote]);
 
   return (
@@ -211,18 +216,7 @@ export default function GachaReveal(props: { scored: Scored; onClose(): void }) 
         <StarRow className="gacha-stars" />
       </div>
 
-      <div className="gacha-rainbow" aria-hidden="true">
-        {rainbow === 'a' && <span className="gacha-flow" />}
-        {rainbow === 'b' && (
-          <>
-            <span className="gacha-spokes" />
-            <span className="gacha-core" />
-          </>
-        )}
-        {rainbow === 'c' && [0, 1, 2, 3].map((i) => <span key={i} className="gacha-ring" style={{ '--i': i } as CSSProperties} />)}
-        {rainbow === 'd' && motes.map((style, i) => <span key={i} className="gacha-mote" style={style} />)}
-        {rainbow === 'e' && RIBBONS.map((style, i) => <span key={i} className="gacha-ribbon" style={style} />)}
-      </div>
+      <RainbowLayer variant={rainbow} />
       <div className="gacha-white" aria-hidden="true" />
 
       {photo && photo !== 'none' && (
@@ -312,35 +306,7 @@ function Streaks(props: { width: number; height: number }) {
   );
 }
 
-/** e: 虹の帯。位置・太さ・角度・出る順をずらして、流れていくように見せる。 */
-const RIBBONS = [
-  { '--y': '64%', '--h': '22vmin', '--d': '0ms', '--a': '-24deg' },
-  { '--y': '36%', '--h': '30vmin', '--d': '70ms', '--a': '-28deg' },
-  { '--y': '84%', '--h': '14vmin', '--d': '120ms', '--a': '-20deg' },
-  { '--y': '18%', '--h': '18vmin', '--d': '170ms', '--a': '-26deg' },
-  { '--y': '52%', '--h': '40vmin', '--d': '230ms', '--a': '-24deg' },
-  { '--y': '6%', '--h': '24vmin', '--d': '280ms', '--a': '-30deg' },
-  { '--y': '74%', '--h': '34vmin', '--d': '320ms', '--a': '-22deg' },
-  { '--y': '28%', '--h': '44vmin', '--d': '360ms', '--a': '-25deg' },
-] as unknown as CSSProperties[];
-
-/** d: 下から昇る虹色の光の粒。色相を一巡させ、位置・長さ・速さをばらす。 */
-function makeMotes(count: number): CSSProperties[] {
-  return Array.from(
-    { length: count },
-    (_, i) =>
-      ({
-        '--x': `${Math.random() * 100}%`,
-        '--hue': `${Math.round((i / count) * 360)}`,
-        '--len': `${14 + Math.random() * 26}vh`,
-        '--w': `${3 + Math.random() * 5}px`,
-        '--d': `${Math.round(Math.random() * 420)}ms`,
-        '--dur': `${420 + Math.round(Math.random() * 260)}ms`,
-      }) as CSSProperties,
-  );
-}
-
-function SkipIcon() {
+export function SkipIcon() {
   return (
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
       <path d="M3 5.5v13l8.5-6.5zM11.5 5.5v13l8.5-6.5z" fill="currentColor" />
@@ -349,7 +315,7 @@ function SkipIcon() {
   );
 }
 
-function CloseIcon() {
+export function CloseIcon() {
   return (
     <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
       <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
@@ -371,34 +337,4 @@ function emWidth(text: string): number {
   let w = 0;
   for (const ch of text) w += /[ -~｡-ﾟ]/.test(ch) ? 0.55 : 1;
   return Math.max(w, 1);
-}
-
-function useViewport() {
-  const [size, setSize] = useState(() => ({ width: window.innerWidth, height: window.innerHeight }));
-  useEffect(() => {
-    const onResize = () => setSize({ width: window.innerWidth, height: window.innerHeight });
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
-  return size;
-}
-
-function readSeen(): string[] {
-  try {
-    const raw = localStorage.getItem(SEEN_KEY);
-    const list: unknown = raw ? JSON.parse(raw) : [];
-    return Array.isArray(list) ? list.filter((x): x is string => typeof x === 'string') : [];
-  } catch {
-    return [];
-  }
-}
-
-function writeSeen(id: string) {
-  try {
-    const list = readSeen().filter((x) => x !== id);
-    list.push(id);
-    localStorage.setItem(SEEN_KEY, JSON.stringify(list.slice(-SEEN_MAX)));
-  } catch {
-    // 保存できない環境(プライベートモード等)では毎回 NEW になるだけ
-  }
 }

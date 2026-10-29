@@ -14,6 +14,7 @@ import { NoGuessScreen } from './screens/NoGuessScreen';
 import { NoticeScreen } from './screens/NoticeScreen';
 import { QuestionScreen } from './screens/QuestionScreen';
 import { ResultScreen } from './screens/ResultScreen';
+import { TenResultScreen } from './screens/TenResultScreen';
 
 /**
  * 「同じ対象への二重発火」だけを弾くガード。
@@ -46,53 +47,108 @@ function useTargetGuard() {
   return { run, reset };
 }
 
-/** ガチャの演出(初めて引いたときに読み込む)。 */
+/** ガチャの演出(初めて引いたときに読み込む)。単発と十連。 */
 const GachaReveal = lazy(() => import('./gacha/GachaReveal'));
+const GachaTen = lazy(() => import('./gacha/GachaTen'));
+
+/** 十連で引く数。 */
+const TEN = 10;
 
 /**
- * おまかせ(質問なしで1体)。遊び方を選ぶ画面と質問の画面の両方から使う。
+ * おまかせ・推しガチャ(質問なしで引く)。遊び方を選ぶ画面と質問の画面から使う。
+ * 単発(`run`)は1体、十連(`runTen`)は同じ抽選で重ならない10体。
  * 引いたときはガチャの演出を重ねる(`gacha`)。閉じると結果画面になる。
  */
 function useOmakase(dataset: Dataset) {
   const { log } = useSessionLog();
   const [result, setResult] = useState<Scored | null>(null);
+  const [tenResults, setTenResults] = useState<Scored[] | null>(null);
   const [gacha, setGacha] = useState(false);
 
+  const logPick = useCallback(
+    (picked: Scored) => {
+      const record: SessionLogRecord = {
+        ts: Date.now(),
+        guessId: picked.character.id,
+        outcome: 'omakase',
+        askedCount: 0,
+        answers: [],
+        rejectedIds: [],
+        engine: 'bayes',
+      };
+      log(record);
+    },
+    [log],
+  );
+
   const run = useCallback(() => {
-    const picked = devPick(dataset) ?? omakase(dataset, { seed: Date.now() });
-    const record: SessionLogRecord = {
-      ts: Date.now(),
-      guessId: picked.character.id,
-      outcome: 'omakase',
-      askedCount: 0,
-      answers: [],
-      rejectedIds: [],
-      engine: 'bayes',
-    };
-    log(record);
+    const picked = devPicks(dataset)[0] ?? omakase(dataset, { seed: Date.now() });
+    logPick(picked);
     setResult(picked);
     setGacha(gachaEnabled());
-  }, [dataset, log]);
+  }, [dataset, logPick]);
+
+  const runTen = useCallback(() => {
+    const picked = drawTen(dataset);
+    picked.forEach(logPick);
+    setTenResults(picked);
+    setGacha(gachaEnabled());
+  }, [dataset, logPick]);
 
   const clear = useCallback(() => {
     setResult(null);
+    setTenResults(null);
     setGacha(false);
   }, []);
   const closeGacha = useCallback(() => setGacha(false), []);
-  return { result, gacha, run, clear, closeGacha };
+  return { result, tenResults, gacha, run, runTen, clear, closeGacha };
 }
 
 /**
- * 開発用: `?gacha=<キャラのid>` で、おまかせの結果をそのキャラにする(演出の確かめ用)。
- * 本番のビルドでは何もしない。
+ * 十連の10体。おまかせと同じ抽選(engine の omakase。供給量で重み付け)を、同じキャラが
+ * 重ならないように繰り返す。抽選の中身は開発元と共有のエンジンのまま変えない。
  */
-function devPick(dataset: Dataset): Scored | null {
-  if (!import.meta.env.DEV) return null;
-  const id = new URLSearchParams(window.location.search).get('gacha');
-  const character = id ? dataset.characters.find((c) => c.id === id) : undefined;
-  if (!character) return null;
-  const rank = combinedRankFor(character.id, dataset.supply);
-  return { character, score: 0, supplyRank: rank, reasons: [{ kind: 'supply', rank, label: rank }] };
+function drawTen(dataset: Dataset): Scored[] {
+  const picked = devPicks(dataset).slice(0, TEN);
+  const ids = new Set(picked.map((s) => s.character.id));
+  const seed = Date.now();
+  for (let i = 0; picked.length < TEN && i < TEN * 20; i++) {
+    const next = omakase(dataset, { seed: seed + i });
+    if (ids.has(next.character.id)) continue;
+    ids.add(next.character.id);
+    picked.push(next);
+  }
+  return picked;
+}
+
+/**
+ * 開発用: `?gacha=<キャラのid>` で、おまかせ・単発の結果をそのキャラにする(演出の確かめ用)。
+ * カンマで区切って並べると、十連の先頭からその順に入る。本番のビルドでは何もしない。
+ */
+function devPicks(dataset: Dataset): Scored[] {
+  if (!import.meta.env.DEV) return [];
+  const ids = (new URLSearchParams(window.location.search).get('gacha') ?? '').split(',').filter(Boolean);
+  return ids.flatMap((id) => {
+    const character = dataset.characters.find((c) => c.id === id);
+    if (!character) return [];
+    const rank = combinedRankFor(character.id, dataset.supply);
+    return [{ character, score: 0, supplyRank: rank, reasons: [{ kind: 'supply' as const, rank, label: rank }] }];
+  });
+}
+
+/** 演出を閉じたら、下の結果画面(`testId`)へ読み上げの位置を移す。 */
+function useFocusAfterGacha(gacha: boolean, testId: string) {
+  const closedRef = useRef(false);
+  useEffect(() => {
+    if (gacha) {
+      closedRef.current = true;
+      return;
+    }
+    if (!closedRef.current) return;
+    closedRef.current = false;
+    document.querySelector<HTMLElement>(`[data-testid="${testId}"]`)?.focus({ preventScroll: true });
+    window.scrollTo({ top: 0 });
+  }, [gacha, testId]);
 }
 
 /** 演出のコードを読み込む間に、後ろのページが一瞬見えないよう、演出と同じ地の色で覆う。 */
@@ -109,18 +165,7 @@ const GACHA_LOADING_STYLE = {
  */
 function OmakaseResult(props: { result: Scored; gacha: boolean; onCloseGacha(): void; onRestart(): void }) {
   const { result, gacha, onCloseGacha, onRestart } = props;
-  const closedRef = useRef(false);
-
-  useEffect(() => {
-    if (gacha) {
-      closedRef.current = true;
-      return;
-    }
-    if (!closedRef.current) return;
-    closedRef.current = false;
-    document.querySelector<HTMLElement>('[data-testid="result"]')?.focus({ preventScroll: true });
-    window.scrollTo({ top: 0 });
-  }, [gacha]);
+  useFocusAfterGacha(gacha, 'result');
 
   if (gacha) {
     return (
@@ -130,6 +175,21 @@ function OmakaseResult(props: { result: Scored; gacha: boolean; onCloseGacha(): 
     );
   }
   return <ResultScreen result={result} onRestart={onRestart} />;
+}
+
+/** 十連の結果。考え方は OmakaseResult と同じ(演出の間は結果画面を出さない)。 */
+function TenResult(props: { results: Scored[]; gacha: boolean; onCloseGacha(): void; onRestart(): void }) {
+  const { results, gacha, onCloseGacha, onRestart } = props;
+  useFocusAfterGacha(gacha, 'ten-result');
+
+  if (gacha) {
+    return (
+      <Suspense fallback={<div style={GACHA_LOADING_STYLE} aria-hidden="true" />}>
+        <GachaTen results={results} onClose={onCloseGacha} />
+      </Suspense>
+    );
+  }
+  return <TenResultScreen results={results} onRestart={onRestart} />;
 }
 
 /**
@@ -217,8 +277,10 @@ function ModeFlow({ dataset }: { dataset: Dataset }) {
   const [round, setRound] = useState(0);
   const {
     result: omakaseResult,
+    tenResults,
     gacha,
     run: handleOmakase,
+    runTen: handleGachaTen,
     clear: clearOmakase,
     closeGacha,
   } = useOmakase(dataset);
@@ -233,6 +295,9 @@ function ModeFlow({ dataset }: { dataset: Dataset }) {
   if (omakaseResult !== null) {
     return <OmakaseResult result={omakaseResult} gacha={gacha} onCloseGacha={closeGacha} onRestart={clearOmakase} />;
   }
+  if (tenResults !== null) {
+    return <TenResult results={tenResults} gacha={gacha} onCloseGacha={closeGacha} onRestart={clearOmakase} />;
+  }
   if (mode === null) {
     return (
       <ModeScreen
@@ -241,6 +306,7 @@ function ModeFlow({ dataset }: { dataset: Dataset }) {
           setRound((r) => r + 1);
         }}
         onOmakase={handleOmakase}
+        onGachaTen={handleGachaTen}
       />
     );
   }
