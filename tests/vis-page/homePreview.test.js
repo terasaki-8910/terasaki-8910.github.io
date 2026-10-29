@@ -2,7 +2,12 @@ import { test, before } from 'node:test'
 import assert from 'node:assert/strict'
 import { fileURLToPath } from 'node:url'
 import { build } from 'esbuild'
-import { VISUALIZATION_TABS, VISUALIZATION_PREVIEW_TAB } from '../../src/data/visualizationTabs.js'
+import {
+  VISUALIZATION_TABS,
+  VISUALIZATION_PREVIEW_TAB,
+  VISUALIZATION_METHODS_TABS,
+  VISUALIZATION_METHODS_PREVIEW_TAB,
+} from '../../src/data/visualizationTabs.js'
 
 // sections.test.js と同じ代役で JSX を読み飛ばし、節のデータだけを調べる。
 const stubJsx = {
@@ -19,10 +24,9 @@ const stubJsx = {
   },
 }
 
-let SECTIONS
-before(async () => {
+async function loadSections(entry) {
   const result = await build({
-    entryPoints: [fileURLToPath(new URL('../../src/components/visualization/sections/index.js', import.meta.url))],
+    entryPoints: [fileURLToPath(new URL(entry, import.meta.url))],
     bundle: true,
     write: false,
     format: 'esm',
@@ -31,7 +35,14 @@ before(async () => {
     plugins: [stubJsx],
   })
   const code = result.outputFiles[0].text
-  ;({ SECTIONS } = await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`))
+  return (await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`)).SECTIONS
+}
+
+let SECTIONS
+let METHODS_SECTIONS
+before(async () => {
+  SECTIONS = await loadSections('../../src/components/visualization/sections/index.js')
+  METHODS_SECTIONS = await loadSections('../../src/components/visualization-methods/sections/index.js')
 })
 
 test('ホームのタブは節の id・ラベル・並びと一致する', () => {
@@ -40,4 +51,12 @@ test('ホームのタブは節の id・ラベル・並びと一致する', () =>
 
 test('ホームで見せるシミュレーションのタブが存在する', () => {
   assert.ok(VISUALIZATION_TABS.some(({ id }) => id === VISUALIZATION_PREVIEW_TAB))
+})
+
+test('可視化手法: ホームのタブは節の id・ラベル・並びと一致する', () => {
+  assert.deepEqual(VISUALIZATION_METHODS_TABS, METHODS_SECTIONS.map(({ id, tabLabel }) => ({ id, label: tabLabel })))
+})
+
+test('可視化手法: ホームで見せるシミュレーションのタブが存在する', () => {
+  assert.ok(VISUALIZATION_METHODS_TABS.some(({ id }) => id === VISUALIZATION_METHODS_PREVIEW_TAB))
 })

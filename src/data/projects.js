@@ -14,8 +14,9 @@
  * GamingArchivePage.jsx)。Discordはライブ連携せず、Footerの招待リンクのまま
  * (本人判断、常時起動が要るBot/第三者サービス依存を避けた)。
  *
- * ascii・spotify・gomi・charaPicker・gaming・movies・visualization が true の項目は、ProjectShowcase.jsx が
- * 項目の下にプレビューを出す(gaming と movies は確認シート16回目 R16-47 で追加、visualization は 2026-10-20 追加)。
+ * ascii・spotify・gomi・charaPicker・gaming・movies・visualization・visualizationMethods が true の項目は、
+ * ProjectShowcase.jsx が項目の下にプレビューを出す(gaming と movies は確認シート16回目 R16-47 で追加、
+ * visualization は 2026-10-20、visualizationMethods は 2026-10-29 追加)。
  */
 export const projects = [
   // 3D ASCIIはトップの独立セクションから、この一覧の1項目に移した。
@@ -103,6 +104,7 @@ export const projects = [
     description: '計算を 1 つずつ動かして確かめ、組み合わせて全体の可視化になるまでをたどる',
     tags: ['Canvas', 'KaTeX', 'React'],
     link: '/visualization-methods/',
+    visualizationMethods: true,
     pageKey: 'visualization-methods',
     icon: 'cubeFocus',
   },
