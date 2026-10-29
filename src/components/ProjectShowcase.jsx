@@ -7,6 +7,7 @@ import HomeCharaOmakase from './HomeCharaOmakase'
 import HomeGamingPreview from './HomeGamingPreview'
 import HomeMoviesPreview from './HomeMoviesPreview'
 import HomeVisualizationPreview from './HomeVisualizationPreview'
+import HomeVisualizationMethodsPreview from './HomeVisualizationMethodsPreview'
 import AsciiModelViewer from './AsciiModelViewer'
 import { ASCII_MODELS } from '../data/asciiModels'
 import { projects } from '../data/projects'
@@ -106,6 +107,11 @@ export default function ProjectShowcase() {
               {project.visualization && (
                 <div className="mt-5">
                   <HomeVisualizationPreview />
+                </div>
+              )}
+              {project.visualizationMethods && (
+                <div className="mt-5">
+                  <HomeVisualizationMethodsPreview />
                 </div>
               )}
             </article>

@@ -4,6 +4,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import PageBackground from './components/PageBackground'
 import { SECTIONS } from './components/visualization/sections'
 import SectionTabs from './components/visualization/SectionTabs'
+import SeriesNav from './components/visualization/SeriesNav'
 import './components/visualization/visualization.css'
 
 // 物理シミュレーションの実装例(2026-10-15、決定は科目側の decisions.md の Round 4・Round 5)。
@@ -21,6 +22,7 @@ export default function VisualizationPage() {
         </div>
         <div className="pt-28 px-4 md:px-8 pb-24">
           <div className="bk-content max-w-6xl mx-auto">
+            <SeriesNav current="visualization" />
             {/* 題は29字あるので、他のページの text-massive(最大 6rem)だと3行になる。一回り小さくしている */}
             <h1 className="font-medium font-display text-ink mb-3 text-[clamp(1.5rem,5vw,3.25rem)] leading-tight tracking-tight">
               {/* 文節ごとに折り返す(「シミ/ュレーション」のように語の途中で切れない) */}
