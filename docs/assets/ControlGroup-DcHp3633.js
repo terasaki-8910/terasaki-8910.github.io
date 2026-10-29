@@ -1,1 +1,0 @@
-import{r as a,j as s}from"./index-BfTt--pn.js";function i({label:o,children:e}){const r=a.useId();return s.jsxs("div",{role:"group","aria-labelledby":r,className:"vis-group",children:[s.jsx("p",{id:r,className:"vis-group__label",children:o}),e]})}export{i as C};
