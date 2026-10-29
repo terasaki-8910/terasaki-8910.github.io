@@ -28,24 +28,6 @@ export function pickRainbow(): RainbowVariant {
 }
 
 /**
- * 台詞の縁の虹のかけ方。見比べ中の2案で、本人が選んだら1つにする(2026-10-29)。
- *   a 見た目の1行ごとに、左端から右端まで虹が一巡する
- *   b 台詞全体に1本の虹をかけ、各行はその位置の色になる(見本の色の付き方)
- * 開発中は ?edge=a / b で選べる。
- */
-const QUOTE_EDGES = ['a', 'b'] as const;
-export type QuoteEdge = (typeof QUOTE_EDGES)[number];
-
-export function pickQuoteEdge(): QuoteEdge {
-  if (import.meta.env.DEV) {
-    const v = new URLSearchParams(window.location.search).get('edge');
-    const forced = QUOTE_EDGES.find((e) => e === v);
-    if (forced) return forced;
-  }
-  return 'b';
-}
-
-/**
  * 台詞の字。白い字に虹の縁とにじみを付けるため、同じ文を2枚重ねる(見た目は quote.css)。
  * 読み上げるのは上の1枚だけ。
  */
@@ -54,11 +36,9 @@ export function RainbowText(props: { text: string; className?: string; style?: C
   return (
     <span className={className ? `qt ${className}` : 'qt'} style={style}>
       <span className="qt-glow" aria-hidden="true">
-        <span className="qt-ink">{text}</span>
+        {text}
       </span>
-      <span className="qt-text">
-        <span className="qt-ink">{text}</span>
-      </span>
+      <span className="qt-text">{text}</span>
     </span>
   );
 }
