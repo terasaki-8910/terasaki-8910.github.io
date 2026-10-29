@@ -1,6 +1,7 @@
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
 import { fetchCharaImage, nextCharaImage, type CharaImage } from '../data/danbooru';
+import { GACHA_FONT_FAMILY } from './prefetch';
 
 /*
  * ガチャの演出の部品。全画面の演出(GachaReveal.tsx・十連の GachaTen.tsx)と、トップページの
@@ -129,37 +130,49 @@ export function useViewport() {
  * 名前の文字。白い字に、色の移り変わる縁取りを付ける。HTML の文字では縁取りに
  * グラデーションを付けられないので SVG で描く(stroke に linearGradient、paint-order で縁を字の下へ)。
  * 幅に収まらない名前は横に詰め、詰めすぎになるなら字を小さくする。
+ * 詰めるのは text の transform(横の縮小)で、字と縁と縁の色をまとめて縮める。textLength で詰めると、
+ * Safari は縁の色の移り変わりをさらに縮めて描き、名前の後ろの字が最後の色一色になる
+ * (本人が iPhone で、ニコ・ロビンの「ビン」以降に虹が無いと気づいた。2026-10-29)。
+ * 字の幅はガチャの書体が読めてから測り直す(先に測ると、代わりの書体の幅で大きさが決まる)。
  */
 export function NameArt(props: { name: string; width: number; maxSize: number; className?: string }) {
   const { name, width, maxSize, className } = props;
   const id = useId().replace(/:/g, '');
   const textRef = useRef<SVGTextElement>(null);
-  const [fit, setFit] = useState<{ size: number; length: number | null }>({ size: maxSize, length: null });
+  const [fit, setFit] = useState({ size: maxSize, scaleX: 1 });
 
   useLayoutEffect(() => {
-    const el = textRef.current;
-    if (!el) return;
-    el.setAttribute('font-size', String(maxSize));
-    el.removeAttribute('textLength');
-    const natural = el.getComputedTextLength();
-    const avail = width - maxSize * 0.3;
-    if (natural <= avail) {
-      setFit({ size: maxSize, length: null });
-      return;
-    }
-    const ratio = avail / natural;
-    const size = ratio >= 0.72 ? maxSize : (maxSize * ratio) / 0.72;
-    setFit({ size, length: width - size * 0.3 });
+    let cancelled = false;
+    const measure = () => {
+      const el = textRef.current;
+      if (cancelled || !el) return;
+      // maxSize の大きさで測り、React が付けた大きさに戻す
+      const shown = el.getAttribute('font-size');
+      el.setAttribute('font-size', String(maxSize));
+      const natural = el.getComputedTextLength();
+      if (shown !== null) el.setAttribute('font-size', shown);
+      const avail = width - maxSize * 0.3;
+      if (natural <= avail) {
+        setFit({ size: maxSize, scaleX: 1 });
+        return;
+      }
+      const ratio = avail / natural;
+      const size = ratio >= 0.72 ? maxSize : (maxSize * ratio) / 0.72;
+      setFit({ size, scaleX: (width - size * 0.3) / ((natural * size) / maxSize) });
+    };
+    measure();
+    document.fonts.load(`800 ${maxSize}px "${GACHA_FONT_FAMILY}"`, name).then(measure, () => undefined);
+    return () => {
+      cancelled = true;
+    };
   }, [name, width, maxSize]);
 
-  const { size, length } = fit;
+  const { size, scaleX } = fit;
   const stroke = size * 0.15;
   const height = size * 1.28;
   const textProps = {
-    x: size * 0.15,
-    y: size * 1.0,
     fontSize: size,
-    ...(length ? { textLength: length, lengthAdjust: 'spacingAndGlyphs' as const } : {}),
+    transform: `translate(${size * 0.15} ${size}) scale(${scaleX} 1)`,
   };
 
   return (
