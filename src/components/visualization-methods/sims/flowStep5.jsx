@@ -90,7 +90,7 @@ export default function FlowStep5() {
     drawAxes(ctx, view, { colors, xLabel: 'x', yLabel: 'y' })
     const finalSize = imageSize(view.frame.width / view.frame.height, PIXELS)
     const chosen = centers.current[selectedRef.current]
-    legend.current?.update({ size: `${finalSize.w} × ${finalSize.h}`, vortex: `渦 ${selectedRef.current + 1}（${fmt(chosen[0], 2)}, ${fmt(chosen[1], 2)}）` })
+    legend.current?.update({ size: `${finalSize.w} × ${finalSize.h}`, vortex: `${selectedRef.current + 1}（${fmt(chosen[0], 2)}, ${fmt(chosen[1], 2)}）` })
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
   const schedule = useScheduledRedraw(redraw)
@@ -172,7 +172,7 @@ export default function FlowStep5() {
           items={[
             { key: 'ramp', label: '画素の値', value: '小さい → 大きい', swatch: graySwatch(dark) },
             { key: 'size', label: '画素数', value: '', minChars: 9 },
-            ...(mode !== 'noise' ? [{ key: 'vortex', label: '選んだ渦', value: '', minChars: 16 }] : []),
+            ...(mode !== 'noise' ? [{ key: 'vortex', label: '選んだ渦', value: '', minChars: 14 }] : []),
             ...(mode === 'lic' ? [{ key: 'steps', symbol: 'L', label: '片側の歩数', value: `${length} 画素ぶん` }] : []),
             ...(mode === 'spot' ? [{ key: 'spots', label: 'スポットの数', value: String(SPOTS) }, { key: 'half', symbol: 'L', label: 'スポットの半分の長さ', value: `${length} 画素ぶん` }] : []),
           ]}

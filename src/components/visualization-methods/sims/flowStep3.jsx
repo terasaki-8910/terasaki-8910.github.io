@@ -82,7 +82,7 @@ export default function FlowStep3() {
     })
     drawAxes(ctx, view, { colors, xLabel: 'x', yLabel: 'y' })
     const chosen = centers.current[selectedRef.current]
-    legend.current?.update({ seeds: String(seeds.length), lines: `${lines.length} 本`, vortex: `渦 ${selectedRef.current + 1}（${fmt(chosen[0], 2)}, ${fmt(chosen[1], 2)}）` })
+    legend.current?.update({ seeds: String(seeds.length), lines: `${lines.length} 本`, vortex: `${selectedRef.current + 1}（${fmt(chosen[0], 2)}, ${fmt(chosen[1], 2)}）` })
   }
   const { canvasRef, redraw, sizeRef } = useCanvas({ draw })
   const schedule = useScheduledRedraw(redraw)
@@ -151,7 +151,7 @@ export default function FlowStep3() {
           items={[
             { key: 'seeds', swatch: 'var(--lane-1)', label: '出発点', value: '', minChars: 3 },
             { key: 'lines', swatch: 'var(--color-ink)', label: '流線', value: '', minChars: 5 },
-            { key: 'vortex', label: '選んだ渦', value: '', minChars: 16 },
+            { key: 'vortex', label: '選んだ渦', value: '', minChars: 14 },
             ...(mode === 'spacing' ? [{ key: 'dsep', symbol: 'd_{\\mathrm{sep}}', label: '間隔', value: fmt(spacing, 2) }] : []),
           ]}
         />

@@ -100,6 +100,7 @@ export default function FlowStep4() {
     canGrab: hit,
     onDown: (point) => {
       if (!hit(point)) return false
+      loop.pause() // 再生中でも、つかんだら止める
       grabbed.current = true
       canvasRef.current?.focus({ preventScroll: true })
       redraw()
@@ -118,6 +119,7 @@ export default function FlowStep4() {
     const step = arrowStep(event)
     if (!step) return
     event.preventDefault()
+    loop.pause()
     moveTo(seed.current[0] + step.dx * 0.02, seed.current[1] + step.dy * 0.02)
   }
   const reset = () => {
@@ -149,7 +151,7 @@ export default function FlowStep4() {
             <ResetButton onClick={reset} />
           </SimToolbar>
           <ParamSlider symbol="\varepsilon" label="渦の揺れの大きさ" value={eps} min={0} max={0.25} step={0.01} onChange={setEps} format={(v) => v.toFixed(2)} />
-          <ParamSlider symbol="t" label="時刻" unit=" s" value={t} min={0} max={T_END} step={0.1} onChange={setT} format={(v) => v.toFixed(1)} />
+          <ParamSlider symbol="t" label="時刻" unit=" s" value={t} min={0} max={T_END} step={0.1} onChange={(value) => { loop.pause(); setT(value) }} format={(v) => v.toFixed(1)} />
         </>
       )}
     />
