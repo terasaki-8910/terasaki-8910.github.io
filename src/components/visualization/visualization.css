@@ -562,6 +562,9 @@
   .vis-tab {
     padding: 0 11px; /* 5 つのタブが幅 375px の画面(列 328px)に横スクロールなしで収まる */
   }
+  .vis-tabs-wrap--methods .vis-tab {
+    padding: 0 4px; /* 6 つのタブが同じ幅に横スクロールなしで収まる */
+  }
 }
 @media (min-width: 640px) {
   .vis-tab {

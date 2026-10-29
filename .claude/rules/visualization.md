@@ -7,10 +7,15 @@ paths:
   - "src/utils/vis/**"
   - "tests/vis/**"
   - "tests/vis-page/**"
+  - "visualization-methods/**"
+  - "src/VisualizationMethodsPage.jsx"
+  - "src/visualization-methods-main.jsx"
+  - "src/components/visualization-methods/**"
 ---
-# /visualization/ のページの決まり（このページの作業だけに効く）
+# /visualization/ と /visualization-methods/ のページの決まり（この 2 つのページの作業だけに効く）
 
 本人の意見（2026-10-15）から決まった作り方。言われなくても守る。残りの作業は `.claude/visualization-tasks.md`。
+続きのページ `/visualization-methods/`（第 3〜5 回。2026-10-26 に作り始めた）も、体裁・部品・決まりはこのページと同じ。中身の仕様は `.claude/visualization-methods-spec.md`。
 
 ## 構成
 - タブで1つずつ（変換・投影・補間・IK / 剛体と衝突 / 布 / 流体）。全部を一度に出さない

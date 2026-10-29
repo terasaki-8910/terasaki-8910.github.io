@@ -24,6 +24,8 @@ export const fmtVec = (v, d = 2) => `(${fmt(v[0], d)}, ${fmt(v[1], d)})`
 
 // 矢印キーの押しかたを { dx, dy }(右・上が +1)にする。Shift で 5 倍。矢印キーでなければ null
 export function arrowStep(event) {
+  // Alt・Ctrl・Cmd つきはブラウザの操作(Alt+← で戻るなど)に残す
+  if (event.altKey || event.ctrlKey || event.metaKey) return null
   const k = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, 1], ArrowDown: [0, -1] }[event.key]
   if (!k) return null
   const m = event.shiftKey ? 5 : 1

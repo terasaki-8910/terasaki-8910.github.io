@@ -10,7 +10,7 @@ function initialId(sections) {
   return sections.some((s) => s.id === hash) ? hash : sections[0].id
 }
 
-export default function SectionTabs({ sections }) {
+export default function SectionTabs({ sections, className = '' }) {
   const [activeId, setActiveId] = useState(() => initialId(sections))
   const tabRefs = useRef([])
   const index = Math.max(0, sections.findIndex((s) => s.id === activeId))
@@ -39,7 +39,7 @@ export default function SectionTabs({ sections }) {
   }
 
   return (
-    <div className="vis-tabs-wrap">
+    <div className={`vis-tabs-wrap ${className}`}>
       <div className="vis-tabs" role="tablist" aria-label="節" onKeyDown={onKeyDown}>
         {sections.map((s, i) => (
           <button
