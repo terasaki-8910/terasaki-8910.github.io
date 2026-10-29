@@ -6,7 +6,6 @@ import {
   loadPhoto,
   makeSparkles,
   NameArt,
-  pickQuoteEdge,
   pickRainbow,
   RainbowLayer,
   RainbowText,
@@ -74,7 +73,6 @@ export default function GachaReveal(props: {
   const [photo, setPhoto] = useState<Photo | null | 'none'>(null);
   const [isNew] = useState(() => props.isNew ?? !readSeen().includes(character.id));
   const [rainbow] = useState(pickRainbow);
-  const [edge] = useState(pickQuoteEdge);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const viewport = useViewport();
 
@@ -177,7 +175,6 @@ export default function GachaReveal(props: {
       data-testid="gacha"
       data-step={step ?? 'loading'}
       data-rainbow={rainbow}
-      data-edge={edge}
       onClick={advance}
     >
       <div className="gacha-bg" aria-hidden="true">

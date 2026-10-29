@@ -6,9 +6,8 @@
  *   下 .qt-glow: 字を太らせて虹で塗り、ぼかしたもの(にじみ)
  *   上 .qt-text: 白い字。縁(-webkit-text-stroke)の色は透明にしておき、字と縁の形で切り抜いた
  *                背景の虹(background-clip: text)が、白い字の外側にだけ見える(縁)
- * 虹をどこに塗るかで2案(ルートの data-edge。parts.tsx の pickQuoteEdge):
- *   a 見た目の1行ごと(インラインの断片ごとに塗る。box-decoration-break: clone)
- *   b 台詞のかたまり全体(重ねた2枚の箱に塗る。箱の幅はいちばん長い行に合わせる)
+ * 虹は台詞のかたまり全体に1本かけ、各行はその位置の色になる(見本の色の付き方。2案から本人が選んだ)。
+ * 塗るのは重ねた2枚の箱で、箱の幅はいちばん長い行に合わせる。
  */
 
 .qt {
@@ -17,26 +16,12 @@
 
 .qt > span {
   grid-area: 1 / 1;
-  /* 虹を塗る範囲を字の上下より外まで広げる(にじみが箱の端で切れないように)。並びは変えない */
-  padding-block: .3em;
-  margin-block: -.3em;
-}
-
-.qt-ink {
-  /* 左右も同じ理由で広げる */
-  padding: .2em .3em;
-}
-
-[data-edge='a'] .qt-ink,
-[data-edge='b'] .qt > span {
+  /* 虹を塗る範囲を字の外まで広げる(縁とにじみが箱の端で切れないように)。並びは変えない */
+  padding: .3em;
+  margin: -.3em;
   background-image: linear-gradient(90deg, #f27ad8, #a98bff 24%, #58bfff 42%, #3fdde8 57%, #4fe5a8 72%, #96e35e 86%, #e2d548);
   -webkit-background-clip: text;
   background-clip: text;
-}
-
-[data-edge='a'] .qt-ink {
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
 }
 
 .qt-glow {
