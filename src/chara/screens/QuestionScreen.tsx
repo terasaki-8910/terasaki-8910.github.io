@@ -1,5 +1,6 @@
 import { CONFIDENCE_LABEL, type Confidence, type Probe } from '../engine/questions';
 import { OUTLINE_BUTTON, QUIET_LINK_BUTTON } from '../components/styles';
+import { prefetchGacha } from '../gacha/prefetch';
 
 /** Akinator実機の並び（はい→たぶんそう→わからない→たぶん違う→いいえ）をそのまま踏襲する。 */
 const CONFIDENCE_ORDER: readonly Confidence[] = ['yes', 'probably_yes', 'unknown', 'probably_no', 'no'];
@@ -67,7 +68,15 @@ export function QuestionScreen(props: {
             一つ前の回答に戻る
           </button>
         )}
-        <button type="button" data-testid="omakase" onClick={onOmakase} className={QUIET_LINK_BUTTON}>
+        <button
+          type="button"
+          data-testid="omakase"
+          onClick={onOmakase}
+          onPointerEnter={prefetchGacha}
+          onPointerDown={prefetchGacha}
+          onFocus={prefetchGacha}
+          className={QUIET_LINK_BUTTON}
+        >
           おまかせで見る
         </button>
         <button type="button" data-testid="restart" onClick={onRestart} className={QUIET_LINK_BUTTON}>

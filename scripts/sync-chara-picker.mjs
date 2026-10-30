@@ -7,6 +7,7 @@
  * ■ 役割分担（これを守る限り機械的に同期できる）
  *   向こうが正 (vendored, ここでは編集しない):
  *     - キャラ/供給/尤度データ … `npm run collect` 等で生成される
+ *     - 名台詞 … 向こうが Web で出どころを確かめて data/quotes.json に置く(こちらは文だけ配信)
  *     - 推薦エンジン・スキーマ・状態管理hook … テストとACCEPTANCEゲートが向こうにある
  *   こちらが正 (site-owned, 向こうへは戻さない):
  *     - 画面(screens/) とコンポーネント(components/) … デザイン言語が全く違う
@@ -63,7 +64,66 @@ const DATA_FILES = [
       return { version: json.version ?? 1, tags };
     },
   },
+  // 名台詞。開発元が供給量の帯ごとに足していく(R13)ので、毎回ファイル全体から作り直す。
+  // 配信するのは台詞の文だけで、出どころ・確かめ方(checked)・強い言葉の印(harsh)は落とす。
+  { from: 'data/quotes.json', to: 'public/chara-picker/quotes.json', transform: quotesForSite },
 ];
+
+/**
+ * 名台詞の決まり(開発元と取り決めたもの。2026-10-29)。開発元のテスト(A18)と同じ決まりを
+ * ここでも確かめ、外れた台詞が1つでもあれば何も書かずに止める。
+ */
+const QUOTE_MAX_LENGTH = 60;
+const QUOTE_MAX_PER_CHARACTER = 3;
+/** checked の値。知らない値が来たら止める(値を増やすときは、開発元が同期の依頼で伝える)。 */
+const QUOTE_CHECKED = ['verified', 'corrected', 'memory'];
+
+function quotesForSite(json) {
+  if (json.version !== 1) fail(`data/quotes.json の version が 1 ではありません (${JSON.stringify(json.version)})。形が変わったなら変換を直してください`);
+  const ids = new Set(JSON.parse(fs.readFileSync(path.join(UPSTREAM, 'data/characters.json'), 'utf-8')).map((c) => c.id));
+  const problems = [];
+  const characters = {};
+  for (const [id, list] of Object.entries(json.characters ?? {})) {
+    if (!ids.has(id)) problems.push(`${id}: characters.json に無い id`);
+    if (!Array.isArray(list) || list.length === 0) {
+      problems.push(`${id}: 台詞が無い`);
+      continue;
+    }
+    if (list.length > QUOTE_MAX_PER_CHARACTER) problems.push(`${id}: ${list.length}個(上限 ${QUOTE_MAX_PER_CHARACTER})`);
+    const texts = [];
+    for (const quote of list) {
+      const text = typeof quote?.text === 'string' ? quote.text.trim() : '';
+      if (!QUOTE_CHECKED.includes(quote?.checked)) problems.push(`${id}: checked が ${QUOTE_CHECKED.join(' / ')} のどれでもない (${JSON.stringify(quote?.checked)})`);
+      if (!text) problems.push(`${id}: 台詞が空`);
+      if ([...text].length > QUOTE_MAX_LENGTH) problems.push(`${id}: ${[...text].length}字(上限 ${QUOTE_MAX_LENGTH}) "${text}"`);
+      if (/[「」\r\n]/.test(text)) problems.push(`${id}: 「」か改行を含む(「」は表示側で付ける) "${text}"`);
+      if (!texts.includes(text)) texts.push(text);
+    }
+    characters[id] = texts;
+  }
+  if (problems.length > 0) fail(`data/quotes.json に決まりから外れた台詞があります。取り込みを止めました:\n   ${problems.join('\n   ')}`);
+
+  const sorted = Object.fromEntries(Object.entries(characters).sort(([a], [b]) => (a < b ? -1 : 1)));
+  return { version: 1, generatedAt: upstreamFileDate('data/quotes.json'), characters: sorted };
+}
+
+/**
+ * 上流のファイルを最後に変えたコミットの日時。取り込むたびに時刻が変わると、
+ * 中身が同じでも毎回「更新」になり --check が差分ありと言い続けるため、実行時刻は使わない。
+ */
+function upstreamFileDate(rel) {
+  try {
+    const date = execFileSync('git', ['log', '-1', '--format=%cI', '--', rel], {
+      cwd: UPSTREAM,
+      encoding: 'utf-8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+    if (date) return date;
+  } catch {
+    // git で読めない取り込み元(ただのフォルダなど)はファイルの更新日時にする
+  }
+  return fs.statSync(path.join(UPSTREAM, rel)).mtime.toISOString();
+}
 
 /** エンジン。両リポジトリで完全に同一のファイルとして保つ（そのままコピー）。 */
 const CODE_FILES = [
@@ -113,13 +173,14 @@ function renderContent(entry, kind) {
   if (!fs.existsSync(src)) fail(`上流にファイルが見つかりません: ${entry.from}\n   (${UPSTREAM} は正しい場所ですか?)`);
   const raw = fs.readFileSync(src, 'utf-8');
   if (kind !== 'data') return Buffer.from(raw, 'utf-8');
+  let json;
   try {
-    const json = JSON.parse(raw);
-    // transform を持つものは表示に必要な形へ絞ってから配信する
-    return Buffer.from(JSON.stringify(entry.transform ? entry.transform(json) : json), 'utf-8');
+    json = JSON.parse(raw);
   } catch (e) {
     fail(`${entry.from} のJSONを解釈できません: ${e.message}`);
   }
+  // transform を持つものは表示に必要な形へ絞ってから配信する
+  return Buffer.from(JSON.stringify(entry.transform ? entry.transform(json) : json), 'utf-8');
 }
 
 function characterCount(file) {
@@ -294,6 +355,18 @@ function main() {
     }
   } else if (missing === '') {
     console.log('\n🔤 フォントは全文字を収録済み（再生成不要）');
+  }
+
+  // ガチャ演出と台詞のフォントは、キャラ名・作品名・台詞の字と、本文のサブセットに無い字から作る。
+  // そのどれかが変わったら作り直す(build-chara-quote-fonts.mjs)。
+  const quoteFontInputs = ['public/chara-picker/characters.json', 'public/chara-picker/quotes.json'];
+  if (missing || updates.some((u) => quoteFontInputs.includes(u.entry.to))) {
+    console.log('\n🔤 ガチャ演出と台詞のフォントを作り直します...');
+    try {
+      execFileSync('node', ['scripts/build-chara-quote-fonts.mjs'], { cwd: ROOT, stdio: 'inherit' });
+    } catch {
+      fail('フォントの作り直しに失敗しました。手動で node scripts/build-chara-quote-fonts.mjs を実行してください');
+    }
   }
 
   console.log('\n次にやること:');
