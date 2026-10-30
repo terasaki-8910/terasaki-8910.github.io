@@ -1,6 +1,6 @@
 {
   "files": {
-    "public/chara-picker/quotes.json": "d88578b8af5ce984110bc108a3fa580d55b1ba9598c6a1a0b4f4585e8c7ccd70",
+    "public/chara-picker/quotes.json": "66f004a224b9b9cf2227dedf276148dad5e204a6139a3ca5e45aa88e0149855a",
     "public/chara-picker/characters.json": "5988777fd60e2f7db7596a800cf99c49d5e904f17d2dd7dc5a57d1d1537b8d51",
     "public/chara-picker/supply.json": "2e1196cf0ae5ccc8ca10206d03a6d1af37a0191483c8f0826950f37ed84582d7",
     "public/chara-picker/likelihoods.json": "45523055445ce0fd96c60f861a323bbf387cf8de36bbfc5b0863326b4e084b29",
@@ -15,8 +15,8 @@
     "src/chara/hooks/useBayesInterview.ts": "8a15d649033afb9097f74310e845db8e6ac7623e3f60c4dfb911dd3cb6405fed",
     "src/chara/hooks/useSessionLog.ts": "5d59ef1fa9ae83638af3088fbe04e89caa997d568de19a94b3269ac1e5e10127"
   },
-  "syncedAt": "2026-10-30T01:55:54.667Z",
-  "upstreamCommit": "77d3f0cafc217692668158c36857dedb99e3fb87",
-  "upstreamSubject": "feat/quotes を取り込む: 名台詞の「少ない」「僅少」の2回目の探索(全体で1598体・1957個)",
+  "syncedAt": "2026-10-30T05:41:16.363Z",
+  "upstreamCommit": "bb70da235eb8f684cb068efc609bd6cd5296c900",
+  "upstreamSubject": "feat/quotes を取り込む: 名台詞をページの本文から探す3回目(全体で1752体・2296個)",
   "upstreamDirty": false
 }
