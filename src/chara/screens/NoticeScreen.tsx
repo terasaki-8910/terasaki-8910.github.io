@@ -18,9 +18,7 @@ export function NoticeScreen(props: { onAcknowledge(): void }) {
       <h2 className="text-2xl md:text-3xl font-display text-ink">はじめる前に</h2>
 
       <p className="mt-5 text-muted">
-        髪型や服装だけでなく、外見や体型に関する質問も含みます。どの回答をどのキャラに当てはめるかは、
-        Danbooruのタグ統計などから機械的に推定したもので、人がキャラごとに見て判断したものではありません
-        ——実際の印象と違うことがあります。
+        髪型や服装だけでなく、外見や体型に関する質問も含みます。どの回答をどのキャラに当てはめるかは、Danbooruのタグ統計などから機械的に推定したもので、人がキャラごとに見て判断したものではありません——実際の印象と違うことがあります。
       </p>
 
       <p className="mt-4 text-muted">
