@@ -64,6 +64,9 @@
 
 .gmini-quote {
   position: relative;
+  /* 1行より長いかたまりがあっても帯より広げない(広がると RainbowText が見分けられず、帯の端で切れる) */
+  min-width: 0;
+  max-width: 100%;
   margin: 0;
   padding: 10px 14px;
   text-align: center;

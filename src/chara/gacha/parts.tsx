@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
 import { fetchCharaImage, nextCharaImage, type CharaImage } from '../data/danbooru';
-import { splitPhrases } from './phrases';
+import { AUTO_PHRASE, NO_LINE_START, splitPhrases } from './phrases';
 import { GACHA_FONT_FAMILY } from './prefetch';
 
 /*
@@ -32,10 +32,53 @@ export function pickRainbow(): RainbowVariant {
 /**
  * 台詞の字。白い字に虹の縁とにじみを付けるため、同じ文を2枚重ねる(見た目は quote.css)。
  * 読み上げるのは上の1枚だけ。文節に区切ったときは、2枚とも同じ切れ目で折り返す(phrases.ts)。
+ * 1行より長いかたまりがある台詞は、1行に入る字数を測って、それより長い文節を分ける(phrases.ts)。
  */
 export function RainbowText(props: { text: string; className?: string; style?: CSSProperties }) {
   const { text, className, style } = props;
-  const phrases = splitPhrases(text);
+  const ref = useRef<HTMLSpanElement>(null);
+  const [fit, setFit] = useState<{ text: string; maxChars: number } | null>(null);
+  const maxChars = fit?.text === text ? fit.maxChars : undefined;
+  // auto-phrase のブラウザでは、1行より長いかたまりが無ければ折り返しを CSS に任せる
+  const phrases = !AUTO_PHRASE || maxChars !== undefined ? splitPhrases(text, maxChars) : null;
+  const phrased = phrases !== null;
+
+  useLayoutEffect(() => {
+    // 区切る部品が届いていなければ、分け直せない
+    if (maxChars !== undefined && !phrased) return;
+    let cancelled = false;
+    const measure = () => {
+      const el = ref.current;
+      // 台詞の箱(GachaReveal の gacha-quote・GachaMini の gmini-quote)
+      const box = el?.closest('p');
+      if (cancelled || !el || !box) return;
+      // いちばん長いかたまりの幅を、字の途中では折らずに測る
+      el.style.width = 'min-content';
+      el.style.overflowWrap = 'normal';
+      const longest = el.getBoundingClientRect().width;
+      el.style.width = '';
+      el.style.overflowWrap = '';
+      const boxStyle = getComputedStyle(box);
+      const lineWidth = box.clientWidth - parseFloat(boxStyle.paddingLeft) - parseFloat(boxStyle.paddingRight);
+      if (longest <= lineWidth + 0.5) return;
+      if (maxChars === undefined) {
+        // 1行に入る字数は、全角の字の幅(字の大きさ+字間)で数える
+        const { fontSize, letterSpacing } = getComputedStyle(el);
+        const advance = parseFloat(fontSize) + (parseFloat(letterSpacing) || 0);
+        setFit({ text, maxChars: Math.max(2, Math.floor(lineWidth / advance)) });
+      } else if (maxChars > 2) {
+        // 分けても入りきらない(行の頭に来てはいけない字を前に付けて長くなったなど)ときは、字数を減らす
+        setFit({ text, maxChars: maxChars - 1 });
+      }
+    };
+    measure();
+    // 書体が届くと字の幅が変わるので測り直す
+    document.fonts.load(`800 16px "${GACHA_FONT_FAMILY}"`, text).then(measure, () => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [text, maxChars, phrased]);
+
   const content = () =>
     phrases
       ? phrases.map((phrase, i) => (
@@ -46,7 +89,7 @@ export function RainbowText(props: { text: string; className?: string; style?: C
         ))
       : text;
   return (
-    <span className={className ? `qt ${className}` : 'qt'} style={style} data-phrased={phrases ? '' : undefined}>
+    <span ref={ref} className={className ? `qt ${className}` : 'qt'} style={style} data-phrased={phrases ? '' : undefined}>
       <span className="qt-glow" aria-hidden="true">
         {content()}
       </span>
@@ -331,10 +374,37 @@ function preload(url: string): Promise<{ width: number; height: number }> {
   });
 }
 
-/** 文の終わり(。!?…)で行を分ける。見本も1文ずつ行を分けている。 */
+/**
+ * 文の終わり(。!?…)で行を分ける。見本も1文ずつ行を分けている。
+ * 行の頭に来てはいけない字(「カエレ……/ッ！」の「ッ！」)は前の文に付け、字の無いかけら(「（……」「...？」)は
+ * 隣の文に付ける。
+ */
 export function splitQuote(quote: string): string[] {
-  const parts = quote.match(/[^。！？!?…]+[。！？!?…]*[」』)]?/g) ?? [quote];
-  return parts.map((p) => p.trim()).filter(Boolean);
+  const parts = quote.match(/[^。！？!?…]+[。！？!?…]*[」』)）”’]*/g) ?? [quote];
+  const lines: string[] = [];
+  let prefix = '';
+  for (const part of parts) {
+    let line = part.trim();
+    const head = lines.length > 0 ? (NO_LINE_START.exec(line)?.[0] ?? '') : '';
+    if (head) {
+      lines[lines.length - 1] += head;
+      line = line.slice(head.length).trim();
+    }
+    if (!line) continue;
+    if (!/[\p{L}\p{N}]/u.test(line)) {
+      // 開き括弧で始まるか、まだ文が無ければ次の文の頭に、ほかは前の文の終わりに付ける
+      if (lines.length > 0 && !/^[(（「『【〈《〔[［{｛“‘]/u.test(line)) lines[lines.length - 1] += line;
+      else prefix += line;
+      continue;
+    }
+    lines.push(prefix + line);
+    prefix = '';
+  }
+  if (prefix) {
+    if (lines.length > 0) lines[lines.length - 1] += prefix;
+    else lines.push(prefix);
+  }
+  return lines;
 }
 
 /** 要素の幅を追いかける(名前の大きさを決めるため)。 */
