@@ -14,10 +14,16 @@
   display: grid;
 }
 
-/* 文節に区切った台詞(phrases.ts)は、区切りの <wbr> でだけ折り返す。1行に入りきらない文節だけは字の途中で折る */
+/* 区切っていない台詞(Chrome の auto-phrase)に1行より長いかたまりがあれば、字の途中で折る(画面の外へ
+   はみ出さないように)。ふつうはその前に RainbowText が文節に区切り直すので、ここまで来ない */
+.qt:not([data-phrased]) {
+  overflow-wrap: anywhere;
+}
+
+/* 文節に区切った台詞(phrases.ts)は、区切りの <wbr> でだけ折り返す。字の途中では折らせない
+   (Safari は overflow-wrap: anywhere があると、text-wrap: balance で行の長さをそろえるときに字の途中でも折る) */
 .qt[data-phrased] {
   word-break: keep-all;
-  overflow-wrap: anywhere;
 }
 
 .qt > span {
