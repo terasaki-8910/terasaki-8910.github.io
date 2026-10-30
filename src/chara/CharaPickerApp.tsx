@@ -286,6 +286,21 @@ function ModeFlow({ dataset }: { dataset: Dataset }) {
   } = useOmakase(dataset);
   const backToModes = useCallback(() => setMode(null), []);
 
+  // 画面が変わったら先頭から見せる。長い結果画面(十連など)の下で「最初からやり直す」を押すと、
+  // 次の画面がスクロールしたままの位置で出て、質問が上の見出しに隠れるため
+  const screen = !noticeSeen
+    ? 'notice'
+    : omakaseResult !== null
+      ? 'omakase'
+      : tenResults !== null
+        ? 'ten'
+        : mode === null
+          ? 'mode'
+          : `round-${round}`;
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [screen]);
+
   // 初回のみ、質問より前に注意書きを挟む。最初の質問がどの軸になるかはベイズ選択で
   // 毎回変わりうる（bayesNextProbe が情報量最大の軸を選ぶため、決め打ちの1問目が無い）
   // ので、特定の質問の手前ではなく「質問そのものの前」に固定で置く。
