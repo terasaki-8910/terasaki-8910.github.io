@@ -1,6 +1,72 @@
 {
-  "lastUpdated": "2026-10-30T03:26:47.422Z",
+  "lastUpdated": "2026-10-30T11:50:18.139Z",
   "tracks": [
+    {
+      "id": "6u4CeONpeq1KGfnzgINUVw",
+      "name": "Bravely You",
+      "artist": "Lia, VISUAL ARTS / Key",
+      "album": "Bravely You / 灼け落ちない翼",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273064f7c3ff272858cf699c74b",
+      "playedAt": "2026-10-30T10:04:08.501Z",
+      "spotifyUrl": "https://open.spotify.com/track/6u4CeONpeq1KGfnzgINUVw",
+      "duration": 328653,
+      "previewUrl": ""
+    },
+    {
+      "id": "3txqYlzoDZGLoW8MGll9tQ",
+      "name": "リライト",
+      "artist": "ASIAN KUNG-FU GENERATION",
+      "album": "ソルファ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8dd23458921ec0c46801026",
+      "playedAt": "2026-10-30T08:34:00.718Z",
+      "spotifyUrl": "https://open.spotify.com/track/3txqYlzoDZGLoW8MGll9tQ",
+      "duration": 225493,
+      "previewUrl": ""
+    },
+    {
+      "id": "1PGCzcLCqV1yu9M3FmxKlu",
+      "name": "ゴールデンタイムラバー",
+      "artist": "Sukima Switch",
+      "album": "POPMAN’S WORLD ～All Time Best 2003-2013～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8b567d8a00d38c441ecbca1",
+      "playedAt": "2026-10-30T08:29:50.317Z",
+      "spotifyUrl": "https://open.spotify.com/track/1PGCzcLCqV1yu9M3FmxKlu",
+      "duration": 339720,
+      "previewUrl": ""
+    },
+    {
+      "id": "20ZBpp6gEOpAgFrfLLpI1z",
+      "name": "sister's noise",
+      "artist": "fripSide",
+      "album": "infinite synthesis 2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27318122fff6d832343218f2b75",
+      "playedAt": "2026-10-30T08:24:10.221Z",
+      "spotifyUrl": "https://open.spotify.com/track/20ZBpp6gEOpAgFrfLLpI1z",
+      "duration": 262600,
+      "previewUrl": ""
+    },
+    {
+      "id": "6lpkzNkXnPgSkEOANO7nsD",
+      "name": "Hacking to the Gate",
+      "artist": "いとうかなこ",
+      "album": "TVアニメ『シュタインズ・ゲート』OPテーママキシシングル「Hacking to the Gate」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cff20aa46a5e7178eda9f586",
+      "playedAt": "2026-10-30T08:19:47.103Z",
+      "spotifyUrl": "https://open.spotify.com/track/6lpkzNkXnPgSkEOANO7nsD",
+      "duration": 256466,
+      "previewUrl": ""
+    },
+    {
+      "id": "09J1T3GnieB0DZGSxhfEn2",
+      "name": "猫祭り",
+      "artist": "イロドリミドリ",
+      "album": "推薦",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27355626fd3f5fa2640c27f568e",
+      "playedAt": "2026-10-30T08:15:29.937Z",
+      "spotifyUrl": "https://open.spotify.com/track/09J1T3GnieB0DZGSxhfEn2",
+      "duration": 181106,
+      "previewUrl": ""
+    },
     {
       "id": "0U6lmEhmRVptZAX7HrauqG",
       "name": "Main Title",
@@ -263,72 +329,6 @@
       "playedAt": "2026-10-29T15:35:47.140Z",
       "spotifyUrl": "https://open.spotify.com/track/587i4g5fwUDAdl5xTP7UtW",
       "duration": 137426,
-      "previewUrl": ""
-    },
-    {
-      "id": "5VZn5Gsn2ckFJ2bmRo9GPe",
-      "name": "ルパン三世のテーマ - 「ルパン三世のテーマ'78」シングル・ヴァージョン",
-      "artist": "Yuji Ohno, ユー & ザ・エクスプロージョン・バンド",
-      "album": "ルパン三世 オリジナル・サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d84206cdf9b755537f3123c8",
-      "playedAt": "2026-10-29T15:33:29.199Z",
-      "spotifyUrl": "https://open.spotify.com/track/5VZn5Gsn2ckFJ2bmRo9GPe",
-      "duration": 204626,
-      "previewUrl": ""
-    },
-    {
-      "id": "7u5XBHnht6dyoRXRBb5soK",
-      "name": "Iron Man 3",
-      "artist": "Brian Tyler",
-      "album": "Iron Man 3 (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c28c36e39012cc8edf813196",
-      "playedAt": "2026-10-29T15:25:29.434Z",
-      "spotifyUrl": "https://open.spotify.com/track/7u5XBHnht6dyoRXRBb5soK",
-      "duration": 143453,
-      "previewUrl": ""
-    },
-    {
-      "id": "4WNU8rNjMnp3NbrUF80aqT",
-      "name": "Walt Disney Pictures - Cover Version",
-      "artist": "Cinescore",
-      "album": "The Film Studio Fanfare Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
-      "playedAt": "2026-10-29T15:23:05.481Z",
-      "spotifyUrl": "https://open.spotify.com/track/4WNU8rNjMnp3NbrUF80aqT",
-      "duration": 34289,
-      "previewUrl": ""
-    },
-    {
-      "id": "1sMagdJx1dkLn9p5j3lf9k",
-      "name": "空中散歩",
-      "artist": "Joe Hisaishi",
-      "album": "ハウルの動く城 サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315e2471f4af3fe85e339b5d6",
-      "playedAt": "2026-10-29T15:22:30.717Z",
-      "spotifyUrl": "https://open.spotify.com/track/1sMagdJx1dkLn9p5j3lf9k",
-      "duration": 134800,
-      "previewUrl": ""
-    },
-    {
-      "id": "6ko9w38zHQYMC9zEtdU6vT",
-      "name": "Universal Studios Fanfare",
-      "artist": "Geek Music",
-      "album": "Universal Studios Fanfare",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735440552cf89e9ae5e354bf18",
-      "playedAt": "2026-10-29T15:20:15.390Z",
-      "spotifyUrl": "https://open.spotify.com/track/6ko9w38zHQYMC9zEtdU6vT",
-      "duration": 22880,
-      "previewUrl": ""
-    },
-    {
-      "id": "0z5hFntLvshhm7j8F0aijm",
-      "name": "Spider-Man: Homecoming Suite - from \"Spider-Man: Homecoming\" Soundtrack",
-      "artist": "Michael Giacchino",
-      "album": "Spider-Man: Homecoming (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f69096c612e959561abe32f4",
-      "playedAt": "2026-10-29T15:17:26.420Z",
-      "spotifyUrl": "https://open.spotify.com/track/0z5hFntLvshhm7j8F0aijm",
-      "duration": 372985,
       "previewUrl": ""
     }
   ],
