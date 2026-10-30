@@ -1,0 +1,1 @@
+import{r as e,j as i}from"./index-DbG20xjj.js";const l=e.forwardRef(function({label:a,scroll:s=!1,className:r="",...n},o){return i.jsx("canvas",{ref:o,className:`vis-canvas ${s?"vis-canvas--scroll":""} ${r}`,role:"img","aria-label":a,...n})});export{l as S};
