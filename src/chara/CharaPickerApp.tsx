@@ -5,7 +5,7 @@ import { useBayesInterview } from './hooks/useBayesInterview';
 import { useNoticeSeen } from './hooks/useNoticeSeen';
 import { useSessionLog, type SessionLogRecord } from './hooks/useSessionLog';
 import { combinedRankFor, omakase, type Dataset, type Scored } from './engine/recommend';
-import { QUESTION_POLICIES, type QuestionPolicy } from './engine/bayes';
+import { QUESTION_POLICIES } from './engine/bayes';
 import type { Probe } from './engine/questions';
 import { gachaEnabled } from './gacha/prefetch';
 import { GuessScreen } from './screens/GuessScreen';
@@ -196,11 +196,11 @@ function TenResult(props: { results: Scored[]; gacha: boolean; onCloseGacha(): v
  * ベイズ推薦エンジンのフロー。移植元の `BayesFlow` をそのまま持ってきたもので、
  * 画面の分岐ロジックは無改造（データを引数で受け取る点だけが違う）。
  * 移植元にあった classic エンジンと `?engine=` による切り替えは持ってきていない。
- * `policy` は選んだ遊び方の質問の出し方（engine/bayes.ts の QUESTION_POLICIES）。
+ * `mode` は選んだ遊び方。質問の出し方と止め方（engine/bayes.ts の QUESTION_POLICIES）と、答えのボタンの文言を決める。
  * やり直すと遊び方を選ぶ画面へ戻る（`onRestart`）。
  */
-function BayesFlow({ dataset, policy, onRestart }: { dataset: Dataset; policy: QuestionPolicy; onRestart(): void }) {
-  const interview = useBayesInterview(dataset, { policy });
+function BayesFlow({ dataset, mode, onRestart }: { dataset: Dataset; mode: PlayMode; onRestart(): void }) {
+  const interview = useBayesInterview(dataset, { policy: QUESTION_POLICIES[mode] });
   const {
     result: omakaseResult,
     gacha,
@@ -229,6 +229,7 @@ function BayesFlow({ dataset, policy, onRestart }: { dataset: Dataset; policy: Q
           // BayesProbe は {key, prompt, reason} で classic の Probe（key/axis/value/multi/prompt）
           // と形が異なるが、QuestionScreen が描画で読むのは probe.prompt だけ。
           probe={interview.probe as unknown as Probe}
+          mode={mode}
           askedCount={interview.askedCount}
           canUndo={interview.canUndo}
           onAnswer={(confidence) => guard(interview.probe.key, () => interview.answer(confidence))}
@@ -325,7 +326,7 @@ function ModeFlow({ dataset }: { dataset: Dataset }) {
       />
     );
   }
-  return <BayesFlow key={round} dataset={dataset} policy={QUESTION_POLICIES[mode]} onRestart={backToModes} />;
+  return <BayesFlow key={round} dataset={dataset} mode={mode} onRestart={backToModes} />;
 }
 
 /**

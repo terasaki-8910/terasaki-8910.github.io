@@ -217,6 +217,7 @@ for c in json.load(open('public/chara-picker/characters.json', encoding='utf-8')
     for a in c.get('aliases') or []: need |= set(a)
 for q in json.load(open('public/chara-picker/questions.runtime.json', encoding='utf-8'))['questions']:
     need |= set(q['prompt']) | set(q['reason']['label']) | set(q['reason']['value'])
+    need |= set(q.get('modes', {}).get('discover', {}).get('prompt', ''))
 print(''.join(sorted(ch for ch in need - have if ch.strip())))
 `;
   try {
