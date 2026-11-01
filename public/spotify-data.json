@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-11-01T12:16:08.066Z",
+  "lastUpdated": "2026-11-01T21:28:21.906Z",
   "tracks": [
+    {
+      "id": "398awEdrx5h7g34rYvFNy8",
+      "name": "俺ら東京さ行ぐだ",
+      "artist": "Ikuzo Yoshi",
+      "album": "芸能生活40周年企画　シングルパーフェクトコレクション（4枚組）",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273690bae4183a673a402a03933",
+      "playedAt": "2026-11-01T13:08:38.211Z",
+      "spotifyUrl": "https://open.spotify.com/track/398awEdrx5h7g34rYvFNy8",
+      "duration": 178293,
+      "previewUrl": ""
+    },
     {
       "id": "2Gmyw5Vg2X5YW2lM3OC7nD",
       "name": "春を告げる",
@@ -318,17 +329,6 @@
       "playedAt": "2026-10-31T06:31:16.289Z",
       "spotifyUrl": "https://open.spotify.com/track/6X8Tc3B90bhkAgV6W34Sa7",
       "duration": 290920,
-      "previewUrl": ""
-    },
-    {
-      "id": "5VMRWLSeAhz1PIglkVGwrf",
-      "name": "Sparkling Daydream",
-      "artist": "ZAQ",
-      "album": "ZAQPOT",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ddbde6509dae7c73b7c98a1d",
-      "playedAt": "2026-10-31T04:37:32.782Z",
-      "spotifyUrl": "https://open.spotify.com/track/5VMRWLSeAhz1PIglkVGwrf",
-      "duration": 249006,
       "previewUrl": ""
     }
   ],
