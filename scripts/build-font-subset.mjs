@@ -80,7 +80,7 @@ const DATA_SOURCES = [
     extract: (json) => {
       const out = [];
       for (const q of json.questions ?? []) {
-        out.push(q.prompt ?? '', q.reason?.label ?? '', q.reason?.value ?? '');
+        out.push(q.prompt ?? '', q.modes?.discover?.prompt ?? '', q.reason?.label ?? '', q.reason?.value ?? '');
       }
       return out;
     },

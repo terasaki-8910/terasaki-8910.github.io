@@ -46,6 +46,8 @@ const DATA_FILES = [
   { from: 'data/supply.json', to: 'public/chara-picker/supply.json' },
   { from: 'data/bayes/likelihoods.json', to: 'public/chara-picker/likelihoods.json' },
   { from: 'data/bayes/questions.runtime.json', to: 'public/chara-picker/questions.runtime.json' },
+  // 作品や1人のキャラに向けた質問(R15)。開発元の scripts/bayes/build-targeted.mjs の生成物。
+  { from: 'data/bayes/questions.targeted.json', to: 'public/chara-picker/questions.targeted.json' },
   // キャラid → Danbooruのcharacterタグ。画像を実行時に引くのに使う。
   // 開発元が category=4 検証・作品タグとの共起率・hitomi件数との桁比較まで
   // 済ませた結果なので、こちらで作り直さない。
@@ -217,6 +219,7 @@ for c in json.load(open('public/chara-picker/characters.json', encoding='utf-8')
     for a in c.get('aliases') or []: need |= set(a)
 for q in json.load(open('public/chara-picker/questions.runtime.json', encoding='utf-8'))['questions']:
     need |= set(q['prompt']) | set(q['reason']['label']) | set(q['reason']['value'])
+    need |= set(q.get('modes', {}).get('discover', {}).get('prompt', ''))
 print(''.join(sorted(ch for ch in need - have if ch.strip())))
 `;
   try {

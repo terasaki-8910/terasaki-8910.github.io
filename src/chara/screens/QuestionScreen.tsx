@@ -1,4 +1,4 @@
-import { CONFIDENCE_LABEL, type Confidence, type Probe } from '../engine/questions';
+import { CONFIDENCE_LABELS_BY_MODE, type Confidence, type Probe, type QuestionMode } from '../engine/questions';
 import { OUTLINE_BUTTON, QUIET_LINK_BUTTON } from '../components/styles';
 import { prefetchGacha } from '../gacha/prefetch';
 
@@ -14,19 +14,13 @@ const TESTID_BY_CONFIDENCE: Record<Confidence, string> = {
 };
 
 /**
- * ボタンに出す文言。開発元と共有の CONFIDENCE_LABEL（engine/questions.ts。同期対象なので
- * こちらでは編集しない）のうち、unknown だけこのサイトでは「わからない」と出す。
- * 案内画面の「答えにくい質問は『わからない』で構いません」と揃えるため（2026-10-04、本人指定）。
- * 回答の意味と重み（0 = 推定を更新しない）は変えない。
- */
-const ANSWER_LABEL: Record<Confidence, string> = { ...CONFIDENCE_LABEL, unknown: 'わからない' };
-
-/**
  * 1プローブ1画面・回答は常に5段階。「都度1問答えたら即座に次へ進む」一発アクション
  * 方式のため、選択永続状態や `aria-checked` は持たない（5つとも常に等価な操作ボタン）。
+ * ボタンの文言は遊び方ごとに変わる（開発元 R14-5 の CONFIDENCE_LABELS_BY_MODE）。意味と重みは同じ。
  */
 export function QuestionScreen(props: {
   probe: Probe;
+  mode: QuestionMode;
   askedCount: number;
   canUndo: boolean;
   onAnswer(confidence: Confidence): void;
@@ -34,7 +28,7 @@ export function QuestionScreen(props: {
   onOmakase(): void;
   onRestart(): void;
 }) {
-  const { probe, askedCount, canUndo, onAnswer, onUndo, onOmakase, onRestart } = props;
+  const { probe, mode, askedCount, canUndo, onAnswer, onUndo, onOmakase, onRestart } = props;
 
   return (
     // key に probe.key を与えて質問ごとにアニメーションを再生させる
@@ -57,7 +51,7 @@ export function QuestionScreen(props: {
             onClick={() => onAnswer(confidence)}
             className={`${OUTLINE_BUTTON} text-left`}
           >
-            {ANSWER_LABEL[confidence]}
+            {CONFIDENCE_LABELS_BY_MODE[mode][confidence]}
           </button>
         ))}
       </div>
