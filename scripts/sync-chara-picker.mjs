@@ -46,6 +46,8 @@ const DATA_FILES = [
   { from: 'data/supply.json', to: 'public/chara-picker/supply.json' },
   { from: 'data/bayes/likelihoods.json', to: 'public/chara-picker/likelihoods.json' },
   { from: 'data/bayes/questions.runtime.json', to: 'public/chara-picker/questions.runtime.json' },
+  // 作品や1人のキャラに向けた質問(R15)。開発元の scripts/bayes/build-targeted.mjs の生成物。
+  { from: 'data/bayes/questions.targeted.json', to: 'public/chara-picker/questions.targeted.json' },
   // キャラid → Danbooruのcharacterタグ。画像を実行時に引くのに使う。
   // 開発元が category=4 検証・作品タグとの共起率・hitomi件数との桁比較まで
   // 済ませた結果なので、こちらで作り直さない。

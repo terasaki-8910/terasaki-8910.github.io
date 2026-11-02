@@ -1,22 +1,23 @@
 {
   "files": {
-    "public/chara-picker/questions.runtime.json": "cbedade2a2ddde3366f5db990c7124a681b0dc46f44dace90d8685af2f960c8d",
-    "src/chara/engine/bayes.ts": "128662b104e177b94f73aec350a8e1034013c333f288c0b1cb97d6193e3ab273",
-    "src/chara/engine/questions.ts": "6c22e7e860df970ddb6f4092c5b43c55799fc44eecbc9c50b6f7cd62a8360e9b",
-    "src/chara/hooks/useBayesInterview.ts": "aa4e1286431b0fe96b23cbd835534e589e53deeda331994e56ac8396a8fb8056",
+    "public/chara-picker/questions.targeted.json": "1811bb39725560514140d15bb1f8639ec0adb4400bcf2a48fb8a206ba1992b16",
     "public/chara-picker/characters.json": "5988777fd60e2f7db7596a800cf99c49d5e904f17d2dd7dc5a57d1d1537b8d51",
     "public/chara-picker/supply.json": "2e1196cf0ae5ccc8ca10206d03a6d1af37a0191483c8f0826950f37ed84582d7",
     "public/chara-picker/likelihoods.json": "45523055445ce0fd96c60f861a323bbf387cf8de36bbfc5b0863326b4e084b29",
+    "public/chara-picker/questions.runtime.json": "cbedade2a2ddde3366f5db990c7124a681b0dc46f44dace90d8685af2f960c8d",
     "public/chara-picker/tag-map.json": "3ef7f83ca7663929714f747ac68e35cdabe49d2e4fcd91e03fb26020b21f51c6",
     "public/chara-picker/quotes.json": "66f004a224b9b9cf2227dedf276148dad5e204a6139a3ca5e45aa88e0149855a",
+    "src/chara/engine/bayes.ts": "4216302dc0415c986c74de125e99c605f4ff9e57858eea02d535454fcba5b975",
     "src/chara/engine/recommend.ts": "43318be751c830c40b4d46e40873ca59da8bb387bd310b8ed6a5fd02ca234f7e",
+    "src/chara/engine/questions.ts": "6c22e7e860df970ddb6f4092c5b43c55799fc44eecbc9c50b6f7cd62a8360e9b",
     "src/chara/engine/supply.ts": "451fb9d1a2dfa365ccb29eab2e1f5d5760ae0e402cef7b381a51b9697d38b927",
     "src/chara/engine/cooldown.ts": "97fec8df4b2b4d7acde284fb402eac91cbdd7e85c0d93cbf3a88e20037c90561",
     "src/chara/data/schema.ts": "bdf8533e57ce34bd1b838bb63e423bc5a9d5d3fdc5874d6a1ebe955c18d52162",
+    "src/chara/hooks/useBayesInterview.ts": "aa4e1286431b0fe96b23cbd835534e589e53deeda331994e56ac8396a8fb8056",
     "src/chara/hooks/useSessionLog.ts": "5d59ef1fa9ae83638af3088fbe04e89caa997d568de19a94b3269ac1e5e10127"
   },
-  "syncedAt": "2026-10-31T02:31:13.656Z",
-  "upstreamCommit": "3b483b1077e217a11e94c6564dfcd3cefc8a695c",
-  "upstreamSubject": "feat/question-modes を取り込む: 遊び方ごとに質問の出し方と止め方を変える(R14)",
+  "syncedAt": "2026-11-02T12:26:35.931Z",
+  "upstreamCommit": "3eefed005fc93556f273fd5ddbefeae7749ba5e9",
+  "upstreamSubject": "docs: 残タスクの状態を更新(batches 01-24 完了)",
   "upstreamDirty": false
 }

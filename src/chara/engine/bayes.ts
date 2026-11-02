@@ -9,11 +9,20 @@ export type { Dataset, Reason, Scored } from './recommend';
 /** プローブ key（questions.json の質問id） -> 確信度。classic の AnswerMap とキー空間が違うため別名にする。 */
 export type BayesAnswerMap = Record<string, Confidence>;
 
-export type BayesProbe = {
+/** 特徴を聞く質問（questions.runtime.json）。尤度は likelihoods.json の行列から引く。 */
+export type TraitProbe = {
   key: string;
   prompt: string;
   reason: { axis: AxisKey; label: string; value: string };
 };
+/** 作品や1人のキャラに向けた質問（questions.targeted.json、R15）。尤度は TARGETED_LIKELIHOODS から決める。 */
+export type TargetedKind = 'series' | 'quote' | 'decisive';
+export type TargetedProbe = {
+  key: string;
+  prompt: string;
+  reason: { axis: TargetedKind; label: string; value: string };
+};
+export type BayesProbe = TraitProbe | TargetedProbe;
 
 export type LikelihoodsFile = {
   epsilon: number;
@@ -51,20 +60,89 @@ export type QuestionsRuntimeFile = {
  */
 let likelihoods: LikelihoodsFile | null = null;
 let questionIndex = new Map<string, number>();
-let probeByKey = new Map<string, BayesProbe>();
+let probeByKey = new Map<string, TraitProbe>();
 /** 質問選択・エントロピー計算の対象になる全プローブ（固定順=questions.runtime.jsonの記載順）。 */
-let allProbes: readonly BayesProbe[] = [];
+let allProbes: readonly TraitProbe[] = [];
 /** 質問key -> 遊び方別の指定（`modes` 欄がある質問だけ）。 */
 let modesByKey = new Map<string, QuestionModes>();
 
-export function initBayesData(l: LikelihoodsFile, q: QuestionsRuntimeFile): void {
+/**
+ * 作品や1人のキャラに向けた質問のデータ（R15。元は data/quotes.json・data/bayes/decisive-questions.json・
+ * data/bayes/series-franchises.json、作るのは scripts/bayes/build-targeted.mjs）。
+ * - `series`: 作品の質問。`chars` はその作品のキャラ、`near` は同じシリーズの別の作品のキャラ（「はい」と答えられてもおかしくない）。
+ * - `characters`: キャラごとの質問（`quote` 台詞、`decisive` 決め手）。
+ */
+export type TargetedFile = {
+  version: number;
+  series: { key: string; name: string; prompt: string; chars: string[]; near?: string[] }[];
+  characters: Record<string, { key: string; kind: 'quote' | 'decisive'; prompt: string }[]>;
+};
+
+/**
+ * 作品や1人のキャラに向けた質問で「はい」と答える確率。
+ * 値は思い浮かべているキャラとの関係で決まる。台詞は聞き覚えを聞くので、本人でも覚えていないことがあり（0.65）、
+ * 同じ作品の別のキャラを思い浮かべていても聞き覚えがあることが多い（0.3）。決め手は事実を聞くので本人なら高い。
+ */
+export const TARGETED_LIKELIHOODS = {
+  series: { own: 0.95, near: 0.3, other: 0.03 },
+  quote: { own: 0.65, near: 0.3, other: 0.03 },
+  decisive: { own: 0.92, near: 0.08, other: 0.03 },
+} as const;
+
+type SeriesEntry = { kind: 'series'; chars: ReadonlySet<string>; near: ReadonlySet<string>; probe: TargetedProbe };
+type TargetedEntry = SeriesEntry | { kind: 'quote' | 'decisive'; owner: string; probe: TargetedProbe };
+
+/** 質問key -> 作品やキャラに向けた質問。initBayesData の第3引数を省くと空のまま（聞かない）。 */
+let targetedByKey = new Map<string, TargetedEntry>();
+/** キャラid -> そのキャラに向けた質問（`quote`・`decisive`）。 */
+let targetedByCharacter = new Map<string, TargetedProbe[]>();
+/** キャラid -> そのキャラの作品の質問のkey（同じ作品のキャラかどうかを見る）。 */
+let seriesKeyOf = new Map<string, string>();
+let seriesEntries: readonly SeriesEntry[] = [];
+
+export function initBayesData(l: LikelihoodsFile, q: QuestionsRuntimeFile, t?: TargetedFile): void {
   likelihoods = l;
   questionIndex = new Map(l.questionIds.map((id, i) => [id, i]));
-  probeByKey = new Map<string, BayesProbe>(
-    q.questions.map((qq) => [qq.key, { key: qq.key, prompt: qq.prompt, reason: qq.reason as BayesProbe['reason'] }]),
+  probeByKey = new Map<string, TraitProbe>(
+    q.questions.map((qq) => [qq.key, { key: qq.key, prompt: qq.prompt, reason: qq.reason as TraitProbe['reason'] }]),
   );
   allProbes = q.questions.map((qq) => probeByKey.get(qq.key)!);
   modesByKey = new Map(q.questions.flatMap((qq) => (qq.modes === undefined ? [] : [[qq.key, qq.modes] as const])));
+
+  targetedByKey = new Map();
+  targetedByCharacter = new Map();
+  seriesKeyOf = new Map();
+  const series: SeriesEntry[] = [];
+  for (const s of t?.series ?? []) {
+    const probe: TargetedProbe = { key: s.key, prompt: s.prompt, reason: { axis: 'series', label: '作品', value: s.name } };
+    const entry: SeriesEntry = { kind: 'series', chars: new Set(s.chars), near: new Set(s.near ?? []), probe };
+    targetedByKey.set(s.key, entry);
+    series.push(entry);
+    // 作品の質問が先に並ぶ（build-targeted.mjs）。あとに並ぶシリーズのまとめの質問は「同じ作品」の基準にしない。
+    for (const id of s.chars) if (!seriesKeyOf.has(id)) seriesKeyOf.set(id, s.key);
+  }
+  seriesEntries = series;
+  for (const [owner, questions] of Object.entries(t?.characters ?? {})) {
+    const probes = questions.map((qq): TargetedProbe => ({
+      key: qq.key,
+      prompt: qq.prompt,
+      reason: { axis: qq.kind, label: qq.kind === 'quote' ? '台詞' : '決め手', value: '' },
+    }));
+    questions.forEach((qq, i) => targetedByKey.set(qq.key, { kind: qq.kind, owner, probe: probes[i] }));
+    targetedByCharacter.set(owner, probes);
+  }
+}
+
+/** 作品やキャラに向けた質問で、そのキャラを思い浮かべている人が「はい」と答える確率。 */
+function targetedLikelihood(entry: TargetedEntry, characterId: string): number {
+  if (entry.kind === 'series') {
+    const { own, near, other } = TARGETED_LIKELIHOODS.series;
+    return entry.chars.has(characterId) ? own : entry.near.has(characterId) ? near : other;
+  }
+  const { own, near, other } = TARGETED_LIKELIHOODS[entry.kind];
+  if (characterId === entry.owner) return own;
+  const series = seriesKeyOf.get(entry.owner);
+  return series !== undefined && series === seriesKeyOf.get(characterId) ? near : other;
 }
 
 /** その遊び方での、質問の指定（遊び方が無い・指定が無ければ undefined）。 */
@@ -74,6 +152,8 @@ function modeEntryOf(key: string, mode: QuestionMode | undefined): { skip?: true
 
 function likelihoodOf(characterId: string, questionKey: string): number {
   if (likelihoods === null) throw new Error('bayes.ts: initBayesData() より前に呼ばれた');
+  const targeted = targetedByKey.get(questionKey);
+  if (targeted !== undefined) return targetedLikelihood(targeted, characterId);
   const idx = questionIndex.get(questionKey);
   const arr = likelihoods.chars[characterId];
   if (idx === undefined || arr === undefined) {
@@ -186,6 +266,9 @@ export const TOP_K_BAYES = 5;
  *   上限まで聞いたら、そのまとまりは全部の段の候補から外す。
  * - `stop`: 止め方。`hardCap` は最初の推測を出すまでの質問数の上限、`bonusMax` は「いいえ」後の聞き直しの上限
  *   （`bayesShouldGuess`・`bayesShouldReguess` の最後の引数に方針を渡したときだけ効く）。
+ * - `seriesQuestions`: 作品の質問（R15-5）を `from` 問目から、1回のプレイで `max` 問まで。通常の段で、ほかの質問と手がかりの量で比べる。
+ * - `targetedQuestions`: 1位のキャラに向けた質問（台詞 R15-3・決め手 R15-4）。1位の事後確率が `minTop` 以上なら、`from` 問目から
+ *   通常の段より先に聞く。1回のプレイで `max` 問まで、同じキャラには `perCharacter` 問まで。
  */
 export type QuestionPolicy = {
   readonly forcedSlots: readonly { readonly at: number; readonly axes: readonly string[] }[];
@@ -194,6 +277,8 @@ export type QuestionPolicy = {
   readonly leadGroups?: readonly (readonly string[])[];
   readonly groupQuestionLimits?: readonly { readonly group: string; readonly max: number }[];
   readonly stop?: { readonly hardCap: number; readonly bonusMax: number };
+  readonly seriesQuestions?: { readonly from: number; readonly max: number };
+  readonly targetedQuestions?: { readonly from: number; readonly minTop: number; readonly max: number; readonly perCharacter: number };
 };
 
 /** 作品の質問（R11-C）の軸。 */
@@ -234,6 +319,8 @@ export const QUESTION_POLICIES: Readonly<Record<'default' | 'guess' | 'discover'
     forcedSlots: FORCED_TRAIT_SLOTS,
     groupLimits: [{ axes: ['era'], max: 2 }],
     stop: { hardCap: 30, bonusMax: 15 },
+    seriesQuestions: { from: 6, max: 4 },
+    targetedQuestions: { from: 6, minTop: 0.2, max: 5, perCharacter: 2 },
   },
   discover: {
     mode: 'discover',
@@ -243,6 +330,68 @@ export const QUESTION_POLICIES: Readonly<Record<'default' | 'guess' | 'discover'
     groupQuestionLimits: [{ group: 'detail', max: 2 }],
   },
 };
+
+/** 作品の質問のうち、手がかりの量を比べる数（全作品を毎回計算しないよう、事後確率の合計が半分に近い順に絞る）。 */
+const SERIES_CANDIDATES = 3;
+
+/** その問目で聞いてよい作品の質問のうち、手がかりになりそうなもの。 */
+function seriesCandidates(
+  posterior: ReadonlyMap<string, number>,
+  askedKeys: ReadonlySet<string>,
+  nextNumber: number,
+  policy: QuestionPolicy,
+): TargetedProbe[] {
+  const limit = policy.seriesQuestions;
+  if (limit === undefined || nextNumber < limit.from) return [];
+  const used = [...askedKeys].filter((key) => targetedByKey.get(key)?.kind === 'series').length;
+  if (used >= limit.max) return [];
+  const scored: { probe: TargetedProbe; distance: number }[] = [];
+  for (const entry of seriesEntries) {
+    if (askedKeys.has(entry.probe.key)) continue;
+    let mass = 0;
+    for (const id of entry.chars) mass += posterior.get(id) ?? 0;
+    scored.push({ probe: entry.probe, distance: Math.abs(mass - 0.5) });
+  }
+  return scored
+    .sort((a, b) => a.distance - b.distance || (a.probe.key < b.probe.key ? -1 : 1))
+    .slice(0, SERIES_CANDIDATES)
+    .map((s) => s.probe);
+}
+
+/** 1位のキャラに向けた質問。聞かない場面なら null。決め手を先に聞き、台詞は `rng` があれば乱択する。 */
+function pickTargetedProbe(
+  posterior: ReadonlyMap<string, number>,
+  askedKeys: ReadonlySet<string>,
+  nextNumber: number,
+  policy: QuestionPolicy,
+  rng: (() => number) | undefined,
+): TargetedProbe | null {
+  const limit = policy.targetedQuestions;
+  if (limit === undefined || nextNumber < limit.from) return null;
+  const used = [...askedKeys].filter((key) => {
+    const kind = targetedByKey.get(key)?.kind;
+    return kind === 'quote' || kind === 'decisive';
+  }).length;
+  if (used >= limit.max) return null;
+
+  let top: string | null = null;
+  let topP = -1;
+  for (const [id, p] of posterior) {
+    if (p > topP) {
+      top = id;
+      topP = p;
+    }
+  }
+  if (top === null || topP < limit.minTop) return null;
+  const probes = targetedByCharacter.get(top) ?? [];
+  const asked = probes.filter((probe) => askedKeys.has(probe.key)).length;
+  if (asked >= limit.perCharacter) return null;
+  const open = probes.filter((probe) => !askedKeys.has(probe.key));
+  const decisive = open.filter((probe) => probe.reason.axis === 'decisive');
+  const pool = decisive.length > 0 ? decisive : open;
+  if (pool.length === 0) return null;
+  return pool[rng === undefined ? 0 : Math.min(Math.floor(rng() * pool.length), pool.length - 1)];
+}
 
 /**
  * 次に聞くべきベイズ質問を選ぶ。classic の `nextProbe` と違い、作業集合を
@@ -254,6 +403,7 @@ export const QUESTION_POLICIES: Readonly<Record<'default' | 'guess' | 'discover'
  * 遊び方（`policy.mode`、R14）があれば、その遊び方で `skip` の質問は先頭・forcedSlots・通常のどの段でも聞かず、
  * 先頭は `leadGroups`、`groupQuestionLimits` の上限に達したまとまりは全部の段の候補から外す。
  * 返す質問の文は、`modes[policy.mode].prompt` があればそれ（`probeByKey` の中身は書き換えず、写しを返す）。
+ * `policy.targetedQuestions` があれば先頭の段のあとで1位のキャラに向けた質問を、`policy.seriesQuestions` があれば通常の段で作品の質問も候補にする（R15）。
  */
 export function bayesNextProbe(
   dataset: Dataset,
@@ -309,6 +459,9 @@ export function bayesNextProbe(
     }
   }
 
+  const aimed = pickTargetedProbe(posterior, askedKeys, nextNumber, policy, opts?.rng);
+  if (aimed !== null) return aimed;
+
   const slot = policy.forcedSlots.find((s) => s.at === nextNumber);
   if (slot !== undefined && !askedAxes.some((axis) => axis !== undefined && slot.axes.includes(axis))) {
     let forced: { probe: BayesProbe; gain: number } | null = null;
@@ -328,6 +481,10 @@ export function bayesNextProbe(
   const candidates: { probe: BayesProbe; gain: number }[] = [];
   for (const probe of allProbes) {
     if (!askable(probe) || closedAxes.has(probe.reason.axis)) continue;
+    const gain = expectedGain(posterior, probe.key);
+    if (gain >= MIN_GAIN_BAYES) candidates.push({ probe, gain });
+  }
+  for (const probe of seriesCandidates(posterior, askedKeys, nextNumber, policy)) {
     const gain = expectedGain(posterior, probe.key);
     if (gain >= MIN_GAIN_BAYES) candidates.push({ probe, gain });
   }
