@@ -1,4 +1,4 @@
-import { initBayesData, type LikelihoodsFile, type QuestionsRuntimeFile } from '../engine/bayes';
+import { initBayesData, type LikelihoodsFile, type QuestionsRuntimeFile, type TargetedFile } from '../engine/bayes';
 import { survivors, type Dataset } from '../engine/recommend';
 import { charactersSchema, supplyFileSchema } from './schema';
 
@@ -24,11 +24,12 @@ async function fetchJson(name: string): Promise<unknown> {
 export type CharaData = { dataset: Dataset };
 
 export async function loadCharaData(): Promise<CharaData> {
-  const [charactersRaw, supplyRaw, likelihoodsRaw, questionsRaw] = await Promise.all([
+  const [charactersRaw, supplyRaw, likelihoodsRaw, questionsRaw, targetedRaw] = await Promise.all([
     fetchJson('characters.json'),
     fetchJson('supply.json'),
     fetchJson('likelihoods.json'),
     fetchJson('questions.runtime.json'),
+    fetchJson('questions.targeted.json'),
   ]);
 
   // characters/supply は移植元にzodスキーマがあるのでそのまま流用する。
@@ -36,14 +37,18 @@ export async function loadCharaData(): Promise<CharaData> {
   const characters = charactersSchema.parse(charactersRaw);
   const supply = supplyFileSchema.parse(supplyRaw);
 
-  // likelihoods/questions.runtime は生成物でzodスキーマが無い。構造だけ最小限確認する。
+  // likelihoods/questions.runtime/questions.targeted は生成物でzodスキーマが無い。構造だけ最小限確認する。
   const likelihoods = likelihoodsRaw as LikelihoodsFile;
   const questions = questionsRaw as QuestionsRuntimeFile;
+  const targeted = targetedRaw as TargetedFile;
   if (!Array.isArray(likelihoods?.questionIds) || typeof likelihoods?.chars !== 'object') {
     throw new Error('likelihoods.json の構造が想定と異なります');
   }
   if (!Array.isArray(questions?.questions) || questions.questions.length === 0) {
     throw new Error('questions.runtime.json の構造が想定と異なります');
+  }
+  if (!Array.isArray(targeted?.series) || typeof targeted?.characters !== 'object') {
+    throw new Error('questions.targeted.json の構造が想定と異なります');
   }
 
   // ファイル間のズレ検出。推薦対象になりうるキャラが likelihoods に無いと
@@ -69,6 +74,6 @@ export async function loadCharaData(): Promise<CharaData> {
     throw new Error(`likelihoods.json に無い質問があります: ${orphanQuestions.slice(0, 5).join(', ')}`);
   }
 
-  initBayesData(likelihoods, questions);
+  initBayesData(likelihoods, questions, targeted);
   return { dataset: { characters, supply } };
 }
