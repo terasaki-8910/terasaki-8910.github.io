@@ -1,13 +1,167 @@
 {
-  "lastUpdated": "2026-11-03T00:10:17.039Z",
+  "lastUpdated": "2026-11-03T13:12:47.001Z",
   "tracks": [
+    {
+      "id": "4MnCYguz7oO1NmZ4ZQulEn",
+      "name": "灼熱スイッチ",
+      "artist": "雀が原中学卓球部",
+      "album": "灼熱スイッチ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27339bec7ad804f2a1699fb9477",
+      "playedAt": "2026-11-03T05:23:29.089Z",
+      "spotifyUrl": "https://open.spotify.com/track/4MnCYguz7oO1NmZ4ZQulEn",
+      "duration": 282893,
+      "previewUrl": ""
+    },
+    {
+      "id": "0ZnvQc8Ql8foFq4aprS3ke",
+      "name": "明日の私に幸あれ",
+      "artist": "NANAOAKARI",
+      "album": "明日の私に幸あれ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f1ee1e68197e721a0edb69d1",
+      "playedAt": "2026-11-03T05:18:45.560Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ZnvQc8Ql8foFq4aprS3ke",
+      "duration": 214627,
+      "previewUrl": ""
+    },
+    {
+      "id": "53Uy2m8yielFV4bkGBybhZ",
+      "name": "全力☆Summer!",
+      "artist": "angela",
+      "album": "Beyond",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c19ab45ebe6bf64b2faf2324",
+      "playedAt": "2026-11-03T05:15:10.362Z",
+      "spotifyUrl": "https://open.spotify.com/track/53Uy2m8yielFV4bkGBybhZ",
+      "duration": 233893,
+      "previewUrl": ""
+    },
+    {
+      "id": "5viFjDGTnrApmUY5c8qkfw",
+      "name": "A Whole New World",
+      "artist": "Mena Massoud, Naomi Scott",
+      "album": "Aladdin (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739986d69836eac008a927b032",
+      "playedAt": "2026-11-03T05:11:15.966Z",
+      "spotifyUrl": "https://open.spotify.com/track/5viFjDGTnrApmUY5c8qkfw",
+      "duration": 175593,
+      "previewUrl": ""
+    },
+    {
+      "id": "2tlFYDs8Uql85FKK5kL7ha",
+      "name": "Don't say \"lazy\"",
+      "artist": "平沢唯(CV:豊崎愛生), 秋山澪(CV:日笠陽子), 桜高軽音部, 田井中律(CV:佐藤聡美), 琴吹紬(CV:寿美菜子)",
+      "album": "Don't say \"lazy\"",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f70266ab6977203c7aecfa83",
+      "playedAt": "2026-11-03T05:08:19.806Z",
+      "spotifyUrl": "https://open.spotify.com/track/2tlFYDs8Uql85FKK5kL7ha",
+      "duration": 263973,
+      "previewUrl": ""
+    },
+    {
+      "id": "0Jcx9VqsO4t20gYeznW7Uq",
+      "name": "アカシア",
+      "artist": "BUMP OF CHICKEN",
+      "album": "アカシア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330d0305f07116fcd0c65963b",
+      "playedAt": "2026-11-03T05:03:55.370Z",
+      "spotifyUrl": "https://open.spotify.com/track/0Jcx9VqsO4t20gYeznW7Uq",
+      "duration": 262106,
+      "previewUrl": ""
+    },
+    {
+      "id": "0ASw64KfzSUtChQDfzC906",
+      "name": "脳漿炸裂ガール 2015ver.",
+      "artist": "rerulili",
+      "album": "厨病激発ボーイ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a34d6ee798d20ff79b23cad3",
+      "playedAt": "2026-11-03T04:54:54.800Z",
+      "spotifyUrl": "https://open.spotify.com/track/0ASw64KfzSUtChQDfzC906",
+      "duration": 192440,
+      "previewUrl": ""
+    },
+    {
+      "id": "0kCRrfk1WV7QMnlxqhpwV9",
+      "name": "ラビットホール",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-11-03T04:51:42.067Z",
+      "spotifyUrl": "https://open.spotify.com/track/0kCRrfk1WV7QMnlxqhpwV9",
+      "duration": 158866,
+      "previewUrl": ""
+    },
+    {
+      "id": "6HznFPNdvbxgzm5jJyNlwp",
+      "name": "オーバーライド",
+      "artist": "Yoshida Yasei",
+      "album": "オーバーライド",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27330310e1c6f71500cbbf0ad26",
+      "playedAt": "2026-11-03T04:49:02.474Z",
+      "spotifyUrl": "https://open.spotify.com/track/6HznFPNdvbxgzm5jJyNlwp",
+      "duration": 138533,
+      "previewUrl": ""
+    },
+    {
+      "id": "5ALRT96oaGuX7VHySBLbQu",
+      "name": "神っぽいな",
+      "artist": "PinocchioP",
+      "album": "神っぽいな",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733fd63f3f112ba90a0191a084",
+      "playedAt": "2026-11-03T04:46:43.474Z",
+      "spotifyUrl": "https://open.spotify.com/track/5ALRT96oaGuX7VHySBLbQu",
+      "duration": 203760,
+      "previewUrl": ""
+    },
+    {
+      "id": "7996vwXg0kRNxpIfa4zNEm",
+      "name": "目撃！テト31世 (feat. 重音テト & 雨衣)",
+      "artist": "はろける, Teto Kasane, 雨衣",
+      "album": "目撃！テト31世 (feat. 重音テト & 雨衣)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a53b5e477f41d9e25a2ba1a5",
+      "playedAt": "2026-11-03T04:43:19.380Z",
+      "spotifyUrl": "https://open.spotify.com/track/7996vwXg0kRNxpIfa4zNEm",
+      "duration": 141871,
+      "previewUrl": ""
+    },
+    {
+      "id": "5lojBXokpBOfuTDly9Bksx",
+      "name": "KING",
+      "artist": "Kanaria",
+      "album": "KING",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27319bb3ebaa41cb4899f2e738a",
+      "playedAt": "2026-11-03T04:40:56.846Z",
+      "spotifyUrl": "https://open.spotify.com/track/5lojBXokpBOfuTDly9Bksx",
+      "duration": 134750,
+      "previewUrl": ""
+    },
+    {
+      "id": "6J3pPfXLujwsWQpvR6XMgC",
+      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
+      "artist": "TAK, Hatsune Miku, Kasane Teto",
+      "album": "PPPP",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
+      "playedAt": "2026-11-03T04:38:41.511Z",
+      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
+      "duration": 154835,
+      "previewUrl": ""
+    },
+    {
+      "id": "7hEA61Rpfo7mYP3gr0vT79",
+      "name": "惑星ループ",
+      "artist": "Nayutalien",
+      "album": "ナユタン星からの物体Ｙ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363cc1e7ee50ed3854f40c367",
+      "playedAt": "2026-11-03T04:36:06.169Z",
+      "spotifyUrl": "https://open.spotify.com/track/7hEA61Rpfo7mYP3gr0vT79",
+      "duration": 195176,
+      "previewUrl": ""
+    },
     {
       "id": "1siPHjtl65gjGUeznUQQ7Z",
       "name": "ルパン三世のテーマ’78",
       "artist": "Yuji Ohno, Japan Maritime Self-Defense Force Band,Tokyo, 手塚裕之",
       "album": "響け！ブラバン・ヒーローズ",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2733129ad6139f2317a58e9673b",
-      "playedAt": "2026-11-02T16:19:40.776Z",
+      "playedAt": "2026-11-03T04:03:50.553Z",
       "spotifyUrl": "https://open.spotify.com/track/1siPHjtl65gjGUeznUQQ7Z",
       "duration": 215640,
       "previewUrl": ""
@@ -145,17 +299,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7996vwXg0kRNxpIfa4zNEm",
-      "name": "目撃！テト31世 (feat. 重音テト & 雨衣)",
-      "artist": "はろける, Teto Kasane, 雨衣",
-      "album": "目撃！テト31世 (feat. 重音テト & 雨衣)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a53b5e477f41d9e25a2ba1a5",
-      "playedAt": "2026-11-02T14:43:32.466Z",
-      "spotifyUrl": "https://open.spotify.com/track/7996vwXg0kRNxpIfa4zNEm",
-      "duration": 141871,
-      "previewUrl": ""
-    },
-    {
       "id": "1WZGyYe1PDvQ5aaET6qILe",
       "name": "金星のダンス",
       "artist": "Nayutalien",
@@ -186,149 +329,6 @@
       "playedAt": "2026-11-02T14:06:53.590Z",
       "spotifyUrl": "https://open.spotify.com/track/2rL6MSMZSZg1muJvtMHbBe",
       "duration": 217866,
-      "previewUrl": ""
-    },
-    {
-      "id": "2j1r3ubqqxuoTFaPVnTV1j",
-      "name": "ANIMA",
-      "artist": "ReoNa",
-      "album": "unknown",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273bac2f4b2afb34252fd3d0565",
-      "playedAt": "2026-11-02T14:03:11.096Z",
-      "spotifyUrl": "https://open.spotify.com/track/2j1r3ubqqxuoTFaPVnTV1j",
-      "duration": 269120,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ebceNRVeFRFpd4qLENYpO",
-      "name": "名前のない怪物",
-      "artist": "EGOIST",
-      "album": "名前のない怪物",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b35137a75245e101759a6a66",
-      "playedAt": "2026-11-02T13:58:39.791Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ebceNRVeFRFpd4qLENYpO",
-      "duration": 317266,
-      "previewUrl": ""
-    },
-    {
-      "id": "0EbUWbDShy8Uw93gPo1WhG",
-      "name": "とまどい→レシピ",
-      "artist": "みかくにんぐッ!",
-      "album": "とまどい→レシピ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ff091e1a4f691cdc3df8d871",
-      "playedAt": "2026-11-02T13:53:22.038Z",
-      "spotifyUrl": "https://open.spotify.com/track/0EbUWbDShy8Uw93gPo1WhG",
-      "duration": 272480,
-      "previewUrl": ""
-    },
-    {
-      "id": "5Wg6U4mLyjJj8ApPkWHBKB",
-      "name": "Believe",
-      "artist": "Folder 5",
-      "album": "HYPER GROOVE 1",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b0c63cf351d4883ae5d4af4",
-      "playedAt": "2026-11-02T13:48:47.790Z",
-      "spotifyUrl": "https://open.spotify.com/track/5Wg6U4mLyjJj8ApPkWHBKB",
-      "duration": 226700,
-      "previewUrl": ""
-    },
-    {
-      "id": "4ejVSv31daoRyDMffmVT3k",
-      "name": "かくしん的☆めたまるふぉ〜ぜっ!",
-      "artist": "土間うまる(CV:田中あいみ)",
-      "album": "かくしん的☆めたまるふぉ〜ぜっ!",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273dfc9600004dfcf8fc830a325",
-      "playedAt": "2026-11-02T13:44:58.237Z",
-      "spotifyUrl": "https://open.spotify.com/track/4ejVSv31daoRyDMffmVT3k",
-      "duration": 211969,
-      "previewUrl": ""
-    },
-    {
-      "id": "0K8HZrpxySH9R001UPv8H5",
-      "name": "青い栞",
-      "artist": "Galileo Galilei",
-      "album": "サークルゲーム",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27302536be14625a6688fa82466",
-      "playedAt": "2026-11-02T13:41:25.491Z",
-      "spotifyUrl": "https://open.spotify.com/track/0K8HZrpxySH9R001UPv8H5",
-      "duration": 338960,
-      "previewUrl": ""
-    },
-    {
-      "id": "7onucgU6HHFbtZ9r0jXgmy",
-      "name": "DREAM SOLISTER",
-      "artist": "TRUE",
-      "album": "Joy Heart",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a421f065e70c579b1eacf8a9",
-      "playedAt": "2026-11-02T13:35:43.189Z",
-      "spotifyUrl": "https://open.spotify.com/track/7onucgU6HHFbtZ9r0jXgmy",
-      "duration": 300533,
-      "previewUrl": ""
-    },
-    {
-      "id": "09J1T3GnieB0DZGSxhfEn2",
-      "name": "猫祭り",
-      "artist": "イロドリミドリ",
-      "album": "推薦",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27355626fd3f5fa2640c27f568e",
-      "playedAt": "2026-11-02T13:22:11.355Z",
-      "spotifyUrl": "https://open.spotify.com/track/09J1T3GnieB0DZGSxhfEn2",
-      "duration": 181106,
-      "previewUrl": ""
-    },
-    {
-      "id": "1R8jQZyah9xfIj7tqGojcf",
-      "name": "アイデンティティ",
-      "artist": "Mikio Sakai",
-      "album": "アイデンティティ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732c34779bce83da6f9302ff66",
-      "playedAt": "2026-11-02T12:36:19.099Z",
-      "spotifyUrl": "https://open.spotify.com/track/1R8jQZyah9xfIj7tqGojcf",
-      "duration": 239333,
-      "previewUrl": ""
-    },
-    {
-      "id": "0AiRpK3u9OeM37Wsdkk8eJ",
-      "name": "創聖のアクエリオン",
-      "artist": "AKINO",
-      "album": "「創聖のアクエリオン」オープニングテーマ　創聖のアクエリオン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273617299c3d50e3181979f0395",
-      "playedAt": "2026-11-02T12:32:19.302Z",
-      "spotifyUrl": "https://open.spotify.com/track/0AiRpK3u9OeM37Wsdkk8eJ",
-      "duration": 283633,
-      "previewUrl": ""
-    },
-    {
-      "id": "5LChvDjlhPXmp1DhIfejxv",
-      "name": "スラッグ溪谷の朝",
-      "artist": "Joe Hisaishi",
-      "album": "天空の城ラピュタ サウンドトラック ～飛行石の謎～",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c6bafda9334bda20e2e5e447",
-      "playedAt": "2026-11-02T07:15:51.923Z",
-      "spotifyUrl": "https://open.spotify.com/track/5LChvDjlhPXmp1DhIfejxv",
-      "duration": 184293,
-      "previewUrl": ""
-    },
-    {
-      "id": "6NJQpFNkDCMaRBogIi9sOI",
-      "name": "Bellbottoms",
-      "artist": "The Jon Spencer Blues Explosion",
-      "album": "Orange",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cda41c43601ec82ed81fd3a",
-      "playedAt": "2026-11-02T07:12:47.113Z",
-      "spotifyUrl": "https://open.spotify.com/track/6NJQpFNkDCMaRBogIi9sOI",
-      "duration": 317986,
-      "previewUrl": ""
-    },
-    {
-      "id": "5VZn5Gsn2ckFJ2bmRo9GPe",
-      "name": "ルパン三世のテーマ - 「ルパン三世のテーマ'78」シングル・ヴァージョン",
-      "artist": "Yuji Ohno, ユー & ザ・エクスプロージョン・バンド",
-      "album": "ルパン三世 オリジナル・サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d84206cdf9b755537f3123c8",
-      "playedAt": "2026-11-02T07:07:28.621Z",
-      "spotifyUrl": "https://open.spotify.com/track/5VZn5Gsn2ckFJ2bmRo9GPe",
-      "duration": 204626,
       "previewUrl": ""
     }
   ],
