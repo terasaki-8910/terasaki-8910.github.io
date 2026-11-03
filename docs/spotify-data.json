@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-11-03T13:12:47.001Z",
+  "lastUpdated": "2026-11-03T22:40:27.098Z",
   "tracks": [
+    {
+      "id": "1489XasC9uGNxGr3rXkLnX",
+      "name": "courage",
+      "artist": "Haruka Tomatsu",
+      "album": "courage",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27321a782fcb80bca6f74c9bf24",
+      "playedAt": "2026-11-03T14:47:40.217Z",
+      "spotifyUrl": "https://open.spotify.com/track/1489XasC9uGNxGr3rXkLnX",
+      "duration": 253120,
+      "previewUrl": ""
+    },
     {
       "id": "4MnCYguz7oO1NmZ4ZQulEn",
       "name": "灼熱スイッチ",
@@ -318,17 +329,6 @@
       "playedAt": "2026-11-02T14:39:32.127Z",
       "spotifyUrl": "https://open.spotify.com/track/3wyWRt8myEL5o432jUXioi",
       "duration": 282586,
-      "previewUrl": ""
-    },
-    {
-      "id": "2rL6MSMZSZg1muJvtMHbBe",
-      "name": "ハレ晴レユカイ～Ver.涼宮ハルヒ～",
-      "artist": "涼宮ハルヒ (CV.平野 綾)",
-      "album": "涼宮ハルヒの憂鬱 キャラクターソングVol.1 涼宮ハルヒ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273237d6ee5f25234e9e71a46b2",
-      "playedAt": "2026-11-02T14:06:53.590Z",
-      "spotifyUrl": "https://open.spotify.com/track/2rL6MSMZSZg1muJvtMHbBe",
-      "duration": 217866,
       "previewUrl": ""
     }
   ],
