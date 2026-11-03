@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-03T00:52:36.989Z",
+  "lastUpdated": "2026-11-03T14:00:25.046Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -371,7 +371,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/4ba73dc8669d5e7090c3efa5b677f34f262049d9.jpg",
           "unlockedAt": "2026-08-15T21:33:57.000Z",
-          "percent": 29
+          "percent": 28.9
         },
         {
           "name": "To Live or Die in Los Santos",
@@ -451,7 +451,7 @@
           "description": "Caught 90 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
           "unlockedAt": "2024-02-02T11:36:25.000Z",
-          "percent": 45.1
+          "percent": 45.2
         },
         {
           "name": "Hillside Sovereign",
