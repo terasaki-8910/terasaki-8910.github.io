@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-03T23:11:46.007Z",
+  "lastUpdated": "2026-11-04T23:32:31.164Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,7 +11,7 @@
       "appid": 2717220,
       "name": "雀魂 -じゃんたま-",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtime2weeksMinutes": 149,
+      "playtime2weeksMinutes": 122,
       "playtimeForeverMinutes": 664
     }
   ],
@@ -335,7 +335,7 @@
           "description": "Deal a total of 100K or more damage with card effects in Ranked/Event Duels",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1449850/1eda4055bf77c7820f98ebc0ec3440e6e1ef25e5.jpg",
           "unlockedAt": "2023-04-24T13:27:12.000Z",
-          "percent": 9.5
+          "percent": 9.6
         },
         {
           "name": "Ultra Burst",
@@ -371,7 +371,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/271590/4ba73dc8669d5e7090c3efa5b677f34f262049d9.jpg",
           "unlockedAt": "2026-08-15T21:33:57.000Z",
-          "percent": 28.9
+          "percent": 29
         },
         {
           "name": "To Live or Die in Los Santos",
@@ -451,7 +451,7 @@
           "description": "Caught 90 kinds of Pals",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1623730/1e563b90a76ab22e938ddac69e039311cd129ab8.jpg",
           "unlockedAt": "2024-02-02T11:36:25.000Z",
-          "percent": 45.2
+          "percent": 45.1
         },
         {
           "name": "Hillside Sovereign",
