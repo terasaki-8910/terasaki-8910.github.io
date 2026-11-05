@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T06:26:40.134Z",
+  "lastUpdated": "2026-11-05T19:50:59.066Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -11,7 +11,7 @@
       "appid": 2717220,
       "name": "雀魂 -じゃんたま-",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtime2weeksMinutes": 122,
+      "playtime2weeksMinutes": 55,
       "playtimeForeverMinutes": 664
     }
   ],
@@ -400,14 +400,14 @@
           "description": "Escape from jail",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/9fa4e8043c60916d3714fa96fa8eb9bd46901c22.jpg",
           "unlockedAt": "2025-06-17T03:57:02.000Z",
-          "percent": 8.8
+          "percent": 8.9
         },
         {
           "name": "Expert",
           "description": "Reach Level 25",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/489830/2162cee6a1a297e102e6ef7c5e60d936cbcc28a1.jpg",
           "unlockedAt": "2025-06-17T03:49:35.000Z",
-          "percent": 28.3
+          "percent": 28.4
         }
       ]
     },
