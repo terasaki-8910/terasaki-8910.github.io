@@ -1,20 +1,12 @@
 {
-  "lastUpdated": "2026-11-09T05:59:44.933Z",
+  "lastUpdated": "2026-11-09T15:58:34.974Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
     "profileUrl": "https://steamcommunity.com/id/modadadadaaaagnsb/"
   },
   "ownedGamesCount": 51,
-  "recentlyPlayed": [
-    {
-      "appid": 2717220,
-      "name": "雀魂 -じゃんたま-",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtime2weeksMinutes": 40,
-      "playtimeForeverMinutes": 664
-    }
-  ],
+  "recentlyPlayed": [],
   "library": [
     {
       "appid": 1449850,
@@ -487,7 +479,7 @@
           "description": null,
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/990080/c54dcf12698edd975e71c525185854c635f60941.jpg",
           "unlockedAt": "2026-09-12T08:21:27.000Z",
-          "percent": 71.2
+          "percent": 71.1
         },
         {
           "name": "Troll with the Punches",
