@@ -1,15 +1,125 @@
 {
-  "lastUpdated": "2026-11-09T14:39:23.449Z",
+  "lastUpdated": "2026-11-10T00:57:43.410Z",
   "tracks": [
+    {
+      "id": "1chTElozugAFsW2x03IS6d",
+      "name": "キミに100パーセント",
+      "artist": "Kyary Pamyu Pamyu",
+      "album": "なんだこれくしょん",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b36f8161698dc6b2976afae7",
+      "playedAt": "2026-11-10T00:56:03.175Z",
+      "spotifyUrl": "https://open.spotify.com/track/1chTElozugAFsW2x03IS6d",
+      "duration": 200253,
+      "previewUrl": ""
+    },
+    {
+      "id": "73rdU71fLEd0nW7HENRhKF",
+      "name": "キュートなキューたい",
+      "artist": "CUTIE STREET",
+      "album": "キュートなキューたい / ナイスだね",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273464ee42b758b0c05591a4b30",
+      "playedAt": "2026-11-10T00:52:42.373Z",
+      "spotifyUrl": "https://open.spotify.com/track/73rdU71fLEd0nW7HENRhKF",
+      "duration": 236000,
+      "previewUrl": ""
+    },
+    {
+      "id": "407GWcB9QwD3aiX0M7RCFT",
+      "name": "GYB!!",
+      "artist": "Yu Serizawa, 高瀬くるみ, 久保田未夢, 高柳知葉, 香里有佐",
+      "album": "SHINEPOST Character Song Collection (TVアニメ「シャインポスト」)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273834f5b87ae6553ea296a05c6",
+      "playedAt": "2026-11-10T00:48:47.938Z",
+      "spotifyUrl": "https://open.spotify.com/track/407GWcB9QwD3aiX0M7RCFT",
+      "duration": 218573,
+      "previewUrl": ""
+    },
+    {
+      "id": "5g24szGiFbRVEZQC1luDmW",
+      "name": "かわいいだけじゃだめですか？",
+      "artist": "CUTIE STREET",
+      "album": "かわいいだけじゃだめですか？",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731612e1bb105c3489fbe8219e",
+      "playedAt": "2026-11-10T00:45:08.860Z",
+      "spotifyUrl": "https://open.spotify.com/track/5g24szGiFbRVEZQC1luDmW",
+      "duration": 250253,
+      "previewUrl": ""
+    },
+    {
+      "id": "4kTh1g4WR9n2Rsnm8reLNz",
+      "name": "ハッピーミルフィーユ",
+      "artist": "初星学園, NanahoshiKangengakudan, 篠澤 広, 十王星南, 姫崎莉波",
+      "album": "ハッピーミルフィーユ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273292319a2a665a74dc151fd71",
+      "playedAt": "2026-11-10T00:40:58.137Z",
+      "spotifyUrl": "https://open.spotify.com/track/4kTh1g4WR9n2Rsnm8reLNz",
+      "duration": 195640,
+      "previewUrl": ""
+    },
+    {
+      "id": "4tjRvHjQu2fK8uEgXtjiTN",
+      "name": "グリズリーに襲われたら♡",
+      "artist": "kamiyado",
+      "album": "グリズリーに襲われたら♡",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c52f5cc890d9a4e61cee252",
+      "playedAt": "2026-11-10T00:37:42.031Z",
+      "spotifyUrl": "https://open.spotify.com/track/4tjRvHjQu2fK8uEgXtjiTN",
+      "duration": 246936,
+      "previewUrl": ""
+    },
+    {
+      "id": "5XsPjGw1ADBcVU0i7mwNb1",
+      "name": "Campus mode!!",
+      "artist": "初星学園",
+      "album": "Campus mode!!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27307a3ffd81272310aa692fdf9",
+      "playedAt": "2026-11-10T00:33:34.039Z",
+      "spotifyUrl": "https://open.spotify.com/track/5XsPjGw1ADBcVU0i7mwNb1",
+      "duration": 260015,
+      "previewUrl": ""
+    },
+    {
+      "id": "2le4lZquBURJYS6TcdAZdx",
+      "name": "絶対王者チョコレート",
+      "artist": "ゆらゆらシスターズ",
+      "album": "絶対王者チョコレート",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273897983c4df074fccdd869edf",
+      "playedAt": "2026-11-10T00:29:13.546Z",
+      "spotifyUrl": "https://open.spotify.com/track/2le4lZquBURJYS6TcdAZdx",
+      "duration": 208223,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WrytCYNqsPMgtpTpd9p7j",
+      "name": "古今東西ちょちょいのちょい - 花海咲季・月村手毬・藤田ことね ver.",
+      "artist": "初星学園, 大澤めい, 花海咲季, 月村手毬, 藤田ことね",
+      "album": "古今東西ちょちょいのちょい (花海咲季・月村手毬・藤田ことね ver.)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6a181f3786d6c82086925",
+      "playedAt": "2026-11-10T00:25:38.920Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WrytCYNqsPMgtpTpd9p7j",
+      "duration": 230766,
+      "previewUrl": ""
+    },
     {
       "id": "5SXsXjVJCWeJuf7FHvgBYR",
       "name": "The Avengers",
       "artist": "Alan Silvestri",
       "album": "The Avengers (Original Motion Picture Soundtrack)",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b273b0b9aaf0ef903add8f96ff6e",
-      "playedAt": "2026-11-09T13:50:38.856Z",
+      "playedAt": "2026-11-10T00:21:23.187Z",
       "spotifyUrl": "https://open.spotify.com/track/5SXsXjVJCWeJuf7FHvgBYR",
       "duration": 123360,
+      "previewUrl": ""
+    },
+    {
+      "id": "0OVtnS3l4vThGxkdqCxN6K",
+      "name": "Portals",
+      "artist": "Alan Silvestri",
+      "album": "Avengers: Endgame (Original Motion Picture Soundtrack)",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ba70a3f1cc9aebbbc1fdfee1",
+      "playedAt": "2026-11-10T00:21:09.702Z",
+      "spotifyUrl": "https://open.spotify.com/track/0OVtnS3l4vThGxkdqCxN6K",
+      "duration": 197213,
       "previewUrl": ""
     },
     {
@@ -219,116 +329,6 @@
       "playedAt": "2026-11-09T12:53:50.801Z",
       "spotifyUrl": "https://open.spotify.com/track/2Xtsv7BUMrNodQWH2JPOc0",
       "duration": 555000,
-      "previewUrl": ""
-    },
-    {
-      "id": "30lXCrnKs5TJJOuSVwiQn1",
-      "name": "Zoltraak",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
-      "playedAt": "2026-11-09T12:44:35.273Z",
-      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
-      "duration": 140664,
-      "previewUrl": ""
-    },
-    {
-      "id": "4WNU8rNjMnp3NbrUF80aqT",
-      "name": "Walt Disney Pictures - Cover Version",
-      "artist": "Cinescore",
-      "album": "The Film Studio Fanfare Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
-      "playedAt": "2026-11-09T12:42:14.103Z",
-      "spotifyUrl": "https://open.spotify.com/track/4WNU8rNjMnp3NbrUF80aqT",
-      "duration": 34289,
-      "previewUrl": ""
-    },
-    {
-      "id": "1n8NKQRg8LVHy7oUhUgbFF",
-      "name": "Hedwig's Theme",
-      "artist": "John Williams",
-      "album": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27313f982aa5c43146c3d2c1964",
-      "playedAt": "2026-11-09T12:41:39.310Z",
-      "spotifyUrl": "https://open.spotify.com/track/1n8NKQRg8LVHy7oUhUgbFF",
-      "duration": 309093,
-      "previewUrl": ""
-    },
-    {
-      "id": "6NJQpFNkDCMaRBogIi9sOI",
-      "name": "Bellbottoms",
-      "artist": "The Jon Spencer Blues Explosion",
-      "album": "Orange",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736cda41c43601ec82ed81fd3a",
-      "playedAt": "2026-11-09T12:36:29.756Z",
-      "spotifyUrl": "https://open.spotify.com/track/6NJQpFNkDCMaRBogIi9sOI",
-      "duration": 317986,
-      "previewUrl": ""
-    },
-    {
-      "id": "0YGPxxFKlNde0V2nSq6FJi",
-      "name": "The Throne Room and End Title (From \"Star Wars\")",
-      "artist": "John Williams, Charles Gerhardt, National Philharmonic Orchestra",
-      "album": "Star Wars & Return of the Jedi",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27380f0183e95d1ab70eec8702c",
-      "playedAt": "2026-11-09T12:31:11.284Z",
-      "spotifyUrl": "https://open.spotify.com/track/0YGPxxFKlNde0V2nSq6FJi",
-      "duration": 483293,
-      "previewUrl": ""
-    },
-    {
-      "id": "08QaHlMPWuO5PUxjl61bXn",
-      "name": "He's a Pirate",
-      "artist": "Klaus Badelt",
-      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27338786c7492ac252797bb2648",
-      "playedAt": "2026-11-09T12:23:07.392Z",
-      "spotifyUrl": "https://open.spotify.com/track/08QaHlMPWuO5PUxjl61bXn",
-      "duration": 90426,
-      "previewUrl": ""
-    },
-    {
-      "id": "63toFNYr6cHaxMmhd2QmzQ",
-      "name": "Can You Dig It (Iron Man 3 Main Titles)",
-      "artist": "Brian Tyler",
-      "album": "Iron Man 3 (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c28c36e39012cc8edf813196",
-      "playedAt": "2026-11-09T12:21:36.472Z",
-      "spotifyUrl": "https://open.spotify.com/track/63toFNYr6cHaxMmhd2QmzQ",
-      "duration": 162200,
-      "previewUrl": ""
-    },
-    {
-      "id": "1FL7eUG80aeUeyMO2N4btN",
-      "name": "Mission: Impossible Theme",
-      "artist": "Michael Giacchino",
-      "album": "Mission: Impossible III (Music From The Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b85f6d3142ef01d48b94480e",
-      "playedAt": "2026-11-09T12:18:53.814Z",
-      "spotifyUrl": "https://open.spotify.com/track/1FL7eUG80aeUeyMO2N4btN",
-      "duration": 51800,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tE3p4vIwoqUZLkKF2PNeB",
-      "name": "Interstellar Main Theme (From \"Interstellar\")",
-      "artist": "Geek Music",
-      "album": "Interstellar Main Theme (From \"Interstellar\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f72550703b6302addfc9959",
-      "playedAt": "2026-11-09T12:18:01.531Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tE3p4vIwoqUZLkKF2PNeB",
-      "duration": 243209,
-      "previewUrl": ""
-    },
-    {
-      "id": "5r7egnfTIQjaKSGREhIky9",
-      "name": "Formula 1 Theme",
-      "artist": "Brian Tyler",
-      "album": "Formula 1 Theme",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273873a7854fcfe9fbf1ea1923d",
-      "playedAt": "2026-11-09T12:13:57.738Z",
-      "spotifyUrl": "https://open.spotify.com/track/5r7egnfTIQjaKSGREhIky9",
-      "duration": 194351,
       "previewUrl": ""
     }
   ],
