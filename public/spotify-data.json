@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-11-10T00:57:43.410Z",
+  "lastUpdated": "2026-11-10T13:56:00.748Z",
   "tracks": [
+    {
+      "id": "2jtI8cQPtIiV9u5OXESTPm",
+      "name": "ワンルームシュガーライフ",
+      "artist": "NANAOAKARI",
+      "album": "フライングベスト〜知らないの？巷で噂のダメ天使〜",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734669f677e8be828652297606",
+      "playedAt": "2026-11-10T13:16:20.375Z",
+      "spotifyUrl": "https://open.spotify.com/track/2jtI8cQPtIiV9u5OXESTPm",
+      "duration": 168000,
+      "previewUrl": ""
+    },
+    {
+      "id": "09J1T3GnieB0DZGSxhfEn2",
+      "name": "猫祭り",
+      "artist": "イロドリミドリ",
+      "album": "推薦",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27355626fd3f5fa2640c27f568e",
+      "playedAt": "2026-11-10T13:11:54.126Z",
+      "spotifyUrl": "https://open.spotify.com/track/09J1T3GnieB0DZGSxhfEn2",
+      "duration": 181106,
+      "previewUrl": ""
+    },
+    {
+      "id": "27n2Ml0MHUSEMJXq1GoCH7",
+      "name": "めいあいへるぷゆー?",
+      "artist": "Stand-Up! Hearts (天音、虹香、舞波和音)",
+      "album": "アニソンMIXラボラトリー ～セカンド レポート～",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273861563c40f9cc141786fe84b",
+      "playedAt": "2026-11-10T13:08:52.415Z",
+      "spotifyUrl": "https://open.spotify.com/track/27n2Ml0MHUSEMJXq1GoCH7",
+      "duration": 209733,
+      "previewUrl": ""
+    },
     {
       "id": "1chTElozugAFsW2x03IS6d",
       "name": "キミに100パーセント",
@@ -296,39 +329,6 @@
       "playedAt": "2026-11-09T12:59:19.162Z",
       "spotifyUrl": "https://open.spotify.com/track/6LoV3sIPEFQj7wdY2YiwF1",
       "duration": 219500,
-      "previewUrl": ""
-    },
-    {
-      "id": "6RxsExIM2y163Iy1Qst36S",
-      "name": "あの夏へ",
-      "artist": "Joe Hisaishi",
-      "album": "千と千尋の神隠し サウンドトラック",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27326174e356765f36b1ba996be",
-      "playedAt": "2026-11-09T12:55:39.479Z",
-      "spotifyUrl": "https://open.spotify.com/track/6RxsExIM2y163Iy1Qst36S",
-      "duration": 189800,
-      "previewUrl": ""
-    },
-    {
-      "id": "5pG8H6NpMISSR6fHfq701c",
-      "name": "Columbia Pictures - Cover Version",
-      "artist": "Cinescore",
-      "album": "The Film Studio Fanfare Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
-      "playedAt": "2026-11-09T12:54:15.562Z",
-      "spotifyUrl": "https://open.spotify.com/track/5pG8H6NpMISSR6fHfq701c",
-      "duration": 24273,
-      "previewUrl": ""
-    },
-    {
-      "id": "2Xtsv7BUMrNodQWH2JPOc0",
-      "name": "Caravan",
-      "artist": "John Wasson",
-      "album": "Whiplash (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fce4a71d3973d3bbb12e8d7",
-      "playedAt": "2026-11-09T12:53:50.801Z",
-      "spotifyUrl": "https://open.spotify.com/track/2Xtsv7BUMrNodQWH2JPOc0",
-      "duration": 555000,
       "previewUrl": ""
     }
   ],
