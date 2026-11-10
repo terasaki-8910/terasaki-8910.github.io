@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-11-10T13:56:00.748Z",
+  "lastUpdated": "2026-11-10T22:38:24.961Z",
   "tracks": [
+    {
+      "id": "6CCCn6i6FU1tzzqjTNZtGk",
+      "name": "Clattanoia",
+      "artist": "OxT",
+      "album": "TVアニメ「オーバーロード」オープニングテーマ「Clattanoia」",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f944624d3413404001a0cbb6",
+      "playedAt": "2026-11-10T15:22:59.417Z",
+      "spotifyUrl": "https://open.spotify.com/track/6CCCn6i6FU1tzzqjTNZtGk",
+      "duration": 237880,
+      "previewUrl": ""
+    },
+    {
+      "id": "4EXGfnQPnDQrtZPUIrveL3",
+      "name": "Perfect-area complete!",
+      "artist": "麻生夏子",
+      "album": "Perfect-area complete!",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e64e81c264c18d3982edba10",
+      "playedAt": "2026-11-10T15:19:01.116Z",
+      "spotifyUrl": "https://open.spotify.com/track/4EXGfnQPnDQrtZPUIrveL3",
+      "duration": 243200,
+      "previewUrl": ""
+    },
     {
       "id": "2jtI8cQPtIiV9u5OXESTPm",
       "name": "ワンルームシュガーライフ",
@@ -307,28 +329,6 @@
       "playedAt": "2026-11-09T13:01:33.170Z",
       "spotifyUrl": "https://open.spotify.com/track/4VnDmjYCZkyeqeb0NIKqdA",
       "duration": 110160,
-      "previewUrl": ""
-    },
-    {
-      "id": "6ko9w38zHQYMC9zEtdU6vT",
-      "name": "Universal Studios Fanfare",
-      "artist": "Geek Music",
-      "album": "Universal Studios Fanfare",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735440552cf89e9ae5e354bf18",
-      "playedAt": "2026-11-09T12:59:42.558Z",
-      "spotifyUrl": "https://open.spotify.com/track/6ko9w38zHQYMC9zEtdU6vT",
-      "duration": 22880,
-      "previewUrl": ""
-    },
-    {
-      "id": "6LoV3sIPEFQj7wdY2YiwF1",
-      "name": "Blood Bag - Extended Version",
-      "artist": "Junkie XL",
-      "album": "Mad Max: Fury Road (Original Motion Picture Soundtrack) [Deluxe Version]",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27372c2f7f1612b97d7e2825c8b",
-      "playedAt": "2026-11-09T12:59:19.162Z",
-      "spotifyUrl": "https://open.spotify.com/track/6LoV3sIPEFQj7wdY2YiwF1",
-      "duration": 219500,
       "previewUrl": ""
     }
   ],
