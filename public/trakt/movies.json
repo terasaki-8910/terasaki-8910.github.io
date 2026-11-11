@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T22:44:20.452Z",
+  "generatedAt": "2026-11-11T00:12:47.478Z",
   "user": "masatoT",
   "watched": [
     {
@@ -1010,6 +1010,37 @@
       "recordedOrder": 14590041760,
       "rating": 7,
       "ratedAt": "2026-10-31T13:08:11.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 55989,
+      "tmdb": 56343,
+      "slug": "baka-and-test-summon-the-beasts",
+      "year": 2010,
+      "released": "2010-01-07",
+      "traktTitle": "Baka and Test: Summon the Beasts",
+      "details": {
+        "poster": "/jrNrHEq1iezBQAYBnLMAkJmlBpx.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "進級テストの成績で厳しくクラス分けされる先進的な進学校｢文月学園｣。秀才が集まる設備も整ったAクラスに対して、最底辺のFクラスの設備はボロい卓袱台や腐った畳だけ。そんなFクラスの生徒である吉井明久は、訳あって同じクラスとなった健気な才女・姫路瑞希のため、学園が開発したシステムを使ったクラス争奪バトル｢試験召喚戦争｣に挑戦する。果たして、Fクラスは上位の強豪クラスに勝利することができるのだろうか--",
+        "overviewLang": "ja",
+        "title": "バカとテストと召喚獣",
+        "originalTitle": "バカとテストと召喚獣",
+        "runtime": 24,
+        "releaseDate": "2010-01-07",
+        "seasons": 2,
+        "episodes": 26
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-11-10T23:11:00.000Z",
+      "recordedOrder": null,
+      "rating": 9,
+      "ratedAt": "2026-11-10T23:11:45.000Z"
     },
     {
       "type": "movie",
@@ -3068,6 +3099,37 @@
       "recordedOrder": 14495401046,
       "rating": 7,
       "ratedAt": "2026-10-05T02:00:11.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 315787,
+      "tmdb": 312949,
+      "slug": "chainsmoker-cat",
+      "year": 2026,
+      "released": "2026-07-03",
+      "traktTitle": "Chainsmoker Cat",
+      "details": {
+        "poster": "/1OEYjA3bpPlXNPwV51WJhGWx8Mk.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "人間と獣人が共存する世界で、タバコを吸ってダラダラ生きる獣人・ヤニねこ。金なし！生活力なし！ろくでなし！マナーやモラルは吸い殻と一緒に捨ててきた。ヤニ臭くて、汚くて、怠惰でクズ。吸って、吐いて、ダベって、燃えて。だけど、それなりに充実した日々を過ごしてます。けっこう汚いけど、ちょっとだけ励まされる！SNSでバズり散らかしたマンガが、まさかのTVアニメ化に挑む！放送できなかったらごめんにゃさい！なんだか憎めないクズねこたちがおくる、ヤニまみれな日常をゆる〜く見守ってください。",
+        "overviewLang": "ja",
+        "title": "ヤニねこ",
+        "originalTitle": "ヤニねこ",
+        "runtime": 24,
+        "releaseDate": "2026-07-03",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "plays": 12,
+      "lastWatchedAt": "2026-11-10T23:10:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-11-10T23:10:58.000Z"
     },
     {
       "type": "movie",
