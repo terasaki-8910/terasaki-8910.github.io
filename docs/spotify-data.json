@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-11-12T14:12:35.983Z",
+  "lastUpdated": "2026-11-12T22:57:23.761Z",
   "tracks": [
+    {
+      "id": "0UBUg8NU4XJtQqzTPs8Pkr",
+      "name": "三原色",
+      "artist": "YOASOBI",
+      "album": "THE BOOK 2",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c3625a413a9a79facea38c2",
+      "playedAt": "2026-11-12T14:35:35.896Z",
+      "spotifyUrl": "https://open.spotify.com/track/0UBUg8NU4XJtQqzTPs8Pkr",
+      "duration": 220253,
+      "previewUrl": ""
+    },
     {
       "id": "5Olqp0fKkKQtu73jTtnPzC",
       "name": "ウェカピポ",
@@ -318,17 +329,6 @@
       "playedAt": "2026-11-11T12:31:50.376Z",
       "spotifyUrl": "https://open.spotify.com/track/7z0HnNeAREuJmRvQtpQIz0",
       "duration": 204000,
-      "previewUrl": ""
-    },
-    {
-      "id": "2tlFYDs8Uql85FKK5kL7ha",
-      "name": "Don't say \"lazy\"",
-      "artist": "平沢唯(CV:豊崎愛生), 秋山澪(CV:日笠陽子), 桜高軽音部, 田井中律(CV:佐藤聡美), 琴吹紬(CV:寿美菜子)",
-      "album": "Don't say \"lazy\"",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f70266ab6977203c7aecfa83",
-      "playedAt": "2026-11-11T12:28:10.048Z",
-      "spotifyUrl": "https://open.spotify.com/track/2tlFYDs8Uql85FKK5kL7ha",
-      "duration": 263973,
       "previewUrl": ""
     }
   ],
