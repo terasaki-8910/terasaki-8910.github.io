@@ -1,12 +1,20 @@
 {
-  "lastUpdated": "2026-11-09T15:58:34.974Z",
+  "lastUpdated": "2026-11-12T23:28:35.174Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
     "profileUrl": "https://steamcommunity.com/id/modadadadaaaagnsb/"
   },
   "ownedGamesCount": 51,
-  "recentlyPlayed": [],
+  "recentlyPlayed": [
+    {
+      "appid": 2717220,
+      "name": "雀魂 -じゃんたま-",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
+      "playtime2weeksMinutes": 46,
+      "playtimeForeverMinutes": 710
+    }
+  ],
   "library": [
     {
       "appid": 1449850,
@@ -48,7 +56,7 @@
       "appid": 2717220,
       "name": "Mahjong Soul",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/2717220/eb4606d3c5887c5cbf42974f7ef4cee7530c9860.jpg",
-      "playtimeForeverMinutes": 664
+      "playtimeForeverMinutes": 710
     },
     {
       "appid": 990080,
