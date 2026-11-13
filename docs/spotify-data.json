@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-11-12T22:57:23.761Z",
+  "lastUpdated": "2026-11-13T04:00:27.618Z",
   "tracks": [
+    {
+      "id": "2EHcM94vAEYFlNXXosOHRp",
+      "name": "狂乱 Hey Kids!!",
+      "artist": "THE ORAL CIGARETTES",
+      "album": "FIXION",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ff25f1a3333297cc123153b",
+      "playedAt": "2026-11-13T03:59:54.992Z",
+      "spotifyUrl": "https://open.spotify.com/track/2EHcM94vAEYFlNXXosOHRp",
+      "duration": 250973,
+      "previewUrl": ""
+    },
+    {
+      "id": "2BBIUV8wIBbqc7HXObzdgH",
+      "name": "愛♡スクリ～ム！",
+      "artist": "AiScReam",
+      "album": "愛♡スクリ～ム！",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732590b046b72d6ce5d6703ee7",
+      "playedAt": "2026-11-13T03:55:45.625Z",
+      "spotifyUrl": "https://open.spotify.com/track/2BBIUV8wIBbqc7HXObzdgH",
+      "duration": 262106,
+      "previewUrl": ""
+    },
     {
       "id": "0UBUg8NU4XJtQqzTPs8Pkr",
       "name": "三原色",
@@ -307,28 +329,6 @@
       "playedAt": "2026-11-12T02:18:39.206Z",
       "spotifyUrl": "https://open.spotify.com/track/4BgKEXwrk2Doe8xP1XfujI",
       "duration": 238346,
-      "previewUrl": ""
-    },
-    {
-      "id": "717Wo5B0mBYw7eJuB3cgO7",
-      "name": "More-more LOVERS!!",
-      "artist": "麻生夏子",
-      "album": "Precious tone",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273597f59efcc70e175e4250c5c",
-      "playedAt": "2026-11-12T02:14:40.335Z",
-      "spotifyUrl": "https://open.spotify.com/track/717Wo5B0mBYw7eJuB3cgO7",
-      "duration": 230400,
-      "previewUrl": ""
-    },
-    {
-      "id": "7z0HnNeAREuJmRvQtpQIz0",
-      "name": "ようこそジャパリパークへ",
-      "artist": "Doubutsu Biscuits, PPP",
-      "album": "ようこそジャパリパークへ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2723e2f88cb5d92281455e4",
-      "playedAt": "2026-11-11T12:31:50.376Z",
-      "spotifyUrl": "https://open.spotify.com/track/7z0HnNeAREuJmRvQtpQIz0",
-      "duration": 204000,
       "previewUrl": ""
     }
   ],
