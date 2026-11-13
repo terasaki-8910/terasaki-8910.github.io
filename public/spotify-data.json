@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-11-13T04:00:27.618Z",
+  "lastUpdated": "2026-11-13T13:36:40.527Z",
   "tracks": [
+    {
+      "id": "10Eyo4juZQFthKqlJgGMdp",
+      "name": "怪盗",
+      "artist": "back number",
+      "album": "怪盗",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae51734d04ef431b65a09a9a",
+      "playedAt": "2026-11-13T11:02:11.566Z",
+      "spotifyUrl": "https://open.spotify.com/track/10Eyo4juZQFthKqlJgGMdp",
+      "duration": 196226,
+      "previewUrl": ""
+    },
+    {
+      "id": "6WMeDp0t2UJmy21PRKAOzx",
+      "name": "ヒトリゴト",
+      "artist": "ClariS",
+      "album": "ヒトリゴト",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27334257c272ad39c28b6562e0f",
+      "playedAt": "2026-11-13T07:47:32.567Z",
+      "spotifyUrl": "https://open.spotify.com/track/6WMeDp0t2UJmy21PRKAOzx",
+      "duration": 235093,
+      "previewUrl": ""
+    },
+    {
+      "id": "2rL6MSMZSZg1muJvtMHbBe",
+      "name": "ハレ晴レユカイ～Ver.涼宮ハルヒ～",
+      "artist": "涼宮ハルヒ (CV.平野 綾)",
+      "album": "涼宮ハルヒの憂鬱 キャラクターソングVol.1 涼宮ハルヒ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273237d6ee5f25234e9e71a46b2",
+      "playedAt": "2026-11-13T04:03:33.392Z",
+      "spotifyUrl": "https://open.spotify.com/track/2rL6MSMZSZg1muJvtMHbBe",
+      "duration": 217866,
+      "previewUrl": ""
+    },
     {
       "id": "2EHcM94vAEYFlNXXosOHRp",
       "name": "狂乱 Hey Kids!!",
@@ -296,39 +329,6 @@
       "playedAt": "2026-11-12T02:55:41.804Z",
       "spotifyUrl": "https://open.spotify.com/track/4EXGfnQPnDQrtZPUIrveL3",
       "duration": 243200,
-      "previewUrl": ""
-    },
-    {
-      "id": "2g1k9DguVUrZSPIVzcphlQ",
-      "name": "恋は渾沌の隷也",
-      "artist": "Ushirokarahaiyoritai G",
-      "album": "恋は渾沌の隷也",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732f2c2e38759d3898cffd9a61",
-      "playedAt": "2026-11-12T02:24:20.777Z",
-      "spotifyUrl": "https://open.spotify.com/track/2g1k9DguVUrZSPIVzcphlQ",
-      "duration": 238853,
-      "previewUrl": ""
-    },
-    {
-      "id": "2bRwZDj6dUJFt0asFpRGz7",
-      "name": "青空のラプソディ",
-      "artist": "fhána",
-      "album": "There Is The Light",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b185f29b396b7a2825f644b1",
-      "playedAt": "2026-11-12T02:23:16.678Z",
-      "spotifyUrl": "https://open.spotify.com/track/2bRwZDj6dUJFt0asFpRGz7",
-      "duration": 276986,
-      "previewUrl": ""
-    },
-    {
-      "id": "4BgKEXwrk2Doe8xP1XfujI",
-      "name": "世界一可愛い私",
-      "artist": "初星学園, HoneyWorks, 藤田ことね",
-      "album": "世界一可愛い私",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae10144b2611f542761b1bb3",
-      "playedAt": "2026-11-12T02:18:39.206Z",
-      "spotifyUrl": "https://open.spotify.com/track/4BgKEXwrk2Doe8xP1XfujI",
-      "duration": 238346,
       "previewUrl": ""
     }
   ],
