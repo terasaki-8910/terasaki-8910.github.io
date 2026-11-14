@@ -1,11 +1,11 @@
 {
-  "lastUpdated": "2026-11-13T19:31:21.211Z",
+  "lastUpdated": "2026-11-14T06:03:48.233Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
     "profileUrl": "https://steamcommunity.com/id/modadadadaaaagnsb/"
   },
-  "ownedGamesCount": 51,
+  "ownedGamesCount": 52,
   "recentlyPlayed": [
     {
       "appid": 2717220,
@@ -194,6 +194,12 @@
       "appid": 407530,
       "name": "ARK: Survival Of The Fittest",
       "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/407530/807c673cddebbfee0700a947a75f4872ad136e9b.jpg",
+      "playtimeForeverMinutes": 0
+    },
+    {
+      "appid": 413410,
+      "name": "Danganronpa: Trigger Happy Havoc",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/413410/221f5116c2c1d46fa71a7b014b5e882334a2d0da.jpg",
       "playtimeForeverMinutes": 0
     },
     {
