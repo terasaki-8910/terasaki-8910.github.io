@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T00:12:47.478Z",
+  "generatedAt": "2026-11-14T00:26:09.337Z",
   "user": "masatoT",
   "watched": [
     {
@@ -1908,6 +1908,38 @@
       "ratedAt": "2026-10-05T01:35:57.000Z"
     },
     {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 97548,
+      "tmdb": 63926,
+      "slug": "one-punch-man",
+      "year": 2015,
+      "released": "2015-10-05",
+      "traktTitle": "One-Punch Man",
+      "details": {
+        "poster": "/a8BknzvFVK5EZ83rKg1a83iwaj0.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Action & Adventure",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "物語開始から三年前、就職活動に行き詰る青年・サイタマは、ある日街で暴れていた怪人から顎の割れた少年を救う。その際、「ヒーローになりたい」という幼き日の夢を思い出し、就活をやめてヒーローになることを決意。頭髪全てを失うほど懸命なトレーニングを3年間行った結果、どんな敵でも一撃で倒せる最強の力を手に入れる。\n\nしかし、いつも一撃で決着が付いてしまうことから、次第に戦いに対する緊張感などを喪失し、ヒーローになった現在でも無気力な日々を送っていた。",
+        "overviewLang": "ja",
+        "title": "ワンパンマン",
+        "originalTitle": "ワンパンマン",
+        "runtime": 24,
+        "releaseDate": "2015-10-05",
+        "seasons": 3,
+        "episodes": 36
+      },
+      "plays": 12,
+      "lastWatchedAt": "2015-12-21T15:09:00.000Z",
+      "recordedOrder": null,
+      "rating": 10,
+      "ratedAt": "2026-11-13T11:35:01.000Z"
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 179334,
@@ -2544,6 +2576,37 @@
       "recordedOrder": 14495350778,
       "rating": 7,
       "ratedAt": "2026-10-05T01:38:34.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 158594,
+      "tmdb": 95479,
+      "slug": "jujutsu-kaisen",
+      "year": 2020,
+      "released": "2020-10-03",
+      "traktTitle": "Jujutsu Kaisen",
+      "details": {
+        "poster": "/zKFkzRn1UyE11Jv9CJjVmvmQFvR.jpg",
+        "genres": [
+          "アニメーション",
+          "Sci-Fi & Fantasy",
+          "Action & Adventure"
+        ],
+        "overview": "驚異的な身体能力を持つ、少年・虎杖悠仁はごく普通の高校生活を送っていたが、ある日“呪い”に襲われた仲間を救うため、特級呪物“両面宿儺の指”を喰らい、己の魂に呪いを宿してしまう。\n\n呪いである“両面宿儺”と肉体を共有することとなった虎杖は、最強の呪術師である五条 悟の案内で、対呪い専門機関である「東京都立呪術高等専門学校」へと。編入することになり……",
+        "overviewLang": "ja",
+        "title": "呪術廻戦",
+        "originalTitle": "呪術廻戦",
+        "runtime": 24,
+        "releaseDate": "2020-10-03",
+        "seasons": 1,
+        "episodes": 59
+      },
+      "plays": 59,
+      "lastWatchedAt": "2026-06-09T05:22:00.000Z",
+      "recordedOrder": null,
+      "rating": 9,
+      "ratedAt": "2026-11-13T11:34:25.000Z"
     },
     {
       "type": "movie",
