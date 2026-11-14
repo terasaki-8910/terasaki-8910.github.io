@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-11-14T12:41:14.361Z",
+  "lastUpdated": "2026-11-14T21:47:22.207Z",
   "tracks": [
+    {
+      "id": "2sQDwbzGSpHXwnIAOrcDn9",
+      "name": "グッバイ宣言",
+      "artist": "Chinozo",
+      "album": "グッバイ宣言",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ff57c0f84a0298143799df6",
+      "playedAt": "2026-11-14T13:41:35.012Z",
+      "spotifyUrl": "https://open.spotify.com/track/2sQDwbzGSpHXwnIAOrcDn9",
+      "duration": 172470,
+      "previewUrl": ""
+    },
+    {
+      "id": "3n7wJstsHWn6Yl4oKNMPfq",
+      "name": "乙女解剖",
+      "artist": "DECO*27",
+      "album": "アンドロイドガール",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f53901af46c5a6ca3b91f7e",
+      "playedAt": "2026-11-14T12:44:00.147Z",
+      "spotifyUrl": "https://open.spotify.com/track/3n7wJstsHWn6Yl4oKNMPfq",
+      "duration": 223400,
+      "previewUrl": ""
+    },
     {
       "id": "38mUTswfszVFQ952r89AP8",
       "name": "千本桜 (feat. 初音ミク)",
@@ -307,28 +329,6 @@
       "playedAt": "2026-11-14T09:50:06.217Z",
       "spotifyUrl": "https://open.spotify.com/track/5WCK18MbTKuOcmLsOXMaHd",
       "duration": 230400,
-      "previewUrl": ""
-    },
-    {
-      "id": "07ja6ijB8a5DAsfwKJFoMb",
-      "name": "腐れ外道とチョコレゐト",
-      "artist": "PinocchioP",
-      "album": "Comic and Cosmic",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737da58ad2201eb853b7507e8d",
-      "playedAt": "2026-11-14T09:31:47.482Z",
-      "spotifyUrl": "https://open.spotify.com/track/07ja6ijB8a5DAsfwKJFoMb",
-      "duration": 195484,
-      "previewUrl": ""
-    },
-    {
-      "id": "2FRMwFXODegegRrfLAeVwx",
-      "name": "エゴロック - long ver.",
-      "artist": "THREEE",
-      "album": "エゴロック (long ver.)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2734ef98321d70e0f91f0839bd0",
-      "playedAt": "2026-11-14T09:28:31.484Z",
-      "spotifyUrl": "https://open.spotify.com/track/2FRMwFXODegegRrfLAeVwx",
-      "duration": 169529,
       "previewUrl": ""
     }
   ],
