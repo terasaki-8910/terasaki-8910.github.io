@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-11-14T21:47:22.207Z",
+  "lastUpdated": "2026-11-15T03:44:07.590Z",
   "tracks": [
+    {
+      "id": "7ejV5C1FCdNRRpasay9auU",
+      "name": "ロスト・デリュージョン",
+      "artist": "フロクロ",
+      "album": "ロスト・デリュージョン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6aae46f3246ee168c4769",
+      "playedAt": "2026-11-15T02:15:05.844Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ejV5C1FCdNRRpasay9auU",
+      "duration": 186624,
+      "previewUrl": ""
+    },
     {
       "id": "2sQDwbzGSpHXwnIAOrcDn9",
       "name": "グッバイ宣言",
@@ -87,17 +98,6 @@
       "playedAt": "2026-11-14T12:24:15.209Z",
       "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
       "duration": 142588,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ejV5C1FCdNRRpasay9auU",
-      "name": "ロスト・デリュージョン",
-      "artist": "フロクロ",
-      "album": "ロスト・デリュージョン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6aae46f3246ee168c4769",
-      "playedAt": "2026-11-14T12:21:52.119Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ejV5C1FCdNRRpasay9auU",
-      "duration": 186624,
       "previewUrl": ""
     },
     {
