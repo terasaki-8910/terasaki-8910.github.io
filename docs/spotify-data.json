@@ -1,15 +1,59 @@
 {
-  "lastUpdated": "2026-11-15T03:44:07.590Z",
+  "lastUpdated": "2026-11-16T03:44:53.760Z",
   "tracks": [
+    {
+      "id": "5lojBXokpBOfuTDly9Bksx",
+      "name": "KING",
+      "artist": "Kanaria",
+      "album": "KING",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27319bb3ebaa41cb4899f2e738a",
+      "playedAt": "2026-11-15T22:40:47.374Z",
+      "spotifyUrl": "https://open.spotify.com/track/5lojBXokpBOfuTDly9Bksx",
+      "duration": 134750,
+      "previewUrl": ""
+    },
+    {
+      "id": "03xt11xuwiqUQBMYKwEWKz",
+      "name": "モニタリング",
+      "artist": "DECO*27",
+      "album": "TRANSFORM",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27366c601815329070d83df52d8",
+      "playedAt": "2026-11-15T22:38:24.945Z",
+      "spotifyUrl": "https://open.spotify.com/track/03xt11xuwiqUQBMYKwEWKz",
+      "duration": 176960,
+      "previewUrl": ""
+    },
+    {
+      "id": "0xVM7uV2apNSLsF6pPMMlR",
+      "name": "ベノム",
+      "artist": "Kairikibear, KANKAN",
+      "album": "ベノム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae194e628724f0a3f99feac2",
+      "playedAt": "2026-11-15T22:34:38.640Z",
+      "spotifyUrl": "https://open.spotify.com/track/0xVM7uV2apNSLsF6pPMMlR",
+      "duration": 200520,
+      "previewUrl": ""
+    },
     {
       "id": "7ejV5C1FCdNRRpasay9auU",
       "name": "ロスト・デリュージョン",
       "artist": "フロクロ",
       "album": "ロスト・デリュージョン",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6aae46f3246ee168c4769",
-      "playedAt": "2026-11-15T02:15:05.844Z",
+      "playedAt": "2026-11-15T22:31:17.641Z",
       "spotifyUrl": "https://open.spotify.com/track/7ejV5C1FCdNRRpasay9auU",
       "duration": 186624,
+      "previewUrl": ""
+    },
+    {
+      "id": "54CNsOo0aB99blVSQZxQpD",
+      "name": "ベノム",
+      "artist": "Kairikibear",
+      "album": "ベノム",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306773204741d000cfcf4e195",
+      "playedAt": "2026-11-15T06:19:02.898Z",
+      "spotifyUrl": "https://open.spotify.com/track/54CNsOo0aB99blVSQZxQpD",
+      "duration": 203033,
       "previewUrl": ""
     },
     {
@@ -285,50 +329,6 @@
       "playedAt": "2026-11-14T10:01:45.223Z",
       "spotifyUrl": "https://open.spotify.com/track/3gHgE02K4p2wHiUZ2RPWpS",
       "duration": 210607,
-      "previewUrl": ""
-    },
-    {
-      "id": "4qVHEZ8pbcI7EyliSL7AHJ",
-      "name": "CH4NGE - feat. 可不",
-      "artist": "Giga, 可不",
-      "album": "CH4NGE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae5fe1233f48f3d4969df4e9",
-      "playedAt": "2026-11-14T09:58:14.182Z",
-      "spotifyUrl": "https://open.spotify.com/track/4qVHEZ8pbcI7EyliSL7AHJ",
-      "duration": 132032,
-      "previewUrl": ""
-    },
-    {
-      "id": "19XVDw9shopE7w6odXNVSl",
-      "name": "アユミ☆マジカルショータイム - Remastered",
-      "artist": "kinoshita",
-      "album": "アユミ☆マジカルショータイム (Remastered)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273335adeda2437becf59e0d73f",
-      "playedAt": "2026-11-14T09:56:01.573Z",
-      "spotifyUrl": "https://open.spotify.com/track/19XVDw9shopE7w6odXNVSl",
-      "duration": 234000,
-      "previewUrl": ""
-    },
-    {
-      "id": "6r5PYnGBu1hkQrk3zPkt1I",
-      "name": "イガク",
-      "artist": "Sasuke Haraguchi",
-      "album": "イガク",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27306a87cd3b834b98452eb5ac9",
-      "playedAt": "2026-11-14T09:52:07.094Z",
-      "spotifyUrl": "https://open.spotify.com/track/6r5PYnGBu1hkQrk3zPkt1I",
-      "duration": 120352,
-      "previewUrl": ""
-    },
-    {
-      "id": "5WCK18MbTKuOcmLsOXMaHd",
-      "name": "ロキ",
-      "artist": "Mikito P",
-      "album": "DAISAN WAVE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736549e0ca9064d28052bade1a",
-      "playedAt": "2026-11-14T09:50:06.217Z",
-      "spotifyUrl": "https://open.spotify.com/track/5WCK18MbTKuOcmLsOXMaHd",
-      "duration": 230400,
       "previewUrl": ""
     }
   ],
