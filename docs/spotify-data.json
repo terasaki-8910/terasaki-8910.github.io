@@ -1,6 +1,83 @@
 {
-  "lastUpdated": "2026-11-16T03:44:53.760Z",
+  "lastUpdated": "2026-11-17T15:07:30.635Z",
   "tracks": [
+    {
+      "id": "6yv4uty2hl96Wu0RFoYsxO",
+      "name": "かいじゅうのマーチ",
+      "artist": "Kenshi Yonezu",
+      "album": "BOOTLEG",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ee78302fe48134795016cbf",
+      "playedAt": "2026-11-17T10:02:23.140Z",
+      "spotifyUrl": "https://open.spotify.com/track/6yv4uty2hl96Wu0RFoYsxO",
+      "duration": 295730,
+      "previewUrl": ""
+    },
+    {
+      "id": "1WdkBwAsdznWw9xM69KmvR",
+      "name": "ブルーバード",
+      "artist": "Ikimonogakari",
+      "album": "My song Your song",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d4be0946ba3b18ec00d76266",
+      "playedAt": "2026-11-17T00:33:10.079Z",
+      "spotifyUrl": "https://open.spotify.com/track/1WdkBwAsdznWw9xM69KmvR",
+      "duration": 218400,
+      "previewUrl": ""
+    },
+    {
+      "id": "6nYezkgAePhAmnxNTQRsLV",
+      "name": "PAKU",
+      "artist": "asmi",
+      "album": "PAKU",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273185f2c27972171fa2e88bca4",
+      "playedAt": "2026-11-17T00:25:36.858Z",
+      "spotifyUrl": "https://open.spotify.com/track/6nYezkgAePhAmnxNTQRsLV",
+      "duration": 125771,
+      "previewUrl": ""
+    },
+    {
+      "id": "7lFzS8uBjpXckGjQQcpJrW",
+      "name": "不可逆リプレイス - Fukagyaku Replace",
+      "artist": "MY FIRST STORY",
+      "album": "ANTITHESE",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273a7c40bdda1c31a91cb8bd474",
+      "playedAt": "2026-11-17T00:23:30.540Z",
+      "spotifyUrl": "https://open.spotify.com/track/7lFzS8uBjpXckGjQQcpJrW",
+      "duration": 233733,
+      "previewUrl": ""
+    },
+    {
+      "id": "3F0hvTxaTJV6OsFnRqefXc",
+      "name": "アイデン貞貞メルトダウン",
+      "artist": "えなこ, P丸様｡",
+      "album": "アイデン貞貞メルトダウン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386001206942da71231c86b96",
+      "playedAt": "2026-11-17T00:19:36.317Z",
+      "spotifyUrl": "https://open.spotify.com/track/3F0hvTxaTJV6OsFnRqefXc",
+      "duration": 243880,
+      "previewUrl": ""
+    },
+    {
+      "id": "1rN9QoVxw5U7TJkyaUR8C1",
+      "name": "unravel",
+      "artist": "TK from Ling tosite sigure",
+      "album": "Fantastic Magic",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b11c3ab5cb818192b7a61fdd",
+      "playedAt": "2026-11-17T00:15:31.956Z",
+      "spotifyUrl": "https://open.spotify.com/track/1rN9QoVxw5U7TJkyaUR8C1",
+      "duration": 238360,
+      "previewUrl": ""
+    },
+    {
+      "id": "4oPCfEDVIKnPJ6UPkhJPCa",
+      "name": "酔いどれ知らず",
+      "artist": "Kanaria",
+      "album": "酔いどれ知らず",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739801b6931cc8cfe8a2f2ede3",
+      "playedAt": "2026-11-16T01:40:30.744Z",
+      "spotifyUrl": "https://open.spotify.com/track/4oPCfEDVIKnPJ6UPkhJPCa",
+      "duration": 134869,
+      "previewUrl": ""
+    },
     {
       "id": "5lojBXokpBOfuTDly9Bksx",
       "name": "KING",
@@ -252,83 +329,6 @@
       "playedAt": "2026-11-14T11:29:58.531Z",
       "spotifyUrl": "https://open.spotify.com/track/2VvAAjMzOKXkJ9t8N9Rbup",
       "duration": 274200,
-      "previewUrl": ""
-    },
-    {
-      "id": "0Ab4eiURISCPq2ig7XPYcN",
-      "name": "The Imperial March (Darth Vader's Theme)",
-      "artist": "John Williams, London Symphony Orchestra",
-      "album": "Star Wars: The Empire Strikes Back (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27315f47ee015397b51b2330600",
-      "playedAt": "2026-11-14T11:25:20.792Z",
-      "spotifyUrl": "https://open.spotify.com/track/0Ab4eiURISCPq2ig7XPYcN",
-      "duration": 179573,
-      "previewUrl": ""
-    },
-    {
-      "id": "0WjwAv3XSjztqqyD6Gw1CX",
-      "name": "風のとおり道（インストゥルメンタンル）",
-      "artist": "Joe Hisaishi",
-      "album": "となりのトトロ サウンドトラック集",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ab4ac35f41f2c8b1e428b0f",
-      "playedAt": "2026-11-14T11:08:40.051Z",
-      "spotifyUrl": "https://open.spotify.com/track/0WjwAv3XSjztqqyD6Gw1CX",
-      "duration": 196760,
-      "previewUrl": ""
-    },
-    {
-      "id": "08QaHlMPWuO5PUxjl61bXn",
-      "name": "He's a Pirate",
-      "artist": "Klaus Badelt",
-      "album": "Pirates of the Caribbean: The Curse of the Black Pearl (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27338786c7492ac252797bb2648",
-      "playedAt": "2026-11-14T11:05:22.715Z",
-      "spotifyUrl": "https://open.spotify.com/track/08QaHlMPWuO5PUxjl61bXn",
-      "duration": 90426,
-      "previewUrl": ""
-    },
-    {
-      "id": "4VnDmjYCZkyeqeb0NIKqdA",
-      "name": "Can You Hear The Music",
-      "artist": "Ludwig Göransson",
-      "album": "Oppenheimer (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273af634982d9b15de3c77f7dd9",
-      "playedAt": "2026-11-14T11:03:51.781Z",
-      "spotifyUrl": "https://open.spotify.com/track/4VnDmjYCZkyeqeb0NIKqdA",
-      "duration": 110160,
-      "previewUrl": ""
-    },
-    {
-      "id": "1tzj2vY4twkNmZ5K3DUOPp",
-      "name": "Theme (from \"Spider Man\") [Original Television Series]",
-      "artist": "Michael Giacchino",
-      "album": "Spider-Man: Homecoming (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f69096c612e959561abe32f4",
-      "playedAt": "2026-11-14T11:02:01.124Z",
-      "spotifyUrl": "https://open.spotify.com/track/1tzj2vY4twkNmZ5K3DUOPp",
-      "duration": 39960,
-      "previewUrl": ""
-    },
-    {
-      "id": "30lXCrnKs5TJJOuSVwiQn1",
-      "name": "Zoltraak",
-      "artist": "Evan Call",
-      "album": "TVアニメ『葬送のフリーレン』Original Soundtrack〜Pre-release〜",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273eacd9c26eea0155c300d6f8c",
-      "playedAt": "2026-11-14T11:01:20.695Z",
-      "spotifyUrl": "https://open.spotify.com/track/30lXCrnKs5TJJOuSVwiQn1",
-      "duration": 140664,
-      "previewUrl": ""
-    },
-    {
-      "id": "3gHgE02K4p2wHiUZ2RPWpS",
-      "name": "ねぇねぇねぇ。",
-      "artist": "PinocchioP",
-      "album": "ラヴ",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e06a68d3033eca4fda57ab45",
-      "playedAt": "2026-11-14T10:01:45.223Z",
-      "spotifyUrl": "https://open.spotify.com/track/3gHgE02K4p2wHiUZ2RPWpS",
-      "duration": 210607,
       "previewUrl": ""
     }
   ],
