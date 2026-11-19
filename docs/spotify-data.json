@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-11-17T15:07:30.635Z",
+  "lastUpdated": "2026-11-19T04:58:05.955Z",
   "tracks": [
+    {
+      "id": "7EUrEnWcsPqIniqFFL32Te",
+      "name": "Meduza",
+      "artist": "Aerozen",
+      "album": "Meduza",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27336dcd958cc72af8799428da8",
+      "playedAt": "2026-11-19T04:18:20.951Z",
+      "spotifyUrl": "https://open.spotify.com/track/7EUrEnWcsPqIniqFFL32Te",
+      "duration": 196271,
+      "previewUrl": ""
+    },
+    {
+      "id": "2YDvxAG8N8G30b77cKlgM8",
+      "name": "Fuego",
+      "artist": "Dogger, Mindstate",
+      "album": "Fuego",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ba893eb87c013390c1f3fef8",
+      "playedAt": "2026-11-19T04:14:50.510Z",
+      "spotifyUrl": "https://open.spotify.com/track/2YDvxAG8N8G30b77cKlgM8",
+      "duration": 201000,
+      "previewUrl": ""
+    },
     {
       "id": "6yv4uty2hl96Wu0RFoYsxO",
       "name": "かいじゅうのマーチ",
@@ -307,28 +329,6 @@
       "playedAt": "2026-11-14T11:38:36Z",
       "spotifyUrl": "https://open.spotify.com/track/2TZbQZXOuR8osP2AK8yYMN",
       "duration": 207426,
-      "previewUrl": ""
-    },
-    {
-      "id": "1n8NKQRg8LVHy7oUhUgbFF",
-      "name": "Hedwig's Theme",
-      "artist": "John Williams",
-      "album": "Harry Potter and The Sorcerer's Stone Original Motion Picture Soundtrack",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27313f982aa5c43146c3d2c1964",
-      "playedAt": "2026-11-14T11:35:08.110Z",
-      "spotifyUrl": "https://open.spotify.com/track/1n8NKQRg8LVHy7oUhUgbFF",
-      "duration": 309093,
-      "previewUrl": ""
-    },
-    {
-      "id": "2VvAAjMzOKXkJ9t8N9Rbup",
-      "name": "Duel of the Fates (From \"Star Wars: Episode I - The Phantom Menace\")",
-      "artist": "John Williams, Robert Ziegler, Slovak National Symphony Orchestra, Members of the Slovak Philharmonic Choir",
-      "album": "Music From The Star Wars Saga - The Essential Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273851abf5fb53fda9ada173c79",
-      "playedAt": "2026-11-14T11:29:58.531Z",
-      "spotifyUrl": "https://open.spotify.com/track/2VvAAjMzOKXkJ9t8N9Rbup",
-      "duration": 274200,
       "previewUrl": ""
     }
   ],
