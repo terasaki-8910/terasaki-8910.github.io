@@ -1,15 +1,114 @@
 {
-  "lastUpdated": "2026-11-19T04:58:05.955Z",
+  "lastUpdated": "2026-11-19T14:53:04.220Z",
   "tracks": [
+    {
+      "id": "38XY1ShCSiYwDaV51sFPT9",
+      "name": "マーシャル・マキシマイザー",
+      "artist": "柊マグネタイト, 可不",
+      "album": "KAF+YOU KAFU COMPILATION ALBUM シンメトリー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19f79f9d15451ad63bb3f81",
+      "playedAt": "2026-11-19T14:53:00.485Z",
+      "spotifyUrl": "https://open.spotify.com/track/38XY1ShCSiYwDaV51sFPT9",
+      "duration": 163686,
+      "previewUrl": ""
+    },
+    {
+      "id": "3V9guP8XUQ2Bbm2z4jLyJj",
+      "name": "ロケットサイダー",
+      "artist": "Nayutalien",
+      "album": "ナユタン星からの物体X",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27398509e344299f9779c703d77",
+      "playedAt": "2026-11-19T14:50:16.186Z",
+      "spotifyUrl": "https://open.spotify.com/track/3V9guP8XUQ2Bbm2z4jLyJj",
+      "duration": 188333,
+      "previewUrl": ""
+    },
+    {
+      "id": "1OP63a9JgViqfmn1k27RO7",
+      "name": "バレリーコ",
+      "artist": "Mikito P",
+      "album": "GOOD SCHOOL GIRL 通常盤",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2732d1e040f2384892593309123",
+      "playedAt": "2026-11-19T14:47:07.437Z",
+      "spotifyUrl": "https://open.spotify.com/track/1OP63a9JgViqfmn1k27RO7",
+      "duration": 246400,
+      "previewUrl": ""
+    },
+    {
+      "id": "0fwaTsQItHVLoGSqh4zqNg",
+      "name": "ラストスコア (feat. 初音ミク)",
+      "artist": "せきこみごはん, Hatsune Miku",
+      "album": "ラストスコア",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273d4b8359333e5b5e971073a41",
+      "playedAt": "2026-11-19T14:43:00.824Z",
+      "spotifyUrl": "https://open.spotify.com/track/0fwaTsQItHVLoGSqh4zqNg",
+      "duration": 259360,
+      "previewUrl": ""
+    },
+    {
+      "id": "5A4WZNKHEiiuOgH7CBHBO6",
+      "name": "太陽系デスコ",
+      "artist": "Nayutalien",
+      "album": "ナユタン星からの物体Ｙ",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27363cc1e7ee50ed3854f40c367",
+      "playedAt": "2026-11-19T14:38:40.689Z",
+      "spotifyUrl": "https://open.spotify.com/track/5A4WZNKHEiiuOgH7CBHBO6",
+      "duration": 203200,
+      "previewUrl": ""
+    },
+    {
+      "id": "64LMCa7fkdfHYLtCm0kGTR",
+      "name": "サラマンダー",
+      "artist": "DECO*27",
+      "album": "サラマンダー",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ffe33cd03d4ce1622cfab60a",
+      "playedAt": "2026-11-19T14:35:16.883Z",
+      "spotifyUrl": "https://open.spotify.com/track/64LMCa7fkdfHYLtCm0kGTR",
+      "duration": 155647,
+      "previewUrl": ""
+    },
+    {
+      "id": "0vziRWZny2GDwHX2UYJxa2",
+      "name": "おちゃめ機能",
+      "artist": "Lon",
+      "album": "Upload feat.Vocalist",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273345629f679c7cf11a3ff35ef",
+      "playedAt": "2026-11-19T14:32:40.669Z",
+      "spotifyUrl": "https://open.spotify.com/track/0vziRWZny2GDwHX2UYJxa2",
+      "duration": 252066,
+      "previewUrl": ""
+    },
+    {
+      "id": "7ejV5C1FCdNRRpasay9auU",
+      "name": "ロスト・デリュージョン",
+      "artist": "フロクロ",
+      "album": "ロスト・デリュージョン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6aae46f3246ee168c4769",
+      "playedAt": "2026-11-19T14:28:28.004Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ejV5C1FCdNRRpasay9auU",
+      "duration": 186624,
+      "previewUrl": ""
+    },
     {
       "id": "7EUrEnWcsPqIniqFFL32Te",
       "name": "Meduza",
       "artist": "Aerozen",
       "album": "Meduza",
       "albumArt": "https://i.scdn.co/image/ab67616d0000b27336dcd958cc72af8799428da8",
-      "playedAt": "2026-11-19T04:18:20.951Z",
+      "playedAt": "2026-11-19T14:25:18.236Z",
       "spotifyUrl": "https://open.spotify.com/track/7EUrEnWcsPqIniqFFL32Te",
       "duration": 196271,
+      "previewUrl": ""
+    },
+    {
+      "id": "1ApUYfDejOBvrTnar2Wyf3",
+      "name": "Shotta's.",
+      "artist": "Season 25",
+      "album": "Shotta's.",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273cc268ffcfdf387d7bfb56de3",
+      "playedAt": "2026-11-19T14:25:05.602Z",
+      "spotifyUrl": "https://open.spotify.com/track/1ApUYfDejOBvrTnar2Wyf3",
+      "duration": 142613,
       "previewUrl": ""
     },
     {
@@ -134,17 +233,6 @@
       "previewUrl": ""
     },
     {
-      "id": "7ejV5C1FCdNRRpasay9auU",
-      "name": "ロスト・デリュージョン",
-      "artist": "フロクロ",
-      "album": "ロスト・デリュージョン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6aae46f3246ee168c4769",
-      "playedAt": "2026-11-15T22:31:17.641Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ejV5C1FCdNRRpasay9auU",
-      "duration": 186624,
-      "previewUrl": ""
-    },
-    {
       "id": "54CNsOo0aB99blVSQZxQpD",
       "name": "ベノム",
       "artist": "Kairikibear",
@@ -241,94 +329,6 @@
       "playedAt": "2026-11-14T12:24:15.209Z",
       "spotifyUrl": "https://open.spotify.com/track/6LIpqsMbsfc8I7F0dsFXsv",
       "duration": 142588,
-      "previewUrl": ""
-    },
-    {
-      "id": "5pG8H6NpMISSR6fHfq701c",
-      "name": "Columbia Pictures - Cover Version",
-      "artist": "Cinescore",
-      "album": "The Film Studio Fanfare Collection",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273de1d76f43e79b2cbc6c73598",
-      "playedAt": "2026-11-14T12:02:39.896Z",
-      "spotifyUrl": "https://open.spotify.com/track/5pG8H6NpMISSR6fHfq701c",
-      "duration": 24273,
-      "previewUrl": ""
-    },
-    {
-      "id": "2soMoQzD2HlsVmys7Se3Pq",
-      "name": "The Mandalorian and Grogu",
-      "artist": "Ludwig Göransson",
-      "album": "Star Wars: The Mandalorian and Grogu (Original Motion Picture Soundtrack)",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273ee087fe0797e9ac1b880a1c6",
-      "playedAt": "2026-11-14T12:02:15.089Z",
-      "spotifyUrl": "https://open.spotify.com/track/2soMoQzD2HlsVmys7Se3Pq",
-      "duration": 187221,
-      "previewUrl": ""
-    },
-    {
-      "id": "4IXpj0463g2HAjiDaMHLk9",
-      "name": "So Was Red",
-      "artist": "Thomas Newman, Tom Newton",
-      "album": "The Shawshank Redemption",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e710c1f5b228046932790031",
-      "playedAt": "2026-11-14T11:59:07.350Z",
-      "spotifyUrl": "https://open.spotify.com/track/4IXpj0463g2HAjiDaMHLk9",
-      "duration": 164493,
-      "previewUrl": ""
-    },
-    {
-      "id": "39uLYYZytVUwcjgeYLI409",
-      "name": "Merry-Go-Round of Life - from 'Howl's Moving Castle'",
-      "artist": "Joe Hisaishi",
-      "album": "FREEDOM PIANO STORIES 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27333ea9fb3fd69bca55a015229",
-      "playedAt": "2026-11-14T11:56:18.468Z",
-      "spotifyUrl": "https://open.spotify.com/track/39uLYYZytVUwcjgeYLI409",
-      "duration": 311106,
-      "previewUrl": ""
-    },
-    {
-      "id": "5tE3p4vIwoqUZLkKF2PNeB",
-      "name": "Interstellar Main Theme (From \"Interstellar\")",
-      "artist": "Geek Music",
-      "album": "Interstellar Main Theme (From \"Interstellar\")",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2731f72550703b6302addfc9959",
-      "playedAt": "2026-11-14T11:51:06.932Z",
-      "spotifyUrl": "https://open.spotify.com/track/5tE3p4vIwoqUZLkKF2PNeB",
-      "duration": 243209,
-      "previewUrl": ""
-    },
-    {
-      "id": "0YGPxxFKlNde0V2nSq6FJi",
-      "name": "The Throne Room and End Title (From \"Star Wars\")",
-      "artist": "John Williams, Charles Gerhardt, National Philharmonic Orchestra",
-      "album": "Star Wars & Return of the Jedi",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27380f0183e95d1ab70eec8702c",
-      "playedAt": "2026-11-14T11:47:03.209Z",
-      "spotifyUrl": "https://open.spotify.com/track/0YGPxxFKlNde0V2nSq6FJi",
-      "duration": 483293,
-      "previewUrl": ""
-    },
-    {
-      "id": "6ko9w38zHQYMC9zEtdU6vT",
-      "name": "Universal Studios Fanfare",
-      "artist": "Geek Music",
-      "album": "Universal Studios Fanfare",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2735440552cf89e9ae5e354bf18",
-      "playedAt": "2026-11-14T11:38:59.409Z",
-      "spotifyUrl": "https://open.spotify.com/track/6ko9w38zHQYMC9zEtdU6vT",
-      "duration": 22880,
-      "previewUrl": ""
-    },
-    {
-      "id": "2TZbQZXOuR8osP2AK8yYMN",
-      "name": "Theme From Jurassic Park",
-      "artist": "John Williams",
-      "album": "Jurassic Park",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27392f051ce3c585b5c2db21d52",
-      "playedAt": "2026-11-14T11:38:36Z",
-      "spotifyUrl": "https://open.spotify.com/track/2TZbQZXOuR8osP2AK8yYMN",
-      "duration": 207426,
       "previewUrl": ""
     }
   ],
