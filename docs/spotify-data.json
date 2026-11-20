@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-11-19T23:59:43.648Z",
+  "lastUpdated": "2026-11-20T06:11:21.432Z",
   "tracks": [
+    {
+      "id": "7ejV5C1FCdNRRpasay9auU",
+      "name": "ロスト・デリュージョン",
+      "artist": "フロクロ",
+      "album": "ロスト・デリュージョン",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6aae46f3246ee168c4769",
+      "playedAt": "2026-11-20T06:06:52.693Z",
+      "spotifyUrl": "https://open.spotify.com/track/7ejV5C1FCdNRRpasay9auU",
+      "duration": 186624,
+      "previewUrl": ""
+    },
+    {
+      "id": "08ZvFfHEBfTgH4MN9YT1BC",
+      "name": "六兆年と一夜物語 (feat. IA)",
+      "artist": "kemu, IA",
+      "album": "IA SUPER BEST -THE CREATORS -",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2733f5e42bee63e05a2cfa5bcc3",
+      "playedAt": "2026-11-20T05:43:55.697Z",
+      "spotifyUrl": "https://open.spotify.com/track/08ZvFfHEBfTgH4MN9YT1BC",
+      "duration": 215013,
+      "previewUrl": ""
+    },
     {
       "id": "4fDralhqIxfoDHrnFSE3n0",
       "name": "エイリアンエイリアン",
@@ -21,17 +43,6 @@
       "playedAt": "2026-11-19T20:34:07.645Z",
       "spotifyUrl": "https://open.spotify.com/track/1BkLKYzF7cQ0AzpgSrOfoc",
       "duration": 213784,
-      "previewUrl": ""
-    },
-    {
-      "id": "7ejV5C1FCdNRRpasay9auU",
-      "name": "ロスト・デリュージョン",
-      "artist": "フロクロ",
-      "album": "ロスト・デリュージョン",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b2736ec6aae46f3246ee168c4769",
-      "playedAt": "2026-11-19T20:30:33.407Z",
-      "spotifyUrl": "https://open.spotify.com/track/7ejV5C1FCdNRRpasay9auU",
-      "duration": 186624,
       "previewUrl": ""
     },
     {
@@ -318,17 +329,6 @@
       "playedAt": "2026-11-19T15:19:12.828Z",
       "spotifyUrl": "https://open.spotify.com/track/5ic62hKqeDhZsa9l6YQxzJ",
       "duration": 156972,
-      "previewUrl": ""
-    },
-    {
-      "id": "6J3pPfXLujwsWQpvR6XMgC",
-      "name": "PPPP (feat. Hatsune Miku, Kasane Teto)",
-      "artist": "TAK, Hatsune Miku, Kasane Teto",
-      "album": "PPPP",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273e2acdafe9b0c10beeda9a277",
-      "playedAt": "2026-11-19T15:16:35.544Z",
-      "spotifyUrl": "https://open.spotify.com/track/6J3pPfXLujwsWQpvR6XMgC",
-      "duration": 154835,
       "previewUrl": ""
     }
   ],
