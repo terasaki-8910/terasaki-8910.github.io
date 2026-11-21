@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-11-21T04:43:41.618Z",
+  "lastUpdated": "2026-11-21T13:52:16.485Z",
   "tracks": [
+    {
+      "id": "1ZxXUnXPNUBXVLDXY9rypW",
+      "name": "Feel Alright",
+      "artist": "Rema, Wizkid",
+      "album": "Feel Alright",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ebefa6d82086e80e9dacb81",
+      "playedAt": "2026-11-21T07:31:11.981Z",
+      "spotifyUrl": "https://open.spotify.com/track/1ZxXUnXPNUBXVLDXY9rypW",
+      "duration": 229757,
+      "previewUrl": ""
+    },
     {
       "id": "1hZZUYSBu8xpyTGxgsI8Wn",
       "name": "African Love Story (From Children of Blood and Bone)",
@@ -318,17 +329,6 @@
       "playedAt": "2026-11-19T16:32:23.622Z",
       "spotifyUrl": "https://open.spotify.com/track/41VEG2YqkaK7JZgjbstEW6",
       "duration": 244600,
-      "previewUrl": ""
-    },
-    {
-      "id": "0qeJlzTP4ElGNqleALaeR2",
-      "name": "TRECI PESTE",
-      "artist": "VANILLA",
-      "album": "TRECI PESTE",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27318a0290118248f1c9b26c2cb",
-      "playedAt": "2026-11-19T16:28:18.420Z",
-      "spotifyUrl": "https://open.spotify.com/track/0qeJlzTP4ElGNqleALaeR2",
-      "duration": 138750,
       "previewUrl": ""
     }
   ],
