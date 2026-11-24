@@ -1,6 +1,17 @@
 {
-  "lastUpdated": "2026-11-23T16:47:37.671Z",
+  "lastUpdated": "2026-11-24T16:41:07.093Z",
   "tracks": [
+    {
+      "id": "2d12S61OntIRSgaOrzOyYM",
+      "name": "Wasted Nights",
+      "artist": "ONE OK ROCK",
+      "album": "Wasted Nights",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b27386653b9c56f4a6d72fd8b05c",
+      "playedAt": "2026-11-24T09:54:13.566Z",
+      "spotifyUrl": "https://open.spotify.com/track/2d12S61OntIRSgaOrzOyYM",
+      "duration": 224773,
+      "previewUrl": ""
+    },
     {
       "id": "3J7MDUvZShF6g10L5uicv6",
       "name": "We are",
@@ -318,17 +329,6 @@
       "playedAt": "2026-11-22T01:31:54.279Z",
       "spotifyUrl": "https://open.spotify.com/track/4MnCYguz7oO1NmZ4ZQulEn",
       "duration": 282893,
-      "previewUrl": ""
-    },
-    {
-      "id": "47IJAEuqiu4r1dEoEExfMA",
-      "name": "空想メソロギヰ",
-      "artist": "Yousei Teikoku",
-      "album": "PAX VESANIA",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd463667d0879f62cfdf863d",
-      "playedAt": "2026-11-22T01:26:55.686Z",
-      "spotifyUrl": "https://open.spotify.com/track/47IJAEuqiu4r1dEoEExfMA",
-      "duration": 243226,
       "previewUrl": ""
     }
   ],
