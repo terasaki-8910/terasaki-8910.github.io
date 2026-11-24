@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T07:19:37.471Z",
+  "lastUpdated": "2026-11-24T09:40:54.654Z",
   "player": {
     "personaname": "masa669a",
     "avatarUrl": "https://avatars.steamstatic.com/3bfbc1d2795d6c6c4e7bfd5f05132fa8010d68c8_full.jpg",
@@ -90,8 +90,8 @@
     },
     {
       "appid": 1954420,
-      "name": "RiichiCity × KAKEGURUI2 Collab",
-      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1954420/4b086e41d538aed5ed4f5db1398e7469cb0514d9.jpg",
+      "name": "[Riichi City] × [Kaiji: Against All Rules] Collab Confirmed!",
+      "iconUrl": "https://media.steampowered.com/steamcommunity/public/images/apps/1954420/cde6b957e499f7ee89401d9fcfaaf313d314fe9f.jpg",
       "playtimeForeverMinutes": 69
     },
     {
@@ -537,7 +537,7 @@
           "description": "Cause 1 fatal error or trigger 128 warnings in the editor.",
           "iconUrl": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
           "unlockedAt": "2026-09-06T13:52:37.000Z",
-          "percent": 33.3
+          "percent": 33.4
         },
         {
           "name": "Trying something new",
