@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T00:26:09.337Z",
+  "generatedAt": "2026-11-27T02:21:52.070Z",
   "user": "masatoT",
   "watched": [
     {
@@ -1041,6 +1041,39 @@
       "recordedOrder": null,
       "rating": 9,
       "ratedAt": "2026-11-10T23:11:45.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 42715,
+      "tmdb": 42942,
+      "slug": "angel-beats",
+      "year": 2010,
+      "released": "2010-04-03",
+      "traktTitle": "Angel Beats!",
+      "details": {
+        "poster": "/6FGbsF8k9dJrHfFVYV9mkoMRWvn.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "ドラマ",
+          "Sci-Fi & Fantasy",
+          "Action & Adventure"
+        ],
+        "overview": "森に囲まれた丘陵地にある、生徒総数2000名を越える全寮制のとある学園。一見するとごく普通の生徒らが生活を送っている学園だが、そこは死後の世界だった。現世で理不尽な人生を体験し、青春時代をまともに送れずに死んだ者はこの世界に送られ、あらかじめ用意されたエキストラの生徒達と共に学園で楽しい青春時代を過ごす内に未練を無くし、消滅（成仏）し、転生する。しかし、転生することを拒む人々がいた。少女・ゆりをリーダーとする「死んだ世界戦線（以降、戦線）」は、理不尽な人生を強いた神への復讐を目的とし、死ぬことのないこの世界で、学校の秩序を守る「天使」と日夜戦いを繰り広げていた。生前の記憶を失った少年・音無は、戦線のメンバーと行動を共にするが、次第にこの世界の真実を知ることとなる。",
+        "overviewLang": "ja",
+        "title": "Angel Beats!",
+        "originalTitle": "Angel Beats!",
+        "runtime": 24,
+        "releaseDate": "2010-04-03",
+        "seasons": 1,
+        "episodes": 13
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-11-26T04:31:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-11-26T04:31:50.000Z"
     },
     {
       "type": "movie",
@@ -2751,6 +2784,37 @@
       "recordedOrder": 14495523800,
       "rating": 9,
       "ratedAt": "2026-10-05T02:49:28.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 190447,
+      "tmdb": 137194,
+      "slug": "shinepost",
+      "year": 2022,
+      "released": "2022-07-13",
+      "traktTitle": "SHINEPOST",
+      "details": {
+        "poster": "/qz0CWswDNsSsBkHjkcT6a98zo2e.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "ドラマ"
+        ],
+        "overview": "「世界中の人達にアイドルを大好きになってほしい！そのための輝く道標……それが、シャインポストだよ！」大きな夢を抱くも、小さな成果しかあげられないアイドルユニット『TiNgS』の玉城杏夏、青天国春、聖舞理王。彼女らに救いの手として用意されたのは、曰く最強マネージャー、のはずが……「僕、マネージャーはやらないよ」現われたのは、まるでやる気のない男、日生直輝だった。だが、彼には一つ特別な力が備わっていて……？これは、絶対アイドルを目指すため、君と少女たちが光り輝く物語。",
+        "overviewLang": "ja",
+        "title": "シャインポスト",
+        "originalTitle": "シャインポスト",
+        "runtime": 23,
+        "releaseDate": "2022-07-13",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-11-26T04:32:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-11-26T04:32:16.000Z"
     },
     {
       "type": "movie",
