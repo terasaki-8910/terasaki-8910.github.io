@@ -1,6 +1,28 @@
 {
-  "lastUpdated": "2026-11-26T15:59:13.800Z",
+  "lastUpdated": "2026-11-27T01:15:10.759Z",
   "tracks": [
+    {
+      "id": "0auYAmhFCnl9fpRZaUTmTI",
+      "name": "Roar",
+      "artist": "初星学園, BOYHOOD, 十王星南",
+      "album": "Roar",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b2737c530727d7f77d9e7e8b4963",
+      "playedAt": "2026-11-26T19:15:46.967Z",
+      "spotifyUrl": "https://open.spotify.com/track/0auYAmhFCnl9fpRZaUTmTI",
+      "duration": 202500,
+      "previewUrl": ""
+    },
+    {
+      "id": "1deyspHwRUXonRoBZ8eSCZ",
+      "name": "おジャ魔女カーニバル!!",
+      "artist": "茜屋 日海夏, 若井 友希, 久保田 未夢",
+      "album": "カバ☆リス",
+      "albumArt": "https://i.scdn.co/image/ab67616d0000b273f81796145ddbdccdfdd7c7fd",
+      "playedAt": "2026-11-26T18:06:56.640Z",
+      "spotifyUrl": "https://open.spotify.com/track/1deyspHwRUXonRoBZ8eSCZ",
+      "duration": 213080,
+      "previewUrl": ""
+    },
     {
       "id": "7s2O8rpKRgPWhgqiHmmm4v",
       "name": "春擬き",
@@ -307,28 +329,6 @@
       "playedAt": "2026-11-26T02:10:35.182Z",
       "spotifyUrl": "https://open.spotify.com/track/1VGD8auitgj2ga7yrdB12P",
       "duration": 229093,
-      "previewUrl": ""
-    },
-    {
-      "id": "587i4g5fwUDAdl5xTP7UtW",
-      "name": "Miserlou",
-      "artist": "Dick Dale & His Del-Tones",
-      "album": "Surfer's Choice",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b273189c10c705d2967fc0f503f7",
-      "playedAt": "2026-11-25T09:56:33.555Z",
-      "spotifyUrl": "https://open.spotify.com/track/587i4g5fwUDAdl5xTP7UtW",
-      "duration": 137426,
-      "previewUrl": ""
-    },
-    {
-      "id": "39uLYYZytVUwcjgeYLI409",
-      "name": "Merry-Go-Round of Life - from 'Howl's Moving Castle'",
-      "artist": "Joe Hisaishi",
-      "album": "FREEDOM PIANO STORIES 4",
-      "albumArt": "https://i.scdn.co/image/ab67616d0000b27333ea9fb3fd69bca55a015229",
-      "playedAt": "2026-11-25T09:54:15.644Z",
-      "spotifyUrl": "https://open.spotify.com/track/39uLYYZytVUwcjgeYLI409",
-      "duration": 311106,
       "previewUrl": ""
     }
   ],
