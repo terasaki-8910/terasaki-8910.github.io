@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T02:21:52.070Z",
+  "generatedAt": "2026-11-28T02:06:59.062Z",
   "user": "masatoT",
   "watched": [
     {
@@ -29,6 +29,34 @@
       "recordedOrder": 14495528329,
       "rating": 9,
       "ratedAt": "2026-10-05T02:51:29.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 566,
+      "tmdb": 694,
+      "slug": "the-shining-1980",
+      "year": 1980,
+      "released": "1980-05-23",
+      "traktTitle": "The Shining",
+      "details": {
+        "poster": "/njWo2LDTRPbb7Rt0lHkksrl0VOk.jpg",
+        "genres": [
+          "ホラー",
+          "スリラー"
+        ],
+        "overview": "冬の間は豪雪で閉鎖されるホテルの管理人職を得た小説家志望のジャック・トランスは、妻のウェンディーと心霊能力のある息子ダニーとともにホテルへやってくる。そのホテルでは、かつて精神に異常をきたした管理人が家族を惨殺するという事件が起きており、当初は何も気にしていなかったジャックも、次第に邪悪な意思に飲みこまれていく。",
+        "overviewLang": "ja",
+        "title": "シャイニング",
+        "originalTitle": "The Shining",
+        "runtime": 119,
+        "releaseDate": "1980-05-23"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2024-02-03T14:53:00.000Z",
+      "recordedOrder": 1000002460497,
+      "rating": null,
+      "ratedAt": null
     },
     {
       "type": "movie",
@@ -955,6 +983,38 @@
       "ratedAt": "2026-10-05T02:00:57.000Z"
     },
     {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 45938,
+      "tmdb": 46195,
+      "slug": "monogatari",
+      "year": 2009,
+      "released": "2009-07-03",
+      "traktTitle": "Monogatari",
+      "details": {
+        "poster": "/f7rhm0NuroxwC8OTVgmNJlsoc4W.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "ドラマ",
+          "謎"
+        ],
+        "overview": "21世紀初頭の日本のとある町を舞台に高校生の阿良々木暦が「怪異」と呼ばれる物の怪に関わった自分自身や少女達との出会い、その怪異にまつわる事件を描いた物語。",
+        "overviewLang": "ja",
+        "title": "化物語",
+        "originalTitle": "化物語",
+        "runtime": 24,
+        "releaseDate": "2009-07-03",
+        "seasons": 5,
+        "episodes": 73
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-11-27T05:28:00.000Z",
+      "recordedOrder": null,
+      "rating": 9,
+      "ratedAt": "2026-11-27T05:29:01.000Z"
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 13853,
@@ -1308,6 +1368,34 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 57181,
+      "tmdb": 77338,
+      "slug": "the-intouchables-2011",
+      "year": 2011,
+      "released": "2011-11-02",
+      "traktTitle": "The Intouchables",
+      "details": {
+        "poster": "/5Ng9EmC6XyvQgxcLMDiBCMk5EMB.jpg",
+        "genres": [
+          "ドラマ",
+          "コメディ"
+        ],
+        "overview": "パラグライダーの事故のために首から下が不自由になり、車いす生活を送る大富豪フィリップ。介護者募集の面接にアフリカ系青年ドリスがやって来る。ドリスは不採用の証明書3枚で支給される失業手当が目的だったが、フィリップは彼を気に入って介護者に採用。介護の訓練が始まるが、マイペースのドリス。しかし、傲慢で気難しいフィリップに対してドリスがシニカルなユーモアや深い教養を示すうち、2人の間に友情が芽生えていく。",
+        "overviewLang": "ja",
+        "title": "最強のふたり",
+        "originalTitle": "Intouchables",
+        "runtime": 113,
+        "releaseDate": "2011-11-02"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2024-11-07T20:39:00.000Z",
+      "recordedOrder": 1000002460537,
+      "rating": null,
+      "ratedAt": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 14701,
       "tmdb": 24428,
       "slug": "the-avengers-2012",
@@ -1656,6 +1744,38 @@
       "ratedAt": "2026-10-05T01:52:33.000Z"
     },
     {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 60366,
+      "tmdb": 60808,
+      "slug": "no-game-no-life",
+      "year": 2014,
+      "released": "2014-04-09",
+      "traktTitle": "No Game No Life",
+      "details": {
+        "poster": "/qpKGtHATF326zuC1jh7WCrY7u5g.jpg",
+        "genres": [
+          "アニメーション",
+          "Sci-Fi & Fantasy",
+          "Action & Adventure",
+          "コメディ"
+        ],
+        "overview": "全てが”ゲーム”で決まる!?超弩級の頭脳バトルファンタジーが今、幕を開ける\n\nニートでヒキコモリ……だがネット上では『　　』の名で無敗を誇る天才ゲーマー兄妹・空と白。ただの都市伝説とまで言われるほどの常識外れな腕前を持った空と白の前に、ある日”神”を名乗る少年・テトが現れる。テトはリアルをクソゲーと呼ぶ空と白の二人を異世界へと召喚してしまう。そこは一切の争いが禁じられ、全てがゲームで決まる世界だった!異世界に住まう十六の種族の中で最弱の人類種（イマニティ）。他種族に国土の大部分を奪われ、滅増寸前に追い込まれている人類種を救うため、空と白は空前絶後の頭脳バトルに挑む!",
+        "overviewLang": "ja",
+        "title": "ノーゲーム・ノーライフ",
+        "originalTitle": "ノーゲーム・ノーライフ",
+        "runtime": 23,
+        "releaseDate": "2014-04-09",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "plays": 12,
+      "lastWatchedAt": "2017-06-30T14:16:00.000Z",
+      "recordedOrder": null,
+      "rating": 9,
+      "ratedAt": "2026-11-27T05:41:39.000Z"
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 92230,
@@ -1910,6 +2030,35 @@
       "recordedOrder": 14566800084,
       "rating": 7,
       "ratedAt": "2026-10-24T11:25:22.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 56360,
+      "tmdb": 76341,
+      "slug": "mad-max-fury-road-2015",
+      "year": 2015,
+      "released": "2015-05-13",
+      "traktTitle": "Mad Max: Fury Road",
+      "details": {
+        "poster": "/auGxRPeTiC5p95sWktXJ4uIi6a4.jpg",
+        "genres": [
+          "アクション",
+          "アドベンチャー",
+          "サイエンスフィクション"
+        ],
+        "overview": "資源が底を突き荒廃した世界、愛する者も生きる望みも失い荒野をさまようマックスは、砂漠を牛耳る敵であるイモータン・ジョーの一団に捕らわれ、深い傷を負ってしまう。そんな彼の前に、ジョーの配下の女戦士フュリオサ、全身白塗りの謎の男、そしてジョーと敵対関係にあるグループが出現。マックスは彼らと手を組み、強大なジョーの勢力に戦いを挑む。〈荒廃した近未来を舞台に妻子を暴走族に殺された男の壮絶な復讐劇を描き、主演のメル・ギブソンの出世作となった『マッドマックス』シリーズ第4弾。同シリーズの生みの親であるジョージ・ミラーが再びメガホンを取り、主役を『ダークナイト　ライジング』などのトム・ハーディが受け継ぐ。共演にはオスカー女優シャーリーズ・セロン、『ウォーム・ボディーズ』などのニコラス・ホルト、1作目で暴走族のボスを演じたヒュー・キース・バーン〉",
+        "overviewLang": "ja",
+        "title": "マッドマックス 怒りのデス・ロード",
+        "originalTitle": "Mad Max: Fury Road",
+        "runtime": 120,
+        "releaseDate": "2015-05-13"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2021-09-16T15:30:00.000Z",
+      "recordedOrder": 1000002461110,
+      "rating": null,
+      "ratedAt": null
     },
     {
       "type": "movie",
@@ -2203,6 +2352,37 @@
       "ratedAt": "2026-10-05T03:00:36.000Z"
     },
     {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 112742,
+      "tmdb": 69285,
+      "slug": "gabriel-dropout",
+      "year": 2017,
+      "released": "2017-01-09",
+      "traktTitle": "Gabriel DropOut",
+      "details": {
+        "poster": "/54RLULTycUjyIfsqjYwijDbO9C0.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "天使学校首席の天使が人間界にやってきた！ ……が、 人間界に馴染みすぎて学校サボりまくりのネトゲ三昧、自堕落生活。 怠惰な駄目天使、略して「駄天使」と化したガヴリールは、 すべての人類を幸せにする目標はどこへやら。 娯楽を満喫し続けると誓うのであった――。",
+        "overviewLang": "ja",
+        "title": "ガヴリールドロップアウト",
+        "originalTitle": "ガヴリールドロップアウト",
+        "runtime": 24,
+        "releaseDate": "2017-01-09",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "plays": 6,
+      "lastWatchedAt": "2026-11-27T05:53:00.000Z",
+      "recordedOrder": null,
+      "rating": null,
+      "ratedAt": null
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 205127,
@@ -2287,6 +2467,37 @@
       "recordedOrder": 14569723636,
       "rating": 8,
       "ratedAt": "2026-10-25T07:03:50.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "anime",
+      "trakt": 291831,
+      "tmdb": 445030,
+      "slug": "no-game-no-life-zero-2017",
+      "year": 2017,
+      "released": "2017-07-15",
+      "traktTitle": "No Game No Life: Zero",
+      "details": {
+        "poster": "/aC2u68gvupS5gD3tOSAKg8jhd9T.jpg",
+        "genres": [
+          "アドベンチャー",
+          "アニメーション",
+          "ドラマ",
+          "ファンタジー",
+          "ロマンス"
+        ],
+        "overview": "それは一切の争いが禁じられ、全てがゲームで決まる《盤上の世界(ディス・ボード)》が創造されるはるか以前の出来事。世界を統べる唯一神の座をめぐり、終わりの見えない大戦が続いていた時代。天を裂き、地を割り、星さえも破壊し尽くさんとする凄惨な戦争は、戦う力を持たない人間たちに理不尽な死を撒き散らしていた。強大な力を持つ様々な種族に追いやられ、存亡の危機に瀕する人間を率いる若きリーダーの名はリク。一人でも多くの人間が明日を迎えるために心を砕き、擦り減らす日々が続くある日、リクは打ち捨てられた森霊種(エルフ)の都で機械仕掛けの少女・シュヴィと出会う。機械には持ち得ぬ心に興味を持ってしまったことでエラーを起こしてしまい、仲間たちから廃棄されてしまったシュヴィは、エラーを修正するため、リクに《人間の心》を教えてほしいと頼むのだが……。これは六千年以上もの昔に紡がれた《最も新しい神話》へと至る《最も古き神話》。記録にも記憶にも残らない、誰にも語られることのない物語が今、幕を開ける——。",
+        "overviewLang": "ja",
+        "title": "ノーゲーム・ノーライフ ゼロ",
+        "originalTitle": "ノーゲーム・ノーライフ ゼロ",
+        "runtime": 106,
+        "releaseDate": "2017-07-15"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2017-06-30T14:16:00.000Z",
+      "recordedOrder": 1000002459237,
+      "rating": null,
+      "ratedAt": null
     },
     {
       "type": "movie",
@@ -2377,6 +2588,37 @@
       "ratedAt": "2026-10-28T12:14:34.000Z"
     },
     {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 126457,
+      "tmdb": 76758,
+      "slug": "hinamatsuri",
+      "year": 2018,
+      "released": "2018-04-06",
+      "traktTitle": "Hinamatsuri",
+      "details": {
+        "poster": "/6Ko7FFoF8r4xj2bjAvpbyK7BAiT.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "芦川組を支える若きインテリヤクザ、新田義史は大好きな壺に囲まれ、悠々自適な独身生活を送っていた。ところがある日、謎の物体に入った少女ヒナがやってきたことで生活が一変。念動力が使えるヒナに脅され、同居を余儀なくされてしまったのだ！暴走しがちなヒナは組関係でも学校でもやりたい放題。頭を抱える新田だが、気のいい性格が災いしていつも面倒を見る羽目に。一体、この生活はどうなってしまうのか？お人好しなアウトローと気ままなサイキック少女の危険で賑やかな日常が始まる！",
+        "overviewLang": "ja",
+        "title": "ヒナまつり",
+        "originalTitle": "ヒナまつり",
+        "runtime": 24,
+        "releaseDate": "2018-04-06",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "plays": 12,
+      "lastWatchedAt": "2018-06-22T12:24:00.000Z",
+      "recordedOrder": null,
+      "rating": 10,
+      "ratedAt": "2026-11-27T05:49:35.000Z"
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 191797,
@@ -2463,6 +2705,36 @@
       "recordedOrder": 14495573638,
       "rating": 7,
       "ratedAt": "2026-10-05T03:11:59.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 140292,
+      "tmdb": 84666,
+      "slug": "wataten-an-angel-flew-down-to-me",
+      "year": 2019,
+      "released": "2019-01-08",
+      "traktTitle": "WATATEN!: an Angel Flew Down to Me",
+      "details": {
+        "poster": "/2D2nD0fajDEBqj5n3KA0tpEwNIQ.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "オタクで、人見知りな女子大生みやこが出会ったのは、まさに天使な小学生!?妹が新しく連れてきた友だちの花ちゃんを見た瞬間、ドキドキが止まらなくなってしまったみやこ!!どうにか仲良くなろうと奮闘するのだが……。超絶かわいいあの娘と仲良くなりたい系スケッチコメディー、開幕♪",
+        "overviewLang": "ja",
+        "title": "私に天使が舞い降りた！",
+        "originalTitle": "私に天使が舞い降りた！",
+        "runtime": 24,
+        "releaseDate": "2019-01-08",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "plays": 12,
+      "lastWatchedAt": "2019-03-26T13:24:00.000Z",
+      "recordedOrder": null,
+      "rating": 6,
+      "ratedAt": "2026-11-27T05:27:09.000Z"
     },
     {
       "type": "movie",
@@ -2580,6 +2852,35 @@
       "recordedOrder": null,
       "rating": 8,
       "ratedAt": "2026-10-05T01:39:39.000Z"
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 322988,
+      "tmdb": 475557,
+      "slug": "joker-2019",
+      "year": 2019,
+      "released": "2019-10-01",
+      "traktTitle": "Joker",
+      "details": {
+        "poster": "/j9ArCk5Za4Hw32WnRtiCPtmDcxZ.jpg",
+        "genres": [
+          "犯罪",
+          "スリラー",
+          "ドラマ"
+        ],
+        "overview": "1981年、犯罪が多発する大都会ゴッサムシティ。ピエロの仕事をしているアーサーは貧しく、老いた母親ペニーと暮らす上、突然笑いだしてしまうという心の病に悩むが、TV界の人気司会者フランクリンを憧れの対象にして日々耐え忍んでいた。ある日、失業したアーサーは地下鉄で、女性客に嫌がらせをしていた男性3人組を偶然持っていた拳銃で皆殺しにしてしまう。以後アーサーは、自身の心にあった怒りを解放させていく。",
+        "overviewLang": "ja",
+        "title": "ジョーカー",
+        "originalTitle": "Joker",
+        "runtime": 122,
+        "releaseDate": "2019-10-01"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2019-10-04T00:00:00.000Z",
+      "recordedOrder": 1000002460467,
+      "rating": null,
+      "ratedAt": null
     },
     {
       "type": "movie",
@@ -2727,6 +3028,36 @@
       "recordedOrder": 14495733312,
       "rating": 9,
       "ratedAt": "2026-10-05T04:29:27.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 185085,
+      "tmdb": 130237,
+      "slug": "aharen-san-wa-hakarenai",
+      "year": 2022,
+      "released": "2022-04-02",
+      "traktTitle": "Aharen-san wa Hakarenai",
+      "details": {
+        "poster": "/3Pqe5r4THECyIsJ58C4YLFZD6nj.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "小柄で物静かな女の子、 阿波連(あはれん)れいなさん。人との距離をはかるのが少し苦手。そんな彼女の隣の席に座るライドウくんは、阿波連さんとの間に距離を感じていた。ある日、阿波連さんが落としてしまった消しゴムをライドウくんが拾ったことをキッカケに、ふたりの距離は急接近！？「遠すぎたり」「近すぎたり」予測不能な阿波連さん。色んな意味で、『はかれない』密着系？青春ラブコメディの幕が上がる！！",
+        "overviewLang": "ja",
+        "title": "阿波連さんははかれない",
+        "originalTitle": "阿波連さんははかれない",
+        "runtime": 24,
+        "releaseDate": "2022-04-02",
+        "seasons": 2,
+        "episodes": 24
+      },
+      "plays": 24,
+      "lastWatchedAt": "2026-02-07T16:47:00.000Z",
+      "recordedOrder": null,
+      "rating": 9,
+      "ratedAt": "2026-11-27T05:25:18.000Z"
     },
     {
       "type": "movie",
@@ -2878,6 +3209,69 @@
       "ratedAt": "2026-10-05T02:26:02.000Z"
     },
     {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 194205,
+      "tmdb": 194831,
+      "slug": "immoral-guild",
+      "year": 2022,
+      "released": "2022-10-05",
+      "traktTitle": "Immoral Guild",
+      "details": {
+        "poster": "/gauTV02Ek752FrbSlFKjlpWSiCr.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Action & Adventure",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "「…俺の青春、これでいいんだろうか」\n\n若手ながらギルド１の討伐数を誇る狩人キクル。\n\n幼いころから訓練に明け暮れ一流の狩人となった彼の望み、\n\n…それは仕事を辞めること！？\n\n失われた青春の1ページを取り戻すため、\n\n一刻も早く引退したいキクルの最優先ミッションは後任の育成！\n\nしかし、はちゃめちゃな新米ガードを引き連れてのクエストは\n\nなぜか不道徳なハプニングしか起こらない！！\n\nどうなる俺の青春！？キクルの不徳な新人教育が今始まる！！",
+        "overviewLang": "ja",
+        "title": "不徳のギルド",
+        "originalTitle": "不徳のギルド",
+        "runtime": 24,
+        "releaseDate": "2022-10-05",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "plays": 12,
+      "lastWatchedAt": "2026-03-19T21:11:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-11-27T05:23:18.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 186012,
+      "tmdb": 131041,
+      "slug": "blue-lock",
+      "year": 2022,
+      "released": "2022-10-09",
+      "traktTitle": "BLUE LOCK",
+      "details": {
+        "poster": "/9aICTTHECyRwB2pBHm3rAj1SgGg.jpg",
+        "genres": [
+          "アニメーション",
+          "Action & Adventure",
+          "ドラマ"
+        ],
+        "overview": "世界一のエゴイストでなければ、世界一のストライカーにはなれない。日本を W 杯優勝に導くストライカーを育てるため、日本フットボール連合はある計画を立ち上げる。その名も、“ブルーロック（青い監獄）”プロジェクト。集められたのは 300 人の高校生。しかも、全員 FW（フォワード）。299 人のサッカー生命を犠牲に誕生する、日本サッカーに革命を起こすストライカーとは──？",
+        "overviewLang": "ja",
+        "title": "ブルーロック",
+        "originalTitle": "ブルーロック",
+        "runtime": 23,
+        "releaseDate": "2022-10-09",
+        "seasons": 1,
+        "episodes": 38
+      },
+      "plays": 38,
+      "lastWatchedAt": "2026-01-18T14:35:00.000Z",
+      "recordedOrder": null,
+      "rating": 8,
+      "ratedAt": "2026-11-27T05:30:15.000Z"
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 448646,
@@ -2905,6 +3299,37 @@
       "recordedOrder": 14495445076,
       "rating": 9,
       "ratedAt": "2026-10-05T02:20:42.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 196271,
+      "tmdb": 204112,
+      "slug": "otaku-elf",
+      "year": 2023,
+      "released": "2023-04-08",
+      "traktTitle": "Otaku Elf",
+      "details": {
+        "poster": "/pRYEPEVbSCg1qJhpKoDpFYOALPX.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "東京都中央区月島。江戸時代より400年以上の歴史を刻む『高耳神社（たかみみじんじゃ）』。祀られたるそのご神体は、異世界から召喚され、すっかりひきこもったエルフでした。ご神体のエルフ・エルダに仕えるのは、高耳神社15代目巫女の小金井小糸。現代文明とオタク趣味をエンジョイするエルダに振り回されながらも、彼女が教えてくれる江戸の文化に胸をときめかせ、連綿と紡がれる月島の人々とエルダのつながりにほっこり。でもやっぱりこのエルフ、ぐうたらすぎる！しかも他の神社のエルフ&巫女コンビまで現れて・・・・・・！？江戸と令和をつなぐゆったり下町コメディ、始まります。",
+        "overviewLang": "ja",
+        "title": "江戸前エルフ",
+        "originalTitle": "江戸前エルフ",
+        "runtime": 24,
+        "releaseDate": "2023-04-08",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "plays": 2,
+      "lastWatchedAt": "2026-11-27T05:22:00.000Z",
+      "recordedOrder": null,
+      "rating": 7,
+      "ratedAt": "2026-11-27T05:22:24.000Z"
     },
     {
       "type": "show",
@@ -3051,6 +3476,65 @@
       "recordedOrder": null,
       "rating": 8,
       "ratedAt": "2026-10-05T07:57:17.000Z"
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 207030,
+      "tmdb": 223564,
+      "slug": "the-100-girlfriends-who-really-really-really-really-really-love-you",
+      "year": 2023,
+      "released": "2023-10-08",
+      "traktTitle": "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
+      "details": {
+        "poster": "/fOfFcOays1whjqBOEkEznVgyhVi.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "中学で失恋100回を達成した愛城恋太郎は、高校でこそ彼女を!と願い訪れた神社で、現れた恋の神様から「高校で出会う運命の人は100人いる」と告げられる。しかし神様いわく、運命の人と出会った人間は、その相手と愛し合って幸せになれなければ死んでしまうという・・・・・・。次々に待ち受ける運命の人との出会いーどうする恋太郎? どうなる100人の彼女!?",
+        "overviewLang": "ja",
+        "title": "君のことが大大大大大好きな100人の彼女",
+        "originalTitle": "君のことが大大大大大好きな100人の彼女",
+        "runtime": 23,
+        "releaseDate": "2023-10-08",
+        "seasons": 1,
+        "episodes": 36
+      },
+      "plays": 1,
+      "lastWatchedAt": "2026-11-27T05:30:00.000Z",
+      "recordedOrder": null,
+      "rating": null,
+      "ratedAt": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 755432,
+      "tmdb": 940721,
+      "slug": "godzilla-minus-one-2023",
+      "year": 2023,
+      "released": "2023-11-03",
+      "traktTitle": "Godzilla Minus One",
+      "details": {
+        "poster": "/buvBq2zLP7CcJth8tjrI4znvfEO.jpg",
+        "genres": [
+          "サイエンスフィクション",
+          "ホラー",
+          "アクション"
+        ],
+        "overview": "戦後、無になった日本へ追い打ちをかけるように現れたゴジラがこの国を 負 に叩き落す。史上最も絶望的な状況での襲来に、誰が?そしてどうやって?日本は立ち向かうのか―。",
+        "overviewLang": "ja",
+        "title": "ゴジラ-1.0",
+        "originalTitle": "ゴジラ-1.0",
+        "runtime": 125,
+        "releaseDate": "2023-11-03"
+      },
+      "plays": 1,
+      "lastWatchedAt": "2023-11-03T00:00:00.000Z",
+      "recordedOrder": 1000002460505,
+      "rating": null,
+      "ratedAt": null
     },
     {
       "type": "show",
@@ -3321,6 +3805,31 @@
     {
       "type": "movie",
       "kind": "movie",
+      "trakt": 295,
+      "tmdb": 348,
+      "slug": "alien-1979",
+      "year": 1979,
+      "released": "1979-05-25",
+      "traktTitle": "Alien",
+      "details": {
+        "poster": "/y860BWR69jphMYhA2gXbFlCsCDe.jpg",
+        "genres": [
+          "ホラー",
+          "サイエンスフィクション"
+        ],
+        "overview": "巨大な宇宙貨物船に侵入した一匹の異星生物の恐怖。地球への帰途についていた宇宙貨物船ノストロモ号は、謎の救難信号を受けて未知の惑星に降り立つ。そこには異星人の船があり、船内には無数の奇怪な卵が存在していた。卵から飛び出した奇妙な生物が顔に貼り付いた航宙士ケインを回収し、ノストロモ号は再び航海につくが、彼の体内にはすでに異星生物の幼体が産みつけられていたのだ。ケインの腹を突き破り姿を現したエイリアンは脱皮を繰り返し巨大に成長、一人また一人と乗組員を血祭りにあげていく……。",
+        "overviewLang": "ja",
+        "title": "エイリアン",
+        "originalTitle": "Alien",
+        "runtime": 117,
+        "releaseDate": "1979-05-25"
+      },
+      "listedAt": "2026-11-27T05:57:43.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
       "trakt": 612,
       "tmdb": 769,
       "slug": "goodfellas-1990",
@@ -3341,6 +3850,134 @@
         "releaseDate": "1990-09-12"
       },
       "listedAt": "2026-10-07T16:32:33.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 554,
+      "tmdb": 680,
+      "slug": "pulp-fiction-1994",
+      "year": 1994,
+      "released": "1994-09-10",
+      "traktTitle": "Pulp Fiction",
+      "details": {
+        "poster": "/8IT4wjo8EH1DlgSfgXuyqz36z8Z.jpg",
+        "genres": [
+          "スリラー",
+          "犯罪",
+          "コメディ"
+        ],
+        "overview": "強盗の計画を立てているカップルを導入部に、盗まれたトランクを取り戻そうとする二人組のギャング、ビンセントとジュールス。ボスの情婦と一晩のデートをするハメになるビンセント。ボクシングの八百長試合で金を受け取るボクサーのブッチ。誤って人を殺し血塗れになった車の処理に右往左往するビンセントとジュールス。ギャングのボス、マーセルスを軸としたこれらの物語がラストに向けて収束していく。",
+        "overviewLang": "ja",
+        "title": "パルプ・フィクション",
+        "originalTitle": "Pulp Fiction",
+        "runtime": 154,
+        "releaseDate": "1994-09-10"
+      },
+      "listedAt": "2026-11-27T05:56:58.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "anime",
+      "trakt": 4621,
+      "tmdb": 9323,
+      "slug": "ghost-in-the-shell-1995",
+      "year": 1995,
+      "released": "1995-11-18",
+      "traktTitle": "Ghost in the Shell",
+      "details": {
+        "poster": "/z9S9V4vtVJqyHxFfI8HFWCobdrH.jpg",
+        "genres": [
+          "アクション",
+          "アニメーション",
+          "サイエンスフィクション"
+        ],
+        "overview": "2029年、二度の大戦を経て、電脳化・義体化技術の発展した世界。新たな可能性の一方で、ゴーストハックや犯罪の多様化といった問題にも悩まされていた。  そんな中、他人の電脳をハックし人形のように使う「人形使い」が入国し公安9課は調査に乗り出す。",
+        "overviewLang": "ja",
+        "title": "GHOST IN THE SHELL / 攻殻機動隊",
+        "originalTitle": "GHOST IN THE SHELL / 攻殻機動隊",
+        "runtime": 85,
+        "releaseDate": "1995-11-18"
+      },
+      "listedAt": "2026-11-27T05:29:30.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 475,
+      "tmdb": 597,
+      "slug": "titanic-1997",
+      "year": 1997,
+      "released": "1997-12-18",
+      "traktTitle": "Titanic",
+      "details": {
+        "poster": "/ofhCnW6i7mQIiLSSucBHqZQ7XT7.jpg",
+        "genres": [
+          "ドラマ",
+          "ロマンス"
+        ],
+        "overview": "1912年、処女航海に出た豪華客船タイタニック号。新天地アメリカを目指す画家志望の青年ジャックと上流階級の娘ローズは船上で運命的な出会いを果たす。身分違いの恋を乗り越え強い絆で結ばれていく2人。しかし不沈を誇っていた豪華客船は皮肉な運命に見舞われる‥‥。",
+        "overviewLang": "ja",
+        "title": "タイタニック",
+        "originalTitle": "Titanic",
+        "runtime": 189,
+        "releaseDate": "1997-12-18"
+      },
+      "listedAt": "2026-11-27T05:57:26.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 23734,
+      "tmdb": 37165,
+      "slug": "the-truman-show-1998",
+      "year": 1998,
+      "released": "1998-06-04",
+      "traktTitle": "The Truman Show",
+      "details": {
+        "poster": "/wDDMFUO91fTPig1F7Ht5gbcYBce.jpg",
+        "genres": [
+          "コメディ",
+          "ドラマ"
+        ],
+        "overview": "典型的なアメリカ市民・トゥルーマン。だが彼の暮らす環境は、どことなく不自然だ。それもそのはず、実は彼の人生は、隠しカメラによってTV番組「トゥルーマン・ショー」として世界中に放送されていたのだ!家族や友人を含めたこれまでの人生が全てフィクションだったと知った彼は、現実の世界への脱出を決意する…。メディアによって作られた人生の悲喜劇に、見事なリアリティを与えているジム・キャリーの熱演が光る傑作コメディ。",
+        "overviewLang": "ja",
+        "title": "トゥルーマン・ショー",
+        "originalTitle": "The Truman Show",
+        "runtime": 103,
+        "releaseDate": "1998-06-04"
+      },
+      "listedAt": "2026-11-27T05:56:55.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 898,
+      "tmdb": 1359,
+      "slug": "american-psycho-2000",
+      "year": 2000,
+      "released": "2000-04-13",
+      "traktTitle": "American Psycho",
+      "details": {
+        "poster": "/90o0z1hPYahmyunPiPEhfaY9n8k.jpg",
+        "genres": [
+          "スリラー",
+          "ドラマ",
+          "犯罪"
+        ],
+        "overview": "衝撃的な内容で話題となったブレット・イーストン・エリスの小説を「I SHOT ANDY WARHOL」のメアリー・ハロン監督が映画化したサスペンス・ドラマ。80年代のニューヨーク。27歳のハンサムなヤッピー、パトリック・ベイトマンは一流企業の副社長。高級マンションに住み、美しい婚約者もいる彼は一見誰もが羨む生活を送っていた。しかし、彼の心の中には深い闇が広がっており、突如襲う衝動に突き動かされ、夜の街をさまよいホームレスや娼婦を殺害していたのだった……。",
+        "overviewLang": "ja",
+        "title": "アメリカン・サイコ",
+        "originalTitle": "American Psycho",
+        "runtime": 102,
+        "releaseDate": "2000-04-13"
+      },
+      "listedAt": "2026-11-27T05:43:15.000Z",
       "rating": null
     },
     {
@@ -3371,6 +4008,60 @@
       "rating": null
     },
     {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 42276,
+      "tmdb": 42500,
+      "slug": "lucky-star",
+      "year": 2007,
+      "released": "2007-04-09",
+      "traktTitle": "Lucky Star",
+      "details": {
+        "poster": "/dJWzzeCuqMMbVyTbIfpa30AUDTW.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "特徴的な青色の髪と小柄な見た目がトレードマークで、アニメやゲームが大好きな、オタクの鏡である女子高生である泉こなた。その友人で、どこにでもいるような優しく、ゆったりした性格の柊つかさ。 つかさの双子の姉であり、つかさと正反対の性格であるしっかり者で、劇中でもツッコミ役を果たす柊かがみ。容姿端麗で天才肌のキャラであり、その代わり天然な所が多い高良みゆき。 そんな彼女たちのドタバタした日常生活をコメディアスに映しだしたストーリーになっている。ゆるく、可愛らしいキャラクターが織りなす雰囲気がメインとなっているが、際どく、シニカルなネタも飛び出すのが必見だ。",
+        "overviewLang": "ja",
+        "title": "らき☆すた",
+        "originalTitle": "らき☆すた",
+        "runtime": 24,
+        "releaseDate": "2007-04-09",
+        "seasons": 1,
+        "episodes": 24
+      },
+      "listedAt": "2026-11-27T05:25:36.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 60947,
+      "tmdb": 42253,
+      "slug": "k-on",
+      "year": 2009,
+      "released": "2009-04-03",
+      "traktTitle": "K-ON!",
+      "details": {
+        "poster": "/bdOc8sVK5B0mE16BLyiI9hNEdic.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "春、新入生がクラブを決めるころ。田井中律(たいなか りつ)は幼馴染の秋山澪(あきやま みお)を連れて軽音部の見学へ行く。しかし部員全員が卒業してしまった軽音部は、あらたに4人の部員が集まらないと廃部になってしまうという。琴吹紬(ことぶき つむぎ)という仲間を加えて、最後の一人をさがしているころ、｢軽音部｣を軽い音楽(口笛など)と勘違いしていた楽器初心者・平沢唯(ひらさわ ゆい)が入部してくる。",
+        "overviewLang": "ja",
+        "title": "けいおん!",
+        "originalTitle": "けいおん!",
+        "runtime": 24,
+        "releaseDate": "2009-04-03",
+        "seasons": 2,
+        "episodes": 36
+      },
+      "listedAt": "2026-11-27T05:33:48.000Z",
+      "rating": null
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 10655,
@@ -3393,6 +4084,91 @@
         "releaseDate": "2009-06-12"
       },
       "listedAt": "2026-10-05T13:31:58.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 39055,
+      "tmdb": 39218,
+      "slug": "puella-magi-madoka-magica",
+      "year": 2011,
+      "released": "2011-01-07",
+      "traktTitle": "Puella Magi Madoka Magica",
+      "details": {
+        "poster": "/qYPUVIhKYirbmVrdEJBZ3ZYpTeE.jpg",
+        "genres": [
+          "アニメーション",
+          "ドラマ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "大好きな家族がいて、親友がいて、時には笑い、時には泣く。見滝原中学校に通う中学二年生・鹿目まどかも、そんな日常の中で暮らす一人。ある日、彼女に不思議な出会いが訪れる。それは、彼女の運命を変えてしまうような出会い――それは、新たなる魔法少女物語の始まり――",
+        "overviewLang": "ja",
+        "title": "魔法少女まどか☆マギカ",
+        "originalTitle": "魔法少女まどか☆マギカ",
+        "runtime": 25,
+        "releaseDate": "2011-01-07",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:26:24.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 42285,
+      "tmdb": 42509,
+      "slug": "steins-gate",
+      "year": 2011,
+      "released": "2011-04-06",
+      "traktTitle": "Steins;Gate",
+      "details": {
+        "poster": "/6iysgZr6Upm5RlAlVFo5f4D9euu.jpg",
+        "genres": [
+          "アニメーション",
+          "Sci-Fi & Fantasy",
+          "謎",
+          "コメディ"
+        ],
+        "overview": "舞台は2010年夏の秋葉原。厨二病から抜け出せない大学生である岡部倫太郎は、「未来ガジェット研究所」を立ち上げ、用途不明の発明品を日々生み出していた。 だが、ある日、偶然にも過去へとメールが送れる「タイムマシン」を作り出す。 世紀の発明と興奮を抑えきれずに、興味本位で過去への干渉を繰り返す。 その結果、世界を巻き込む大きな悲劇が、岡部たちに訪れることになるのだが… 悲劇を回避するために、岡部の孤独な戦いが始まる。果たして彼は、運命を乗り越えることができるのか！？",
+        "overviewLang": "ja",
+        "title": "STEINS;GATE",
+        "originalTitle": "Steins;Gate",
+        "runtime": 24,
+        "releaseDate": "2011-04-06",
+        "seasons": 1,
+        "episodes": 24
+      },
+      "listedAt": "2026-11-27T05:55:43.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 39267,
+      "tmdb": 39434,
+      "slug": "anohana-the-flower-we-saw-that-day",
+      "year": 2011,
+      "released": "2011-04-15",
+      "traktTitle": "Anohana: The Flower We Saw That Day",
+      "details": {
+        "poster": "/dZf3KcRtHBzJ4EjgjwTuqYqoGJe.jpg",
+        "genres": [
+          "アニメーション",
+          "ドラマ",
+          "謎"
+        ],
+        "overview": "宿海仁太、本間芽衣子、安城鳴子、松雪集、鶴見知利子、久川鉄道の6人は、小学校時代に互いをあだ名で呼び合い、「超平和バスターズ」という名のグループを結成して秘密基地に集まって遊ぶ間柄だった。しかし突然の芽衣子の死をきっかけに、彼らの間には距離が生まれてしまい、超平和バスターズは決別、それぞれ芽衣子に対する後悔や未練や負い目を抱えつつも、中学校卒業後の現在では疎遠な関係となっていた。高校受験に失敗し、引きこもり気味の生活を送っていた仁太。そんな彼の元にある日、死んだはずの芽衣子が現れ、彼女から「お願いを叶えて欲しい」と頼まれる。芽衣子の姿は仁太以外の人間には見えず、当初はこれを幻覚であると思おうとする仁太であったが、その存在を無視することはできず、困惑しつつも芽衣子の願いを探っていくことになる。それをきっかけに、それぞれ別の生活を送っていた仁太達は再び集まり始め、それぞれ抱えていた思いをぶつけあいながら絆を少しずつ修復されていく。",
+        "overviewLang": "ja",
+        "title": "あの日見た花の名前を僕達はまだ知らない。",
+        "originalTitle": "あの日見た花の名前を僕達はまだ知らない。",
+        "runtime": 23,
+        "releaseDate": "2011-04-15",
+        "seasons": 1,
+        "episodes": 11
+      },
+      "listedAt": "2026-11-27T05:47:45.000Z",
       "rating": null
     },
     {
@@ -3419,6 +4195,59 @@
         "overviewLang": "ja"
       },
       "listedAt": "2026-10-05T03:00:59.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 45251,
+      "tmdb": 45501,
+      "slug": "love-chunibyo-other-delusions",
+      "year": 2012,
+      "released": "2012-10-04",
+      "traktTitle": "Love, Chunibyo & Other Delusions!",
+      "details": {
+        "poster": "/3K20upYT0fyGUEVbOPQgxN5FSFU.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "高校1年生の富樫勇太は中学生時代、邪気眼系中二病を患っていた。\n\nしかし、そんな黒歴史を中学とともに卒業し、高校ライフを満喫していた。勇太は周りには中二病だったことを隠していたがひょんなことからある日、クラスメイトで現役中二病患者の小鳥遊六花と半ば強制的に契約を結ぶことになってしまった。",
+        "overviewLang": "ja",
+        "title": "中二病でも恋がしたい！",
+        "originalTitle": "中二病でも恋がしたい!",
+        "runtime": 24,
+        "releaseDate": "2012-10-04",
+        "seasons": 2,
+        "episodes": 24
+      },
+      "listedAt": "2026-11-27T05:47:16.000Z",
+      "rating": null
+    },
+    {
+      "type": "movie",
+      "kind": "anime",
+      "trakt": 99692,
+      "tmdb": 152042,
+      "slug": "puella-magi-madoka-magica-the-movie-part-i-beginnings-2012",
+      "year": 2012,
+      "released": "2012-10-05",
+      "traktTitle": "Puella Magi Madoka Magica the Movie Part I: Beginnings",
+      "details": {
+        "poster": "/1KkAY9SECoWyYtZKbWYvTUMPlFZ.jpg",
+        "genres": [
+          "スリラー",
+          "アニメーション",
+          "ファンタジー"
+        ],
+        "overview": "平凡な女子中学生まどかは、ある日の放課後、親友のさやかと奇怪な異空間にとらわれてしまう。異様な怪物に襲われた2人を救ったのは、同じ学校の先輩で、戦う魔法少女に変身したマミだった。言葉をしゃべる不思議な生き物・キュゥべえから、どんな願いも叶えることを条件に、マミのような魔法少女にならないかと誘われる2人。だが、まどかのクラスの転校生で同じく魔法少女だったほむらが、なぜかまどかの契約を激しく妨害する。",
+        "overviewLang": "ja",
+        "title": "劇場版 魔法少女まどか☆マギカ [前編] 始まりの物語",
+        "originalTitle": "劇場版 魔法少女まどか☆マギカ [前編] 始まりの物語",
+        "runtime": 132,
+        "releaseDate": "2012-10-05"
+      },
+      "listedAt": "2026-11-27T05:26:15.000Z",
       "rating": null
     },
     {
@@ -3530,6 +4359,148 @@
     },
     {
       "type": "show",
+      "kind": "anime",
+      "trakt": 103359,
+      "tmdb": 65249,
+      "slug": "erased",
+      "year": 2016,
+      "released": "2016-01-08",
+      "traktTitle": "ERASED",
+      "details": {
+        "poster": "/2xo5jNOwXGP41umcmxzZgPxGpaI.jpg",
+        "genres": [
+          "アニメーション",
+          "ドラマ",
+          "謎"
+        ],
+        "overview": "漫画家としてデビューするも、いまひとつ結果を出せずに毎日を過ごす青年．藤沼悟。 彼は、彼の身にしか起こらない、ある不可思議な現象に不満を感じていた。 ーリバイバル（再上映） 何か「悪い事」が起こる直前まで時が巻き戻る現象。 それは、その原因が取り除かれるまで何度も繰り返される。 ……まるで、誰かに「お前が防げ」と強制サれているかのように。 しかし、ある日起きた事件をきっかけに、その現象に大きな変化が訪れる。 自らの過去に向き合う時、悟が目撃する真実とは？ そして、悟の未来はー？",
+        "overviewLang": "ja",
+        "title": "僕だけがいない街",
+        "originalTitle": "僕だけがいない街",
+        "runtime": 25,
+        "releaseDate": "2016-01-08",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:55:48.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 112705,
+      "tmdb": 69291,
+      "slug": "miss-kobayashi-s-dragon-maid",
+      "year": 2017,
+      "released": "2017-01-12",
+      "traktTitle": "Miss Kobayashi's Dragon Maid",
+      "details": {
+        "poster": "/pJQNdoWG8WPUkPCwkIifc9zy5q9.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "茫然とする小林さんの目の前で、ドラゴンはメイド服を着た美少女へと変身する。 どうやら昨夜、自分で家に誘ったらしいが、泥酔していて全く覚えていない小林さん。 「メイドとして働かせてください！」 ――角に尻尾にメイドなドラゴン娘・トールとのポンコツでハチャメチャな新生活が始まる！",
+        "overviewLang": "ja",
+        "title": "小林さんちのメイドラゴン",
+        "originalTitle": "小林さんちのメイドラゴン",
+        "runtime": 24,
+        "releaseDate": "2017-01-12",
+        "seasons": 2,
+        "episodes": 25
+      },
+      "listedAt": "2026-11-27T05:28:41.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 122649,
+      "tmdb": 74185,
+      "slug": "girls-last-tour",
+      "year": 2017,
+      "released": "2017-10-06",
+      "traktTitle": "Girls' Last Tour",
+      "details": {
+        "poster": "/dI1EtwlBqQL3hb20AF7RLHe11Rn.jpg",
+        "genres": [
+          "アニメーション",
+          "Action & Adventure",
+          "謎",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "繁栄と栄華を極めた人間たちの文明が崩壊してから長い年月が過ぎた。生き物のほとんどが死に絶え、全てが終わってしまった世界。残されたのは廃墟となった巨大都市と朽ち果てた機械だけ。いつ世界は終わってしまったのか、なぜ世界は終わってしまったのか、そんなことを疑問にさえ思わなくなった終わりの世界で、ふたりぼっちになってしまった少女、チトとユーリ。ふたりは今日も延々と続く廃墟の中を、愛車ケッテンクラートに乗って、あてもなく彷徨う。",
+        "overviewLang": "ja",
+        "title": "少女終末旅行",
+        "originalTitle": "少女終末旅行",
+        "runtime": 25,
+        "releaseDate": "2017-10-06",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:28:21.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 140133,
+      "tmdb": 86031,
+      "slug": "dr-stone",
+      "year": 2019,
+      "released": "2019-07-05",
+      "traktTitle": "Dr. Stone",
+      "details": {
+        "poster": "/dLlnzbDCblBXcJqFLXyvN43NIwp.jpg",
+        "genres": [
+          "アニメーション",
+          "Action & Adventure",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "全人類が、謎の現象により一瞬で石化して数千年――。超人的な頭脳を持つ、根っからの科学少年・千空が目覚める。「石器時代から現代文明まで、科学史200万年を駆け上がってやる！」。絶体絶命の状況で、千空は仲間を探し、世界を取り戻すことを決意する！",
+        "overviewLang": "ja",
+        "title": "Dr.STONE",
+        "originalTitle": "Dr.STONE",
+        "runtime": 24,
+        "releaseDate": "2019-07-05",
+        "seasons": 4,
+        "episodes": 94
+      },
+      "listedAt": "2026-11-27T05:31:49.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 156460,
+      "tmdb": 94664,
+      "slug": "mushoku-tensei-jobless-reincarnation",
+      "year": 2021,
+      "released": "2021-01-11",
+      "traktTitle": "Mushoku Tensei: Jobless Reincarnation",
+      "details": {
+        "poster": "/tn2mxPYSSUPHgfcAe5SCga1DO0i.jpg",
+        "genres": [
+          "Action & Adventure",
+          "アニメーション",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "「俺は、この異世界で本気だす！」34歳・童貞・無職の引きこもりニート男。両親の葬儀の日に家を追い出された瞬間、トラックに轢かれ命を落としてしまう。目覚めると、なんと剣と魔法の異世界で赤ん坊に生まれ変わっていた！ゴミクズのように生きてきた男は、少年・ルーデウスとして異世界で本気をだして生きていく事を誓うー！ルーデウスを待ち受けるのは、ロリっ子魔術師、エルフ耳のボクっ子美少女、凶暴ツンデレお嬢様、そのほかの様々な人間との出会い。そして過酷な冒険と戦い。新しい人生が動き出す！「人生やり直し」ファンタジー、開幕！",
+        "overviewLang": "ja",
+        "title": "無職転生 ～異世界行ったら本気だす～",
+        "originalTitle": "無職転生 ～異世界行ったら本気だす～",
+        "runtime": 24,
+        "releaseDate": "2021-01-11",
+        "seasons": 3,
+        "episodes": 61
+      },
+      "listedAt": "2026-11-27T05:44:52.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
       "kind": "drama",
       "trakt": 146518,
       "tmdb": 85271,
@@ -3582,6 +4553,114 @@
       "rating": null
     },
     {
+      "type": "movie",
+      "kind": "movie",
+      "trakt": 259852,
+      "tmdb": 414906,
+      "slug": "the-batman-2022",
+      "year": 2022,
+      "released": "2022-03-01",
+      "traktTitle": "The Batman",
+      "details": {
+        "poster": "/IwZRx7HclAIhTn2Ud3g4XPh7ZZ.jpg",
+        "genres": [
+          "犯罪",
+          "謎",
+          "スリラー"
+        ],
+        "overview": "犯罪と戦う2年目のバットマンは、リドラーと呼ばれる連続殺人犯に直面しながら、自分の家族につながるゴッサム・シティの腐敗を暴く。",
+        "overviewLang": "ja",
+        "title": "THE BATMAN－ザ・バットマン－",
+        "originalTitle": "The Batman",
+        "runtime": 177,
+        "releaseDate": "2022-03-01"
+      },
+      "listedAt": "2026-11-27T05:57:01.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 184634,
+      "tmdb": 117933,
+      "slug": "summer-time-rendering",
+      "year": 2022,
+      "released": "2022-04-15",
+      "traktTitle": "Summer Time Rendering",
+      "details": {
+        "poster": "/36RTVhPywiKnOToLsa692DIi3iS.jpg",
+        "genres": [
+          "アニメーション",
+          "ドラマ",
+          "謎"
+        ],
+        "overview": "「潮が死んだーー。」幼馴染・小舟潮の訃報を聞いた網代慎平は、2年ぶりに故郷である和歌山市・日都ヶ島に帰ってきた。家族や友人との再会。滞りなく行われていく葬儀。しかし、親友・菱形窓は「潮の死には不審な点があり、他殺の可能性がある」と慎平に告げる。翌日、近隣の一家が突如として全員消えてしまう事件が発生。時を同じくして、慎平はある不吉な噂を耳にする。「自分にそっくりな“影”を見た者は死ぬ。影に殺される――！」さらに、潮の妹・澪が「お姉ちゃんが亡くなる3日前に影を見た」と言いだして......!?",
+        "overviewLang": "ja",
+        "title": "サマータイムレンダ",
+        "originalTitle": "サマータイムレンダ",
+        "runtime": 24,
+        "releaseDate": "2022-04-15",
+        "seasons": 1,
+        "episodes": 25
+      },
+      "listedAt": "2026-11-27T05:42:25.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 192246,
+      "tmdb": 154743,
+      "slug": "the-angel-next-door-spoils-me-rotten",
+      "year": 2023,
+      "released": "2023-01-07",
+      "traktTitle": "The Angel Next Door Spoils Me Rotten",
+      "details": {
+        "poster": "/hXhtuSNOpOrLV734jPsTRhiuu2C.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "進学して一人暮らしを始めた高校一年生の藤宮 周。彼の住むマンションの隣には、学校で一番の美少女・椎名真昼が住んでいる。特に関わり合いのなかった二人だが、雨の中ずぶ濡れになった彼女に傘を貸したことから、不思議な交流が始まった。自堕落な一人暮らしを送る周を見かねて、食事をつくり、部屋を掃除し、なにかと世話を焼く真昼。隣同士で暮らす二人は、ゆっくり、少しずつ、お互いの心を通わせていく。これは、可愛らしい隣人との、甘くて焦れったい恋の物語――。",
+        "overviewLang": "ja",
+        "title": "お隣の天使様にいつの間にか駄目人間にされていた件",
+        "originalTitle": "お隣の天使様にいつの間にか駄目人間にされていた件",
+        "runtime": 24,
+        "releaseDate": "2023-01-07",
+        "seasons": 2,
+        "episodes": 24
+      },
+      "listedAt": "2026-11-27T05:44:24.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 195464,
+      "tmdb": 201889,
+      "slug": "kubo-won-t-let-me-be-invisible",
+      "year": 2023,
+      "released": "2023-01-10",
+      "traktTitle": "Kubo Won't Let Me Be Invisible",
+      "details": {
+        "poster": "/dFYkffnwLjZ5FGT0N2BtCCLMjlu.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "高校１年生・白石純太には、誰にも真似できない性質があった。隣にいても気付かれない、毎日出席していても欠席だと誤解される——。彼は、存在感ゼロの\"モブ\"男子だったのだ。それでも彼なりに慎ましく学園生活を送っていたのだが、ちょっぴり厄介なことが一つだけ。なんと同じクラスの\"ヒロイン級\"美少女･久保さんだけが、彼を見つけてはちょっかいを出してくるのだ。特別になれない\"モブ\"男子と、彼の前に現れた\"ヒロイン\"女子。教室の隅から、青春は緩やかに色づき始めて——。誰だって、誰かの\"特別\"になれる。でもその感情に\"恋\"と名が付くには、まだ二人は少しだけ幼い。\"ラブコメディ\"の２歩手前、ヒロイン女子×モブ男子の思春期スイートコメディが幕を開ける。",
+        "overviewLang": "ja",
+        "title": "久保さんは僕を許さない",
+        "originalTitle": "久保さんは僕を許さない",
+        "runtime": 24,
+        "releaseDate": "2023-01-10",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:25:52.000Z",
+      "rating": null
+    },
+    {
       "type": "show",
       "kind": "drama",
       "trakt": 180770,
@@ -3609,6 +4688,176 @@
       "rating": null
     },
     {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 203332,
+      "tmdb": 222625,
+      "slug": "atelier-ryza-ever-darkness-the-secret-hideout-the-animation",
+      "year": 2023,
+      "released": "2023-07-02",
+      "traktTitle": "Atelier Ryza: Ever Darkness & the Secret Hideout the Animation",
+      "details": {
+        "poster": "/9jKPfjNCJycFys8iasWXZJbpRFp.jpg",
+        "genres": [
+          "アニメーション",
+          "Sci-Fi & Fantasy",
+          "Action & Adventure"
+        ],
+        "overview": "周りを湖に囲まれたクーケン島にあるラーゼンボーデン村。ロテスヴァッサ王国の辺境にあるこの村では、穏やかな時間が流れている。そんな刺激が少ない村での暮らしに活力を持て余していたのは、平凡で特徴がないことが特徴の少女、ライザ「あーあ。何か面白いことないかな。」窮屈で退屈な村、そこに身を置く“なんてことない農家の娘”である自分に不満を抱いていたライザは、ある日、幼馴染みのレントやタオとこっそり小舟に乗り込み、島の対岸へはじめての冒険に出かける。",
+        "overviewLang": "ja",
+        "title": "ライザのアトリエ 〜常闇の女王と秘密の隠れ家〜",
+        "originalTitle": "ライザのアトリエ 〜常闇の女王と秘密の隠れ家〜",
+        "runtime": null,
+        "releaseDate": "2023-07-02",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:45:35.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 203749,
+      "tmdb": 217755,
+      "slug": "the-vexations-of-a-shut-in-vampire-princess",
+      "year": 2023,
+      "released": "2023-10-07",
+      "traktTitle": "The Vexations of a Shut-In Vampire Princess",
+      "details": {
+        "poster": "/m9PiqXmpTinv9H4IqHbEVQVJFr7.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "ムルナイト帝国の名門貴族ガンデスブラッド家の令嬢、テラコマリ・ガンデスブラッド。吸血鬼なのに血が飲めないコマリは、魔法が使えない、運動ができない、背が伸びないという三重苦に悩まされ、３年間の引きこもり生活を送っていた。しかし、ある日親バカの父がとんでもない就職先を見つけてくる。その名も『七紅天大将軍』！それは本来帝国の猛者しかなれず、３ヶ月に一度のペースで他国に戦争を仕掛け勝利しなければならない超ハードな役職。さらに部下たちは元犯罪者ばかりで将軍に就任したコマリに対して下剋上を狙う気満々……。絶対に断りたいけど、皇帝直々の任命なので辞めることすら許されない。本当の実力がバレたら即破滅なこの状況……それでもコマリはハッタリと可愛さを武器に己の任務を遂行する！「私がこれから為すことはな、単純極まりない覇業だ！すなわち、テラコマリ・ガンデスブラッドは――他の５カ国の大将軍を武力で全員ブチ殺し、ムルナイトの国威を全世界に喧伝してやるのだ！」最強（！？）吸血姫による歴史に残る快進撃がここに始まる！",
+        "overviewLang": "ja",
+        "title": "ひきこまり吸血姫の悶々",
+        "originalTitle": "ひきこまり吸血姫の悶々",
+        "runtime": 24,
+        "releaseDate": "2023-10-07",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:46:00.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 206949,
+      "tmdb": 229443,
+      "slug": "tis-time-for-torture-princess",
+      "year": 2024,
+      "released": "2024-01-09",
+      "traktTitle": "Tis Time for \"Torture,\" Princess",
+      "details": {
+        "poster": "/k85CRo3kUuRavFPZX1VuUUvQaaD.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "国王軍と魔王軍が衝突を始め、幾年月──。\n\n戦禍を生き抜き、多くの成果を上げてきた国王軍の王女にして第三騎士団騎士団長である“姫”と、意思を持ち姫に仕える聖剣“エクス”。2人は魔王軍に捕えられ、固く冷たい監獄の中に囚われていた。\n\nある日、姫の前に現れた魔王軍最高位拷問官トーチャー・トルチュールは王国の秘密を聞き出そうと姫に囁く…\n\n「姫様“拷問”の時間です」\n\nいよいよ、魔王軍による凄惨な“拷問”が姫を襲う。姫は、“拷問”に耐え王国の秘密を守り切ることができるのだろうか……。",
+        "overviewLang": "ja",
+        "title": "姫様“拷問”の時間です",
+        "originalTitle": "姫様“拷問”の時間です",
+        "runtime": 24,
+        "releaseDate": "2024-01-09",
+        "seasons": 1,
+        "episodes": 24
+      },
+      "listedAt": "2026-11-27T05:28:28.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 217583,
+      "tmdb": 238846,
+      "slug": "brave-bang-bravern",
+      "year": 2024,
+      "released": "2024-01-11",
+      "traktTitle": "Brave Bang Bravern!",
+      "details": {
+        "poster": "/4Tl5OoDqV9A0cQ8NWta55853xIP.jpg",
+        "genres": [
+          "アニメーション",
+          "Action & Adventure",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "人型装甲兵器『ティタノストライド=通称TS(ティーエス)』が発達した時代。各国軍は“ハワイ オアフ島”に集結。陸上自衛隊所属 イサミ・アオとアメリカ海兵隊所属 ルイス・スミスのふたりは戦闘の最中出逢う。突如所属不明機による強襲を受け、為す術もなく散っていく兵士たち。己の誇りをかけて戦え。死と隣り合わせの戦場で生き残る為。仲間を救う為。",
+        "overviewLang": "ja",
+        "title": "勇気爆発バーンブレイバーン",
+        "originalTitle": "勇気爆発バーンブレイバーン",
+        "runtime": 24,
+        "releaseDate": "2024-01-11",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:45:13.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 231933,
+      "tmdb": 249882,
+      "slug": "zenshu",
+      "year": 2025,
+      "released": "2025-01-05",
+      "traktTitle": "ZENSHU",
+      "details": {
+        "poster": "/hiLf3JKUghjhCjDCv3hKKsWtA4S.jpg",
+        "genres": [
+          "アニメーション",
+          "ドラマ",
+          "Action & Adventure",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "広瀬ナツ子は、高校卒業後アニメーターとなり、才能を開花させあっという間に監督デビューを果たす。初監督作品は社会現象になる大ヒット。新進気鋭の天才監督と世間でも評価され、次回作は初恋をテーマにした劇場ラブコメ作品に決定！しかし、人を好きになったことがないナツ子は初恋がよくわからず、コンテが描けなくなり映画制作が行き詰る。そんなある日、コンテ作業中に意識を失い、目が覚めるとそこは、子供の頃に夢中になったアニメ映画『滅びゆく物語』の世界だった。",
+        "overviewLang": "ja",
+        "title": "全修。",
+        "originalTitle": "全修。",
+        "runtime": 24,
+        "releaseDate": "2025-01-05",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:46:34.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 253685,
+      "tmdb": 262929,
+      "slug": "apocalypse-hotel",
+      "year": 2025,
+      "released": "2025-04-09",
+      "traktTitle": "Apocalypse Hotel",
+      "details": {
+        "poster": "/wkjNTpZCH1cb2vQdWUne80OXkUm.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ",
+          "ドラマ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "人類がいなくなり、長い年月が流れた地球。日本の首都・東京の銀座にあるホテル『銀河楼』では、ホテリエロボットのヤチヨと従業員ロボットたちが、オーナーの帰還と、再び人類のお客様を迎える時を待っていた。が──100年ぶりにやってきたお客様は、地球外生命体だった。次々に訪れる彼らの目的は、宿泊か、侵略か、はたまたどちらでもないのか……『銀河楼』の威信をかけたヤチヨたちのおもてなしが、今、始まる──",
+        "overviewLang": "ja",
+        "title": "アポカリプスホテル",
+        "originalTitle": "アポカリプスホテル",
+        "runtime": 23,
+        "releaseDate": "2025-04-09",
+        "seasons": 1,
+        "episodes": 12
+      },
+      "listedAt": "2026-11-27T05:43:52.000Z",
+      "rating": null
+    },
+    {
       "type": "movie",
       "kind": "movie",
       "trakt": 729817,
@@ -3631,6 +4880,61 @@
         "overviewLang": "ja"
       },
       "listedAt": "2026-10-05T02:33:12.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 256280,
+      "tmdb": 271649,
+      "slug": "ruri-rocks",
+      "year": 2025,
+      "released": "2025-07-06",
+      "traktTitle": "Ruri Rocks",
+      "details": {
+        "poster": "/mRXXyxNu8ZVwadZ84Kq3PTfqwwT.jpg",
+        "genres": [
+          "アニメーション",
+          "コメディ"
+        ],
+        "overview": "キラキラしたものが大好きな女子高生・谷川瑠璃は、「自分でも見つけられるかも！」と水晶を探しに山へと向かう。そこで鉱物学を専攻する大学院生・荒砥凪と出会い、一緒に鉱物採集をすることに。ある時は水晶を探して山道を歩き、ある時はガーネットを拾いに川に浸かり、またある時は見知らぬ鉱物を顕微鏡で覗き――ルリはナギに導かれ鉱物採集の世界に飛び込んでいく。「私だって、採れるはず」それは、誰しもが抱いたことのある夢。本格サイエンスアドベンチャー始動！",
+        "overviewLang": "ja",
+        "title": "瑠璃の宝石",
+        "originalTitle": "瑠璃の宝石",
+        "runtime": 24,
+        "releaseDate": "2025-07-06",
+        "seasons": 1,
+        "episodes": 13
+      },
+      "listedAt": "2026-11-27T05:45:48.000Z",
+      "rating": null
+    },
+    {
+      "type": "show",
+      "kind": "anime",
+      "trakt": 194536,
+      "tmdb": 196950,
+      "slug": "witch-hat-atelier",
+      "year": 2026,
+      "released": "2026-04-06",
+      "traktTitle": "Witch Hat Atelier",
+      "details": {
+        "poster": "/1qGSBnrANHLX8C7KqGuPDCylns2.jpg",
+        "genres": [
+          "アニメーション",
+          "ドラマ",
+          "Sci-Fi & Fantasy"
+        ],
+        "overview": "「魔法」――、それは世界に溢れていて人々の生活を豊かにする、なくてはならない便利な“奇跡”。けれど、 “魔法をかけることが出来るのは魔法使いだけ”。魔法をかける瞬間を見てはならないのがこの世界の掟。小さな村で母親の手伝いをしながら暮らす少女・ココは、それでも幼い頃から魔法使いへの憧れを抱き続けていた。ある日、村を訪れた魔法使いの青年・キーフリーが魔法を使うところを覗き見てしまい、大きな秘密を知ることになる。\n\nそれは、特別な道具で魔法陣を描けば、本当は誰にでも魔法が使えるという、魔法使い達が隠した「絶対の秘密」だった――。壮麗で幻想的な世界の裏に影を落とす、大人達が口を閉ざした魔法の歴史。「知らざる者ふつうの子 」として生まれ、キーフリーの弟子として魔法を学ぶことになったココは、アトリエの仲間と共に探求と成長を重ねていく中で、秘密多き魔法使いの世界へと足を踏み入れていく。――これは、絶望を知り、希望へと手を伸ばす、子供たちの物語。",
+        "overviewLang": "ja",
+        "title": "とんがり帽子のアトリエ",
+        "originalTitle": "とんがり帽子のアトリエ",
+        "runtime": 24,
+        "releaseDate": "2026-04-06",
+        "seasons": 1,
+        "episodes": 13
+      },
+      "listedAt": "2026-11-27T05:43:58.000Z",
       "rating": null
     },
     {
